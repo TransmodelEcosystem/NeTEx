@@ -199,6 +199,12 @@ Rail transport, Roads and Road transport
 			<xsd:enumeration value="other"/>
 		</xsd:restriction>
 	</xsd:simpleType>
+	<xsd:simpleType name="LineTypeListOfEnumerations">
+		<xsd:annotation>
+			<xsd:documentation>Type for a List of LINE TYPEs. +v2.1</xsd:documentation>
+		</xsd:annotation>
+		<xsd:list itemType="LineTypeEnumeration"/>
+	</xsd:simpleType>
 	<!-- ======================================================================= -->
 	<!-- == ALLOWED LINE DIRECTION ================================================== -->
 	<xsd:complexType name="allowedLineDirectionRefs_RelStructure">
