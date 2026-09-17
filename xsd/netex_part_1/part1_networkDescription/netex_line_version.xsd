@@ -373,7 +373,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="PublicCode" type="PublicCodeStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Public identifier of a LINe.</xsd:documentation>
+					<xsd:documentation>Public identifier of a LINE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="PrivateCode" minOccurs="0">

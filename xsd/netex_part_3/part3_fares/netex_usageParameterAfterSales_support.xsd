@@ -34,6 +34,8 @@
 				</Date>
 				<Date><Modified>2019-03-12</Modified>NORWAY-103 *FARES*   Add purchaseGracePeriod  new enum value   to  Reselling  \  ResellWhen 
 				</Date>
+				<Date><Modified>2026-07-09</Modified>Rename misspelt ExchangableToEnumeration to ExchangeableToEnumeration.
+				</Date>
 				<Description>
 					<p>NeTEx is a European CEN standard for the exchange of Public Transport data including timetables.</p>
 					<p>This sub-schema describes the After Sales  USAGE PARAMETER types.</p>
@@ -226,9 +228,9 @@ Rail transport, Roads and Road transport
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<xsd:simpleType name="ExchangableToEnumeration">
+	<xsd:simpleType name="ExchangeableToEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>Allowed values for Exchangeable to.</xsd:documentation>
+			<xsd:documentation>Allowed values for Exchangeable to. +v2.1</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:enumeration value="anyProduct"/>
