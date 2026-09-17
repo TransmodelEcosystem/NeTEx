@@ -17,11 +17,9 @@
 				<Date>
 					<Modified>2010-11-05</Modified>
 				</Date>
-				<Date>
-					<Modified>2026-07-09</Modified>Add correctly spelt Exchangeable* / IsExchangeable values to NameOfClass alongside deprecated misspelt forms.
+				<Date><Modified>2026-07-09</Modified>Add correctly spelt Exchangeable* / IsExchangeable values to NameOfClass alongside deprecated misspelt forms.
 				</Date>
-				<Date>
-					<Modified>2026-07-10</Modified>Add FulfilmentMethodTypes and StepLimitUnit values to NameOfClass.
+				<Date><Modified>2026-07-10</Modified>Add FulfilmentMethodTypes and StepLimitUnit values to NameOfClass.
 				</Date>
 				<Description>
 					<p>NeTEx - Network Exchange. This subschema defines data Modification base types.</p>
