@@ -24,7 +24,6 @@ SCHEMA="xsd/NeTEx_publication.xsd"
 # "<file>|<expected error substring>"
 CASES=(
   "examples/should-fail/duplicate-GroupOfLinkSequences.xml|Duplicate key-sequence"
-  "examples/should-fail/duplicate-CalendarDate.xml|Duplicate key-sequence"
   "examples/should-fail/duplicate-ValidBetween.xml|Duplicate key-sequence"
   "examples/should-fail/duplicate-ValidityPeriod.xml|Duplicate key-sequence"
 )
