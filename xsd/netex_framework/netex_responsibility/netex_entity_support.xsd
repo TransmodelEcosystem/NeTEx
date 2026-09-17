@@ -17,8 +17,11 @@
 				<Date>
 					<Modified>2010-11-05</Modified>
 				</Date>
-				<Date><Modified>2026-07-10</Modified>Add FulfilmentMethodTypes and StepLimitUnit values to NameOfClass.
-				<Date><Modified>2026-07-09</Modified>Add correctly spelt Exchangeable* / IsExchangeable values to NameOfClass alongside deprecated misspelt forms.
+				<Date>
+					<Modified>2026-07-09</Modified>Add correctly spelt Exchangeable* / IsExchangeable values to NameOfClass alongside deprecated misspelt forms.
+				</Date>
+				<Date>
+					<Modified>2026-07-10</Modified>Add FulfilmentMethodTypes and StepLimitUnit values to NameOfClass.
 				</Date>
 				<Description>
 					<p>NeTEx - Network Exchange. This subschema defines data Modification base types.</p>
@@ -32,7 +35,7 @@
 				<Language>[ISO 639-2/B] ENG</Language>
 				<Publisher>Kizoom Software Ltd, 16 High Holborn, London WC1V 6BX</Publisher>
 				<Rights>Unclassified
- <Copyright>CEN, Crown Copyright 2009-2014</Copyright>
+ 					<Copyright>CEN, Crown Copyright 2009-2014</Copyright>
 				</Rights>
 				<Source>
 					<ul>
