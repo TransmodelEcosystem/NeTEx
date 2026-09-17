@@ -26,6 +26,9 @@ jobs:
       - name: Validate NeTEx XML examples
         run: ./.github/scripts/validate-examples.sh
 
+      - name: Validate negative examples (must-fail)
+        run: ./.github/scripts/validate-should-fail.sh
+
       - name: Commit changes
         uses: EndBug/add-and-commit@v9 # https://github.com/marketplace/actions/add-commit
         with:

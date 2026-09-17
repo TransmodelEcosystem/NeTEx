@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+	<PublicationTimestamp>2020-01-01T12:00:00Z</PublicationTimestamp>
+	<ParticipantRef>TEST</ParticipantRef>
+	<dataObjects>
+		<ServiceCalendarFrame version="1.0" id="TEST:ServiceCalendarFrame:1">
+			<operatingDays>
+				<OperatingDay version="1.0" id="TEST:OperatingDay:1">
+					<CalendarDate>2020-01-01</CalendarDate>
+				</OperatingDay>
+				<OperatingDay version="1.0" id="TEST:OperatingDay:2">
+					<CalendarDate>2020-01-01</CalendarDate>
+				</OperatingDay>
+			</operatingDays>
+		</ServiceCalendarFrame>
+	</dataObjects>
+</PublicationDelivery>
