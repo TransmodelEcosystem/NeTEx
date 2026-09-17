@@ -22,10 +22,11 @@ cd "${ROOT_DIR}"
 SCHEMA="xsd/NeTEx_publication.xsd"
 
 # "<file>|<expected error substring>"
+NS="{http://www.netex.org.uk/netex}"
 CASES=(
-  "examples/should-fail/duplicate-GroupOfLinkSequences.xml|Duplicate key-sequence"
-  "examples/should-fail/duplicate-ValidBetween.xml|Duplicate key-sequence"
-  "examples/should-fail/duplicate-ValidityPeriod.xml|Duplicate key-sequence"
+  "examples/should-fail/duplicate-GroupOfLinkSequences.xml|Element '${NS}GroupOfLinkSequences': Duplicate key-sequence ['TEST:GroupOfLinkSequences:1', '1.0']"
+  "examples/should-fail/duplicate-ValidBetween.xml|Element '${NS}ValidBetween': Duplicate key-sequence ['TEST:ValidBetween:1', '1.0']"
+  "examples/should-fail/duplicate-ValidityPeriod.xml|Element '${NS}ValidityPeriod': Duplicate key-sequence ['TEST:ValidityPeriod:1', '1.0']"
 )
 
 files=()
@@ -38,7 +39,7 @@ for c in "${CASES[@]}"; do
   f="${c%%|*}"; expected="${c#*|}"
   if printf '%s\n' "${out}" | grep -Fqx "${f} validates"; then
     echo "SHOULD HAVE FAILED  ${f} — accepted (must be rejected)"; fail=1
-  elif printf '%s\n' "${out}" | grep -F "${f}:" | grep -q "${expected}"; then
+  elif printf '%s\n' "${out}" | grep -F "${f}:" | grep -Fq "${expected}"; then
     echo "OK                  ${f}"
   else
     echo "ERROR               ${f} — rejected, but not matching '${expected}'"; fail=1
