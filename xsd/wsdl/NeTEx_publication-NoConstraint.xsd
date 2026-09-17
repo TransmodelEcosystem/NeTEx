@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1" id="netex_publication">
 	<!-- ===SIRI system IDs for  request =========================================================== -->
-	<xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="siri/siri_base-v2.0.xsd"/>
-	<xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="siri_utility/siri_participant-v2.0.xsd"/>
-	<xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="siri/siri_requests-v2.0.xsd"/>
+	<xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_base-v2.0.xsd"/>
+	<xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_utility/siri_participant-v2.0.xsd"/>
+	<xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_requests-v2.0.xsd"/>
 	<!-- ===Regular netex============================================================== -->
-	<xsd:include schemaLocation="netex_service/netex_dataObjectRequest_service.xsd"/>
-	<xsd:include schemaLocation="netex_service/netex_all.xsd"/>
+	<xsd:include schemaLocation="../netex_service/netex_dataObjectRequest_service.xsd"/>
+	<xsd:include schemaLocation="../netex_service/netex_all.xsd"/>
 	<!-- ===eGIF/GovTalk Documentation ======================================= -->
 	<xsd:annotation>
 		<xsd:appinfo>
