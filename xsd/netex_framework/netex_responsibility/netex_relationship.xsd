@@ -146,9 +146,9 @@ Rail transport, Roads and Road transport
 		</xsd:annotation>
 	</xsd:element>
 	<!-- =====Metamodel references================================================ -->
-	<xsd:simpleType name="RelationshipId">
+	<xsd:simpleType name="RelationshipNameOfClass">
 		<xsd:annotation>
-			<xsd:documentation>Type for Identifier of a relationship.</xsd:documentation>
+			<xsd:documentation>Type for name of class of a relationship.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="NameOfClass"/>
 	</xsd:simpleType>
@@ -163,7 +163,7 @@ Rail transport, Roads and Road transport
 		</xsd:annotation>
 		<xsd:simpleContent>
 			<xsd:extension base="xsd:string">
-				<xsd:attribute name="nameOfClass" type="RelationshipId" use="required">
+				<xsd:attribute name="nameOfClass" type="RelationshipNameOfClass" use="required">
 					<xsd:annotation>
 						<xsd:documentation>Name of referenced Class.</xsd:documentation>
 					</xsd:annotation>
@@ -195,9 +195,9 @@ Rail transport, Roads and Road transport
 		<xsd:annotation>
 			<xsd:documentation>Abstract Type for a serialisation of a NeTEx relationship.</xsd:documentation>
 		</xsd:annotation>
-		<xsd:attribute name="id" type="RelationshipId">
+		<xsd:attribute name="nameOfClass" type="RelationshipNameOfClass">
 			<xsd:annotation>
-				<xsd:documentation>Identifier of the relationship.</xsd:documentation>
+				<xsd:documentation>Name of class of the relationship.</xsd:documentation>
 			</xsd:annotation>
 		</xsd:attribute>
 	</xsd:complexType>
