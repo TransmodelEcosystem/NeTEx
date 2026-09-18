@@ -420,6 +420,12 @@ The Calendar is shown coded as
 											<Advertised>true</Advertised>
 										</NoticeAssignment>
 									</noticeAssignments>
+									<!-- check for CheckConstraint. V2.1 -->
+									<checkConstraints>
+										<CheckConstraint id="mybus:cc:1" version="any">
+											<Congestion>noWaiting</Congestion>
+										</CheckConstraint>
+									</checkConstraints>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="any" order="2" id="hde:spijp_24o_02">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>

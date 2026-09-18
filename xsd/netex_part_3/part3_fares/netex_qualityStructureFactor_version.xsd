@@ -69,7 +69,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NeTEx: QUALITY STRUCTURE FACTOR types.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
 	<xsd:group name="QualityFactorsInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>Quality factors in FRAME.</xsd:documentation>
@@ -274,7 +274,7 @@ Rail transport, Roads and Road transport
 							<xsd:element ref="TypeOfFareStructureFactorRef" minOccurs="0"/>
 							<xsd:element name="Factor" type="xsd:anyType" minOccurs="0">
 								<xsd:annotation>
-									<xsd:documentation>Factor value associated with FARE EDMAND FACTOR.</xsd:documentation>
+									<xsd:documentation>Factor value associated with FARE DEMAND FACTOR.</xsd:documentation>
 								</xsd:annotation>
 							</xsd:element>
 						</xsd:sequence>

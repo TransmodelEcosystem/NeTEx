@@ -83,7 +83,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NeTEx: FARE PRICE types.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====Used in FARE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====Used in FARE FRAME)=================================================== -->
 	<xsd:complexType name="farePricesInFrame_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for containment in frame of FARE Prices.</xsd:documentation>
@@ -364,7 +364,7 @@ Rail transport, Roads and Road transport
 							<xsd:documentation>Record of amount deducted by a price rule calculation, e.g. an additional tax step. If PRICING RULES are chained there may be multiple steps to record.  
 The source of the input price can be indicated by a FARE PRICE REF of some sort. 
 The RULE STEP RESULT Amount is the resulting  net price after the pricing rule has been applied to the input amount.  
-The RULE STEP RESULT  Adjustment Amount is  the difference beteen the original input price and the RULE STEP RESULT  Amount (so it is possible to derive the input price amount  by adding the the Adjustment to the  Net Amount.  A similar computation can be done for any units.</xsd:documentation>
+The RULE STEP RESULT  Adjustment Amount is  the difference between the original input price and the RULE STEP RESULT  Amount (so it is possible to derive the input price amount  by adding the Adjustment to the  Net Amount.  A similar computation can be done for any units.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>

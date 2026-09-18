@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" version="1.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
-	<PublicationTimestamp>20209-12-17T09:30:46.0Z</PublicationTimestamp>
+	<PublicationTimestamp>2019-12-17T09:30:46.0Z</PublicationTimestamp>
 	<ParticipantRef>SYS001</ParticipantRef>
 	<!-- ======WHAT WAS REQUESTED ========== -->
 	<PublicationRequest version="1.0">
@@ -51,7 +51,7 @@
 					<codespaces>
 						<Codespace id="op_data">
 							<Xmlns>stg</Xmlns>
-							<XmlnsUrl>http:///www.transdevireland.ie/timetable</XmlnsUrl>
+							<XmlnsUrl>http://www.transdevireland.ie/timetable</XmlnsUrl>
 							<Description>Stage coach TXC  data </Description>
 						</Codespace>
 					</codespaces>

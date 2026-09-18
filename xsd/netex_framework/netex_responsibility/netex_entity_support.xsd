@@ -17,6 +17,8 @@
 				<Date>
 					<Modified>2010-11-05</Modified>
 				</Date>
+				<Date><Modified>2026-07-09</Modified>Add correctly spelt Exchangeable* / IsExchangeable values to NameOfClass alongside deprecated misspelt forms.
+				</Date>
 				<Description>
 					<p>NeTEx - Network Exchange. This subschema defines data Modification base types.</p>
 				</Description>
@@ -940,15 +942,96 @@ Rail transport, Roads and Road transport
 			<xsd:enumeration value="EstimatedPassingTimeView"/>
 			<xsd:enumeration value="EuroClass"/>
 			<xsd:enumeration value="EvenNumberRange"/>
-			<xsd:enumeration value="ExchangableFromAnyTime"/>
-			<xsd:enumeration value="ExchangableFromDuration"/>
-			<xsd:enumeration value="ExchangableFromIntervalRef"/>
-			<xsd:enumeration value="ExchangableFromPercentUse"/>
-			<xsd:enumeration value="ExchangableTo"/>
-			<xsd:enumeration value="ExchangableUntilAnyTime"/>
-			<xsd:enumeration value="ExchangableUntilDuration"/>
-			<xsd:enumeration value="ExchangableUntilIntervalRef"/>
-			<xsd:enumeration value="ExchangableUntilPercentUse"/>
+			<xsd:enumeration value="ExchangableFromAnyTime">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED due to mispelling, use ExchangeableFromAnyTime instead. -v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ExchangableFromDuration">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED due to mispelling, use ExchangeableFromDuration instead. -v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ExchangableFromIntervalRef">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED due to mispelling, use ExchangeableFromIntervalRef instead. -v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ExchangableFromPercentUse">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED - misspelt, use ExchangeableFromPercentUse instead. -v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ExchangableTo">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED due to mispelling, use ExchangeableTo instead. -v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ExchangableUntilAnyTime">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED due to mispelling, use ExchangeableUntilAnyTime instead. -v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ExchangableUntilDuration">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED due to mispelling, use ExchangeableUntilDuration instead. -v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ExchangableUntilIntervalRef">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED due to mispelling, use ExchangeableUntilIntervalRef instead. -v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ExchangableUntilPercentUse">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED due to mispelling, use ExchangeableUntilPercentUse instead. -v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ExchangeableFromAnyTime">
+				<xsd:annotation>
+					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ExchangeableFromDuration">
+				<xsd:annotation>
+					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ExchangeableFromIntervalRef">
+				<xsd:annotation>
+					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ExchangeableFromPercentUse">
+				<xsd:annotation>
+					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ExchangeableTo">
+				<xsd:annotation>
+					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ExchangeableUntilAnyTime">
+				<xsd:annotation>
+					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ExchangeableUntilDuration">
+				<xsd:annotation>
+					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ExchangeableUntilIntervalRef">
+				<xsd:annotation>
+					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ExchangeableUntilPercentUse">
+				<xsd:annotation>
+					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 			<xsd:enumeration value="Exchanging"/>
 			<xsd:enumeration value="ExchangingRef"/>
 			<xsd:enumeration value="Exclude"/>
@@ -1375,7 +1458,16 @@ Rail transport, Roads and Road transport
 			<xsd:enumeration value="IsDirect"/>
 			<xsd:enumeration value="IsEmergencyExit"/>
 			<xsd:enumeration value="IsEntry"/>
-			<xsd:enumeration value="IsExchangable"/>
+			<xsd:enumeration value="IsExchangable">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED due to misspelling, use IsExchangeable instead. -v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IsExchangeable">
+				<xsd:annotation>
+					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 			<xsd:enumeration value="IsExit"/>
 			<xsd:enumeration value="IsExternal"/>
 			<xsd:enumeration value="IsFacingAisle"/>

@@ -440,7 +440,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="dayOffsetBeforeCalendarPeriod">
 				<xsd:annotation>
-					<xsd:documentation>Validity period starts a specifed number of days before beginning of specified start date .</xsd:documentation>
+					<xsd:documentation>Validity period starts a specified number of days before beginning of specified start date.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>

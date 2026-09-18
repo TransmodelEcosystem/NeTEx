@@ -269,7 +269,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="AdjustmentUnits" type="StepLimitUnitEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Units in which steps atre counted.</xsd:documentation>
+					<xsd:documentation>Units in which steps are counted.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MinimumNumberOfSteps" type="xsd:nonNegativeInteger" minOccurs="0">

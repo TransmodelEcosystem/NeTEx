@@ -64,7 +64,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NeTEx: TIME STRUCTURE FACTOR types.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME==== ================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME==== ================================================== -->
 	<xsd:group name="TimeFactorsInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>Time factors in FRAME.</xsd:documentation>
@@ -311,7 +311,7 @@ Rail transport, Roads and Road transport
 							<xsd:element ref="TypeOfFareStructureFactorRef" minOccurs="0"/>
 							<xsd:element name="Factor" type="xsd:anyType" minOccurs="0">
 								<xsd:annotation>
-									<xsd:documentation>Factor value assoictaed with init.</xsd:documentation>
+									<xsd:documentation>Factor value associated with the unit.</xsd:documentation>
 								</xsd:annotation>
 							</xsd:element>
 						</xsd:sequence>

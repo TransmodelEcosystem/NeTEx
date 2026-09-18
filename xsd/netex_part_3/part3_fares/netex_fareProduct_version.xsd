@@ -82,8 +82,8 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NeTEx: FARE PRODUCT types.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====Used in FARE FRAME)=================================================== -->
-	<!-- ===ENTIITY IN VERSION IN FRAME====Used in FARE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====Used in FARE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====Used in FARE FRAME)=================================================== -->
 	<xsd:group name="FareProductsInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>Fare Product Elements contained in a FARE FRAME.</xsd:documentation>
@@ -435,7 +435,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:group ref="OtherProductGroup" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Other products to which SALE DISCONT applies to</xsd:documentation>
+					<xsd:documentation>Other products to which SALE DISCOUNT RIGHT applies</xsd:documentation>
 				</xsd:annotation>
 			</xsd:group>
 		</xsd:sequence>
@@ -856,7 +856,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="PriceUnitRef" minOccurs="0"/>
 			<xsd:element name="Amount" type="xsd:decimal" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Number of units. If only ine. Otherwise use TARIFF with FARE QUALITY FACTOR to specify a range</xsd:documentation>
+					<xsd:documentation>Number of units. If only one. Otherwise use TARIFF with FARE QUALITY FACTOR to specify a range</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
