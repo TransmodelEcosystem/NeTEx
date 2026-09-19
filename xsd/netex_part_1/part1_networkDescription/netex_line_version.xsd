@@ -113,7 +113,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="Network" minOccurs="0"/>
 			<xsd:element name="additionalNetworks" type="networksInFrame_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Additional networks refernced in frame in addition to the primary NETWORK..</xsd:documentation>
+					<xsd:documentation>Additional networks referenced in frame in addition to the primary NETWORK..</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -666,7 +666,7 @@ Rail transport, Roads and Road transport
 			<xsd:group ref="DestinationDisplayCodeGroup"/>
 			<xsd:element name="Presentation" type="PresentationStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Preferred presentation attributes to use when rendering destiation on maps, etc. +v1.1</xsd:documentation>
+					<xsd:documentation>Preferred presentation attributes to use when rendering destination on maps, etc. +v1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="vias" type="vias_RelStructure" minOccurs="0">
@@ -676,7 +676,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="variants" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>DESTINATION DISPLAY VARIANT for DESTINATION DISPLAY. Variants may be for use in a specifc context or on a specifc media, or a combination of both.</xsd:documentation>
+					<xsd:documentation>DESTINATION DISPLAY VARIANT for DESTINATION DISPLAY. Variants may be for use in a specific context or on a specific media, or a combination of both.</xsd:documentation>
 				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:complexContent>

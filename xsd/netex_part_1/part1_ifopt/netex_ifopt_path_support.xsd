@@ -173,7 +173,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:element name="PathJunctionRef" type="SitePathJunctionRefStructure" substitutionGroup="GenericPathJunctionRef">
 		<xsd:annotation>
-			<xsd:documentation>Depreceated - use SitePathJunctionRef +v2.0</xsd:documentation>
+			<xsd:documentation>Deprecated - use SitePathJunctionRef +v2.0</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<!-- ====== SITE PATH JUNCTION  =========================================================== -->

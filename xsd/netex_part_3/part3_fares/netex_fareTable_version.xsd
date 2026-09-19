@@ -303,7 +303,7 @@ Rail transport, Roads and Road transport
 	</xsd:group>
 	<xsd:group name="FareTableHeadingsGroup">
 		<xsd:annotation>
-			<xsd:documentation>PriceHeading lements for a FARE TABLE.</xsd:documentation>
+			<xsd:documentation>PriceHeading elements for a FARE TABLE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="columns" type="fareTableColumns_RelStructure" minOccurs="0">
@@ -588,7 +588,7 @@ Rail transport, Roads and Road transport
 			<xsd:group ref="CellHeadingsGroup"/>
 			<xsd:element name="noticeAssignments" type="noticeAssignments_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>NOTICE relating to CElll</xsd:documentation>
+					<xsd:documentation>NOTICE relating to cell</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -683,7 +683,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="DirectionType" type="RelativeDirectionEnumeration" default="both" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>For fares for DISTANCE MATRIXE LEMENTs, DIRECTION in which price applies.</xsd:documentation>
+					<xsd:documentation>For fares for DISTANCE MATRIX ELEMENTs, DIRECTION in which price applies.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="RoutingType" type="RoutingTypeEnumeration" default="both" minOccurs="0">

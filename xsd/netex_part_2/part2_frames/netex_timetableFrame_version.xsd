@@ -194,7 +194,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="groupsOfServices" type="groupsOfServicesInFrame_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Groupings of Journeys In frame. Can be used to define inbound and outbound beds for a matrix presentation of the JORUNEYs in the TIMETABLE.</xsd:documentation>
+					<xsd:documentation>Groupings of Journeys In frame. Can be used to define inbound and outbound beds for a matrix presentation of the JOURNEYs in the TIMETABLE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="trainNumbers" type="trainNumbersInFrame_RelStructure" minOccurs="0">

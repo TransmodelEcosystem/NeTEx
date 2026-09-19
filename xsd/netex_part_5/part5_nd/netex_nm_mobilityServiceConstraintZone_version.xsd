@@ -115,7 +115,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="RuleApplicability" type="ZoneRuleApplicabilityEnumeration" default="inside" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Applicability of rule inside (defaut) or outside of zone</xsd:documentation>
+					<xsd:documentation>Applicability of rule inside (default) or outside of zone</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ZoneUse" type="TransportZoneUseEnumeration" minOccurs="0">
@@ -297,7 +297,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MustReturnToSameBay" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether a VEICLE must be returned to same bay as it was was taken from.</xsd:documentation>
+					<xsd:documentation>Whether a VEHICLE must be returned to same bay as it was was taken from.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

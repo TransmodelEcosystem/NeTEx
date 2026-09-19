@@ -218,7 +218,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="PeriodConstraint" type="SamePeriodEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Constraints on valdity period.</xsd:documentation>
+					<xsd:documentation>Constraints on validity period.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

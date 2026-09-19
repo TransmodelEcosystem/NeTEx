@@ -246,7 +246,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="ChangeAvailable" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether chaneg is available. +v1.1</xsd:documentation>
+					<xsd:documentation>Whether change is available. +v1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -442,7 +442,7 @@ Rail transport, Roads and Road transport
 	<!-- ======================================================================= -->
 	<xsd:element name="PassengerBeaconEquipment" substitutionGroup="PassengerEquipment">
 		<xsd:annotation>
-			<xsd:documentation>Specialisation of PASSENGER EQUIPMENT for Beacons. For SSID or UUID always use PublicCode. Be aware that when using VEHICLE TYPE or VEHICLE PROFILE only the type of the beacon can be described. The information aboutn the relevent real beacon often can only be provided when the actual VEHICLE is known.</xsd:documentation>
+			<xsd:documentation>Specialisation of PASSENGER EQUIPMENT for Beacons. For SSID or UUID always use PublicCode. Be aware that when using VEHICLE TYPE or VEHICLE PROFILE only the type of the beacon can be described. The information about the relevant real beacon often can only be provided when the actual VEHICLE is known.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>

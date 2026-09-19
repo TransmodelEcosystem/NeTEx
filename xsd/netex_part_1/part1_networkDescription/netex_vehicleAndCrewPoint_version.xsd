@@ -402,7 +402,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="OrganisationRef_Dummy" minOccurs="0"/>
 			<xsd:element name="operators" type="transportOrganisationRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>OPERATORs assoicated with GARAGE.</xsd:documentation>
+					<xsd:documentation>OPERATORs associated with GARAGE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="garagePoints" type="garagePoints_RelStructure" minOccurs="0">

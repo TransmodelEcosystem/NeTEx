@@ -137,7 +137,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="DatedVehicleJourneyRef" minOccurs="0"/>
 			<xsd:element name="SeatAllocationMethod" type="SeatAllocationMethodEnumeration" default="autoAssigned" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Method used to allocate seat. Defult is autoassigned</xsd:documentation>
+					<xsd:documentation>Method used to allocate seat. Default is autoassigned</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="SpotAllocationMethodRef" minOccurs="0"/>

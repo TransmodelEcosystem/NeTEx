@@ -124,13 +124,13 @@ Roads and Road transport.
 			<xsd:element name="Description" type="MultilingualString" minOccurs="0"/>
 			<xsd:element name="topics" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>One or more Request filters that specify tthe data to be included in output. Multiple filters are logically ANDed.</xsd:documentation>
+					<xsd:documentation>One or more Request filters that specify the data to be included in output. Multiple filters are logically ANDed.</xsd:documentation>
 				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:sequence>
 						<xsd:element name="NetworkFrameTopic" type="NetworkFrameTopicStructure" maxOccurs="unbounded">
 							<xsd:annotation>
-								<xsd:documentation>Vaues to use select Network Objects.</xsd:documentation>
+								<xsd:documentation>Values to use select Network Objects.</xsd:documentation>
 							</xsd:annotation>
 						</xsd:element>
 					</xsd:sequence>

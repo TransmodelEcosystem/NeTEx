@@ -189,7 +189,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="RequiresEmailAddress" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether use of the channel requries the pruchaser to have an email address.</xsd:documentation>
+					<xsd:documentation>Whether use of the channel requires the pruchaser to have an email address.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ContactDetails" type="ContactStructure" minOccurs="0">
@@ -210,7 +210,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="DistributionRights" type="DistributionRightsListOfEnumerations" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Defaut distribution Rigts allowed by DISTRIBUTION CHANNEL.</xsd:documentation>
+					<xsd:documentation>Default distribution Rigts allowed by DISTRIBUTION CHANNEL.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:choice>

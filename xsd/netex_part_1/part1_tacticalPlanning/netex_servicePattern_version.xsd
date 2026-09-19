@@ -266,7 +266,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="NameSuffix" type="MultilingualString" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Optiona l Suffix for Name of SCHEDULED STOP POINT.</xsd:documentation>
+					<xsd:documentation>Optional Suffix for Name of SCHEDULED STOP POINT.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Description" type="MultilingualString" minOccurs="0">
@@ -324,7 +324,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="ExternalStopPointRef" type="ExternalObjectRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>An alternative code that uniquely identifies the STOP POINT. pecifically for use in AVMS systems that require an alias, if. For VDV compatibility. DEPRECATED - use privateCodes. -v2.0</xsd:documentation>
+					<xsd:documentation>An alternative code that uniquely identifies the STOP POINT. specifically for use in AVMS systems that require an alias, if. For VDV compatibility. DEPRECATED - use privateCodes. -v2.0</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -611,7 +611,7 @@ Rail transport, Roads and Road transport
 				</xsd:element>
 				<xsd:element name="VehicleMeetingPointRef" type="PointRefStructure" minOccurs="0">
 					<xsd:annotation>
-						<xsd:documentation>VEHICLE MEETING POINT at END OF CONENCTION. +V1.2.2. NB This is typed only to POINT to avoid forward dependency</xsd:documentation>
+						<xsd:documentation>VEHICLE MEETING POINT at END OF CONNECTION. +V1.2.2. NB This is typed only to POINT to avoid forward dependency</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
 			</xsd:choice>

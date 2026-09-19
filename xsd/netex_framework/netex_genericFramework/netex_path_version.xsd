@@ -112,7 +112,7 @@ Rail transport, Roads and Road transport
 	</xsd:group>
 	<xsd:group name="GenericPathLinkDurationGroup">
 		<xsd:annotation>
-			<xsd:documentation>Duration properties of a GENERIC PATH LINK. NB Cant be move up to on PATH LINK without breakage. revise in V3.0</xsd:documentation>
+			<xsd:documentation>Duration properties of a GENERIC PATH LINK. NB Can't be move up to on PATH LINK without breakage. revise in V3.0</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="TransferDuration" type="TransferDurationStructure" minOccurs="0">

@@ -196,7 +196,7 @@
 			</xsd:element>
 			<xsd:element name="SymbolMarkingUsualRoute" type="xsd:normalizedString" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Symbal to us eto mark normal route.</xsd:documentation>
+					<xsd:documentation>Symbal to use to mark normal route.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -213,7 +213,7 @@
 			</xsd:element>
 			<xsd:element name="RoutingType" type="RoutingTypeEnumeration" default="both" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether this is a direct i.e. no changes requried point to point or indirect.</xsd:documentation>
+					<xsd:documentation>Whether this is a direct i.e. no changes required point to point or indirect.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

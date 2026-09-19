@@ -368,7 +368,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="PaymentAppDownloadUrl" type="xsd:anyURI" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>URL to downlaod app to pay.</xsd:documentation>
+					<xsd:documentation>URL to download app to pay.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -763,7 +763,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="NumberOfSpacesWithRechargePoint" type="NumberOfVehicles" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Number of parking places with eletric chargepoints.</xsd:documentation>
+					<xsd:documentation>Number of parking places with electric chargepoints.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -943,7 +943,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="NumberOfBaysWithRecharging" type="xsd:nonNegativeInteger" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Total number of parking places supportig Electirc car recharging in PARKING AREA.</xsd:documentation>
+					<xsd:documentation>Total number of parking places supporting Electric car recharging in PARKING AREA.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:choice minOccurs="0">

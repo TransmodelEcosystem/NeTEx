@@ -126,7 +126,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="PriceUnitRef" minOccurs="0"/>
 			<xsd:element name="priceUnits" type="priceUnits_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Set of Rounding paraemeters.</xsd:documentation>
+					<xsd:documentation>Set of Rounding parameters.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="pricingRules" type="pricingRules_RelStructure" minOccurs="0">
@@ -142,7 +142,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="RoundingRef" minOccurs="0"/>
 			<xsd:element name="roundings" type="roundings_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Set of Rounding paraemeters.</xsd:documentation>
+					<xsd:documentation>Set of Rounding parameters.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="DayTypeRef" minOccurs="0"/>
@@ -306,7 +306,7 @@ Rail transport, Roads and Road transport
 	<!-- ======================================================================= -->
 	<xsd:element name="RoundingStep">
 		<xsd:annotation>
-			<xsd:documentation>A rounding step to use to round a range of values. Any value larger than the step key and smaller tha the next step key should be rounded to this value.</xsd:documentation>
+			<xsd:documentation>A rounding step to use to round a range of values. Any value larger than the step key and smaller than the next step key should be rounded to this value.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
@@ -412,7 +412,7 @@ Rail transport, Roads and Road transport
 	<!-- === MONTH VALIDITY OFFSET================================================= -->
 	<xsd:complexType name="monthValidityOffsets_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Ser of MONTH VALIDITY OFFSETs parameters such as rounding steps for Frame.</xsd:documentation>
+			<xsd:documentation>Set of MONTH VALIDITY OFFSETs parameters such as rounding steps for Frame.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="strictContainmentAggregationStructure">
@@ -486,7 +486,7 @@ Rail transport, Roads and Road transport
 	<!-- === PRICING RULE ================================================= -->
 	<xsd:complexType name="pricingRules_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Ser of PRICING RULEs such for Frame.</xsd:documentation>
+			<xsd:documentation>Set of PRICING RULEs such for Frame.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="frameContainmentStructure">
@@ -498,7 +498,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:element name="PricingRule_Dummy" type="DataManagedObjectStructure" abstract="true" substitutionGroup="DataManagedObject">
 		<xsd:annotation>
-			<xsd:documentation>Dumm abstact type of Pricing rule.</xsd:documentation>
+			<xsd:documentation>Dummy abstract type of Pricing rule.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="PricingRule" substitutionGroup="PricingRule_Dummy">
@@ -575,7 +575,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="PriceUnitRef" minOccurs="0"/>
 			<xsd:element name="url" type="xsd:anyURI" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>URLor rule. with infor fmethod to use.</xsd:documentation>
+					<xsd:documentation>URLor rule. with info fmethod to use.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -712,7 +712,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MinimumPriceAsPercentage" type="xsd:decimal" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Minumum price as percentage of whole price.</xsd:documentation>
+					<xsd:documentation>Minimum price as percentage of whole price.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MinimumPriceAsMultiple" type="xsd:integer" minOccurs="0">
@@ -727,7 +727,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MaximumPriceAsPercentage" type="xsd:decimal" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Maxumum price as percentage of whole price.</xsd:documentation>
+					<xsd:documentation>Maximum price as percentage of whole price.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MaximumPriceAsMultiple" type="xsd:integer" minOccurs="0">
@@ -754,7 +754,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MaximumLimitPriceAsPercentage" type="xsd:decimal" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Maxumum Limit as percentage of whole price.</xsd:documentation>
+					<xsd:documentation>Maximum Limit as percentage of whole price.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MaximumLimitPrice" type="CurrencyAmountType" minOccurs="0">

@@ -288,7 +288,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="IsAllowed" type="xsd:boolean" default="true" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether values are allowed ro forbiden. Defaullt is allowed.</xsd:documentation>
+					<xsd:documentation>Whether values are allowed or forbidden. Default is allowed.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="TypeOfAccessRightAssignmentRef" minOccurs="0"/>
@@ -346,7 +346,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="ValidityParameterAssignmentType" type="RelativeOperatorEnumeration" default="EQ" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Comparison Operator for comparing Validity Erlements valeus. Defalut is EQ.</xsd:documentation>
+					<xsd:documentation>Comparison Operator for comparing Validity Elements values. Default is EQ.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ValidityParameterGroupingType" type="LogicalOperationEnumeration" default="AND" minOccurs="0">
@@ -452,7 +452,7 @@ Rail transport, Roads and Road transport
 			<xsd:choice>
 				<xsd:element name="VehicleModes" type="AllPublicTransportModesListOfEnumerations" minOccurs="0">
 					<xsd:annotation>
-						<xsd:documentation>PUBLIC TRANPORT MODEs to which ACCESS RIGHTs apply. DEPRECATED - keep for backwards compatibility. -v1.2.2</xsd:documentation>
+						<xsd:documentation>PUBLIC TRANSPORT MODEs to which ACCESS RIGHTs apply. DEPRECATED - keep for backwards compatibility. -v1.2.2</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
 				<xsd:element name="TransportModes" type="AllModesListOfEnumerations" minOccurs="0">
@@ -866,7 +866,7 @@ Rail transport, Roads and Road transport
 		<xsd:choice>
 			<xsd:element name="validityParameterAssignments" type="genericParameterAssignments_RelStructure">
 				<xsd:annotation>
-					<xsd:documentation>VALIDITY PARAMETR ASSIGNMENTss for an element.</xsd:documentation>
+					<xsd:documentation>VALIDITY PARAMETER ASSIGNMENTs for an element.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="GenericParameterAssignment">
@@ -964,7 +964,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="includes" type="genericParameterAssignments_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Assignments Logically included in this group. Groups are combined acording to the Operator.</xsd:documentation>
+					<xsd:documentation>Assignments Logically included in this group. Groups are combined according to the Operator.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

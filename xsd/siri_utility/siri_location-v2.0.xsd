@@ -162,7 +162,7 @@ Rail transport, Roads and road transport
 				</xsd:sequence>
 				<xsd:element name="Coordinates" type="CoordinatesStructure">
 					<xsd:annotation>
-						<xsd:documentation>Coordinates of points in a GML compatibe format, as indicated by srsName attribute.</xsd:documentation>
+						<xsd:documentation>Coordinates of points in a GML compatible format, as indicated by srsName attribute.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
 			</xsd:choice>
@@ -221,13 +221,13 @@ Lower right corner.
 	<!--======Distance ============================================================-->
 	<xsd:simpleType name="DistanceType">
 		<xsd:annotation>
-			<xsd:documentation>Distance (metres) as defined by http://www.ordnancesurvey.co.uk/xml/resource/units.xml#metres. ALternative units may be specifed by context.</xsd:documentation>
+			<xsd:documentation>Distance (metres) as defined by http://www.ordnancesurvey.co.uk/xml/resource/units.xml#metres. ALternative units may be specified by context.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:nonNegativeInteger"/>
 	</xsd:simpleType>
 	<xsd:simpleType name="VelocityType">
 		<xsd:annotation>
-			<xsd:documentation>Distance (metres per second) ALternative unist may be specifed by context.</xsd:documentation>
+			<xsd:documentation>Distance (metres per second) ALternative unist may be specified by context.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:nonNegativeInteger"/>
 	</xsd:simpleType>

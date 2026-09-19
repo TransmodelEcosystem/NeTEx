@@ -77,7 +77,7 @@
 	</xsd:simpleType>
 	<xsd:complexType name="NaturalLanguageStringStructure">
 		<xsd:annotation>
-			<xsd:documentation>Tyoe for a string in a specified language.</xsd:documentation>
+			<xsd:documentation>Type for a string in a specified language.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:simpleContent>
 			<xsd:extension base="PopulatedStringType">

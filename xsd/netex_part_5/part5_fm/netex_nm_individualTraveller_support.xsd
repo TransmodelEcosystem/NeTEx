@@ -54,7 +54,7 @@ Rail transport, Roads and Road transport
 				<Type>Standard</Type>
 			</Metadata>
 		</xsd:appinfo>
-		<xsd:documentation>NeTEx INDIVIDUAL TRAVELLER Identifer types for</xsd:documentation>
+		<xsd:documentation>NeTEx INDIVIDUAL TRAVELLER Identifier types for</xsd:documentation>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
 	<!-- ====  INDIVIDUAL TRAVELLER ============================================ -->
@@ -248,7 +248,7 @@ Rail transport, Roads and Road transport
 	<!-- ====  USER RANKING  ============================================ -->
 	<xsd:simpleType name="UserRankingType">
 		<xsd:annotation>
-			<xsd:documentation>Individual ranking based on the traditional 5 stars (1 to 5, 5 being the better) ranking which is the most used (note that the Like/Dislike model can be mapped to no-ranking/ranking=1 and the rare 10 stars model, like IMDb, will mapp 1/2 ti 1, 2/3 to 2, etc.)</xsd:documentation>
+			<xsd:documentation>Individual ranking based on the traditional 5 stars (1 to 5, 5 being the better) ranking which is the most used (note that the Like/Dislike model can be mapped to no-ranking/ranking=1 and the rare 10 stars model, like IMDb, will map 1/2 ti 1, 2/3 to 2, etc.)</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:positiveInteger">
 			<xsd:minInclusive value="1"/>
@@ -257,7 +257,7 @@ Rail transport, Roads and Road transport
 	</xsd:simpleType>
 	<xsd:simpleType name="GlobalRankingType">
 		<xsd:annotation>
-			<xsd:documentation>Mean ranking based on the traditional 5 stars (1 to 5 better) ranking which is the most used (note that the Like/Dislike model can be mapped to no-ranking/ranking=1 and the rare 10 stars model, like IMDb, will mapp 1/2 ti 1, 2/3 to 2, etc.)</xsd:documentation>
+			<xsd:documentation>Mean ranking based on the traditional 5 stars (1 to 5 better) ranking which is the most used (note that the Like/Dislike model can be mapped to no-ranking/ranking=1 and the rare 10 stars model, like IMDb, will map 1/2 ti 1, 2/3 to 2, etc.)</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:decimal">
 			<xsd:minInclusive value="1.0"/>

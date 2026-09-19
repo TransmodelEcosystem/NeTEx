@@ -481,7 +481,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="SalesOfferPackageRef" minOccurs="0"/>
 			<xsd:element name="WithSalesOfferPackageRef" type="SalesOfferPackageRefStructure">
 				<xsd:annotation>
-					<xsd:documentation>SALES OFFER PACKAGE that may be used to subsitute base SALES OFFER PACKAGE.</xsd:documentation>
+					<xsd:documentation>SALES OFFER PACKAGE that may be used to substitute base SALES OFFER PACKAGE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -664,7 +664,7 @@ Rail transport, Roads and Road transport
 			<xsd:group ref="DistributionProductsGroup"/>
 			<xsd:element name="DistributionRights" type="DistributionRightsListOfEnumerations" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Override the folloing rights allowed by channel.</xsd:documentation>
+					<xsd:documentation>Override the following rights allowed by channel.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:group ref="DistributionThroughGroup"/>
@@ -736,17 +736,17 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="InitialCarrier" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Wehther initial carrer has rights.</xsd:documentation>
+					<xsd:documentation>Whether initial carrier has rights.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="TransitCarrier" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whther intremediate transit carrier has rights.</xsd:documentation>
+					<xsd:documentation>Whether intremediate transit carrier has rights.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="FinalCarrier" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whetehr final carrier has rights.</xsd:documentation>
+					<xsd:documentation>Whether final carrier has rights.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:group ref="OneOrAllOrganisationsRefGroup" minOccurs="0"/>

@@ -108,7 +108,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="ProvidesCard" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether the product provdies a card with it.</xsd:documentation>
+					<xsd:documentation>Whether the product provides a card with it.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="GoesOnCard" type="xsd:boolean" default="false" minOccurs="0">
@@ -167,27 +167,27 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="HasOperatorRestrictions" type="OperatorRestrictionsEnumeration" default="anyTrain" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Restictions on which OPERATOR's services can be used.</xsd:documentation>
+					<xsd:documentation>Restrictions on which OPERATOR's services can be used.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="HasTravelTimeRestrictions" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether there are restictions on which routes can be used.</xsd:documentation>
+					<xsd:documentation>Whether there are restrictions on which routes can be used.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="HasRouteRestrictions" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether there are restictions on which routes can be used.</xsd:documentation>
+					<xsd:documentation>Whether there are restrictions on which routes can be used.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="TrainRestrictions" type="TrainRestrictionsEnumeration" default="anyTrain" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Restictions on which trains can be used.</xsd:documentation>
+					<xsd:documentation>Restrictions on which trains can be used.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="HasZoneRestrictions" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether there are restictions on which zones can be used.</xsd:documentation>
+					<xsd:documentation>Whether there are restrictions on which zones can be used.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="CanBreakJourney" type="xsd:boolean" default="false" minOccurs="0">

@@ -227,7 +227,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element ref="DriverRef" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>** DEPRECATED ** not to be used - It is expected that the driver's DUTY refer the DatedJourneyPattern, not the way arround ! -v2.0</xsd:documentation>
+					<xsd:documentation>** DEPRECATED ** not to be used - It is expected that the driver's DUTY refer the DatedJourneyPattern, not the way around ! -v2.0</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -324,7 +324,7 @@ The VIEW includes derived ancillary data from referenced entities.</xsd:document
 					</xsd:sequence>
 					<xsd:attribute name="id" type="NormalDatedVehicleJourneyIdType" use="required">
 						<xsd:annotation>
-							<xsd:documentation>Identifier of NORMAL DATED VEHICLE JORUNEY.</xsd:documentation>
+							<xsd:documentation>Identifier of NORMAL DATED VEHICLE JOURNEY.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:attribute>
 				</xsd:restriction>

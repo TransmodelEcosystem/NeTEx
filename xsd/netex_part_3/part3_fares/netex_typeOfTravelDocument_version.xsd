@@ -152,7 +152,7 @@ Rail transport, Roads and Road transport
 							</xsd:element>
 							<xsd:element name="typesOfMachineReadabilities" type="typesOfMachineReadabilities_RelStructure" minOccurs="0">
 								<xsd:annotation>
-									<xsd:documentation>Openended classiifcation of machine readable capabilties compatible with TRAVEL DOCUMENT.</xsd:documentation>
+									<xsd:documentation>Openended classiifcation of machine readable capabilities compatible with TRAVEL DOCUMENT.</xsd:documentation>
 								</xsd:annotation>
 							</xsd:element>
 							<xsd:element name="alternativeNames" type="alternativeNames_RelStructure" minOccurs="0">
@@ -209,7 +209,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="typesOfMachineReadabilities" type="typesOfMachineReadabilities_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Openended classiifcation of machine readable capabilties compatible with TRAVEL DOCUMENT.</xsd:documentation>
+					<xsd:documentation>Openended classiifcation of machine readable capabilities compatible with TRAVEL DOCUMENT.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="alternativeNames" type="alternativeNames_RelStructure" minOccurs="0">
@@ -234,7 +234,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:element name="TypeOfMachineReadability" substitutionGroup="TypeOfValue">
 		<xsd:annotation>
-			<xsd:documentation>A classification of MACHINE REDABILITY capabailities, used for example to indicate how a TRAVEL DOCUMENT may be read.</xsd:documentation>
+			<xsd:documentation>A classification of MACHINE READABILITY capabailities, used for example to indicate how a TRAVEL DOCUMENT may be read.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>

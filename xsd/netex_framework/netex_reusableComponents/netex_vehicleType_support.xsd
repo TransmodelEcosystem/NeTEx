@@ -496,7 +496,7 @@ Rail transport, Roads and Road transport
 	<!-- ======= FACILITY REQUIREMENT =================================================== -->
 	<xsd:simpleType name="FacilityRequirementIdType">
 		<xsd:annotation>
-			<xsd:documentation>Type for identifier of a FACILITY REQUIRMENT.</xsd:documentation>
+			<xsd:documentation>Type for identifier of a FACILITY REQUIREMENT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="VehicleRequirementIdType"/>
 	</xsd:simpleType>
@@ -507,7 +507,7 @@ Rail transport, Roads and Road transport
 	</xsd:element>
 	<xsd:complexType name="FacilityRequirementRefStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a reference to a FACILITY REQUIRMENT.</xsd:documentation>
+			<xsd:documentation>Type for a reference to a FACILITY REQUIREMENT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:simpleContent>
 			<xsd:restriction base="VehicleRequirementRefStructure">

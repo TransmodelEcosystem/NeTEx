@@ -179,7 +179,7 @@ References to a DATA SOURCE are useful in an interoperated computer system.</xsd
 						<xsd:sequence>
 							<xsd:element name="Presentation" type="PresentationStructure" minOccurs="0">
 								<xsd:annotation>
-									<xsd:documentation>Preferred presentation values assoicated with BRANDING. +v1.1</xsd:documentation>
+									<xsd:documentation>Preferred presentation values associated with BRANDING. +v1.1</xsd:documentation>
 								</xsd:annotation>
 							</xsd:element>
 						</xsd:sequence>

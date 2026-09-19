@@ -329,7 +329,7 @@ Rail transport, Roads and Road transport
 							<xsd:element ref="ScheduledStopPointView" minOccurs="0"/>
 							<xsd:element name="AbridgementRanking" type="xsd:integer" minOccurs="0">
 								<xsd:annotation>
-									<xsd:documentation>Relative ranking for omitting this FARE POINT IN JOURNEY PATTERN when presenting an abridged verson of the series as an itinerary. 1=High, i.e. omit first.</xsd:documentation>
+									<xsd:documentation>Relative ranking for omitting this FARE POINT IN JOURNEY PATTERN when presenting an abridged version of the series as an itinerary. 1=High, i.e. omit first.</xsd:documentation>
 								</xsd:annotation>
 							</xsd:element>
 							<xsd:element name="PresentationPosition" type="SeriesPresentationEnumeration" minOccurs="0">
@@ -378,7 +378,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="ScheduledStopPointView" minOccurs="0"/>
 			<xsd:element name="AbridgementRanking" type="xsd:integer" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Relative ranking for omitting this FARE POINT IN JOURNEY PATTERN when presenting an abridged verson of the series. 1=High.- omit first.</xsd:documentation>
+					<xsd:documentation>Relative ranking for omitting this FARE POINT IN JOURNEY PATTERN when presenting an abridged version of the series. 1=High.- omit first.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="PresentationPosition" type="SeriesPresentationEnumeration" minOccurs="0">

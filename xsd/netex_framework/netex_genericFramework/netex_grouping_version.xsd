@@ -324,7 +324,7 @@ Rail transport, Roads and Road transport
 				<xsd:sequence>
 					<xsd:element name="PurposeOfGroupingRef" type="PurposeOfGroupingRefStructure" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>Reference to a PUPOSE OF GROUPING to which this member belongs. If given by context does not need to be specified.</xsd:documentation>
+							<xsd:documentation>Reference to a PURPOSE OF GROUPING to which this member belongs. If given by context does not need to be specified.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:element name="MemberClassRef" type="ClassRefStructure">

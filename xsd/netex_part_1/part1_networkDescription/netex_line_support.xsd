@@ -436,7 +436,7 @@ Rail transport, Roads and Road transport
 	</xsd:simpleType>
 	<xsd:simpleType name="DestinationDisplayContextEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>Allowed values forr Destination Display Context. +v1.1.</xsd:documentation>
+			<xsd:documentation>Allowed values for Destination Display Context. +v1.1.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="any"/>

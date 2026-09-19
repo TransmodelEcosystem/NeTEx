@@ -254,7 +254,7 @@ Rail transport, Roads and Road transport
 	</xsd:group>
 	<xsd:group name="TravelSpecificationPriceGroup">
 		<xsd:annotation>
-			<xsd:documentation>Price lements for TRAVEL SPECIFICATION.</xsd:documentation>
+			<xsd:documentation>Price elements for TRAVEL SPECIFICATION.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:choice minOccurs="0">
@@ -475,7 +475,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="includes" type="specificParameterAssignments_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Assignments Logically included in this group. Groups are combined acording to the Operator.</xsd:documentation>
+					<xsd:documentation>Assignments Logically included in this group. Groups are combined according to the Operator.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

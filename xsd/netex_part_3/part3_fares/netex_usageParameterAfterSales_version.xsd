@@ -145,7 +145,7 @@ Rail transport, Roads and Road transport
 			<xsd:group ref="ResellingCalculationGroup"/>
 			<xsd:group ref="ResellingPaymentGroup">
 				<xsd:annotation>
-					<xsd:documentation>Elements for making payments fo RESELLING Group.</xsd:documentation>
+					<xsd:documentation>Elements for making payments for RESELLING Group.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:group>
 		</xsd:sequence>
@@ -245,7 +245,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="typesOfPaymentMethodRef" type="TypeOfPaymentMethodRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Other PAYMENT METHODs allowd to pay fee or to make refund.</xsd:documentation>
+					<xsd:documentation>Other PAYMENT METHODs allowed to pay fee or to make refund.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

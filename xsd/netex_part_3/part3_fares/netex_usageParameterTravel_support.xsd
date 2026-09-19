@@ -590,7 +590,7 @@ Rail transport, Roads and Road transport
 	</xsd:simpleType>
 	<xsd:simpleType name="SuspensionPolicyListOfEnumerations">
 		<xsd:annotation>
-			<xsd:documentation>List of Suspension Policiy values</xsd:documentation>
+			<xsd:documentation>List of Suspension Policy values</xsd:documentation>
 		</xsd:annotation>
 		<xsd:list itemType="SuspensionPolicyEnumeration"/>
 	</xsd:simpleType>
@@ -607,7 +607,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="unlimited">
 				<xsd:annotation>
-					<xsd:documentation>Unlimted use may be made of the product within allowed period.</xsd:documentation>
+					<xsd:documentation>Unlimited use may be made of the product within allowed period.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="limited">

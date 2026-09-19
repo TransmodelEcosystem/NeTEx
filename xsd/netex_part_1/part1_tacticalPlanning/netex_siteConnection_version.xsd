@@ -152,7 +152,7 @@ Rail transport, Roads and Road transport
 				</xsd:element>
 				<xsd:element name="VehicleMeetingPointRef" type="PointRefStructure" minOccurs="0">
 					<xsd:annotation>
-						<xsd:documentation>VEHICLE MEETING POINT at END OF CONENCTION. +V1.2.2. NB This is typed only to POINT to avoid forward dependency</xsd:documentation>
+						<xsd:documentation>VEHICLE MEETING POINT at END OF CONNECTION. +V1.2.2. NB This is typed only to POINT to avoid forward dependency</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
 			</xsd:choice>

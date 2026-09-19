@@ -242,7 +242,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="NumberOFDrivers" type="xsd:nonNegativeInteger" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Maximimum Number of drivers allwoed.</xsd:documentation>
+					<xsd:documentation>Maximum Number of drivers allowed.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

@@ -183,7 +183,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="travelSpecifications" type="travelSpecifications_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Travel Specifcations bought by Salles Transaction</xsd:documentation>
+					<xsd:documentation>Travel Specifications bought by Salles Transaction</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="customerPurchasePackages" type="customerPurchasePackages_RelStructure" minOccurs="0">
