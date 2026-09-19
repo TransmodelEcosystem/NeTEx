@@ -364,6 +364,11 @@ Rail transport, Roads and Road transport
 					<xsd:documentation>Web link for LINE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element name="ReplacedLineRef" type="LineRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>ID of the replaced line. To be used only when the Transport SubMode clearly indicates that it is a replacement (for example, railReplacementBus). +v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
 	<xsd:group name="LineCodeGroup">
