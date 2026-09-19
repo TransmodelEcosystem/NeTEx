@@ -1,0 +1,4067 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" xmlns="http://www.netex.org.uk/netex" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd" version="2.0">
+	<!--Profile: VDV462-->
+	<PublicationTimestamp>2026-03-20T00:43:21.4580728+01:00</PublicationTimestamp>
+	<ParticipantRef>MENTZ</ParticipantRef>
+	<Description>NeTEx Export, Version: 19.78.0.6671</Description>
+	<dataObjects>
+		<CompositeFrame id="it:apb:CompositeFrame:apb" version="1">
+			<ValidBetween>
+				<FromDate>2025-12-14T00:00:00</FromDate>
+				<ToDate>2026-12-12T23:59:59</ToDate>
+			</ValidBetween>
+			<frames>
+				<ResourceFrame id="it:apb:ResourceFrame:apb" version="any">
+					<typesOfValue>
+						<ValueSet id="it:apb:ValueSet:notices" version="any" nameOfClass="TypeOfNotice">
+							<values>
+								<TypeOfNotice id="it:apb:TypeOfNotice:4" version="any">
+									<Name>Fahrradmitnahme</Name>
+									<PrivateCode>4</PrivateCode>
+								</TypeOfNotice>
+							</values>
+						</ValueSet>
+						<!-- can under 2.1 be done as LineType -->
+						<ValueSet id="it:apb:ValueSet:TypeOfFlexibleService" version="any" nameOfClass="TypeOfFlexibleService">
+							<values>
+								<TypeOfFlexibleService id="it:apb:TypeOfFlexibleService:L" version="any">
+									<Name lang="de">Bedarfslinie</Name>
+									<ShortName lang="de">L</ShortName>
+									<PrivateCode>1</PrivateCode>
+								</TypeOfFlexibleService>
+								<TypeOfFlexibleService id="it:apb:TypeOfFlexibleService:A" version="any">
+									<Name lang="de">Anrufsammelverkehr</Name>
+									<ShortName lang="de">A</ShortName>
+									<PrivateCode>2</PrivateCode>
+								</TypeOfFlexibleService>
+								<TypeOfFlexibleService id="it:apb:TypeOfFlexibleService:Ö" version="any">
+									<Name lang="de">Richtungsband, örtlich disponierter Bus</Name>
+									<ShortName lang="de">Ö</ShortName>
+									<PrivateCode>3</PrivateCode>
+								</TypeOfFlexibleService>
+								<TypeOfFlexibleService id="it:apb:TypeOfFlexibleService:Z" version="any">
+									<Name lang="de">Zeitbezogener Flächenverkehr</Name>
+									<ShortName lang="de">Z</ShortName>
+									<PrivateCode>4</PrivateCode>
+								</TypeOfFlexibleService>
+								<TypeOfFlexibleService id="it:apb:TypeOfFlexibleService:F" version="any">
+									<Name lang="de">Freier Flächenverkehr</Name>
+									<ShortName lang="de">F</ShortName>
+									<PrivateCode>5</PrivateCode>
+								</TypeOfFlexibleService>
+							</values>
+						</ValueSet>
+						<ValueSet id="it:apb:ValueSet:TypeOfPlace" version="any" nameOfClass="TypeOfPlace">
+							<values>
+								<TypeOfPlace id="it:apb:TypeOfPlace:regularStop" version="any">
+									<Name>regular stop</Name>
+								</TypeOfPlace>
+								<TypeOfPlace id="it:apb:TypeOfPlace:drtCollectionPoint" version="any">
+									<Name>DRT collection point</Name>
+								</TypeOfPlace>
+							</values>
+						</ValueSet>
+					</typesOfValue>
+					<!-- What do you do with operationalContexts? -->
+					<operationalContexts>
+						<OperationalContext id="it:apb:OperationalContext:3" version="any">
+							<Name lang="it">Bahnlinien Regionale Bahnlinien</Name>
+							<ShortName lang="it">Bahn Reg</ShortName>
+							<PrivateCode>3</PrivateCode>
+						</OperationalContext>
+						<OperationalContext id="it:apb:OperationalContext:6" version="any">
+							<Name lang="it">Ersatz- und Sonderdienste</Name>
+							<ShortName lang="it">SOS</ShortName>
+							<PrivateCode>6</PrivateCode>
+						</OperationalContext>
+					</operationalContexts>
+					<vehicleTypes>
+						<VehicleType id="it:apb:VehicleType:X3" version="any">
+							<Name lang="it">Dummy Citybus</Name>
+							<ShortName lang="it">X3</ShortName>
+							<PrivateCode>93</PrivateCode>
+							<PassengerCapacity id="it:apb:PassengerCapacity:X3" version="any">
+								<SeatingCapacity>9</SeatingCapacity>
+								<StandingCapacity>16</StandingCapacity>
+								<SpecialPlaceCapacity>0</SpecialPlaceCapacity>
+							</PassengerCapacity>
+							<LowFloor>false</LowFloor>
+							<HasLiftOrRamp>false</HasLiftOrRamp>
+							<HasHoist>false</HasHoist>
+							<Length>8</Length>
+						</VehicleType>
+					</vehicleTypes>
+				</ResourceFrame>
+				<SiteFrame id="it:apb:SiteFrame:apb" version="any">
+					<topographicPlaces>
+						<TopographicPlace id="it:apb:TopographicPlace:15fb9302-dc0c-41fb-9254-798f3ba3d6a7" version="any">
+							<alternativeTexts>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="de">Geiselsberg (Olang)</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>GlobalId</Key>
+									<Value>15fb9302-dc0c-41fb-9254-798f3ba3d6a7</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GKZ</Key>
+									<Value>021106</Value>
+								</KeyValue>
+							</keyList>
+							<PrivateCode>2</PrivateCode>
+							<Descriptor>
+								<Name lang="it">Sorafurcia(Valdaora)</Name>
+								<ShortName>2</ShortName>
+							</Descriptor>
+							<TopographicPlaceType>town</TopographicPlaceType>
+							<ParentTopographicPlaceRef ref="it:apb:TopographicPlace:22021106" version="any"/>
+						</TopographicPlace>
+						<TopographicPlace id="it:apb:TopographicPlace:19f01ecc-f347-4d21-b31e-ca078aeaa12f" version="any">
+							<keyList>
+								<KeyValue>
+									<Key>GlobalId</Key>
+									<Value>19f01ecc-f347-4d21-b31e-ca078aeaa12f</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GKZ</Key>
+									<Value>021071</Value>
+								</KeyValue>
+							</keyList>
+							<PrivateCode>6</PrivateCode>
+							<Descriptor>
+								<Name lang="it">Rasun di Sotto</Name>
+								<ShortName>6</ShortName>
+							</Descriptor>
+							<TopographicPlaceType>town</TopographicPlaceType>
+							<ParentTopographicPlaceRef ref="it:apb:TopographicPlace:22021071" version="any"/>
+						</TopographicPlace>
+						<TopographicPlace id="it:apb:TopographicPlace:22" version="any">
+							<PrivateCode>22</PrivateCode>
+							<Descriptor>
+								<Name lang="it">Italien</Name>
+								<ShortName>I</ShortName>
+							</Descriptor>
+							<TopographicPlaceType>country</TopographicPlaceType>
+						</TopographicPlace>
+						<TopographicPlace id="it:apb:TopographicPlace:22021" version="any">
+							<PrivateCode>22021</PrivateCode>
+							<Descriptor>
+								<Name lang="it">Bolzano/Bozen</Name>
+								<ShortName>I-BZ</ShortName>
+							</Descriptor>
+							<TopographicPlaceType>county</TopographicPlaceType>
+							<ParentTopographicPlaceRef ref="it:apb:TopographicPlace:22" version="any"/>
+						</TopographicPlace>
+						<TopographicPlace id="it:apb:TopographicPlace:22021047" version="any">
+							<PrivateCode>22021047</PrivateCode>
+							<Descriptor>
+								<Name lang="it">Marebbe</Name>
+							</Descriptor>
+							<TopographicPlaceType>district</TopographicPlaceType>
+							<ParentTopographicPlaceRef ref="it:apb:TopographicPlace:22021" version="any"/>
+						</TopographicPlace>
+						<TopographicPlace id="it:apb:TopographicPlace:22021071" version="any">
+							<PrivateCode>22021071</PrivateCode>
+							<Descriptor>
+								<Name lang="it">Rasun-Anterselva</Name>
+							</Descriptor>
+							<TopographicPlaceType>district</TopographicPlaceType>
+							<ParentTopographicPlaceRef ref="it:apb:TopographicPlace:22021" version="any"/>
+						</TopographicPlace>
+						<TopographicPlace id="it:apb:TopographicPlace:22021106" version="any">
+							<PrivateCode>22021106</PrivateCode>
+							<Descriptor>
+								<Name lang="it">Valdaora</Name>
+							</Descriptor>
+							<TopographicPlaceType>district</TopographicPlaceType>
+							<ParentTopographicPlaceRef ref="it:apb:TopographicPlace:22021" version="any"/>
+						</TopographicPlace>
+						<TopographicPlace id="it:apb:TopographicPlace:57c3744e-6429-44dd-8947-735034d98280" version="any">
+							<alternativeTexts>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="de">Furkelpass</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>GlobalId</Key>
+									<Value>57c3744e-6429-44dd-8947-735034d98280</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GKZ</Key>
+									<Value>021047</Value>
+								</KeyValue>
+							</keyList>
+							<PrivateCode>8</PrivateCode>
+							<Descriptor>
+								<Name lang="it">Passo Furcia</Name>
+								<ShortName>8</ShortName>
+							</Descriptor>
+							<TopographicPlaceType>town</TopographicPlaceType>
+							<ParentTopographicPlaceRef ref="it:apb:TopographicPlace:22021047" version="any"/>
+						</TopographicPlace>
+						<TopographicPlace id="it:apb:TopographicPlace:885e207a-7332-4f31-9f6a-2bf30096345a" version="any">
+							<alternativeTexts>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="de">Mitterolang</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>GlobalId</Key>
+									<Value>885e207a-7332-4f31-9f6a-2bf30096345a</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GKZ</Key>
+									<Value>021106</Value>
+								</KeyValue>
+							</keyList>
+							<PrivateCode>3</PrivateCode>
+							<Descriptor>
+								<Name lang="it">Valdaora di Mezzo</Name>
+								<ShortName>3</ShortName>
+							</Descriptor>
+							<TopographicPlaceType>town</TopographicPlaceType>
+							<ParentTopographicPlaceRef ref="it:apb:TopographicPlace:22021106" version="any"/>
+						</TopographicPlace>
+						<TopographicPlace id="it:apb:TopographicPlace:8d9b4b61-d3e6-467d-85ec-217b9f04ff0f" version="any">
+							<alternativeTexts>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="de">Neunhäusern</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>GlobalId</Key>
+									<Value>8d9b4b61-d3e6-467d-85ec-217b9f04ff0f</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GKZ</Key>
+									<Value>021071</Value>
+								</KeyValue>
+							</keyList>
+							<PrivateCode>5</PrivateCode>
+							<Descriptor>
+								<Name lang="it">Nove Case (Rasun)</Name>
+								<ShortName>5</ShortName>
+							</Descriptor>
+							<TopographicPlaceType>town</TopographicPlaceType>
+							<ParentTopographicPlaceRef ref="it:apb:TopographicPlace:22021071" version="any"/>
+						</TopographicPlace>
+						<TopographicPlace id="it:apb:TopographicPlace:c5559038-e705-409e-8700-9a5eb8768943" version="any">
+							<keyList>
+								<KeyValue>
+									<Key>GlobalId</Key>
+									<Value>c5559038-e705-409e-8700-9a5eb8768943</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GKZ</Key>
+									<Value>021106</Value>
+								</KeyValue>
+							</keyList>
+							<PrivateCode>1</PrivateCode>
+							<Descriptor>
+								<Name lang="it">Valdaora</Name>
+								<ShortName>1</ShortName>
+							</Descriptor>
+							<TopographicPlaceType>town</TopographicPlaceType>
+							<ParentTopographicPlaceRef ref="it:apb:TopographicPlace:22021106" version="any"/>
+						</TopographicPlace>
+						<TopographicPlace id="it:apb:TopographicPlace:d3e4675b-926e-4c55-8d36-298b3982d74c" version="any">
+							<alternativeTexts>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="de">Niederolang</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>GlobalId</Key>
+									<Value>d3e4675b-926e-4c55-8d36-298b3982d74c</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GKZ</Key>
+									<Value>021106</Value>
+								</KeyValue>
+							</keyList>
+							<PrivateCode>5</PrivateCode>
+							<Descriptor>
+								<Name lang="it">Valdaora di Sotto</Name>
+								<ShortName>5</ShortName>
+							</Descriptor>
+							<TopographicPlaceType>town</TopographicPlaceType>
+							<ParentTopographicPlaceRef ref="it:apb:TopographicPlace:22021106" version="any"/>
+						</TopographicPlace>
+						<TopographicPlace id="it:apb:TopographicPlace:e86f2df7-41b4-491c-ae79-e65830e8bcc9" version="any">
+							<alternativeTexts>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="de">Oberolang</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>GlobalId</Key>
+									<Value>e86f2df7-41b4-491c-ae79-e65830e8bcc9</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GKZ</Key>
+									<Value>021106</Value>
+								</KeyValue>
+							</keyList>
+							<PrivateCode>4</PrivateCode>
+							<Descriptor>
+								<Name lang="it">Valdaora di Sopra</Name>
+								<ShortName>4</ShortName>
+							</Descriptor>
+							<TopographicPlaceType>town</TopographicPlaceType>
+							<ParentTopographicPlaceRef ref="it:apb:TopographicPlace:22021106" version="any"/>
+						</TopographicPlace>
+					</topographicPlaces>
+					<stopPlaces>
+						<StopPlace id="it:apb:StopPlace:it:22021:1203" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<!-- shouldn't this be done with AlternativeName? -->
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Neunhäusern</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>1203</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>5</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:1203</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Nove Case</Name>
+							<ShortName lang="it">NEUNHÄ</ShortName>
+							<PrivateCode>1203</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.021431</Longitude>
+									<Latitude>46.775244</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:8d9b4b61-d3e6-467d-85ec-217b9f04ff0f" version="any"/>
+							<!-- perhaps consult EPIAP -->
+							<levels>
+								<Level id="it:apb:Level:1203-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>1203</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:1205" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Goste</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>1205</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>4</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:1205</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Goste</Name>
+							<ShortName lang="it">GOSTE</ShortName>
+							<PrivateCode>1205</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.057444</Longitude>
+									<Latitude>46.761174</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:e86f2df7-41b4-491c-ae79-e65830e8bcc9" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:1205-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>1205</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:1258" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="ldeins">Furĉia</Text>
+								</AlternativeText>
+								<AlternativeText attributeName="Name">
+									<Text lang="ldzwei">Furĉia</Text>
+								</AlternativeText>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Furkelpass</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>1258</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>8</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:1258</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Passo Furcia</Name>
+							<ShortName lang="it">FURKEL</ShortName>
+							<PrivateCode>1258</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>11.964673</Longitude>
+									<Latitude>46.723055</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<alternativeNames>
+								<AlternativeName id="it:apb:AlternativeName:StopPlace:1258_1" version="any">
+									<NameType>alias</NameType>
+									<TypeOfName>NameWithoutLocality</TypeOfName>
+									<Name lang="it">Ju de Furcia</Name>
+								</AlternativeName>
+								<AlternativeName id="it:apb:AlternativeName:StopPlace:1258-de_1" version="any">
+									<NameType>alias</NameType>
+									<TypeOfName>NameWithoutLocality</TypeOfName>
+									<Name lang="de">Furkelpass</Name>
+								</AlternativeName>
+							</alternativeNames>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:57c3744e-6429-44dd-8947-735034d98280" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:1258-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>1258</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:1343" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Olang, Schwimmbad</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>1343</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>1</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:1343</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora, Piscina</Name>
+							<ShortName lang="it">OLSCHW</ShortName>
+							<PrivateCode>1343</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.024088</Longitude>
+									<Latitude>46.769594</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:c5559038-e705-409e-8700-9a5eb8768943" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:1343-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>1343</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:1344" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Olang, Abzweigung Panorama</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>1344</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>1</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:1344</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora, Bivio Panorama</Name>
+							<ShortName lang="it">APANOR</ShortName>
+							<PrivateCode>1344</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.036148</Longitude>
+									<Latitude>46.75393</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:c5559038-e705-409e-8700-9a5eb8768943" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:1344-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>1344</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:151" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Mitterolang, Pichlweg</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>151</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>3</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:151</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora di Mezzo, Via Pichl</Name>
+							<ShortName lang="it">PICHLW</ShortName>
+							<PrivateCode>151</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.027992</Longitude>
+									<Latitude>46.76284</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:885e207a-7332-4f31-9f6a-2bf30096345a" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:151-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>151</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:1898" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Fernheizwerk Olang</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>1898</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>1</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:1898</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Teleriscaldamento Valdaora</Name>
+							<ShortName lang="it">FERNHE</ShortName>
+							<PrivateCode>1898</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.027797</Longitude>
+									<Latitude>46.76964</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:c5559038-e705-409e-8700-9a5eb8768943" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:1898-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>1898</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:1899" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Olang, Bahnhof</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>1899</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>1</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:1899</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora, Stazione</Name>
+							<ShortName lang="it">OLABHF</ShortName>
+							<PrivateCode>1899</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.030454</Longitude>
+									<Latitude>46.767257</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<alternativeNames>
+								<AlternativeName id="it:apb:AlternativeName:StopPlace:1899" version="any">
+									<NameType>alias</NameType>
+									<TypeOfName>EFANameWithLocality</TypeOfName>
+									<Name lang="it">Valdaora, Stazione di Valdaora - Anterselva</Name>
+								</AlternativeName>
+								<AlternativeName id="it:apb:AlternativeName:StopPlace:1899-1-de" version="any">
+									<NameType>alias</NameType>
+									<TypeOfName>EFANameWithLocality</TypeOfName>
+									<Name lang="de">Olang, Bahnhof Olang - Antholz</Name>
+								</AlternativeName>
+								<AlternativeName id="it:apb:AlternativeName:StopPlace:1899-2" version="any">
+									<NameType>alias</NameType>
+									<TypeOfName>EFANameWithoutLocality</TypeOfName>
+									<Name lang="it">Stazione di Valdaora - Anterselva</Name>
+								</AlternativeName>
+								<AlternativeName id="it:apb:AlternativeName:StopPlace:1899-3-de" version="any">
+									<NameType>alias</NameType>
+									<TypeOfName>EFANameWithoutLocality</TypeOfName>
+									<Name lang="de">Bahnhof Olang - Antholz</Name>
+								</AlternativeName>
+								<AlternativeName id="it:apb:AlternativeName:StopPlace:1899-4" version="any">
+									<Extensions>
+										<OperationalContextRef ref="it:apb:OperationalContext:3" version="any"/>
+									</Extensions>
+									<NameType>alias</NameType>
+									<TypeOfName>OperationalContextNameWithLocality</TypeOfName>
+									<Name lang="it">Valdaora-Anterselva</Name>
+								</AlternativeName>
+								<AlternativeName id="it:apb:AlternativeName:StopPlace:1899-5-de" version="any">
+									<Extensions>
+										<OperationalContextRef ref="it:apb:OperationalContext:3" version="any"/>
+									</Extensions>
+									<NameType>alias</NameType>
+									<TypeOfName>OperationalContextNameWithLocality</TypeOfName>
+									<Name lang="de">Olang-Antholz</Name>
+								</AlternativeName>
+								<AlternativeName id="it:apb:AlternativeName:StopPlace:1899-6" version="any">
+									<Extensions>
+										<OperationalContextRef ref="it:apb:OperationalContext:3" version="any"/>
+									</Extensions>
+									<NameType>alias</NameType>
+									<TypeOfName>OperationalContextNameWithoutLocality</TypeOfName>
+									<Name lang="it">Valdaora-Anterselva</Name>
+								</AlternativeName>
+								<AlternativeName id="it:apb:AlternativeName:StopPlace:1899-7-de" version="any">
+									<Extensions>
+										<OperationalContextRef ref="it:apb:OperationalContext:3" version="any"/>
+									</Extensions>
+									<NameType>alias</NameType>
+									<TypeOfName>OperationalContextNameWithoutLocality</TypeOfName>
+									<Name lang="de">Olang-Antholz</Name>
+								</AlternativeName>
+								<AlternativeName id="it:apb:AlternativeName:StopPlace:1899-8" version="any">
+									<Extensions>
+										<OperationalContextRef ref="it:apb:OperationalContext:6" version="any"/>
+									</Extensions>
+									<NameType>alias</NameType>
+									<TypeOfName>OperationalContextNameWithLocality</TypeOfName>
+									<Name lang="it">Valdaora, Stazione</Name>
+								</AlternativeName>
+								<AlternativeName id="it:apb:AlternativeName:StopPlace:1899-9-de" version="any">
+									<Extensions>
+										<OperationalContextRef ref="it:apb:OperationalContext:6" version="any"/>
+									</Extensions>
+									<NameType>alias</NameType>
+									<TypeOfName>OperationalContextNameWithLocality</TypeOfName>
+									<Name lang="de">Olang, Bahnhof</Name>
+								</AlternativeName>
+								<AlternativeName id="it:apb:AlternativeName:StopPlace:1899-10" version="any">
+									<Extensions>
+										<OperationalContextRef ref="it:apb:OperationalContext:6" version="any"/>
+									</Extensions>
+									<NameType>alias</NameType>
+									<TypeOfName>OperationalContextNameWithoutLocality</TypeOfName>
+									<Name lang="it">Valdaora, Stazione</Name>
+								</AlternativeName>
+								<AlternativeName id="it:apb:AlternativeName:StopPlace:1899-11-de" version="any">
+									<Extensions>
+										<OperationalContextRef ref="it:apb:OperationalContext:6" version="any"/>
+									</Extensions>
+									<NameType>alias</NameType>
+									<TypeOfName>OperationalContextNameWithoutLocality</TypeOfName>
+									<Name lang="de">Olang, Bahnhof</Name>
+								</AlternativeName>
+							</alternativeNames>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:c5559038-e705-409e-8700-9a5eb8768943" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:1899-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+								<Level id="it:apb:Level:1899--1" version="any">
+									<Name lang="it">1. Untergeschoss</Name>
+									<ShortName lang="it">B1</ShortName>
+								</Level>
+							</levels>
+							<entrances>
+								<Entrance id="it:apb:Entrance:it:22021:1899:90" version="any">
+									<keyList>
+										<KeyValue>
+											<Key>GlobalID</Key>
+											<Value>it:22021:1899:90</Value>
+										</KeyValue>
+									</keyList>
+									<Name lang="it">Eingang</Name>
+									<ShortName lang="it">E1</ShortName>
+									<PrivateCode>90</PrivateCode>
+									<Centroid>
+										<Location>
+											<Longitude>12.03062</Longitude>
+											<Latitude>46.767189</Latitude>
+										</Location>
+									</Centroid>
+									<LevelRef ref="it:apb:Level:1899-0" version="any"/>
+								</Entrance>
+								<Entrance id="it:apb:Entrance:it:22021:1899:91" version="any">
+									<keyList>
+										<KeyValue>
+											<Key>GlobalID</Key>
+											<Value>it:22021:1899:91</Value>
+										</KeyValue>
+									</keyList>
+									<Name lang="it">Eingang</Name>
+									<ShortName lang="it">E2</ShortName>
+									<PrivateCode>91</PrivateCode>
+									<Centroid>
+										<Location>
+											<Longitude>12.029423</Longitude>
+											<Latitude>46.768031</Latitude>
+										</Location>
+									</Centroid>
+									<LevelRef ref="it:apb:Level:1899-0" version="any"/>
+								</Entrance>
+							</entrances>
+							<PublicCode>1899</PublicCode>
+							<quays>
+								<Quay id="it:apb:Quay:it:22021:1899:1" version="any">
+									<keyList>
+										<KeyValue>
+											<Key>GlobalID</Key>
+											<Value>it:22021:1899:1</Value>
+										</KeyValue>
+									</keyList>
+									<Extensions>
+										<MentzAreaType>Entrance_and_PT</MentzAreaType>
+									</Extensions>
+									<Name lang="it">Bus</Name>
+									<ShortName lang="it">Bus</ShortName>
+									<PrivateCode>1</PrivateCode>
+									<Centroid>
+										<Location>
+											<Longitude>12.030487</Longitude>
+											<Latitude>46.767382</Latitude>
+										</Location>
+									</Centroid>
+									<LevelRef ref="it:apb:Level:1899-0" version="any"/>
+									<PublicCode>Bus</PublicCode>
+								</Quay>
+								<Quay id="it:apb:Quay:it:22021:1899:50" version="any">
+									<keyList>
+										<KeyValue>
+											<Key>GlobalID</Key>
+											<Value>it:22021:1899:50</Value>
+										</KeyValue>
+									</keyList>
+									<Extensions>
+										<MentzAreaType>OnlyPT</MentzAreaType>
+									</Extensions>
+									<Name lang="it">Bahn</Name>
+									<ShortName lang="it">Z1</ShortName>
+									<PrivateCode>50</PrivateCode>
+									<Centroid>
+										<Location>
+											<Longitude>12.030226</Longitude>
+											<Latitude>46.767164</Latitude>
+										</Location>
+									</Centroid>
+									<LevelRef ref="it:apb:Level:1899-0" version="any"/>
+									<PublicCode>Z1</PublicCode>
+								</Quay>
+								<Quay id="it:apb:Quay:it:22021:1899:51" version="any">
+									<keyList>
+										<KeyValue>
+											<Key>GlobalID</Key>
+											<Value>it:22021:1899:51</Value>
+										</KeyValue>
+									</keyList>
+									<Extensions>
+										<MentzAreaType>Entrance_and_PT</MentzAreaType>
+									</Extensions>
+									<Name lang="it">Bahn</Name>
+									<ShortName lang="it">Z2</ShortName>
+									<PrivateCode>51</PrivateCode>
+									<Centroid>
+										<Location>
+											<Longitude>12.030399</Longitude>
+											<Latitude>46.767213</Latitude>
+										</Location>
+									</Centroid>
+									<LevelRef ref="it:apb:Level:1899-0" version="any"/>
+									<PublicCode>Z2</PublicCode>
+								</Quay>
+							</quays>
+							<accessSpaces>
+								<AccessSpace id="it:22021:1899:80" version="any">
+									<keyList>
+										<KeyValue>
+											<Key>GlobalID</Key>
+											<Value>it:22021:1899:80</Value>
+										</KeyValue>
+									</keyList>
+									<Name lang="it">Unterführung</Name>
+									<ShortName lang="it">U01</ShortName>
+									<PrivateCode>80</PrivateCode>
+									<Centroid>
+										<Location>
+											<Longitude>12.03042</Longitude>
+											<Latitude>46.767123</Latitude>
+										</Location>
+									</Centroid>
+									<LevelRef ref="it:apb:Level:1899--1" version="any"/>
+								</AccessSpace>
+							</accessSpaces>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:1900" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Abzweigung Niederolang</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>1900</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>5</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:1900</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Bivio Valdaora di Sotto</Name>
+							<ShortName lang="it">ANIEDE</ShortName>
+							<PrivateCode>1900</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.020335</Longitude>
+									<Latitude>46.768307</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:d3e4675b-926e-4c55-8d36-298b3982d74c" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:1900-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>1900</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:1901" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Mitterolang, Rathaus</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>1901</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>3</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:1901</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora di Mezzo, Municipio</Name>
+							<ShortName lang="it">MOLARH</ShortName>
+							<PrivateCode>1901</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.030264</Longitude>
+									<Latitude>46.761304</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:885e207a-7332-4f31-9f6a-2bf30096345a" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:1901-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>1901</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:1902" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Olang, Rodelbahnweg</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>1902</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>3</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:1902</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora, Via dello Slittino</Name>
+							<ShortName lang="it">RODELB</ShortName>
+							<PrivateCode>1902</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.034278</Longitude>
+									<Latitude>46.760963</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:885e207a-7332-4f31-9f6a-2bf30096345a" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:1902-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>1902</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:1903" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Mittelschule Olang</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>1903</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>3</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:1903</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Scuola Media Valdaora</Name>
+							<ShortName lang="it">OLANMS</ShortName>
+							<PrivateCode>1903</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.032953</Longitude>
+									<Latitude>46.759298</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:885e207a-7332-4f31-9f6a-2bf30096345a" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:1903-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>1903</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:1904" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Oberolang, Brücke</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>1904</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>4</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:1904</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora di Sopra, Ponte</Name>
+							<ShortName lang="it">OBBRK</ShortName>
+							<PrivateCode>1904</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.038344</Longitude>
+									<Latitude>46.758038</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:e86f2df7-41b4-491c-ae79-e65830e8bcc9" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:1904-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>1904</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:1921" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Geiselsberg, Feuerwehr</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>1921</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>2</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:1921</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Sorafurcia, Vigili del Fuoco</Name>
+							<ShortName lang="it">GEISEL</ShortName>
+							<PrivateCode>1921</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.003212</Longitude>
+									<Latitude>46.746097</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:15fb9302-dc0c-41fb-9254-798f3ba3d6a7" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:1921-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>1921</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:2115" version="any">
+							<ValidBetween>
+								<FromDate>2020-12-13T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Bad Bergfall</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>2115</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>1</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:2115</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Bad Bergfall</Name>
+							<ShortName lang="it">BADBER</ShortName>
+							<PrivateCode>2115</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.004525</Longitude>
+									<Latitude>46.732031</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:c5559038-e705-409e-8700-9a5eb8768943" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:2115-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>2115</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:2262" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Abzweigung Olang</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>2262</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>6</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:2262</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Bivio Valdaora</Name>
+							<ShortName lang="it">AOLANG</ShortName>
+							<PrivateCode>2262</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.033895</Longitude>
+									<Latitude>46.772331</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:19f01ecc-f347-4d21-b31e-ca078aeaa12f" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:2262-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>2262</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:2300" version="any">
+							<ValidBetween>
+								<FromDate>2020-12-13T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Oberolang, Kirchgasse</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>2300</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>4</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:2300</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora di Sopra, Vicolo della Chiesa</Name>
+							<ShortName lang="it">KIRCHG</ShortName>
+							<PrivateCode>2300</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.040235</Longitude>
+									<Latitude>46.757664</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:e86f2df7-41b4-491c-ae79-e65830e8bcc9" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:2300-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>2300</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:2657" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Niederolang, Oberrain</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>2657</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>5</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:2657</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora di Sotto, Oberrain</Name>
+							<ShortName lang="it">ORAIN</ShortName>
+							<PrivateCode>2657</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.022336</Longitude>
+									<Latitude>46.766842</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:d3e4675b-926e-4c55-8d36-298b3982d74c" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:2657-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>2657</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:2658" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Niederolang, Erlenweg</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>2658</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>5</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:2658</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora di Sotto, Via Ontani</Name>
+							<ShortName lang="it">ERLENW</ShortName>
+							<PrivateCode>2658</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.017963</Longitude>
+									<Latitude>46.767569</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:d3e4675b-926e-4c55-8d36-298b3982d74c" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:2658-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>2658</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:2659" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Niederolang, Kirche</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>2659</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>5</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:2659</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora di Sotto, Chiesa</Name>
+							<ShortName lang="it">NOKIRC</ShortName>
+							<PrivateCode>2659</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.016719</Longitude>
+									<Latitude>46.768052</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:d3e4675b-926e-4c55-8d36-298b3982d74c" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:2659-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>2659</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:2660" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Oberolang, Schule</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>2660</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>4</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:2660</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora di Sopra, Scuola</Name>
+							<ShortName lang="it">OOSCHU</ShortName>
+							<PrivateCode>2660</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.040214</Longitude>
+									<Latitude>46.756369</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:e86f2df7-41b4-491c-ae79-e65830e8bcc9" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:2660-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>2660</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:2661" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Oberolang, Winkelwiese</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>2661</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>4</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:2661</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora di Sopra, Winkelwiese</Name>
+							<ShortName lang="it">WINKEL</ShortName>
+							<PrivateCode>2661</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.041348</Longitude>
+									<Latitude>46.754881</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:e86f2df7-41b4-491c-ae79-e65830e8bcc9" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:2661-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>2661</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:2662" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Geiselsberg, Mitterhof</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>2662</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>2</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:2662</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Sorafurcia, Mitterhof</Name>
+							<ShortName lang="it">MITHOF</ShortName>
+							<PrivateCode>2662</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.006499</Longitude>
+									<Latitude>46.751761</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:15fb9302-dc0c-41fb-9254-798f3ba3d6a7" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:2662-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>2662</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:2703" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Niederolang, Pfarrbäck</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>2703</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>5</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:2703</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora di Sotto, Pfarrbäck</Name>
+							<ShortName lang="it">PFARRB</ShortName>
+							<PrivateCode>2703</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.016977</Longitude>
+									<Latitude>46.769845</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:d3e4675b-926e-4c55-8d36-298b3982d74c" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:2703-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>2703</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:2756" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Olang, Gassl</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>2756</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>1</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:2756</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora, Casola</Name>
+							<ShortName lang="it">GASSL</ShortName>
+							<PrivateCode>2756</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.01206</Longitude>
+									<Latitude>46.748159</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:c5559038-e705-409e-8700-9a5eb8768943" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:2756-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>2756</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:2782" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Kabinenbahn Gassl Olang</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>2782</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>1</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:2782</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Cabinovia Casola Valdaora</Name>
+							<ShortName lang="it">UMLAUF</ShortName>
+							<PrivateCode>2782</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.011094</Longitude>
+									<Latitude>46.746798</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:c5559038-e705-409e-8700-9a5eb8768943" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:2782-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>2782</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:2850" version="any">
+							<ValidBetween>
+								<FromDate>2016-01-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Olang, Hossler</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>2850</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>2</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:2850</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora, Hossler</Name>
+							<ShortName lang="it">HOSSLE</ShortName>
+							<PrivateCode>2850</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.012182</Longitude>
+									<Latitude>46.752224</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:15fb9302-dc0c-41fb-9254-798f3ba3d6a7" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:2850-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>2850</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:2884" version="any">
+							<ValidBetween>
+								<FromDate>2016-12-11T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Geiselsberg, Prackenweg</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>2884</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>2</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:2884</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Sorafurcia, Via Pracken</Name>
+							<ShortName lang="it">PRACKE</ShortName>
+							<PrivateCode>2884</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.009303</Longitude>
+									<Latitude>46.7532</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:15fb9302-dc0c-41fb-9254-798f3ba3d6a7" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:2884-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>2884</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:3080" version="any">
+							<ValidBetween>
+								<FromDate>2020-12-13T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Geiselsberg, Unterpluner</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>3080</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>2</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:3080</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Sorafurcia, Unterpluner</Name>
+							<ShortName lang="it">UPLUNE</ShortName>
+							<PrivateCode>3080</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.004542</Longitude>
+									<Latitude>46.737278</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:15fb9302-dc0c-41fb-9254-798f3ba3d6a7" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:3080-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>3080</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:3081" version="any">
+							<ValidBetween>
+								<FromDate>2020-12-13T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Geiselsberg, Oberlechner</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>3081</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>2</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:3081</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Sorafurcia, Oberlechner</Name>
+							<ShortName lang="it">OLECHN</ShortName>
+							<PrivateCode>3081</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.00251</Longitude>
+									<Latitude>46.740769</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:15fb9302-dc0c-41fb-9254-798f3ba3d6a7" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:3081-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>3081</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:3082" version="any">
+							<ValidBetween>
+								<FromDate>2020-12-13T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Oberolang, Dorfstraße</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>3082</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>4</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:3082</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora di Sopra, Via del Borgo</Name>
+							<ShortName lang="it">DRFSTR</ShortName>
+							<PrivateCode>3082</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.040359</Longitude>
+									<Latitude>46.758471</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:e86f2df7-41b4-491c-ae79-e65830e8bcc9" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:3082-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>3082</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:3083" version="any">
+							<ValidBetween>
+								<FromDate>2020-12-13T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Geiselsberg, Fernheizwerk</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>3083</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>2</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:3083</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Sorafurcia, Teleriscaldamento</Name>
+							<ShortName lang="it">EGGERW</ShortName>
+							<PrivateCode>3083</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.000942</Longitude>
+									<Latitude>46.747425</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:15fb9302-dc0c-41fb-9254-798f3ba3d6a7" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:3083-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>3083</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:3160" version="any">
+							<ValidBetween>
+								<FromDate>2022-09-26T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Mitterolang, Krempe</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>3160</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>3</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:3160</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora di Mezzo, Krempe</Name>
+							<ShortName lang="it">KREMPE</ShortName>
+							<PrivateCode>3160</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.031653</Longitude>
+									<Latitude>46.762266</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:885e207a-7332-4f31-9f6a-2bf30096345a" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:3160-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>3160</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:3257" version="any">
+							<ValidBetween>
+								<FromDate>2023-11-25T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Mitterolang, Gezelgenweg</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>3257</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>3</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:3257</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora di Mezzo, Via Gezelge</Name>
+							<ShortName lang="it">GEZELG</ShortName>
+							<PrivateCode>3257</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.027616</Longitude>
+									<Latitude>46.760105</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:885e207a-7332-4f31-9f6a-2bf30096345a" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:3257-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>3257</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:3258" version="any">
+							<ValidBetween>
+								<FromDate>2023-11-25T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Mitterolang, Ägidiusweg</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>3258</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>3</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:3258</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora di Mezzo, Via S. Egidio</Name>
+							<ShortName lang="it">AEGIDI</ShortName>
+							<PrivateCode>3258</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.034104</Longitude>
+									<Latitude>46.760194</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:885e207a-7332-4f31-9f6a-2bf30096345a" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:3258-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>3258</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:3337" version="any">
+							<ValidBetween>
+								<FromDate>2023-12-01T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Olang, Bahnhofstraße</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>3337</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>1</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:3337</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora, Via Stazione</Name>
+							<ShortName lang="it">OLPOER</ShortName>
+							<PrivateCode>3337</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.029746</Longitude>
+									<Latitude>46.768887</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:c5559038-e705-409e-8700-9a5eb8768943" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:3337-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>3337</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlace:it:22021:3399" version="any">
+							<ValidBetween>
+								<FromDate>2024-06-16T00:00:00</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText attributeName="Name">
+									<Text lang="de">Mitterolang, Kerlastraße</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<keyList>
+								<KeyValue>
+									<Key>HstNrLokal</Key>
+									<Value>3399</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstNrNational</Key>
+									<Value>3</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>it:22021:3399</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="it">Valdaora di Mezzo, Via Kerla</Name>
+							<ShortName lang="it">KERLAS</ShortName>
+							<PrivateCode>3399</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.028882</Longitude>
+									<Latitude>46.762114</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:regularStop" version="any"/>
+							</placeTypes>
+							<TopographicPlaceRef ref="it:apb:TopographicPlace:885e207a-7332-4f31-9f6a-2bf30096345a" version="any"/>
+							<levels>
+								<Level id="it:apb:Level:3399-0" version="any">
+									<Name lang="it">Erdgeschoss</Name>
+									<ShortName lang="it">G</ShortName>
+								</Level>
+							</levels>
+							<PublicCode>3399</PublicCode>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:1" version="any">
+							<Name lang="it">Municipio, Padiglione</Name>
+							<ShortName lang="it">Municipio, Padiglione</ShortName>
+							<PrivateCode>1</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0298255</Longitude>
+									<Latitude>46.7611985</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:10" version="any">
+							<Name lang="it">Gasthof Bad Bergfall</Name>
+							<ShortName lang="it">Gasthof Bad Bergfall</ShortName>
+							<PrivateCode>10</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0042629</Longitude>
+									<Latitude>46.7319053</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:100" version="any">
+							<Name lang="it">Niederegger Hütte</Name>
+							<ShortName lang="it">Niederegger Hütte</ShortName>
+							<PrivateCode>100</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>11.9998003</Longitude>
+									<Latitude>46.7453471</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:12" version="any">
+							<Name lang="it">Hotel Fameli</Name>
+							<ShortName lang="it">Hotel Fameli</ShortName>
+							<PrivateCode>12</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.033667</Longitude>
+									<Latitude>46.760278</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:15" version="any">
+							<Name lang="it">Despar Agstner Market</Name>
+							<ShortName lang="it">Despar Agstner Market</ShortName>
+							<PrivateCode>15</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0323017</Longitude>
+									<Latitude>46.7615421</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:18" version="any">
+							<Name lang="it">Ristorante Pizzeria Panorama</Name>
+							<ShortName lang="it">Ristorante Pizzeria Panorama</ShortName>
+							<PrivateCode>18</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0358214</Longitude>
+									<Latitude>46.7524053</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:19" version="any">
+							<Name lang="it">Residence Tolderhof</Name>
+							<ShortName lang="it">Residence Tolderhof</ShortName>
+							<PrivateCode>19</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.037634</Longitude>
+									<Latitude>46.755897</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:2" version="any">
+							<Name lang="it">Municipio, Piazza Floriani</Name>
+							<ShortName lang="it">Municipio, Piazza Floriani</ShortName>
+							<PrivateCode>2</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0304654</Longitude>
+									<Latitude>46.7613341</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:20" version="any">
+							<Name lang="it">Hotel Markushof</Name>
+							<ShortName lang="it">Hotel Markushof</ShortName>
+							<PrivateCode>20</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0385545</Longitude>
+									<Latitude>46.7562649</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:21" version="any">
+							<Name lang="it">Moar's Hotel</Name>
+							<ShortName lang="it">Moar's Hotel</ShortName>
+							<PrivateCode>21</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0319636</Longitude>
+									<Latitude>46.7623041</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:22" version="any">
+							<Name lang="it">Vivaio Obojes</Name>
+							<ShortName lang="it">Vivaio Obojes</ShortName>
+							<PrivateCode>22</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0337022</Longitude>
+									<Latitude>46.7623892</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:23" version="any">
+							<Name lang="it">Lerchnhof</Name>
+							<ShortName lang="it">Lerchnhof</ShortName>
+							<PrivateCode>23</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0252738</Longitude>
+									<Latitude>46.7602489</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:24" version="any">
+							<Name lang="it">Ristorante Pizzeria Gassl</Name>
+							<ShortName lang="it">Ristorante Pizzeria Gassl</ShortName>
+							<PrivateCode>24</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.010713</Longitude>
+									<Latitude>46.746287</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:25" version="any">
+							<Name lang="it">Almhotel Lenz</Name>
+							<ShortName lang="it">Almhotel Lenz</ShortName>
+							<PrivateCode>25</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0024659</Longitude>
+									<Latitude>46.7403708</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:26" version="any">
+							<Name lang="it">Berggasthof Trattes</Name>
+							<ShortName lang="it">Berggasthof Trattes</ShortName>
+							<PrivateCode>26</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>11.9892025</Longitude>
+									<Latitude>46.728904</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:27" version="any">
+							<Name lang="it">Rifugio Marchner</Name>
+							<ShortName lang="it">Rifugio Marchner</ShortName>
+							<PrivateCode>27</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>11.9950855</Longitude>
+									<Latitude>46.7343907</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:28" version="any">
+							<Name lang="it">Chalet Rueperhof</Name>
+							<ShortName lang="it">Chalet Rueperhof</ShortName>
+							<PrivateCode>28</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0048062</Longitude>
+									<Latitude>46.7541881</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:29" version="any">
+							<Name lang="it">Alpres Ristorante Après Ski</Name>
+							<ShortName lang="it">Alpres Ristorante Après Ski</ShortName>
+							<PrivateCode>29</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>11.9933019</Longitude>
+									<Latitude>46.7520488</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:3" version="any">
+							<Name lang="it">Alpinhotel Keil</Name>
+							<ShortName lang="it">Alpinhotel Keil</ShortName>
+							<PrivateCode>3</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0381452</Longitude>
+									<Latitude>46.7577999</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:30" version="any">
+							<Name lang="it">Häuslerhof</Name>
+							<ShortName lang="it">Häuslerhof</ShortName>
+							<PrivateCode>30</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0071115</Longitude>
+									<Latitude>46.7549546</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:31" version="any">
+							<Name lang="it">Alpin Panorama Hotel Hubertus</Name>
+							<ShortName lang="it">Alpin Panorama Hotel Hubertus</ShortName>
+							<PrivateCode>31</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0097566</Longitude>
+									<Latitude>46.7534999</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:33" version="any">
+							<Name lang="it">Berghotel Zirm</Name>
+							<ShortName lang="it">Berghotel Zirm</ShortName>
+							<PrivateCode>33</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0012866</Longitude>
+									<Latitude>46.7465595</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:34" version="any">
+							<Name lang="it">Hotel Kristall</Name>
+							<ShortName lang="it">Hotel Kristall</ShortName>
+							<PrivateCode>34</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0021232</Longitude>
+									<Latitude>46.7464378</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:35" version="any">
+							<Name lang="it">Appartmenti Oberpichlhof</Name>
+							<ShortName lang="it">Appartmenti Oberpichlhof</ShortName>
+							<PrivateCode>35</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0010791</Longitude>
+									<Latitude>46.7394767</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:36" version="any">
+							<Name lang="it">Perfila</Name>
+							<ShortName lang="it">Perfila</ShortName>
+							<PrivateCode>36</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.010361</Longitude>
+									<Latitude>46.749722</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:37" version="any">
+							<Name lang="it">Mittermühlbacherhof</Name>
+							<ShortName lang="it">Mittermühlbacherhof</ShortName>
+							<PrivateCode>37</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.016858</Longitude>
+									<Latitude>46.7531099</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:38" version="any">
+							<Name lang="it">Hotel Christoph</Name>
+							<ShortName lang="it">Hotel Christoph</ShortName>
+							<PrivateCode>38</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0112595</Longitude>
+									<Latitude>46.7480525</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:39" version="any">
+							<Name lang="it">Rio Molino</Name>
+							<ShortName lang="it">Rio Molino</ShortName>
+							<PrivateCode>39</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0209876</Longitude>
+									<Latitude>46.7595439</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:4" version="any">
+							<Name lang="it">Erschbaum</Name>
+							<ShortName lang="it">Erschbaum</ShortName>
+							<PrivateCode>4</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0060363</Longitude>
+									<Latitude>46.7429126</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:40" version="any">
+							<Name lang="it">Kühbachhof</Name>
+							<ShortName lang="it">Kühbachhof</ShortName>
+							<PrivateCode>40</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0138873</Longitude>
+									<Latitude>46.7642714</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:41" version="any">
+							<Name lang="it">Panzenbachhof</Name>
+							<ShortName lang="it">Panzenbachhof</ShortName>
+							<PrivateCode>41</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0134114</Longitude>
+									<Latitude>46.7672812</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:42" version="any">
+							<Name lang="it">Sunset Bar &amp; Swim</Name>
+							<ShortName lang="it">Sunset Bar &amp; Swim</ShortName>
+							<PrivateCode>42</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0244664</Longitude>
+									<Latitude>46.7693691</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:43" version="any">
+							<Name lang="it">Birkenheim</Name>
+							<ShortName lang="it">Birkenheim</ShortName>
+							<PrivateCode>43</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0169331</Longitude>
+									<Latitude>46.7710628</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:44" version="any">
+							<Name lang="it">Hotel Pörnbacher</Name>
+							<ShortName lang="it">Hotel Pörnbacher</ShortName>
+							<PrivateCode>44</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0300484</Longitude>
+									<Latitude>46.7688013</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:45" version="any">
+							<Name lang="it">Appartment Oberhölzlhof</Name>
+							<ShortName lang="it">Appartment Oberhölzlhof</ShortName>
+							<PrivateCode>45</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0428369</Longitude>
+									<Latitude>46.756675</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:46" version="any">
+							<Name lang="it">Unterhölzlhof</Name>
+							<ShortName lang="it">Unterhölzlhof</ShortName>
+							<PrivateCode>46</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0422942</Longitude>
+									<Latitude>46.7588156</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:47" version="any">
+							<Name lang="it">Familiaris</Name>
+							<ShortName lang="it">Familiaris</ShortName>
+							<PrivateCode>47</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0407034</Longitude>
+									<Latitude>46.7544766</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:49" version="any">
+							<Name lang="it">Scharmashof</Name>
+							<ShortName lang="it">Scharmashof</ShortName>
+							<PrivateCode>49</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.048528</Longitude>
+									<Latitude>46.757333</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:5" version="any">
+							<Name lang="it">Ristorante Lamp</Name>
+							<ShortName lang="it">Ristorante Lamp</ShortName>
+							<PrivateCode>5</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.033181</Longitude>
+									<Latitude>46.7653374</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:50" version="any">
+							<Name lang="it">Bulandhof</Name>
+							<ShortName lang="it">Bulandhof</ShortName>
+							<PrivateCode>50</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0512909</Longitude>
+									<Latitude>46.7563328</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:51" version="any">
+							<Name lang="it">Zona Industriale Rasun</Name>
+							<ShortName lang="it">Zona Industriale Rasun</ShortName>
+							<PrivateCode>51</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0365703</Longitude>
+									<Latitude>46.770808</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:52" version="any">
+							<Name lang="it">Boutique Hotel Am Park</Name>
+							<ShortName lang="it">Boutique Hotel Am Park</ShortName>
+							<PrivateCode>52</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0294989</Longitude>
+									<Latitude>46.7608295</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:55" version="any">
+							<Name lang="it">Café Bistrot Bacher</Name>
+							<ShortName lang="it">Café Bistrot Bacher</ShortName>
+							<PrivateCode>55</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0301093</Longitude>
+									<Latitude>46.7605133</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:56" version="any">
+							<Name lang="it">Via Treyen</Name>
+							<ShortName lang="it">Via Treyen</ShortName>
+							<PrivateCode>56</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0300707</Longitude>
+									<Latitude>46.7590252</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:57" version="any">
+							<Name lang="it">Diga</Name>
+							<ShortName lang="it">Diga</ShortName>
+							<PrivateCode>57</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0480595</Longitude>
+									<Latitude>46.7602208</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:58" version="any">
+							<Name lang="it">Posterhof</Name>
+							<ShortName lang="it">Posterhof</ShortName>
+							<PrivateCode>58</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0181334</Longitude>
+									<Latitude>46.7705267</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:6" version="any">
+							<Name lang="it">Via Hermann von Gilm</Name>
+							<ShortName lang="it">Via Hermann von Gilm</ShortName>
+							<PrivateCode>6</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0268476</Longitude>
+									<Latitude>46.7615581</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:60" version="any">
+							<Name lang="it">Gasthof Oberriedl</Name>
+							<ShortName lang="it">Gasthof Oberriedl</ShortName>
+							<PrivateCode>60</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0399088</Longitude>
+									<Latitude>46.7486824</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:61" version="any">
+							<Name lang="it">Via Mitterfeld</Name>
+							<ShortName lang="it">Via Mitterfeld</ShortName>
+							<PrivateCode>61</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.024778</Longitude>
+									<Latitude>46.762139</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:62" version="any">
+							<Name lang="it">Achmühle</Name>
+							<ShortName lang="it">Achmühle</ShortName>
+							<PrivateCode>62</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0403906</Longitude>
+									<Latitude>46.766984</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:63" version="any">
+							<Name lang="it">Hotel Aichner</Name>
+							<ShortName lang="it">Hotel Aichner</ShortName>
+							<PrivateCode>63</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0324778</Longitude>
+									<Latitude>46.7604342</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:64" version="any">
+							<Name lang="it">Ristorante Pizzeria Friedheim</Name>
+							<ShortName lang="it">Ristorante Pizzeria Friedheim</ShortName>
+							<PrivateCode>64</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0338871</Longitude>
+									<Latitude>46.7611478</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:65" version="any">
+							<Name lang="it">Ristorante Pizzeria Christl</Name>
+							<ShortName lang="it">Ristorante Pizzeria Christl</ShortName>
+							<PrivateCode>65</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.028837</Longitude>
+									<Latitude>46.7617275</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:66" version="any">
+							<Name lang="it">Appartmenti Steger</Name>
+							<ShortName lang="it">Appartmenti Steger</ShortName>
+							<PrivateCode>66</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0025594</Longitude>
+									<Latitude>46.746554</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:67" version="any">
+							<Name lang="it">Tolder Cocktailbar</Name>
+							<ShortName lang="it">Tolder Cocktailbar</ShortName>
+							<PrivateCode>67</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0310205</Longitude>
+									<Latitude>46.7603035</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:68" version="any">
+							<Name lang="it">Hotel Alte Goste</Name>
+							<ShortName lang="it">Hotel Alte Goste</ShortName>
+							<PrivateCode>68</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0518273</Longitude>
+									<Latitude>46.7617766</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:69" version="any">
+							<Name lang="it">Via Kohlscherm</Name>
+							<ShortName lang="it">Via Kohlscherm</ShortName>
+							<PrivateCode>69</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0135081</Longitude>
+									<Latitude>46.7611795</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:7" version="any">
+							<Name lang="it">Sottla</Name>
+							<ShortName lang="it">Sottla</ShortName>
+							<PrivateCode>7</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0352489</Longitude>
+									<Latitude>46.7564196</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:70" version="any">
+							<Name lang="it">Via Baumgarten</Name>
+							<ShortName lang="it">Via Baumgarten</ShortName>
+							<PrivateCode>70</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0304593</Longitude>
+									<Latitude>46.7624768</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:72" version="any">
+							<Name lang="it">Oberegger Alm</Name>
+							<ShortName lang="it">Oberegger Alm</ShortName>
+							<PrivateCode>72</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>11.9956776</Longitude>
+									<Latitude>46.7455502</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:8" version="any">
+							<Name lang="it">MTB Skill Area</Name>
+							<ShortName lang="it">MTB Skill Area</ShortName>
+							<PrivateCode>8</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0436904</Longitude>
+									<Latitude>46.7501003</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:87" version="any">
+							<Name lang="it">Köfelehof</Name>
+							<ShortName lang="it">Köfelehof</ShortName>
+							<PrivateCode>87</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.071807</Longitude>
+									<Latitude>46.756165</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:88" version="any">
+							<Name lang="it">Holzerhof</Name>
+							<ShortName lang="it">Holzerhof</ShortName>
+							<PrivateCode>88</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0089769</Longitude>
+									<Latitude>46.7690658</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:89" version="any">
+							<Name lang="it">Pfarrbäckhof</Name>
+							<ShortName lang="it">Pfarrbäckhof</ShortName>
+							<PrivateCode>89</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.012461</Longitude>
+									<Latitude>46.769473</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:9" version="any">
+							<Name lang="it">Pittola</Name>
+							<ShortName lang="it">Pittola</ShortName>
+							<PrivateCode>9</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0345759</Longitude>
+									<Latitude>46.7584047</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:90" version="any">
+							<Name lang="it">Residence Sonnwies</Name>
+							<ShortName lang="it">Residence Sonnwies</ShortName>
+							<PrivateCode>90</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.040147</Longitude>
+									<Latitude>46.760174</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:91" version="any">
+							<Name lang="it">Chill Area</Name>
+							<ShortName lang="it">Chill Area</ShortName>
+							<PrivateCode>91</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0423437</Longitude>
+									<Latitude>46.7484548</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:92" version="any">
+							<Name lang="it">Via Brechel</Name>
+							<ShortName lang="it">Via Brechel</ShortName>
+							<PrivateCode>92</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0270174</Longitude>
+									<Latitude>46.7587463</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:93" version="any">
+							<Name lang="it">Unterrainerhof</Name>
+							<ShortName lang="it">Unterrainerhof</ShortName>
+							<PrivateCode>93</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0023323</Longitude>
+									<Latitude>46.7329406</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:94" version="any">
+							<Name lang="it">Bad Bergfallerhof</Name>
+							<ShortName lang="it">Bad Bergfallerhof</ShortName>
+							<PrivateCode>94</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.004205</Longitude>
+									<Latitude>46.7329055</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:95" version="any">
+							<Name lang="it">Voppichl</Name>
+							<ShortName lang="it">Voppichl</ShortName>
+							<PrivateCode>95</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0217724</Longitude>
+									<Latitude>46.7532745</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:96" version="any">
+							<Name lang="it">Bar Krempe</Name>
+							<ShortName lang="it">Bar Krempe</ShortName>
+							<PrivateCode>96</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0317336</Longitude>
+									<Latitude>46.7628187</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:97" version="any">
+							<Name lang="it">Kranebitter</Name>
+							<ShortName lang="it">Kranebitter</ShortName>
+							<PrivateCode>97</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0144553</Longitude>
+									<Latitude>46.7533691</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:98" version="any">
+							<Name lang="it">Passo Furcia</Name>
+							<ShortName lang="it">Passo Furcia</ShortName>
+							<PrivateCode>98</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>11.9663256</Longitude>
+									<Latitude>46.722501</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Olang,_Furkelpass" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+						<StopPlace id="it:apb:StopPlaceCollectionPoint:99" version="any">
+							<Name lang="it">Cimitero, Valdaora di Sopra</Name>
+							<ShortName lang="it">Cimitero, Valdaora di Sopra</ShortName>
+							<PrivateCode>99</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>12.0445483</Longitude>
+									<Latitude>46.7582122</Latitude>
+								</Location>
+							</Centroid>
+							<ParentZoneRef ref="it:apb:FlexibleArea:Bediengebiet_Olang" version="any"/>
+							<placeTypes>
+								<TypeOfPlaceRef ref="it:apb:TypeOfPlace:drtCollectionPoint" version="any"/>
+							</placeTypes>
+						</StopPlace>
+					</stopPlaces>
+					<flexibleStopPlaces>
+						<FlexibleStopPlace id="it:apb:FlexibleStopPlace:Bediengebiet_Olang" version="any">
+							<ShortName>1</ShortName>
+							<areas>
+								<FlexibleArea id="it:apb:FlexibleArea:Bediengebiet_Olang" version="any">
+									<!-- you didn't have the parent in the data -->
+								</FlexibleArea>
+								<FlexibleArea id="it:apb:FlexibleArea:Olang,_Furkelpass" version="any">
+									<Name lang="it">Olang, Furkelpass</Name>
+									<ShortName>3</ShortName>
+									<members>
+										<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:98-0-Gen" version="any"/>
+									</members>
+									<gml:Polygon gml:id="Area3" srsName="EPSG:4326">
+										<gml:exterior>
+											<gml:LinearRing>
+												<!-- might be more efficient with gml:posList -->
+												<gml:pos>11.9643366 46.7228725</gml:pos>
+												<gml:pos>11.9659352 46.7224937</gml:pos>
+												<gml:pos>11.9665655 46.7224588</gml:pos>
+												<gml:pos>11.967212 46.7224937</gml:pos>
+												<gml:pos>11.9672334 46.7230306</gml:pos>
+												<gml:pos>11.9667935 46.7232366</gml:pos>
+												<gml:pos>11.9644573 46.7232549</gml:pos>
+											</gml:LinearRing>
+										</gml:exterior>
+									</gml:Polygon>
+									<TransportMode>bus</TransportMode>
+									<BoardingUse>true</BoardingUse>
+									<AlightingUse>true</AlightingUse>
+								</FlexibleArea>
+							</areas>
+						</FlexibleStopPlace>
+					</flexibleStopPlaces>
+				</SiteFrame>
+				<ServiceFrame id="it:apb:ServiceFrame:apb" version="any">
+					<!-- here ok, but might be in ServiceCalenderFrame -->
+					<validityConditions>
+						<AvailabilityCondition id="it:apb:AvailabilityCondition:TA" version="any">
+							<Description>giornaliero</Description>
+							<FromDate>2025-12-14T00:00:00</FromDate>
+							<ToDate>2026-12-12T23:59:59</ToDate>
+							<ValidDayBits>11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110</ValidDayBits>
+							<timebands>
+								<Timeband id="it:apb:Timeband:Drt_27000_79200" version="any">
+									<StartTime>07:30:00</StartTime>
+									<EndTime>22:00:00</EndTime>
+								</Timeband>
+							</timebands>
+						</AvailabilityCondition>
+					</validityConditions>
+					<!-- we only use DirectionType in future. PR to 2.1 made this possible -->
+					<directions>
+						<Direction id="it:apb:Direction:H" version="any">
+							<Name lang="it">Hin</Name>
+							<ShortName lang="it">H</ShortName>
+							<DirectionType>outbound</DirectionType>
+						</Direction>
+						<Direction id="it:apb:Direction:R" version="any">
+							<Name lang="it">Rück</Name>
+							<ShortName lang="it">R</ShortName>
+							<DirectionType>inbound</DirectionType>
+						</Direction>
+					</directions>
+					<lines>
+						<!-- we will use Line only with the new LineType -->
+						<FlexibleLine id="it:apb:FlexibleLine:CallBus" version="any">
+							<ValidBetween>
+								<FromDate>2025-12-14T00:00:00</FromDate>
+							</ValidBetween>
+							<Name lang="it">CallBus</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>demandAndResponseBus</BusSubmode>
+							</TransportSubmode>
+							<PublicCode>CallBus</PublicCode>
+							<noticeAssignments>
+								<NoticeAssignment id="it:apb:NoticeAssignment:it_apb_FlexibleLine_CallBus_1" version="any" order="1">
+									<NoticeRef ref="it:apb:Notice:CB_OL" version="any"/>
+								</NoticeAssignment>
+							</noticeAssignments>
+							<!-- will be LineType in future -->
+							<FlexibleLineType>fixedStopAreaWide</FlexibleLineType>
+							<!-- we will use the new Booking Structure -->
+							<BookingContact>
+								<Phone/>
+							</BookingContact>
+							<BookingMethods>mobileApp</BookingMethods>
+							<BookingAccess>public</BookingAccess>
+							<BookWhen>advanceAndDayOfTravel</BookWhen>
+							<BuyWhen>onCheckIn</BuyWhen>
+							<MinimumBookingPeriod>PT10M</MinimumBookingPeriod>
+							<MaximumBookingPeriod>PT24H</MaximumBookingPeriod>
+						</FlexibleLine>
+					</lines>
+					<scheduledStopPoints>
+						<ScheduledStopPoint id="it:apb:DrtArea:Bediengebiet_Olang" version="any">
+							<StopType>onstreetBus</StopType>
+							<VehicleModes>bus</VehicleModes>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="it:apb:DrtArea:Olang,_Furkelpass" version="any">
+							<StopType>onstreetBus</StopType>
+							<VehicleModes>bus</VehicleModes>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:100-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:10-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:1-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:12-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:15-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:18-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:19-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:20-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:2-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:21-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:22-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:23-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:24-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:25-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:26-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:27-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:28-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:29-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:30-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:3-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:31-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:33-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:34-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:35-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:36-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:37-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:38-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:39-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:40-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:4-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:41-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:42-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:43-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:44-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:45-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:46-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:47-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:49-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:50-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:5-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:51-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:52-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:55-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:56-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:57-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:58-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:60-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:6-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:61-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:62-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:63-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:64-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:65-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:66-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:67-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:68-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:69-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:70-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:7-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:72-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:8-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:87-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:88-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:89-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:90-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:9-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:91-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:92-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:93-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:94-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:95-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:96-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:97-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:98-0-Gen" version="any"/>
+						<ScheduledStopPoint id="it:apb:StopPlaceCollectionPoint:99-0-Gen" version="any"/>
+					</scheduledStopPoints>
+					<serviceLinks>
+						<ServiceLink id="it:apb:ServiceLink:_1" version="any">
+							<FromPointRef ref="it:apb:DrtArea:Bediengebiet_Olang" version="any"/>
+							<ToPointRef ref="it:apb:DrtArea:Bediengebiet_Olang" version="any"/>
+						</ServiceLink>
+						<ServiceLink id="it:apb:ServiceLink:Furkelpass_-_Olang_1" version="any">
+							<FromPointRef ref="it:apb:DrtArea:Olang,_Furkelpass" version="any"/>
+							<ToPointRef ref="it:apb:DrtArea:Bediengebiet_Olang" version="any"/>
+						</ServiceLink>
+						<ServiceLink id="it:apb:ServiceLink:Olang_-_Furkelpass_1" version="any">
+							<FromPointRef ref="it:apb:DrtArea:Bediengebiet_Olang" version="any"/>
+							<ToPointRef ref="it:apb:DrtArea:Olang,_Furkelpass" version="any"/>
+						</ServiceLink>
+					</serviceLinks>
+					<connections>
+						<SiteConnection id="it:apb:SiteConnection:it:22021:1899-it:22021:1899" version="any">
+							<WalkTransferDuration>
+								<DefaultDuration>PT3M</DefaultDuration>
+							</WalkTransferDuration>
+							<BothWays>false</BothWays>
+							<From>
+								<StopPlaceRef ref="it:apb:StopPlace:it:22021:1899" version="any"/>
+							</From>
+							<To>
+								<StopPlaceRef ref="it:apb:StopPlace:it:22021:1899" version="any"/>
+							</To>
+						</SiteConnection>
+					</connections>
+					<stopAssignments>
+						<FlexibleStopAssignment id="it:apb:FlexibleStopAssignment:1" version="any" order="1">
+							<ScheduledStopPointRef ref="it:apb:DrtArea:Olang,_Furkelpass" version="any"/>
+							<FlexibleStopPlaceRef ref="it:apb:FlexibleStopPlace:Bediengebiet_Olang" version="any"/>
+							<FlexibleAreaRef ref="it:apb:FlexibleArea:Olang,_Furkelpass" version="any"/>
+						</FlexibleStopAssignment>
+						<!-- order is gone in 2.0 -->
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:1" version="any" order="1">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:1-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:1" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:10" version="any" order="2">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:10-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:10" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:100" version="any" order="3">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:100-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:100" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:12" version="any" order="4">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:12-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:12" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:15" version="any" order="5">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:15-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:15" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:18" version="any" order="6">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:18-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:18" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:19" version="any" order="7">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:19-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:19" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:2" version="any" order="8">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:2-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:2" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:20" version="any" order="9">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:20-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:20" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:21" version="any" order="10">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:21-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:21" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:22" version="any" order="11">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:22-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:22" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:23" version="any" order="12">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:23-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:23" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:24" version="any" order="13">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:24-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:24" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:25" version="any" order="14">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:25-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:25" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:26" version="any" order="15">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:26-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:26" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:27" version="any" order="16">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:27-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:27" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:28" version="any" order="17">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:28-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:28" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:29" version="any" order="18">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:29-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:29" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:3" version="any" order="19">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:3-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:3" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:30" version="any" order="20">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:30-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:30" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:31" version="any" order="21">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:31-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:31" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:33" version="any" order="22">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:33-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:33" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:34" version="any" order="23">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:34-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:34" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:35" version="any" order="24">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:35-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:35" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:36" version="any" order="25">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:36-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:36" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:37" version="any" order="26">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:37-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:37" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:38" version="any" order="27">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:38-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:38" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:39" version="any" order="28">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:39-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:39" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:4" version="any" order="29">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:4-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:4" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:40" version="any" order="30">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:40-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:40" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:41" version="any" order="31">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:41-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:41" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:42" version="any" order="32">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:42-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:42" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:43" version="any" order="33">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:43-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:43" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:44" version="any" order="34">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:44-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:44" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:45" version="any" order="35">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:45-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:45" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:46" version="any" order="36">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:46-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:46" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:47" version="any" order="37">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:47-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:47" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:49" version="any" order="38">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:49-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:49" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:5" version="any" order="39">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:5-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:5" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:50" version="any" order="40">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:50-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:50" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:51" version="any" order="41">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:51-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:51" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:52" version="any" order="42">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:52-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:52" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:55" version="any" order="43">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:55-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:55" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:56" version="any" order="44">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:56-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:56" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:57" version="any" order="45">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:57-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:57" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:58" version="any" order="46">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:58-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:58" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:6" version="any" order="47">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:6-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:6" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:60" version="any" order="48">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:60-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:60" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:61" version="any" order="49">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:61-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:61" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:62" version="any" order="50">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:62-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:62" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:63" version="any" order="51">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:63-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:63" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:64" version="any" order="52">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:64-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:64" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:65" version="any" order="53">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:65-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:65" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:66" version="any" order="54">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:66-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:66" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:67" version="any" order="55">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:67-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:67" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:68" version="any" order="56">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:68-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:68" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:69" version="any" order="57">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:69-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:69" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:7" version="any" order="58">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:7-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:7" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:70" version="any" order="59">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:70-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:70" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:72" version="any" order="60">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:72-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:72" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:8" version="any" order="61">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:8-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:8" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:87" version="any" order="62">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:87-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:87" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:88" version="any" order="63">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:88-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:88" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:89" version="any" order="64">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:89-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:89" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:9" version="any" order="65">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:9-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:9" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:90" version="any" order="66">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:90-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:90" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:91" version="any" order="67">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:91-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:91" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:92" version="any" order="68">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:92-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:92" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:93" version="any" order="69">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:93-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:93" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:94" version="any" order="70">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:94-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:94" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:95" version="any" order="71">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:95-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:95" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:96" version="any" order="72">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:96-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:96" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:97" version="any" order="73">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:97-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:97" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:98" version="any" order="74">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:98-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:98" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="it:apb:PassengerStopAssignment:it:apb:StopPlaceCollectionPoint:99" version="any" order="75">
+							<ScheduledStopPointRef ref="it:apb:StopPlaceCollectionPoint:99-0-Gen" version="any"/>
+							<StopPlaceRef ref="it:apb:StopPlaceCollectionPoint:99" version="any"/>
+						</PassengerStopAssignment>
+					</stopAssignments>
+					<!-- I think we don't those currently.. To be discussed -->
+					<timingLinks>
+						<TimingLink id="it:apb:TimingLink:_1" version="any">
+							<FromPointRef ref="it:apb:DrtArea:Bediengebiet_Olang" version="any"/>
+							<ToPointRef ref="it:apb:DrtArea:Bediengebiet_Olang" version="any"/>
+						</TimingLink>
+						<TimingLink id="it:apb:TimingLink:Furkelpass_-_Olang_1" version="any">
+							<FromPointRef ref="it:apb:DrtArea:Olang,_Furkelpass" version="any"/>
+							<ToPointRef ref="it:apb:DrtArea:Bediengebiet_Olang" version="any"/>
+						</TimingLink>
+						<TimingLink id="it:apb:TimingLink:Olang_-_Furkelpass_1" version="any">
+							<FromPointRef ref="it:apb:DrtArea:Bediengebiet_Olang" version="any"/>
+							<ToPointRef ref="it:apb:DrtArea:Olang,_Furkelpass" version="any"/>
+						</TimingLink>
+					</timingLinks>
+					<journeyPatterns>
+						<ServiceJourneyPattern id="it:apb:ServiceJourneyPattern" version="any">
+							<Name lang="it">7</Name>
+							<ShortName lang="it">7</ShortName>
+							<PrivateCode>7</PrivateCode>
+							<DirectionType>inbound</DirectionType>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="it:apb:StopPointInJourneyPattern:_1" version="any" order="1">
+									<ScheduledStopPointRef ref="it:apb:DrtArea:Bediengebiet_Olang" version="any"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<RequestStop>false</RequestStop>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="it:apb:StopPointInJourneyPattern:_2" version="any" order="2">
+									<ScheduledStopPointRef ref="it:apb:DrtArea:Bediengebiet_Olang" version="any"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+									<RequestStop>false</RequestStop>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+							<linksInSequence>
+								<ServiceLinkInJourneyPattern id="it:apb:ServiceLinkInJourneyPattern:_1" version="any" order="1">
+									<TimingLinkRef ref="it:apb:TimingLink:_1" version="any"/>
+									<ServiceLinkRef ref="it:apb:ServiceLink:_1" version="any"/>
+								</ServiceLinkInJourneyPattern>
+							</linksInSequence>
+							<ServiceJourneyPatternType>passenger</ServiceJourneyPatternType>
+						</ServiceJourneyPattern>
+						<ServiceJourneyPattern id="it:apb:ServiceJourneyPattern:Furkelpass_-_Olang" version="any">
+							<Name lang="it">8</Name>
+							<ShortName lang="it">8</ShortName>
+							<PrivateCode>8</PrivateCode>
+							<DirectionType>inbound</DirectionType>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="it:apb:StopPointInJourneyPattern:Furkelpass_-_Olang_1" version="any" order="1">
+									<ScheduledStopPointRef ref="it:apb:DrtArea:Olang,_Furkelpass" version="any"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<RequestStop>false</RequestStop>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="it:apb:StopPointInJourneyPattern:Furkelpass_-_Olang_2" version="any" order="2">
+									<ScheduledStopPointRef ref="it:apb:DrtArea:Bediengebiet_Olang" version="any"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+									<RequestStop>false</RequestStop>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+							<linksInSequence>
+								<ServiceLinkInJourneyPattern id="it:apb:ServiceLinkInJourneyPattern:Furkelpass_-_Olang_1" version="any" order="1">
+									<TimingLinkRef ref="it:apb:TimingLink:Furkelpass_-_Olang_1" version="any"/>
+									<runTimes>
+										<JourneyRunTime id="it:apb:JourneyRunTime:Furkelpass_-_Olang_1" version="any">
+											<TimeDemandTypeRef ref="it:apb:TimeDemandType:NFZ" version="any"/>
+											<RunTime>PT30M</RunTime>
+										</JourneyRunTime>
+									</runTimes>
+									<ServiceLinkRef ref="it:apb:ServiceLink:Furkelpass_-_Olang_1" version="any"/>
+								</ServiceLinkInJourneyPattern>
+							</linksInSequence>
+							<ServiceJourneyPatternType>passenger</ServiceJourneyPatternType>
+						</ServiceJourneyPattern>
+						<ServiceJourneyPattern id="it:apb:ServiceJourneyPattern:Olang_-_Furkelpass" version="any">
+							<Name lang="it">6</Name>
+							<ShortName lang="it">6</ShortName>
+							<PrivateCode>6</PrivateCode>
+							<DirectionType>inbound</DirectionType>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="it:apb:StopPointInJourneyPattern:Olang_-_Furkelpass_1" version="any" order="1">
+									<ScheduledStopPointRef ref="it:apb:DrtArea:Bediengebiet_Olang" version="any"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<RequestStop>false</RequestStop>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="it:apb:StopPointInJourneyPattern:Olang_-_Furkelpass_2" version="any" order="2">
+									<ScheduledStopPointRef ref="it:apb:DrtArea:Olang,_Furkelpass" version="any"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+									<RequestStop>false</RequestStop>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+							<linksInSequence>
+								<ServiceLinkInJourneyPattern id="it:apb:ServiceLinkInJourneyPattern:Olang_-_Furkelpass_1" version="any" order="1">
+									<TimingLinkRef ref="it:apb:TimingLink:Olang_-_Furkelpass_1" version="any"/>
+									<runTimes>
+										<JourneyRunTime id="it:apb:JourneyRunTime:Olang_-_Furkelpass_1" version="any">
+											<TimeDemandTypeRef ref="it:apb:TimeDemandType:NFZ" version="any"/>
+											<RunTime>PT30M</RunTime>
+										</JourneyRunTime>
+									</runTimes>
+									<ServiceLinkRef ref="it:apb:ServiceLink:Olang_-_Furkelpass_1" version="any"/>
+								</ServiceLinkInJourneyPattern>
+							</linksInSequence>
+							<ServiceJourneyPatternType>passenger</ServiceJourneyPatternType>
+						</ServiceJourneyPattern>
+					</journeyPatterns>
+				</ServiceFrame>
+				<ServiceCalendarFrame id="it:apb:ServiceCalendarFrame:apb" version="any">
+					<ServiceCalendar id="it:apb:ServiceCalendar:1:26a" version="any">
+						<Name>Fahrplan 2026</Name>
+						<FromDate>2025-12-14</FromDate>
+						<ToDate>2026-12-12</ToDate>
+					</ServiceCalendar>
+				</ServiceCalendarFrame>
+				<TimetableFrame id="it:apb:TimetableFrame:apb" version="any">
+					<timeDemandTypes>
+						<TimeDemandType id="it:apb:TimeDemandType:NFZ" version="any">
+							<Name lang="it">Normalfahrzeit</Name>
+							<PrivateCode>1</PrivateCode>
+						</TimeDemandType>
+					</timeDemandTypes>
+					<vehicleJourneys>
+						<ServiceJourney id="it:apb:ServiceJourney:CallBus_2_TA_7_27000_79200" version="any">
+							<validityConditions>
+								<AvailabilityConditionRef ref="it:apb:AvailabilityCondition:TA" version="any"/>
+							</validityConditions>
+							<PrivateCode>2</PrivateCode>
+							<TypeOfServiceRef ref="it:apb:TypeOfService:1" version="any"/>
+							<DepartureTime>07:30:00</DepartureTime>
+							<ServiceJourneyPatternRef ref="it:apb:ServiceJourneyPattern" version="any"/>
+							<TimeDemandTypeRef ref="it:apb:TimeDemandType:NFZ" version="any"/>
+							<VehicleTypeRef ref="it:apb:VehicleType:X3" version="any"/>
+							<FlexibleLineRef ref="it:apb:FlexibleLine:CallBus" version="any"/>
+							<FlexibleServiceProperties id="1" version="any">
+								<TypeOfFlexibleServiceRef ref="it:apb:TypeOfFlexibleService:Z" version="any"/>
+							</FlexibleServiceProperties>
+						</ServiceJourney>
+						<ServiceJourney id="it:apb:ServiceJourney:CallBus_3_TA_6_30600" version="any">
+							<validityConditions>
+								<AvailabilityConditionRef ref="it:apb:AvailabilityCondition:TA" version="any"/>
+							</validityConditions>
+							<PrivateCode>3</PrivateCode>
+							<TypeOfServiceRef ref="it:apb:TypeOfService:1" version="any"/>
+							<DepartureTime>08:30:00</DepartureTime>
+							<ServiceJourneyPatternRef ref="it:apb:ServiceJourneyPattern:Olang_-_Furkelpass" version="any"/>
+							<TimeDemandTypeRef ref="it:apb:TimeDemandType:NFZ" version="any"/>
+							<VehicleTypeRef ref="it:apb:VehicleType:X3" version="any"/>
+							<FlexibleLineRef ref="it:apb:FlexibleLine:CallBus" version="any"/>
+							<FlexibleServiceProperties id="2" version="any">
+								<TypeOfFlexibleServiceRef ref="it:apb:TypeOfFlexibleService:Z" version="any"/>
+							</FlexibleServiceProperties>
+						</ServiceJourney>
+						<ServiceJourney id="it:apb:ServiceJourney:CallBus_3_TA_8_30600" version="any">
+							<validityConditions>
+								<AvailabilityConditionRef ref="it:apb:AvailabilityCondition:TA" version="any"/>
+							</validityConditions>
+							<PrivateCode>3</PrivateCode>
+							<TypeOfServiceRef ref="it:apb:TypeOfService:1" version="any"/>
+							<DepartureTime>08:30:00</DepartureTime>
+							<ServiceJourneyPatternRef ref="it:apb:ServiceJourneyPattern:Furkelpass_-_Olang" version="any"/>
+							<TimeDemandTypeRef ref="it:apb:TimeDemandType:NFZ" version="any"/>
+							<VehicleTypeRef ref="it:apb:VehicleType:X3" version="any"/>
+							<FlexibleLineRef ref="it:apb:FlexibleLine:CallBus" version="any"/>
+							<FlexibleServiceProperties id="3" version="any">
+								<TypeOfFlexibleServiceRef ref="it:apb:TypeOfFlexibleService:Z" version="any"/>
+							</FlexibleServiceProperties>
+						</ServiceJourney>
+						<ServiceJourney id="it:apb:ServiceJourney:CallBus_4_TA_6_63000" version="any">
+							<validityConditions>
+								<AvailabilityConditionRef ref="it:apb:AvailabilityCondition:TA" version="any"/>
+							</validityConditions>
+							<PrivateCode>4</PrivateCode>
+							<TypeOfServiceRef ref="it:apb:TypeOfService:1" version="any"/>
+							<DepartureTime>17:30:00</DepartureTime>
+							<ServiceJourneyPatternRef ref="it:apb:ServiceJourneyPattern:Olang_-_Furkelpass" version="any"/>
+							<TimeDemandTypeRef ref="it:apb:TimeDemandType:NFZ" version="any"/>
+							<VehicleTypeRef ref="it:apb:VehicleType:X3" version="any"/>
+							<FlexibleLineRef ref="it:apb:FlexibleLine:CallBus" version="any"/>
+							<FlexibleServiceProperties id="4" version="any">
+								<TypeOfFlexibleServiceRef ref="it:apb:TypeOfFlexibleService:Z" version="any"/>
+							</FlexibleServiceProperties>
+						</ServiceJourney>
+						<ServiceJourney id="it:apb:ServiceJourney:CallBus_4_TA_8_63000" version="any">
+							<validityConditions>
+								<AvailabilityConditionRef ref="it:apb:AvailabilityCondition:TA" version="any"/>
+							</validityConditions>
+							<PrivateCode>4</PrivateCode>
+							<TypeOfServiceRef ref="it:apb:TypeOfService:1" version="any"/>
+							<DepartureTime>17:30:00</DepartureTime>
+							<ServiceJourneyPatternRef ref="it:apb:ServiceJourneyPattern:Furkelpass_-_Olang" version="any"/>
+							<TimeDemandTypeRef ref="it:apb:TimeDemandType:NFZ" version="any"/>
+							<VehicleTypeRef ref="it:apb:VehicleType:X3" version="any"/>
+							<FlexibleLineRef ref="it:apb:FlexibleLine:CallBus" version="any"/>
+							<FlexibleServiceProperties id="7" version="any">
+								<TypeOfFlexibleServiceRef ref="it:apb:TypeOfFlexibleService:Z" version="any"/>
+							</FlexibleServiceProperties>
+						</ServiceJourney>
+					</vehicleJourneys>
+					<typesOfService>
+						<TypeOfService id="it:apb:TypeOfService:1" version="any">
+							<Name lang="en">PublicJourney</Name>
+							<ShortName lang="en">N</ShortName>
+							<PrivateCode>1</PrivateCode>
+						</TypeOfService>
+						<TypeOfService id="it:apb:TypeOfService:2" version="any">
+							<Name lang="en">GarageRunOut</Name>
+							<ShortName lang="en">GO</ShortName>
+							<PrivateCode>2</PrivateCode>
+						</TypeOfService>
+						<TypeOfService id="it:apb:TypeOfService:3" version="any">
+							<Name lang="en">GarageRunIn</Name>
+							<ShortName lang="en">GI</ShortName>
+							<PrivateCode>3</PrivateCode>
+						</TypeOfService>
+					</typesOfService>
+					<notices>
+						<Notice id="it:apb:Notice:CB_OL" version="any">
+							<alternativeTexts>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="de">Dieser Dienst muss gebucht werden.</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<ShortName lang="it">CB_OL</ShortName>
+							<Text lang="it">Dieser Dienst muss gebucht werden.</Text>
+							<PublicCode>Dieser Dienst muss gebucht werden.</PublicCode>
+							<ShortCode>CB_OL</ShortCode>
+							<PrivateCode>CB_OL</PrivateCode>
+							<TypeOfNoticeRef ref="it:apb:TypeOfNotice:4" version="any"/>
+							<CanBeAdvertised>true</CanBeAdvertised>
+						</Notice>
+					</notices>
+				</TimetableFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

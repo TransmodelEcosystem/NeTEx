@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PostBus 29013
+     Ruemelingen Dorf  22:49   22:49  boarding and alighting allowed
+     Haefelfingen Dorf         22:52  no boarding, only alighting allowed
+	 Bad Ramsach			   22:58  no boarding, only alighting allowed
+     Laeufelfingen Dorf        23:04  no boarding, only alighting allowed
+	 Buckten Bahnhof           23:10  no boarding, only alighting allowed
+
+
+     PostBus 30001
+	 Ruemelingen Dorf          08:21  boarding and alighting allowed
+     Haefelfingen Dorf         08:24  no boarding, only alighting allowed
+     Haefelfingen, Rebenrank   08:26  
+	 HaefelfingenBad Ramsach   08:30  no boarding, only alighting allowed
+     HaefelfingenBad Ramsach   08:31  no boarding, only alighting allowed
+     Laeufelfingen Herrenmatt  08:35  no boarding, only alighting allowed
+     Laeufelfingen Bahnhof     08:39  no boarding, only alighting allowed
+
+     PostBus 30011
+	 Ruemelingen Dorf          17:58  boarding and alighting allowed
+     Haefelfingen Dorf         18:01  no boarding, only alighting allowed
+     Haefelfingen, Rebenrank   18:03  boarding and alighting allowed
+	 HaefelfingenBad Ramsach   18:07  no boarding, only alighting allowed
+
+
+ -->
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2026-04-10T12:00:00</PublicationTimestamp>
+	<ParticipantRef>CH:BLT</ParticipantRef>
+	<dataObjects>
+		<CompositeFrame id="ch:1:CompositeFrame:1231" version="1">
+			<ValidBetween>
+				<FromDate>2025-12-14T00:00:00</FromDate>
+				<ToDate>2026-12-10T23:59:59</ToDate>
+			</ValidBetween>
+			<frames>
+				<ResourceFrame id="ch:1:ResourceFrame:1231" version="1">
+					<responsibilitySets>
+						<ResponsibilitySet id="ch:1:ResponsibilitySet:BLT" version="1">
+							<Name>BLT Baselland Transport</Name>
+							<PrivateCode>BLT</PrivateCode>
+							<roles>
+								<ResponsibilityRoleAssignment id="ch:1:ResponsibilityRoleAssignment:BLT:1" version="1">
+									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+									<ResponsibleOrganisationRef ref="ch:1:sboid:100019" version="1"/>
+								</ResponsibilityRoleAssignment>
+								<ResponsibilityRoleAssignment id="ch:1:ResponsibilityRoleAssignment:BLT:2" version="1">
+									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<ResponsibleOrganisationRef ref="ch:1:sboid:100019" version="1"/>
+								</ResponsibilityRoleAssignment>
+							</roles>
+						</ResponsibilitySet>
+					</responsibilitySets>
+					<typesOfValue>
+						<ValueSet id="TypeOfProductCategory" version="1">
+							<values>
+								<TypeOfProductCategory id="ch:1:TypeOfProductCategory:B" version="1">
+									<Name lang="de">Bus</Name>
+									<ShortName>B</ShortName>
+								</TypeOfProductCategory>
+							</values>
+						</ValueSet>
+					</typesOfValue>
+					<organisations>
+						<Operator id="ch:1:sboid:100019" version="1">
+							<keyList>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>37</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>SBOID</Key>
+									<Value>ch:1:sboid:100019</Value>
+								</KeyValue>
+							</keyList>
+							<PrivateCode>37</PrivateCode>
+							<Name>BLT Baselland Transport</Name>
+						</Operator>
+					</organisations>
+				</ResourceFrame>
+				<SiteFrame id="ch:1:SiteFrame:1231" version="1">
+					<stopPlaces>
+						<StopPlace id="ch:1:sloid:78296" version="1">
+							<keyList>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:78296</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8578296</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sloid">ch:1:sloid:78296</PrivateCode>
+							</privateCodes>
+							<Name>Ruemlingen, Dorf</Name>
+							<Centroid>
+								<Location>
+									<Longitude>7.84783</Longitude>
+									<Latitude>47.42444</Latitude>
+									<Altitude>480</Altitude>
+								</Location>
+							</Centroid>
+							<quays>
+								<Quay id="ch:1:sloid:78296:1:1" version="1">
+									<keyList>
+										<KeyValue>
+											<Key>SLOID</Key>
+											<Value>ch:1:sloid:78296:1:1</Value>
+										</KeyValue>
+									</keyList>
+									<privateCodes>
+										<PrivateCode type="sloid">ch:1:sloid:78296:1:1</PrivateCode>
+									</privateCodes>
+									<Centroid>
+										<Location>
+											<Longitude>7.84783</Longitude>
+											<Latitude>47.42444</Latitude>
+											<Altitude>480</Altitude>
+										</Location>
+									</Centroid>
+									<PublicCode>1</PublicCode>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:sloid:78302" version="1">
+							<keyList>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:78302</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8578303</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sloid">ch:1:sloid:78302"</PrivateCode>
+							</privateCodes>
+							<Name>Haefelfingen, Weidweg</Name>
+							<Centroid>
+								<Location>
+									<Longitude>7.86247529844</Longitude>
+									<Latitude>47.41614749688</Latitude>
+									<Altitude>523</Altitude>
+								</Location>
+							</Centroid>
+							<quays>
+								<Quay id="ch:1:sloid:78302:1:1" version="1">
+									<keyList>
+										<KeyValue>
+											<Key>SLOID</Key>
+											<Value>ch:1:sloid:78302:1:1</Value>
+										</KeyValue>
+									</keyList>
+									<privateCodes>
+										<PrivateCode type="sloid">ch:1:sloid:78303:1:1</PrivateCode>
+									</privateCodes>
+									<Centroid>
+										<Location>
+											<Longitude>7.86247529844</Longitude>
+											<Latitude>47.41614749688</Latitude>
+											<Altitude>523</Altitude>
+										</Location>
+									</Centroid>
+									<PublicCode>1</PublicCode>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:sloid:78303" version="1">
+							<keyList>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:78303</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8578303</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sloid">ch:1:sloid:78303</PrivateCode>
+							</privateCodes>
+							<Name>Haefelfingen Dorf</Name>
+							<Centroid>
+								<Location>
+									<Longitude>7.865972</Longitude>
+									<Latitude>47.4150703</Latitude>
+									<Altitude>542</Altitude>
+								</Location>
+							</Centroid>
+							<quays>
+								<Quay id="ch:1:sloid:78303:1:1" version="1">
+									<keyList>
+										<KeyValue>
+											<Key>SLOID</Key>
+											<Value>ch:1:sloid:78303:1:1</Value>
+										</KeyValue>
+									</keyList>
+									<privateCodes>
+										<PrivateCode type="sloid">ch:1:sloid:78303:1:1</PrivateCode>
+									</privateCodes>
+									<Centroid>
+										<Location>
+											<Longitude>7.865972</Longitude>
+											<Latitude>47.4150703</Latitude>
+											<Altitude>542</Altitude>
+										</Location>
+									</Centroid>
+									<PublicCode>1</PublicCode>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:sloid:5168" version="1">
+							<keyList>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:5168</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8505168</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sloid">ch:1:sloid:5168</PrivateCode>
+							</privateCodes>
+							<Name>Haefelfingen, Rebenrank</Name>
+							<Centroid>
+								<Location>
+									<Longitude>7.8673784</Longitude>
+									<Latitude>47.4168639</Latitude>
+									<Altitude>602</Altitude>
+								</Location>
+							</Centroid>
+							<quays>
+								<Quay id="ch:1:sloid:5168:1:1" version="1">
+									<keyList>
+										<KeyValue>
+											<Key>sloid</Key>
+											<Value>ch:1:sloid:5168:1:1</Value>
+										</KeyValue>
+									</keyList>
+									<privateCodes>
+										<PrivateCode type="sloid">ch:1:sloid:5168:1:1</PrivateCode>
+									</privateCodes>
+									<Centroid>
+										<Location>
+											<Longitude>7.8673784</Longitude>
+											<Latitude>47.4168639</Latitude>
+											<Altitude>602</Altitude>
+										</Location>
+									</Centroid>
+									<PublicCode>1</PublicCode>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:sloid:5169" version="1">
+							<keyList>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:5169</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8505169</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sloid">ch:1:sloid:5168</PrivateCode>
+							</privateCodes>
+							<Name>Haefelfingen, Egg</Name>
+							<Centroid>
+								<Location>
+									<Longitude>7.87489639577</Longitude>
+									<Latitude>47.41674000114</Latitude>
+									<Altitude>640</Altitude>
+								</Location>
+							</Centroid>
+							<quays>
+								<Quay id="ch:1:sloid:5169:1:1" version="1">
+									<keyList>
+										<KeyValue>
+											<Key>sloid</Key>
+											<Value>ch:1:sloid:5169:1:1</Value>
+										</KeyValue>
+									</keyList>
+									<privateCodes>
+										<PrivateCode type="sloid">ch:1:sloid:5169:1:1</PrivateCode>
+									</privateCodes>
+									<Centroid>
+										<Location>
+											<Longitude>7.87489639577</Longitude>
+											<Latitude>47.41674000114</Latitude>
+											<Altitude>640</Altitude>
+										</Location>
+									</Centroid>
+									<PublicCode>1</PublicCode>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:sloid:2648" version="1">
+							<keyList>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:2648</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8502648</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sloid">ch:1:sloid:2648</PrivateCode>
+								<PrivateCode type="didok">8502648</PrivateCode>
+							</privateCodes>
+							<Name>Haefelfingen Bad Ramsach</Name>
+							<Centroid>
+								<Location>
+									<Longitude>7.8711704</Longitude>
+									<Latitude>47.405687</Latitude>
+									<Altitude>739</Altitude>
+								</Location>
+							</Centroid>
+							<quays>
+								<Quay id="ch:1:sloid:2648:1:1" version="1">
+									<keyList>
+										<KeyValue>
+											<Key>sloid</Key>
+											<Value>ch:1:sloid:2648:1:1</Value>
+										</KeyValue>
+									</keyList>
+									<privateCodes>
+										<PrivateCode type="sloid">ch:1:sloid:2648:1:1</PrivateCode>
+									</privateCodes>
+									<Centroid>
+										<Location>
+											<Longitude>7.8711704</Longitude>
+											<Latitude>47.405687</Latitude>
+											<Altitude>739</Altitude>
+										</Location>
+									</Centroid>
+									<PublicCode>1</PublicCode>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:sloid:7335" version="1">
+							<keyList>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:7335</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8507335</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sloid">ch:1:sloid:7335</PrivateCode>
+								<PrivateCode type="didok">8507335</PrivateCode>
+							</privateCodes>
+							<Name>Laeufelfingen, Herrenmatt</Name>
+							<Centroid>
+								<Location>
+									<Longitude>7.8563981</Longitude>
+									<Latitude>47.397135</Latitude>
+									<Altitude>592</Altitude>
+								</Location>
+							</Centroid>
+							<quays>
+								<Quay id="ch:1:sloid:7335:1:1" version="1">
+									<keyList>
+										<KeyValue>
+											<Key>sloid</Key>
+											<Value>ch:1:sloid:7335:1:1</Value>
+										</KeyValue>
+									</keyList>
+									<privateCodes>
+										<PrivateCode type="sloid">ch:1:sloid:7335:1:1</PrivateCode>
+									</privateCodes>
+									<Centroid>
+										<Location>
+											<Longitude>7.8563981</Longitude>
+											<Latitude>47.397135</Latitude>
+											<Altitude>592</Altitude>
+										</Location>
+									</Centroid>
+									<PublicCode>1</PublicCode>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:sloid:87564" version="1">
+							<keyList>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:87564</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8587564</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sloid">ch:1:sloid:87564</PrivateCode>
+								<PrivateCode type="didok">8587564</PrivateCode>
+							</privateCodes>
+							<Name>Laeufelfingen, Dorf</Name>
+							<Centroid>
+								<Location>
+									<Longitude>7.85596189363</Longitude>
+									<Latitude>47.39493579623</Latitude>
+									<Altitude>561</Altitude>
+								</Location>
+							</Centroid>
+							<quays>
+								<Quay id="ch:1:sloid:87564:1:1" version="1">
+									<keyList>
+										<KeyValue>
+											<Key>sloid</Key>
+											<Value>ch:1:sloid:87564:1:1</Value>
+										</KeyValue>
+									</keyList>
+									<privateCodes>
+										<PrivateCode type="sloid">ch:1:sloid:87564:1:1</PrivateCode>
+									</privateCodes>
+									<Centroid>
+										<Location>
+											<Longitude>7.85596189363</Longitude>
+											<Latitude>47.39493579623</Latitude>
+											<Altitude>561</Altitude>
+										</Location>
+									</Centroid>
+									<PublicCode>1</PublicCode>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:sloid:92449" version="1">
+							<keyList>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:92449</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8592449</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sloid">ch:1:sloid:92449</PrivateCode>
+								<PrivateCode type="didok">8592449</PrivateCode>
+							</privateCodes>
+							<Name>Laeufelfingen Bahnhof</Name>
+							<Centroid>
+								<Location>
+									<Longitude>7.8563981</Longitude>
+									<Latitude>47.3921247</Latitude>
+									<Altitude>561</Altitude>
+								</Location>
+							</Centroid>
+							<quays>
+								<Quay id="ch:1:sloid:92449:1:1" version="1">
+									<keyList>
+										<KeyValue>
+											<Key>sloid</Key>
+											<Value>ch:1:sloid:92449:1:1</Value>
+										</KeyValue>
+									</keyList>
+									<privateCodes>
+										<PrivateCode type="sloid">ch:1:sloid:92449:1:1</PrivateCode>
+									</privateCodes>
+									<Centroid>
+										<Location>
+											<Longitude>7.8563981</Longitude>
+											<Latitude>47.3921247</Latitude>
+											<Altitude>561</Altitude>
+										</Location>
+									</Centroid>
+									<PublicCode>1</PublicCode>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:sloid:6073" version="1">
+							<keyList>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:6073</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8506073</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sloid">ch:1:sloid:6073</PrivateCode>
+								<PrivateCode type="didok">8506073</PrivateCode>
+							</privateCodes>
+							<Name>Buckten, Bahnhof</Name>
+							<Centroid>
+								<Location>
+									<Longitude>7.8479300</Longitude>
+									<Latitude>47.4088125</Latitude>
+									<Altitude>521</Altitude>
+								</Location>
+							</Centroid>
+							<quays>
+								<Quay id="ch:1:sloid:6073:1:1" version="1">
+									<keyList>
+										<KeyValue>
+											<Key>sloid</Key>
+											<Value>ch:1:sloid:6073:1:1</Value>
+										</KeyValue>
+									</keyList>
+									<privateCodes>
+										<PrivateCode type="sloid">ch:1:sloid:6073:1:1</PrivateCode>
+									</privateCodes>
+									<Centroid>
+										<Location>
+											<Longitude>7.8479300</Longitude>
+											<Latitude>47.4088125</Latitude>
+											<Altitude>521</Altitude>
+										</Location>
+									</Centroid>
+									<PublicCode>1</PublicCode>
+								</Quay>
+							</quays>
+						</StopPlace>
+					</stopPlaces>
+				</SiteFrame>
+				<ServiceFrame id="ch:1:ServiceFrame:1231" version="1">
+					<lines>
+						<Line id="ch:1:slnid:1026470" version="1" responsibilitySetRef="ch:1:ResponsibilitySet:BLT">
+							<keyList>
+								<KeyValue>
+									<Key>SLNID</Key>
+									<Value>ch:1:slnid:1026470</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="slnid">ch:1:slnid:1026470</PrivateCode>
+							</privateCodes>
+							<Name>29013 Ruemlingen – Haefelfingen Dorf – Bad Ramsach - Laeufelfingen</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>localBus</BusSubmode>
+							</TransportSubmode>
+							<PublicCode>50.110</PublicCode>
+							<OperatorRef ref="ch:1:sboid:100019" version="1"/>
+							<LineType>fixed</LineType>
+							<TypeOfProductCategoryRef ref="ch:1:TypeOfProductCategory:B" version="1"/>
+							<TypeOfServiceRef ref="ch:1:TypeOfService:1" version="1"/>
+							<bookingArrangements>
+								<BookingArrangement id="ch:blt:generated:BOOK:29013" version="1">
+									<BookingMethods>mobileApp</BookingMethods>
+									<BookWhen>advanceOnly</BookWhen>
+									<BookingNote>Verkehrt bei Bedarf ab Rümlingen Dorf, und so weit, bis der letzte Fahrgast ausgestiegen ist. Einstieg nur Bad Ramsach
+									und Laufelfingen Dorf und nur auf voranmeldung mid. 30 Min. vor der Fahrt unter www.pickride.ch / Tel: +41 848 02 03 0. Ohne 
+									Laeufelfingen Bahnhof dafür Buckten Bahnhof</BookingNote>
+								</BookingArrangement>
+							</bookingArrangements>
+						</Line>
+					</lines>
+					<scheduledStopPoints>
+						<ScheduledStopPoint id="ch:1:sloid:78296:1:1" version="1">
+							<Name>Rümlingen, Dorf</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:sloid:78302:1:1" version="1">
+							<Name>Häfelfingen, Weidweg</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:sloid:78303:1:1" version="1">
+							<Name>Häfelfingen, Dorf</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:sloid:5168:1:1" version="1">
+							<Name>Häfelfingen, Rebenrank</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:sloid:5169:1:1" version="1">
+							<Name>Häfelfingen, Egg</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:sloid:2648:1:1" version="1">
+							<Name>Lauefelfingen Bad Ramsach</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:sloid:7335:1:1" version="1">
+							<Name>Laeufelfingen, Herrenmatt</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:sloid:87564:1:1" version="1">
+							<Name>Laeufelfingen, Dorf</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:sloid:92449:1:1" version="1">
+							<Name>Läufelfingen, Bahnhof</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:sloid:6073:1:1" version="1">
+							<Name>Buckten, Bahnhof</Name>
+						</ScheduledStopPoint>
+					</scheduledStopPoints>
+					<stopAssignments>
+						<PassengerStopAssignment id="ch:blt:generated:PSA:RUEMLINGEN_DORF" version="1">
+							<ScheduledStopPointRef ref="ch:1:sloid:78296:1:1" version="1"/>
+							<StopPlaceRef ref="ch:1:sloid:78296" version="1"/>
+							<QuayRef ref="ch:1:sloid:78296:1:1" version="1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:blt:generated:PSA:HAEFELFINGEN_WEIDWEG" version="1">
+							<ScheduledStopPointRef ref="ch:1:sloid:78302:1:1" version="1"/>
+							<StopPlaceRef ref="ch:1:sloid:78302" version="1"/>
+							<QuayRef ref="ch:1:sloid:78302:1:1" version="1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:blt:generated:PSA:HAEFELFINGEN_DORF" version="1">
+							<ScheduledStopPointRef ref="ch:1:sloid:78303:1:1" version="1"/>
+							<StopPlaceRef ref="ch:1:sloid:78303" version="1"/>
+							<QuayRef ref="ch:1:sloid:78303:1:1" version="1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:blt:generated:PSA:HAEFELFINGEN_REBENRANK" version="1">
+							<ScheduledStopPointRef ref="ch:1:sloid:5168:1:1" version="1"/>
+							<StopPlaceRef ref="ch:1:sloid:5168" version="1"/>
+							<QuayRef ref="ch:1:sloid:5168:1:1" version="1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:blt:generated:PSA:HAEFELFINGEN_EGG" version="1">
+							<ScheduledStopPointRef ref="ch:1:sloid:5169:1:1" version="1"/>
+							<StopPlaceRef ref="ch:1:sloid:5169" version="1"/>
+							<QuayRef ref="ch:1:sloid:5169:1:1" version="1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:blt:generated:PSA:LAEUFELFINGEN_BAD_RAMSACH" version="1">
+							<ScheduledStopPointRef ref="ch:1:sloid:2648:1:1" version="1"/>
+							<StopPlaceRef ref="ch:1:sloid:2648" version="1"/>
+							<QuayRef ref="ch:1:sloid:2648:1:1" version="1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:blt:generated:PSA:LAEUFELFINGEN_HERRENMATT" version="1">
+							<ScheduledStopPointRef ref="ch:1:sloid:7335:1:1" version="1"/>
+							<StopPlaceRef ref="ch:1:sloid:7335" version="1"/>
+							<QuayRef ref="ch:1:sloid:7335:1:1" version="1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:blt:generated:PSA:LAEUFELFINGEN_DORF" version="1">
+							<ScheduledStopPointRef ref="ch:1:sloid:87564:1:1" version="1"/>
+							<StopPlaceRef ref="ch:1:sloid:87564" version="1"/>
+							<QuayRef ref="ch:1:sloid:87564:1:1" version="1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:blt:generated:PSA:LAEUFELFINGEN_BAHNHOF" version="1">
+							<ScheduledStopPointRef ref="ch:1:sloid:92449:1:1" version="1"/>
+							<StopPlaceRef ref="ch:1:sloid:92449" version="1"/>
+							<QuayRef ref="ch:1:sloid:92449:1:1" version="1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:blt:generated:PSA:BUCKTEN_BAHNHOF" version="1">
+							<ScheduledStopPointRef ref="ch:1:sloid:6073:1:1" version="1"/>
+							<StopPlaceRef ref="ch:1:sloid:6073" version="1"/>
+							<QuayRef ref="ch:1:sloid:6073:1:1" version="1"/>
+						</PassengerStopAssignment>
+					</stopAssignments>
+					<timingLinks>
+						<TimingLink id="ch:1:TimingLink:1" version="1">
+							<!-- Rümlingen, Dorf nach Häflingen, Weidweg -->
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:78296:1:1"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:78302:1:1"/>
+						</TimingLink>
+						<TimingLink id="ch:1:TimingLink:2" version="1">
+							<!-- Häflingen, Weidweg nach Häflingen, Dorf -->
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:78302:1:1"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:78303:1:1"/>
+						</TimingLink>
+						<TimingLink id="ch:1:TimingLink:3" version="1">
+							<!-- Häflingen, Dorf nach Häflingen, Rebenrank -->
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:78303:1:1"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:5168:1:1"/>
+						</TimingLink>
+						<TimingLink id="ch:1:TimingLink:4" version="1">
+							<!-- Häflingen, Rebenrank nach Häflingen, Egg -->
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:5168:1:1"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:5169:1:1"/>
+						</TimingLink>
+						<TimingLink id="ch:1:TimingLink:5" version="1">
+							<!-- H, Egg nach H, Bad Ramsach -->
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:5169:1:1"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:2648:1:1"/>
+						</TimingLink>
+						<TimingLink id="ch:1:TimingLink:6" version="1">
+							<!-- H, Bad Ramsach nach L, Herrenmatt -->
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:2648:1:1"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:7335:1:1"/>
+						</TimingLink>
+						<TimingLink id="ch:1:TimingLink:7" version="1">
+							<!-- L Herrenmatt nach L, Dorf -->
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:7335:1:1"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:92449:1:1"/>
+						</TimingLink>
+						<!-- for Rufbus -->
+						<TimingLink id="ch:1:TimingLink:8" version="1">
+							<!-- L, Dorf nach L, Bahnhof -->
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:92449:1:1"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:87564:1:1"/>
+						</TimingLink>
+						<TimingLink id="ch:1:TimingLink:9" version="1">
+							<!-- L, Bahnhof nach Buckten, Bahnhof -->
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:87564:1:1"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:6073:1:1"/>
+						</TimingLink>
+						<TimingLink id="ch:1:TimingLink:8a" version="1">
+							<!-- L, Dorff nach Buckten, Bahnhof -->
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:87564:1:1"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:6073:1:1"/>
+						</TimingLink>
+					</timingLinks>
+					<journeyPatterns>
+						<ServiceJourneyPattern id="ch:blt:generated:JourneyPattern:29013" version="1">
+							<Name>Rufbus 29013</Name>
+							<RouteView>
+								<LineRef ref="ch:1:slnid:1026470" version="1"/>
+							</RouteView>
+							<DirectionType>outbound</DirectionType>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:29013:1" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:78296:1:1" version="1"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:29013:2" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:78302:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:29013:3" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:78303:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:29013:4" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:5168:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:29013:5" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:5169:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:29013:6" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:2648:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:29013:7" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:7335:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:29013:8" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:87564:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<!-- no stop in 92449 -->
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:29013:" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:6073:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+						</ServiceJourneyPattern>
+						<ServiceJourneyPattern id="ch:blt:generated:JourneyPattern:30001" version="1">
+							<Name>Normal Service Journey 30001</Name>
+							<RouteView>
+								<LineRef ref="ch:1:slnid:1026470" version="1"/>
+							</RouteView>
+							<DirectionType>outbound</DirectionType>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:30001:1" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:78296:1:1" version="1"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:30001:2" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:78302:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:230001:2" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:78303:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:30001:4" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:5168:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:30001:5" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:5169:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:30001:6" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:2648:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:30001:7" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:7335:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:30001:8" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:87564:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:30001:9" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:92449:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+						</ServiceJourneyPattern>
+						<ServiceJourneyPattern id="ch:blt:generated:JourneyPattern:30011" version="1">
+							<Name>Normal ServiceJourney 30011</Name>
+							<RouteView>
+								<LineRef ref="ch:1:slnid:1026470" version="1"/>
+							</RouteView>
+							<DirectionType>outbound</DirectionType>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:30011:1" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:78296:1:1" version="1"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:30011:2" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:78302:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:30011:3" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:78303:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:30011:4" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:5168:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:30011:5" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:5169:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:blt:generated:JP:30011:6" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:2648:1:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+						</ServiceJourneyPattern>
+					</journeyPatterns>
+					<timeDemandTypes>
+						<TimeDemandType id="ch:1:TimeDemandType:PAG:29013:1" version="1">
+							<runTimes>
+								<JourneyRunTime id="ch:1:JourneyRunTime:29013:1:1" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:1" version="1"/>
+									<RunTime>PT3M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:29013:1:2" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:2" version="1"/>
+									<RunTime>PT0M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:29013:1:3" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:3" version="1"/>
+									<RunTime>PT2M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:29013:4" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:4" version="1"/>
+									<RunTime>PT1M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:29013:5" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:5" version="1"/>
+									<RunTime>PT3M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:29013:6" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:6" version="1"/>
+									<RunTime>PT4M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:29013:7" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:7" version="1"/>
+									<RunTime>PT2M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:29013:8" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:8a" version="1"/>
+									<RunTime>PT6M</RunTime>
+								</JourneyRunTime>
+							</runTimes>
+						</TimeDemandType>
+						<TimeDemandType id="ch:1:TimeDemandType:PAG:30011:1" version="1">
+							<runTimes>
+								<JourneyRunTime id="ch:1:JourneyRunTime:30011:1:1" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:1" version="1"/>
+									<RunTime>P3M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:30011:1:2" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:2" version="1"/>
+									<RunTime>PT0M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:30011:1:3" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:3" version="1"/>
+									<RunTime>PT2M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:30011:1:4" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:4" version="1"/>
+									<RunTime>PT1M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:30011:1:5" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:5" version="1"/>
+									<RunTime>PT3M</RunTime>
+								</JourneyRunTime>
+							</runTimes>
+						</TimeDemandType>
+						<TimeDemandType id="ch:1:TimeDemandType:PAG:30001:1" version="1">
+							<runTimes>
+								<JourneyRunTime id="ch:1:JourneyRunTime:30001:1:1" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:1" version="1"/>
+									<RunTime>PT3M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:30001:1:2" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:2" version="1"/>
+									<RunTime>PT0M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:30001:1:3" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:3" version="1"/>
+									<RunTime>PT2M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:30001:1:4" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:4" version="1"/>
+									<RunTime>PT1M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:30001:1:5" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:5" version="1"/>
+									<RunTime>PT3M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:30001:1:6" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:6" version="1"/>
+									<RunTime>PT4M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:30001:1:7" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:7" version="1"/>
+									<RunTime>PT2M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:30001:1:8" version="1">
+									<TimingLinkRef ref="ch:1:TimingLink:8" version="1"/>
+									<RunTime>PT2M</RunTime>
+								</JourneyRunTime>
+							</runTimes>
+							<waitTimes>
+								<JourneyWaitTime id="ch:1:JourneyWaitTime:30001:1" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:2648:1:1" version="1"/>
+									<WaitTime>PT1M</WaitTime>
+								</JourneyWaitTime>
+							</waitTimes>
+						</TimeDemandType>
+					</timeDemandTypes>
+				</ServiceFrame>
+				<ServiceCalendarFrame id="ch:1:ServiceCalendarFrame:1231" version="1">
+					<validityConditions>
+						<AvailabilityCondition id="generated" version="1">
+							<Description>every day</Description>
+							<FromDate>2025-12-14T00:00:00</FromDate>
+							<ToDate>2026-12-10T23:59:59</ToDate>
+							<ValidDayBits>11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</ValidDayBits>
+							<!-- number of bits not checked here. Must be the same as the days between FromDate and ToDate. -->
+						</AvailabilityCondition>
+					</validityConditions>
+				</ServiceCalendarFrame>
+				<TimetableFrame id="ch:1:TimetableFrame:1231" version="1">
+					<vehicleJourneys>
+						<ServiceJourney id="ch:blt:generated:SJ:29013:ODV" version="1" responsibilitySetRef="ch:1:ResponsibilitySet:BLT">
+							<validityConditions>
+								<AvailabilityConditionRef ref="generated" version="1"/>
+							</validityConditions>
+							<keyList>
+								<KeyValue>
+									<Key>SJYID</Key>
+									<Value>sjyid-1</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sjyid">sjyid-1</PrivateCode>
+							</privateCodes>
+							<TransportMode>bus</TransportMode>
+							<TypeOfProductCategoryRef ref="ch:1:TypeOfProductCategory:B" version="1"/>
+							<TypeOfServiceRef ref="ch:1:TypeOfService:1" version="1"/>
+							<ServiceAlteration>planned</ServiceAlteration>
+							<DepartureTime>22:49:00</DepartureTime>
+							<DepartureDayOffset>0</DepartureDayOffset>
+							<JourneyPatternRef ref="ch:blt:generated:JourneyPattern:29013" version="1" nameOfRefClass="ServiceJourneyPattern"/>
+							<TimeDemandTypeRef ref="ch:1:TimeDemandType:PAG:29013:1" version="1"/>
+							<OperatorRef ref="ch:1:sboid:100019" version="1"/>
+							<LineRef ref="ch:1:slnid:1026470" version="1"/>
+							<DirectionType>outbound</DirectionType>
+							<trainNumbers>
+								<TrainNumberRef ref="ch:1:TrainNumber:29013" version="1"/>
+							</trainNumbers>
+							<FlexibleServiceProperties id="ch:blt:generated:FSP:SJ:29013:ODV" version="1">
+								<bookingArrangements>
+									<BookingArrangementRef ref="ch:blt:generated:BOOK:29013" version="1"/>
+								</bookingArrangements>
+							</FlexibleServiceProperties>
+						</ServiceJourney>
+						<ServiceJourney id="ch:blt:generated:SJ:30001:1" version="1" responsibilitySetRef="ch:1:ResponsibilitySet:BLT">
+							<validityConditions>
+								<AvailabilityConditionRef ref="generated" version="1"/>
+							</validityConditions>
+							<keyList>
+								<KeyValue>
+									<Key>SJYID</Key>
+									<Value>sjyid-2</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sjyid">sjyid-2</PrivateCode>
+							</privateCodes>
+							<TransportMode>bus</TransportMode>
+							<TypeOfProductCategoryRef ref="ch:1:TypeOfProductCategory:B" version="1"/>
+							<TypeOfServiceRef ref="ch:1:TypeOfService:1" version="1"/>
+							<ServiceAlteration>planned</ServiceAlteration>
+							<DepartureTime>08:21:00</DepartureTime>
+							<DepartureDayOffset>0</DepartureDayOffset>
+							<JourneyPatternRef ref="ch:blt:generated:JourneyPattern:30001" version="1" nameOfRefClass="ServiceJourneyPattern"/>
+							<TimeDemandTypeRef ref="ch:1:TimeDemandType:PAG:30001:1" version="1"/>
+							<PublicCode>30001</PublicCode>
+							<OperatorRef ref="ch:1:sboid:100019" version="1"/>
+							<LineRef ref="ch:1:slnid:1026470" version="1"/>
+							<DirectionType>outbound</DirectionType>
+							<trainNumbers>
+								<TrainNumberRef ref="ch:1:TrainNumber:30001" version="1"/>
+							</trainNumbers>
+						</ServiceJourney>
+						<ServiceJourney id="ch:blt:generated:SJ:30011:1" version="1" responsibilitySetRef="ch:1:ResponsibilitySet:BLT">
+							<validityConditions>
+								<AvailabilityConditionRef ref="generated" version="1"/>
+							</validityConditions>
+							<keyList>
+								<KeyValue>
+									<Key>SJYID</Key>
+									<Value>sjyid-3</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sjyid">sjyid-3</PrivateCode>
+							</privateCodes>
+							<TransportMode>bus</TransportMode>
+							<TypeOfProductCategoryRef ref="ch:1:TypeOfProductCategory:B" version="1"/>
+							<TypeOfServiceRef ref="ch:1:TypeOfService:1" version="1"/>
+							<ServiceAlteration>planned</ServiceAlteration>
+							<DepartureTime>17:58:00</DepartureTime>
+							<DepartureDayOffset>0</DepartureDayOffset>
+							<JourneyPatternRef ref="ch:blt:generated:JourneyPattern:30011" version="1" nameOfRefClass="ServiceJourneyPattern"/>
+							<TimeDemandTypeRef ref="ch:1:TimeDemandType:PAG:30011:1" version="1"/>
+							<PublicCode>30011</PublicCode>
+							<OperatorRef ref="ch:1:sboid:100019" version="1"/>
+							<LineRef ref="ch:1:slnid:1026470" version="1"/>
+							<DirectionType>outbound</DirectionType>
+							<trainNumbers>
+								<TrainNumberRef ref="ch:1:TrainNumber:30011" version="1"/>
+							</trainNumbers>
+						</ServiceJourney>
+					</vehicleJourneys>
+					<trainNumbers>
+						<TrainNumber id="ch:1:TrainNumber:29013" version="1">
+							<ForAdvertisement>29013</ForAdvertisement>
+						</TrainNumber>
+						<TrainNumber id="ch:1:TrainNumber:30001" version="1">
+							<ForAdvertisement>30001</ForAdvertisement>
+						</TrainNumber>
+						<TrainNumber id="ch:1:TrainNumber:30011" version="1">
+							<ForAdvertisement>30011</ForAdvertisement>
+						</TrainNumber>
+					</trainNumbers>
+					<typesOfService>
+						<TypeOfService id="ch:1:TypeOfService:1" version="1">
+							<Name lang="en">PublicJourney</Name>
+							<ShortName lang="en">PJ</ShortName>
+						</TypeOfService>
+					</typesOfService>
+				</TimetableFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

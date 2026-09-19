@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This fictional example assumes that between the two regular stops there is hail and ride in this Norway bus.
+ -->
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml/3.2" version="2.1" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2026-03-30T12:00:00</PublicationTimestamp>
+	<ParticipantRef>ch:PAG</ParticipantRef>
+	<dataObjects>
+		<CompositeFrame id="no:CompositeFrame:j26" version="1">
+			<ValidBetween>
+				<FromDate>2025-12-14T00:00:00</FromDate>
+				<ToDate>2026-12-10T23:59:59</ToDate>
+			</ValidBetween>
+			<frames>
+				<ResourceFrame id="no:1:ResourceFrame" version="1">
+					<responsibilitySets>
+						<ResponsibilitySet id="no:ResponsibilitySet:PAG" version="1">
+							<Name>PAG_PostAuto AG</Name>
+							<PrivateCode>PAG</PrivateCode>
+							<roles>
+								<ResponsibilityRoleAssignment id="no:ResponsibilityRoleAssignment:PAG:1" version="1">
+									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+									<ResponsibleOrganisationRef ref="no:1234" version="1"/>
+								</ResponsibilityRoleAssignment>
+								<ResponsibilityRoleAssignment id="no:ResponsibilityRoleAssignment:PAG:2" version="1">
+									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<ResponsibleOrganisationRef ref="no:1234" version="1"/>
+								</ResponsibilityRoleAssignment>
+							</roles>
+						</ResponsibilitySet>
+					</responsibilitySets>
+					<typesOfValue>
+						<ValueSet id="TypeOfProductCategory" version="1">
+							<values>
+								<TypeOfProductCategory id="no:TypeOfProductCategory:B" version="1">
+									<Name lang="de">Bus</Name>
+									<ShortName>B</ShortName>
+								</TypeOfProductCategory>
+							</values>
+						</ValueSet>
+					</typesOfValue>
+					<organisations>
+						<Operator id="no:1234" version="1">
+							<Name>Buss</Name>
+						</Operator>
+					</organisations>
+				</ResourceFrame>
+				<SiteFrame id="ch:PAG::SiteFrame:j26" version="1">
+					<stopPlaces>
+						<StopPlace id="NSR:StopPlace:54224" version="1">
+							<Name>Lauvset</Name>
+							<Centroid>
+								<Location>
+									<Longitude>17.686627</Longitude>
+									<Latitude>69.081144</Latitude>
+								</Location>
+							</Centroid>
+							<quays>
+								<Quay id="no:sloid:72178:0:535942" version="1">
+									<Centroid>
+										<Location>
+											<Longitude>17.686627</Longitude>
+											<Latitude>69.081144</Latitude>
+										</Location>
+									</Centroid>
+									<PublicCode>1</PublicCode>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="NSR:StopPlace:70231" version="1">
+							<Name>Brøstad sør</Name>
+							<Centroid>
+								<Location>
+									<Longitude>17.673385</Longitude>
+									<Latitude>69.075163</Latitude>
+									<Altitude>341</Altitude>
+								</Location>
+							</Centroid>
+							<quays>
+								<Quay id="no:sloid:72202:0:134953" version="1">
+									<Centroid>
+										<Location>
+											<Longitude>17.673385</Longitude>
+											<Latitude>69.075163</Latitude>
+											<Altitude>341</Altitude>
+										</Location>
+									</Centroid>
+									<PublicCode>1</PublicCode>
+								</Quay>
+							</quays>
+						</StopPlace>
+					</stopPlaces>
+					<flexibleStopPlaces>
+						<FlexibleStopPlace version="any" id="generated">
+							<Name>Hail and Ride Zone</Name>
+							<ShortName>Quebec H and R</ShortName>
+							<Centroid>
+								<Location>
+									<gml:pos>12354.78 2342.2</gml:pos>
+								</Location>
+							</Centroid>
+							<areas>
+								<HailAndRideArea version="any" id="mybus:HailAndRideArea">
+									<Centroid>
+										<Location>
+											<gml:pos>12345.76</gml:pos>
+											<Precision>12</Precision>
+										</Location>
+									</Centroid>
+									<TransportMode> bus</TransportMode>
+									<BoardingUse>true</BoardingUse>
+									<AlightingUse>true</AlightingUse>
+									<StartPointRef ref="gis:Point:hara_Quebec_01" versionRef="1">EXTERNAL</StartPointRef>
+									<EndPointRef ref="gis:Point:hara_Quebec_02" versionRef="1">EXTERNAL</EndPointRef>
+									<!-- should we use the two stops as the points -->
+									<!-- is there a better description for the route the bus will follow, should we model that? -->
+								</HailAndRideArea>
+							</areas>
+						</FlexibleStopPlace>
+					</flexibleStopPlaces>
+				</SiteFrame>
+				<ServiceFrame id="ch:PAG:ServiceFrame:50_119" version="1">
+					<lines>
+						<Line id="no:hailride1" version="1" responsibilitySetRef="no:ResponsibilitySet:PAG">
+							<Name>Example hailand riad</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>demandAndResponseBus</BusSubmode>
+							</TransportSubmode>
+							<PublicCode>119</PublicCode>
+							<OperatorRef ref="no:1234" version="1"/>
+							<LineType>hailAndRideSections</LineType>
+							<TypeOfProductCategoryRef ref="no:TypeOfProductCategory:B" version="1"/>
+							<TypeOfServiceRef ref="no:TypeOfService:1" version="1"/>
+						</Line>
+					</lines>
+					<scheduledStopPoints>
+						<ScheduledStopPoint id="no:sloid:72178:0:535942" version="1">
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="no:sloid:72202:0:134953" version="1">
+						</ScheduledStopPoint>
+						<ScheduledStopPoint version="1" id="mybus:SSP_021">
+							<Name>The virtual stop</Name>
+							<Location>
+								<Longitude>53.34000</Longitude>
+								<Latitude>0.34000</Latitude>
+							</Location>
+							<TimingPointStatus>timingPoint</TimingPointStatus>
+							<StopType>onstreetBus</StopType>
+							<VehicleModes>bus</VehicleModes>
+						</ScheduledStopPoint>
+					</scheduledStopPoints>
+					<stopAssignments>
+						<PassengerStopAssignment id="ch:PAG:PSA:ZWINGEN_LAUFENSTRASSE" version="1">
+							<ScheduledStopPointRef ref="no:sloid:72178:0:535942" version="1"/>
+							<StopPlaceRef ref="NSR:StopPlace:54224" version="1"/>
+							<QuayRef ref="no:sloid:72178:0:535942" version="1"/>
+						</PassengerStopAssignment>
+						<FlexibleStopAssignment version="any" id="hde:fsa_SSP_021+fsp_Quebec" order="1">
+							<Description lang="en">Assigns   Quebec  to flexibleHail and ride section</Description>
+							<ScheduledStopPointRef version="1" ref="mybus:SSP_021"/>
+							<FlexibleStopPlaceRef version="any" ref="generated"/>
+							<HailAndRideAreaRef version="any" ref="mybus:HailAndRideArea"/>
+						</FlexibleStopAssignment>
+						<PassengerStopAssignment id="ch:PAG:PSA:ZWINGEN_STRENGENFELD" version="1">
+							<ScheduledStopPointRef ref="no:sloid:72202:0:134953" version="1"/>
+							<StopPlaceRef ref="NSR:StopPlace:70231" version="1"/>
+							<QuayRef ref="no:sloid:72202:0:134953" version="1"/>
+						</PassengerStopAssignment>
+					</stopAssignments>
+					<timingLinks>
+						<TimingLink id="no:TimingLink:1" version="1">
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="no:sloid:72178:0:535942"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="mybus:SSP_021"/>
+						</TimingLink>
+						<TimingLink id="no:TimingLink:2" version="1">
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="mybus:SSP_021"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="no:sloid:72202:0:134953"/>
+						</TimingLink>
+						<!-- Do we need a TimingLink for the whole section as well -->
+					</timingLinks>
+					<journeyPatterns>
+						<ServiceJourneyPattern id="HR1" version="1">
+							<RouteView>
+								<LineRef ref="no:hailride1" version="1"/>
+							</RouteView>
+							<DirectionType>outbound</DirectionType>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="ch:PAG:JP:50_119:1" version="1">
+									<ScheduledStopPointRef ref="no:sloid:72178:0:535942" version="1"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:PAG:JP:50_119:2" version="1">
+									<ScheduledStopPointRef ref="mybus:SSP_021" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<noticeAssignments>
+										<NoticeAssignment id="ass1" version="1">
+											<NoticeRef ref="mynotice" version="1"/>
+										</NoticeAssignment>
+									</noticeAssignments>
+									<RequestStop>true</RequestStop>
+									<BoardingRequestMethod>handSignal</BoardingRequestMethod>
+									<AlightingRequestMethod>stopButton speakToDriverOnboard</AlightingRequestMethod>
+									<StopUse>access</StopUse>
+									<bookingArrangements>
+										<BookingArrangement id="this" version="1">
+											<!-- do we need something here -->
+										</BookingArrangement>
+									</bookingArrangements>
+									<Dynamic>always</Dynamic>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:PAG:JP:50_119:3" version="1">
+									<ScheduledStopPointRef ref="no:sloid:72202:0:134953" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+						</ServiceJourneyPattern>
+					</journeyPatterns>
+					<timeDemandTypes>
+						<TimeDemandType id="no:TimeDemandType:PAG:1" version="1">
+							<runTimes>
+								<JourneyRunTime id="no:JourneyRunTime:1:1" version="1">
+									<TimingLinkRef ref="no:TimingLink:1" version="1"/>
+									<RunTime>PT1M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="no:JourneyRunTime:1:2" version="1">
+									<TimingLinkRef ref="no:TimingLink:2" version="1"/>
+									<RunTime>PT2M</RunTime>
+								</JourneyRunTime>
+							</runTimes>
+						</TimeDemandType>
+					</timeDemandTypes>
+				</ServiceFrame>
+				<ServiceCalendarFrame id="ch:PAG:ServiceCalendarFrame:50_119" version="1">
+					<validityConditions>
+						<AvailabilityCondition id="generated" version="1">
+							<FromDate>2025-12-14T00:00:00</FromDate>
+							<ToDate>2026-12-10T23:59:59</ToDate>
+							<ValidDayBits>00000000001110000000000000000000000000000000000000000000000000000000000000000000000000000000000000001100000000000000000000000000000000000000000000000000000000001100000000000000000000000000000000000000000000000000000000000000000000000000000</ValidDayBits>
+						</AvailabilityCondition>
+					</validityConditions>
+				</ServiceCalendarFrame>
+				<TimetableFrame id="ch:PAG:TimetableFrame:50_119" version="1">
+					<vehicleJourneys>
+						<ServiceJourney id="ch:PAG:SJ:50_119:Special" version="1" responsibilitySetRef="no:ResponsibilitySet:PAG">
+							<validityConditions>
+								<AvailabilityConditionRef ref="generated" version="1"/>
+							</validityConditions>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>demandAndResponseBus</BusSubmode>
+							</TransportSubmode>
+							<TypeOfProductCategoryRef ref="no:TypeOfProductCategory:B" version="1"/>
+							<TypeOfServiceRef ref="no:TypeOfService:1" version="1"/>
+							<ServiceAlteration>planned</ServiceAlteration>
+							<DepartureTime>04:34:00</DepartureTime>
+							<DepartureDayOffset>0</DepartureDayOffset>
+							<JourneyPatternRef ref="HR1" version="1" nameOfRefClass="ServiceJourneyPattern"/>
+							<TimeDemandTypeRef ref="no:TimeDemandType:PAG:1" version="1"/>
+							<OperatorRef ref="no:1234" version="1"/>
+							<LineRef ref="no:hailride1" version="1"/>
+							<DirectionType>outbound</DirectionType>
+							<trainNumbers>
+								<TrainNumberRef ref="no:TrainNumber:11957" version="1"/>
+							</trainNumbers>
+						</ServiceJourney>
+					</vehicleJourneys>
+					<trainNumbers>
+						<TrainNumber id="no:TrainNumber:11957" version="1">
+							<ForAdvertisement>11957</ForAdvertisement>
+						</TrainNumber>
+					</trainNumbers>
+					<typesOfService>
+						<TypeOfService id="no:TypeOfService:1" version="1">
+							<Name lang="en">PublicJourney</Name>
+							<ShortName lang="en">PJ</ShortName>
+						</TypeOfService>
+					</typesOfService>
+					<notices>
+						<Notice id="mynotice" version="1">
+							<Text>Be aware that the bus may pass ahead of time. If you want a detailed alightingplace, talk to the driver. If you press the button the driver will stop at the next conventient place.</Text>
+						</Notice>
+					</notices>
+					<!-- Notices for Group Reservations -->
+				</TimetableFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

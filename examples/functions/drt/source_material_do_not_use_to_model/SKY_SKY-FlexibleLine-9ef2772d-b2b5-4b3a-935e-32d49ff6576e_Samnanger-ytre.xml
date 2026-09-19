@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns2="http://www.opengis.net/gml/3.2" xmlns:ns3="http://www.siri.org.uk/siri" version="2.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2026-03-12T14:19:25.33</PublicationTimestamp>
+	<ParticipantRef>Skyss__Hordaland_</ParticipantRef>
+	<dataObjects>
+		<CompositeFrame created="2026-03-12T14:19:25.33" version="1" id="SKY:CompositeFrame:1">
+			<validityConditions>
+				<AvailabilityCondition version="1" id="SKY:AvailabilityCondition:1_UTTU">
+					<FromDate>2024-11-01T00:00:00</FromDate>
+					<ToDate>2031-12-31T00:00:00</ToDate>
+				</AvailabilityCondition>
+			</validityConditions>
+			<codespaces>
+				<Codespace id="sky">
+					<Xmlns>SKY</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/sky</XmlnsUrl>
+				</Codespace>
+				<Codespace id="nsr">
+					<Xmlns>NSR</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/nsr</XmlnsUrl>
+				</Codespace>
+			</codespaces>
+			<FrameDefaults>
+				<DefaultLocale>
+					<TimeZone>Europe/Oslo</TimeZone>
+					<DefaultLanguage>no</DefaultLanguage>
+				</DefaultLocale>
+			</FrameDefaults>
+			<frames>
+				<ResourceFrame version="1" id="SKY:ResourceFrame:1">
+					<typesOfValue>
+						<Branding version="1" id="SKY:Branding:d28842f2-ba13-40e6-ba8d-dc0ebfbfa88e">
+							<Name>Skyss Bestilling</Name>
+						</Branding>
+					</typesOfValue>
+					<organisations>
+						<Operator version="8" id="SKY:Operator:SKY">
+							<Name>Skyss</Name>
+							<LegalName>VESTLAND FYLKESKOMMUNE SKYSS</LegalName>
+							<ContactDetails>
+								<Email/>
+								<Phone/>
+								<Url>https://www.skyss.no/</Url>
+							</ContactDetails>
+							<CustomerServiceContactDetails>
+								<Email/>
+								<Phone/>
+								<Url>https://www.skyss.no/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Authority version="8" id="SKY:Authority:SKY">
+							<Name>Skyss</Name>
+							<LegalName>VESTLAND FYLKESKOMMUNE SKYSS</LegalName>
+							<ContactDetails>
+								<Email/>
+								<Phone/>
+								<Url>https://www.skyss.no/</Url>
+							</ContactDetails>
+						</Authority>
+					</organisations>
+				</ResourceFrame>
+				<SiteFrame version="1" id="SKY:SiteFrame:1">
+					<flexibleStopPlaces>
+						<FlexibleStopPlace version="5" id="SKY:FlexibleStopPlace:ef2905db-b4fa-4deb-aae7-e3050be63f6a">
+							<keyList>
+								<KeyValue>
+									<Key>FlexibleStopAreaType</Key>
+									<Value>UnrestrictedRoadNetwork</Value>
+								</KeyValue>
+							</keyList>
+							<Name>Samnanger vest</Name>
+							<Description>Rolvsvåg, Hisdal korrespondanse og sentrum</Description>
+							<TransportMode>bus</TransportMode>
+							<areas>
+								<FlexibleArea version="0" id="SKY:FlexibleArea:1">
+									<keyList>
+										<KeyValue>
+											<Key>FlexibleStopAreaType</Key>
+											<Value>UnrestrictedRoadNetwork</Value>
+										</KeyValue>
+									</keyList>
+									<ns2:Polygon srsName="ESPG:4326" srsDimension="2" ns2:id="P1">
+										<ns2:exterior>
+											<ns2:LinearRing>
+												<ns2:posList>60.28918819254 5.60734494944 60.29195151429 5.62544394881 60.34105162659 5.64694079591 60.35100910531 5.65959286861 60.36474405939 5.67763178538 60.37331722964 5.68957406381 60.3765205203 5.69479141179 60.37717530261 5.7073123012 60.38647742507 5.71986295519 60.39142860583 5.70973321596 60.39517078413 5.70800378184 60.39882809561 5.7055805232 60.39827043545 5.70266118424 60.40166381962 5.69136562262 60.40677996275 5.68260020691 60.39846578591 5.66988936424 60.39553493585 5.66661706924 60.39456499427 5.66774359703 60.39505787926 5.67228733957 60.39489887209 5.67273258626 60.39503667835 5.67293643415 60.39526988761 5.67337631643 60.39569390016 5.67414342821 60.39605695652 5.67506610811 60.39638821674 5.67632673025 60.3961338153 5.67667005301 60.39601456393 5.67550060987 60.39593505483 5.67517339647 60.3958396532 5.6748568958 60.39563825678 5.67444381952 60.39480877564 5.67304370642 60.39460205929 5.67346214175 60.39413562953 5.67280768275 60.39444838732 5.66502920151 60.38985426545 5.65909295567 60.37966694481 5.64154196216 60.36622230212 5.62921085663 60.34653116699 5.61840321827 60.3247467159 5.60846699434 60.28918819254 5.60734494944</ns2:posList>
+											</ns2:LinearRing>
+										</ns2:exterior>
+									</ns2:Polygon>
+								</FlexibleArea>
+								<FlexibleArea version="0" id="SKY:FlexibleArea:2">
+									<keyList>
+										<KeyValue>
+											<Key>FlexibleStopAreaType</Key>
+											<Value>UnrestrictedPublicTransportAreas</Value>
+										</KeyValue>
+									</keyList>
+									<ns2:Polygon srsName="ESPG:4326" srsDimension="2" ns2:id="P2">
+										<ns2:exterior>
+											<ns2:LinearRing>
+												<ns2:posList>60.39431606269 5.67181272576 60.39491435593 5.67255054846 60.39607550673 5.67494272649 60.39634580869 5.67625164449 60.39628750846 5.67664324701 60.3959933557 5.67548989713 60.3956700496 5.67450820863 60.39496247373 5.67332535714 60.39480214103 5.67301422089 60.39458072613 5.67351394754 60.39397478298 5.67271033172 60.39431606269 5.67181272576</ns2:posList>
+											</ns2:LinearRing>
+										</ns2:exterior>
+									</ns2:Polygon>
+								</FlexibleArea>
+							</areas>
+						</FlexibleStopPlace>
+						<FlexibleStopPlace version="0" id="SKY:FlexibleStopPlace:d67f3892-9d44-4cea-a9d2-d3be5518626a">
+							<keyList>
+								<KeyValue>
+									<Key>FlexibleStopAreaType</Key>
+									<Value>UnrestrictedRoadNetwork</Value>
+								</KeyValue>
+							</keyList>
+							<Name>Samnanger indre</Name>
+							<TransportMode>bus</TransportMode>
+							<areas>
+								<FlexibleArea version="0" id="SKY:FlexibleArea:3">
+									<keyList>
+										<KeyValue>
+											<Key>FlexibleStopAreaType</Key>
+											<Value>UnrestrictedRoadNetwork</Value>
+										</KeyValue>
+									</keyList>
+									<ns2:Polygon srsName="ESPG:4326" srsDimension="2" ns2:id="P3">
+										<ns2:exterior>
+											<ns2:LinearRing>
+												<ns2:posList>60.39884266661939 5.705748557116093 60.39676598114226 5.707204990698524 60.3958357427184 5.707789644571478 60.39588979822503 5.708650313162735 60.39663721078449 5.7106790885989085 60.39622953348473 5.712730787564823 60.39626350678813 5.714748100514754 60.397299675507355 5.71527535276374 60.39898691792126 5.717487519805502 60.40103586850594 5.721970636133989 60.399659672624495 5.724961681519744 60.397271429997375 5.728239539553186 60.395753388036155 5.732910487141595 60.39129023938196 5.738091437020415 60.3900390080762 5.748374632310345 60.394512886479504 5.753362749427964 60.39424750373192 5.757736946964769 60.3908094507681 5.762948171121508 60.3869417960677 5.760415742430297 60.38492824770003 5.760676594410057 60.379840290027374 5.756833071644337 60.37008877917987 5.738901003968217 60.36813561156564 5.739797460231082 60.367623119327845 5.739874273211464 60.366762620408544 5.740066305662786 60.36788550942557 5.745635121865081 60.36864557990045 5.749761648125769 60.369485637170506 5.751865367395763 60.37045900978208 5.755020946300614 60.369952592277066 5.762185531420802 60.37167887506632 5.763337439353999 60.3735440838697 5.764663154597057 60.37535406317792 5.765869947028449 60.37869124916936 5.7684929986309035 60.38393153954182 5.772557486231018 60.384691437587186 5.775052218916484 60.38567123547733 5.777882781674435 60.38605881383124 5.7795094488737835 60.387837985180276 5.778278067685926 60.38940618243038 5.776820929964003 60.39095667626923 5.777033892999804 60.39684025033338 5.775246047539923 60.4019748023359 5.769932557732687 60.405133299908556 5.765422415221167 60.40440027715391 5.75667003987428 60.40260852208479 5.745126874302997 60.403310200156966 5.740433499290646 60.40496409575596 5.741422913482467 60.41032933850187 5.741778608222262 60.41372401306728 5.739799779838705 60.41601615752819 5.731427813600362 60.413561176988594 5.725567437233224 60.40965286655907 5.7210009101947605 60.40363509118933 5.7117811830268295 60.40128361939915 5.7094202565545515 60.39884266661939 5.705748557116093</ns2:posList>
+											</ns2:LinearRing>
+										</ns2:exterior>
+									</ns2:Polygon>
+								</FlexibleArea>
+							</areas>
+						</FlexibleStopPlace>
+						<FlexibleStopPlace version="1" id="SKY:FlexibleStopPlace:9363621a-cb57-4168-bfa4-0b47d9b800e2">
+							<keyList>
+								<KeyValue>
+									<Key>FlexibleStopAreaType</Key>
+									<Value>UnrestrictedRoadNetwork</Value>
+								</KeyValue>
+							</keyList>
+							<Name>Samnanger aust</Name>
+							<TransportMode>bus</TransportMode>
+							<areas>
+								<FlexibleArea version="0" id="SKY:FlexibleArea:4">
+									<keyList>
+										<KeyValue>
+											<Key>FlexibleStopAreaType</Key>
+											<Value>UnrestrictedRoadNetwork</Value>
+										</KeyValue>
+									</keyList>
+									<ns2:Polygon srsName="ESPG:4326" srsDimension="2" ns2:id="P4">
+										<ns2:exterior>
+											<ns2:LinearRing>
+												<ns2:posList>60.3699439064126 5.762255163976789 60.37059102503218 5.783302581165032 60.37185522888589 5.802642054028894 60.37590627085791 5.839928756539194 60.37975429423133 5.895653938314467 60.39243922723949 5.9154648925358515 60.405392740081766 5.919667266498408 60.41054924835868 5.9223966717920575 60.409915143719445 5.916141137495828 60.3959515126669 5.906307281889411 60.38663909645285 5.894424706363679 60.38319687725564 5.86656211547654 60.39068830033247 5.8538600519832755 60.39939238379051 5.852630820032459 60.4095104850995 5.841977476457544 60.41638899719902 5.849352868163322 60.42205256222735 5.83378259678517 60.41699585491244 5.829275412965245 60.38198188949869 5.831733876866878 60.37874170056838 5.819851301341146 60.39068830033247 5.807968725815385 60.42368380863999 5.791782805426891 60.427355511999735 5.775596885040017 60.404091145899656 5.775299606005831 60.389439991899025 5.7774157561069615 60.38597588289849 5.779880335378721 60.38385575102467 5.772782275637752 60.3699439064126 5.762255163976789</ns2:posList>
+											</ns2:LinearRing>
+										</ns2:exterior>
+									</ns2:Polygon>
+								</FlexibleArea>
+							</areas>
+						</FlexibleStopPlace>
+						<FlexibleStopPlace version="1" id="SKY:FlexibleStopPlace:bdc7b50c-1ac4-4c13-a94e-9da75624f4d0">
+							<keyList>
+								<KeyValue>
+									<Key>FlexibleStopAreaType</Key>
+									<Value>UnrestrictedRoadNetwork</Value>
+								</KeyValue>
+							</keyList>
+							<Name>Samnanger syd</Name>
+							<TransportMode>bus</TransportMode>
+							<areas>
+								<FlexibleArea version="0" id="SKY:FlexibleArea:5">
+									<keyList>
+										<KeyValue>
+											<Key>FlexibleStopAreaType</Key>
+											<Value>UnrestrictedRoadNetwork</Value>
+										</KeyValue>
+									</keyList>
+									<ns2:Polygon srsName="ESPG:4326" srsDimension="2" ns2:id="P5">
+										<ns2:exterior>
+											<ns2:LinearRing>
+												<ns2:posList>60.33476498834142 5.651448430129591 60.3319030351266 5.658265081028901 60.33028909216557 5.696934717607547 60.33924910373682 5.696916557262313 60.34774130141517 5.694881292395877 60.36476488135489 5.701437196133185 60.36674566134329 5.739910252768781 60.368085130378184 5.739654162505357 60.370050918084694 5.738778064232983 60.36861422057356 5.6924228284933065 60.34470044108235 5.675213581181083 60.33476498834142 5.651448430129591</ns2:posList>
+											</ns2:LinearRing>
+										</ns2:exterior>
+									</ns2:Polygon>
+								</FlexibleArea>
+							</areas>
+						</FlexibleStopPlace>
+					</flexibleStopPlaces>
+				</SiteFrame>
+				<ServiceFrame version="1" id="SKY:ServiceFrame:1">
+					<Network version="3" id="SKY:Network:1c17fd80-dc8c-41f4-9be7-6b6b4a9a0683">
+						<Name>Skyss</Name>
+						<Description>Bestillings og servicetilbud fra Skyss</Description>
+						<AuthorityRef ref="SKY:Authority:SKY" version="8"/>
+					</Network>
+					<routePoints>
+						<RoutePoint version="0" id="SKY:RoutePoint:d67f3892-9d44-4cea-a9d2-d3be5518626a">
+							<projections>
+								<PointProjection version="0" id="SKY:PointProjection:d67f3892-9d44-4cea-a9d2-d3be5518626a">
+									<ProjectToPointRef ref="SKY:ScheduledStopPoint:d67f3892-9d44-4cea-a9d2-d3be5518626a" version="0"/>
+								</PointProjection>
+							</projections>
+						</RoutePoint>
+						<RoutePoint version="1" id="SKY:RoutePoint:9363621a-cb57-4168-bfa4-0b47d9b800e2">
+							<projections>
+								<PointProjection version="1" id="SKY:PointProjection:9363621a-cb57-4168-bfa4-0b47d9b800e2">
+									<ProjectToPointRef ref="SKY:ScheduledStopPoint:9363621a-cb57-4168-bfa4-0b47d9b800e2" version="1"/>
+								</PointProjection>
+							</projections>
+						</RoutePoint>
+					</routePoints>
+					<routes>
+						<Route version="0" id="SKY:Route:98409efe-a2b3-4cc5-83b7-b9f90d5e5263">
+							<Name>Samnanger ytre</Name>
+							<FlexibleLineRef ref="SKY:FlexibleLine:9ef2772d-b2b5-4b3a-935e-32d49ff6576e" version="2"/>
+							<pointsInSequence>
+								<PointOnRoute order="1" version="2" id="SKY:PointOnRoute:a096de70-2695-457a-a670-792befaa73e4">
+									<RoutePointRef ref="SKY:RoutePoint:9363621a-cb57-4168-bfa4-0b47d9b800e2"/>
+								</PointOnRoute>
+								<PointOnRoute order="2" version="0" id="SKY:PointOnRoute:23c8acd5-f0a7-47ea-99aa-b47abf6fb737">
+									<RoutePointRef ref="SKY:RoutePoint:d67f3892-9d44-4cea-a9d2-d3be5518626a"/>
+								</PointOnRoute>
+							</pointsInSequence>
+						</Route>
+					</routes>
+					<lines>
+						<Line version="2" id="SKY:FlexibleLine:9ef2772d-b2b5-4b3a-935e-32d49ff6576e">
+							<BrandingRef ref="SKY:Branding:d28842f2-ba13-40e6-ba8d-dc0ebfbfa88e"/>
+							<Name>Samnanger ytre</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>localBus</BusSubmode>
+							</TransportSubmode>
+							<PublicCode>BE</PublicCode>
+							<OperatorRef ref="SKY:Operator:SKY" version="8"/>
+							<LineType>mixedFlexible</LineType>
+							<RepresentedByGroupRef ref="SKY:Network:1c17fd80-dc8c-41f4-9be7-6b6b4a9a0683"/>
+							<bookingArrangements>
+								<BookingArrangement id="generated" version="1">
+									<BookingContact>
+										<Phone>+47 55 55 90 99</Phone>
+										<Url>https://bestilling.skyss.no/</Url>
+									</BookingContact>
+									<BookingMethods>callOffice online</BookingMethods>
+									<BookingAccess>public</BookingAccess>
+									<BuyWhen>onReservation beforeBoarding</BuyWhen>
+									<MinimumBookingPeriod>PT30M</MinimumBookingPeriod>
+									<BookingNote>Du kan også bestille i appen Skyss Bestilling, der du får full oversikt over reisa di.</BookingNote>
+								</BookingArrangement>
+							</bookingArrangements>
+						</Line>
+					</lines>
+					<destinationDisplays>
+						<DestinationDisplay version="0" id="SKY:DestinationDisplay:c78750fa-0bca-4deb-a8d0-3e3df74ad619">
+							<FrontText>Samnanger</FrontText>
+						</DestinationDisplay>
+						<DestinationDisplay version="0" id="SKY:DestinationDisplay:39d44c95-7b6a-4f19-af78-a2c0a553430a">
+							<FrontText>Samnanger</FrontText>
+						</DestinationDisplay>
+					</destinationDisplays>
+					<scheduledStopPoints>
+						<ScheduledStopPoint version="1" id="SKY:ScheduledStopPoint:bdc7b50c-1ac4-4c13-a94e-9da75624f4d0"/>
+						<ScheduledStopPoint version="0" id="SKY:ScheduledStopPoint:d67f3892-9d44-4cea-a9d2-d3be5518626a"/>
+						<ScheduledStopPoint version="5" id="SKY:ScheduledStopPoint:ef2905db-b4fa-4deb-aae7-e3050be63f6a"/>
+						<ScheduledStopPoint version="1" id="SKY:ScheduledStopPoint:9363621a-cb57-4168-bfa4-0b47d9b800e2"/>
+					</scheduledStopPoints>
+					<stopAssignments>
+						<FlexibleStopAssignment version="5" id="SKY:FlexibleStopAssignment:ef2905db-b4fa-4deb-aae7-e3050be63f6a">
+							<ScheduledStopPointRef ref="SKY:ScheduledStopPoint:ef2905db-b4fa-4deb-aae7-e3050be63f6a" version="5"/>
+							<FlexibleStopPlaceRef ref="SKY:FlexibleStopPlace:ef2905db-b4fa-4deb-aae7-e3050be63f6a" version="5"/>
+						</FlexibleStopAssignment>
+						<FlexibleStopAssignment version="0" id="SKY:FlexibleStopAssignment:d67f3892-9d44-4cea-a9d2-d3be5518626a">
+							<ScheduledStopPointRef ref="SKY:ScheduledStopPoint:d67f3892-9d44-4cea-a9d2-d3be5518626a" version="0"/>
+							<FlexibleStopPlaceRef ref="SKY:FlexibleStopPlace:d67f3892-9d44-4cea-a9d2-d3be5518626a" version="0"/>
+						</FlexibleStopAssignment>
+						<FlexibleStopAssignment version="1" id="SKY:FlexibleStopAssignment:9363621a-cb57-4168-bfa4-0b47d9b800e2">
+							<ScheduledStopPointRef ref="SKY:ScheduledStopPoint:9363621a-cb57-4168-bfa4-0b47d9b800e2" version="1"/>
+							<FlexibleStopPlaceRef ref="SKY:FlexibleStopPlace:9363621a-cb57-4168-bfa4-0b47d9b800e2" version="1"/>
+						</FlexibleStopAssignment>
+						<FlexibleStopAssignment version="1" id="SKY:FlexibleStopAssignment:bdc7b50c-1ac4-4c13-a94e-9da75624f4d0">
+							<ScheduledStopPointRef ref="SKY:ScheduledStopPoint:bdc7b50c-1ac4-4c13-a94e-9da75624f4d0" version="1"/>
+							<FlexibleStopPlaceRef ref="SKY:FlexibleStopPlace:bdc7b50c-1ac4-4c13-a94e-9da75624f4d0" version="1"/>
+						</FlexibleStopAssignment>
+					</stopAssignments>
+					<journeyPatterns>
+						<JourneyPattern version="0" id="SKY:JourneyPattern:98409efe-a2b3-4cc5-83b7-b9f90d5e5263">
+							<Name>Samnanger ytre</Name>
+							<RouteRef ref="SKY:Route:98409efe-a2b3-4cc5-83b7-b9f90d5e5263" version="0"/>
+							<pointsInSequence>
+								<StopPointInJourneyPattern order="1" version="2" id="SKY:StopPointInJourneyPattern:a096de70-2695-457a-a670-792befaa73e4">
+									<ScheduledStopPointRef ref="SKY:ScheduledStopPoint:9363621a-cb57-4168-bfa4-0b47d9b800e2"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<DestinationDisplayRef ref="SKY:DestinationDisplay:c78750fa-0bca-4deb-a8d0-3e3df74ad619"/>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern order="2" version="2" id="SKY:StopPointInJourneyPattern:85d93bb2-d16e-48f4-a2f2-fbf898e00fb0">
+									<ScheduledStopPointRef ref="SKY:ScheduledStopPoint:bdc7b50c-1ac4-4c13-a94e-9da75624f4d0"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<DestinationDisplayRef ref="SKY:DestinationDisplay:39d44c95-7b6a-4f19-af78-a2c0a553430a"/>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern order="3" version="0" id="SKY:StopPointInJourneyPattern:6f2dd97b-f81b-4ea9-b35f-a377cf7c8f89">
+									<ScheduledStopPointRef ref="SKY:ScheduledStopPoint:ef2905db-b4fa-4deb-aae7-e3050be63f6a"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern order="4" version="0" id="SKY:StopPointInJourneyPattern:23c8acd5-f0a7-47ea-99aa-b47abf6fb737">
+									<ScheduledStopPointRef ref="SKY:ScheduledStopPoint:d67f3892-9d44-4cea-a9d2-d3be5518626a"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+						</JourneyPattern>
+					</journeyPatterns>
+				</ServiceFrame>
+				<ServiceCalendarFrame version="1" id="SKY:ServiceCalendarFrame:1">
+					<dayTypes>
+						<DayType version="59" id="SKY:DayType:6c1c36c8-e13d-49cc-9575-6cfc418273ca">
+							<properties>
+								<PropertyOfDay>
+									<DaysOfWeek>Wednesday Monday Tuesday Thursday Friday</DaysOfWeek>
+								</PropertyOfDay>
+							</properties>
+						</DayType>
+						<DayType version="0" id="SKY:DayType:94953808-d16a-418c-876f-bc285ac8dd81">
+							<properties>
+								<PropertyOfDay>
+									<DaysOfWeek>Monday Tuesday Thursday Friday</DaysOfWeek>
+								</PropertyOfDay>
+							</properties>
+						</DayType>
+						<DayType version="0" id="SKY:DayType:7f9ec00f-c9ef-4bd8-b171-f51ed68e8c17">
+							<properties>
+								<PropertyOfDay>
+									<DaysOfWeek>Wednesday</DaysOfWeek>
+								</PropertyOfDay>
+							</properties>
+						</DayType>
+					</dayTypes>
+					<operatingDays>
+						<OperatingDay version="0" id="SKY:OperatingDay:2024-11-01">
+							<CalendarDate>2024-11-01</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="SKY:OperatingDay:2025-06-23">
+							<CalendarDate>2025-06-23</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="SKY:OperatingDay:2025-09-11">
+							<CalendarDate>2025-09-11</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="SKY:OperatingDay:2029-12-31">
+							<CalendarDate>2029-12-31</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="SKY:OperatingDay:2030-12-31">
+							<CalendarDate>2030-12-31</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="SKY:OperatingDay:2031-12-31">
+							<CalendarDate>2031-12-31</CalendarDate>
+						</OperatingDay>
+					</operatingDays>
+					<operatingPeriods>
+						<OperatingPeriod version="0" id="SKY:OperatingPeriod:1">
+							<FromOperatingDayRef ref="SKY:OperatingDay:2024-11-01" version="0"/>
+							<ToOperatingDayRef ref="SKY:OperatingDay:2029-12-31" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="SKY:OperatingPeriod:2">
+							<FromOperatingDayRef ref="SKY:OperatingDay:2025-09-11" version="0"/>
+							<ToOperatingDayRef ref="SKY:OperatingDay:2031-12-31" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="SKY:OperatingPeriod:3">
+							<FromOperatingDayRef ref="SKY:OperatingDay:2025-06-23" version="0"/>
+							<ToOperatingDayRef ref="SKY:OperatingDay:2030-12-31" version="0"/>
+						</OperatingPeriod>
+					</operatingPeriods>
+					<dayTypeAssignments>
+						<DayTypeAssignment order="1" version="0" id="SKY:DayTypeAssignment:1">
+							<OperatingPeriodRef ref="SKY:OperatingPeriod:1" version="0"/>
+							<DayTypeRef ref="SKY:DayType:6c1c36c8-e13d-49cc-9575-6cfc418273ca" version="59"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="2" version="0" id="SKY:DayTypeAssignment:2">
+							<OperatingPeriodRef ref="SKY:OperatingPeriod:2" version="0"/>
+							<DayTypeRef ref="SKY:DayType:94953808-d16a-418c-876f-bc285ac8dd81" version="0"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="3" version="0" id="SKY:DayTypeAssignment:3">
+							<OperatingPeriodRef ref="SKY:OperatingPeriod:3" version="0"/>
+							<DayTypeRef ref="SKY:DayType:7f9ec00f-c9ef-4bd8-b171-f51ed68e8c17" version="0"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+					</dayTypeAssignments>
+				</ServiceCalendarFrame>
+				<TimetableFrame version="1" id="SKY:TimetableFrame:1">
+					<vehicleJourneys>
+						<ServiceJourney version="3" id="SKY:ServiceJourney:3ba9b5bd-cc54-4c28-a298-00e745ea67bc">
+							<Name>Samnanger_ytre_OpningstidEttermiddag</Name>
+							<PrivateCode>45c014c4-38ca-42f5-98c2-792b3fb28d99</PrivateCode>
+							<dayTypes>
+								<DayTypeRef ref="SKY:DayType:6c1c36c8-e13d-49cc-9575-6cfc418273ca" version="59"/>
+							</dayTypes>
+							<JourneyPatternRef ref="SKY:JourneyPattern:98409efe-a2b3-4cc5-83b7-b9f90d5e5263" version="0"/>
+							<passingTimes>
+								<TimetabledPassingTime version="0" id="SKY:TimetabledPassingTime:6fced6f2-84c2-40a4-9814-91daf9b30929">
+									<StopPointInJourneyPatternRef ref="SKY:StopPointInJourneyPattern:a096de70-2695-457a-a670-792befaa73e4" version="2"/>
+									<LatestArrivalTime>22:00:00</LatestArrivalTime>
+									<EarliestDepartureTime>16:00:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="0" id="SKY:TimetabledPassingTime:678b4bc0-9ca8-44da-b8a0-e5ba39e4f924">
+									<StopPointInJourneyPatternRef ref="SKY:StopPointInJourneyPattern:85d93bb2-d16e-48f4-a2f2-fbf898e00fb0" version="2"/>
+									<LatestArrivalTime>22:00:00</LatestArrivalTime>
+									<EarliestDepartureTime>16:00:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="0" id="SKY:TimetabledPassingTime:5a4514a2-a72e-4428-8860-c267a14057f4">
+									<StopPointInJourneyPatternRef ref="SKY:StopPointInJourneyPattern:6f2dd97b-f81b-4ea9-b35f-a377cf7c8f89" version="0"/>
+									<LatestArrivalTime>22:00:00</LatestArrivalTime>
+									<EarliestDepartureTime>16:00:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="0" id="SKY:TimetabledPassingTime:9b4ea242-9e42-46b7-a23f-985a58aada14">
+									<StopPointInJourneyPatternRef ref="SKY:StopPointInJourneyPattern:23c8acd5-f0a7-47ea-99aa-b47abf6fb737" version="0"/>
+									<LatestArrivalTime>22:00:00</LatestArrivalTime>
+									<EarliestDepartureTime>16:00:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+							</passingTimes>
+						</ServiceJourney>
+						<ServiceJourney version="4" id="SKY:ServiceJourney:6dd64a06-6f0a-4ee9-8519-8a3560f0ee2d">
+							<Name>Samnanager_ytre_Opningstid_OnsdagFormiddag</Name>
+							<PrivateCode>45c014c4-38ca-42f5-98c2-792b3fb28d99</PrivateCode>
+							<dayTypes>
+								<DayTypeRef ref="SKY:DayType:7f9ec00f-c9ef-4bd8-b171-f51ed68e8c17" version="0"/>
+							</dayTypes>
+							<JourneyPatternRef ref="SKY:JourneyPattern:98409efe-a2b3-4cc5-83b7-b9f90d5e5263" version="0"/>
+							<passingTimes>
+								<TimetabledPassingTime version="0" id="SKY:TimetabledPassingTime:2a983e66-d286-4c26-a647-92e0a0f5a6c3">
+									<StopPointInJourneyPatternRef ref="SKY:StopPointInJourneyPattern:a096de70-2695-457a-a670-792befaa73e4" version="2"/>
+									<LatestArrivalTime>12:15:00</LatestArrivalTime>
+									<EarliestDepartureTime>09:00:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="0" id="SKY:TimetabledPassingTime:759c93c4-ae86-4bf7-80ad-6fc54c255caf">
+									<StopPointInJourneyPatternRef ref="SKY:StopPointInJourneyPattern:85d93bb2-d16e-48f4-a2f2-fbf898e00fb0" version="2"/>
+									<LatestArrivalTime>12:15:00</LatestArrivalTime>
+									<EarliestDepartureTime>09:00:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="0" id="SKY:TimetabledPassingTime:87431c02-18ff-4428-b10f-a316bf232199">
+									<StopPointInJourneyPatternRef ref="SKY:StopPointInJourneyPattern:6f2dd97b-f81b-4ea9-b35f-a377cf7c8f89" version="0"/>
+									<LatestArrivalTime>12:15:00</LatestArrivalTime>
+									<EarliestDepartureTime>09:00:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="0" id="SKY:TimetabledPassingTime:060ec607-db86-43fb-b65e-fb96367c8ed9">
+									<StopPointInJourneyPatternRef ref="SKY:StopPointInJourneyPattern:23c8acd5-f0a7-47ea-99aa-b47abf6fb737" version="0"/>
+									<LatestArrivalTime>12:15:00</LatestArrivalTime>
+									<EarliestDepartureTime>09:00:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+							</passingTimes>
+						</ServiceJourney>
+						<ServiceJourney version="3" id="SKY:ServiceJourney:3e7a4d08-46b1-438e-92bd-9d6629842efa">
+							<Name>Samnanger_ytre_Opningstid_MTTF_Formiddag</Name>
+							<PrivateCode>45c014c4-38ca-42f5-98c2-792b3fb28d99</PrivateCode>
+							<dayTypes>
+								<DayTypeRef ref="SKY:DayType:94953808-d16a-418c-876f-bc285ac8dd81" version="0"/>
+							</dayTypes>
+							<JourneyPatternRef ref="SKY:JourneyPattern:98409efe-a2b3-4cc5-83b7-b9f90d5e5263" version="0"/>
+							<passingTimes>
+								<TimetabledPassingTime version="0" id="SKY:TimetabledPassingTime:60211edd-c394-46f6-95c2-10c71953fe22">
+									<StopPointInJourneyPatternRef ref="SKY:StopPointInJourneyPattern:a096de70-2695-457a-a670-792befaa73e4" version="2"/>
+									<LatestArrivalTime>14:00:00</LatestArrivalTime>
+									<EarliestDepartureTime>09:00:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="0" id="SKY:TimetabledPassingTime:f316f97f-679b-4c9e-8792-e60342781c5f">
+									<StopPointInJourneyPatternRef ref="SKY:StopPointInJourneyPattern:85d93bb2-d16e-48f4-a2f2-fbf898e00fb0" version="2"/>
+									<LatestArrivalTime>14:00:00</LatestArrivalTime>
+									<EarliestDepartureTime>09:00:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="0" id="SKY:TimetabledPassingTime:ac2aeacf-9b85-4e3e-811a-737cf585fe76">
+									<StopPointInJourneyPatternRef ref="SKY:StopPointInJourneyPattern:6f2dd97b-f81b-4ea9-b35f-a377cf7c8f89" version="0"/>
+									<LatestArrivalTime>14:00:00</LatestArrivalTime>
+									<EarliestDepartureTime>09:00:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="0" id="SKY:TimetabledPassingTime:1aba8c84-6654-4191-adb4-5599f42a1099">
+									<StopPointInJourneyPatternRef ref="SKY:StopPointInJourneyPattern:23c8acd5-f0a7-47ea-99aa-b47abf6fb737" version="0"/>
+									<LatestArrivalTime>14:00:00</LatestArrivalTime>
+									<EarliestDepartureTime>09:00:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+							</passingTimes>
+						</ServiceJourney>
+					</vehicleJourneys>
+				</TimetableFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

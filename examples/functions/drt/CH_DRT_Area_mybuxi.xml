@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns3="http://www.siri.org.uk/siri" version="2.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2026-04-13T09:15:19.1039738+02:00</PublicationTimestamp>
+	<ParticipantRef>SKI</ParticipantRef>
+	<Description>NeTEx Export, Version: 19.78.0.6742</Description>
+	<dataObjects>
+		<CompositeFrame id="ch:1:CompositeFrame:odv" version="prod">
+			<ValidBetween>
+				<FromDate>2025-12-14T00:00:00</FromDate>
+				<ToDate>2026-12-12T23:59:59</ToDate>
+			</ValidBetween>
+			<frames>
+				<ResourceFrame id="ch:1:ResourceFrame:1" version="any">
+					<typesOfValue>
+						<ValueSet id="ch:1:ValueSet:notices" version="any" nameOfClass="TypeOfNotice">
+							<values>
+								<TypeOfNotice id="ch:1:TypeOfNotice:10" version="any">
+									<Name>Angebot</Name>
+									<PrivateCode>10</PrivateCode>
+								</TypeOfNotice>
+								<TypeOfNotice id="ch:1:TypeOfNotice:1" version="any">
+									<Name>Allgemeiner Hinweis</Name>
+									<PrivateCode>1</PrivateCode>
+								</TypeOfNotice>
+								<TypeOfNotice id="ch:1:TypeOfNotice:2" version="any">
+									<Name>Zugname</Name>
+									<PrivateCode>2</PrivateCode>
+								</TypeOfNotice>
+							</values>
+						</ValueSet>
+						<ValueSet id="ch:1:ValueSet:TypeOfPlace" version="any" nameOfClass="TypeOfPlace">
+							<values>
+								<TypeOfPlace id="ch:1:TypeOfPlace:regularStop" version="any">
+									<Name>regular stop</Name>
+								</TypeOfPlace>
+								<TypeOfPlace id="ch:1:TypeOfPlace:drtCollectionPoint" version="any">
+									<Name>DRT collection point</Name>
+								</TypeOfPlace>
+							</values>
+						</ValueSet>
+					</typesOfValue>
+					<organisations>
+						<Operator id="ch:1:Operator:9039" version="any">
+							<PrivateCode>9039</PrivateCode>
+							<Name lang="de">mybuxi AG</Name>
+							<ShortName lang="de">mybuxi</ShortName>
+							<Description>mybuxi AG</Description>
+							<ContactDetails>
+								<Phone>+41 32 510 06 40</Phone>
+								<Url>https://mybuxi.ch/</Url>
+							</ContactDetails>
+						</Operator>
+					</organisations>
+					<vehicleTypes>
+						<VehicleType id="ch:1:VehicleType:01" version="any">
+							<Name lang="de">Bus</Name>
+							<ShortName lang="de">01</ShortName>
+							<PrivateCode>0</PrivateCode>
+							<LowFloor>false</LowFloor>
+							<HasLiftOrRamp>false</HasLiftOrRamp>
+							<HasHoist>false</HasHoist>
+						</VehicleType>
+					</vehicleTypes>
+				</ResourceFrame>
+				<SiteFrame id="ch:1:SiteFrame:1" version="any">
+					<flexibleStopPlaces>
+						<FlexibleStopPlace id="ch:1:FlexibleStopPlace:myBuxi_Gotthardregion" version="any">
+							<ShortName>31</ShortName>
+							<areas>
+								<FlexibleArea id="ch:1:FlexibleArea:myBuxi_Gotthardregion" version="any">
+									<Name lang="de">myBuxi Gotthardregion</Name>
+									<ShortName>31</ShortName>
+									<members>
+										<ScheduledStopPointRef ref="ch:1:StopPlaceCollectionPoint:2-0-Gen" version="any"/>
+										<ScheduledStopPointRef ref="ch:1:StopPlaceCollectionPoint:3-0-Gen" version="any"/>
+										<ScheduledStopPointRef ref="ch:1:StopPlaceCollectionPoint:2153-0-Gen" version="any"/>
+										<ScheduledStopPointRef ref="ch:1:StopPlaceCollectionPoint:2154-0-Gen" version="any"/>
+									</members>
+									<gml:Polygon gml:id="Area31" srsName="EPSG:4326">
+										<gml:exterior>
+											<gml:LinearRing>
+												<gml:pos>8.6314774 46.7285658</gml:pos>
+												<gml:pos>8.6423779 46.7440955</gml:pos>
+												<gml:pos>8.6427212 46.7494181</gml:pos>
+												<gml:pos>8.6424637 46.7521527</gml:pos>
+												<gml:pos>8.6409187 46.7546226</gml:pos>
+												<gml:pos>8.6371422 46.7562103</gml:pos>
+												<gml:pos>8.6335373 46.7568571</gml:pos>
+												<gml:pos>8.6278725 46.7560339</gml:pos>
+												<gml:pos>8.6231518 46.7512706</gml:pos>
+												<gml:pos>8.6036682 46.7215054</gml:pos>
+												<gml:pos>8.5985184 46.7200932</gml:pos>
+												<gml:pos>8.5930252 46.7196225</gml:pos>
+												<gml:pos>8.5699368 46.7256829</gml:pos>
+												<gml:pos>8.5425568 46.7368018</gml:pos>
+												<gml:pos>8.5116577 46.7480949</gml:pos>
+												<gml:pos>8.4804153 46.7537405</gml:pos>
+												<gml:pos>8.4625626 46.7525644</gml:pos>
+												<gml:pos>8.4574127 46.7473891</gml:pos>
+												<gml:pos>8.458786 46.7422134</gml:pos>
+												<gml:pos>8.4701157 46.7386842</gml:pos>
+												<gml:pos>8.4852219 46.7386842</gml:pos>
+												<gml:pos>8.5071945 46.7346841</gml:pos>
+												<gml:pos>8.5367203 46.7255064</gml:pos>
+												<gml:pos>8.5677052 46.7141498</gml:pos>
+												<gml:pos>8.5871887 46.7073817</gml:pos>
+												<gml:pos>8.5892487 46.7043211</gml:pos>
+												<gml:pos>8.5906219 46.6989058</gml:pos>
+												<gml:pos>8.585043 46.6758256</gml:pos>
+												<gml:pos>8.5750008 46.6698184</gml:pos>
+												<gml:pos>8.5339737 46.6607475</gml:pos>
+												<gml:pos>8.5232449 46.6547386</gml:pos>
+												<gml:pos>8.5083103 46.6532658</gml:pos>
+												<gml:pos>8.498354 46.650482</gml:pos>
+												<gml:pos>8.4978604 46.6481105</gml:pos>
+												<gml:pos>8.5004568 46.647315</gml:pos>
+												<gml:pos>8.5093403 46.6501432</gml:pos>
+												<gml:pos>8.5189533 46.6497897</gml:pos>
+												<gml:pos>8.5257339 46.6514983</gml:pos>
+												<gml:pos>8.5372353 46.6581555</gml:pos>
+												<gml:pos>8.5501099 46.6605119</gml:pos>
+												<gml:pos>8.5775757 46.6655188</gml:pos>
+												<gml:pos>8.5796356 46.657861</gml:pos>
+												<gml:pos>8.5816956 46.6504967</gml:pos>
+												<gml:pos>8.5770607 46.6398904</gml:pos>
+												<gml:pos>8.5652161 46.6237412</gml:pos>
+												<gml:pos>8.5375786 46.6164313</gml:pos>
+												<gml:pos>8.5184383 46.6102996</gml:pos>
+												<gml:pos>8.5000706 46.602575</gml:pos>
+												<gml:pos>8.4938049 46.5969725</gml:pos>
+												<gml:pos>8.4889984 46.5949673</gml:pos>
+												<gml:pos>8.4827328 46.5950852</gml:pos>
+												<gml:pos>8.475008 46.5973853</gml:pos>
+												<gml:pos>8.4617901 46.598152</gml:pos>
+												<gml:pos>8.4556961 46.5972674</gml:pos>
+												<gml:pos>8.4514046 46.5963827</gml:pos>
+												<gml:pos>8.4301186 46.589305</gml:pos>
+												<gml:pos>8.417244 46.5810465</gml:pos>
+												<gml:pos>8.4114075 46.5752648</gml:pos>
+												<gml:pos>8.4114075 46.5705446</gml:pos>
+												<gml:pos>8.4136391 46.5681843</gml:pos>
+												<gml:pos>8.4165573 46.5677123</gml:pos>
+												<gml:pos>8.4242821 46.5699545</gml:pos>
+												<gml:pos>8.4349251 46.5765628</gml:pos>
+												<gml:pos>8.4450531 46.5821084</gml:pos>
+												<gml:pos>8.4572411 46.584704</gml:pos>
+												<gml:pos>8.4701157 46.5836422</gml:pos>
+												<gml:pos>8.4783554 46.5816365</gml:pos>
+												<gml:pos>8.4819603 46.5773888</gml:pos>
+												<gml:pos>8.4819603 46.5692465</gml:pos>
+												<gml:pos>8.4831619 46.5602767</gml:pos>
+												<gml:pos>8.4860802 46.5483541</gml:pos>
+												<gml:pos>8.4919167 46.5407978</gml:pos>
+												<gml:pos>8.4996414 46.5398532</gml:pos>
+												<gml:pos>8.5066795 46.5412701</gml:pos>
+												<gml:pos>8.5109711 46.546229</gml:pos>
+												<gml:pos>8.5121727 46.5599226</gml:pos>
+												<gml:pos>8.5073662 46.5804566</gml:pos>
+												<gml:pos>8.5056496 46.5907206</gml:pos>
+												<gml:pos>8.5043621 46.5934338</gml:pos>
+												<gml:pos>8.5070229 46.5949083</gml:pos>
+												<gml:pos>8.5428143 46.608059</gml:pos>
+												<gml:pos>8.5568905 46.6118325</gml:pos>
+												<gml:pos>8.5634136 46.6104175</gml:pos>
+												<gml:pos>8.5532856 46.5891281</gml:pos>
+												<gml:pos>8.5530281 46.5674467</gml:pos>
+												<gml:pos>8.5555601 46.56128</gml:pos>
+												<gml:pos>8.5622549 46.5561749</gml:pos>
+												<gml:pos>8.5664606 46.5576799</gml:pos>
+												<gml:pos>8.5652161 46.5751468</gml:pos>
+												<gml:pos>8.5678768 46.6009238</gml:pos>
+												<gml:pos>8.5761166 46.6089434</gml:pos>
+												<gml:pos>8.5799789 46.620558</gml:pos>
+												<gml:pos>8.5917377 46.6283389</gml:pos>
+												<gml:pos>8.5979176 46.6305787</gml:pos>
+												<gml:pos>8.6033249 46.6308734</gml:pos>
+												<gml:pos>8.6107922 46.6269832</gml:pos>
+												<gml:pos>8.616972 46.6260991</gml:pos>
+												<gml:pos>8.6263275 46.6232107</gml:pos>
+												<gml:pos>8.6322498 46.6201453</gml:pos>
+												<gml:pos>8.6484718 46.6051107</gml:pos>
+												<gml:pos>8.65242 46.5991546</gml:pos>
+												<gml:pos>8.6493301 46.5918413</gml:pos>
+												<gml:pos>8.6519909 46.5887152</gml:pos>
+												<gml:pos>8.6566257 46.5860018</gml:pos>
+												<gml:pos>8.6618614 46.5859428</gml:pos>
+												<gml:pos>8.6677837 46.5946724</gml:pos>
+												<gml:pos>8.6608315 46.6077641</gml:pos>
+												<gml:pos>8.649931 46.6176103</gml:pos>
+												<gml:pos>8.6368847 46.6271011</gml:pos>
+												<gml:pos>8.624289 46.630424</gml:pos>
+												<gml:pos>8.6190319 46.6326415</gml:pos>
+												<gml:pos>8.6157703 46.6373563</gml:pos>
+												<gml:pos>8.6365414 46.6487291</gml:pos>
+												<gml:pos>8.6571407 46.6550332</gml:pos>
+												<gml:pos>8.6669254 46.6545619</gml:pos>
+												<gml:pos>8.6738777 46.6548565</gml:pos>
+												<gml:pos>8.6792421 46.6587741</gml:pos>
+												<gml:pos>8.6775255 46.6622202</gml:pos>
+												<gml:pos>8.6721611 46.6642818</gml:pos>
+												<gml:pos>8.6616039 46.6646352</gml:pos>
+												<gml:pos>8.6352539 46.6586268</gml:pos>
+												<gml:pos>8.6095047 46.6486113</gml:pos>
+												<gml:pos>8.6029816 46.6510859</gml:pos>
+												<gml:pos>8.5978317 46.653796</gml:pos>
+												<gml:pos>8.6004066 46.6838341</gml:pos>
+												<gml:pos>8.6125946 46.7078526</gml:pos>
+												<gml:pos>8.6314774 46.7285658</gml:pos>
+											</gml:LinearRing>
+										</gml:exterior>
+									</gml:Polygon>
+									<TransportMode>bus</TransportMode>
+									<BoardingUse>true</BoardingUse>
+									<AlightingUse>true</AlightingUse>
+								</FlexibleArea>
+							</areas>
+						</FlexibleStopPlace>
+					</flexibleStopPlaces>
+				</SiteFrame>
+				<ServiceFrame id="ch:1:ServiceFrame:1" version="any">
+					<validityConditions>
+						<AvailabilityCondition id="ch:1:AvailabilityCondition:14-" version="any">
+							<Description>Montag-Donnerstag ohne allgemeine Feiertage</Description>
+							<FromDate>2025-12-14T00:00:00</FromDate>
+							<ToDate>2026-12-12T23:59:59</ToDate>
+							<ValidDayBits>01111000111000011100001111000111100011110001111000111100011110001111000111100011110001111000111100011110001111000011100011110001111000111100011110001110000111100001110001111000111100011110001111000111100011110001111000111100011110001111000111100011110001111000111100011110001111000111100011110001111000111100011110001111000111100011110001111000111100011110001111000</ValidDayBits>
+							<timebands>
+								<Timeband id="ch:1:Timeband:Drt_21600_68400" version="any">
+									<StartTime>06:00:00</StartTime>
+									<EndTime>19:00:00</EndTime>
+								</Timeband>
+							</timebands>
+						</AvailabilityCondition>
+						<AvailabilityCondition id="ch:1:AvailabilityCondition:55-" version="any">
+							<Description>Freitag ohne allgemeine Feiertage</Description>
+							<FromDate>2025-12-14T00:00:00</FromDate>
+							<ToDate>2026-12-12T23:59:59</ToDate>
+							<ValidDayBits>00000100000000000000000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000000000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100</ValidDayBits>
+							<timebands>
+								<Timeband id="ch:1:Timeband:Drt_72900_99900" version="any">
+									<StartTime>20:15:00</StartTime>
+									<EndTime>03:45:00</EndTime>
+									<DayOffset>1</DayOffset>
+								</Timeband>
+							</timebands>
+						</AvailabilityCondition>
+						<AvailabilityCondition id="ch:1:AvailabilityCondition:66-" version="any">
+							<Description>Samstag ohne allgemeine Feiertage</Description>
+							<FromDate>2025-12-14T00:00:00</FromDate>
+							<ToDate>2026-12-12T23:59:59</ToDate>
+							<ValidDayBits>00000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000000000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010</ValidDayBits>
+							<timebands>
+								<Timeband id="ch:1:Timeband:Drt_25200_39600" version="any">
+									<StartTime>07:00:00</StartTime>
+									<EndTime>11:00:00</EndTime>
+								</Timeband>
+							</timebands>
+						</AvailabilityCondition>
+						<AvailabilityCondition id="ch:1:AvailabilityCondition:77+" version="any">
+							<Description>Sonntag und allgemeine Feiertage</Description>
+							<FromDate>2025-12-14T00:00:00</FromDate>
+							<ToDate>2026-12-12T23:59:59</ToDate>
+							<ValidDayBits>10000001000110100011010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000101100000100000010000001000000100000010001001000000110000010000001000000100000010000001000000100000010000001000000100000110000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000000</ValidDayBits>
+							<timebands>
+								<Timeband id="ch:1:Timeband:Drt_25200_68400" version="any">
+									<StartTime>07:00:00</StartTime>
+									<EndTime>19:00:00</EndTime>
+								</Timeband>
+							</timebands>
+						</AvailabilityCondition>
+					</validityConditions>
+					<directions>
+						<Direction id="ch:1:Direction:H" version="any">
+							<Name lang="de">Hin</Name>
+							<ShortName lang="de">H</ShortName>
+							<DirectionType>outbound</DirectionType>
+						</Direction>
+						<Direction id="ch:1:Direction:R" version="any">
+							<Name lang="de">Rück</Name>
+							<ShortName lang="de">R</ShortName>
+							<DirectionType>inbound</DirectionType>
+						</Direction>
+					</directions>
+					<lines>
+						<Line id="ch:1:FlexibleLine:myBuxi-Gotthard" version="any">
+							<ValidBetween>
+								<FromDate>2025-12-14T00:00:00</FromDate>
+							</ValidBetween>
+							<Name lang="de">myBuxi-Gotthard</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>demandAndResponseBus</BusSubmode>
+							</TransportSubmode>
+							<PublicCode>myBuxi-Gotthard</PublicCode>
+							<OperatorRef ref="ch:1:Operator:9039" version="any"/>
+							<LineType>fixedStopAreaWide</LineType>
+							<noticeAssignments>
+								<NoticeAssignment id="ch:1:NoticeAssignment:ch_1_FlexibleLine_myBuxi-Gotthard_1" version="any">
+									<NoticeRef ref="ch:1:Notice:RR" version="any"/>
+								</NoticeAssignment>
+								<NoticeAssignment id="ch:1:NoticeAssignment:ch_1_FlexibleLine_myBuxi-Gotthard_2" version="any">
+									<NoticeRef ref="ch:1:Notice:HN" version="any"/>
+								</NoticeAssignment>
+								<NoticeAssignment id="ch:1:NoticeAssignment:ch_1_FlexibleLine_myBuxi-Gotthard_3" version="any">
+									<NoticeRef ref="ch:1:Notice:VN" version="any"/>
+								</NoticeAssignment>
+								<NoticeAssignment id="ch:1:NoticeAssignment:ch_1_FlexibleLine_myBuxi-Gotthard_4" version="any">
+									<NoticeRef ref="ch:1:Notice:GOTTH" version="any"/>
+								</NoticeAssignment>
+							</noticeAssignments>
+							<bookingArrangements>
+								<BookingArrangement id="generated" version="1">
+									<BookingContact>
+										<Phone>+41 848 130 130</Phone>
+									</BookingContact>
+									<BookingMethods>mobileApp</BookingMethods>
+									<BookingAccess>public</BookingAccess>
+									<BookWhen>advanceAndDayOfTravel</BookWhen>
+									<BuyWhen>onCheckIn</BuyWhen>
+									<MinimumBookingPeriod>PT30M</MinimumBookingPeriod>
+									<MaximumBookingPeriod>PT336H</MaximumBookingPeriod>
+									<bookingUrls>
+										<BookingUrl>https://www.mybuxi.ch</BookingUrl>
+										<BookingDeepUrl>
+											<Endpoint>https://app.mybuxi.ch/booking_link</Endpoint>
+											<parameterDescriptions>
+												<KeyValue>
+													<Key>from</Key>
+													<Value>From where to go coordinates</Value>
+												</KeyValue>
+												<KeyValue>
+													<Key>to</Key>
+													<Value>Destination as coordinate</Value>
+												</KeyValue>
+												<KeyValue>
+													<Key>when</Key>
+													<Value>datetime of start</Value>
+												</KeyValue>
+												<KeyValue>
+													<Key>numPassengers</Key>
+													<Value>number of passengers</Value>
+												</KeyValue>
+											</parameterDescriptions>
+										</BookingDeepUrl>
+										<BookingService>
+											<Endpoint>https://app.mybuxi.ch</Endpoint>
+											<EndpointVersion>1.1</EndpointVersion>
+											<BookingServiceType>tomp</BookingServiceType>
+											<SupportedSteps>full</SupportedSteps>
+										</BookingService>
+									</bookingUrls>
+								</BookingArrangement>
+							</bookingArrangements>
+						</Line>
+					</lines>
+					<scheduledStopPoints>
+						<ScheduledStopPoint id="ch:1:DrtArea:myBuxi_Gotthardregion" version="any">
+							<StopType>onstreetBus</StopType>
+							<VehicleModes>bus</VehicleModes>
+						</ScheduledStopPoint>
+						<!-- collection points -->
+						<ScheduledStopPoint id="ch:1:StopPlaceCollectionPoint:2-0-Gen" version="any"/>
+						<ScheduledStopPoint id="ch:1:StopPlaceCollectionPoint:3-0-Gen" version="any"/>
+						<ScheduledStopPoint id="ch:1:StopPlaceCollectionPoint:2153-0-Gen" version="any"/>
+						<ScheduledStopPoint id="ch:1:StopPlaceCollectionPoint:2154-0-Gen" version="any"/>
+					</scheduledStopPoints>
+					<serviceLinks>
+						<ServiceLink id="ch:1:ServiceLink:Innerhalb_Gotthard_1" version="any">
+							<FromPointRef ref="ch:1:DrtArea:myBuxi_Gotthardregion" version="any"/>
+							<ToPointRef ref="ch:1:DrtArea:myBuxi_Gotthardregion" version="any"/>
+						</ServiceLink>
+					</serviceLinks>
+					<stopAssignments>
+						<FlexibleStopAssignment id="ch:1:FlexibleStopAssignment:10" version="any">
+							<ScheduledStopPointRef ref="ch:1:DrtArea:myBuxi_Gotthardregion" version="any"/>
+							<FlexibleStopPlaceRef ref="ch:1:FlexibleStopPlace:myBuxi_Gotthardregion" version="any"/>
+							<FlexibleAreaRef ref="ch:1:FlexibleArea:myBuxi_Gotthardregion" version="any"/>
+						</FlexibleStopAssignment>
+					</stopAssignments>
+					<timingLinks>
+						<TimingLink id="ch:1:TimingLink:Innerhalb_Gotthard_1" version="any">
+							<FromPointRef ref="ch:1:DrtArea:myBuxi_Gotthardregion" version="any"/>
+							<ToPointRef ref="ch:1:DrtArea:myBuxi_Gotthardregion" version="any"/>
+						</TimingLink>
+					</timingLinks>
+					<journeyPatterns>
+						<ServiceJourneyPattern id="ch:1:ServiceJourneyPattern:Innerhalb_Gotthard" version="any">
+							<Name lang="de">2</Name>
+							<ShortName lang="de">2</ShortName>
+							<PrivateCode>2</PrivateCode>
+							<DirectionType>inbound</DirectionType>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="ch:1:StopPointInJourneyPattern:Innerhalb_Gotthard_1" version="any">
+									<ScheduledStopPointRef ref="ch:1:DrtArea:myBuxi_Gotthardregion" version="any"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<RequestStop>false</RequestStop>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:1:StopPointInJourneyPattern:Innerhalb_Gotthard_2" version="any">
+									<ScheduledStopPointRef ref="ch:1:DrtArea:myBuxi_Gotthardregion" version="any"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+									<RequestStop>false</RequestStop>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+							<linksInSequence>
+								<ServiceLinkInJourneyPattern id="ch:1:ServiceLinkInJourneyPattern:Innerhalb_Gotthard_1" version="any">
+									<TimingLinkRef ref="ch:1:TimingLink:Innerhalb_Gotthard_1" version="any"/>
+									<ServiceLinkRef ref="ch:1:ServiceLink:Innerhalb_Gotthard_1" version="any"/>
+								</ServiceLinkInJourneyPattern>
+							</linksInSequence>
+							<ServiceJourneyPatternType>passenger</ServiceJourneyPatternType>
+						</ServiceJourneyPattern>
+					</journeyPatterns>
+				</ServiceFrame>
+				<ServiceCalendarFrame id="ch:1:ServiceCalendarFrame:1" version="any">
+					<ServiceCalendar id="ch:1:ServiceCalendar:1:j26" version="any">
+						<Name>Fahrplan 2026</Name>
+						<FromDate>2025-12-14</FromDate>
+						<ToDate>2026-12-12</ToDate>
+					</ServiceCalendar>
+				</ServiceCalendarFrame>
+				<TimetableFrame id="ch:1:TimetableFrame:1" version="any">
+					<timeDemandTypes>
+						<TimeDemandType id="ch:1:TimeDemandType:NFZ" version="any">
+							<Name lang="de">Normalfahrzeit</Name>
+							<PrivateCode>1</PrivateCode>
+						</TimeDemandType>
+					</timeDemandTypes>
+					<vehicleJourneys>
+						<ServiceJourney id="ch:1:ServiceJourney:myBuxi-Gotthard_1_14-_2_21600_90000" version="any">
+							<validityConditions>
+								<AvailabilityConditionRef ref="ch:1:AvailabilityCondition:14-" version="any"/>
+							</validityConditions>
+							<PrivateCode>1</PrivateCode>
+							<TypeOfServiceRef ref="ch:1:TypeOfService:1" version="any"/>
+							<DepartureTime>06:00:00</DepartureTime>
+							<ServiceJourneyPatternRef ref="ch:1:ServiceJourneyPattern:Innerhalb_Gotthard" version="any"/>
+							<TimeDemandTypeRef ref="ch:1:TimeDemandType:NFZ" version="any"/>
+							<VehicleTypeRef ref="ch:1:VehicleType:01" version="any"/>
+							<LineRef ref="ch:1:FlexibleLine:myBuxi-Gotthard" version="any"/>
+						</ServiceJourney>
+						<ServiceJourney id="ch:1:ServiceJourney:myBuxi-Gotthard_38_66-_2_21600_93600" version="any">
+							<validityConditions>
+								<AvailabilityConditionRef ref="ch:1:AvailabilityCondition:66-" version="any"/>
+							</validityConditions>
+							<PrivateCode>38</PrivateCode>
+							<TypeOfServiceRef ref="ch:1:TypeOfService:1" version="any"/>
+							<DepartureTime>06:00:00</DepartureTime>
+							<ServiceJourneyPatternRef ref="ch:1:ServiceJourneyPattern:Innerhalb_Gotthard" version="any"/>
+							<TimeDemandTypeRef ref="ch:1:TimeDemandType:NFZ" version="any"/>
+							<VehicleTypeRef ref="ch:1:VehicleType:01" version="any"/>
+							<LineRef ref="ch:1:FlexibleLine:myBuxi-Gotthard" version="any"/>
+						</ServiceJourney>
+						<ServiceJourney id="ch:1:ServiceJourney:myBuxi-Gotthard_39_77+_2_21600_90000" version="any">
+							<validityConditions>
+								<AvailabilityConditionRef ref="ch:1:AvailabilityCondition:77+" version="any"/>
+							</validityConditions>
+							<PrivateCode>39</PrivateCode>
+							<TypeOfServiceRef ref="ch:1:TypeOfService:1" version="any"/>
+							<DepartureTime>06:00:00</DepartureTime>
+							<ServiceJourneyPatternRef ref="ch:1:ServiceJourneyPattern:Innerhalb_Gotthard" version="any"/>
+							<TimeDemandTypeRef ref="ch:1:TimeDemandType:NFZ" version="any"/>
+							<VehicleTypeRef ref="ch:1:VehicleType:01" version="any"/>
+							<LineRef ref="ch:1:FlexibleLine:myBuxi-Gotthard" version="any"/>
+						</ServiceJourney>
+						<ServiceJourney id="ch:1:ServiceJourney:myBuxi-Gotthard_40_55-_2_21600_93600" version="any">
+							<validityConditions>
+								<AvailabilityConditionRef ref="ch:1:AvailabilityCondition:55-" version="any"/>
+							</validityConditions>
+							<PrivateCode>40</PrivateCode>
+							<TypeOfServiceRef ref="ch:1:TypeOfService:1" version="any"/>
+							<DepartureTime>06:00:00</DepartureTime>
+							<ServiceJourneyPatternRef ref="ch:1:ServiceJourneyPattern:Innerhalb_Gotthard" version="any"/>
+							<TimeDemandTypeRef ref="ch:1:TimeDemandType:NFZ" version="any"/>
+							<VehicleTypeRef ref="ch:1:VehicleType:01" version="any"/>
+							<LineRef ref="ch:1:FlexibleLine:myBuxi-Gotthard" version="any"/>
+						</ServiceJourney>
+					</vehicleJourneys>
+					<typesOfService>
+						<TypeOfService id="ch:1:TypeOfService:1" version="any">
+							<Name lang="en">PublicJourney</Name>
+							<ShortName lang="en">N</ShortName>
+							<PrivateCode>1</PrivateCode>
+						</TypeOfService>
+					</typesOfService>
+					<notices>
+						<Notice id="ch:1:Notice:BL" version="any">
+							<ShortName lang="de">BL</ShortName>
+							<Text lang="de">GEPÄCK: Transport eingeschränkt</Text>
+							<PublicCode>GEPÄCK: Transport eingeschränkt</PublicCode>
+							<ShortCode>BL</ShortCode>
+							<PrivateCode>BL</PrivateCode>
+							<TypeOfNoticeRef ref="ch:1:TypeOfNotice:10" version="any"/>
+							<CanBeAdvertised>true</CanBeAdvertised>
+						</Notice>
+						<Notice id="ch:1:Notice:GOTTH" version="any">
+							<alternativeTexts>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="en">In the Gotthard region, the mybuxi runs to some stops on a seasonal basis. The latest information can be found in the mybuxi app.</Text>
+								</AlternativeText>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="fr">Dans la région du Gothard, le mybuxi ne dessert certains points d'arrêt que de manière saisonnière. Les informations actuelles sont disponibles dans l'application mybuxi.</Text>
+								</AlternativeText>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="it">Nella regione del Gottardo, il mybuxi raggiunge solo alcune fermate su base stagionale. Le informazioni più aggiornate sono disponibili nell'app mybuxi.</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<ShortName lang="de">GOTTH</ShortName>
+							<Text lang="de">In der Gotthardregion fährt das mybuxi einige Haltepunkte nur saisonal an. Die aktuellen Informationen sind in der mybuxi App zu finden.</Text>
+							<PublicCode>In der Gotthardregion fährt das mybuxi einige Haltepunkte nur saisonal an. Die aktuellen Informationen sind in der mybuxi App zu finden.</PublicCode>
+							<ShortCode>GOTTH</ShortCode>
+							<PrivateCode>GOTTH</PrivateCode>
+							<TypeOfNoticeRef ref="ch:1:TypeOfNotice:1" version="any"/>
+							<CanBeAdvertised>true</CanBeAdvertised>
+						</Notice>
+						<Notice id="ch:1:Notice:HN" version="any">
+							<alternativeTexts>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="en">Dogs are not permitted on board</Text>
+								</AlternativeText>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="fr">Les chiens ne sont pas admis à bord</Text>
+								</AlternativeText>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="it">I cani non sono ammessi a bordo</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<ShortName lang="de">HN</ShortName>
+							<Text lang="de">Hunde können nicht mitgeführt werden</Text>
+							<PublicCode>Hunde können nicht mitgeführt werden</PublicCode>
+							<ShortCode>HN</ShortCode>
+							<PrivateCode>HN</PrivateCode>
+							<TypeOfNoticeRef ref="ch:1:TypeOfNotice:1" version="any"/>
+							<CanBeAdvertised>true</CanBeAdvertised>
+						</Notice>
+						<Notice id="ch:1:Notice:PL" version="any">
+							<ShortName lang="de">PL</ShortName>
+							<Text lang="de">Beschränktes Platzangebot</Text>
+							<PublicCode>Beschränktes Platzangebot</PublicCode>
+							<ShortCode>PL</ShortCode>
+							<PrivateCode>PL</PrivateCode>
+							<TypeOfNoticeRef ref="ch:1:TypeOfNotice:10" version="any"/>
+							<CanBeAdvertised>true</CanBeAdvertised>
+						</Notice>
+						<Notice id="ch:1:Notice:RR" version="any">
+							<alternativeTexts>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="en">Mandatory place reservation</Text>
+								</AlternativeText>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="fr">Réservation de place obligatoire</Text>
+								</AlternativeText>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="it">Prenotazione del posto obbligatoria</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<ShortName lang="de">RR</ShortName>
+							<Text lang="de">Platzreservierung obligatorisch</Text>
+							<PublicCode>Platzreservierung obligatorisch</PublicCode>
+							<ShortCode>RR</ShortCode>
+							<PrivateCode>RR</PrivateCode>
+							<TypeOfNoticeRef ref="ch:1:TypeOfNotice:10" version="any"/>
+							<CanBeAdvertised>true</CanBeAdvertised>
+						</Notice>
+						<Notice id="ch:1:Notice:Z" version="any">
+							<alternativeTexts>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="en">Subject to surcharge</Text>
+								</AlternativeText>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="fr">Avec supplément</Text>
+								</AlternativeText>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="it">Soggetto a supplemento</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<ShortName lang="de">Z</ShortName>
+							<Text lang="de">Zuschlagspflichtig</Text>
+							<PublicCode>Zuschlagspflichtig</PublicCode>
+							<ShortCode>Z</ShortCode>
+							<PrivateCode>Z</PrivateCode>
+							<TypeOfNoticeRef ref="ch:1:TypeOfNotice:10" version="any"/>
+							<CanBeAdvertised>true</CanBeAdvertised>
+						</Notice>
+						<Notice id="ch:1:Notice:VN" version="any">
+							<alternativeTexts>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="en">BICYCLES: Carriage not possible</Text>
+								</AlternativeText>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="fr">VELOS: Pas de transport possible</Text>
+								</AlternativeText>
+								<AlternativeText attributeName="alternativetexts">
+									<Text lang="it">BICICLETTE: trasporto non possibile</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<ShortName lang="de">VN</ShortName>
+							<Text lang="de">VELOS: Keine Beförderung möglich</Text>
+							<PublicCode>VELOS: Keine Beförderung möglich</PublicCode>
+							<ShortCode>VN</ShortCode>
+							<PrivateCode>VN</PrivateCode>
+							<TypeOfNoticeRef ref="ch:1:TypeOfNotice:1" version="any"/>
+							<CanBeAdvertised>true</CanBeAdvertised>
+						</Notice>
+					</notices>
+				</TimetableFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

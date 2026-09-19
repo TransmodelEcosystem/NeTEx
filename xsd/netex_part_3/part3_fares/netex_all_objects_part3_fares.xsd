@@ -5,4 +5,5 @@
 	<xsd:include schemaLocation="netex_all_objects_part3_fares_FS.xsd"/>
 	<xsd:include schemaLocation="netex_all_objects_part3_fares_AR.xsd"/>
 	<xsd:include schemaLocation="netex_all_objects_part3_fares_SD.xsd"/>
+	<xsd:include schemaLocation="netex_extendedBookingArrangements_version.xsd"/>
 </xsd:schema>

@@ -1,0 +1,1288 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns2="http://www.opengis.net/gml/3.2" xmlns:ns3="http://www.siri.org.uk/siri" version="2.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2025-11-25T12:11:19.555</PublicationTimestamp>
+	<ParticipantRef>Kolumbus</ParticipantRef>
+	<dataObjects>
+		<CompositeFrame created="2025-11-25T12:11:19.555" version="1" id="KOL:CompositeFrame:1">
+			<validityConditions>
+				<AvailabilityCondition version="1" id="KOL:AvailabilityCondition:1_UTTU">
+					<FromDate>2025-01-02T00:00:00</FromDate>
+					<ToDate>2026-06-23T00:00:00</ToDate>
+				</AvailabilityCondition>
+			</validityConditions>
+			<codespaces>
+				<Codespace id="kol">
+					<Xmlns>KOL</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/kol</XmlnsUrl>
+				</Codespace>
+				<Codespace id="nsr">
+					<Xmlns>NSR</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/nsr</XmlnsUrl>
+				</Codespace>
+			</codespaces>
+			<FrameDefaults>
+				<DefaultLocale>
+					<TimeZone>Europe/Oslo</TimeZone>
+					<DefaultLanguage>no</DefaultLanguage>
+				</DefaultLocale>
+			</FrameDefaults>
+			<frames>
+				<ResourceFrame version="1" id="KOL:ResourceFrame:1">
+					<organisations>
+						<Authority version="16" id="KOL:Authority:KOL">
+							<Name>Kolumbus</Name>
+							<LegalName>KOLUMBUS AS</LegalName>
+							<ContactDetails>
+								<Url>https://www.kolumbus.no/</Url>
+							</ContactDetails>
+						</Authority>
+						<Operator version="9" id="KOL:Operator:310">
+							<Name>Vy Buss Norge</Name>
+							<LegalName>VY BUSS AS</LegalName>
+							<ContactDetails>
+								<Url>https://www.vybuss.no/</Url>
+							</ContactDetails>
+							<CustomerServiceContactDetails>
+								<Url>https://www.vybuss.no/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="16" id="KOL:Operator:KOL">
+							<Name>Kolumbus</Name>
+							<LegalName>KOLUMBUS AS</LegalName>
+							<ContactDetails>
+								<Url>https://www.kolumbus.no/</Url>
+							</ContactDetails>
+							<CustomerServiceContactDetails>
+								<Url>https://www.kolumbus.no/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="6" id="KOL:Operator:312">
+							<Name>Tide Buss</Name>
+							<LegalName>TIDE BUSS AS</LegalName>
+							<ContactDetails>
+								<Url>https://www.tide.no/</Url>
+							</ContactDetails>
+							<CustomerServiceContactDetails>
+								<Url>https://www.tide.no/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+					</organisations>
+				</ResourceFrame>
+				<SiteFrame version="1" id="KOL:SiteFrame:1">
+					<flexibleStopPlaces>
+						<FlexibleStopPlace version="0" id="KOL:FlexibleStopPlace:06288995-8ffd-49f7-b039-a6ab66522c28">
+							<keyList>
+								<KeyValue>
+									<Key>FlexibleStopAreaType</Key>
+									<Value>UnrestrictedRoadNetwork</Value>
+								</KeyValue>
+							</keyList>
+							<Name>Egersund</Name>
+							<Description>HentMeg-tilbudet i Egersund</Description>
+							<PrivateCode>Egersund-HentMeg</PrivateCode>
+							<TransportMode>bus</TransportMode>
+							<areas>
+								<FlexibleArea version="0" id="KOL:FlexibleArea:1">
+									<ns2:Polygon srsName="ESPG:4326" srsDimension="2" ns2:id="P1">
+										<ns2:exterior>
+											<ns2:LinearRing>
+												<ns2:posList>58.46342265564513 5.9584310097524735 58.4656357485064 5.960899922818925 58.46739313103029 5.980625253466201 58.46944877592807 5.984830649275693 58.47175317281966 5.986458106699644 58.47309964224206 5.987942171642146 58.47442532246808 5.9896047092425135 58.4758444355634 5.9910450576759615 58.47578061431025 5.995028922647407 58.478686339657656 5.99518520516736 58.48001604588967 5.996134699495798 58.474194054960236 6.027983677435827 58.441075507030206 6.019819468766485 58.43001454821899 6.0110587230414865 58.422234142862095 6.0120704689300055 58.420162551945424 6.0114966853199405 58.41967711980146 6.0104165817053286 58.4191916809674 6.009336478089409 58.41755071350511 6.002658305257398 58.419005179965865 5.993586231985205 58.42991176422558 5.9878467570572695 58.44432678230305 5.986643318767165 58.44919530435743 5.9810889881898675 58.45254117749303 5.973028167580537 58.46019621126999 5.972817033002173 58.46007711193636 5.9665224022025996 58.46128574579066 5.961893516204583 58.46342265564513 5.9584310097524735</ns2:posList>
+											</ns2:LinearRing>
+										</ns2:exterior>
+									</ns2:Polygon>
+								</FlexibleArea>
+							</areas>
+						</FlexibleStopPlace>
+						<FlexibleStopPlace version="4" id="KOL:FlexibleStopPlace:58b6a791-7632-4586-bf14-91b39775796b">
+							<keyList>
+								<KeyValue>
+									<Key>FlexibleStopAreaType</Key>
+									<Value>UnrestrictedRoadNetwork</Value>
+								</KeyValue>
+							</keyList>
+							<Name>Sauda</Name>
+							<Description>HentMeg-tilbudet i Sauda</Description>
+							<PrivateCode>Sauda-HentMeg</PrivateCode>
+							<TransportMode>bus</TransportMode>
+							<areas>
+								<FlexibleArea version="0" id="KOL:FlexibleArea:2">
+									<ns2:Polygon srsName="ESPG:4326" srsDimension="2" ns2:id="P2">
+										<ns2:exterior>
+											<ns2:LinearRing>
+												<ns2:posList>59.62575084033623 6.3023991052849 59.62883380609349 6.289718020117876 59.6346950024935 6.293494451572027 59.63493377028342 6.295211011323889 59.638287192982595 6.294073790488267 59.64753178824841 6.311475414973009 59.65024392097467 6.317762315064251 59.6531402366151 6.322203913422278 59.65512520740007 6.327847103606584 59.65622305339289 6.354024123279035 59.67015747207181 6.344389931671587 59.67371334545938 6.353938295291437 59.669853904428514 6.359452743494389 59.659335756554185 6.369387333058425 59.667522846995965 6.393891223516542 59.67128498496401 6.408267411438566 59.671057317147415 6.416742925213495 59.669940638321414 6.423759363199314 59.66409644047066 6.421935518462957 59.662383105889404 6.418995909887838 59.64933503529621 6.391552410854604 59.642120082714285 6.3725629685993965 59.63698730002605 6.317783255517423 59.62575084033623 6.3023991052849</ns2:posList>
+											</ns2:LinearRing>
+										</ns2:exterior>
+									</ns2:Polygon>
+								</FlexibleArea>
+							</areas>
+						</FlexibleStopPlace>
+					</flexibleStopPlaces>
+				</SiteFrame>
+				<ServiceFrame version="1" id="KOL:ServiceFrame:1">
+					<Network version="3" id="SKY:Network:1c17fd80-dc8c-41f4-9be7-6b6b4a9a0683">
+						<Name>Skyss</Name>
+						<Description>Bestillings og servicetilbud fra Skyss</Description>
+						<AuthorityRef ref="KOL:Authority:KOL" version="16"/>
+					</Network>
+					<routePoints>
+						<RoutePoint version="0" id="KOL:RoutePoint:06288995-8ffd-49f7-b039-a6ab66522c28">
+							<projections>
+								<PointProjection version="0" id="KOL:PointProjection:06288995-8ffd-49f7-b039-a6ab66522c28">
+									<ProjectToPointRef ref="KOL:ScheduledStopPoint:06288995-8ffd-49f7-b039-a6ab66522c28" version="0"/>
+								</PointProjection>
+							</projections>
+						</RoutePoint>
+						<RoutePoint version="4" id="KOL:RoutePoint:58b6a791-7632-4586-bf14-91b39775796b">
+							<projections>
+								<PointProjection version="4" id="KOL:PointProjection:58b6a791-7632-4586-bf14-91b39775796b">
+									<ProjectToPointRef ref="KOL:ScheduledStopPoint:58b6a791-7632-4586-bf14-91b39775796b" version="4"/>
+								</PointProjection>
+							</projections>
+						</RoutePoint>
+					</routePoints>
+					<routes>
+						<Route version="1" id="KOL:Route:1726c6bc-698b-4d13-a6ec-f6faab32b3b3">
+							<Name>HentMeg_JP</Name>
+							<FlexibleLineRef ref="KOL:FlexibleLine:a318c9ea-bae0-49da-8356-f4820e1d9cdd" version="204"/>
+							<pointsInSequence>
+								<PointOnRoute version="175" id="KOL:PointOnRoute:2c121a85-699c-4459-a865-035e09d20bde">
+									<RoutePointRef ref="KOL:RoutePoint:58b6a791-7632-4586-bf14-91b39775796b"/>
+								</PointOnRoute>
+								<PointOnRoute version="150" id="KOL:PointOnRoute:8d482664-b115-4b73-9595-17648ed68aae">
+									<RoutePointRef ref="KOL:RoutePoint:58b6a791-7632-4586-bf14-91b39775796b"/>
+								</PointOnRoute>
+							</pointsInSequence>
+						</Route>
+					</routes>
+					<lines>
+						<Line version="204" id="KOL:FlexibleLine:a318c9ea-bae0-49da-8356-f4820e1d9cdd">
+							<Name>HentMeg - Sauda</Name>
+							<Description>Fleksibelt busstilbud i Sauda</Description>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>localBus</BusSubmode>
+							</TransportSubmode>
+							<PublicCode>HentMeg</PublicCode>
+							<PrivateCode>9955</PrivateCode>
+							<OperatorRef ref="KOL:Operator:KOL" version="16"/>
+							<LineType>flexibleAreasOnly</LineType>
+							<RepresentedByGroupRef ref="KOL:Network:15f72617-569e-4378-addf-bfa422c1e06b"/>
+							<bookingArrangements>
+								<BookingArrangement id="generated" version="1">
+									<BookingContact>
+										<ContactPerson>HentMeg</ContactPerson>
+										<Phone>51199900</Phone>
+										<Url>https://hentmeg.no/</Url>
+									</BookingContact>
+									<BookingMethods>callOffice online</BookingMethods>
+									<BookingAccess>public</BookingAccess>
+									<BuyWhen/>
+									<MinimumBookingPeriod>PT5M</MinimumBookingPeriod>
+									<BookingNote>Reiserute og tidspunkter kan forandres hvis flere bestiller henting.</BookingNote>
+								</BookingArrangement>
+							</bookingArrangements>
+						</Line>
+					</lines>
+					<destinationDisplays>
+						<DestinationDisplay version="0" id="KOL:DestinationDisplay:b91db685-daa0-49f5-9899-d6c60bd3a0a6">
+							<FrontText>Egersund</FrontText>
+						</DestinationDisplay>
+						<DestinationDisplay version="0" id="KOL:DestinationDisplay:a9f0cea1-a503-4304-862b-1fea948b255f">
+							<FrontText>Sauda</FrontText>
+						</DestinationDisplay>
+					</destinationDisplays>
+					<scheduledStopPoints>
+						<ScheduledStopPoint version="0" id="KOL:ScheduledStopPoint:06288995-8ffd-49f7-b039-a6ab66522c28"/>
+						<ScheduledStopPoint version="4" id="KOL:ScheduledStopPoint:58b6a791-7632-4586-bf14-91b39775796b"/>
+					</scheduledStopPoints>
+					<stopAssignments>
+						<FlexibleStopAssignment version="0" id="KOL:FlexibleStopAssignment:06288995-8ffd-49f7-b039-a6ab66522c28">
+							<ScheduledStopPointRef ref="KOL:ScheduledStopPoint:06288995-8ffd-49f7-b039-a6ab66522c28" version="0"/>
+							<FlexibleStopPlaceRef ref="KOL:FlexibleStopPlace:06288995-8ffd-49f7-b039-a6ab66522c28" version="0"/>
+						</FlexibleStopAssignment>
+						<FlexibleStopAssignment version="4" id="KOL:FlexibleStopAssignment:58b6a791-7632-4586-bf14-91b39775796b">
+							<ScheduledStopPointRef ref="KOL:ScheduledStopPoint:58b6a791-7632-4586-bf14-91b39775796b" version="4"/>
+							<FlexibleStopPlaceRef ref="KOL:FlexibleStopPlace:58b6a791-7632-4586-bf14-91b39775796b" version="4"/>
+						</FlexibleStopAssignment>
+					</stopAssignments>
+					<journeyPatterns>
+						<JourneyPattern version="1" id="KOL:JourneyPattern:1726c6bc-698b-4d13-a6ec-f6faab32b3b3">
+							<Name>HentMeg_JP</Name>
+							<PrivateCode>HentmegJP</PrivateCode>
+							<RouteRef ref="KOL:Route:1726c6bc-698b-4d13-a6ec-f6faab32b3b3" version="1"/>
+							<pointsInSequence>
+								<StopPointInJourneyPattern version="175" id="KOL:StopPointInJourneyPattern:2c121a85-699c-4459-a865-035e09d20bde">
+									<ScheduledStopPointRef ref="KOL:ScheduledStopPoint:58b6a791-7632-4586-bf14-91b39775796b"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<DestinationDisplayRef ref="KOL:DestinationDisplay:a9f0cea1-a503-4304-862b-1fea948b255f"/>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern version="150" id="KOL:StopPointInJourneyPattern:8d482664-b115-4b73-9595-17648ed68aae">
+									<ScheduledStopPointRef ref="KOL:ScheduledStopPoint:58b6a791-7632-4586-bf14-91b39775796b"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+						</JourneyPattern>
+					</journeyPatterns>
+				</ServiceFrame>
+				<ServiceCalendarFrame version="1" id="KOL:ServiceCalendarFrame:1">
+					<dayTypes>
+						<DayType version="38" id="KOL:DayType:04731595-8270-4db4-8111-55c7efdb62e7">
+							<properties>
+								<PropertyOfDay>
+									<DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+								</PropertyOfDay>
+							</properties>
+						</DayType>
+						<DayType version="75" id="KOL:DayType:b1fe7a71-470a-41fd-9743-e2b7e5eb570d">
+							<properties>
+								<PropertyOfDay>
+									<DaysOfWeek>Thursday Monday Tuesday Wednesday Friday</DaysOfWeek>
+								</PropertyOfDay>
+							</properties>
+						</DayType>
+						<DayType version="15" id="KOL:DayType:fd089bd6-f856-4f57-b361-183bfc76db0f">
+							<properties>
+								<PropertyOfDay>
+									<DaysOfWeek>Monday Tuesday Wednesday Thursday</DaysOfWeek>
+								</PropertyOfDay>
+							</properties>
+						</DayType>
+						<DayType version="3" id="KOL:DayType:1e26a82a-39c8-413c-868c-30d838823432">
+							<properties>
+								<PropertyOfDay>
+									<DaysOfWeek>Wednesday</DaysOfWeek>
+								</PropertyOfDay>
+							</properties>
+						</DayType>
+						<DayType version="15" id="KOL:DayType:d2ae085c-af92-44a1-b331-5764255f690f">
+							<properties>
+								<PropertyOfDay>
+									<DaysOfWeek>Saturday</DaysOfWeek>
+								</PropertyOfDay>
+							</properties>
+						</DayType>
+						<DayType version="15" id="KOL:DayType:03e0c7e8-f807-42b6-aa14-48527044b709">
+							<properties>
+								<PropertyOfDay>
+									<DaysOfWeek>Friday</DaysOfWeek>
+								</PropertyOfDay>
+							</properties>
+						</DayType>
+						<DayType version="14" id="KOL:DayType:cf90cab2-5130-474a-bbd7-483809f933f2">
+							<properties>
+								<PropertyOfDay>
+									<DaysOfWeek>Wednesday</DaysOfWeek>
+								</PropertyOfDay>
+							</properties>
+						</DayType>
+						<DayType version="29" id="KOL:DayType:0447aa28-fd5c-4453-8c64-81d7130615a3">
+							<properties>
+								<PropertyOfDay>
+									<DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+								</PropertyOfDay>
+							</properties>
+						</DayType>
+						<DayType version="25" id="KOL:DayType:ce7d17a5-bc07-4890-b78c-aa9952a81cce">
+							<properties>
+								<PropertyOfDay>
+									<DaysOfWeek>Saturday</DaysOfWeek>
+								</PropertyOfDay>
+							</properties>
+						</DayType>
+						<DayType version="18" id="KOL:DayType:00a48e5f-f043-4c34-a978-619e28899553">
+							<properties>
+								<PropertyOfDay>
+									<DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+								</PropertyOfDay>
+							</properties>
+						</DayType>
+					</dayTypes>
+					<operatingDays>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-01-02">
+							<CalendarDate>2025-01-02</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-01-03">
+							<CalendarDate>2025-01-03</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-01-04">
+							<CalendarDate>2025-01-04</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-01-06">
+							<CalendarDate>2025-01-06</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-02-21">
+							<CalendarDate>2025-02-21</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-02-24">
+							<CalendarDate>2025-02-24</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-02-28">
+							<CalendarDate>2025-02-28</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-03-03">
+							<CalendarDate>2025-03-03</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-04-11">
+							<CalendarDate>2025-04-11</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-04-14">
+							<CalendarDate>2025-04-14</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-04-15">
+							<CalendarDate>2025-04-15</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-04-16">
+							<CalendarDate>2025-04-16</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-04-22">
+							<CalendarDate>2025-04-22</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-04-30">
+							<CalendarDate>2025-04-30</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-05-02">
+							<CalendarDate>2025-05-02</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-05-10">
+							<CalendarDate>2025-05-10</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-05-24">
+							<CalendarDate>2025-05-24</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-05-28">
+							<CalendarDate>2025-05-28</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-05-30">
+							<CalendarDate>2025-05-30</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-06-06">
+							<CalendarDate>2025-06-06</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-06-10">
+							<CalendarDate>2025-06-10</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-06-20">
+							<CalendarDate>2025-06-20</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-06-21">
+							<CalendarDate>2025-06-21</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-08-10">
+							<CalendarDate>2025-08-10</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-08-11">
+							<CalendarDate>2025-08-11</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-09-10">
+							<CalendarDate>2025-09-10</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-09-11">
+							<CalendarDate>2025-09-11</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-10-05">
+							<CalendarDate>2025-10-05</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-10-06">
+							<CalendarDate>2025-10-06</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-10-12">
+							<CalendarDate>2025-10-12</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-10-13">
+							<CalendarDate>2025-10-13</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-12-19">
+							<CalendarDate>2025-12-19</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-12-20">
+							<CalendarDate>2025-12-20</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-12-23">
+							<CalendarDate>2025-12-23</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-12-24">
+							<CalendarDate>2025-12-24</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-12-27">
+							<CalendarDate>2025-12-27</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-12-29">
+							<CalendarDate>2025-12-29</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-12-30">
+							<CalendarDate>2025-12-30</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2025-12-31">
+							<CalendarDate>2025-12-31</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-01-02">
+							<CalendarDate>2026-01-02</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-01-03">
+							<CalendarDate>2026-01-03</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-01-05">
+							<CalendarDate>2026-01-05</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-02-20">
+							<CalendarDate>2026-02-20</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-02-23">
+							<CalendarDate>2026-02-23</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-02-27">
+							<CalendarDate>2026-02-27</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-03-02">
+							<CalendarDate>2026-03-02</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-03-27">
+							<CalendarDate>2026-03-27</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-03-30">
+							<CalendarDate>2026-03-30</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-03-31">
+							<CalendarDate>2026-03-31</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-04-01">
+							<CalendarDate>2026-04-01</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-04-07">
+							<CalendarDate>2026-04-07</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-04-30">
+							<CalendarDate>2026-04-30</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-05-04">
+							<CalendarDate>2026-05-04</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-05-13">
+							<CalendarDate>2026-05-13</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-05-15">
+							<CalendarDate>2026-05-15</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-05-18">
+							<CalendarDate>2026-05-18</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-05-22">
+							<CalendarDate>2026-05-22</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-05-26">
+							<CalendarDate>2026-05-26</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-06-19">
+							<CalendarDate>2026-06-19</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-06-20">
+							<CalendarDate>2026-06-20</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-06-22">
+							<CalendarDate>2026-06-22</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-06-23">
+							<CalendarDate>2026-06-23</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-08-07">
+							<CalendarDate>2026-08-07</CalendarDate>
+						</OperatingDay>
+						<OperatingDay version="0" id="KOL:OperatingDay:2026-08-08">
+							<CalendarDate>2026-08-08</CalendarDate>
+						</OperatingDay>
+					</operatingDays>
+					<operatingPeriods>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:1">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-01-02" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-01-03" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:2">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-04-14" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-04-15" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:3">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-06-21" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-08-10" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:4">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-12-20" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-12-23" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:5">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-12-27" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-12-30" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:6">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-01-02" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-01-02" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:7">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-03-30" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-03-31" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:8">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-06-22" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-08-07" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:9">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-02-24" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-02-28" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:10">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-04-14" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-04-16" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:11">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-05-02" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-05-02" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:12">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-05-30" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-05-30" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:13">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-06-21" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-08-10" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:14">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-10-06" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-10-12" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:15">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-12-20" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-12-23" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:16">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-12-29" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-12-30" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:17">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-01-02" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-01-02" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:18">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-02-23" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-02-27" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:19">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-03-30" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-04-01" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:20">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-09-10" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-09-11" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:21">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-01-06" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-04-11" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:22">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-04-22" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-04-30" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:23">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-05-02" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-06-06" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:24">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-06-10" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-06-20" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:25">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-08-11" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-12-19" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:26">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-01-05" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-03-27" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:27">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-04-07" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-04-30" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:28">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-05-04" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-05-13" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:29">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-05-15" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-05-22" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:30">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-05-26" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-06-19" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:31">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-04-16" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-04-16" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:32">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-04-01" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-04-01" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:33">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-01-04" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-05-10" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:34">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-05-24" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-12-27" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:35">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-01-03" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-06-20" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:36">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-01-06" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-04-11" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:37">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-04-22" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-04-30" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:38">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-05-02" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-06-06" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:39">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-06-10" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-06-20" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:40">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-08-11" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-12-19" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:41">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-01-05" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-03-27" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:42">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-04-07" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-04-30" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:43">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-05-04" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-05-13" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:44">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-05-15" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-05-22" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:45">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-05-26" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-06-19" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:46">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-12-24" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-12-24" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:47">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-12-31" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-12-31" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:48">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-01-02" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-02-21" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:49">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-03-03" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-04-11" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:50">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-04-22" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-04-30" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:51">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-05-02" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-05-28" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:52">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-05-30" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-06-06" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:53">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-06-10" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-06-20" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:54">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-08-11" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-10-05" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:55">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-10-13" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-12-19" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:56">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-01-05" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-02-20" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:57">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-03-02" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-03-27" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:58">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-04-07" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-04-30" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:59">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-05-04" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-05-13" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:60">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-05-15" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-05-15" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:61">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-05-18" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-05-22" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:62">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-05-26" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-06-23" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:63">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-01-04" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-05-10" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:64">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-05-24" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-12-27" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:65">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-01-03" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-08-08" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:66">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-01-06" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-04-11" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:67">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-04-22" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-04-30" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:68">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-05-02" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-06-06" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:69">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-06-10" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-06-20" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:70">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2025-08-11" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2025-12-19" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:71">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-01-05" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-03-27" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:72">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-04-07" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-04-30" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:73">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-05-04" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-05-13" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:74">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-05-15" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-05-22" version="0"/>
+						</OperatingPeriod>
+						<OperatingPeriod version="0" id="KOL:OperatingPeriod:75">
+							<FromOperatingDayRef ref="KOL:OperatingDay:2026-05-26" version="0"/>
+							<ToOperatingDayRef ref="KOL:OperatingDay:2026-06-19" version="0"/>
+						</OperatingPeriod>
+					</operatingPeriods>
+					<dayTypeAssignments>
+						<DayTypeAssignment order="1" version="0" id="KOL:DayTypeAssignment:1">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:1" version="0"/>
+							<DayTypeRef ref="KOL:DayType:04731595-8270-4db4-8111-55c7efdb62e7" version="38"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="2" version="0" id="KOL:DayTypeAssignment:2">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:2" version="0"/>
+							<DayTypeRef ref="KOL:DayType:04731595-8270-4db4-8111-55c7efdb62e7" version="38"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="3" version="0" id="KOL:DayTypeAssignment:3">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:3" version="0"/>
+							<DayTypeRef ref="KOL:DayType:04731595-8270-4db4-8111-55c7efdb62e7" version="38"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="4" version="0" id="KOL:DayTypeAssignment:4">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:4" version="0"/>
+							<DayTypeRef ref="KOL:DayType:04731595-8270-4db4-8111-55c7efdb62e7" version="38"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="5" version="0" id="KOL:DayTypeAssignment:5">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:5" version="0"/>
+							<DayTypeRef ref="KOL:DayType:04731595-8270-4db4-8111-55c7efdb62e7" version="38"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="6" version="0" id="KOL:DayTypeAssignment:6">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:6" version="0"/>
+							<DayTypeRef ref="KOL:DayType:04731595-8270-4db4-8111-55c7efdb62e7" version="38"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="7" version="0" id="KOL:DayTypeAssignment:7">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:7" version="0"/>
+							<DayTypeRef ref="KOL:DayType:04731595-8270-4db4-8111-55c7efdb62e7" version="38"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="8" version="0" id="KOL:DayTypeAssignment:8">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:8" version="0"/>
+							<DayTypeRef ref="KOL:DayType:04731595-8270-4db4-8111-55c7efdb62e7" version="38"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="9" version="0" id="KOL:DayTypeAssignment:9">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:9" version="0"/>
+							<DayTypeRef ref="KOL:DayType:b1fe7a71-470a-41fd-9743-e2b7e5eb570d" version="75"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="10" version="0" id="KOL:DayTypeAssignment:10">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:10" version="0"/>
+							<DayTypeRef ref="KOL:DayType:b1fe7a71-470a-41fd-9743-e2b7e5eb570d" version="75"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="11" version="0" id="KOL:DayTypeAssignment:11">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:11" version="0"/>
+							<DayTypeRef ref="KOL:DayType:b1fe7a71-470a-41fd-9743-e2b7e5eb570d" version="75"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="12" version="0" id="KOL:DayTypeAssignment:12">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:12" version="0"/>
+							<DayTypeRef ref="KOL:DayType:b1fe7a71-470a-41fd-9743-e2b7e5eb570d" version="75"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="13" version="0" id="KOL:DayTypeAssignment:13">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:13" version="0"/>
+							<DayTypeRef ref="KOL:DayType:b1fe7a71-470a-41fd-9743-e2b7e5eb570d" version="75"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="14" version="0" id="KOL:DayTypeAssignment:14">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:14" version="0"/>
+							<DayTypeRef ref="KOL:DayType:b1fe7a71-470a-41fd-9743-e2b7e5eb570d" version="75"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="15" version="0" id="KOL:DayTypeAssignment:15">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:15" version="0"/>
+							<DayTypeRef ref="KOL:DayType:b1fe7a71-470a-41fd-9743-e2b7e5eb570d" version="75"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="16" version="0" id="KOL:DayTypeAssignment:16">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:16" version="0"/>
+							<DayTypeRef ref="KOL:DayType:b1fe7a71-470a-41fd-9743-e2b7e5eb570d" version="75"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="17" version="0" id="KOL:DayTypeAssignment:17">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:17" version="0"/>
+							<DayTypeRef ref="KOL:DayType:b1fe7a71-470a-41fd-9743-e2b7e5eb570d" version="75"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="18" version="0" id="KOL:DayTypeAssignment:18">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:18" version="0"/>
+							<DayTypeRef ref="KOL:DayType:b1fe7a71-470a-41fd-9743-e2b7e5eb570d" version="75"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="19" version="0" id="KOL:DayTypeAssignment:19">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:19" version="0"/>
+							<DayTypeRef ref="KOL:DayType:b1fe7a71-470a-41fd-9743-e2b7e5eb570d" version="75"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="20" version="0" id="KOL:DayTypeAssignment:20">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:20" version="0"/>
+							<DayTypeRef ref="KOL:DayType:b1fe7a71-470a-41fd-9743-e2b7e5eb570d" version="75"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="21" version="0" id="KOL:DayTypeAssignment:21">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:21" version="0"/>
+							<DayTypeRef ref="KOL:DayType:fd089bd6-f856-4f57-b361-183bfc76db0f" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="22" version="0" id="KOL:DayTypeAssignment:22">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:22" version="0"/>
+							<DayTypeRef ref="KOL:DayType:fd089bd6-f856-4f57-b361-183bfc76db0f" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="23" version="0" id="KOL:DayTypeAssignment:23">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:23" version="0"/>
+							<DayTypeRef ref="KOL:DayType:fd089bd6-f856-4f57-b361-183bfc76db0f" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="24" version="0" id="KOL:DayTypeAssignment:24">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:24" version="0"/>
+							<DayTypeRef ref="KOL:DayType:fd089bd6-f856-4f57-b361-183bfc76db0f" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="25" version="0" id="KOL:DayTypeAssignment:25">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:25" version="0"/>
+							<DayTypeRef ref="KOL:DayType:fd089bd6-f856-4f57-b361-183bfc76db0f" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="26" version="0" id="KOL:DayTypeAssignment:26">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:26" version="0"/>
+							<DayTypeRef ref="KOL:DayType:fd089bd6-f856-4f57-b361-183bfc76db0f" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="27" version="0" id="KOL:DayTypeAssignment:27">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:27" version="0"/>
+							<DayTypeRef ref="KOL:DayType:fd089bd6-f856-4f57-b361-183bfc76db0f" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="28" version="0" id="KOL:DayTypeAssignment:28">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:28" version="0"/>
+							<DayTypeRef ref="KOL:DayType:fd089bd6-f856-4f57-b361-183bfc76db0f" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="29" version="0" id="KOL:DayTypeAssignment:29">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:29" version="0"/>
+							<DayTypeRef ref="KOL:DayType:fd089bd6-f856-4f57-b361-183bfc76db0f" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="30" version="0" id="KOL:DayTypeAssignment:30">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:30" version="0"/>
+							<DayTypeRef ref="KOL:DayType:fd089bd6-f856-4f57-b361-183bfc76db0f" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="31" version="0" id="KOL:DayTypeAssignment:31">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:31" version="0"/>
+							<DayTypeRef ref="KOL:DayType:1e26a82a-39c8-413c-868c-30d838823432" version="3"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="32" version="0" id="KOL:DayTypeAssignment:32">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:32" version="0"/>
+							<DayTypeRef ref="KOL:DayType:1e26a82a-39c8-413c-868c-30d838823432" version="3"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="33" version="0" id="KOL:DayTypeAssignment:33">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:33" version="0"/>
+							<DayTypeRef ref="KOL:DayType:d2ae085c-af92-44a1-b331-5764255f690f" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="34" version="0" id="KOL:DayTypeAssignment:34">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:34" version="0"/>
+							<DayTypeRef ref="KOL:DayType:d2ae085c-af92-44a1-b331-5764255f690f" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="35" version="0" id="KOL:DayTypeAssignment:35">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:35" version="0"/>
+							<DayTypeRef ref="KOL:DayType:d2ae085c-af92-44a1-b331-5764255f690f" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="36" version="0" id="KOL:DayTypeAssignment:36">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:36" version="0"/>
+							<DayTypeRef ref="KOL:DayType:03e0c7e8-f807-42b6-aa14-48527044b709" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="37" version="0" id="KOL:DayTypeAssignment:37">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:37" version="0"/>
+							<DayTypeRef ref="KOL:DayType:03e0c7e8-f807-42b6-aa14-48527044b709" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="38" version="0" id="KOL:DayTypeAssignment:38">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:38" version="0"/>
+							<DayTypeRef ref="KOL:DayType:03e0c7e8-f807-42b6-aa14-48527044b709" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="39" version="0" id="KOL:DayTypeAssignment:39">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:39" version="0"/>
+							<DayTypeRef ref="KOL:DayType:03e0c7e8-f807-42b6-aa14-48527044b709" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="40" version="0" id="KOL:DayTypeAssignment:40">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:40" version="0"/>
+							<DayTypeRef ref="KOL:DayType:03e0c7e8-f807-42b6-aa14-48527044b709" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="41" version="0" id="KOL:DayTypeAssignment:41">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:41" version="0"/>
+							<DayTypeRef ref="KOL:DayType:03e0c7e8-f807-42b6-aa14-48527044b709" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="42" version="0" id="KOL:DayTypeAssignment:42">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:42" version="0"/>
+							<DayTypeRef ref="KOL:DayType:03e0c7e8-f807-42b6-aa14-48527044b709" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="43" version="0" id="KOL:DayTypeAssignment:43">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:43" version="0"/>
+							<DayTypeRef ref="KOL:DayType:03e0c7e8-f807-42b6-aa14-48527044b709" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="44" version="0" id="KOL:DayTypeAssignment:44">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:44" version="0"/>
+							<DayTypeRef ref="KOL:DayType:03e0c7e8-f807-42b6-aa14-48527044b709" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="45" version="0" id="KOL:DayTypeAssignment:45">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:45" version="0"/>
+							<DayTypeRef ref="KOL:DayType:03e0c7e8-f807-42b6-aa14-48527044b709" version="15"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="46" version="0" id="KOL:DayTypeAssignment:46">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:46" version="0"/>
+							<DayTypeRef ref="KOL:DayType:cf90cab2-5130-474a-bbd7-483809f933f2" version="14"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="47" version="0" id="KOL:DayTypeAssignment:47">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:47" version="0"/>
+							<DayTypeRef ref="KOL:DayType:cf90cab2-5130-474a-bbd7-483809f933f2" version="14"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="48" version="0" id="KOL:DayTypeAssignment:48">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:48" version="0"/>
+							<DayTypeRef ref="KOL:DayType:0447aa28-fd5c-4453-8c64-81d7130615a3" version="29"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="49" version="0" id="KOL:DayTypeAssignment:49">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:49" version="0"/>
+							<DayTypeRef ref="KOL:DayType:0447aa28-fd5c-4453-8c64-81d7130615a3" version="29"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="50" version="0" id="KOL:DayTypeAssignment:50">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:50" version="0"/>
+							<DayTypeRef ref="KOL:DayType:0447aa28-fd5c-4453-8c64-81d7130615a3" version="29"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="51" version="0" id="KOL:DayTypeAssignment:51">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:51" version="0"/>
+							<DayTypeRef ref="KOL:DayType:0447aa28-fd5c-4453-8c64-81d7130615a3" version="29"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="52" version="0" id="KOL:DayTypeAssignment:52">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:52" version="0"/>
+							<DayTypeRef ref="KOL:DayType:0447aa28-fd5c-4453-8c64-81d7130615a3" version="29"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="53" version="0" id="KOL:DayTypeAssignment:53">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:53" version="0"/>
+							<DayTypeRef ref="KOL:DayType:0447aa28-fd5c-4453-8c64-81d7130615a3" version="29"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="54" version="0" id="KOL:DayTypeAssignment:54">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:54" version="0"/>
+							<DayTypeRef ref="KOL:DayType:0447aa28-fd5c-4453-8c64-81d7130615a3" version="29"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="55" version="0" id="KOL:DayTypeAssignment:55">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:55" version="0"/>
+							<DayTypeRef ref="KOL:DayType:0447aa28-fd5c-4453-8c64-81d7130615a3" version="29"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="56" version="0" id="KOL:DayTypeAssignment:56">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:56" version="0"/>
+							<DayTypeRef ref="KOL:DayType:0447aa28-fd5c-4453-8c64-81d7130615a3" version="29"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="57" version="0" id="KOL:DayTypeAssignment:57">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:57" version="0"/>
+							<DayTypeRef ref="KOL:DayType:0447aa28-fd5c-4453-8c64-81d7130615a3" version="29"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="58" version="0" id="KOL:DayTypeAssignment:58">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:58" version="0"/>
+							<DayTypeRef ref="KOL:DayType:0447aa28-fd5c-4453-8c64-81d7130615a3" version="29"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="59" version="0" id="KOL:DayTypeAssignment:59">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:59" version="0"/>
+							<DayTypeRef ref="KOL:DayType:0447aa28-fd5c-4453-8c64-81d7130615a3" version="29"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="60" version="0" id="KOL:DayTypeAssignment:60">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:60" version="0"/>
+							<DayTypeRef ref="KOL:DayType:0447aa28-fd5c-4453-8c64-81d7130615a3" version="29"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="61" version="0" id="KOL:DayTypeAssignment:61">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:61" version="0"/>
+							<DayTypeRef ref="KOL:DayType:0447aa28-fd5c-4453-8c64-81d7130615a3" version="29"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="62" version="0" id="KOL:DayTypeAssignment:62">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:62" version="0"/>
+							<DayTypeRef ref="KOL:DayType:0447aa28-fd5c-4453-8c64-81d7130615a3" version="29"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="63" version="0" id="KOL:DayTypeAssignment:63">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:63" version="0"/>
+							<DayTypeRef ref="KOL:DayType:ce7d17a5-bc07-4890-b78c-aa9952a81cce" version="25"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="64" version="0" id="KOL:DayTypeAssignment:64">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:64" version="0"/>
+							<DayTypeRef ref="KOL:DayType:ce7d17a5-bc07-4890-b78c-aa9952a81cce" version="25"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="65" version="0" id="KOL:DayTypeAssignment:65">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:65" version="0"/>
+							<DayTypeRef ref="KOL:DayType:ce7d17a5-bc07-4890-b78c-aa9952a81cce" version="25"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="66" version="0" id="KOL:DayTypeAssignment:66">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:66" version="0"/>
+							<DayTypeRef ref="KOL:DayType:00a48e5f-f043-4c34-a978-619e28899553" version="18"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="67" version="0" id="KOL:DayTypeAssignment:67">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:67" version="0"/>
+							<DayTypeRef ref="KOL:DayType:00a48e5f-f043-4c34-a978-619e28899553" version="18"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="68" version="0" id="KOL:DayTypeAssignment:68">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:68" version="0"/>
+							<DayTypeRef ref="KOL:DayType:00a48e5f-f043-4c34-a978-619e28899553" version="18"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="69" version="0" id="KOL:DayTypeAssignment:69">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:69" version="0"/>
+							<DayTypeRef ref="KOL:DayType:00a48e5f-f043-4c34-a978-619e28899553" version="18"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="70" version="0" id="KOL:DayTypeAssignment:70">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:70" version="0"/>
+							<DayTypeRef ref="KOL:DayType:00a48e5f-f043-4c34-a978-619e28899553" version="18"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="71" version="0" id="KOL:DayTypeAssignment:71">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:71" version="0"/>
+							<DayTypeRef ref="KOL:DayType:00a48e5f-f043-4c34-a978-619e28899553" version="18"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="72" version="0" id="KOL:DayTypeAssignment:72">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:72" version="0"/>
+							<DayTypeRef ref="KOL:DayType:00a48e5f-f043-4c34-a978-619e28899553" version="18"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="73" version="0" id="KOL:DayTypeAssignment:73">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:73" version="0"/>
+							<DayTypeRef ref="KOL:DayType:00a48e5f-f043-4c34-a978-619e28899553" version="18"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="74" version="0" id="KOL:DayTypeAssignment:74">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:74" version="0"/>
+							<DayTypeRef ref="KOL:DayType:00a48e5f-f043-4c34-a978-619e28899553" version="18"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+						<DayTypeAssignment order="75" version="0" id="KOL:DayTypeAssignment:75">
+							<OperatingPeriodRef ref="KOL:OperatingPeriod:75" version="0"/>
+							<DayTypeRef ref="KOL:DayType:00a48e5f-f043-4c34-a978-619e28899553" version="18"/>
+							<isAvailable>true</isAvailable>
+						</DayTypeAssignment>
+					</dayTypeAssignments>
+				</ServiceCalendarFrame>
+				<TimetableFrame version="1" id="KOL:TimetableFrame:1">
+					<vehicleJourneys>
+						<ServiceJourney version="15" id="KOL:ServiceJourney:65d2bf74-b5e3-4d7e-ac88-ac3ec3be3c1a">
+							<Name>Lørdag formiddag</Name>
+							<PrivateCode>3000</PrivateCode>
+							<dayTypes>
+								<DayTypeRef ref="KOL:DayType:d2ae085c-af92-44a1-b331-5764255f690f" version="15"/>
+							</dayTypes>
+							<JourneyPatternRef ref="KOL:JourneyPattern:1726c6bc-698b-4d13-a6ec-f6faab32b3b3" version="1"/>
+							<OperatorRef ref="KOL:Operator:312" version="6"/>
+							<passingTimes>
+								<TimetabledPassingTime version="0" id="KOL:TimetabledPassingTime:cd260d6e-daa5-41ae-9259-eed7665f60e5">
+									<StopPointInJourneyPatternRef ref="KOL:StopPointInJourneyPattern:2c121a85-699c-4459-a865-035e09d20bde" version="175"/>
+									<LatestArrivalTime>15:00:00</LatestArrivalTime>
+									<EarliestDepartureTime>10:00:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="0" id="KOL:TimetabledPassingTime:b297bb4d-d2c2-474a-af23-eb46f85d7468">
+									<StopPointInJourneyPatternRef ref="KOL:StopPointInJourneyPattern:8d482664-b115-4b73-9595-17648ed68aae" version="150"/>
+									<LatestArrivalTime>15:00:00</LatestArrivalTime>
+									<EarliestDepartureTime>10:00:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+							</passingTimes>
+						</ServiceJourney>
+						<ServiceJourney version="201" id="KOL:ServiceJourney:59c31631-c88b-4e2e-8352-d6fa67d99fac">
+							<Name>Ettermiddag</Name>
+							<PrivateCode>1001</PrivateCode>
+							<dayTypes>
+								<DayTypeRef ref="KOL:DayType:0447aa28-fd5c-4453-8c64-81d7130615a3" version="29"/>
+							</dayTypes>
+							<JourneyPatternRef ref="KOL:JourneyPattern:1726c6bc-698b-4d13-a6ec-f6faab32b3b3" version="1"/>
+							<OperatorRef ref="KOL:Operator:312" version="6"/>
+							<passingTimes>
+								<TimetabledPassingTime version="2" id="KOL:TimetabledPassingTime:f512bb55-9515-4619-9677-a1efd4c639df">
+									<StopPointInJourneyPatternRef ref="KOL:StopPointInJourneyPattern:2c121a85-699c-4459-a865-035e09d20bde" version="175"/>
+									<LatestArrivalTime>21:00:00</LatestArrivalTime>
+									<EarliestDepartureTime>16:30:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="4" id="KOL:TimetabledPassingTime:c584aed4-a12a-4dec-a7b3-656c9900f4e2">
+									<StopPointInJourneyPatternRef ref="KOL:StopPointInJourneyPattern:8d482664-b115-4b73-9595-17648ed68aae" version="150"/>
+									<LatestArrivalTime>21:00:00</LatestArrivalTime>
+									<EarliestDepartureTime>16:30:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+							</passingTimes>
+						</ServiceJourney>
+						<ServiceJourney version="137" id="KOL:ServiceJourney:482c0a50-5412-4841-b8f2-024256a80809">
+							<Name>Skolefridager</Name>
+							<PrivateCode>1002</PrivateCode>
+							<dayTypes>
+								<DayTypeRef ref="KOL:DayType:b1fe7a71-470a-41fd-9743-e2b7e5eb570d"/>
+							</dayTypes>
+							<JourneyPatternRef ref="KOL:JourneyPattern:1726c6bc-698b-4d13-a6ec-f6faab32b3b3" version="1"/>
+							<OperatorRef ref="KOL:Operator:312" version="6"/>
+							<passingTimes>
+								<TimetabledPassingTime version="2" id="KOL:TimetabledPassingTime:48e1f2dd-2406-42b4-bcdd-4f39a473cf5e">
+									<StopPointInJourneyPatternRef ref="KOL:StopPointInJourneyPattern:2c121a85-699c-4459-a865-035e09d20bde" version="175"/>
+									<LatestArrivalTime>21:00:00</LatestArrivalTime>
+									<EarliestDepartureTime>09:00:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="4" id="KOL:TimetabledPassingTime:eada5f28-4966-44aa-8fd3-84aa4be60913">
+									<StopPointInJourneyPatternRef ref="KOL:StopPointInJourneyPattern:8d482664-b115-4b73-9595-17648ed68aae" version="150"/>
+									<LatestArrivalTime>21:00:00</LatestArrivalTime>
+									<EarliestDepartureTime>09:00:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+							</passingTimes>
+						</ServiceJourney>
+						<ServiceJourney version="112" id="KOL:ServiceJourney:f1e9e2dc-1d39-4973-89a8-6a2e368202de">
+							<Name>Lørdag Ettermiddag</Name>
+							<PrivateCode>3001</PrivateCode>
+							<dayTypes>
+								<DayTypeRef ref="KOL:DayType:d2ae085c-af92-44a1-b331-5764255f690f" version="15"/>
+							</dayTypes>
+							<JourneyPatternRef ref="KOL:JourneyPattern:1726c6bc-698b-4d13-a6ec-f6faab32b3b3" version="1"/>
+							<OperatorRef ref="KOL:Operator:312" version="6"/>
+							<passingTimes>
+								<TimetabledPassingTime version="2" id="KOL:TimetabledPassingTime:af05e9ba-3c95-43c3-8ef5-767332b4c478">
+									<StopPointInJourneyPatternRef ref="KOL:StopPointInJourneyPattern:2c121a85-699c-4459-a865-035e09d20bde" version="175"/>
+									<LatestArrivalTime>19:00:00</LatestArrivalTime>
+									<EarliestDepartureTime>16:30:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="4" id="KOL:TimetabledPassingTime:d0ebb2f4-869b-4e11-b3b3-33043be129f2">
+									<StopPointInJourneyPatternRef ref="KOL:StopPointInJourneyPattern:8d482664-b115-4b73-9595-17648ed68aae" version="150"/>
+									<LatestArrivalTime>19:00:00</LatestArrivalTime>
+									<EarliestDepartureTime>16:30:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+							</passingTimes>
+						</ServiceJourney>
+						<ServiceJourney version="203" id="KOL:ServiceJourney:6984e481-4fdd-4702-be9c-8e86be2236ca">
+							<Name>Formiddag</Name>
+							<PrivateCode>1000</PrivateCode>
+							<dayTypes>
+								<DayTypeRef ref="KOL:DayType:0447aa28-fd5c-4453-8c64-81d7130615a3" version="29"/>
+							</dayTypes>
+							<JourneyPatternRef ref="KOL:JourneyPattern:1726c6bc-698b-4d13-a6ec-f6faab32b3b3" version="1"/>
+							<OperatorRef ref="KOL:Operator:312" version="6"/>
+							<passingTimes>
+								<TimetabledPassingTime version="2" id="KOL:TimetabledPassingTime:cd15ec29-af62-4352-95bd-2fe18c2cec16">
+									<StopPointInJourneyPatternRef ref="KOL:StopPointInJourneyPattern:2c121a85-699c-4459-a865-035e09d20bde" version="175"/>
+									<LatestArrivalTime>13:45:00</LatestArrivalTime>
+									<EarliestDepartureTime>09:00:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="4" id="KOL:TimetabledPassingTime:335a05ad-ca35-4825-bb31-d97be57725b7">
+									<StopPointInJourneyPatternRef ref="KOL:StopPointInJourneyPattern:8d482664-b115-4b73-9595-17648ed68aae" version="150"/>
+									<LatestArrivalTime>13:45:00</LatestArrivalTime>
+									<EarliestDepartureTime>09:00:00</EarliestDepartureTime>
+								</TimetabledPassingTime>
+							</passingTimes>
+						</ServiceJourney>
+					</vehicleJourneys>
+				</TimetableFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

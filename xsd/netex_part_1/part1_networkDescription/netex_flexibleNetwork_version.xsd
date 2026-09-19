@@ -46,7 +46,7 @@ Rail transport, Roads and Road transport
 	<!-- ======================================================================= -->
 	<xsd:element name="FlexibleLine" substitutionGroup="Line_Dummy">
 		<xsd:annotation>
-			<xsd:documentation>A group of FLEXIBLE ROUTEs of which is generally known to the public by a similar name or number and which have common booking arrangements. DEPRECATED: please use LINE instead. +v2.0</xsd:documentation>
+			<xsd:documentation>A group of FLEXIBLE ROUTEs of which is generally known to the public by a similar name or number and which have common booking arrangements. DEPRECATED: please use LINE instead. -v2.1</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
@@ -103,7 +103,7 @@ Rail transport, Roads and Road transport
 	<!-- ==FlexibleRoute============================================================ -->
 	<xsd:element name="FlexibleRoute" substitutionGroup="Route_Dummy">
 		<xsd:annotation>
-			<xsd:documentation>Specialisation of ROUTE for flexible service. May include both point and zonal areas and ordered and unordered sections.</xsd:documentation>
+			<xsd:documentation>Specialisation of ROUTE for flexible service. May include both point and zonal areas and ordered and unordered sections. Deprecated. Use Route instead -v2.1</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>

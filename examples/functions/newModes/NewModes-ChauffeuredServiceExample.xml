@@ -457,6 +457,13 @@
 						</Parking>
 					</parkings>
 				</SiteFrame>
+				<ServiceFrame id="sf1" version="1">
+					<lines>
+						<Line id="classic_line" version="1">
+							<Name>The classical line not to compete with</Name>
+						</Line>
+					</lines>
+				</ServiceFrame>
 				<!--==== Mobility Service ==== -->
 				<MobilityServiceFrame version="1.0" id="hjm:chauffeured_taxi_example" responsibilitySetRef="hjm:network_data">
 					<prerequisites>
@@ -488,23 +495,73 @@
 							<BrandingRef version="any" ref="myBrand"/>
 							<Name>Home James Cars.</Name>
 							<OperatorRef version="any" ref="noc:HJM"/>
-							<ServiceBookingArrangements>
-								<BookingContact>
-									<Phone>=31666777</Phone>
-									<Url>https://www.homeJames.eu/booking</Url>
-								</BookingContact>
-								<BookingMethods>mobileApp online</BookingMethods>
-								<BookingAccess>authorisedPublic</BookingAccess>
-								<BookWhen>advanceOnly</BookWhen>
-								<BuyWhen>onCheckOut</BuyWhen>
-								<LatestBookingTime>20:00:00</LatestBookingTime>
-								<MinimumBookingPeriod>P1D</MinimumBookingPeriod>
-								<BookingUrl>https://www.homeJames.eu/booking</BookingUrl>
-								<BookingNote>Booklings made online or by pyone  Bookings can be made up to two hour before travel. </BookingNote>
-								<MinimumBookingDuration>PT2H</MinimumBookingDuration>
-								<DepositRequired>true</DepositRequired>
-								<BookingChargeType>none</BookingChargeType>
-							</ServiceBookingArrangements>
+							<serviceBookingArrangements>
+								<ServiceBookingArrangement id="sba1" version="any">
+									<BookingContact>
+										<Phone>=31666777</Phone>
+										<Url>https://www.homeJames.eu/booking</Url>
+									</BookingContact>
+									<BookingMethods>mobileApp online</BookingMethods>
+									<BookingAccess>authorisedPublic</BookingAccess>
+									<BookWhen>advanceOnly</BookWhen>
+									<BuyWhen>onCheckOut</BuyWhen>
+									<LatestBookingTime>20:00:00</LatestBookingTime>
+									<MinimumBookingPeriod>P1D</MinimumBookingPeriod>
+									<BookingUrl>https://www.homeJames.eu/booking</BookingUrl>
+									<BookingNote>Booklings made online or by pyone  Bookings can be made up to two hour before travel. </BookingNote>
+									<MinimumBookingDuration>PT2H</MinimumBookingDuration>
+									<DepositRequired>true</DepositRequired>
+									<BookingChargeType>none</BookingChargeType>
+								</ServiceBookingArrangement>
+								<ServiceCompetitiveCondition id="sba2" version="1">
+									<!--<serviceExclusions>
+										<ServiceExclusion id="se1" version="1">
+											<LineRef ref="classic_line" version="1"/>
+										</ServiceExclusion>
+									</serviceExclusions>-->
+									<DistanceFromClassical>200</DistanceFromClassical>
+									<TemporalDistanceFromClassical>PT15M</TemporalDistanceFromClassical>
+									<PenaltyDrivingTimeFactor>1.5</PenaltyDrivingTimeFactor>
+									<PenaltyTransferTimeFactor>1.2</PenaltyTransferTimeFactor>
+									<WalkTimeFactor>1.1</WalkTimeFactor>
+								</ServiceCompetitiveCondition>
+								<ServiceEligibilityCondition id="sba3" version="1">
+									<ResidentialQualification id="rq1" version="1">
+										<ResidenceType>live</ResidenceType>
+									</ResidentialQualification>
+								</ServiceEligibilityCondition>
+								<ServiceEligibilityCondition id="sba3" version="1">
+									<CompanionProfile id="cp1" version="1">
+										<MinimumNumberOfPersons>1</MinimumNumberOfPersons>
+									</CompanionProfile>
+								</ServiceEligibilityCondition>
+								<ServiceEligibilityCondition id="sba4" version="1">
+									<CommercialProfile id="cp2" version="1">
+										<ConsumptionUnits>2</ConsumptionUnits>
+									</CommercialProfile>
+								</ServiceEligibilityCondition>
+								<ServiceEligibilityCondition id="sba5" version="1">
+									<UserProfile id="up1" version="1">
+										<MinimumAge>65</MinimumAge>
+									</UserProfile>
+								</ServiceEligibilityCondition>
+								<ServiceEligibilityCondition id="sba6" version="1">
+									<UserProfile id="up2" version="1">
+										<GenderLimitation>femaleOnly</GenderLimitation>
+									</UserProfile>
+								</ServiceEligibilityCondition>
+								<ServiceCompetitiveCondition id="sba7" version="1">
+									<InterchangeBetweenFlexibleServicesAllowed>true</InterchangeBetweenFlexibleServicesAllowed>
+									<InterchangeWithConventionalServicesAllowed>true</InterchangeWithConventionalServicesAllowed>
+								</ServiceCompetitiveCondition>
+								<ServiceCompetitiveCondition id="sba8" version="1">
+									<transferRestrictions>
+										<TransferRestriction id="tr1" version="1">
+											<RestrictionType>cannotTransfer</RestrictionType>
+										</TransferRestriction>
+									</transferRestrictions>
+								</ServiceCompetitiveCondition>
+							</serviceBookingArrangements>
 							<BookingRequired>true</BookingRequired>
 							<RegistrationRequired>true</RegistrationRequired>
 							<proposedByServices>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_serviceRestrictions_version">
+	<xsd:include schemaLocation="../../netex_framework/netex_responsibility/netex_typeOfValue_version.xsd"/>
+	<xsd:include schemaLocation="../../netex_framework/netex_genericFramework/netex_organisation_support.xsd"/>
+	<xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_serviceRestrictions_support.xsd"/>
+	<xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_serviceRestrictions_version.xsd"/>
+	<xsd:include schemaLocation="../../netex_part_1/part1_networkDescription/netex_line_support.xsd"/>
+	<xsd:include schemaLocation="../../netex_part_1/part1_tacticalPlanning/netex_routingConstraint_version.xsd"/>
+	<xsd:include schemaLocation="netex_usageParameterEligibility_version.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>V1.0 Matthias Günter</Contributor>
+				<Contributor>Nicholas Knowles</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>First drafted for NeTEx version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.</Creator>
+				<Date>
+					<Created>2010-09-04</Created>
+				</Date>
+				<Date><Modified>2025-09-24</Modified> Created and put in the things needed from part 1 and part 3
+				</Date>
+				<Description>
+					<p>NeTEx is a European CEN standard for the exchange of Public Transport data including timetables.</p>
+					<p>This sub-schema describes the Common  Service Restriction Types.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.netex.org.uk/schemas/1.0/xsd/netex_framework/netex_reusableComponents}netex_serviceRestrictions_version.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom Software Ltd, 16 High Holborn, London WC1V 6BX </Publisher>
+				<Relation>
+					<Requires>http://www.netex.org.uk/schemas/1.0/PATH/netex_prereqfile.xsd</Requires>
+				</Relation>
+				<Rights>Unclassified
+				 <Copyright>CEN, Crown Copyright 2009-2023</Copyright>
+				</Rights>
+				<Source>
+					<ul>
+						<li>Derived from the Transmodel, VDV, TransXChange, NEPTUNE, BISON and Trident standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 1.0</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+Air transport, Airports,
+Ports and maritime transport, Ferries (marine),
+Public transport, Bus services, Coach services, Bus stops and stations,
+Rail transport, Railway stations and track, Train services, Underground trains,
+Business and industry, Transport, Air transport , Ports and maritime transport, Public transport,
+Rail transport, Roads and Road transport
+</Category>
+					<Project>CEN TC278 WG3 SG9.</Project>
+				</Subject>
+				<Title>NeTEx Travel Right Value Types.</Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>NeTEx Service Restrictions.</xsd:documentation>
+	</xsd:annotation>
+	<!-- ===== SERVICE COMPETITIVE CONDITION ===================================== -->
+	<xsd:element name="ServiceCompetitiveCondition" substitutionGroup="BookingArrangement_Dummy">
+		<xsd:annotation>
+			<xsd:documentation>Type for a SERVICE COMPETITIVE CONDITION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:restriction base="ServiceCompetitiveCondition_VersionStructure">
+					<xsd:sequence>
+						<xsd:sequence>
+							<xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+						</xsd:sequence>
+						<xsd:sequence>
+							<xsd:group ref="DataManagedObjectGroup"/>
+						</xsd:sequence>
+						<xsd:sequence>
+							<xsd:group ref="ServiceCompetitiveConditionGroup">
+								<xsd:annotation>
+									<xsd:documentation>Details for ServiceCompetitiveCondition.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:group>
+						</xsd:sequence>
+					</xsd:sequence>
+					<xsd:attribute name="id" type="BookingArrangementIdType" use="required"/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="ServiceCompetitiveCondition_VersionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Version of a SERVICE COMPETITIVE CONDITION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="BookingArrangement_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="ServiceCompetitiveConditionGroup">
+						<xsd:annotation>
+							<xsd:documentation>Details for ServiceCompetitiveCondition.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:group>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="ServiceCompetitiveConditionGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for SERVICE COMPETITIVE CONDITION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:sequence>
+					<xsd:group ref="RoutingConstraintInFrameGroup" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Restrictions in what the SERVICE is allowed to do in connection with other SERVICES. If not set, then the rules apply in general.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:group>
+					<xsd:element name="DistanceFromClassical" type="xsd:integer" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Distance in metres to the line/service or classical public transport in general. Builds geometric exclusion zones.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="TemporalDistanceFromClassical" type="xsd:duration" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Temporal distance to the SERVICE / transfer in the RoutingConstraint or classical public transport in general.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="PenaltyDrivingTimeFactor" type="xsd:decimal" default="1.0" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Factor to multiply the classical public drive time with for the calculation of the dominance of the demand responsive traffic.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="PenaltyTransferTimeFactor" type="xsd:decimal" default="1.0" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Factor to multiply the classical public transfer times with for the calculation of the dominance of the demand responsive traffic.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="WalkTimeFactor" type="xsd:decimal" default="1.0" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Factor to multiply walk time for the classical public transport to calculate if the classical public transport still should dominate the demand responsive traffic.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:sequence>
+					<xsd:element name="InterchangeBetweenFlexibleServicesAllowed" type="xsd:boolean" default="false" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Interchange between different flexible services is allowed.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="InterchangeWithConventionalServicesAllowed" type="xsd:boolean" default="false" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Interchange between the flexible service and conventional services is allowed.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ===== SERVICE COMPETITIVE CONDITION ===================================== -->
+	<xsd:element name="ServiceEligibilityCondition" substitutionGroup="BookingArrangement_Dummy">
+		<xsd:annotation>
+			<xsd:documentation>Type for a SERVICE ELIGIBLITY CONDITION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:restriction base="ServiceEligiblityCondition_VersionStructure">
+					<xsd:sequence>
+						<xsd:sequence>
+							<xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+						</xsd:sequence>
+						<xsd:sequence>
+							<xsd:group ref="DataManagedObjectGroup"/>
+						</xsd:sequence>
+						<xsd:sequence>
+							<xsd:group ref="ServiceEligibilityConditionGroup">
+								<xsd:annotation>
+									<xsd:documentation>Details for ServiceEligbilityCondition.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:group>
+						</xsd:sequence>
+					</xsd:sequence>
+					<xsd:attribute name="id" type="BookingArrangementIdType" use="required"/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="ServiceEligiblityCondition_VersionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Version of a SERVICE ELIGIBILITY CONDITION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="BookingArrangement_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="ServiceEligibilityConditionGroup">
+						<xsd:annotation>
+							<xsd:documentation>Details for ServiceEligibilityCondition.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:group>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="ServiceEligibilityConditionGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for SERVICE ELIGIBILITY CONDITION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element ref="UserProfile"/>
+				<xsd:element ref="CommercialProfile"/>
+				<xsd:element ref="ResidentialQualification"/>
+				<xsd:element ref="CompanionProfile"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ======================================================================= -->
+</xsd:schema>
