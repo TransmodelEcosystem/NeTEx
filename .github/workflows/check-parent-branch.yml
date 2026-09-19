@@ -25,11 +25,19 @@ jobs:
             v3.0-wip) parents="v2.1-wip v2.0" ;;
           esac
 
+          target="origin/${{ github.base_ref }}"
+          pr="${{ github.event.pull_request.head.sha }}"
+
+          # Count the commits of the target's parent branch (e.g. v2.0 for
+          # v2.1-wip) found neither in the target branch nor in this PR. An
+          # ordinary PR does not bring them in, so it stays blocked while the
+          # target lags behind. A backport PR does, so it is not blocked by
+          # the very lag it fixes.
           for parent in $parents; do
-            behind=$(git rev-list --count "origin/${{ github.base_ref }}..origin/$parent")
+            behind=$(git rev-list --count "origin/$parent" --not "$target" "$pr")
             if [ "$behind" -gt 0 ]; then
               echo "::error::${{ github.base_ref }} is $behind commit(s) behind $parent. Merge $parent into ${{ github.base_ref }} first."
-              git log --oneline "origin/${{ github.base_ref }}..origin/$parent"
+              git log --oneline "origin/$parent" --not "$target" "$pr"
               exit 1
             fi
           done
