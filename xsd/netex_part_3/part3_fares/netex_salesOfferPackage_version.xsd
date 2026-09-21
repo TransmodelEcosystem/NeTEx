@@ -741,7 +741,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="TransitCarrier" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether intremediate transit carrier has rights.</xsd:documentation>
+					<xsd:documentation>Whether intermediate transit carrier has rights.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="FinalCarrier" type="xsd:boolean" minOccurs="0">
