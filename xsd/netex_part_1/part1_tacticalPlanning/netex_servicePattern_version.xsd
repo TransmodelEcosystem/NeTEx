@@ -324,7 +324,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="ExternalStopPointRef" type="ExternalObjectRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>An alternative code that uniquely identifies the STOP POINT. specifically for use in AVMS systems that require an alias, if. For VDV compatibility. DEPRECATED - use privateCodes. -v2.0</xsd:documentation>
+					<xsd:documentation>An alternative code that uniquely identifies the STOP POINT. Specifically for use in AVMS systems that require an alias, introduced for VDV compatibility. DEPRECATED - use privateCodes. -v2.0</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
