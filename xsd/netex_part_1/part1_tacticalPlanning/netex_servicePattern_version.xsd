@@ -266,7 +266,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="NameSuffix" type="MultilingualString" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Optional Suffix for Name of SCHEDULED STOP POINT.</xsd:documentation>
+					<xsd:documentation>Optional suffix for Name of SCHEDULED STOP POINT.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Description" type="MultilingualString" minOccurs="0">
