@@ -943,7 +943,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="NumberOfBaysWithRecharging" type="xsd:nonNegativeInteger" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Total number of parking places supporting Electric car recharging in PARKING AREA.</xsd:documentation>
+					<xsd:documentation>Total number of parking places supporting electric car recharging in PARKING AREA.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:choice minOccurs="0">
