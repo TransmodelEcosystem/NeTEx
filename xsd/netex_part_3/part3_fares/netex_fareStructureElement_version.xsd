@@ -476,7 +476,7 @@ Rail transport, Roads and Road transport
 	</xsd:group>
 	<xsd:group name="FareStructureElementFactorGroup">
 		<xsd:annotation>
-			<xsd:documentation>FARE STRUCTURE FACTOR Elements for a FARE STRUCTURE ELEMENT.</xsd:documentation>
+			<xsd:documentation>FARE STRUCTURE FACTOR elements for a FARE STRUCTURE ELEMENT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:choice minOccurs="0">
