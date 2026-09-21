@@ -115,7 +115,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="RuleApplicability" type="ZoneRuleApplicabilityEnumeration" default="inside" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Applicability of rule inside (default) or outside of zone</xsd:documentation>
+					<xsd:documentation>Applicability of rule inside (default) or outside of zone.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ZoneUse" type="TransportZoneUseEnumeration" minOccurs="0">
