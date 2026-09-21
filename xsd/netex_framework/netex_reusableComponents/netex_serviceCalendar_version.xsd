@@ -618,7 +618,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="TimebandRef" minOccurs="0" maxOccurs="5"/>
 			<xsd:element name="isAvailable" type="xsd:boolean" default="true" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether availabel on assigned day</xsd:documentation>
+					<xsd:documentation>Whether available on assigned day</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

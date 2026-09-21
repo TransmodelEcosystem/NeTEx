@@ -61,7 +61,7 @@ Rail transport, Roads and Road transport
 	<!-- ===ENTIITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
 	<xsd:group name="SecurityListsInFrameGroup">
 		<xsd:annotation>
-			<xsd:documentation>Elemens for SECURITY LISTs in Frame.</xsd:documentation>
+			<xsd:documentation>Elements for SECURITY LISTs in Frame.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="blacklists" type="blacklistsInFrame_RelStructure" minOccurs="0">
@@ -192,7 +192,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:element name="SecurityListing_Dummy" type="VersionedChildStructure" abstract="true" substitutionGroup="VersionedChild">
 		<xsd:annotation>
-			<xsd:documentation>DUMMY type for SECIRITY LISTING.</xsd:documentation>
+			<xsd:documentation>DUMMY type for SECURITY LISTING.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="SecurityListing" abstract="true" substitutionGroup="SecurityListing_Dummy">

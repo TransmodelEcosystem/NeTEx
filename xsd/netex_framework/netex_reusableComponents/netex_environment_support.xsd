@@ -126,7 +126,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="TiltType" type="TiltTypeEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Coded value of the maximum tilt. See allowed va;ues. +v1.1</xsd:documentation>
+					<xsd:documentation>Coded value of the maximum tilt. See allowed values. +v1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

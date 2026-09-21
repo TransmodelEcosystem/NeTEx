@@ -57,7 +57,7 @@ Rail transport, Roads and Road transport
 				<Type>Standard</Type>
 			</Metadata>
 		</xsd:appinfo>
-		<xsd:documentation>NeTEx: JOURNEY PATTERN identfier types.</xsd:documentation>
+		<xsd:documentation>NeTEx: JOURNEY PATTERN identifier types.</xsd:documentation>
 	</xsd:annotation>
 	<!-- ===JOURNEY PATTERN====================================================== -->
 	<xsd:complexType name="journeyPatternRefs_RelStructure">

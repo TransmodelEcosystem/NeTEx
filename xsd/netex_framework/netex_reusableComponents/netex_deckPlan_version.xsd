@@ -294,7 +294,7 @@
 			<xsd:element ref="ClassOfUseRef" minOccurs="0"/>
 			<xsd:element name="FareClass" type="FareClassEnumeration" default="any" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Edit care class for which capacity is specifyed. Default is any, i.e. capacity is for all classes.</xsd:documentation>
+					<xsd:documentation>Edit care class for which capacity is specified. Default is any, i.e. capacity is for all classes.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="AccessibilityAssessment" minOccurs="0"/>
@@ -752,7 +752,7 @@
 	</xsd:group>
 	<xsd:group name="DeckEntranceClassificationGroup">
 		<xsd:annotation>
-			<xsd:documentation>EClassification lements for a DECK ENTRANCE.</xsd:documentation>
+			<xsd:documentation>Classification elements for a DECK ENTRANCE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="DeckEntranceType" type="DeckEntranceTypeEnumeration" minOccurs="0">

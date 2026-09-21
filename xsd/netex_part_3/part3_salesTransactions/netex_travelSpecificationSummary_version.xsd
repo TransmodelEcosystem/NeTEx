@@ -102,7 +102,7 @@ Rail transport, Roads and Road transport
 	<xsd:include schemaLocation="../../netex_part_5/part5_rc/netex_nm_mobilityService_support.xsd"/>
 	<xsd:element name="TravelSpecificationSummaryView" type="TravelSpecificationSummaryViewStructure">
 		<xsd:annotation>
-			<xsd:documentation>Summary of key aspects of TRAVEL SPECIFICATION. +V1.1. This data should all be derivable from the PARAMATER ASSIGNMENTs. v+1.1</xsd:documentation>
+			<xsd:documentation>Summary of key aspects of TRAVEL SPECIFICATION. +V1.1. This data should all be derivable from the PARAMETER ASSIGNMENTs. v+1.1</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="TravelSpecificationSummaryViewStructure">
@@ -122,7 +122,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:group ref="TravelSpecificationSummaryJourneyGroup">
 				<xsd:annotation>
-					<xsd:documentation>Travel lements for TRAVEL SPECIFICATION.</xsd:documentation>
+					<xsd:documentation>Travel elements for TRAVEL SPECIFICATION.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:group>
 			<xsd:group ref="TravelSpecificationSummaryFareGroup"/>
@@ -133,7 +133,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:complexType name="TravelSpecificationSummaryEndpointStructure">
 		<xsd:annotation>
-			<xsd:documentation>Origin or destnation elements for TRAVEL SPECIFICATION Summary View.</xsd:documentation>
+			<xsd:documentation>Origin or destination elements for TRAVEL SPECIFICATION Summary View.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:group ref="TravelSpecificationSummaryEndPointPlaceGroup"/>
@@ -257,7 +257,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="ServiceFacilitySet" minOccurs="0"/>
 			<xsd:element name="seatEquipments" type="equipments_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Equipments assocated with Seat</xsd:documentation>
+					<xsd:documentation>Equipments associated with Seat</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
