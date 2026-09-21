@@ -194,7 +194,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="appliesTo" type="parkingRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>PaARKIMNGs to which this tariff applies</xsd:documentation>
+					<xsd:documentation>PARKINGs to which this tariff applies.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
