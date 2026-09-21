@@ -575,7 +575,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="PriceUnitRef" minOccurs="0"/>
 			<xsd:element name="url" type="xsd:anyURI" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>URLor rule. with info fmethod to use.</xsd:documentation>
+					<xsd:documentation>URL to information about pricing rules / methods to be applied.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
