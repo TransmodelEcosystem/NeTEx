@@ -142,7 +142,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="RoundingRef" minOccurs="0"/>
 			<xsd:element name="roundings" type="roundings_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Set of Rounding parameters.</xsd:documentation>
+					<xsd:documentation>Set of rounding parameters.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="DayTypeRef" minOccurs="0"/>
