@@ -964,7 +964,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="includes" type="genericParameterAssignments_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Assignments Logically included in this group. Groups are combined according to the Operator.</xsd:documentation>
+					<xsd:documentation>Assignments logically included in this group. Groups are combined according to the Operator.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
