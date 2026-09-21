@@ -196,7 +196,7 @@
 			</xsd:element>
 			<xsd:element name="SymbolMarkingUsualRoute" type="xsd:normalizedString" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Symbal to use to mark normal route.</xsd:documentation>
+					<xsd:documentation>Symbol to use to mark normal route.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
