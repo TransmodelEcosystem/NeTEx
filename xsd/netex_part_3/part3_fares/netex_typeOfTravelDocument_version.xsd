@@ -209,7 +209,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="typesOfMachineReadabilities" type="typesOfMachineReadabilities_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Openended classiifcation of machine readable capabilities compatible with TRAVEL DOCUMENT.</xsd:documentation>
+					<xsd:documentation>Open-ended classifcation of machine readable capabilities compatible with TRAVEL DOCUMENT.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="alternativeNames" type="alternativeNames_RelStructure" minOccurs="0">
