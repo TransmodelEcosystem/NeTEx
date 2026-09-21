@@ -189,7 +189,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="RequiresEmailAddress" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether use of the channel requires the pruchaser to have an email address.</xsd:documentation>
+					<xsd:documentation>Whether use of the channel requires the pruchaser to have an e-mail address.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ContactDetails" type="ContactStructure" minOccurs="0">
