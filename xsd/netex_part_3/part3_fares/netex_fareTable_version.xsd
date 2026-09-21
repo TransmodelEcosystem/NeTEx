@@ -683,7 +683,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="DirectionType" type="RelativeDirectionEnumeration" default="both" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>For fares for DISTANCE MATRIX ELEMENTs, DIRECTION in which price applies.</xsd:documentation>
+					<xsd:documentation>For fares for DISTANCE MATRIX ELEMENTs, DIRECTION to which price applies.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="RoutingType" type="RoutingTypeEnumeration" default="both" minOccurs="0">
