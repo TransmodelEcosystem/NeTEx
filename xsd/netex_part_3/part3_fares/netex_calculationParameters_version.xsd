@@ -126,7 +126,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="PriceUnitRef" minOccurs="0"/>
 			<xsd:element name="priceUnits" type="priceUnits_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Set of Rounding parameters.</xsd:documentation>
+					<xsd:documentation>Set of rounding parameters.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="pricingRules" type="pricingRules_RelStructure" minOccurs="0">
