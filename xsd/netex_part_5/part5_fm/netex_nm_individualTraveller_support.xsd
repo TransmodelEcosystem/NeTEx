@@ -54,7 +54,7 @@ Rail transport, Roads and Road transport
 				<Type>Standard</Type>
 			</Metadata>
 		</xsd:appinfo>
-		<xsd:documentation>NeTEx INDIVIDUAL TRAVELLER Identifier types for</xsd:documentation>
+		<xsd:documentation>Identifier types for NeTEx INDIVIDUAL TRAVELLER./xsd:documentation>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
 	<!-- ====  INDIVIDUAL TRAVELLER ============================================ -->
