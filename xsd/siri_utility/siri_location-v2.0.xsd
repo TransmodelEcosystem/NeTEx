@@ -227,7 +227,7 @@ Lower right corner.
 	</xsd:simpleType>
 	<xsd:simpleType name="VelocityType">
 		<xsd:annotation>
-			<xsd:documentation>Distance (metres per second) ALternative unist may be specified by context.</xsd:documentation>
+			<xsd:documentation>Speed (metres per second). Alternative units may be specified by context.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:nonNegativeInteger"/>
 	</xsd:simpleType>
