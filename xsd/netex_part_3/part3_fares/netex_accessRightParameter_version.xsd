@@ -346,7 +346,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="ValidityParameterAssignmentType" type="RelativeOperatorEnumeration" default="EQ" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Comparison Operator for comparing Validity Elements values. Default is EQ.</xsd:documentation>
+					<xsd:documentation>Comparison operator for comparing Validity element values. Default is EQ.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ValidityParameterGroupingType" type="LogicalOperationEnumeration" default="AND" minOccurs="0">
