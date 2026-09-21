@@ -172,7 +172,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="HasTravelTimeRestrictions" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether there are restrictions on which routes can be used.</xsd:documentation>
+					<xsd:documentation>Whether there are restrictions on travel durations.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="HasRouteRestrictions" type="xsd:boolean" default="false" minOccurs="0">
