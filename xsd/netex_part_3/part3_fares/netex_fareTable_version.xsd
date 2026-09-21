@@ -588,7 +588,7 @@ Rail transport, Roads and Road transport
 			<xsd:group ref="CellHeadingsGroup"/>
 			<xsd:element name="noticeAssignments" type="noticeAssignments_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>NOTICE relating to cell</xsd:documentation>
+					<xsd:documentation>NOTICE relating to cell.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
