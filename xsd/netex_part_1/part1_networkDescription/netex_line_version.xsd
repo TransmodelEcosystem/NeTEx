@@ -113,7 +113,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="Network" minOccurs="0"/>
 			<xsd:element name="additionalNetworks" type="networksInFrame_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Additional networks referenced in frame in addition to the primary NETWORK..</xsd:documentation>
+					<xsd:documentation>Additional networks referenced in frame in addition to the primary NETWORK.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
