@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==== Splošne enotne vozovnice v integriranem javnem potniškem prometu ======
+     (General unified tickets for integrated public passenger transport)
+Names as used by DUJPP (dujpp.si/vozovnice.html, Slovenian) and SŽ (potniski.sz.si, English page).
+An example of the IJPP general unified ticket (splošna enotna vozovnica) fare products in Slovenia.
+Describes, in full NeTEx v2.0, the unified/general ticket of IJPP ("Integrirani javni potniški promet",
+the integrated public passenger transport system of Slovenia):
+  Origin to Destination, 1 calendar month, Time-based, Distance-based, Mode-dependent, Capping rules
+  (unlimited travel throughout Slovenia), Group tickets, Discounts, Children (or any other
+  type of user), Single fare media (IJPP chip card), Combined fare product.
+  "Prices ... are valid for both bus and rail ... An exception applies to higher-type trains (IC, MV, EC,
+  EN, and ICS), for which an additional fee must be paid."
+Fare product description (EFIP template, one table per fare product, with EFIP fare product types):
+  "Fare product - Description IJPP Splosne enotne vozovnice.docx" in the EFIP "Fare products" folder.
+
+MODELLING
+=========
+- Origin to Destination -> the REAL published DistanceMatrixElements Ljubljana <-> Maribor (rail stations)
+    and Ljubljana AP <-> Maribor AP (bus stations), both directions, reused with their NAP ids.
+- 1 calendar month / Time-based -> UsageValidityPeriod monthlyPass, StandardDuration P1M.
+- Distance-based -> the IJPP tariff is banded by distance (DUJPP price list). The NAP DistanceMatrixElements
+    carry no <Distance>, so none is invented here; the distance dependency is visible in the real single-ticket
+    prices of the same O-D pairs (see "Mode-dependent") and is explained below for the monthly ticket.
+- Mode-dependent / Combined -> ONE PreassignedFareProduct with two ValidableElements, one per mode
+    (TransportModes bus / rail), each limited to the IJPP GroupOfLines and to its mode's O-D pair.
+    The two modes really are priced on different distances for the same town pair: single ticket bus
+    Ljubljana AP-Maribor AP EUR 14.00 (125-130 km band) vs rail Ljubljana-Maribor EUR 16.50 (>150 km band).
+- Capping rules -> CappedDiscountRight/CappingRule (CappingPeriod=month, no MaximumDistance) on the monthly
+    product. Real mechanism: the monthly price stops rising at the 15-20 km band (EUR 70.00) and the DUJPP
+    table marks those capped cells as "Vozovnica omogoča potovanje po celotnem območju RS" (valid across
+    the whole of Slovenia). Using CappedDiscountRight for this is a modelling interpretation.
+- Discounts / Children (or other user types) -> UserProfiles adult / child 6-15 (50%) / child under 6 (free).
+- Group tickets -> the real "Vikend družinska vozovnica" (weekend family ticket), a separate product with a
+    GroupTicket (MaximumNumberOfPersons=5) and a flat price.
+- Single fare media -> one SalesOfferPackage (IJPP smart card / chip) carrying all products.
+- Higher category train surcharge -> two SupplementProducts: per trip (EUR 2.00) and flat-rate monthly
+    (EUR 30.00, the one a monthly-ticket holder would normally buy).
+- Prices -> one FareTable per product (pricesFor product, usedIn tariff); for the monthly ticket one Cell per
+    DistanceMatrixElement and UserProfile (EUR 70.00 / 35.00 / 0.00, with the DiscountingRule applied).
+
+EFIP FARE PRODUCT TYPE CLASSIFICATION ("Fare product types", EFIP)
+=================================================================
+Part of the EFIP methodology; documented here only, not encoded as NeTEx objects.
+  Monthly O-D ticket Ljubljana-Maribor   PP-1, ST-2, SCT-2, SCT-3, SCT-4, SCT-7, SLT-1, CT-2
+  Per-trip higher-type train supplement  SLT-2, SCT-4, CT-1
+  Monthly higher-type train supplement   SLT-2, SCT-2, SCT-4, CT-1
+  Capping (CappedDiscountRight)          SCT-5
+  Weekend family ticket                  SCT-1, SCT-2
+  IJPP card sales offer package          SLT-4
+Notes: ST-2 is a single-ticket type in EFIP; it is given to the monthly ticket because the O-D single fare
+is its pricing basis (monthly = 26 x single, capped at EUR 70) - the single ticket itself is not modelled
+here (its prices are published in the NAP network export). CT-1 marks the supplements, which are only valid
+together with a base IJPP ticket (FareProductRef in the SupplementProducts). Not applicable: ST-1, ST-3..ST-7, PP-2, PP-3, SCT-6,
+SCT-8, SLT-3, SLT-5.
+
+PROFILE / CONVENTIONS
+=====================
+Follows the Slovenian NAP profile of PR #765 (timetable example examples/standards/slovenia/NETEX_PI_01_SI_NAP_
+LINE_SI_SI0_Line_1003_IJPP_20240423.xml in that PR, not part of the v2.1-wip-efip branch) and the FareFrame actually published in NAP.si/NETEX_PI_01_SI_NAP_NETWORK_20260225.XML:
+id pattern "SI:SI0:<Class>:<uuid>:<source>", ":IJPP"/":NAP" suffixes, no <codespaces>; access rights via
+TypeOfAccessRightAssignmentRef "ntx:can_access" and validity via GroupOfLinesRef to the NAP "IJPP Lines" group;
+TypeOfTariffRef "ntx:point_to_point"; DistanceMatrixElement ids derived from the two ScheduledStopPoint ids.
+External references (NOT defined in this file, defined in the NAP network export or the ntx vocabulary):
+  SI:SI0:GroupOfLines:f77ed834-5c71-4043-846e-181f43e1193e:IJPP ("IJPP Lines", 2337 lines), ntx:* types.
+
+
+-->
+<PublicationDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.netex.org.uk/netex" version="2.0:EU_PI-1.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2026-09-24T00:00:00Z</PublicationTimestamp>
+	<ParticipantRef>NAP</ParticipantRef>
+	<dataObjects>
+		<CompositeFrame id="SI:SI0:CompositeFrame:EU_PI_FARE_PRODUCT_b6e2a7f4-3d18-4c9a-8e51-0af729c6d3b4:NAP" created="2026-09-24T00:00:00Z" version="any">
+			<FrameDefaults>
+				<DefaultLocale>
+					<TimeZone>CET</TimeZone>
+					<SummerTimeZoneOffset>+1</SummerTimeZoneOffset>
+					<DefaultLanguage>sl</DefaultLanguage>
+				</DefaultLocale>
+				<DefaultLocationSystem>WGS84</DefaultLocationSystem>
+				<DefaultCurrency>EUR</DefaultCurrency>
+			</FrameDefaults>
+			<frames>
+				<!-- ===================== RESOURCE FRAME ===================== -->
+				<ResourceFrame id="SI:SI0:ResourceFrame:EU_PI_COMMON_b6e2a7f4-3d18-4c9a-8e51-0af729c6d3b4:NAP" created="2026-09-24T00:00:00Z" version="any">
+					<typesOfValue>
+						<!-- The IJPP card: "kartica, na katero je naložena IJPP aplikacija" (DUJPP price list) -->
+						<TypeOfTravelDocument id="SI:SI0:TypeOfTravelDocument:00000000-1177-00f0-0000-000000000033:IJPP" created="2026-09-24T00:00:00Z" version="1">
+							<Name>IJPP kartica</Name>
+							<Description>Smart card with the IJPP application loaded; required for all IJPP tickets except paper single tickets bought on board</Description>
+							<IsCard>true</IsCard>
+							<IsSmartCard>true</IsSmartCard>
+							<MediaType>smartCard</MediaType>
+							<MachineReadable>chip</MachineReadable>
+						</TypeOfTravelDocument>
+					</typesOfValue>
+					<organisations>
+						<!-- NAP network export, line 2925972 -->
+						<Operator id="SI:SI0:Operator:00000000-1177-0001-0000-000000000489:IJPP" created="2023-10-06T04:51:58.9174842Z" version="1">
+							<PublicCode/>
+							<Name>SŽ - Potniški promet, d.o.o.</Name>
+							<ContactDetails>
+								<Email/>
+								<Phone/>
+								<Url>http://slo-zeleznice.si/</Url>
+							</ContactDetails>
+							<OrganisationType>operator</OrganisationType>
+						</Operator>
+					</organisations>
+				</ResourceFrame>
+				<!-- ===================== SITE FRAME (copied from the NAP.si network export) ===================== -->
+				<SiteFrame id="SI:SI0:SiteFrame:b6e2a7f4-3d18-4c9a-8e51-0af729c6d3b4:NAP" created="2026-09-24T00:00:00Z" version="any">
+					<stopPlaces>
+						<StopPlace id="SI:SI0:StopPlace:00000000-1177-0002-0000-000000021633:IJPP" created="2024-09-08T02:55:18.9798296Z" version="1">
+							<Name>Ljubljana</Name>
+							<PrivateCode>136755</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>14.5129236414014</Longitude>
+									<Latitude>46.0585089244399</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="monomodalStopPlace"/>
+							</placeTypes>
+							<AtCentre>true</AtCentre>
+							<TransportMode>rail</TransportMode>
+							<StopPlaceType>railStation</StopPlaceType>
+							<quays>
+								<Quay id="SI:SI0:Quay:00000000-1177-0003-0000-0000001121f4:IJPP" created="2024-09-08T02:55:18.9798296Z" version="1">
+									<Name>Ljubljana 01</Name>
+									<PrivateCode>1122804</PrivateCode>
+									<Covered>unknown</Covered>
+									<TransportMode>rail</TransportMode>
+									<QuayType>railPlatform</QuayType>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="SI:SI0:StopPlace:00000000-1177-0002-0000-0000000216a0:IJPP" created="2024-09-08T02:55:18.9798296Z" version="1">
+							<Name>Maribor</Name>
+							<PrivateCode>136864</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>15.6583269889928</Longitude>
+									<Latitude>46.5622239210278</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="monomodalStopPlace"/>
+							</placeTypes>
+							<AtCentre>true</AtCentre>
+							<TransportMode>rail</TransportMode>
+							<StopPlaceType>railStation</StopPlaceType>
+							<quays>
+								<Quay id="SI:SI0:Quay:00000000-1177-0003-0000-000000112261:IJPP" created="2024-09-08T02:55:18.9798296Z" version="1">
+									<Name>Maribor 01</Name>
+									<PrivateCode>1122913</PrivateCode>
+									<Covered>unknown</Covered>
+									<TransportMode>rail</TransportMode>
+									<QuayType>railPlatform</QuayType>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="SI:SI0:StopPlace:00000000-1177-0002-0000-000000021eaa:IJPP" created="2023-10-06T04:51:58.9174842Z" version="1">
+							<Name>Ljubljana AP</Name>
+							<PrivateCode>138922</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>14.5087855753671</Longitude>
+									<Latitude>46.0578328494517</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="monomodalStopPlace"/>
+							</placeTypes>
+							<AtCentre>true</AtCentre>
+							<TransportMode>bus</TransportMode>
+							<StopPlaceType>busStation</StopPlaceType>
+							<quays>
+								<Quay id="SI:SI0:Quay:00000000-1177-0003-0000-00000011322a:IJPP" created="2023-10-06T04:51:58.9174842Z" version="1">
+									<Name>Ljubljana AP 01</Name>
+									<PrivateCode>1126954</PrivateCode>
+									<Covered>unknown</Covered>
+									<TransportMode>bus</TransportMode>
+									<QuayType>busStop</QuayType>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="SI:SI0:StopPlace:00000000-1177-0002-0000-000000021f79:IJPP" created="2023-10-06T04:51:58.9174842Z" version="1">
+							<Name>Maribor AP</Name>
+							<PrivateCode>139129</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>15.6557885112761</Longitude>
+									<Latitude>46.5595273032237</Latitude>
+								</Location>
+							</Centroid>
+							<placeTypes>
+								<TypeOfPlaceRef ref="monomodalStopPlace"/>
+							</placeTypes>
+							<AtCentre>true</AtCentre>
+							<TransportMode>bus</TransportMode>
+							<StopPlaceType>busStation</StopPlaceType>
+							<quays>
+								<Quay id="SI:SI0:Quay:00000000-1177-0003-0000-0000001133c5:IJPP" created="2023-10-06T04:51:58.9174842Z" version="1">
+									<Name>Maribor AP 01</Name>
+									<PrivateCode>1127365</PrivateCode>
+									<Covered>unknown</Covered>
+									<TransportMode>bus</TransportMode>
+									<QuayType>busStop</QuayType>
+								</Quay>
+							</quays>
+						</StopPlace>
+					</stopPlaces>
+				</SiteFrame>
+				<!-- ===================== SERVICE FRAME (copied from the NAP network export) ===================== -->
+				<ServiceFrame id="SI:SI0:ServiceFrame:EU_PI_NETWORK_b6e2a7f4-3d18-4c9a-8e51-0af729c6d3b4:NAP" created="2026-09-24T00:00:00Z" version="any">
+					<scheduledStopPoints>
+						<ScheduledStopPoint id="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-0000001121f4:IJPP" created="2024-09-08T02:55:18.9798296Z" version="1">
+							<Name>Ljubljana</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-000000112261:IJPP" created="2024-09-08T02:55:18.9798296Z" version="1">
+							<Name>Maribor</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-00000011322a:IJPP" created="2023-10-06T04:51:58.9174842Z" version="1">
+							<Name>Ljubljana AP</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-0000001133c5:IJPP" created="2023-10-06T04:51:58.9174842Z" version="1">
+							<Name>Maribor AP</Name>
+						</ScheduledStopPoint>
+					</scheduledStopPoints>
+					<stopAssignments>
+						<PassengerStopAssignment id="SI:SI0:PassengerStopAssignment:00000000-1177-0003-0000-0000001121f4:IJPP" created="2024-09-08T02:55:18.9798296Z" version="1" order="1">
+							<ScheduledStopPointRef version="1" ref="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-0000001121f4:IJPP"/>
+							<StopPlaceRef version="1" ref="SI:SI0:StopPlace:00000000-1177-0002-0000-000000021633:IJPP"/>
+							<QuayRef version="1" ref="SI:SI0:Quay:00000000-1177-0003-0000-0000001121f4:IJPP"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="SI:SI0:PassengerStopAssignment:00000000-1177-0003-0000-000000112261:IJPP" created="2024-09-08T02:55:18.9798296Z" version="1" order="1">
+							<ScheduledStopPointRef version="1" ref="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-000000112261:IJPP"/>
+							<StopPlaceRef version="1" ref="SI:SI0:StopPlace:00000000-1177-0002-0000-0000000216a0:IJPP"/>
+							<QuayRef version="1" ref="SI:SI0:Quay:00000000-1177-0003-0000-000000112261:IJPP"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="SI:SI0:PassengerStopAssignment:00000000-1177-0003-0000-00000011322a:IJPP" created="2023-10-06T04:51:58.9174842Z" version="1" order="1">
+							<ScheduledStopPointRef version="1" ref="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-00000011322a:IJPP"/>
+							<StopPlaceRef version="1" ref="SI:SI0:StopPlace:00000000-1177-0002-0000-000000021eaa:IJPP"/>
+							<QuayRef version="1" ref="SI:SI0:Quay:00000000-1177-0003-0000-00000011322a:IJPP"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="SI:SI0:PassengerStopAssignment:00000000-1177-0003-0000-0000001133c5:IJPP" created="2023-10-06T04:51:58.9174842Z" version="1" order="1">
+							<ScheduledStopPointRef version="1" ref="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-0000001133c5:IJPP"/>
+							<StopPlaceRef version="1" ref="SI:SI0:StopPlace:00000000-1177-0002-0000-000000021f79:IJPP"/>
+							<QuayRef version="1" ref="SI:SI0:Quay:00000000-1177-0003-0000-0000001133c5:IJPP"/>
+						</PassengerStopAssignment>
+					</stopAssignments>
+				</ServiceFrame>
+				<!-- ===================== FARE FRAME ===================== -->
+				<FareFrame id="SI:SI0:FareFrame:EU_PI_FARE_PRODUCT_b6e2a7f4-3d18-4c9a-8e51-0af729c6d3b4:NAP" created="2026-09-24T00:00:00Z" version="any">
+					<Name>
+						<Text lang="sl">Splošne enotne vozovnice v integriranem javnem potniškem prometu</Text>
+						<Text lang="en">General unified tickets for integrated public passenger transport</Text>
+					</Name>
+					<PricingParameterSet id="SI:SI0:PricingParameterSet:00000000-1177-00f0-0000-000000000029:IJPP" version="1">
+						<pricingRules>
+							<DiscountingRule id="SI:SI0:DiscountingRule:00000000-1177-00f0-0000-000000000025:IJPP" version="1">
+								<Name>Brez popusta (adult, 0%)</Name>
+								<DiscountAsPercentage>0</DiscountAsPercentage>
+							</DiscountingRule>
+							<DiscountingRule id="SI:SI0:DiscountingRule:00000000-1177-00f0-0000-000000000023:IJPP" version="1">
+								<Name>Otroci do vključno 15 let, 50%</Name>
+								<DiscountAsPercentage>50</DiscountAsPercentage>
+							</DiscountingRule>
+							<DiscountingRule id="SI:SI0:DiscountingRule:00000000-1177-00f0-0000-000000000024:IJPP" version="1">
+								<Name>Otroci do 6 let, brezplačno (100%)</Name>
+								<DiscountAsPercentage>100</DiscountAsPercentage>
+							</DiscountingRule>
+						</pricingRules>
+					</PricingParameterSet>
+					<tariffs>
+						<!-- ===== MONTHLY O-D TARIFF ===== -->
+						<Tariff id="SI:SI0:Tariff:00000000-1177-00f0-0000-000000000001:IJPP" created="2026-09-24T00:00:00Z" version="1">
+							<ValidBetween>
+								<FromDate>2025-08-01T00:00:00</FromDate>
+							</ValidBetween>
+							<Name>IJPP splošna mesečna imenska vozovnica</Name>
+							<TypeOfTariffRef ref="ntx:point_to_point"/>
+							<TariffBasis>pointToPoint</TariffBasis>
+							<fareStructureElements>
+								<FareStructureElement id="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-000000000002:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Dostop - avtobus, Ljubljana AP - Maribor AP</Name>
+									<TariffBasis>pointToPoint</TariffBasis>
+									<distanceMatrixElements>
+										<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-33c50011322a:IJPP"/>
+										<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-322a001133c5:IJPP"/>
+									</distanceMatrixElements>
+									<GenericParameterAssignment id="SI:SI0:GenericParameterAssignment:00000000-1177-00f0-0000-000000000003:IJPP" version="1" order="1">
+										<TypeOfAccessRightAssignmentRef ref="ntx:can_access"/>
+										<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
+										<validityParameters>
+											<TransportModes>bus</TransportModes>
+											<GroupOfLinesRef ref="SI:SI0:GroupOfLines:f77ed834-5c71-4043-846e-181f43e1193e:IJPP"/>
+										</validityParameters>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<FareStructureElement id="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-000000000004:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Dostop - vlak, Ljubljana - Maribor</Name>
+									<TariffBasis>pointToPoint</TariffBasis>
+									<distanceMatrixElements>
+										<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-2261001121f4:IJPP"/>
+										<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-21f400112261:IJPP"/>
+									</distanceMatrixElements>
+									<GenericParameterAssignment id="SI:SI0:GenericParameterAssignment:00000000-1177-00f0-0000-000000000005:IJPP" version="1" order="1">
+										<TypeOfAccessRightAssignmentRef ref="ntx:can_access"/>
+										<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
+										<validityParameters>
+											<TransportModes>rail</TransportModes>
+											<GroupOfLinesRef ref="SI:SI0:GroupOfLines:f77ed834-5c71-4043-846e-181f43e1193e:IJPP"/>
+										</validityParameters>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<FareStructureElement id="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-000000000006:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Upravičenost (eligible user types)</Name>
+									<GenericParameterAssignment id="SI:SI0:GenericParameterAssignment:00000000-1177-00f0-0000-000000000007:IJPP" version="1" order="1">
+										<TypeOfAccessRightAssignmentRef ref="ntx:eligible"/>
+										<LimitationGroupingType>XOR</LimitationGroupingType>
+										<limitations>
+											<UserProfile id="SI:SI0:UserProfile:00000000-1177-00f0-0000-000000000008:IJPP" created="2026-09-24T00:00:00Z" version="1">
+												<Name>Odrasli (adult)</Name>
+												<MinimumAge>16</MinimumAge>
+											</UserProfile>
+											<UserProfile id="SI:SI0:UserProfile:00000000-1177-00f0-0000-000000000009:IJPP" created="2026-09-24T00:00:00Z" version="1">
+												<Name>Otroci 6 do vključno 15 let (children 6-15)</Name>
+												<MinimumAge>6</MinimumAge>
+												<MaximumAge>15</MaximumAge>
+											</UserProfile>
+											<UserProfile id="SI:SI0:UserProfile:00000000-1177-00f0-0000-00000000003a:IJPP" created="2026-09-24T00:00:00Z" version="1">
+												<Name>Otroci do 6 let (children under 6)</Name>
+												<MaximumAge>5</MaximumAge>
+											</UserProfile>
+										</limitations>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<FareStructureElement id="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-00000000000a:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Pogoji uporabe - mesečna vozovnica</Name>
+									<TariffBasis>period</TariffBasis>
+									<GenericParameterAssignment id="SI:SI0:GenericParameterAssignment:00000000-1177-00f0-0000-00000000000b:IJPP" version="1" order="1">
+										<TypeOfAccessRightAssignmentRef ref="ntx:condition_of_use"/>
+										<LimitationGroupingType>AND</LimitationGroupingType>
+										<limitations>
+											<RoundTrip id="SI:SI0:RoundTrip:00000000-1177-00f0-0000-00000000000c:IJPP" created="2026-09-24T00:00:00Z" version="1">
+												<Name>V obe smeri</Name>
+												<TripType>single</TripType>
+											</RoundTrip>
+											<FrequencyOfUse id="SI:SI0:FrequencyOfUse:00000000-1177-00f0-0000-00000000000d:IJPP" created="2026-09-24T00:00:00Z" version="1">
+												<Name>Neomejeno število voženj</Name>
+												<FrequencyOfUseType>unlimited</FrequencyOfUseType>
+											</FrequencyOfUse>
+											<!-- "velja od prvega dne meseca ... do prvega delovnega dne naslednjega meseca" -->
+											<UsageValidityPeriod id="SI:SI0:UsageValidityPeriod:00000000-1177-00f0-0000-00000000000e:IJPP" created="2026-09-24T00:00:00Z" version="1">
+												<Name>Koledarski mesec (calendar month, to the first working day of the next month)</Name>
+												<ValidityPeriodType>monthlyPass</ValidityPeriodType>
+												<StandardDuration>P1M</StandardDuration>
+											</UsageValidityPeriod>
+										</limitations>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+							</fareStructureElements>
+							<distanceMatrixElements>
+								<!-- The four real NAP DistanceMatrixElements (no <Distance> is published for them) -->
+								<DistanceMatrixElement id="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-2261001121f4:IJPP" created="2024-09-08T02:55:18.9798296Z" version="1">
+									<Name>Ljubljana - Maribor</Name>
+									<StartStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-0000001121f4:IJPP"/>
+									<EndStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-000000112261:IJPP"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-21f400112261:IJPP" created="2024-09-08T02:55:18.9798296Z" version="1">
+									<Name>Maribor - Ljubljana</Name>
+									<StartStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-000000112261:IJPP"/>
+									<EndStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-0000001121f4:IJPP"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-33c50011322a:IJPP" created="2025-01-09T11:13:37.8270403Z" version="1">
+									<Name>Ljubljana AP - Maribor AP</Name>
+									<StartStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-00000011322a:IJPP"/>
+									<EndStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-0000001133c5:IJPP"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-322a001133c5:IJPP" created="2025-01-09T11:13:37.8270403Z" version="1">
+									<Name>Maribor AP - Ljubljana AP</Name>
+									<StartStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-0000001133c5:IJPP"/>
+									<EndStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-00000011322a:IJPP"/>
+								</DistanceMatrixElement>
+							</distanceMatrixElements>
+							<fareTables>
+								<FareTableRef ref="SI:SI0:FareTable:00000000-1177-00f0-0000-000000000060:IJPP"/>
+							</fareTables>
+						</Tariff>
+						<!-- ===== SUPPLEMENT TARIFF: higher-type trains (IC, MV, EC, EN, ICS) ===== -->
+						<Tariff id="SI:SI0:Tariff:00000000-1177-00f0-0000-000000000016:IJPP" created="2026-09-24T00:00:00Z" version="1">
+							<ValidBetween>
+								<FromDate>2026-07-01T00:00:00</FromDate>
+							</ValidBetween>
+							<Name>Dodatek za vlake višje vrste</Name>
+							<OperatorRef ref="SI:SI0:Operator:00000000-1177-0001-0000-000000000489:IJPP"/>
+							<TariffBasis>flat</TariffBasis>
+							<fareStructureElements>
+								<FareStructureElement id="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-000000000017:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Dostop - vlaki višje vrste (IC, MV, EC, EN, ICS)</Name>
+									<TariffBasis>flat</TariffBasis>
+									<GenericParameterAssignment id="SI:SI0:GenericParameterAssignment:00000000-1177-00f0-0000-000000000018:IJPP" version="1" order="1">
+										<TypeOfAccessRightAssignmentRef ref="ntx:can_access"/>
+										<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
+										<validityParameters>
+											<TransportModes>rail</TransportModes>
+											<!-- Interpretation: NeTEx has no IC/ICS category value; longDistance is the closest submode -->
+											<TransportSubmode>
+												<RailSubmode>longDistance</RailSubmode>
+											</TransportSubmode>
+										</validityParameters>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<FareStructureElement id="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-00000000004c:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Pogoji - mesečni dodatek (monthly flat-rate supplement)</Name>
+									<TariffBasis>period</TariffBasis>
+									<GenericParameterAssignment id="SI:SI0:GenericParameterAssignment:00000000-1177-00f0-0000-00000000004d:IJPP" version="1" order="1">
+										<TypeOfAccessRightAssignmentRef ref="ntx:condition_of_use"/>
+										<LimitationGroupingType>AND</LimitationGroupingType>
+										<limitations>
+											<FrequencyOfUse id="SI:SI0:FrequencyOfUse:00000000-1177-00f0-0000-000000000054:IJPP" created="2026-09-24T00:00:00Z" version="1">
+												<Name>Neomejeno število voženj z vlaki višje vrste</Name>
+												<FrequencyOfUseType>unlimited</FrequencyOfUseType>
+											</FrequencyOfUse>
+											<UsageValidityPeriod id="SI:SI0:UsageValidityPeriod:00000000-1177-00f0-0000-00000000004e:IJPP" created="2026-09-24T00:00:00Z" version="1">
+												<Name>1 mesec</Name>
+												<ValidityPeriodType>monthlyPass</ValidityPeriodType>
+												<StandardDuration>P1M</StandardDuration>
+											</UsageValidityPeriod>
+										</limitations>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+							</fareStructureElements>
+							<fareTables>
+								<FareTableRef ref="SI:SI0:FareTable:00000000-1177-00f0-0000-000000000070:IJPP"/>
+								<FareTableRef ref="SI:SI0:FareTable:00000000-1177-00f0-0000-000000000072:IJPP"/>
+							</fareTables>
+						</Tariff>
+						<!-- ===== WEEKEND FAMILY (GROUP) TARIFF ===== -->
+						<Tariff id="SI:SI0:Tariff:00000000-1177-00f0-0000-00000000003b:IJPP" created="2026-09-24T00:00:00Z" version="1">
+							<ValidBetween>
+								<FromDate>2025-08-01T00:00:00</FromDate>
+							</ValidBetween>
+							<Name>Vikend družinska vozovnica</Name>
+							<TariffBasis>group</TariffBasis>
+							<fareStructureElements>
+								<FareStructureElement id="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-000000000045:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Dostop - celotno območje RS (any relation in Slovenia)</Name>
+									<TariffBasis>flat</TariffBasis>
+									<GenericParameterAssignment id="SI:SI0:GenericParameterAssignment:00000000-1177-00f0-0000-000000000046:IJPP" version="1" order="1">
+										<TypeOfAccessRightAssignmentRef ref="ntx:can_access"/>
+										<validityParameters>
+											<GroupOfLinesRef ref="SI:SI0:GroupOfLines:f77ed834-5c71-4043-846e-181f43e1193e:IJPP"/>
+										</validityParameters>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<FareStructureElement id="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-00000000003c:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Pogoji - vikend družinska vozovnica</Name>
+									<TariffBasis>group</TariffBasis>
+									<GenericParameterAssignment id="SI:SI0:GenericParameterAssignment:00000000-1177-00f0-0000-00000000003d:IJPP" version="1" order="1">
+										<TypeOfAccessRightAssignmentRef ref="ntx:condition_of_use"/>
+										<LimitationGroupingType>AND</LimitationGroupingType>
+										<limitations>
+											<FrequencyOfUse id="SI:SI0:FrequencyOfUse:00000000-1177-00f0-0000-000000000047:IJPP" created="2026-09-24T00:00:00Z" version="1">
+												<Name>Neomejeno število potovanj</Name>
+												<FrequencyOfUseType>unlimited</FrequencyOfUseType>
+											</FrequencyOfUse>
+											<UsageValidityPeriod id="SI:SI0:UsageValidityPeriod:00000000-1177-00f0-0000-000000000048:IJPP" created="2026-09-24T00:00:00Z" version="1">
+												<Name>Sobote, nedelje in dela prosti prazniki, največ 5 zaporednih dni</Name>
+												<ValidityPeriodType>weekendPass</ValidityPeriodType>
+											</UsageValidityPeriod>
+											<GroupTicket id="SI:SI0:GroupTicket:00000000-1177-00f0-0000-00000000003e:IJPP" created="2026-09-24T00:00:00Z" version="1">
+												<Name>Do 5 oseb, en potnik je otrok do 15 let</Name>
+												<MaximumNumberOfPersons>5</MaximumNumberOfPersons>
+											</GroupTicket>
+										</limitations>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+							</fareStructureElements>
+							<fareTables>
+								<FareTableRef ref="SI:SI0:FareTable:00000000-1177-00f0-0000-000000000074:IJPP"/>
+							</fareTables>
+						</Tariff>
+					</tariffs>
+					<!-- ===== FARE PRODUCTS ===== -->
+					<fareProducts>
+						<PreassignedFareProduct id="SI:SI0:PreassignedFareProduct:00000000-1177-00f0-0000-000000000011:IJPP" created="2026-09-24T00:00:00Z" version="1">
+							<Name>IJPP mesečna imenska vozovnica Ljubljana - Maribor</Name>
+							<Description>Combined bus + rail named monthly ticket on the relation Ljubljana - Maribor, valid on all IJPP operators; higher-type trains need a supplement.</Description>
+							<validableElements>
+								<ValidableElement id="SI:SI0:ValidableElement:00000000-1177-00f0-0000-000000000012:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Avtobus</Name>
+									<fareStructureElements>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-000000000002:IJPP"/>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-000000000006:IJPP"/>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-00000000000a:IJPP"/>
+									</fareStructureElements>
+								</ValidableElement>
+								<ValidableElement id="SI:SI0:ValidableElement:00000000-1177-00f0-0000-000000000013:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Vlak</Name>
+									<fareStructureElements>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-000000000004:IJPP"/>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-000000000006:IJPP"/>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-00000000000a:IJPP"/>
+									</fareStructureElements>
+								</ValidableElement>
+							</validableElements>
+							<accessRightsInProduct>
+								<AccessRightInProduct id="SI:SI0:AccessRightInProduct:00000000-1177-00f0-0000-000000000014:IJPP" version="1" order="1">
+									<Name>Avtobus</Name>
+									<IsFirstInSequence>true</IsFirstInSequence>
+									<IsLastInSequence>true</IsLastInSequence>
+									<ValidableElementRef ref="SI:SI0:ValidableElement:00000000-1177-00f0-0000-000000000012:IJPP"/>
+								</AccessRightInProduct>
+								<AccessRightInProduct id="SI:SI0:AccessRightInProduct:00000000-1177-00f0-0000-000000000015:IJPP" version="1" order="2">
+									<Name>Vlak</Name>
+									<IsFirstInSequence>true</IsFirstInSequence>
+									<IsLastInSequence>true</IsLastInSequence>
+									<ValidableElementRef ref="SI:SI0:ValidableElement:00000000-1177-00f0-0000-000000000013:IJPP"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+							<ProductType>periodPass</ProductType>
+						</PreassignedFareProduct>
+						<SupplementProduct id="SI:SI0:SupplementProduct:00000000-1177-00f0-0000-00000000001b:IJPP" created="2026-09-24T00:00:00Z" version="1">
+							<Name>Dodatek za vlake višje vrste (IC, MV, EC, EN, ICS)</Name>
+							<Description>Per-trip supplement: EUR 2.00 bought before boarding at a sales point or ticket machine (priced below), EUR 4.00 on board. Bought for a whole relation it also covers a change to another higher-type train. Monthly-ticket holders can buy the flat-rate monthly supplement instead.</Description>
+							<OperatorRef ref="SI:SI0:Operator:00000000-1177-0001-0000-000000000489:IJPP"/>
+							<FareProductRef ref="SI:SI0:PreassignedFareProduct:00000000-1177-00f0-0000-000000000011:IJPP"/>
+							<validableElements>
+								<ValidableElement id="SI:SI0:ValidableElement:00000000-1177-00f0-0000-000000000019:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Vlak višje vrste</Name>
+									<fareStructureElements>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-000000000017:IJPP"/>
+									</fareStructureElements>
+								</ValidableElement>
+							</validableElements>
+							<accessRightsInProduct>
+								<AccessRightInProduct id="SI:SI0:AccessRightInProduct:00000000-1177-00f0-0000-00000000001a:IJPP" version="1" order="1">
+									<IsFirstInSequence>true</IsFirstInSequence>
+									<IsLastInSequence>true</IsLastInSequence>
+									<ValidableElementRef ref="SI:SI0:ValidableElement:00000000-1177-00f0-0000-000000000019:IJPP"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+							<ProductType>supplement</ProductType>
+						</SupplementProduct>
+						<SupplementProduct id="SI:SI0:SupplementProduct:00000000-1177-00f0-0000-00000000004f:IJPP" created="2026-09-24T00:00:00Z" version="1">
+							<Name>Mesečni dodatek za vlake višje vrste za splošne IJPP vozovnice</Name>
+							<Description>Flat-rate monthly supplement for general IJPP tickets (also IJPP tickets for over-65s and pensioners): unlimited use of higher-type trains (IC, MV, EC, EN, ICS) for the month. EUR 30.00; sold only at a passenger ticket office, not on board. Annual variant EUR 240.00; for subsidised IJPP school tickets EUR 10.00 / EUR 80.00 (not modelled separately).</Description>
+							<OperatorRef ref="SI:SI0:Operator:00000000-1177-0001-0000-000000000489:IJPP"/>
+							<FareProductRef ref="SI:SI0:PreassignedFareProduct:00000000-1177-00f0-0000-000000000011:IJPP"/>
+							<validableElements>
+								<ValidableElement id="SI:SI0:ValidableElement:00000000-1177-00f0-0000-000000000050:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Vlaki višje vrste, 1 mesec</Name>
+									<fareStructureElements>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-000000000017:IJPP"/>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-00000000004c:IJPP"/>
+									</fareStructureElements>
+								</ValidableElement>
+							</validableElements>
+							<accessRightsInProduct>
+								<AccessRightInProduct id="SI:SI0:AccessRightInProduct:00000000-1177-00f0-0000-000000000051:IJPP" version="1" order="1">
+									<IsFirstInSequence>true</IsFirstInSequence>
+									<IsLastInSequence>true</IsLastInSequence>
+									<ValidableElementRef ref="SI:SI0:ValidableElement:00000000-1177-00f0-0000-000000000050:IJPP"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+							<ProductType>supplement</ProductType>
+						</SupplementProduct>
+						<CappedDiscountRight id="SI:SI0:CappedDiscountRight:00000000-1177-00f0-0000-00000000001c:IJPP" created="2026-09-24T00:00:00Z" version="1">
+							<Name>IJPP - vozovnica velja na celotnem območju RS (price cap = nationwide validity)</Name>
+							<Description>The monthly price rises with distance only up to the 15-20 km band (EUR 70.00) and is flat beyond it; the DUJPP price list marks these capped cells as valid on the whole territory of Slovenia. Hence the Ljubljana - Maribor monthly ticket gives unlimited travel throughout Slovenia for the month (no MaximumDistance). Encoding this as a CappingRule is an interpretation.</Description>
+							<cappingRules>
+								<CappingRule id="SI:SI0:CappingRule:00000000-1177-00f0-0000-00000000001d:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<CappingPeriod>month</CappingPeriod>
+									<PreassignedFareProductRef ref="SI:SI0:PreassignedFareProduct:00000000-1177-00f0-0000-000000000011:IJPP"/>
+								</CappingRule>
+							</cappingRules>
+						</CappedDiscountRight>
+						<PreassignedFareProduct id="SI:SI0:PreassignedFareProduct:00000000-1177-00f0-0000-000000000041:IJPP" created="2026-09-24T00:00:00Z" version="1">
+							<Name>Vikend družinska vozovnica, do 5 oseb</Name>
+							<Description>Group ticket for up to 5 persons, one of them a child up to 15: unlimited trips on any relation in Slovenia on Saturdays, Sundays and non-working holidays, at most 5 consecutive days. A 10-person variant costs EUR 30.00 (not modelled separately).</Description>
+							<validableElements>
+								<ValidableElement id="SI:SI0:ValidableElement:00000000-1177-00f0-0000-00000000003f:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Družinska vožnja</Name>
+									<fareStructureElements>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-000000000045:IJPP"/>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f0-0000-00000000003c:IJPP"/>
+									</fareStructureElements>
+								</ValidableElement>
+							</validableElements>
+							<accessRightsInProduct>
+								<AccessRightInProduct id="SI:SI0:AccessRightInProduct:00000000-1177-00f0-0000-000000000040:IJPP" version="1" order="1">
+									<IsFirstInSequence>true</IsFirstInSequence>
+									<IsLastInSequence>true</IsLastInSequence>
+									<ValidableElementRef ref="SI:SI0:ValidableElement:00000000-1177-00f0-0000-00000000003f:IJPP"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+							<ProductType>periodPass</ProductType>
+						</PreassignedFareProduct>
+					</fareProducts>
+					<!-- ===== PRICES (fare tables) ===== -->
+					<fareTables>
+						<!-- EUR 70.00 for every O-D pair above 15-20 km, hence identical for both modes and directions; child 50 %, under 6 free -->
+						<FareTable id="SI:SI0:FareTable:00000000-1177-00f0-0000-000000000060:IJPP" created="2026-09-24T00:00:00Z" version="1">
+							<Name>Mesečna imenska vozovnica - cene (DUJPP cenik, 2025-08-01)</Name>
+							<pricesFor>
+								<PreassignedFareProductRef ref="SI:SI0:PreassignedFareProduct:00000000-1177-00f0-0000-000000000011:IJPP"/>
+								<SalesOfferPackageRef ref="SI:SI0:SalesOfferPackage:00000000-1177-00f0-0000-00000000002e:IJPP"/>
+							</pricesFor>
+							<usedIn>
+								<TariffRef ref="SI:SI0:Tariff:00000000-1177-00f0-0000-000000000001:IJPP"/>
+							</usedIn>
+							<cells>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f0-0000-000000000061:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Ljubljana - Maribor, odrasli</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f0-0000-000000000061:IJPP" created="2026-09-24T00:00:00Z" version="1">
+										<Amount>70.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f0-0000-000000000025:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-2261001121f4:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f0-0000-000000000008:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f0-0000-000000000062:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Ljubljana - Maribor, otroci 6-15</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f0-0000-000000000062:IJPP" created="2026-09-24T00:00:00Z" version="1">
+										<Amount>35.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f0-0000-000000000023:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-2261001121f4:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f0-0000-000000000009:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f0-0000-000000000063:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Ljubljana - Maribor, otroci do 6 let</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f0-0000-000000000063:IJPP" created="2026-09-24T00:00:00Z" version="1">
+										<Amount>0.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f0-0000-000000000024:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-2261001121f4:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f0-0000-00000000003a:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f0-0000-000000000064:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Maribor - Ljubljana, odrasli</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f0-0000-000000000064:IJPP" created="2026-09-24T00:00:00Z" version="1">
+										<Amount>70.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f0-0000-000000000025:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-21f400112261:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f0-0000-000000000008:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f0-0000-000000000065:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Maribor - Ljubljana, otroci 6-15</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f0-0000-000000000065:IJPP" created="2026-09-24T00:00:00Z" version="1">
+										<Amount>35.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f0-0000-000000000023:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-21f400112261:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f0-0000-000000000009:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f0-0000-000000000066:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Maribor - Ljubljana, otroci do 6 let</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f0-0000-000000000066:IJPP" created="2026-09-24T00:00:00Z" version="1">
+										<Amount>0.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f0-0000-000000000024:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-21f400112261:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f0-0000-00000000003a:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f0-0000-000000000067:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Ljubljana AP - Maribor AP, odrasli</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f0-0000-000000000067:IJPP" created="2026-09-24T00:00:00Z" version="1">
+										<Amount>70.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f0-0000-000000000025:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-33c50011322a:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f0-0000-000000000008:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f0-0000-000000000068:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Ljubljana AP - Maribor AP, otroci 6-15</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f0-0000-000000000068:IJPP" created="2026-09-24T00:00:00Z" version="1">
+										<Amount>35.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f0-0000-000000000023:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-33c50011322a:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f0-0000-000000000009:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f0-0000-000000000069:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Ljubljana AP - Maribor AP, otroci do 6 let</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f0-0000-000000000069:IJPP" created="2026-09-24T00:00:00Z" version="1">
+										<Amount>0.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f0-0000-000000000024:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-33c50011322a:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f0-0000-00000000003a:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f0-0000-00000000006a:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Maribor AP - Ljubljana AP, odrasli</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f0-0000-00000000006a:IJPP" created="2026-09-24T00:00:00Z" version="1">
+										<Amount>70.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f0-0000-000000000025:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-322a001133c5:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f0-0000-000000000008:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f0-0000-00000000006b:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Maribor AP - Ljubljana AP, otroci 6-15</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f0-0000-00000000006b:IJPP" created="2026-09-24T00:00:00Z" version="1">
+										<Amount>35.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f0-0000-000000000023:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-322a001133c5:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f0-0000-000000000009:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f0-0000-00000000006c:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Maribor AP - Ljubljana AP, otroci do 6 let</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f0-0000-00000000006c:IJPP" created="2026-09-24T00:00:00Z" version="1">
+										<Amount>0.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f0-0000-000000000024:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-322a001133c5:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f0-0000-00000000003a:IJPP"/>
+								</Cell>
+							</cells>
+						</FareTable>
+						<FareTable id="SI:SI0:FareTable:00000000-1177-00f0-0000-000000000070:IJPP" created="2026-09-24T00:00:00Z" version="1">
+							<Name>Dodatek za vlak višje vrste - enkratni (od 2026-07-01)</Name>
+							<pricesFor>
+								<SupplementProductRef ref="SI:SI0:SupplementProduct:00000000-1177-00f0-0000-00000000001b:IJPP"/>
+							</pricesFor>
+							<usedIn>
+								<TariffRef ref="SI:SI0:Tariff:00000000-1177-00f0-0000-000000000016:IJPP"/>
+							</usedIn>
+							<cells>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f0-0000-000000000071:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Nakup pred vstopom (prodajno mesto / kartomat); na vlaku EUR 4.00</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f0-0000-000000000071:IJPP" created="2026-09-24T00:00:00Z" version="1">
+										<Amount>2.00</Amount>
+									</CellPrice>
+									<SupplementProductRef ref="SI:SI0:SupplementProduct:00000000-1177-00f0-0000-00000000001b:IJPP"/>
+								</Cell>
+							</cells>
+						</FareTable>
+						<FareTable id="SI:SI0:FareTable:00000000-1177-00f0-0000-000000000072:IJPP" created="2026-09-24T00:00:00Z" version="1">
+							<Name>Mesečni dodatek za splošne IJPP vozovnice (od 2026-07-01)</Name>
+							<pricesFor>
+								<SupplementProductRef ref="SI:SI0:SupplementProduct:00000000-1177-00f0-0000-00000000004f:IJPP"/>
+							</pricesFor>
+							<usedIn>
+								<TariffRef ref="SI:SI0:Tariff:00000000-1177-00f0-0000-000000000016:IJPP"/>
+							</usedIn>
+							<cells>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f0-0000-000000000073:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Mesečni dodatek (potniška blagajna)</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f0-0000-000000000073:IJPP" created="2026-09-24T00:00:00Z" version="1">
+										<Amount>30.00</Amount>
+									</CellPrice>
+									<SupplementProductRef ref="SI:SI0:SupplementProduct:00000000-1177-00f0-0000-00000000004f:IJPP"/>
+								</Cell>
+							</cells>
+						</FareTable>
+						<FareTable id="SI:SI0:FareTable:00000000-1177-00f0-0000-000000000074:IJPP" created="2026-09-24T00:00:00Z" version="1">
+							<Name>Vikend družinska vozovnica</Name>
+							<pricesFor>
+								<PreassignedFareProductRef ref="SI:SI0:PreassignedFareProduct:00000000-1177-00f0-0000-000000000041:IJPP"/>
+							</pricesFor>
+							<usedIn>
+								<TariffRef ref="SI:SI0:Tariff:00000000-1177-00f0-0000-00000000003b:IJPP"/>
+							</usedIn>
+							<cells>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f0-0000-000000000075:IJPP" created="2026-09-24T00:00:00Z" version="1">
+									<Name>Do 5 oseb</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f0-0000-000000000075:IJPP" created="2026-09-24T00:00:00Z" version="1">
+										<Amount>15.00</Amount>
+									</CellPrice>
+									<PreassignedFareProductRef ref="SI:SI0:PreassignedFareProduct:00000000-1177-00f0-0000-000000000041:IJPP"/>
+									<GroupTicketRef ref="SI:SI0:GroupTicket:00000000-1177-00f0-0000-00000000003e:IJPP"/>
+								</Cell>
+							</cells>
+						</FareTable>
+					</fareTables>
+					<!-- ===== SINGLE FARE MEDIA: all products on the IJPP card ===== -->
+					<salesOfferPackages>
+						<SalesOfferPackage id="SI:SI0:SalesOfferPackage:00000000-1177-00f0-0000-00000000002e:IJPP" created="2026-09-24T00:00:00Z" version="1">
+							<Name>IJPP kartica</Name>
+							<distributionAssignments>
+								<DistributionAssignment id="SI:SI0:DistributionAssignment:00000000-1177-00f0-0000-00000000002f:IJPP" version="1" order="1">
+									<Name>Prodajna mesta prevoznikov in spletna prodaja</Name>
+									<DistributionChannelType>atStop</DistributionChannelType>
+									<TicketingServiceFacilityList>purchase cardTopUp</TicketingServiceFacilityList>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<salesOfferPackageElements>
+								<SalesOfferPackageElement id="SI:SI0:SalesOfferPackageElement:00000000-1177-00f0-0000-000000000030:IJPP" version="1" order="1">
+									<TypeOfTravelDocumentRef ref="SI:SI0:TypeOfTravelDocument:00000000-1177-00f0-0000-000000000033:IJPP"/>
+									<PreassignedFareProductRef ref="SI:SI0:PreassignedFareProduct:00000000-1177-00f0-0000-000000000011:IJPP"/>
+								</SalesOfferPackageElement>
+								<SalesOfferPackageElement id="SI:SI0:SalesOfferPackageElement:00000000-1177-00f0-0000-000000000031:IJPP" version="1" order="2">
+									<TypeOfTravelDocumentRef ref="SI:SI0:TypeOfTravelDocument:00000000-1177-00f0-0000-000000000033:IJPP"/>
+									<PreassignedFareProductRef ref="SI:SI0:SupplementProduct:00000000-1177-00f0-0000-00000000001b:IJPP"/>
+								</SalesOfferPackageElement>
+								<SalesOfferPackageElement id="SI:SI0:SalesOfferPackageElement:00000000-1177-00f0-0000-000000000032:IJPP" version="1" order="3">
+									<TypeOfTravelDocumentRef ref="SI:SI0:TypeOfTravelDocument:00000000-1177-00f0-0000-000000000033:IJPP"/>
+									<PreassignedFareProductRef ref="SI:SI0:CappedDiscountRight:00000000-1177-00f0-0000-00000000001c:IJPP"/>
+								</SalesOfferPackageElement>
+								<SalesOfferPackageElement id="SI:SI0:SalesOfferPackageElement:00000000-1177-00f0-0000-000000000044:IJPP" version="1" order="4">
+									<TypeOfTravelDocumentRef ref="SI:SI0:TypeOfTravelDocument:00000000-1177-00f0-0000-000000000033:IJPP"/>
+									<PreassignedFareProductRef ref="SI:SI0:PreassignedFareProduct:00000000-1177-00f0-0000-000000000041:IJPP"/>
+								</SalesOfferPackageElement>
+								<SalesOfferPackageElement id="SI:SI0:SalesOfferPackageElement:00000000-1177-00f0-0000-000000000053:IJPP" version="1" order="5">
+									<TypeOfTravelDocumentRef ref="SI:SI0:TypeOfTravelDocument:00000000-1177-00f0-0000-000000000033:IJPP"/>
+									<PreassignedFareProductRef ref="SI:SI0:SupplementProduct:00000000-1177-00f0-0000-00000000004f:IJPP"/>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+					</salesOfferPackages>
+				</FareFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>
