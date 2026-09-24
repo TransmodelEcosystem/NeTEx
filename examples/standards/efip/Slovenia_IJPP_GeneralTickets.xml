@@ -62,12 +62,14 @@ branch) and the FareFrame actually published in the NAP.si network export NETEX_
 id pattern "SI:SI0:<Class>:<uuid>:<source>", ":IJPP"/":NAP" suffixes, no <codespaces>; access rights via
 TypeOfAccessRightAssignmentRef "ntx:can_access" and validity via GroupOfLinesRef to the NAP "IJPP Lines" group;
 TypeOfTariffRef "ntx:point_to_point"; DistanceMatrixElement ids derived from the two ScheduledStopPoint ids.
+PublicationDelivery version "2.1:EFIP" = NeTEx 2.1 + EFIP profile (provisional identifier, not yet agreed
+by the EFIP group; the NAP.si files use "2.0:EU_PI-1.0").
 External references (NOT defined in this file, defined in the NAP network export or the ntx vocabulary):
   SI:SI0:GroupOfLines:f77ed834-5c71-4043-846e-181f43e1193e:IJPP ("IJPP Lines", 2337 lines), ntx:* types.
 
 
 -->
-<PublicationDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.netex.org.uk/netex" version="2.0:EU_PI-1.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+<PublicationDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.netex.org.uk/netex" version="2.1:EFIP" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
 	<PublicationTimestamp>2026-09-24T00:00:00Z</PublicationTimestamp>
 	<ParticipantRef>NAP</ParticipantRef>
 	<dataObjects>
