@@ -175,14 +175,6 @@ Rail transport, Roads and Road transport
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
-		<xsd:unique name="TypeOfValue_Unique">
-			<xsd:selector xpath="values/TypeOfValue/Id"/>
-			<xsd:field xpath="."/>
-		</xsd:unique>
-		<xsd:key name="TypeOfValue_Key">
-			<xsd:selector xpath="values/TypeOfValue/Id"/>
-			<xsd:field xpath="."/>
-		</xsd:key>
 	</xsd:element>
 	<xsd:complexType name="ValueSet_VersionStructure">
 		<xsd:annotation>
