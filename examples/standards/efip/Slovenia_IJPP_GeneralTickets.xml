@@ -3,8 +3,8 @@
      (General unified tickets for integrated public passenger transport)
 Names as used by DUJPP (dujpp.si/vozovnice.html, Slovenian) and SŽ (potniski.sz.si, English page).
 An example of the IJPP general unified ticket (splošna enotna vozovnica) fare products in Slovenia.
-Describes, in full NeTEx v2.0, the unified/general ticket of IJPP ("Integrirani javni potniški promet",
-the integrated public passenger transport system of Slovenia):
+Describes, in NeTEx (validated against the v2.1-wip-efip XSD), the unified/general ticket of IJPP
+("Integrirani javni potniški promet", the integrated public passenger transport system of Slovenia):
   Origin to Destination, 1 calendar month, Time-based, Distance-based, Mode-dependent, Capping rules
   (unlimited travel throughout Slovenia), Group tickets, Discounts, Children (or any other
   type of user), Single fare media (IJPP chip card), Combined fare product.
@@ -12,6 +12,7 @@ the integrated public passenger transport system of Slovenia):
   EN, and ICS), for which an additional fee must be paid."
 Fare product description (EFIP template, one table per fare product, with EFIP fare product types):
   "Fare product description IJPP Slovenia.docx" in the EFIP "Fare products" folder.
+File: examples/standards/efip/Slovenia_IJPP_GeneralTickets.xml (branch v2.1-wip-efip).
 
 MODELLING
 =========
@@ -20,7 +21,7 @@ MODELLING
 - 1 calendar month / Time-based -> UsageValidityPeriod monthlyPass, StandardDuration P1M.
 - Distance-based -> the IJPP tariff is banded by distance (DUJPP price list). The NAP DistanceMatrixElements
     carry no <Distance>, so none is invented here; the distance dependency is visible in the real single-ticket
-    prices of the same O-D pairs (see "Mode-dependent") and is explained below for the monthly ticket.
+    prices of the same O-D pairs (see "Mode-dependent"); for the monthly ticket see "Capping rules".
 - Mode-dependent / Combined -> ONE PreassignedFareProduct with two ValidableElements, one per mode
     (TransportModes bus / rail), each limited to the IJPP GroupOfLines and to its mode's O-D pair.
     The two modes really are priced on different distances for the same town pair: single ticket bus
@@ -50,13 +51,14 @@ Part of the EFIP methodology; documented here only, not encoded as NeTEx objects
 Notes: ST-2 is a single-ticket type in EFIP; it is given to the monthly ticket because the O-D single fare
 is its pricing basis (monthly = 26 x single, capped at EUR 70) - the single ticket itself is not modelled
 here (its prices are published in the NAP network export). CT-1 marks the supplements, which are only valid
-together with a base IJPP ticket (FareProductRef in the SupplementProducts). Not applicable: ST-1, ST-3..ST-7, PP-2, PP-3, SCT-6,
-SCT-8, SLT-3, SLT-5.
+together with a base IJPP ticket (FareProductRef in the SupplementProducts).
+Not applicable: ST-1, ST-3..ST-7, PP-2, PP-3, SCT-6, SCT-8, SLT-3, SLT-5.
 
 PROFILE / CONVENTIONS
 =====================
-Follows the Slovenian NAP profile of PR #765 (timetable example examples/standards/slovenia/NETEX_PI_01_SI_NAP_
-LINE_SI_SI0_Line_1003_IJPP_20240423.xml in that PR, not part of the v2.1-wip-efip branch) and the FareFrame actually published in NAP.si/NETEX_PI_01_SI_NAP_NETWORK_20260225.XML:
+Follows the Slovenian NAP profile of PR #765 (timetable example examples/standards/slovenia/
+NETEX_PI_01_SI_NAP_LINE_SI_SI0_Line_1003_IJPP_20240423.xml in that PR, not part of the v2.1-wip-efip
+branch) and the FareFrame actually published in the NAP.si network export NETEX_PI_01_SI_NAP_NETWORK_20260225.XML:
 id pattern "SI:SI0:<Class>:<uuid>:<source>", ":IJPP"/":NAP" suffixes, no <codespaces>; access rights via
 TypeOfAccessRightAssignmentRef "ntx:can_access" and validity via GroupOfLinesRef to the NAP "IJPP Lines" group;
 TypeOfTariffRef "ntx:point_to_point"; DistanceMatrixElement ids derived from the two ScheduledStopPoint ids.
@@ -94,7 +96,7 @@ External references (NOT defined in this file, defined in the NAP network export
 						</TypeOfTravelDocument>
 					</typesOfValue>
 					<organisations>
-						<!-- NAP network export, line 2925972 -->
+						<!-- NAP.si network export, line 2925972 -->
 						<Operator id="SI:SI0:Operator:00000000-1177-0001-0000-000000000489:IJPP" created="2023-10-06T04:51:58.9174842Z" version="1">
 							<PublicCode/>
 							<Name>SŽ - Potniški promet, d.o.o.</Name>
@@ -212,7 +214,7 @@ External references (NOT defined in this file, defined in the NAP network export
 						</StopPlace>
 					</stopPlaces>
 				</SiteFrame>
-				<!-- ===================== SERVICE FRAME (copied from the NAP network export) ===================== -->
+				<!-- ===================== SERVICE FRAME (copied from the NAP.si network export) ===================== -->
 				<ServiceFrame id="SI:SI0:ServiceFrame:EU_PI_NETWORK_b6e2a7f4-3d18-4c9a-8e51-0af729c6d3b4:NAP" created="2026-09-24T00:00:00Z" version="any">
 					<scheduledStopPoints>
 						<ScheduledStopPoint id="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-0000001121f4:IJPP" created="2024-09-08T02:55:18.9798296Z" version="1">
