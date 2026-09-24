@@ -195,6 +195,7 @@ Rail transport, Roads and Road transport
 					<xsd:documentation>List of Fare Classes.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element ref="PriorityUse" minOccurs="0"/>
 			<xsd:element ref="GenderLimitation" minOccurs="0"/>
 			<xsd:element ref="LightingControlFacilityList" minOccurs="0">
 				<xsd:annotation>
@@ -248,6 +249,7 @@ Rail transport, Roads and Road transport
 					<xsd:documentation>List of Fare Classes.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element ref="PriorityUse" minOccurs="0"/>
 			<xsd:element ref="GenderLimitation" minOccurs="0"/>
 			<xsd:element ref="HireFacilityList" minOccurs="0"/>
 			<xsd:element ref="LuggageCarriageFacilityList" minOccurs="0"/>
@@ -983,6 +985,18 @@ Rail transport, Roads and Road transport
 			<xsd:documentation>List of values for FARE CLASSes.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:list itemType="FareClassEnumeration"/>
+	</xsd:simpleType>
+	<!-- ===Priority Use FACILITY====================================== -->
+	<xsd:element name="PriorityUse" type="PriorityUseListOfEnumerations">
+		<xsd:annotation>
+			<xsd:documentation>Whether a place is designated for a certain group of people or accessories e.g. a priority seat for PRM or a compartment for wheelchair users and prams.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="PriorityUseListOfEnumerations">
+		<xsd:annotation>
+			<xsd:documentation>List of values for PRIORITY USEs.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:list itemType="PriorityUseEnumeration"/>
 	</xsd:simpleType>
 	<!-- ===Group FACILITY====================================== -->
 	<xsd:element name="GroupBookingFacility" type="GroupBookingEnumeration" default="unknown">
