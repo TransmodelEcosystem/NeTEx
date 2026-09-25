@@ -54,21 +54,26 @@ here (its prices are published in the NAP.si fare export). CT-1 marks the supple
 together with a base IJPP ticket (FareProductRef in the SupplementProducts).
 Not applicable: ST-1, ST-3..ST-7, PP-2, PP-3, SCT-6, SCT-8, SLT-3, SLT-5.
 
-PROFILE / CONVENTIONS
-=====================
-Follows the Slovenian NAP profile of PR #765 (timetable example examples/standards/slovenia/
-NETEX_PI_01_SI_NAP_LINE_SI_SI0_Line_1003_IJPP_20240423.xml in that PR, not part of the v2.1-wip-efip
-branch) and the FareFrame published in the NAP.si fare export of 2026-09-25, NETEX_PI_01_SI_NAP_FARES_20260925.XML
-(published by NAP.si as NETEX_PI_01_SI_NAP_NETWORK_20260925.XML, fare variant):
-id pattern "SI:SI0:<Class>:<uuid>:<source>", ":IJPP"/":NAP" suffixes, no <codespaces>; access rights via
-TypeOfAccessRightAssignmentRef "ntx:can_access" and validity via GroupOfLinesRef to the NAP "IJPP Lines" group;
-TypeOfTariffRef "ntx:point_to_point"; DistanceMatrixElement ids derived from the two ScheduledStopPoint ids.
-PublicationDelivery version "2.1:EFIP" = NeTEx 2.1 + EFIP profile (provisional identifier, not yet agreed
-by the EFIP group; the NAP.si files use "2.0:EU_PI-1.0").
-External references (NOT defined in this file, defined in the NAP.si fare export or the ntx vocabulary):
-  SI:SI0:GroupOfLines:f77ed834-5c71-4043-846e-181f43e1193e:IJPP ("IJPP Lines", 2511 lines), ntx:* types.
+DATA SOURCE
+===========
+Open NeTEx data published on NAP.si (Slovenian National Access Point), exports of 2026-09-25
+(downloading the datasets may require registration):
+  NeTEx Fares   https://nap.si/en/datasets_details?id=3199ad7d-5e6e-c128-e8fc-9adcb3723e08
+  Stop places   https://nap.si/en/datasets_details?id=17c06c5d-fa48-bc0b-b500-29093239a90c
+  Operators     https://nap.si/en/datasets_details?id=18449150-1310-d6a0-7c8d-eb909bd2fbc9
+  Timetables    https://nap.si/en/datasets_details?id=31f7dd50-321b-3d90-3f4f-5c4167c785ad
+Copied unchanged from NeTEx Fares: the StopPlaces (with Quays), ScheduledStopPoints, PassengerStopAssignments,
+DistanceMatrixElements and the operator; the "IJPP Lines" group is referenced, and the single-ticket prices
+quoted above are taken from it.
 
-
+CONVENTIONS
+===========
+- ids follow the Slovenian NAP profile, "SI:SI0:<Class>:<uuid>:IJPP" (frames ":NAP"); fare objects created
+  for this example use the uuid block "1177-00f0", the copied objects keep their NAP.si ids.
+- PublicationDelivery version "2.1:EFIP" = NeTEx 2.1 + EFIP profile (provisional identifier).
+- External references, not defined in this file: the GroupOfLines
+  SI:SI0:GroupOfLines:f77ed834-5c71-4043-846e-181f43e1193e:IJPP ("IJPP Lines", 2511 lines, in NeTEx Fares)
+  and the ntx:* types.
 -->
 <PublicationDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.netex.org.uk/netex" version="2.1:EFIP" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
 	<PublicationTimestamp>2026-09-24T00:00:00Z</PublicationTimestamp>
