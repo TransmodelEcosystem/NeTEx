@@ -503,6 +503,11 @@ Rail transport, Roads and Road transport
 					<xsd:documentation>Reference to an MOBILITY SERVICE CONSTRAINT ZONE. +v1.2.2</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element name="LineType" type="LineTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>LineType value used as validity parameter for ACCESS RIGHT PARAMETER ASSIGNMENT. +v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
 	<xsd:group name="SiteValidityParametersGroup">
