@@ -50,7 +50,7 @@ Part of the EFIP methodology; documented here only, not encoded as NeTEx objects
   IJPP card sales offer package          SLT-4
 Notes: ST-2 is a single-ticket type in EFIP; it is given to the monthly ticket because the O-D single fare
 is its pricing basis (monthly = 26 x single, capped at EUR 70) - the single ticket itself is not modelled
-here (its prices are published in the NAP network export). CT-1 marks the supplements, which are only valid
+here (its prices are published in the NAP.si fare export). CT-1 marks the supplements, which are only valid
 together with a base IJPP ticket (FareProductRef in the SupplementProducts).
 Not applicable: ST-1, ST-3..ST-7, PP-2, PP-3, SCT-6, SCT-8, SLT-3, SLT-5.
 
@@ -58,14 +58,15 @@ PROFILE / CONVENTIONS
 =====================
 Follows the Slovenian NAP profile of PR #765 (timetable example examples/standards/slovenia/
 NETEX_PI_01_SI_NAP_LINE_SI_SI0_Line_1003_IJPP_20240423.xml in that PR, not part of the v2.1-wip-efip
-branch) and the FareFrame actually published in the NAP.si network export NETEX_PI_01_SI_NAP_NETWORK_20260225.XML:
+branch) and the FareFrame published in the NAP.si fare export of 2026-09-25, NETEX_PI_01_SI_NAP_FARES_20260925.XML
+(published by NAP.si as NETEX_PI_01_SI_NAP_NETWORK_20260925.XML, fare variant):
 id pattern "SI:SI0:<Class>:<uuid>:<source>", ":IJPP"/":NAP" suffixes, no <codespaces>; access rights via
 TypeOfAccessRightAssignmentRef "ntx:can_access" and validity via GroupOfLinesRef to the NAP "IJPP Lines" group;
 TypeOfTariffRef "ntx:point_to_point"; DistanceMatrixElement ids derived from the two ScheduledStopPoint ids.
 PublicationDelivery version "2.1:EFIP" = NeTEx 2.1 + EFIP profile (provisional identifier, not yet agreed
 by the EFIP group; the NAP.si files use "2.0:EU_PI-1.0").
-External references (NOT defined in this file, defined in the NAP network export or the ntx vocabulary):
-  SI:SI0:GroupOfLines:f77ed834-5c71-4043-846e-181f43e1193e:IJPP ("IJPP Lines", 2337 lines), ntx:* types.
+External references (NOT defined in this file, defined in the NAP.si fare export or the ntx vocabulary):
+  SI:SI0:GroupOfLines:f77ed834-5c71-4043-846e-181f43e1193e:IJPP ("IJPP Lines", 2511 lines), ntx:* types.
 
 
 -->
@@ -98,7 +99,7 @@ External references (NOT defined in this file, defined in the NAP network export
 						</TypeOfTravelDocument>
 					</typesOfValue>
 					<organisations>
-						<!-- NAP.si network export, line 2925972 -->
+						<!-- NAP.si fare export NETEX_PI_01_SI_NAP_FARES_20260925.XML, line 2964058 -->
 						<Operator id="SI:SI0:Operator:00000000-1177-0001-0000-000000000489:IJPP" created="2023-10-06T04:51:58.9174842Z" version="1">
 							<PublicCode/>
 							<Name>SŽ - Potniški promet, d.o.o.</Name>
@@ -111,7 +112,7 @@ External references (NOT defined in this file, defined in the NAP network export
 						</Operator>
 					</organisations>
 				</ResourceFrame>
-				<!-- ===================== SITE FRAME (copied from the NAP.si network export) ===================== -->
+				<!-- ===================== SITE FRAME (copied from the NAP.si fare export of 2026-09-25) ===================== -->
 				<SiteFrame id="SI:SI0:SiteFrame:b6e2a7f4-3d18-4c9a-8e51-0af729c6d3b4:NAP" created="2026-09-24T00:00:00Z" version="any">
 					<stopPlaces>
 						<StopPlace id="SI:SI0:StopPlace:00000000-1177-0002-0000-000000021633:IJPP" created="2024-09-08T02:55:18.9798296Z" version="1">
@@ -164,13 +165,13 @@ External references (NOT defined in this file, defined in the NAP network export
 								</Quay>
 							</quays>
 						</StopPlace>
-						<StopPlace id="SI:SI0:StopPlace:00000000-1177-0002-0000-000000021eaa:IJPP" created="2023-10-06T04:51:58.9174842Z" version="1">
+						<StopPlace id="SI:SI0:StopPlace:00000000-1177-0002-0000-000000021eaa:IJPP" created="2026-08-24T17:35:08.4661721Z" version="2">
 							<Name>Ljubljana AP</Name>
 							<PrivateCode>138922</PrivateCode>
 							<Centroid>
 								<Location>
-									<Longitude>14.5087855753671</Longitude>
-									<Latitude>46.0578328494517</Latitude>
+									<Longitude>14.5146952402057</Longitude>
+									<Latitude>46.0579437671812</Latitude>
 								</Location>
 							</Centroid>
 							<placeTypes>
@@ -180,7 +181,7 @@ External references (NOT defined in this file, defined in the NAP network export
 							<TransportMode>bus</TransportMode>
 							<StopPlaceType>busStation</StopPlaceType>
 							<quays>
-								<Quay id="SI:SI0:Quay:00000000-1177-0003-0000-00000011322a:IJPP" created="2023-10-06T04:51:58.9174842Z" version="1">
+								<Quay id="SI:SI0:Quay:00000000-1177-0003-0000-00000011322a:IJPP" created="2026-08-24T17:35:08.4661721Z" version="2">
 									<Name>Ljubljana AP 01</Name>
 									<PrivateCode>1126954</PrivateCode>
 									<Covered>unknown</Covered>
@@ -216,20 +217,20 @@ External references (NOT defined in this file, defined in the NAP network export
 						</StopPlace>
 					</stopPlaces>
 				</SiteFrame>
-				<!-- ===================== SERVICE FRAME (copied from the NAP.si network export) ===================== -->
+				<!-- ===================== SERVICE FRAME (copied from the NAP.si fare export of 2026-09-25) ===================== -->
 				<ServiceFrame id="SI:SI0:ServiceFrame:EU_PI_NETWORK_b6e2a7f4-3d18-4c9a-8e51-0af729c6d3b4:NAP" created="2026-09-24T00:00:00Z" version="any">
 					<scheduledStopPoints>
 						<ScheduledStopPoint id="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-0000001121f4:IJPP" created="2024-09-08T02:55:18.9798296Z" version="1">
-							<Name>Ljubljana</Name>
+							<Name>Ljubljana 01</Name>
 						</ScheduledStopPoint>
 						<ScheduledStopPoint id="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-000000112261:IJPP" created="2024-09-08T02:55:18.9798296Z" version="1">
-							<Name>Maribor</Name>
+							<Name>Maribor 01</Name>
 						</ScheduledStopPoint>
 						<ScheduledStopPoint id="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-00000011322a:IJPP" created="2023-10-06T04:51:58.9174842Z" version="1">
-							<Name>Ljubljana AP</Name>
+							<Name>Ljubljana AP 01</Name>
 						</ScheduledStopPoint>
 						<ScheduledStopPoint id="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-0000001133c5:IJPP" created="2023-10-06T04:51:58.9174842Z" version="1">
-							<Name>Maribor AP</Name>
+							<Name>Maribor AP 01</Name>
 						</ScheduledStopPoint>
 					</scheduledStopPoints>
 					<stopAssignments>
@@ -245,8 +246,8 @@ External references (NOT defined in this file, defined in the NAP network export
 						</PassengerStopAssignment>
 						<PassengerStopAssignment id="SI:SI0:PassengerStopAssignment:00000000-1177-0003-0000-00000011322a:IJPP" created="2023-10-06T04:51:58.9174842Z" version="1" order="1">
 							<ScheduledStopPointRef version="1" ref="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-00000011322a:IJPP"/>
-							<StopPlaceRef version="1" ref="SI:SI0:StopPlace:00000000-1177-0002-0000-000000021eaa:IJPP"/>
-							<QuayRef version="1" ref="SI:SI0:Quay:00000000-1177-0003-0000-00000011322a:IJPP"/>
+							<StopPlaceRef version="2" ref="SI:SI0:StopPlace:00000000-1177-0002-0000-000000021eaa:IJPP"/>
+							<QuayRef version="2" ref="SI:SI0:Quay:00000000-1177-0003-0000-00000011322a:IJPP"/>
 						</PassengerStopAssignment>
 						<PassengerStopAssignment id="SI:SI0:PassengerStopAssignment:00000000-1177-0003-0000-0000001133c5:IJPP" created="2023-10-06T04:51:58.9174842Z" version="1" order="1">
 							<ScheduledStopPointRef version="1" ref="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-0000001133c5:IJPP"/>
@@ -367,7 +368,7 @@ External references (NOT defined in this file, defined in the NAP network export
 								</FareStructureElement>
 							</fareStructureElements>
 							<distanceMatrixElements>
-								<!-- The four real NAP DistanceMatrixElements (no <Distance> is published for them) -->
+								<!-- The four real NAP.si DistanceMatrixElements (no <Distance> is published for them) -->
 								<DistanceMatrixElement id="SI:SI0:DistanceMatrixElement:00000000-1177-0003-0011-2261001121f4:IJPP" created="2024-09-08T02:55:18.9798296Z" version="1">
 									<Name>Ljubljana - Maribor</Name>
 									<StartStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-0003-0000-0000001121f4:IJPP"/>
