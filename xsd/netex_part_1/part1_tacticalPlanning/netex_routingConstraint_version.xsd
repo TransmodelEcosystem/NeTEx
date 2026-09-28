@@ -75,7 +75,7 @@ Rail transport, Roads and Road transport
 				</Date>
 				<Date><Modified>2011-02-05</Modified>Name Space changes
 				</Date>
-				<Date><Modified>2023-12-13</Modified>#391 https://github.com/NeTEx-CEN/NeTEx/issues/391
+				<Date><Modified>2023-12-13</Modified>#391 https://github.com/TransmodelEcosystem/NeTEx/issues/391
 					           Enhancements: Add constraints of LINE to SERVICE EXCLUSION
 					           Add constraints of LINE DIRECTION to ROUTING CONSTRAINT ZONE.
 				</Date>

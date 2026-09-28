@@ -490,7 +490,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="concurrentDesignatedUsers">
 				<xsd:annotation>
-					<xsd:documentation>Several users (but only of a specifed type of companion) may use the same product at a time. E.g. a mobile app carnet of tickets may be shared with children but not others.</xsd:documentation>
+					<xsd:documentation>Several users (but only of a specified type of companion) may use the same product at a time. E.g. a mobile app carnet of tickets may be shared with children but not others.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>

@@ -170,7 +170,7 @@ Rail transport, Roads and Road transport
 		<xsd:documentation>NeTEx ACCESS RIGHT ASSIGNMENT types.</xsd:documentation>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
-	<!-- ===ENTIITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
 	<xsd:complexType name="accessRightParameterAssignmentsInFrame_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>The assignment of a fare collection parameter (referring to geography, time, quality or usage) to an element of a fare system (access right, validated access, control mean, etc.).</xsd:documentation>
@@ -184,7 +184,7 @@ Rail transport, Roads and Road transport
 		</xsd:complexContent>
 	</xsd:complexType>
 	<!-- ======================================================================= -->
-	<!-- ===ENTIITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
 	<xsd:complexType name="validityParameterAssignmentsInFrame_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>The assignment of a fare collection parameter (referring to geography, time, quality or usage) to an element of a fare system (access right, validated access, control mean, etc.).</xsd:documentation>
@@ -294,7 +294,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="TypeOfAccessRightAssignmentRef" minOccurs="0"/>
 			<xsd:element name="ChargingBasis" type="ChargingBasisEnumeration" default="any" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether ACCESS RIGHT ASSIGNMENT is chargable or not.</xsd:documentation>
+					<xsd:documentation>Whether ACCESS RIGHT ASSIGNMENT is chargeable or not.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -947,7 +947,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:group ref="GenericParameterAssignmentIncludesGroup">
 				<xsd:annotation>
-					<xsd:documentation>Elements for compound GENERIC PARAMETER ASSIGNMENT. May only be compounded with parameters fo the same type.</xsd:documentation>
+					<xsd:documentation>Elements for compound GENERIC PARAMETER ASSIGNMENT. May only be compounded with parameters of the same type.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:group>
 		</xsd:sequence>

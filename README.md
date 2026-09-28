@@ -24,11 +24,11 @@ This repository contains the XML Schemas (XSD) for:
 In each branch, we have:
 - The folder `xsd` in which all the XML schemas can be found,
 - The folder `examples` in which all examples can be found,
-- At the root folder, `Siri.spp` which is the project for XMLSpy and `Siri.xpr` for Oxygen.
+- At the root folder, `NeTEx.spp` which is the project for XMLSpy and `NeTEx.xpr` for Oxygen.
 
 The `xsd` folder is sub-divided as follow:
 -  `gml` for all geometry-related elements,
-- `netex_framlework` for all shared components and frames,
+- `netex_framework` for all shared components and frames,
 - one sub-folder per NeTEx Part (from 1 to 5),
 - other complementary sub-folders.
 At the root of the `xsd` folder, the file `NeTEx_publication.xsd` should be used as the main one for production and validation purposes. It includes references to all the other XSD.
@@ -37,10 +37,10 @@ At the root of the `xsd` folder, the file `NeTEx_publication.xsd` should be used
 
 | Branch Name | Description                                             | Maintenance status                                    | Link                                            |
 | ----------- | ------------------------------------------------------- | ----------------------------------------------- |----------------------------------------------- 
-| v2.0        | The last stable branch of the XML Schema, result of the NeTEx revision made during 2022-2026 | Bug fixes only | [Direct link](https://github.com/NeTEx-CEN/NeTEx)    |
-| v1.3        | The previous branch of the XML Schema that was published prior to the 2026 revision of NeTEx, it matches the state of the XSD at the date of the publication of Part 6 (CEN/TS 16614-6:2024) with the correction of bugs and typos -- **Important note**: this branch is not longer maintained | Not maintained | [Direct link](https://github.com/NeTEx-CEN/NeTEx/tree/v1.3) |
-| v2.1-wip    | All the upcoming work to improve v2.0     | In development   | [GitHub](https://github.com/NeTEx-CEN/NeTEx/tree/v2.1-wip) |
-| v3.0-wip    | All the upcoming work preparing the migration from CEN/TS to CEN/EN for the entire NeTEx series        | In development | [GitHub](https://github.com/NeTEx-CEN/NeTEx/tree/v3.0-wip) |
+| v2.0        | The last stable branch of the XML Schema, result of the NeTEx revision made during 2022-2026 | Bug fixes only | [Direct link](https://github.com/TransmodelEcosystem/NeTEx)    |
+| v1.3        | The previous branch of the XML Schema that was published prior to the 2026 revision of NeTEx, it matches the state of the XSD at the date of the publication of Part 6 (CEN/TS 16614-6:2024) with the correction of bugs and typos -- **Important note**: this branch is not longer maintained | Not maintained | [Direct link](https://github.com/TransmodelEcosystem/NeTEx/tree/v1.3) |
+| v2.1-wip    | All the upcoming work to improve v2.0     | In development   | [GitHub](https://github.com/TransmodelEcosystem/NeTEx/tree/v2.1-wip) |
+| v3.0-wip    | All the upcoming work preparing the migration from CEN/TS to CEN/EN for the entire NeTEx series        | In development | [GitHub](https://github.com/TransmodelEcosystem/NeTEx/tree/v3.0-wip) |
 
 All other branches are considered as feature branches, meaning that they are used for development only and are to be deleted once a Pull Request is merged. See below for more details on contributions.
 
@@ -92,7 +92,7 @@ The folder contains more comprehensive NeTEx files that aim to represent either 
 
 ### Starting a discussion 💬
 
-Either for a modelling question or a request for change, please start a discussion using the [GitHub issues](https://github.com/NeTEx-CEN/NeTEx/issues). 
+Either for a modelling question or a request for change, please start a discussion using the [GitHub issues](https://github.com/TransmodelEcosystem/NeTEx/issues). 
 In your issue, make sure that:
 - The title is a clear summary of your question / requst for change,
 - The content sufficiently details:
@@ -112,18 +112,35 @@ For new features, the decision between targetting v2.1-wip or v3.0-wip will be m
 
 _Upcoming: templates for Pull Request_
 
+### The use of AI in this repo 🤖
+
+In this repository, the use of AI should follow these guidelines. The guiding principle is that any contributor is ultimately reponsible for their work on NeTEx and they should be the last reviewer of any AI-guided work before submitting it for peer-review; in other words, only contributors can be authors or co-authors of any change made to NeTEx.
+
+AI **can** be used for:
+- Generation of code for contributors to work on the XSD by themselves,
+- Analysis of any change proposed to the XSD before it is edited / commented / approved,
+- Improvements to the general language in the documentation (i.e, anything in `<xsd:annotation>` and `<xsd:documentation>`) or to check for typos in any work.
+
+AI **cannot** be used for:
+- Committing a change in a Pull Request, i.e. the AI agent cannot be an author or co-author of any commit,
+- Authoring a change, i.e. the AI agent cannot be an author or co-author of any Pull Request,
+- Automated code review as a stand alone action, i.e. the result of a review must be proof-read by a contributor,
+- Produce documentation from scratch (i.e, anything in `<xsd:annotation>` and `<xsd:documentation>` should be proof-read by a contributor if it was suggested by AI).
+
+In case you have a GitHub Pro account, please disable the feature `Automated Copilot code review` before contributing here.
+
 ----
 
-## Change log 📰
+## Changelog 📰
 
 ### Releases
 | Release Number | Release Date  | Description                                    | Link          |
 | -------------- | ------------- | ---------------------------------------------- | ------------- |
-| v1.2            | March 2022    | Before the extension to alternative modes of operation | [Code](https://github.com/NeTEx-CEN/NeTEx/releases/tag/v1.2)    |
-| v1.2.2          | August 2023   | With the inclusion of NeTEx Part 5 (Alternative modes) | [Code](https://github.com/NeTEx-CEN/NeTEx/releases/tag/v1.2.2)  |
-| v1.2.3          | May 2024      | Improvement on the v1.2.2 before the release of NeTEx Part 6 (EPIAP) | [Code](https://github.com/NeTEx-CEN/NeTEx/releases/tag/v1.2.3)  |
-| v1.3.1          | May 2024      | Release of NeTex Part 6, the European Passenger Information Accessibility Profile (EPIAP) | [Code](https://github.com/NeTEx-CEN/NeTEx/releases/tag/v1.3.1) |
-| v2.0.0          | February 2026 | Matches the CEN documentation published in February 2026 for NeTEx Parts 1, 2, 3 and 5. Considered as the latest version of NeTEx to be used for production. | [Code](https://github.com/NeTEx-CEN/NeTEx/releases/tag/v2.0.0) |
+| v1.2            | March 2022    | Before the extension to alternative modes of operation | [Code](https://github.com/TransmodelEcosystem/NeTEx/releases/tag/v1.2)    |
+| v1.2.2          | August 2023   | With the inclusion of NeTEx Part 5 (Alternative modes) | [Code](https://github.com/TransmodelEcosystem/NeTEx/releases/tag/v1.2.2)  |
+| v1.2.3          | May 2024      | Improvement on the v1.2.2 before the release of NeTEx Part 6 (EPIAP) | [Code](https://github.com/TransmodelEcosystem/NeTEx/releases/tag/v1.2.3)  |
+| v1.3.1          | May 2024      | Release of NeTex Part 6, the European Passenger Information Accessibility Profile (EPIAP) | [Code](https://github.com/TransmodelEcosystem/NeTEx/releases/tag/v1.3.1) |
+| v2.0.0          | February 2026 | Matches the CEN documentation published in February 2026 for NeTEx Parts 1, 2, 3 and 5. Considered as the latest version of NeTEx to be used for production. | [Code](https://github.com/TransmodelEcosystem/NeTEx/releases/tag/v2.0.0) |
 
 **Important notes:** 
 - Releases (and their tags) are a snapshot of the corresponding working branch in time.
@@ -131,4 +148,4 @@ _Upcoming: templates for Pull Request_
 - For any development work, it is recommended to use the latest 3-digit version of NeTEx XML Schema.
 
 ### Comprehensive version history
-The comprehensive versions history is available in [change_log.md](https://github.com/NeTEx-CEN/NeTEx/blob/v2.0/change_log.md)
+The comprehensive versions history is available in [CHANGELOG.md](https://github.com/TransmodelEcosystem/NeTEx/blob/v2.0/CHANGELOG.md)

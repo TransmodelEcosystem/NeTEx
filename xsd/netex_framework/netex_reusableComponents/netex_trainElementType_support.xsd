@@ -111,7 +111,7 @@ Rail transport, Roads and Road transport
 		</xsd:annotation>
 		<xsd:restriction base="TrainIdType"/>
 	</xsd:simpleType>
-	<xsd:element name="UnpoweredTrainRef" type="UnpoweredTrainRefStructure" substitutionGroup="TrainRef" default="false">
+	<xsd:element name="UnpoweredTrainRef" type="UnpoweredTrainRefStructure" substitutionGroup="TrainRef">
 		<xsd:annotation>
 			<xsd:documentation>Reference to a UNPOWERED TRAIN. v2.0</xsd:documentation>
 		</xsd:annotation>

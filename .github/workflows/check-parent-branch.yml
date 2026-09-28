@@ -1,0 +1,33 @@
+# Block PRs targeting wip branches (v2.1-wip, v3.0-wip) when they are
+# behind their parent branch (v2.0 and v2.1-wip respectively).
+# This prevents unpropagated commits from accumulating, which leads to
+# costly backports of many commits generating large conflicts.
+# See https://github.com/TransmodelEcosystem/NeTEx/issues/982
+
+name: Check parent branch is up to date
+
+on:
+  pull_request:
+    branches: [v2.1-wip, v3.0-wip]
+
+jobs:
+  parent-branch-is-up-to-date:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify base branch contains all parent commits
+        run: |
+          case "${{ github.base_ref }}" in
+            v2.1-wip) parent=v2.0 ;;
+            v3.0-wip) parent=v2.1-wip ;;
+          esac
+
+          behind=$(git rev-list --count "origin/${{ github.base_ref }}..origin/$parent")
+          if [ "$behind" -gt 0 ]; then
+            echo "::error::${{ github.base_ref }} is $behind commit(s) behind $parent. Merge $parent into ${{ github.base_ref }} first."
+            git log --oneline "origin/${{ github.base_ref }}..origin/$parent"
+            exit 1
+          fi
