@@ -1284,7 +1284,7 @@ Rail transport, Roads and Road transport
 	</xsd:group>
 	<xsd:group name="EntrancePropertiesGroup">
 		<xsd:annotation>
-			<xsd:documentation>Property lements for ENTRANCE EQUIPMENT type.</xsd:documentation>
+			<xsd:documentation>Property elements for ENTRANCE EQUIPMENT type.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="Door" type="xsd:boolean" minOccurs="0">

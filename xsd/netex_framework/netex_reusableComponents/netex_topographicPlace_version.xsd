@@ -202,7 +202,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="CountryRef" minOccurs="0"/>
 			<xsd:element name="otherCountries" type="countryRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>For TOPOGRAPHIC PLACEs thats span borders, references to additional COUNTRY or COUNTRIEs that place lies in.</xsd:documentation>
+					<xsd:documentation>For TOPOGRAPHIC PLACEs that span borders, references to additional COUNTRY or COUNTRIEs that place lies in.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ParentTopographicPlaceRef" type="TopographicPlaceRefStructure" minOccurs="0">

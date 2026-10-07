@@ -88,7 +88,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:group name="ServiceAccessRightRefGroup">
 		<xsd:annotation>
-			<xsd:documentation>Any one of the alllowed SERVICE ACCESS RIGHT.</xsd:documentation>
+			<xsd:documentation>Any one of the allowed SERVICE ACCESS RIGHT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="ServiceAccessRightRef"/>
@@ -155,7 +155,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:group name="FareProductRefGroup">
 		<xsd:annotation>
-			<xsd:documentation>Any one of the alllowed fare products.</xsd:documentation>
+			<xsd:documentation>Any one of the allowed fare products.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="FareProductRef"/>
@@ -996,7 +996,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="PreassignedFareProductType" type="PreassignedFareProductEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Classifcation of a PREASSIGNED FARE PRODUCT.</xsd:documentation>
+					<xsd:documentation>Classification of a PREASSIGNED FARE PRODUCT.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="SupplementProductType" type="SupplementProductEnumeration" minOccurs="0">

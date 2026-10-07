@@ -629,12 +629,12 @@ The VIEW includes derived ancillary data from referenced entities.</xsd:document
 		<xsd:sequence>
 			<xsd:element name="Origin" type="DeadRunEndpointStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Origin for DEAD RUN. Can be Derived from JORUNEY PATTERN.</xsd:documentation>
+					<xsd:documentation>Origin for DEAD RUN. Can be Derived from JOURNEY PATTERN.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Destination" type="DeadRunEndpointStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Destination for DEAD RUN. Can be derived from JORUNEY PATTERN.</xsd:documentation>
+					<xsd:documentation>Destination for DEAD RUN. Can be derived from JOURNEY PATTERN.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

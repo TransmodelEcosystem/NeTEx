@@ -239,7 +239,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="AccountingTime" type="xsd:duration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>How long a time shoudl be used for the the ACCOUNTABLE ELEMENT.</xsd:documentation>
+					<xsd:documentation>How long a time should be used for the the ACCOUNTABLE ELEMENT.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="AccountingFactor" type="xsd:decimal" minOccurs="0">

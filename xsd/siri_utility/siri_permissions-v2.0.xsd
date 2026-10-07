@@ -101,7 +101,7 @@ Rail transport, Roads and road transport
 			<xsd:choice>
 				<xsd:element name="AllParticipants" type="EmptyType">
 					<xsd:annotation>
-						<xsd:documentation>Parmissions apply by default to All particpants. May be overidden by other separate permissions for individual.</xsd:documentation>
+						<xsd:documentation>Parmissions apply by default to All participants. May be overridden by other separate permissions for individual.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
 				<xsd:element name="ParticipantRef" type="ParticipantRefStructure">

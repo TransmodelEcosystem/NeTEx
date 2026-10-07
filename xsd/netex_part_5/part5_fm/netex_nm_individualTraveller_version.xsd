@@ -274,7 +274,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="DrivingStyle" type="DrivingStyleEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Preferrred style of driving.</xsd:documentation>
+					<xsd:documentation>Preferred style of driving.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="NumberOfProposedTrips" type="xsd:nonNegativeInteger" minOccurs="0">

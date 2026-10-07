@@ -112,7 +112,7 @@ Roads and road transport
 				<xsd:sequence>
 					<xsd:group ref="NetworkFilterByValueGroup">
 						<xsd:annotation>
-							<xsd:documentation>Values for selcting by value. Return objuects that satisfy alll of the follwoing.</xsd:documentation>
+							<xsd:documentation>Values for selecting by value. Return objuects that satisfy all of the following.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:group>
 				</xsd:sequence>

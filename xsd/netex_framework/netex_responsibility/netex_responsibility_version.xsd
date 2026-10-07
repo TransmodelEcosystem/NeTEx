@@ -99,7 +99,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element ref="privateCodes" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>A list of private codes that uniquely identifiy the element. May be used for inter-operating with other (legacy) systems. +v2.0</xsd:documentation>
+					<xsd:documentation>A list of private codes that uniquely identify the element. May be used for inter-operating with other (legacy) systems. +v2.0</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="Extensions" minOccurs="0"/>
@@ -226,7 +226,7 @@ Rail transport, Roads and Road transport
 	<!-- ======================================================================= -->
 	<xsd:element name="privateCodes" type="PrivateCodesStructure">
 		<xsd:annotation>
-			<xsd:documentation>A list of private codes that uniquely identifiy the element. May be used for inter-operating with other (legacy) systems. +v2.0</xsd:documentation>
+			<xsd:documentation>A list of private codes that uniquely identify the element. May be used for inter-operating with other (legacy) systems. +v2.0</xsd:documentation>
 		</xsd:annotation>
 		<xsd:unique name="PrivateCodeType">
 			<xsd:annotation>

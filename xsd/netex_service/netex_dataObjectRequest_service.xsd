@@ -92,7 +92,7 @@ Roads and road transport</Category>
 		<xsd:sequence>
 			<xsd:element name="topics">
 				<xsd:annotation>
-					<xsd:documentation>One or more Request filters that specify tthe data to be included in output. Multiple filters are logically ANDed.</xsd:documentation>
+					<xsd:documentation>One or more Request filters that specify the data to be included in output. Multiple filters are logically ANDed.</xsd:documentation>
 				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:sequence>

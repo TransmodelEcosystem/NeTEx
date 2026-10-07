@@ -579,7 +579,7 @@ Rail transport, Roads and Road transport
 						<xsd:sequence>
 							<xsd:element name="PropertyKeptForDuration" type="xsd:duration" minOccurs="0">
 								<xsd:annotation>
-									<xsd:documentation>Period for which lost property is kept - after this tiome it may be disposed of. +v1.1</xsd:documentation>
+									<xsd:documentation>Period for which lost property is kept - after this time it may be disposed of. +v1.1</xsd:documentation>
 								</xsd:annotation>
 							</xsd:element>
 						</xsd:sequence>
