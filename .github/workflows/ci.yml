@@ -28,6 +28,9 @@ jobs:
       - name: Validate NeTEx XML examples
         run: ./.github/scripts/validate-examples.sh
 
+      - name: Validate negative examples (must-fail)
+        run: ./.github/scripts/validate-should-fail.sh
+
       # Only on push: a pull_request run from a fork gets a read-only token
       # and cannot commit back. Target branches are still normalized by the
       # push-triggered run that follows the merge.
