@@ -320,7 +320,6 @@ Rail transport, Roads and Road transport
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:enumeration value="battery"/>
 			<xsd:enumeration value="biodiesel"/>
-			<xsd:enumeration value="coal"/>
 			<xsd:enumeration value="diesel"/>
 			<xsd:enumeration value="dieselBatteryHybrid"/>
 			<xsd:enumeration value="electricContact"/>
