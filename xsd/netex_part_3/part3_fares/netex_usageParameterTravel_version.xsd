@@ -431,7 +431,7 @@ Rail transport, Roads and Road transport
 					<xsd:documentation>Duration of USAGE VALIDITY PERIOD.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="ActivationMeans" type="ActivationMeansEnumeration" minOccurs="0">
+			<xsd:element name="ActivationMeans" type="ActivationMeansListOfEnumerations" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Means of activating start of period.</xsd:documentation>
 				</xsd:annotation>
