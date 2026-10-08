@@ -102,7 +102,7 @@ Roads and Road transport.
 	<!-- ======================================================================= -->
 	<xsd:element name="ParticipantRef" type="siri:ParticipantCodeType">
 		<xsd:annotation>
-			<xsd:documentation>Identifier of system requesting Data.</xsd:documentation>
+			<xsd:documentation>External code identifying the source of the data being exchanged.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="PublicationRequest" type="PublicationRequestStructure">

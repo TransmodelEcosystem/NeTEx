@@ -362,6 +362,8 @@ The Calendar is shown coded as
 								<LineInDirectionRef>
 									<LineRef version="any" ref="mybus:LN_6"/>
 									<DirectionRef version="any" ref="mybus:DR_Hospital"/>
+									<DirectionType>outbound</DirectionType>
+									<!-- could also be only DirectionType -->
 								</LineInDirectionRef>
 								<ScheduledStopPointRef version="any" ref="mybus:SSP_025"/>
 								<AdjacentStopPointRef version="any" ref="mybus:SSP_011"/>
