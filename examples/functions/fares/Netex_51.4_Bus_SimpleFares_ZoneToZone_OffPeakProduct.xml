@@ -197,7 +197,7 @@ The Calendar is shown coded as
 				</Codespace>
 				<Codespace id="myfares">
 					<Xmlns>myfares</Xmlns>
-					<XmlnsUrl>http://www.myfares,com/fares</XmlnsUrl>
+					<XmlnsUrl>http://www.myfares.com/fares</XmlnsUrl>
 					<Description>Fare data</Description>
 				</Codespace>
 			</codespaces>
