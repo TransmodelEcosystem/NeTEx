@@ -25,6 +25,8 @@
 							Add __RequiresDepost__ and __noCashPayment__ to CommercialCondition summary.
 							Add __VehicleCOlelction_
 				</Date>
+				<Date><Modified>2026-07-09</Modified>Add correctly spelt IsExchangeable; deprecate misspelt IsExchangable.
+				</Date>
 				<Description>
 					<p>NeTEx is a European CEN standard for the exchange of Public Transport data including timetables.</p>
 					<p>This sub-schema describes the   CONDITION SUMMARY types.</p>
@@ -222,11 +224,18 @@ Rail transport, Roads and Road transport
 					<xsd:documentation>Whether the ticket can be refunded.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="IsExchangable" type="xsd:boolean" default="true" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Whether the ticket can be exchanged.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
+			<xsd:choice minOccurs="0">
+				<xsd:element name="IsExchangeable" type="xsd:boolean" default="true">
+					<xsd:annotation>
+						<xsd:documentation>Whether the ticket can be exchanged. +v2.1</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="IsExchangable" type="xsd:boolean" default="true">
+					<xsd:annotation>
+						<xsd:documentation>DEPRECATED due to misspelling, use IsExchangeable instead. -v2.1</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
 			<xsd:element name="HasExchangeFee" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Whether there is a charge for exchanges.</xsd:documentation>

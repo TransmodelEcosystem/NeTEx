@@ -3,6 +3,7 @@
 	<xsd:include schemaLocation="../../netex_part_1/part1_tacticalPlanning/netex_journeyPattern_support.xsd"/>
 	<xsd:include schemaLocation="netex_vehicleJourney_support.xsd"/>
 	<xsd:include schemaLocation="netex_passingTimes_support.xsd"/>
+	<xsd:include schemaLocation="../../netex_part_1/part1_ifopt/netex_ifopt_checkConstraint_version.xsd"/>
 	<xsd:include schemaLocation="../../netex_part_1/part1_tacticalPlanning/netex_journeyTiming_version.xsd"/>
 	<xsd:include schemaLocation="../../netex_part_2/part2_occupancy/netex_oc_occupancy_version.xsd"/>
 	<!-- ======================================================================= -->
@@ -202,6 +203,11 @@ Rail transport, Roads and Road transport
 			<xsd:element name="EarliestDepartureDayOffset" type="DayOffsetType" default="0" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Number of days after the starting time of the journey if not same calendar day. Default is 0 for same day.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="checkConstraints" type="checkConstraints_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>CHECK CONSTRAINTs can be used on StopPointInJourneyPattern as well. It should be used there, if it affects every SERVICE JOURNEY with that SERVICE JOURNEY PATTERN. If the CONSTRAINT only affects one single SERVICE JOURNEY and PASSING TIME, then it is better to use this CHECK CONSTRAINT directly in PASSING TIME. +v2.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="occupancies" type="OccupancyView_RelStructure" minOccurs="0">

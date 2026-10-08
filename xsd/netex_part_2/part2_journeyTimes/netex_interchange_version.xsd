@@ -533,6 +533,11 @@ Default is false.</xsd:documentation>
  Default is false.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element name="ChangeWithinVehicle" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>In case of train splitting, the passenger may have to change to a different part of the train to continue the journey. Default is false. +v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:group ref="InterchangeManagementGroup"/>
 		</xsd:sequence>
 	</xsd:group>
