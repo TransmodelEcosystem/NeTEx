@@ -3,11 +3,13 @@
 	<!-- ======================================================================= -->
 	<xsd:include schemaLocation="netex_servicePattern_support.xsd"/>
 	<xsd:include schemaLocation="../part1_tacticalPlanning/netex_fareZone_support.xsd"/>
+	<xsd:include schemaLocation="../../netex_part_1/part1_ifopt/netex_ifopt_checkConstraint_version.xsd"/>
 	<xsd:include schemaLocation="netex_journeyPattern_version.xsd"/>
 	<xsd:include schemaLocation="netex_timingPattern_version.xsd"/>
 	<xsd:include schemaLocation="netex_siteConnection_version.xsd"/>
 	<xsd:include schemaLocation="../part1_networkDescription/netex_flexibleNetwork_version.xsd"/>
 	<xsd:include schemaLocation="../../netex_part_2/part2_occupancy/netex_oc_occupancy_version.xsd"/>
+	<xsd:include schemaLocation="../../netex_part_2/part2_journeyTimes/netex_vehicleJourneyStopAssignment_version.xsd"/>
 	<!-- ======================================================================= -->
 	<xsd:annotation>
 		<xsd:appinfo>
@@ -899,6 +901,13 @@ Rail transport, Roads and Road transport
 			<xsd:element name="StopUse" type="StopUseEnumeration" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Nature of use of stop, e.g. access, interchange only, or pass through. Default is Access.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="QuayAssignmentGroup"/>
+			<xsd:element ref="AccessibilityAssessment" minOccurs="0"/>
+			<xsd:element name="checkConstraints" type="checkConstraints_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Implements the navigation from processes or barriers that the travellers will be facing (e.g., security check, check-in, etc.). +v2.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:choice>
