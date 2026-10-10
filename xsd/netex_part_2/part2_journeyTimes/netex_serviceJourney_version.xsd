@@ -725,5 +725,68 @@ The VIEW includes derived ancillary data from referenced entities.</xsd:document
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
+	<!-- ==Sequence of Journeys============================================================ -->
+	<xsd:element name="SequenceOfJourneys" abstract="false">
+		<xsd:annotation>
+			<xsd:documentation>An ordered sequence of SERVICE JOURNEYs with the following constraints:
+			they shall all share the same CALENDAR/DAY TYPES
+			there shall be at least one phycal VEHICLE shared between 2 consecutive SERVICE JOURNEY
+			There is an implicit INTERCHANGE between 2 consecutive SERVICE JOURNEY (can be made explicit if needed)
+
+			This is expected to be a published offer for passengers.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:restriction base="SequenceOfJourneys_VersionStructure">
+					<xsd:sequence>
+						<xsd:sequence>
+							<xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+						</xsd:sequence>
+						<xsd:sequence>
+							<xsd:group ref="DataManagedObjectGroup"/>
+						</xsd:sequence>
+						<xsd:sequence>
+							<xsd:group ref="SequenceOfJourneysGroup"/>
+						</xsd:sequence>
+					</xsd:sequence>
+					<xsd:attribute name="id" type="SequenceOfJourneysIdType"/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="SequenceOfJourneys_VersionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a SEQUENCE OF JOURNEYS.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="DataManagedObjectStructure">
+				<xsd:sequence>
+					<xsd:group ref="SequenceOfJourneysGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="SequenceOfJourneysGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a SEQUENCE OF JOURNEYS.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ServiceJourneys" type="serviceJourneyRefs_RelStructure">
+				<xsd:annotation>
+					<xsd:documentation>Ordered Services in the sequence.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FromStopPointRef" type="ScheduledStopPointRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Point at which this SEQUENCE OF JOURNEYS starts.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ToStopPointRef" type="ScheduledStopPointRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Point at which this SEQUENCE OF JOURNEYS ends.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
 	<!-- ======================================================================= -->
 </xsd:schema>

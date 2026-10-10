@@ -113,6 +113,7 @@ Rail transport, Roads and Road transport
 							<xsd:documentation>A VEHICLE JOURNEY with a set of frequencies that may be used to represent a set of similar journeys differing only by their time of departure.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
+					<xsd:element ref="SequenceOfJourneys"/>
 				</xsd:choice>
 			</xsd:extension>
 		</xsd:complexContent>
