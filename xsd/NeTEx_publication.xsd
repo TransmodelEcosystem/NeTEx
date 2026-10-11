@@ -600,6 +600,11 @@
 			<xsd:field xpath="@id"/>
 			<xsd:field xpath="@version"/>
 		</xsd:key>
+		<!-- =====TypeOfValue Key========================== -->
+		<xsd:key name="TypeOfValue_Key">
+			<xsd:selector xpath=".//values/TypeOfValue"/>
+			<xsd:field xpath="@id"/>
+		</xsd:key>
 		<!-- =====ValueSet unique========================== -->
 		<xsd:unique name="ValueSet_UniqueBy_Id_Version">
 			<xsd:annotation>
@@ -13017,6 +13022,7 @@
 		</xsd:key>
 		<!-- =====WheelchairVehicle ================================ -->
 		<!-- =====WheelchairVehicle unique========================== -->
+		<!--This section can be deleted at the next update as WheelchairVehicle is marked deprecated since v2.0-->
 		<xsd:unique name="WheelchairVehicle_UniqueBy_Id_Version">
 			<xsd:annotation>
 				<xsd:documentation>Every [WheelchairVehicle Id + Version] must be unique within document.</xsd:documentation>
