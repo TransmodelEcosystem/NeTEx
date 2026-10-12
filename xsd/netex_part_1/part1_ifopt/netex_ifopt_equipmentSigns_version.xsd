@@ -4,6 +4,7 @@
 	<xsd:include schemaLocation="netex_ifopt_equipmentPassenger_support.xsd"/>
 	<xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_equipment_version.xsd"/>
 	<xsd:include schemaLocation="../part1_networkDescription/netex_line_version.xsd"/>
+	<xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_deckPlan_support.xsd"/>
 	<!-- ======================================================================= -->
 	<xsd:annotation>
 		<xsd:appinfo>
@@ -331,6 +332,11 @@ Rail transport, Roads and Road transport
 			<xsd:element name="LinePublicCode" type="PublicCodeStructure" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Public Code for LINE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="VehicleSide" type="VehicleSideEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Side of HEADING SIGN relative to forward orientation of VEHICLE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
