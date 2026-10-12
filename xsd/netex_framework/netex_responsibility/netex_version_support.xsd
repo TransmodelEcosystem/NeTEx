@@ -24,6 +24,9 @@
 				<Date>
 					<Modified>2019-05-15 Add TyopeOfVErsion</Modified>
 				</Date>
+				<Date>
+					<Modified>2021-07-02 Add PublicationEnumeration</Modified>
+				</Date>
 				<Description>
 					<p>NeTEx - Network Exchange. This subschema defines version attribute base types.</p>
 				</Description>
@@ -87,6 +90,43 @@ Rail transport, Roads and Road transport
 			<xsd:enumeration value="other">
 				<xsd:annotation>
 					<xsd:documentation>Entity is still active but is in the process of being made inactive.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PublicationEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Indicates whether this ENTITY is intended for unrestricted publication, or the publication of its data should be limited. Enumerated value. Default is public</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="public">
+				<xsd:annotation>
+					<xsd:documentation>Entity should be public.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="restricted">
+				<xsd:annotation>
+					<xsd:documentation>Publication of Entity should be restricted.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="private">
+				<xsd:annotation>
+					<xsd:documentation>Entity should be private e.g. for internal use.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="confidential">
+				<xsd:annotation>
+					<xsd:documentation>Entity is confidential i.e. has legal implications or usage requires consent.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="authorised">
+				<xsd:annotation>
+					<xsd:documentation>Access to or usage of Entity requires authorisation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="test">
+				<xsd:annotation>
+					<xsd:documentation>Entity is used for testing i.e. contains test data.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>
@@ -192,6 +232,11 @@ Rail transport, Roads and Road transport
 		<xsd:attribute name="status" type="StatusEnumeration" use="optional" default="active">
 			<xsd:annotation>
 				<xsd:documentation>Whether ENTITY is currently in use. Default is "active".</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="publication" type="PublicationEnumeration" use="optional" default="public">
+			<xsd:annotation>
+				<xsd:documentation>Criterion for publication of ENTITY, e.g. for filtering. Default is "public".</xsd:documentation>
 			</xsd:annotation>
 		</xsd:attribute>
 		<xsd:attribute name="derivedFromVersionRef" type="VersionIdType" use="optional">
