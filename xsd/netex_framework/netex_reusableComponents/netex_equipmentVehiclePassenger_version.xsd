@@ -232,9 +232,19 @@ Rail transport, Roads and Road transport
 					<xsd:documentation>Number of steps to board or alight from VEHICLE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element name="StepHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of an individual step, in metres rounded to the nearest cm.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:element name="BoardingHeight" type="LengthType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Maximum step height to board.</xsd:documentation>
+					<xsd:documentation>Height of the outer entry point (lowest step), measured from the ground of the road or top of the rail. Together with FloorHeight this describes the lowest and highest point of an entrance.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FloorHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Height of the inner entry point (floor next to the entrance), measured from the ground of the road or top of the rail. Together with BoardingHeight this describes the lowest and highest point of an entrance. +v2.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="EquipmentLength" type="LengthType" minOccurs="0">
@@ -250,6 +260,11 @@ Rail transport, Roads and Road transport
 			<xsd:element name="GapToPlatform" type="LengthType" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Normal gap between VEHICLE and platform.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EdgeToTrackCenterDistance" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Distance from the outer entry point (including any fixed outer steps) to the vehicle center (center point between axles). Can be used to calculate the horizontal gap in conjunction with the EdgeToTrackCenterDistance from QUAY. +v2.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
