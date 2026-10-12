@@ -133,6 +133,33 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="AccessibilityAssessment" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:group>
+	<xsd:group name="_DeprecatedActualVehicleEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Helper group to retain backwards compatibility with deprecation notice. Will be removed in 3.0.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+				<xsd:element name="Units" type="xsd:integer" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>DEPRECATED: Use Units from ACTUAL VEHICLE EQUIPMENT. Will be removed in 3.0.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="VehicleTypeRef" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>DEPRECATED: Use VehicleTypeRef from ACTUAL VEHICLE EQUIPMENT. Will be removed in 3.0.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="EquipmentRef" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>DEPRECATED: This should NOT be used. Will be removed in 3.0.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="AccessibilityAssessment" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>DEPRECATED: Use AccessibilityAssessment from ACTUAL VEHICLE EQUIPMENT or on the actual element like DECK ENTRANCE. Will be removed in 3.0.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
 	<!-- ======================================================================= -->
 	<xsd:element name="AccessVehicleEquipment" substitutionGroup="PassengerEquipment">
 		<xsd:annotation>
@@ -159,9 +186,7 @@ Rail transport, Roads and Road transport
 							</xsd:element>
 						</xsd:sequence>
 						<xsd:sequence>
-							<xsd:group ref="ActualVehicleEquipmentGroup"/>
-						</xsd:sequence>
-						<xsd:sequence>
+							<xsd:group ref="_DeprecatedActualVehicleEquipmentGroup"/>
 							<xsd:group ref="AccessVehicleEquipmentGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
@@ -175,7 +200,7 @@ Rail transport, Roads and Road transport
 			<xsd:documentation>Type for an ACCESS VEHICLE EQUIPMENT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
-			<xsd:extension base="ActualVehicleEquipment_VersionStructure">
+			<xsd:extension base="PassengerEquipment_VersionStructure">
 				<xsd:sequence>
 					<xsd:group ref="AccessVehicleEquipmentGroup"/>
 				</xsd:sequence>
@@ -329,9 +354,7 @@ Rail transport, Roads and Road transport
 							</xsd:element>
 						</xsd:sequence>
 						<xsd:sequence>
-							<xsd:group ref="ActualVehicleEquipmentGroup"/>
-						</xsd:sequence>
-						<xsd:sequence>
+							<xsd:group ref="_DeprecatedActualVehicleEquipmentGroup"/>
 							<xsd:group ref="WheelchairVehicleEquipmentGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
@@ -345,7 +368,7 @@ Rail transport, Roads and Road transport
 			<xsd:documentation>Type for a WHEELCHAIR VEHICLE EQUIPMENT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
-			<xsd:extension base="ActualVehicleEquipment_VersionStructure">
+			<xsd:extension base="PassengerEquipment_VersionStructure">
 				<xsd:sequence>
 					<xsd:group ref="WheelchairVehicleEquipmentGroup"/>
 				</xsd:sequence>
