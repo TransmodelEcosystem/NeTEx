@@ -394,7 +394,7 @@ The RULE STEP RESULT  Adjustment Amount is  the difference between the original 
 			</xsd:group>
 			<xsd:element name="Narrative" type="MultilingualString" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Explanation of calcuation step as text. +v1.1</xsd:documentation>
+					<xsd:documentation>Explanation of calculation step as text. +v1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

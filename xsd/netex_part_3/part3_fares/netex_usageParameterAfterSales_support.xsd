@@ -313,7 +313,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="partialJourney">
 				<xsd:annotation>
-					<xsd:documentation>Refund is for unusued section of a journey.</xsd:documentation>
+					<xsd:documentation>Refund is for unused section of a journey.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="earlyTermination">

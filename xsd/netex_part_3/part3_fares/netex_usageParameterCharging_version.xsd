@@ -204,7 +204,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MaximumNumberOfFailToCheckOutEvents" type="xsd:integer" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Lmit on the number of fail-to-checkout events allowed before suspension. +v1.1</xsd:documentation>
+					<xsd:documentation>Limit on the number of fail-to-checkout events allowed before suspension. +v1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -267,7 +267,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="SubscriptionTermType" type="SubscriptionTermTypeEnumeration" default="fixed" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Type of susbcription term, e.g. fixed, variable, etc.</xsd:documentation>
+					<xsd:documentation>Type of subscription term, e.g. fixed, variable, etc.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MinimumSubscriptionPeriod" type="xsd:duration" minOccurs="0">

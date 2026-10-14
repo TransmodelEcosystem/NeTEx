@@ -77,7 +77,7 @@ Rail transport, Roads and Road transport
 	</xsd:group>
 	<xsd:complexType name="rechargingPointAssignments_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a lsit of RECHARGING POINT ASSIGNMENTs.</xsd:documentation>
+			<xsd:documentation>Type for a list of RECHARGING POINT ASSIGNMENTs.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="containmentAggregationStructure">
@@ -208,7 +208,7 @@ Rail transport, Roads and Road transport
 	<!-- =========== RECHARGING BAY  ============================================== -->
 	<xsd:complexType name="rechargingBays_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a lsit of RECHARGING BAYs.</xsd:documentation>
+			<xsd:documentation>Type for a list of RECHARGING BAYs.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="containmentAggregationStructure">

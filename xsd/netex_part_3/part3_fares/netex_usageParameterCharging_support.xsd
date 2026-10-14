@@ -129,7 +129,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="blockAllTravel">
 				<xsd:annotation>
-					<xsd:documentation>Policy if credit threhsold is exceeded is to block all travel bu yuser.</xsd:documentation>
+					<xsd:documentation>Policy if credit threhsold is exceeded is to block all travel by user.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="blockPayAsYouGoTravel">
@@ -157,7 +157,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="billAtFareDayEnd">
 				<xsd:annotation>
-					<xsd:documentation>Bill at end of evey fare day.</xsd:documentation>
+					<xsd:documentation>Bill at end of every fare day.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="billAtPeriodEnd">
@@ -325,7 +325,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="variable">
 				<xsd:annotation>
-					<xsd:documentation>Subscription can be for an arbitray term,</xsd:documentation>
+					<xsd:documentation>Subscription can be for an arbitrary term,</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="openEnded">
@@ -342,7 +342,7 @@ Rail transport, Roads and Road transport
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:enumeration value="automatic">
 				<xsd:annotation>
-					<xsd:documentation>Renew automatcally at end of term.</xsd:documentation>
+					<xsd:documentation>Renew automatically at end of term.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="manual">
@@ -352,7 +352,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="automaticOnConfirmation">
 				<xsd:annotation>
-					<xsd:documentation>Confirm and renew automatcally at end of subscription term.</xsd:documentation>
+					<xsd:documentation>Confirm and renew automatically at end of subscription term.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="none">

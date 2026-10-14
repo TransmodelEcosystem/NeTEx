@@ -62,7 +62,7 @@ Rail transport, Roads and Road transport
 	<!-- ==== RETAIL CONSORTIUM.======================================================== -->
 	<xsd:complexType name="retailConsortiumRefs_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a list of referecnes to RETAIL CONSORTIUMs.</xsd:documentation>
+			<xsd:documentation>Type for a list of references to RETAIL CONSORTIUMs.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="oneToManyRelationshipStructure">
