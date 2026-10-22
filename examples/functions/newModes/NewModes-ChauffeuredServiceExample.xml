@@ -584,7 +584,8 @@
 									<TemporalDistanceFromClassical>PT30M</TemporalDistanceFromClassical>
 								</ServiceCompetitiveCondition>
 								<ServiceCompetitiveCondition id="sba2b" version="1">
-									<Description>Area based DRT can be "slowed" down also in a different way. By penalising the time used. Otherwise, people are guided by trip planners at the first stop to the DRT, while the classic is more reliable. Also, a minimum drive and maximum drive are defined.</Description>
+									<Description>Area based DRT can be "slowed" down also in a different way. By penalising the time used. Otherwise, people are guided by trip planners at the first stop to the DRT, while the classic is more reliable. Also, a minimum drive and maximum drive are defined.
+									</Description>
 									<PenaltyDrivingTimeFactor>1.5</PenaltyDrivingTimeFactor>
 									<PenaltyTransferTimeFactor>1.2</PenaltyTransferTimeFactor>
 									<WalkTimeFactor>1.1</WalkTimeFactor>
