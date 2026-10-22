@@ -79,8 +79,7 @@
 					<Requires>http://www.netex.org.uk/schemas/1.0/PATH/netex_prereqfile.xsd</Requires>
 				</Relation>
 				<Rights>Unclassified
-					 <Copyright>CEN, Crown Copyright 2009-2023</Copyright>
-				</Rights>
+					 <Copyright>CEN, Crown Copyright 2009-2023</Copyright></Rights>
 				<Source>
 					<ul>
 						<li>Derived from the Transmodel, VDV, TransXChange, NEPTUNE, BISON and Trident standards.</li>
@@ -466,9 +465,9 @@ Rail transport, Roads and Road transport
 					<xsd:documentation>Timetable documents associated with the LINE, e.g pdf files</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="bookingArrangements" type="bookingArrangements_RelStructure" minOccurs="0">
+			<xsd:element name="bookingArrangements" type="serviceBookingArrangements_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Set of possible Booking Arrangements for this LINE. +v2.0</xsd:documentation>
+					<xsd:documentation>Set of possible Booking Arrangements for this LINE. Using ServiceBookingArrangement for DRT. +v2.0</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

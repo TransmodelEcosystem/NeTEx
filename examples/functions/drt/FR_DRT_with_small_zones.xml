@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--   ==== Exemple of a DRT line with stops (French Profile)  ======
+ 
+Overview 
+=======
+The Line XYZ starts at a regular stop "A" (a train station for exemple), the covers a DRT area "Z" that contains multiple bus stops 
+grouped together in small zones ("Z1 and "Z2"). Z1 contains bus stops (Quays) B, C and D; Z2 contains bus stops E, F, G.  
+The small zones are used to provide better theorical departure / arrival times than 
+having only one time for all de "Z" zone, and to enable RoutingConstraintZone for small zones (passengers cannot travel from one point 
+of a small zone to an other).
+
+This exemple contains reservations information : passengers car board on "A" without reservation, only telling 
+the driver at what stop they want to go. For other stop (in the "Z" zone), reservation has to be made 2 hours before departure or 
+the day before if the departure is before 8h30.
+
+Modelization
+============
+
+Based on French profile, but including all files into one global CompositeFrame.
+
+- There is only one Route, with 2 RoutePoints : 
+    - RoutePoint A
+    - RoutePoint Z
+- There is 2 ServiceJourneyPattern with 3 StopPointInJourneyPattern (SPiJP)
+    - SPiJP A, referencing a ScheduledStopPoint SSP-A
+    - SPiJP Z1, referencing a ScheduledStopPoint SSP-Z1, and RoutePointZ (in FlexiblePointProperties)
+    - SPiJP Z2, referencing a ScheduledStopPoint SSP-Z2, and RoutePointZ (in FlexiblePointProperties)
+- There is 2 ServiceJourney with 3 TimetabledPassingTime and PassengerAtStopTime
+    - referencing SPiJP A 
+    - referencing SPiJP Z1
+    - referencing SPiJP Z2
+
+Other associations :
+- 2 FlexibleStopAssignement associates SSP-Z1 and SSP-Z2 with the corresponding FlexibleStopPlaces (FSP-Z1 and FSP-Z2)
+- 2 FlexibleStopPlaces includes FlexibleArea, containing de SSPs ([SSP-Z1-B,SSP-Z1-C, SSP-Z1-D] and [SSP-Z2-E, SSP-Z2-F, SSP-Z2-G]) 
+- RoutingConstraintZones have references to all the SSP of a small zone (Z1 or Z2)
+- PassengerStopAssignements make associations to SSP to Quays 
+
+Questions
+=========
+- about RoutePoints : 
+    - What is the use of RoutePoints in regular lines as RoutePoint can only be referenced by FlexiblePointProperties ?
+    - Some NeTEx exemples are using "ScheduledStopPoint" in PointOnRoute instead of RoutePoint. It is valid because PointOnRoute 
+        expects a Point, but is it a good practice ? Point is highly abstract object.
+- about ScheduledStopPoints : 
+    - They are used in 2 different ways, as "point" and "zones" in SPiJP, and as "points" in FlexibleStopPlace
+    - If a consumer wants to collect the Quays from the Route level (for map display) :
+        - Regular RoutePoints are not associated with Quays => impossible (or use SSP instead of RoutePoint)
+        - DRT RoutePOints : RoutePoint <- SPiJP -> SSP (zone) <- FlexibleStopAssignement -> FlexibleStopPlace -> FlexibleStopArea -> SSP (point) <- PassengerStopAssignement -> Quay and StopPlace
+              
+-->
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:ns2="http://www.opengis.net/gml/3.2" xmlns:ns3="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml/3.2" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2024-08-27T08:33:29.858</PublicationTimestamp>
+	<ParticipantRef>exemple</ParticipantRef>
+	<Description>Flexible line</Description>
+	<dataObjects>
+		<CompositeFrame created="2024-08-27T08:33:29.858" version="1" id="exemple:CompositeFrame:1">
+			<codespaces>
+				<Codespace id="exemple">
+					<Xmlns>exemple</Xmlns>
+					<XmlnsUrl>https://exemple.com</XmlnsUrl>
+				</Codespace>
+			</codespaces>
+			<FrameDefaults>
+				<DefaultLocale>
+					<TimeZone>Europe/Paris</TimeZone>
+					<DefaultLanguage>fr</DefaultLanguage>
+				</DefaultLocale>
+			</FrameDefaults>
+			<frames>
+				<GeneralFrame id="exemple:GeneralFrame:01:" version="any">
+					<TypeOfFrameRef ref="FR:TypeOfFrame:NETEX_ARRET:"/>
+					<members>
+						<!-- Fixed Stop -->
+						<StopPlace id="exemple:StopPlace:A" version="any">
+							<Name>StopPlace A</Name>
+							<TransportMode>bus</TransportMode>
+						</StopPlace>
+						<!-- DRT Areas -->
+						<FlexibleStopPlace id="exemple:FlexibleStopPlace:Z" version="any">
+							<areas>
+								<FlexibleArea id="exemple:FlexibleArea:Z" version="any">
+									<!--
+                                   <gml:Polygon srsName="EPSG:4326">
+                                   </gml:Polygon>
+                                   -->
+									<members>
+										<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:Z1_A"/>
+										<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:Z1_B"/>
+										<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:Z1_C"/>
+										<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:Z2_D"/>
+										<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:Z2_E"/>
+										<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:Z2_F"/>
+									</members>
+								</FlexibleArea>
+							</areas>
+						</FlexibleStopPlace>
+						<FlexibleStopPlace id="exemple:FlexibleStopPlace:Z1" version="any">
+							<areas>
+								<FlexibleArea id="exemple:FlexibleArea:Z1" version="any">
+									<!--
+                                   <gml:Polygon srsName="EPSG:4326">
+                                   </gml:Polygon>
+                                   -->
+									<members>
+										<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:Z1_A"/>
+										<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:Z1_B"/>
+										<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:Z1_C"/>
+									</members>
+								</FlexibleArea>
+							</areas>
+						</FlexibleStopPlace>
+						<FlexibleStopPlace id="exemple:FlexibleStopPlace:Z2" version="any">
+							<areas>
+								<FlexibleArea id="exemple:FlexibleArea:Z2" version="any">
+									<!--
+                                    <gml:Polygon srsName="EPSG:4326">
+                                    </gml:Polygon>
+                                    -->
+									<members>
+										<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:Z2_D"/>
+										<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:Z2_E"/>
+										<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:Z2_F"/>
+									</members>
+								</FlexibleArea>
+							</areas>
+						</FlexibleStopPlace>
+						<!-- Quays (bus stops used by the DRT line, may be used by other lines) -->
+						<Quay id="exemple:Quay:A" version="any">
+							<!-- -->
+						</Quay>
+						<Quay id="exemple:Quay:Z1_A" version="any">
+							<!-- -->
+						</Quay>
+						<Quay id="exemple:Quay:Z1_B" version="any">
+							<!-- -->
+						</Quay>
+						<Quay id="exemple:Quay:Z1_C" version="any">
+							<!-- -->
+						</Quay>
+						<Quay id="exemple:Quay:Z2_D" version="any">
+							<!-- -->
+						</Quay>
+						<Quay id="exemple:Quay:Z2_E" version="any">
+							<!-- -->
+						</Quay>
+						<Quay id="exemple:Quay:Z2_F" version="any">
+							<!-- -->
+						</Quay>
+					</members>
+				</GeneralFrame>
+				<GeneralFrame id="exemple:GeneralFrame:line_xyz:" version="any">
+					<TypeOfFrameRef ref="FR:TypeOfFrame:NETEX_LIGNE_STRUCTURE:"/>
+					<members>
+						<Line id="exemple:Line:xyz:" version="any">
+							<Name>Line from A to Z</Name>
+							<ShortName>XYZ</ShortName>
+							<Description>DRT line with small virtual zones to provide specific timetables for routing and 
+                            disabling travel inside small zones
+                        </Description>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>demandAndResponseBus</BusSubmode>
+							</TransportSubmode>
+							<PublicCode>xyz</PublicCode>
+							<OperatorRef ref="exemple:Operator:01"/>
+							<LineType>corridorService</LineType>
+						</Line>
+						<!-- Only one route in this use case, there may be a backward on some other -->
+						<FlexibleRoute id="exemple:Route:xyz:" version="any">
+							<Name>Route from A to Z</Name>
+							<LineRef ref="exemple:Line:xyz:"/>
+							<DirectionType>outbound</DirectionType>
+							<pointsInSequence>
+								<PointOnRoute id="exemple:PointOnRoute:A" order="1" version="any">
+									<RoutePointRef ref="exemple:RoutePoint:A"/>
+								</PointOnRoute>
+								<PointOnRoute id="exemple:PointOnRoute:Z" order="2" version="any">
+									<RoutePointRef ref="exemple:RoutePoint:Z"/>
+								</PointOnRoute>
+							</pointsInSequence>
+							<FlexibleRouteType>mixed</FlexibleRouteType>
+						</FlexibleRoute>
+						<RoutePoint id="exemple:RoutePoint:A" version="any"/>
+						<RoutePoint id="exemple:RoutePoint:Z" version="any"/>
+						<ScheduledStopPoint id="exemple:ScheduledStopPoint:A" version="any"/>
+						<ScheduledStopPoint id="exemple:ScheduledStopPoint:Z1" version="any"/>
+						<ScheduledStopPoint id="exemple:ScheduledStopPoint:Z2" version="any"/>
+						<ScheduledStopPoint id="exemple:ScheduledStopPoint:Z1_A" version="any"/>
+						<ScheduledStopPoint id="exemple:ScheduledStopPoint:Z1_B" version="any"/>
+						<ScheduledStopPoint id="exemple:ScheduledStopPoint:Z1_C" version="any"/>
+						<ScheduledStopPoint id="exemple:ScheduledStopPoint:Z2_D" version="any"/>
+						<ScheduledStopPoint id="exemple:ScheduledStopPoint:Z2_E" version="any"/>
+						<ScheduledStopPoint id="exemple:ScheduledStopPoint:Z2_F" version="any"/>
+						<PassengerStopAssignment id="exemple:PassengerStopAssignment:A" version="any">
+							<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:A"/>
+							<StopPlaceRef ref="exemple:StopPlace:A"/>
+							<QuayRef ref="exemple:Quay:A"/>
+						</PassengerStopAssignment>
+						<FlexibleStopAssignment id="exemple:FlexibleStopAssignment:xyz_Z1" version="any">
+							<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:xyz_Z1"/>
+							<FlexibleStopPlaceRef ref="exemple:FlexibleStopPlace:xyz_Z1"/>
+						</FlexibleStopAssignment>
+						<FlexibleStopAssignment id="exemple:FlexibleStopAssignment:xyz_Z2" version="any">
+							<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:xyz_Z2"/>
+							<FlexibleStopPlaceRef ref="exemple:FlexibleStopPlace:xyz_Z2"/>
+						</FlexibleStopAssignment>
+						<PassengerStopAssignment id="exemple:PassengerStopAssignment:xyz_Z1_A" version="any">
+							<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:xyz_Z1_A"/>
+							<StopPlaceRef ref="exemple:StopPlace:Z1"/>
+							<QuayRef ref="exemple:Quay:Z1_A"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="exemple:PassengerStopAssignment:xyz_Z1_B" version="any">
+							<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:xyz_Z1_B"/>
+							<StopPlaceRef ref="exemple:StopPlace:Z1"/>
+							<QuayRef ref="exemple:Quay:Z1_B"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="exemple:PassengerStopAssignment:xyz_Z1_C" version="any">
+							<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:xyz_Z1_C"/>
+							<StopPlaceRef ref="exemple:StopPlace:Z1"/>
+							<QuayRef ref="exemple:Quay:Z1_C"/>
+						</PassengerStopAssignment>
+						<ServiceJourneyPattern id="exemple:ServiceJourneyPattern:xyz_before0830" version="any">
+							<Description>Departure from A before 8h30 (reservation the previous day)</Description>
+							<RouteRef ref="exemple:Route:170"/>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="exemple:StopPointInJourneyPattern:xyz_before0830_A" version="any" order="1">
+									<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:A"/>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="exemple:StopPointInJourneyPattern:xyz_before0830_Z1" version="any" order="2">
+									<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:Z1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<FlexiblePointProperties id="exemple:FlexiblePointProperties:Z1" version="any">
+										<RoutePointRef ref="exemple:RoutePoint:Z"/>
+										<MayBeSkipped>true</MayBeSkipped>
+										<PointStandingForAZone>true</PointStandingForAZone>
+										<ZoneContainingStops>true</ZoneContainingStops>
+									</FlexiblePointProperties>
+									<bookingArrangements>
+										<BookingArrangementRef ref="exemple:BookingArrangement:DRT_previousday"/>
+									</bookingArrangements>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="exemple:StopPointInJourneyPattern:xyz_before0830_Z2" version="any" order="3">
+									<ScheduledStopPointRef ref="exemple:ScheduledStopPoint:Z2"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<FlexiblePointProperties id="exemple:FlexiblePointProperties:Z2" version="any">
+										<RoutePointRef ref="exemple:RoutePoint:Z"/>
+										<MayBeSkipped>true</MayBeSkipped>
+										<PointStandingForAZone>true</PointStandingForAZone>
+										<ZoneContainingStops>true</ZoneContainingStops>
+									</FlexiblePointProperties>
+									<bookingArrangements>
+										<BookingArrangementRef ref="exemple:BookingArrangement:DRT_previousday"/>
+									</bookingArrangements>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+						</ServiceJourneyPattern>
+						<ServiceJourneyPattern id="exemple:ServiceJourneyPattern:xyz_after0830" version="any">
+							<!-- Second JourneyPattern to reference the second BookingArrangement for departures after 8h30 -->
+						</ServiceJourneyPattern>
+						<ServiceJourney id="exemple:ServiceJourney:xyz_0850" version="any">
+							<DepartureTime>08:50:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="exemple:DayType:xyz_week"/>
+							</dayTypes>
+							<ServiceJourneyPatternRef ref="exemple:ServiceJourneyPattern:xyz_after0830"/>
+							<passingTimes>
+								<TimetabledPassingTime version="any" id="exemple:TimetabledPassingTime:xyz_0850_1">
+									<StopPointInJourneyPatternRef ref="exemple:StopPointInJourneyPattern:week_A"/>
+									<ArrivalTime>08:50:00</ArrivalTime>
+									<DepartureTime>08:50:00</DepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="exemple:TimetabledPassingTime:xyz_0850_2">
+									<StopPointInJourneyPatternRef ref="exemple:StopPointInJourneyPattern:week_xyz_Z1"/>
+									<ArrivalTime>08:58:00</ArrivalTime>
+									<DepartureTime>09:03:00</DepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="exemple:TimetabledPassingTime:xyz_0850_3">
+									<StopPointInJourneyPatternRef ref="exemple:StopPointInJourneyPattern:week_xyz_Z2"/>
+									<ArrivalTime>09:04:00</ArrivalTime>
+									<DepartureTime>09:09:00</DepartureTime>
+								</TimetabledPassingTime>
+							</passingTimes>
+							<passengerAtStopTimes>
+								<PassengerAtStopTime version="any" id="exemple:PassengerAtStopTime:xyz_0850_1">
+									<StopPointInJourneyPatternRef ref="exemple:StopPointInJourneyPattern:week_Aeroconstellation"/>
+									<LatestTime>08:45:00</LatestTime>
+								</PassengerAtStopTime>
+								<PassengerAtStopTime version="any" id="exemple:PassengerAtStopTime:xyz_0850_2">
+									<StopPointInJourneyPatternRef ref="exemple:StopPointInJourneyPattern:week_170_Z1"/>
+									<LatestTime>08:53:00</LatestTime>
+								</PassengerAtStopTime>
+								<PassengerAtStopTime version="any" id="exemple:PassengerAtStopTime:xyz_0850_3">
+									<StopPointInJourneyPatternRef ref="exemple:StopPointInJourneyPattern:week_170_Z2"/>
+									<LatestTime>08:59:00</LatestTime>
+								</PassengerAtStopTime>
+							</passengerAtStopTimes>
+							<FlexibleServiceProperties id="exemple:FlexibleServiceProperties:xyz_0850" version="any">
+								<FlexibleServiceType>dynamicPassingTimes</FlexibleServiceType>
+							</FlexibleServiceProperties>
+						</ServiceJourney>
+					</members>
+				</GeneralFrame>
+				<!-- Description dans le fichier resources -->
+				<GeneralFrame id="exemple:GeneralFrame:02:" version="any">
+					<TypeOfFrameRef ref="FR:TypeOfFrame:NETEX_COMMUN:"/>
+					<members>
+						<BookingArrangement id="exemple:BookingArrangement:DRT_PT2H" version="any">
+							<BookingContact>
+								<Phone>+33 1 23 45 67 89</Phone>
+							</BookingContact>
+							<BookingMethods>online callOffice</BookingMethods>
+							<BookingAccess>public</BookingAccess>
+							<BookWhen>advanceAndDayOfTravel</BookWhen>
+							<MinimumBookingPeriod>PT2H</MinimumBookingPeriod>
+							<BookingUrl>https://exemple.com</BookingUrl>
+						</BookingArrangement>
+						<BookingArrangement id="exemple:BookingArrangement:DRT_previousday" version="any">
+							<BookingContact>
+								<Phone>+33 1 23 45 67 89</Phone>
+							</BookingContact>
+							<BookingMethods>online callOffice</BookingMethods>
+							<BookingAccess>public</BookingAccess>
+							<BookWhen>untilPreviousDay</BookWhen>
+							<LatestBookingTime>22:00:00</LatestBookingTime>
+							<BookingUrl>https://exemple.com</BookingUrl>
+						</BookingArrangement>
+						<RoutingConstraintZone id="exemple:RoutingConstraintZone:xyz-Z1" version="any">
+							<members>
+								<PointRef ref="exemple:ScheduledStopPoint:170_Z1_A"/>
+								<PointRef ref="exemple:ScheduledStopPoint:170_Z1_B"/>
+								<PointRef ref="exemple:ScheduledStopPoint:170_Z1_C"/>
+							</members>
+							<ZoneUse>cannotBoardAndAlightInSameZone</ZoneUse>
+							<lines>
+								<LineRef ref="exemple:Line:xyz"/>
+							</lines>
+						</RoutingConstraintZone>
+						<RoutingConstraintZone id="exemple:RoutingConstraintZone:xyz-Z2" version="any">
+							<members>
+								<PointRef ref="exemple:ScheduledStopPoint:Z2_D"/>
+								<PointRef ref="exemple:ScheduledStopPoint:Z2_E"/>
+								<PointRef ref="exemple:ScheduledStopPoint:Z2_F"/>
+							</members>
+							<ZoneUse>cannotBoardAndAlightInSameZone</ZoneUse>
+							<lines>
+								<LineRef ref="exemple:Line:xyz"/>
+							</lines>
+						</RoutingConstraintZone>
+					</members>
+				</GeneralFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

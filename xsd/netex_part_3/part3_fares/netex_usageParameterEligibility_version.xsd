@@ -692,7 +692,7 @@ Rail transport, Roads and Road transport
 	<!-- ==== ELIGIBILITY CHANGE POLICY QUALIFICATION. ================================================== -->
 	<xsd:element name="EligibilityChangePolicy" substitutionGroup="UsageParameter_Dummy">
 		<xsd:annotation>
-			<xsd:documentation>The policy to apply if ta user's eligibility as a USER PROFILE changes.</xsd:documentation>
+			<xsd:documentation>The policy to apply if a user's eligibility as a USER PROFILE changes.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
