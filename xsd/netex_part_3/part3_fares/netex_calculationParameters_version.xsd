@@ -58,9 +58,9 @@ Rail transport, Roads and Road transport
 				<Type>Standard</Type>
 			</Metadata>
 		</xsd:appinfo>
-		<xsd:documentation>NeTEx: PRICING PARAMATER SET types.</xsd:documentation>
+		<xsd:documentation>NeTEx: PRICING PARAMETER SET types.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====Used in FARE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====Used in FARE FRAME)=================================================== -->
 	<xsd:group name="CalculationParametersInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>Elements for calculating fares.</xsd:documentation>
@@ -766,7 +766,7 @@ Rail transport, Roads and Road transport
 	</xsd:group>
 	<xsd:element name="LimitingRuleInContext" substitutionGroup="PricingRule_Dummy">
 		<xsd:annotation>
-			<xsd:documentation>OPTIMISED version whcih can be be used only in line assues ID of comtainign context -no id checking. A price for which a discount can be offered.</xsd:documentation>
+			<xsd:documentation>OPTIMISED version which can be used only in line; assumes ID of containing context - no ID checking. A price for which a discount can be offered.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>

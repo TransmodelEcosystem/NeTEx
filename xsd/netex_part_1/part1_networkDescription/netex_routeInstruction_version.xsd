@@ -135,7 +135,7 @@ Rail transport, Roads and Road transport
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="PointOnRouteRef" minOccurs="0"/>
-			<xsd:element name="Instruction" type="MultilingualString" default="false" minOccurs="0">
+			<xsd:element name="Instruction" type="MultilingualString" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Directions for following path step.</xsd:documentation>
 				</xsd:annotation>
@@ -165,7 +165,7 @@ Rail transport, Roads and Road transport
 					<xsd:documentation>Transition for instruction.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="RoadName" type="MultilingualString" default="false" minOccurs="0">
+			<xsd:element name="RoadName" type="MultilingualString" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Directions for following path step.</xsd:documentation>
 				</xsd:annotation>

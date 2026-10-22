@@ -64,7 +64,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NeTEx: TYPE OF TRAVEL DOCUMENT types.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
 	<xsd:group name="TypesOfTravelDocumentsInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>Elements for TYPES of TRAVEL DOCUMENT.</xsd:documentation>

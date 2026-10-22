@@ -377,7 +377,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="GroupSizeChanges" type="GroupSizeChangesEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Possibilities for changiing the numbe of people in the group.</xsd:documentation>
+					<xsd:documentation>Possibilities for changing the number of people in the group.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

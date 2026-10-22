@@ -148,7 +148,7 @@ Rail transport, Roads and Road transport
 					<xsd:documentation>Further description or other comment for EQUIPMENT.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="Note" type="MultilingualString" default="false." minOccurs="0">
+			<xsd:element name="Note" type="MultilingualString" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Further description or other comment for internal use by OPERATOR.</xsd:documentation>
 				</xsd:annotation>

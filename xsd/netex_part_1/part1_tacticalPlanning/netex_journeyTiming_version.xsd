@@ -2,6 +2,7 @@
 <xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" id="netex_journeyTiming_version">
 	<xsd:include schemaLocation="netex_journeyTiming_support.xsd"/>
 	<xsd:include schemaLocation="netex_timeDemandType_support.xsd"/>
+	<xsd:include schemaLocation="../part1_tacticalPlanning/netex_servicePattern_support.xsd"/>
 	<xsd:include schemaLocation="../part1_networkDescription/netex_timingPattern_support.xsd"/>
 	<xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_dayType_support.xsd"/>
 	<xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_mode_support.xsd"/>
@@ -157,7 +158,26 @@ Rail transport, Roads and Road transport
 			<xsd:documentation>Elements of a JOURNEY WAIT TIME.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:element ref="TimingPointRef" minOccurs="0"/>
+			<xsd:choice minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>In some cases there are multiple visits to the same stop with a different WaitTime (e.g., on the second there is a change in the driver). Then, one of the PointInJourneyPatternRef is needed instead of the TimingPoint. Must be optional, because in the JourneyPatternWaitTime other element make the reference to the pattern. Otherwise a TimingPointRef is the element to be used. +v2.1</xsd:documentation>
+				</xsd:annotation>
+				<xsd:element ref="TimingPointRef">
+					<xsd:annotation>
+						<xsd:documentation>The standard way to use JourneyWaitTime is with a TimingPointRef.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="StopPointInJourneyPatternRef">
+					<xsd:annotation>
+						<xsd:documentation>+v2.1</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="TimingPointInJourneyPatternRef">
+					<xsd:annotation>
+						<xsd:documentation>+v2.1</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
 			<xsd:element name="WaitTime" type="xsd:duration">
 				<xsd:annotation>
 					<xsd:documentation>Wait time as interval.</xsd:documentation>

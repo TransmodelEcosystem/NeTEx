@@ -73,7 +73,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NeTEx DISTANCE MATRIX ELEMENT types.</xsd:documentation>
 	</xsd:annotation>
-	<!-- === ENTIITY IN VERSION IN FRAME= === ================================================== -->
+	<!-- === ENTITY IN VERSION IN FRAME= === ================================================== -->
 	<xsd:group name="DistanceMatrixElementsInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>DISTANCE MATRIX ELEMENTs in FRAME.</xsd:documentation>

@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- NeTEx Example: Flügelzug Bern - Spiez - Zweisimmen / Brig (RG 2.0) -->
+<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" xmlns="http://www.netex.org.uk/netex" version="2.0" xsi:schemaLocation="http://www.netex.org.uk/netex file:///D:/code/github/NeTEx_v2.1-wip/xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2025-06-26T14:16:54+02:00</PublicationTimestamp>
+	<ParticipantRef>TUXALP</ParticipantRef>
+	<Description lang="de">NeTEx Zweisimmen Example edited by Urs</Description>
+	<dataObjects>
+		<CompositeFrame id="ch:1:CompositeFrame:1" version="any">
+			<ValidBetween>
+				<!-- Fahrplanjahr 25/26 -->
+				<FromDate>2025-12-15T00:00:00</FromDate>
+				<ToDate>2026-12-12T23:59:59</ToDate>
+			</ValidBetween>
+			<frames>
+				<ResourceFrame id="ch:1:ResourceFrame:1" version="any">
+					<validityConditions>
+						<ValidityCondition id="ch:1:ValidityCondition:1" version="any">
+							<Name>Fahrplanjahr 2025/26</Name>
+						</ValidityCondition>
+					</validityConditions>
+					<responsibilitySets>
+						<ResponsibilitySet id="ch:1:ResponsibilitySet:BLS-bls-33" version="any">
+							<Name>BLS</Name>
+							<PrivateCode>BLS AG</PrivateCode>
+							<roles>
+								<ResponsibilityRoleAssignment id="ch:1:ResponsibilityRoleAssignment:BLS-Bls-33:1" version="any">
+									<StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
+									<ResponsibleOrganisationRef ref="ch:1:sboid:100015" version="any"/>
+								</ResponsibilityRoleAssignment>
+								<ResponsibilityRoleAssignment id="ch:1:ResponsibilityRoleAssignment:BLS-Bls-33:2" version="any">
+									<StakeholderRoleType>operation</StakeholderRoleType>
+									<ResponsibleOrganisationRef ref="ch:1:sboid:100015" version="any"/>
+								</ResponsibilityRoleAssignment>
+							</roles>
+						</ResponsibilitySet>
+					</responsibilitySets>
+					<typesOfValue>
+						<ValueSet id="ch:1:ValueSet:TypeOfProductCategory" version="any" nameOfClass="TypeOfProductCategory">
+							<Name>ProductCategories</Name>
+							<values>
+								<TypeOfProductCategory id="ch:1:TypeOfProductCategory:RE" version="any">
+									<Name lang="de">Regio Express</Name>
+									<ShortName lang="de">RE</ShortName>
+								</TypeOfProductCategory>
+								<TypeOfProductCategory id="ch:1:TypeOfProductCategory:R" version="any">
+									<Name lang="de">Regionalzug</Name>
+									<ShortName lang="de">R</ShortName>
+								</TypeOfProductCategory>
+							</values>
+						</ValueSet>
+					</typesOfValue>
+					<organisations>
+						<Operator id="ch:1:sboid:100015" version="any">
+							<keyList>
+								<KeyValue>
+									<Key>SBOID</Key>
+									<Value>ch:1:sboid:100015</Value>
+								</KeyValue>
+							</keyList>
+							<PrivateCode>ch:1:sboid:101105</PrivateCode>
+							<Name lang="de">BLS AG</Name>
+							<ShortName lang="de">BLS</ShortName>
+						</Operator>
+					</organisations>
+				</ResourceFrame>
+				<SiteFrame id="ch:1:SiteFrame:1" version="any">
+					<stopPlaces>
+						<StopPlace id="ch:1:sloid:7000" version="any">
+							<keyList>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>7000</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:7000</Value>
+								</KeyValue>
+							</keyList>
+							<Name>Bern</Name>
+							<PrivateCode>7000</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>7.43913088992</Longitude>
+									<Latitude>46.94883228914</Latitude>
+									<Altitude>540.2</Altitude>
+								</Location>
+							</Centroid>
+							<alternativeNames>
+								<AlternativeName id="ch:1:sloid:7000:it" version="any">
+									<Name lang="it">Berna</Name>
+								</AlternativeName>
+							</alternativeNames>
+							<StopPlaceType>railStation</StopPlaceType>
+							<quays>
+								<Quay id="ch:1:sloid:7000:5:9" version="any">
+									<keyList>
+										<KeyValue>
+											<Key>SLOID</Key>
+											<Value>ch:1:sloid:7000:5:9</Value>
+										</KeyValue>
+									</keyList>
+									<Centroid>
+										<Location>
+											<Longitude>7.43913088992</Longitude>
+											<Latitude>46.94883228914</Latitude>
+											<Altitude>540.2</Altitude>
+										</Location>
+									</Centroid>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:sloid:7100" version="any">
+							<keyList>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>7100</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:7100</Value>
+								</KeyValue>
+							</keyList>
+							<Name>Thun</Name>
+							<PrivateCode>7100</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>7.62960582867</Longitude>
+									<Latitude>46.75485272921</Latitude>
+									<Altitude>559.75</Altitude>
+								</Location>
+							</Centroid>
+							<StopPlaceType>railStation</StopPlaceType>
+							<quays>
+								<Quay id="ch:1:sloid:7100:1:1" version="any">
+									<keyList>
+										<KeyValue>
+											<Key>SLOID</Key>
+											<Value>ch:1:sloid:7100:1:1</Value>
+										</KeyValue>
+									</keyList>
+									<Centroid>
+										<Location>
+											<Longitude>7.62960582867</Longitude>
+											<Latitude>46.75485272921</Latitude>
+											<Altitude>559.75</Altitude>
+										</Location>
+									</Centroid>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:sloid:7483" version="any">
+							<keyList>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8507483</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:7483</Value>
+								</KeyValue>
+							</keyList>
+							<Name>Spiez</Name>
+							<PrivateCode>8507483</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>7.68010305780</Longitude>
+									<Latitude>46.68639566696</Latitude>
+									<Altitude>627.82</Altitude>
+								</Location>
+							</Centroid>
+							<StopPlaceType>railStation</StopPlaceType>
+							<quays>
+								<Quay id="ch:1:sloid:7483:0:3AB" version="any">
+									<keyList>
+										<KeyValue>
+											<Key>SLOID</Key>
+											<Value>ch:1:sloid:7483:0:3AB</Value>
+										</KeyValue>
+									</keyList>
+									<Centroid>
+										<Location>
+											<Longitude>7.68010305780</Longitude>
+											<Latitude>46.68639566696</Latitude>
+											<Altitude>627.82</Altitude>
+										</Location>
+									</Centroid>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:sloid:7290" version="any">
+							<keyList>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8507290</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:7290</Value>
+								</KeyValue>
+							</keyList>
+							<Name>Zweisimmen</Name>
+							<PrivateCode>8507290</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>7.37486190719</Longitude>
+									<Latitude>46.55348254993</Latitude>
+									<Altitude>941.6</Altitude>
+								</Location>
+							</Centroid>
+							<StopPlaceType>railStation</StopPlaceType>
+							<quays>
+								<Quay id="ch:1:sloid:7290:0:930269" version="any">
+									<keyList>
+										<KeyValue>
+											<Key>SLOID</Key>
+											<Value>ch:1:sloid:7290:0:930269</Value>
+										</KeyValue>
+									</keyList>
+									<Centroid>
+										<Location>
+											<Longitude>7.37486190719</Longitude>
+											<Latitude>46.55348254993</Latitude>
+											<Altitude>941.6</Altitude>
+										</Location>
+									</Centroid>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:sloid:7478" version="any">
+							<keyList>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8507478</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:7478</Value>
+								</KeyValue>
+							</keyList>
+							<Name>Frutigen</Name>
+							<PrivateCode>8507478</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>7.65158908644</Longitude>
+									<Latitude>46.58857680502</Latitude>
+									<Altitude>779.8</Altitude>
+								</Location>
+							</Centroid>
+							<StopPlaceType>railStation</StopPlaceType>
+							<quays>
+								<Quay id="ch:1:sloid:7478:0:852180" version="any">
+									<keyList>
+										<KeyValue>
+											<Key>SLOID</Key>
+											<Value>ch:1:sloid:7478:0:852180</Value>
+										</KeyValue>
+									</keyList>
+									<Centroid>
+										<Location>
+											<Longitude>7.65158908644</Longitude>
+											<Latitude>46.58857680502</Latitude>
+											<Altitude>779.8</Altitude>
+										</Location>
+									</Centroid>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:sloid:1609" version="any">
+							<keyList>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8501609</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:1609</Value>
+								</KeyValue>
+							</keyList>
+							<Name>Brig</Name>
+							<PrivateCode>8507290</PrivateCode>
+							<Centroid>
+								<Location>
+									<Longitude>7.99057910188</Longitude>
+									<Latitude>46.32002223690</Latitude>
+									<Altitude>677.9</Altitude>
+								</Location>
+							</Centroid>
+							<StopPlaceType>railStation</StopPlaceType>
+							<quays>
+								<Quay id="ch:1:sloid:1609:4:9" version="any">
+									<keyList>
+										<KeyValue>
+											<Key>SLOID</Key>
+											<Value>ch:1:sloid:1609:4:9</Value>
+										</KeyValue>
+									</keyList>
+									<Centroid>
+										<Location>
+											<Longitude>7.99057910188</Longitude>
+											<Latitude>46.32002223690</Latitude>
+											<Altitude>677.9</Altitude>
+										</Location>
+									</Centroid>
+								</Quay>
+							</quays>
+						</StopPlace>
+					</stopPlaces>
+				</SiteFrame>
+				<ServiceFrame id="ch:1:ServiceFrame:1" version="any">
+					<lines>
+						<Line id="ch:1:slnid:1024437" version="any" responsibilitySetRef="ch:1:ResponsibilitySet:BLS-bls-33">
+							<validityConditions>
+								<ValidityConditionRef ref="ch:1:ValidityCondition:1"/>
+							</validityConditions>
+							<keyList>
+								<KeyValue>
+									<Key>SLNID</Key>
+									<Value>ch:1:slnid:1024437</Value>
+								</KeyValue>
+							</keyList>
+							<Name>Bern - Spiez - Kandersteg - Brig (- Domodossola)</Name>
+							<ShortName>RE1</ShortName>
+							<TransportMode>rail</TransportMode>
+							<PublicCode>RE1</PublicCode>
+						</Line>
+						<Line id="ch:1:slnid:1024426" version="any" responsibilitySetRef="ch:1:ResponsibilitySet:BLS-bls-33">
+							<validityConditions>
+								<AvailabilityConditionRef ref="ch:1:AvailabilityCondition:1"/>
+							</validityConditions>
+							<keyList>
+								<KeyValue>
+									<Key>SLNID</Key>
+									<Value>ch:1:slnid:1024426</Value>
+								</KeyValue>
+							</keyList>
+							<Name>Spiez - Zweisimmen</Name>
+							<ShortName>R11</ShortName>
+							<TransportMode>rail</TransportMode>
+							<PublicCode>R11</PublicCode>
+						</Line>
+					</lines>
+					<destinationDisplays>
+						<DestinationDisplay id="ch:1:DestinationDisplay:1" version="any">
+							<Name lang="de">Brig / Zweisimmen</Name>
+						</DestinationDisplay>
+					</destinationDisplays>
+					<scheduledStopPoints>
+						<ScheduledStopPoint id="ch:1:sloid:7000:5:9" version="any">
+							<keyList>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8507000</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:7000:5:9</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="de">Bern</Name>
+							<PublicCode>9</PublicCode>
+							<StopType>railStation</StopType>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:sloid:7100:1:1" version="any">
+							<keyList>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8507100</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:7100:1:1</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="de">Thun</Name>
+							<PublicCode>1</PublicCode>
+							<StopType>railStation</StopType>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:sloid:7483:0:954324" version="any">
+							<keyList>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8507483</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:7483:0:954324</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="de">Spiez</Name>
+							<PublicCode>3</PublicCode>
+							<StopType>railStation</StopType>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:sloid:7290:0:930269" version="any">
+							<keyList>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8507290</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:7290:0:930269</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="de">Zweisimmen</Name>
+							<PublicCode>6</PublicCode>
+							<StopType>railStation</StopType>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:sloid:7478:0:852180" version="any">
+							<keyList>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8507478</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:7478:0:852180</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="de">Frutigen</Name>
+							<PublicCode>3</PublicCode>
+							<StopType>railStation</StopType>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:sloid:1609:4:9" version="any">
+							<keyList>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8501609</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:1609:4:9</Value>
+								</KeyValue>
+							</keyList>
+							<Name lang="de">Brig</Name>
+							<PublicCode>9</PublicCode>
+							<StopType>railStation</StopType>
+						</ScheduledStopPoint>
+					</scheduledStopPoints>
+					<stopAssignments>
+						<PassengerStopAssignment id="ch:1:PassengerStopAssignment:1" version="any">
+							<ScheduledStopPointRef ref="ch:1:sloid:7000:5:9" version="any"/>
+							<StopPlaceRef ref="ch:1:sloid:7000" version="any"/>
+							<QuayRef ref="ch:1:sloid:7000:5:9" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:1:PassengerStopAssignment:2" version="any">
+							<ScheduledStopPointRef ref="ch:1:sloid:7100:1:1" version="any"/>
+							<StopPlaceRef ref="ch:1:sloid:7100" version="any"/>
+							<QuayRef ref="ch:1:sloid:7100:1:1" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:1:PassengerStopAssignment:3" version="any">
+							<ScheduledStopPointRef ref="ch:1:sloid:7483:0:954324" version="any"/>
+							<StopPlaceRef ref="ch:1:sloid:7483" version="any"/>
+							<QuayRef ref="ch:1:sloid:7483:0:3AB" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:1:PassengerStopAssignment:4" version="any">
+							<ScheduledStopPointRef ref="ch:1:sloid:7290:0:930269" version="any"/>
+							<StopPlaceRef ref="ch:1:sloid:7290" version="any"/>
+							<QuayRef ref="ch:1:sloid:7290:0:930269" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:1:PassengerStopAssignment:5" version="any">
+							<ScheduledStopPointRef ref="ch:1:sloid:7478:0:852180" version="any"/>
+							<StopPlaceRef ref="ch:1:sloid:7478" version="any"/>
+							<QuayRef ref="ch:1:sloid:7478:0:852180" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:1:PassengerStopAssignment:6" version="any">
+							<ScheduledStopPointRef ref="ch:1:sloid:1609:4:9" version="any"/>
+							<StopPlaceRef ref="ch:1:sloid:1609" version="any"/>
+							<QuayRef ref="ch:1:sloid:1609:4:9" version="any"/>
+						</PassengerStopAssignment>
+					</stopAssignments>
+					<timingLinks>
+						<!-- JP ch:1:ServiceJourneyPattern:1 -->
+						<TimingLink id="ch:1:TimingLink:7000_5_9-7100_1_1" version="any">
+							<!-- Bern -> Thun -->
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="any" ref="ch:1:sloid:7000:5:9"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="any" ref="ch:1:sloid:7100:1:1"/>
+						</TimingLink>
+						<TimingLink id="ch:1:TimingLink:7100_1_1-7483_0_954324" version="any">
+							<!-- Thun -> Spiez -->
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="any" ref="ch:1:sloid:7100:1:1"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="any" ref="ch:1:sloid:7483:0:954324"/>
+						</TimingLink>
+						<!-- JP ch:1:ServiceJourneyPattern:2 -->
+						<TimingLink id="ch:1:TimingLink:7483_0_954324-7290_0_930269" version="any">
+							<!-- Spiez -> Zweisimmen -->
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="any" ref="ch:1:sloid:7483:0:954324"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="any" ref="ch:1:sloid:7290:0:930269"/>
+						</TimingLink>
+						<!-- JP ch:1:ServiceJourneyPattern:3 -->
+						<TimingLink id="ch:1:TimingLink:7483_0_954324-7478_0_852180" version="any">
+							<!-- Spiez -> Frutigen -->
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="any" ref="ch:1:sloid:7483:0:954324"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="any" ref="ch:1:sloid:7478:0:852180"/>
+						</TimingLink>
+						<TimingLink id="ch:1:TimingLink:7478_0_852180-1609_4_9" version="any">
+							<!-- Frutigen -> Brig -->
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="any" ref="ch:1:sloid:7478:0:852180"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="any" ref="ch:1:sloid:1609:4:9"/>
+						</TimingLink>
+					</timingLinks>
+					<journeyPatterns>
+						<ServiceJourneyPattern id="ch:1:ServiceJourneyPattern:1" version="any">
+							<Name>Bern-Spiez</Name>
+							<RouteView>
+								<LineRef ref="ch:1:slnid:1024437"/>
+							</RouteView>
+							<DirectionType>outbound</DirectionType>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="ch:1:PointInJourneyPattern:1.1" version="any">
+									<ScheduledStopPointRef ref="ch:1:sloid:7000:5:9" version="any"/>
+									<OnwardTimingLinkRef ref="ch:1:TimingLink:7000_5_9-7100_1_1" version="any"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<DestinationDisplayRef ref="ch:1:DestinationDisplay:1"/>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:1:PointInJourneyPattern:1.2" version="any">
+									<ScheduledStopPointRef ref="ch:1:sloid:7100:1:1" version="any"/>
+									<OnwardTimingLinkRef ref="ch:1:TimingLink:7100_1_1-7483_0_954324" version="any"/>
+									<!-- Alternative für die Haltezeiten: Direkt im Pattern an der jew. Haltestelle -->
+									<!--
+									<waitTimes>
+										<JourneyPatternWaitTime id="ch:1:JourneyPatternWaitTime:1.2" version="any">
+										  <TimeDemandTypeRef ref="ch:1:TimeDemandType:1" version="any" />
+										  <WaitTime>PT1M</WaitTime>
+										</JourneyPatternWaitTime>
+									</waitTimes>
+									-->
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:1:PointInJourneyPattern:1.3" version="any">
+									<ScheduledStopPointRef ref="ch:1:sloid:7483:0:954324" version="any"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+							<ServiceJourneyPatternType>passenger</ServiceJourneyPatternType>
+						</ServiceJourneyPattern>
+						<ServiceJourneyPattern id="ch:1:ServiceJourneyPattern:2" version="any">
+							<Name>Spiez-Zweisimmen</Name>
+							<RouteView>
+								<LineRef ref="ch:1:slnid:1024426"/>
+							</RouteView>
+							<DirectionType>outbound</DirectionType>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="ch:1:PointInJourneyPattern:2.1" version="any">
+									<ScheduledStopPointRef ref="ch:1:sloid:7483:0:954324" version="any"/>
+									<OnwardTimingLinkRef ref="ch:1:TimingLink:7483_0_954324-7290_0_930269" version="any"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:1:PointInJourneyPattern:2.2" version="any">
+									<ScheduledStopPointRef ref="ch:1:sloid:7290:0:930269" version="any"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+							<ServiceJourneyPatternType>passenger</ServiceJourneyPatternType>
+						</ServiceJourneyPattern>
+						<ServiceJourneyPattern id="ch:1:ServiceJourneyPattern:3" version="any">
+							<validityConditions>
+								<ValidityConditionRef ref="ch:1:ValidityCondition:1"/>
+							</validityConditions>
+							<Name>Spiez-Brig</Name>
+							<RouteView>
+								<LineRef ref="ch:1:slnid:1024437"/>
+							</RouteView>
+							<DirectionType>outbound</DirectionType>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="ch:1:PointInJourneyPattern:3.1" version="any">
+									<ScheduledStopPointRef ref="ch:1:sloid:7483:0:954324" version="any"/>
+									<OnwardTimingLinkRef ref="ch:1:TimingLink:7483_0_954324-7478_0_852180" version="any"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:1:PointInJourneyPattern:3.2" version="any">
+									<ScheduledStopPointRef ref="ch:1:sloid:7478:0:852180" version="any"/>
+									<OnwardTimingLinkRef ref="ch:1:TimingLink:7478_0_852180-1609_4_9" version="any"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:1:PointInJourneyPattern:3.3" version="any">
+									<ScheduledStopPointRef ref="ch:1:sloid:1609:4:9" version="any"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+							<ServiceJourneyPatternType>passenger</ServiceJourneyPatternType>
+						</ServiceJourneyPattern>
+					</journeyPatterns>
+					<timeDemandTypes>
+						<TimeDemandType id="ch:1:TimeDemandType:1" version="any">
+							<runTimes>
+								<JourneyRunTime id="ch:1:JourneyRunTime:1:1" version="any">
+									<TimingLinkRef ref="ch:1:TimingLink:7000_5_9-7100_1_1" version="any"/>
+									<RunTime>PT21M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:1:2" version="any">
+									<TimingLinkRef ref="ch:1:TimingLink:7100_1_1-7483_0_954324" version="any"/>
+									<RunTime>PT10M10S</RunTime>
+								</JourneyRunTime>
+							</runTimes>
+							<waitTimes>
+								<JourneyWaitTime id="ch:1:JourneyRunTime:1:1" version="any">
+									<!-- Haltezeit Thun -->
+									<StopPointInJourneyPatternRef ref="ch:1:PointInJourneyPattern:1.2" version="any"/>
+									<!--ScheduledStopPointRef ref="ch:1:sloid:7100:1:1" version="any"/-->
+									<WaitTime>PT1M</WaitTime>
+								</JourneyWaitTime>
+							</waitTimes>
+						</TimeDemandType>
+						<TimeDemandType id="ch:1:TimeDemandType:2" version="any">
+							<runTimes>
+								<JourneyRunTime id="ch:1:JourneyRunTime:2:1" version="any">
+									<TimingLinkRef ref="ch:1:TimingLink:7483_0_954324-7290_0_930269" version="any"/>
+									<RunTime>PT47M</RunTime>
+								</JourneyRunTime>
+							</runTimes>
+						</TimeDemandType>
+						<TimeDemandType id="ch:1:TimeDemandType:3" version="any">
+							<runTimes>
+								<JourneyRunTime id="ch:1:JourneyRunTime:3:1" version="any">
+									<TimingLinkRef ref="ch:1:TimingLink:7483_0_954324-7478_0_852180" version="any"/>
+									<RunTime>PT12M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="ch:1:JourneyRunTime:3:2" version="any">
+									<TimingLinkRef ref="ch:1:TimingLink:7478_0_852180-1609_4_9" version="any"/>
+									<RunTime>PT57M</RunTime>
+								</JourneyRunTime>
+							</runTimes>
+							<waitTimes>
+								<JourneyWaitTime id="ch:1:JourneyRunTime:3:1" version="any">
+									<!-- Haltezeit Frutigen -->
+									<ScheduledStopPointRef ref="ch:1:sloid:7478:0:852180" version="any"/>
+									<WaitTime>PT1M</WaitTime>
+								</JourneyWaitTime>
+							</waitTimes>
+						</TimeDemandType>
+					</timeDemandTypes>
+				</ServiceFrame>
+				<!-- Service Calendar Frame -->
+				<ServiceCalendarFrame id="ch:1:ServiceCalendarFrame:j26" version="any">
+					<validityConditions>
+						<AvailabilityCondition id="ch:1:AvailabilityCondition:1" version="any">
+							<FromDate>2025-12-14T00:00:00</FromDate>
+							<ToDate>2026-12-13T23:59:59</ToDate>
+							<ValidDayBits>0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000</ValidDayBits>
+						</AvailabilityCondition>
+					</validityConditions>
+				</ServiceCalendarFrame>
+				<!-- Timetable Frame -->
+				<TimetableFrame id="ch:1:TimetableFrame:ts3" version="any">
+					<vehicleJourneys>
+						<ServiceJourney id="ch:1:ServiceJourney:1" version="any" responsibilitySetRef="ch:1:ResponsibilitySet:BLS-bls-33">
+							<validityConditions>
+								<AvailabilityConditionRef ref="ch:1:AvailabilityCondition:1" version="any"/>
+							</validityConditions>
+							<keyList>
+								<KeyValue>
+									<Key>SJYID</Key>
+									<Value>ch:1:sjyid:100015:4175-001</Value>
+								</KeyValue>
+							</keyList>
+							<PrivateCode>ch:1:ServiceJourney:1</PrivateCode>
+							<TransportMode>rail</TransportMode>
+							<TypeOfProductCategoryRef ref="ch:1:TypeOfProductCategory:RE" version="any"/>
+							<TypeOfServiceRef ref="ch:1:TypeOfService:1" version="any"/>
+							<ServiceAlteration>planned</ServiceAlteration>
+							<DepartureTime>14:39:00</DepartureTime>
+							<DepartureDayOffset>0</DepartureDayOffset>
+							<JourneyPatternRef ref="ch:1:ServiceJourneyPattern:1" version="any"/>
+							<TimeDemandTypeRef ref="ch:1:TimeDemandType:1" version="any"/>
+							<OperatorRef ref="ch:1:sboid:100015" version="any"/>
+							<LineRef ref="ch:1:slnid:1024437" version="any"/>
+							<DirectionType>outbound</DirectionType>
+							<trainNumbers>
+								<TrainNumberRef ref="ch:1:TrainNumber:4175"/>
+							</trainNumbers>
+						</ServiceJourney>
+						<ServiceJourney id="ch:1:ServiceJourney:2" version="any" responsibilitySetRef="ch:1:ResponsibilitySet:BLS-bls-33">
+							<validityConditions>
+								<AvailabilityConditionRef ref="ch:1:AvailabilityCondition:1" version="any"/>
+							</validityConditions>
+							<keyList>
+								<KeyValue>
+									<Key>SJYID</Key>
+									<Value>ch:1:sjyid:100015:6829-001</Value>
+								</KeyValue>
+							</keyList>
+							<PrivateCode>ch:1:VehicleJourney:2</PrivateCode>
+							<TransportMode>rail</TransportMode>
+							<TypeOfProductCategoryRef ref="ch:1:TypeOfProductCategory:R" version="any"/>
+							<TypeOfServiceRef ref="ch:1:TypeOfService:1" version="any"/>
+							<ServiceAlteration>planned</ServiceAlteration>
+							<DepartureTime>08:30:00</DepartureTime>
+							<DepartureDayOffset>0</DepartureDayOffset>
+							<JourneyPatternRef ref="ch:1:ServiceJourneyPattern:2" version="any"/>
+							<TimeDemandTypeRef ref="ch:1:TimeDemandType:2" version="any"/>
+							<OperatorRef ref="ch:1:sboid:100015" version="any"/>
+							<LineRef ref="ch:1:slnid:1024426" version="any"/>
+							<DirectionType>outbound</DirectionType>
+							<trainNumbers>
+								<TrainNumberRef ref="ch:1:TrainNumber:6829"/>
+							</trainNumbers>
+						</ServiceJourney>
+						<ServiceJourney id="ch:1:ServiceJourney:3" version="any" responsibilitySetRef="ch:1:ResponsibilitySet:BLS-bls-33">
+							<validityConditions>
+								<AvailabilityConditionRef ref="ch:1:AvailabilityCondition:1" version="any"/>
+							</validityConditions>
+							<keyList>
+								<KeyValue>
+									<Key>SJYID</Key>
+									<Value>ch:1:sjyid:100015:4179-001</Value>
+								</KeyValue>
+							</keyList>
+							<PrivateCode>ch:1:ServiceJourney:1</PrivateCode>
+							<TransportMode>rail</TransportMode>
+							<TypeOfProductCategoryRef ref="ch:1:TypeOfProductCategory:RE" version="any"/>
+							<TypeOfServiceRef ref="ch:1:TypeOfService:1" version="any"/>
+							<ServiceAlteration>planned</ServiceAlteration>
+							<DepartureTime>15:12:00</DepartureTime>
+							<DepartureDayOffset>0</DepartureDayOffset>
+							<JourneyPatternRef ref="ch:1:ServiceJourneyPattern:3" version="any"/>
+							<TimeDemandTypeRef ref="ch:1:TimeDemandType:3" version="any"/>
+							<OperatorRef ref="ch:1:sboid:100015" version="any"/>
+							<LineRef ref="ch:1:slnid:1024437" version="any"/>
+							<DirectionType>outbound</DirectionType>
+							<trainNumbers>
+								<TrainNumberRef ref="ch:1:TrainNumber:4179"/>
+							</trainNumbers>
+						</ServiceJourney>
+					</vehicleJourneys>
+					<trainNumbers>
+						<TrainNumber id="ch:1:TrainNumber:4175" version="any">
+							<Description lang="de">RE1 4175 Bern - Spiez</Description>
+							<ForAdvertisement>4175</ForAdvertisement>
+						</TrainNumber>
+						<TrainNumber id="ch:1:TrainNumber:6829" version="any">
+							<Description lang="de">R11 6829 Spiez - Zweisimmen</Description>
+							<ForAdvertisement>6829</ForAdvertisement>
+						</TrainNumber>
+						<TrainNumber id="ch:1:TrainNumber:4179" version="any">
+							<Description lang="de">RE1 4179 Spiez - Brig</Description>
+							<ForAdvertisement>4179</ForAdvertisement>
+						</TrainNumber>
+					</trainNumbers>
+					<typesOfService>
+						<TypeOfService id="ch:1:TypeOfService:1" version="any"/>
+					</typesOfService>
+					<journeyInterchanges>
+						<!-- Durchbindung Spiez: SJ1 (RE Bern→Spiez) → SJ2 (R Spiez→Zweisimmen) -->
+						<ServiceJourneyInterchange version="2.0" id="ch:1:ServiceJourneyInterchange:SJ1-SJ2-Spiez">
+							<validityConditions>
+								<AvailabilityConditionRef ref="ch:1:AvailabilityCondition:1" version="any"/>
+							</validityConditions>
+							<StaySeated>true</StaySeated>
+							<CrossBorder>false</CrossBorder>
+							<Planned>true</Planned>
+							<Guaranteed>true</Guaranteed>
+							<FromPointRef ref="ch:1:sloid:7483:0:954324" version="any"/>
+							<ToPointRef ref="ch:1:sloid:7483:0:954324" version="any"/>
+							<FromServiceJourneyRef ref="ch:1:ServiceJourney:1" version="any"/>
+							<ToServiceJourneyRef ref="ch:1:ServiceJourney:2" version="any"/>
+						</ServiceJourneyInterchange>
+						<!-- Flügelung Spiez: SJ1 (RE Bern→Spiez) → SJ3 (RE Spiez→Brig) -->
+						<ServiceJourneyInterchange version="2.0" id="ch:1:ServiceJourneyInterchange:SJ1-SJ3-Spiez">
+							<validityConditions>
+								<AvailabilityConditionRef ref="ch:1:AvailabilityCondition:1" version="any"/>
+							</validityConditions>
+							<StaySeated>false</StaySeated>
+							<CrossBorder>false</CrossBorder>
+							<!-- ChangeWithinVehicle>true</ChangeWithinVehicle -->
+							<!-- TODO: uncomment once NeTEx XSD is updated with PR commit 40c8f31 -->
+							<Planned>true</Planned>
+							<Guaranteed>true</Guaranteed>
+							<FromPointRef ref="ch:1:sloid:7483:0:954324" version="any"/>
+							<ToPointRef ref="ch:1:sloid:7483:0:954324" version="any"/>
+							<FromServiceJourneyRef ref="ch:1:ServiceJourney:1" version="any"/>
+							<ToServiceJourneyRef ref="ch:1:ServiceJourney:3" version="any"/>
+						</ServiceJourneyInterchange>
+					</journeyInterchanges>
+				</TimetableFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

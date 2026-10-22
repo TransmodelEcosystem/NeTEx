@@ -230,16 +230,32 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="JourneyPartCoupleRef" minOccurs="0"/>
 			<xsd:element ref="TrainNumberRef" minOccurs="0"/>
 			<xsd:element ref="BlockPartRef" minOccurs="0"/>
-			<xsd:element name="FromStopPointRef" type="ScheduledStopPointRefStructure" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Point at which this JOURNEY PART starts.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="ToStopPointRef" type="ScheduledStopPointRefStructure" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Point at which this JOURNEY PART ends.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
+			<xsd:choice minOccurs="0">
+				<xsd:sequence>
+					<xsd:element name="FromStopPointRef" type="ScheduledStopPointRefStructure">
+						<xsd:annotation>
+							<xsd:documentation>Point at which this JOURNEY PART starts.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ToStopPointRef" type="ScheduledStopPointRefStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Point at which this JOURNEY PART ends. If not set it is until the end of the JOURNEY. We will make this element mandatory in the future.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:sequence>
+					<xsd:element name="FromPointInPatternRef" type="PointInSequenceRefStructure">
+						<xsd:annotation>
+							<xsd:documentation>POINT at which applicability of JOURNEY PART starts. When using PASSING TIME this element is to be used. +v2.1</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ToPointInPatternRef" type="PointInSequenceRefStructure">
+						<xsd:annotation>
+							<xsd:documentation>POINT at which applicability of JOURNEY PART ends. +v2.1</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:choice>
 		</xsd:sequence>
 	</xsd:group>
 	<xsd:group name="JourneyPartTimeGroup">

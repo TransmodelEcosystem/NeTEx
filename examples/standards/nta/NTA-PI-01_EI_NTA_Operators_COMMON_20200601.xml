@@ -64,7 +64,7 @@ This Example shows an extract of  real  Irish Operator  data     encoded  in NeT
 					<codespaces>
 						<Codespace id="noc_data">
 							<Xmlns>noc</Xmlns>
-							<XmlnsUrl>http:///www.nta.ie/noc</XmlnsUrl>
+							<XmlnsUrl>http://www.nta.ie/noc</XmlnsUrl>
 							<Description>National operator codes</Description>
 						</Codespace>
 					</codespaces>
