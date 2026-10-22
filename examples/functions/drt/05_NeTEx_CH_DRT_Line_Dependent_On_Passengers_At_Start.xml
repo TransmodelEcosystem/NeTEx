@@ -45,16 +45,6 @@
 					</typesOfValue>
 					<organisations>
 						<Operator id="ch:1:sboid:100602" version="1">
-							<keyList>
-								<KeyValue>
-									<Key>GO</Key>
-									<Value>801</Value>
-								</KeyValue>
-								<KeyValue>
-									<Key>SBOID</Key>
-									<Value>ch:1:sboid:100602</Value>
-								</KeyValue>
-							</keyList>
 							<privateCodes>
 								<PrivateCode type="sboid">ch:1:sboid:100602</PrivateCode>
 								<PrivateCode type="go">801</PrivateCode>
@@ -67,16 +57,6 @@
 				<SiteFrame id="ch:PAG::SiteFrame:j26" version="1">
 					<stopPlaces>
 						<StopPlace id="ch:1:sloid:72178" version="1">
-							<keyList>
-								<KeyValue>
-									<Key>SLOID</Key>
-									<Value>ch:1:sloid:72178</Value>
-								</KeyValue>
-								<KeyValue>
-									<Key>DIDOK</Key>
-									<Value>8572178</Value>
-								</KeyValue>
-							</keyList>
 							<privateCodes>
 								<PrivateCode type="sloid">ch:1:sloid:72178</PrivateCode>
 								<PrivateCode type="didok">8572178</PrivateCode>
@@ -91,18 +71,9 @@
 							</Centroid>
 							<quays>
 								<Quay id="ch:1:sloid:72178:0:535942" version="1">
-									<keyList>
-										<KeyValue>
-											<Key>SLOID</Key>
-											<Value>ch:1:sloid:72178:0:535942</Value>
-										</KeyValue>
-										<KeyValue>
-											<Key>DIDOK</Key>
-											<Value>8572203</Value>
-										</KeyValue>
-									</keyList>
 									<privateCodes>
 										<PrivateCode type="sloid">ch:1:sloid:72178:0:535942</PrivateCode>
+										<PrivateCode type="didok">8572203</PrivateCode>
 									</privateCodes>
 									<Centroid>
 										<Location>
@@ -116,12 +87,6 @@
 							</quays>
 						</StopPlace>
 						<StopPlace id="ch:1:sloid:72202" version="1">
-							<keyList>
-								<KeyValue>
-									<Key>SLOID</Key>
-									<Value>ch:1:sloid:72202</Value>
-								</KeyValue>
-							</keyList>
 							<privateCodes>
 								<PrivateCode type="sloid">ch:1:sloid:72202</PrivateCode>
 								<PrivateCode type="didok">8572202</PrivateCode>
@@ -136,12 +101,6 @@
 							</Centroid>
 							<quays>
 								<Quay id="ch:1:sloid:72202:0:134953" version="1">
-									<keyList>
-										<KeyValue>
-											<Key>SLOID</Key>
-											<Value>ch:1:sloid:72202:0:134953</Value>
-										</KeyValue>
-									</keyList>
 									<privateCodes>
 										<PrivateCode type="sloid">ch:1:sloid:72202:0:134953</PrivateCode>
 									</privateCodes>
@@ -157,16 +116,6 @@
 							</quays>
 						</StopPlace>
 						<StopPlace id="ch:1:sloid:72203" version="1">
-							<keyList>
-								<KeyValue>
-									<Key>SLOID</Key>
-									<Value>ch:1:sloid:72203</Value>
-								</KeyValue>
-								<KeyValue>
-									<Key>DIDOK</Key>
-									<Value>8572203</Value>
-								</KeyValue>
-							</keyList>
 							<privateCodes>
 								<PrivateCode type="sloid">ch:1:sloid:72203</PrivateCode>
 								<PrivateCode type="didok">8572203</PrivateCode>
@@ -181,12 +130,6 @@
 							</Centroid>
 							<quays>
 								<Quay id="ch:1:sloid:72203:0:404965" version="1">
-									<keyList>
-										<KeyValue>
-											<Key>SLOID</Key>
-											<Value>ch:1:sloid:72203:0:404965</Value>
-										</KeyValue>
-									</keyList>
 									<privateCodes>
 										<PrivateCode type="sloid">ch:1:sloid:72203:0:404965</PrivateCode>
 									</privateCodes>
@@ -202,16 +145,6 @@
 							</quays>
 						</StopPlace>
 						<StopPlace id="ch:1:sloid:673" version="1">
-							<keyList>
-								<KeyValue>
-									<Key>SLOID</Key>
-									<Value>ch:1:sloid:673</Value>
-								</KeyValue>
-								<KeyValue>
-									<Key>DIDOK</Key>
-									<Value>8500673</Value>
-								</KeyValue>
-							</keyList>
 							<privateCodes>
 								<PrivateCode type="sloid">ch:1:sloid:673</PrivateCode>
 								<PrivateCode type="didok">8500673</PrivateCode>
@@ -226,12 +159,6 @@
 							</Centroid>
 							<quays>
 								<Quay id="ch:1:sloid:673:0:688162" version="1">
-									<keyList>
-										<KeyValue>
-											<Key>SLOID</Key>
-											<Value>ch:1:sloid:673:0:688162</Value>
-										</KeyValue>
-									</keyList>
 									<privateCodes>
 										<PrivateCode type="sloid">ch:1:sloid:673:0:688162</PrivateCode>
 									</privateCodes>
@@ -247,12 +174,6 @@
 							</quays>
 						</StopPlace>
 						<StopPlace id="ch:1:sloid:72204" version="1">
-							<keyList>
-								<KeyValue>
-									<Key>SLOID</Key>
-									<Value>ch:1:sloid:72204</Value>
-								</KeyValue>
-							</keyList>
 							<privateCodes>
 								<PrivateCode type="sloid">ch:1:sloid:72204</PrivateCode>
 								<PrivateCode type="didok">8572204</PrivateCode>
@@ -267,12 +188,6 @@
 							</Centroid>
 							<quays>
 								<Quay id="ch:1:sloid:72204:0:352830" version="1">
-									<keyList>
-										<KeyValue>
-											<Key>SLOID</Key>
-											<Value>ch:1:sloid:72204:0:352830</Value>
-										</KeyValue>
-									</keyList>
 									<privateCodes>
 										<PrivateCode type="sloid">ch:1:sloid:72204:0:352830</PrivateCode>
 									</privateCodes>
@@ -292,12 +207,9 @@
 				<ServiceFrame id="ch:PAG:ServiceFrame:50_119" version="1">
 					<lines>
 						<Line id="ch:1:slnid:1026478" version="1" responsibilitySetRef="ch:1:ResponsibilitySet:PAG">
-							<keyList>
-								<KeyValue>
-									<Key>SLNID</Key>
-									<Value>ch:1:slnid:1026478</Value>
-								</KeyValue>
-							</keyList>
+							<privateCodes>
+								<PrivateCode type="slnid">ch:1:slnid:1026478</PrivateCode>
+							</privateCodes>
 							<Name>50.119 Zwingen_Laufenstrasse_Nenzlingen_Dorfplatz</Name>
 							<TransportMode>bus</TransportMode>
 							<TransportSubmode>
@@ -449,12 +361,6 @@
 							<validityConditions>
 								<AvailabilityConditionRef ref="generated" version="1"/>
 							</validityConditions>
-							<keyList>
-								<KeyValue>
-									<Key>sjyid</Key>
-									<Value>sjyid-1</Value>
-								</KeyValue>
-							</keyList>
 							<privateCodes>
 								<PrivateCode type="sjyid">sjyid-1</PrivateCode>
 							</privateCodes>
@@ -464,11 +370,9 @@
 							<ServiceAlteration>planned</ServiceAlteration>
 							<DepartureTime>04:34:00</DepartureTime>
 							<DepartureDayOffset>0</DepartureDayOffset>
-							<JourneyPatternRef ref="ch:PAG:JourneyPattern:50_119" version="1" nameOfRefClass="ServiceJourneyPattern"/>
+							<ServiceJourneyPatternRef ref="ch:PAG:JourneyPattern:50_119" version="1"/>
 							<TimeDemandTypeRef ref="ch:1:TimeDemandType:PAG:1" version="1"/>
 							<OperatorRef ref="ch:1:sboid:100602" version="1"/>
-							<LineRef ref="ch:1:slnid:1026478" version="1"/>
-							<DirectionType>outbound</DirectionType>
 							<trainNumbers>
 								<TrainNumberRef ref="ch:1:TrainNumber:11957" version="1"/>
 							</trainNumbers>

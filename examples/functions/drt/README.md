@@ -2,16 +2,15 @@
 We expanded for NeTEx 2.1 DRT in serious manner.
 
 ## Updates in NeTEX 2.1
-- `FlexibleLine` is folden into `Line`. Be aware that an area-oriented services is also a "line".
-- There can now exist multiple `ServiceBookingArrangement` and related stuff in a `mobilityService`.
-- There can now be also (multiple) `ServiceBookingArrangement` in a `Line`.
+- `FlexibleLine` is folded into `Line`. Be aware that an area-oriented services is now also a "line".
+- There can now exist multiple `ServiceBookingArrangement` and related stuff in a `mobilityService`. There can now be also (multiple) `ServiceBookingArrangement` in a `Line`. So, it is not necessary to have a `MobilityService`only to put a `ServiceBookingArrangement`into it.
 - `BookingNote` is now also an object that can be referenced and translated with `AlternativeText`. **TODO**
 - `serviceBookingArrangements` can now accept all other elements to describe the services:
   - `ServiceBookingArrangement`: How to book
   - `ServiceCompetitiveCondition`: What to do and what not
   - `ServiceEligibilityCondition`: Who can use the service.
-- We allow parametrised deep links and we also support service discovery for the booking and price information.
-- The interaction of such serviceBookingArrangements is additive. Eg. all elements are within their group connected by OR. E.g. you are a senior or a child you can use the service. Be aware that this MAY result in the need to split a service to do it.
+- We allow parametrised deep links, and we also support service discovery for the booking and price information.
+- The interaction of such serviceBookingArrangements is additive. E.g. all elements are within their group connected by OR. E.g. you are a senior or a child you can use the service. Be aware that this MAY result in the need to split a line to do it properly.
 
 ## Types of demand responsive traffic (DRT)
 
@@ -302,3 +301,48 @@ In the Gotthard area mybuxi is providing services from CollectionPoints that can
 ### A mixed line with regular parts on area-oriented parts
 - LineType="mixedFlexible"
 - [XML](SKY_SKY-FlexibleLine-9ef2772d-b2b5-4b3a-935e-32d49ff6576e_Samnanger-ytre.xml)
+
+## NeTEx to GTFS-Flex hints
+This chapter deals with mapping NeTEx to GTFS-Flex.
+
+### Things to use in GTFS-Flex
+Important are:
+- Areas
+- FlexibleTrips
+- BookingRules
+
+`stop_times.txt`: Extended and modified file to include time-windows that a vehicle picks up and drops off at stops or location groups/areas
+
+`booking_rules.txt`: new file that defines the booking rules / requirements that must be met for a successful booking.
+
+`locations.geojson`: hat allows defining Zones using Polygons and MultiPolygons (for Zones with “holes”). 
+
+`locations_groups.txt`: New files to allow grouping of stops which allow predetermined groups of these features to be specified on individual rows of stop_times.txt. This file specifically defines the group (similar to `areas.txt`).
+
+`location_group_stops`: New files to allow grouping of stops which allow predetermined groups of these features to be specified on individual rows of stop_times.txt.  This file specifically defines the mapping of the groups from location_groups to stops (similar to `stop_areas.txt`). 
+
+### How to model `safe_duration_factor` and `safe_duration_offset` 
+From https://github.com/google/transit/commit/4ba262f50a6a355f6c849aaf757a9d1b4ef88722 
+
+
+Current definition:
+> Together, `safe_duration_factor` and `safe_duration_offset` allow an estimation of the longest amount of time a rider can expect the on-demand trip to take, for 95% of cases. <br><br> Data consumers are expected to use `safe_duration_factor` and `safe_duration_offset` to make the following calculation:<br><br> `SafeTravelDuration (seconds) = safe_duration_factor × DrivingDuration (seconds) + safe_duration_offset (seconds)`<br><br>where `DrivingDuration` is the time it would take a private car to travel the distance being calculated for the on-demand service, and `SafeTravelDuration` is the longest amount of time a rider can expect the on-demand trip to take. <br><br>This calculation should only apply to the portion of a trip that is on-demand. If a service is a deviated-fixed service, or if a rider trip includes a transfer from an on-demand to a fixed-route service, the duration of the fixed-route portion of the trip should be calculated according to the `departure_time` and `arrival_time` fields.<br><br>Empty values for `safe_duration_factor` and `safe_duration_offset` are considered as `1.0` and `0`, respectively.
+
+In NeTEx you use: xxx 
+
+## Model things from HRDF
+The following relevant things in HRDF can be modeled in NeTEx already:
+| HRDF feature | Explanation | NeTEx |
+| -- | -- | -- |
+|need for reservation | - | with `BookingArrangement` or `ServiceReservationFacilityType` set to `reservationsCompulsaory`|
+| no bicyles allowed | - | `LuggageCarriageType`set to `noCycles`|
+| additional fare necessary | - | `UicTrainRateEnum` set to `supplement` |
+| `*R * U 5`  | additional time for transfer at stop | xxx|
+| `*R *DT 14 14`| no competition to classical line | xxx |
+| `*SS *FAT 00 30` | Minimal-maximal drive duration. | xxx |
+
+## Sources
+- Definition of GTFS-Flex: https://gtfs.org/community/extensions/flex/
+- Description, how it was done in Switzerland:
+  - https://opentransportdata.swiss/en/cookbook/timetable-cookbook/gtfs-flex/
+  - https://www.oev-info.ch/sites/default/files/2024-04/gtfs_profil_switzerland_version_0_16.pdf?

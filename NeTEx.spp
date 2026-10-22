@@ -665,6 +665,7 @@
 			<Folder FolderName="functions">
 				<Folder FolderName="bookingArrangements">
 					<File FilePath="examples\functions\bookingArrangements\generalframe.xml" HomeFolder="Yes"/>
+				</Folder>	
 				<Folder FolderName="versioning">
 					<File FilePath="examples\functions\versioning\Netex_Uniqueness_01.xml" HomeFolder="Yes"/>
 					<File FilePath="examples\functions\versioning\Netex_VersioningExample_Step_01.xml" HomeFolder="Yes"/>
@@ -751,7 +752,14 @@
 					<File FilePath="examples\functions\deckPlans\DeckPlans-Example_train.xml"/>
 					<File FilePath="examples\functions\deckPlans\DeckPlans-Example_train_simple.xml" HomeFolder="Yes"/>
 				</Folder>
-				<Folder FolderName="drt"/>
+				<Folder FolderName="drt">
+					<File FilePath="examples\functions\drt\04_NeTEx_CH_DRT_Line_50.110.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\functions\drt\05_NeTEx_CH_DRT_Line_Dependent_On_Passengers_At_Start.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\functions\drt\CH_DRT_Area_mybuxi.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\functions\drt\FR_DRT_with_small_zones.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\functions\drt\Hail_Ride_Example.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\functions\drt\KOL_KOL-FlexibleLine-a318c9ea-bae0-49da-8356-f4820e1d9cdd_9955_HentMeg---Sauda.xml" HomeFolder="Yes"/>
+				</Folder>		
 				<Folder FolderName="fares">
 					<Folder FolderName="rail">
 						<File FilePath="examples\functions\fares\rail\Netex_era_crossborder_de.xml" HomeFolder="Yes"/>
