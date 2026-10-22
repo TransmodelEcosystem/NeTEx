@@ -170,7 +170,7 @@ Rail transport, Roads and Road transport
 						<xsd:annotation>
 							<xsd:documentation>Maximum drive duration that is allowed for the service.</xsd:documentation>
 						</xsd:annotation>
-					</xsd:element>					
+					</xsd:element>
 				</xsd:sequence>
 				<xsd:sequence>
 					<xsd:element name="InterchangeBetweenFlexibleServicesAllowed" type="xsd:boolean" default="false" minOccurs="0">
