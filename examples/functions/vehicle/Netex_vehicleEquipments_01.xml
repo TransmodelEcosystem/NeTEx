@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2010-12-17T09:30:47.0Z</PublicationTimestamp>
+	<ParticipantRef>SYS001</ParticipantRef>
+	<Description>Example of vehicle boarding equipments</Description>
+	<dataObjects>
+		<CompositeFrame version="any" id="CompositeFrame:1">
+			<frames>
+				<!--
+					If multiple boarding equipments are assigned to a vehicle, only one or the other is used in practice.
+				-->
+				<ResourceFrame version="any"  id="ResourceFrame:1">
+					<equipments>
+						<!--
+							ICE with 1 built-in step and 1 foldable step
+							https://www.youtube.com/watch?v=AhU9sVWRblk
+						-->
+						<!-- Boarding without the folding step -->
+						<AccessVehicleEquipment version="any" id="AccessVehicleEquipment:1">
+							<NumberOfSteps>1</NumberOfSteps>
+							<BoardingHeight>0.5</BoardingHeight>
+						</AccessVehicleEquipment>
+						<!-- Boarding with the folding step -->
+						<RetractableStepVehicleEquipment version="any" id="RetractableStepVehicleEquipment:1">
+							<ExternalLength>0.2</ExternalLength>
+							<BoardingHeight>0.35</BoardingHeight>
+							<NumberOfTreads>1</NumberOfTreads>
+							<!-- Includes all steps required to board -->
+							<NumberOfSteps>2</NumberOfSteps>
+						</RetractableStepVehicleEquipment>
+						<!--
+							Tram with 3 (optional) foldable steps where the lowest step reaches out of the vehicle entrance
+							https://www.youtube.com/watch?v=rtugyMBb904
+						-->
+						<!-- Boarding without the folding steps -->
+						<AccessVehicleEquipment version="any" id="AccessVehicleEquipment:2">
+							<BoardingHeight>0.7</BoardingHeight>
+						</AccessVehicleEquipment>
+						<!-- Boarding with the folding steps -->
+						<RetractableStepVehicleEquipment version="any" id="RetractableStepVehicleEquipment:2">
+							<!-- Only the last step reaches out of the train, this is the only step contributing to the equipment length -->
+							<ExternalLength>0.2</ExternalLength>
+							<!-- Boarding height of the lowest folding step -->
+							<BoardingHeight>0.25</BoardingHeight>
+							<NumberOfTreads>3</NumberOfTreads>
+							<NumberOfSteps>3</NumberOfSteps>
+							<StepHeight>0.15</StepHeight>
+						</RetractableStepVehicleEquipment>
+						<!--
+							Stepless train entrance with sliding step
+							https://www.youtube.com/watch?v=5D-TWksvc3Y
+						-->
+						<RetractableStepVehicleEquipment version="any" id="RetractableStepVehicleEquipment:3">
+							<ExternalLength>0.2</ExternalLength>
+							<!-- If the gap is smaller than the full length of the sliding step, it can still be used as it automatically stops extending on impact. -->
+							<IsAdjustableLength>true</IsAdjustableLength>
+							<BearingCapacity>250</BearingCapacity>
+							<BoardingHeight>0.7</BoardingHeight>
+							<NumberOfTreads>1</NumberOfTreads>
+							<!-- The sliding step does not introduce any meaningful vertical height difference it just bridges the horizontal gap. -->
+							<NumberOfSteps>0</NumberOfSteps>
+						</RetractableStepVehicleEquipment>
+						<!--
+							Combi-ramp (electrical sliding ramp and manual fold out ramp)
+							https://www.hubner-group.com/news/pressemeldung/doppelrampe-fuer-doppelte-zuverlaessigkeit-bereits-in-madrid-und-oslo-huebner-transportation-entwickelt-hybrides-einstiegssystem-fuer-busse/
+						-->
+						<RampVehicleEquipment version="any" id="RampVehicleEquipment:1">
+							<Fixed>true</Fixed>
+							<IsAutomatic>true</IsAutomatic>
+							<AssistanceRequired>false</AssistanceRequired>
+							<InOperationDuration>PT8S</InOperationDuration>
+							<OutOperationDuration>PT8S</OutOperationDuration>
+							<ExternalLength>0.678</ExternalLength>
+							<ExternalWidth>0.917</ExternalWidth>
+							<BearingCapacity>350</BearingCapacity>
+							<Length>0.678</Length>
+						</RampVehicleEquipment>
+						<RampVehicleEquipment version="any" id="RampVehicleEquipment:2">
+							<Fixed>true</Fixed>
+							<IsAutomatic>false</IsAutomatic>
+							<AssistanceRequired>true</AssistanceRequired>
+							<ExternalLength>0.819</ExternalLength>
+							<ExternalWidth>1.004</ExternalWidth>
+							<BearingCapacity>350</BearingCapacity>
+							<Length>0.819</Length>
+						</RampVehicleEquipment>
+						<!--
+							Portable ramp
+							https://www.youtube.com/watch?v=FUpuUMP2U_k
+						-->
+						<RampVehicleEquipment version="any" id="RampVehicleEquipment:3">
+							<Fixed>false</Fixed>
+							<IsAutomatic>false</IsAutomatic>
+							<AssistanceRequired>true</AssistanceRequired>
+							<!-- ExternalLength is undefined due to the portability of the ramp. Ultimately the entrance determines how much of the ramp will be outside of the vehicle. -->
+							<ExternalWidth>1</ExternalWidth>
+							<BearingCapacity>350</BearingCapacity>
+							<Length>2</Length>
+						</RampVehicleEquipment>
+						<!--
+							Automatic double arm lift
+							https://www.youtube.com/watch?v=Kvycxhss2TA
+						-->
+						<HoistVehicleEquipment version="any" id="HoistVehicleEquipment:1">
+							<IsAutomatic>true</IsAutomatic>
+							<AssistanceRequired>true</AssistanceRequired>
+							<InOperationDuration>PT20S</InOperationDuration>
+							<OutOperationDuration>PT20S</OutOperationDuration>
+							<!-- This differs widely from the useable/inner width as the arms of the lift have to be taken into account as well -->
+							<ExternalLength>3</ExternalLength>
+							<ExternalWidth>1.2</ExternalWidth>
+							<BearingCapacity>500</BearingCapacity>
+							<InnerLength>1.5</InnerLength>
+							<InnerWidth>1</InnerWidth>
+							<!-- More than the actual boarding height as boarding height is measured from the top of the rail  -->
+							<LiftingHeight>1.2</LiftingHeight>
+						</HoistVehicleEquipment>
+						<!--
+							Automatic tram lift
+							https://www.youtube-nocookie.com/embed/6pWkmiuln28?rel=0
+						-->
+						<HoistVehicleEquipment version="any" id="HoistVehicleEquipment:2">
+							<IsAutomatic>true</IsAutomatic>
+							<AssistanceRequired>false</AssistanceRequired>
+							<InOperationDuration>PT25S</InOperationDuration>
+							<OutOperationDuration>PT25S</OutOperationDuration>
+							<ExternalLength>0.4</ExternalLength>
+							<ExternalWidth>1</ExternalWidth>
+							<BearingCapacity>350</BearingCapacity>
+							<InnerLength>1.2</InnerLength>
+							<InnerWidth>1</InnerWidth>
+							<LiftingHeight>0.3</LiftingHeight>
+						</HoistVehicleEquipment>
+					</equipments>
+				</ResourceFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>
