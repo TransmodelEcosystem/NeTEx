@@ -128,6 +128,8 @@
 				</Date>
 				<Date><Modified>2023-12-14</Modified>FIX - Rename RoutingValidityParametersGroup to align with Transmodel. Add missing TransferRestriction, ServiceExclusion, RoutingRestrictionnZone and Border Point parametrers.
 				</Date>
+				<Date><Modified>2026-07-10</Modified>Add FulfilmentMethodTypes to DistributionParametersGroup; deprecate FulfilmentMethodType (singular name for a list of values).
+				</Date>
 				<Description>
 					<p>NeTEx is a European CEN standard for the exchange of Public Transport data including timetables.</p>
 					<p>This sub-schema describes the FARE ACCESS RIGHT PARAMETER types.</p>
@@ -772,11 +774,18 @@ Rail transport, Roads and Road transport
 				<xsd:element ref="DistributionChannelRef" minOccurs="0"/>
 				<xsd:element ref="GroupOfDistributionChannelsRef" minOccurs="0"/>
 			</xsd:choice>
-			<xsd:element name="FulfilmentMethodType" type="FulfilmentMethodListOfEnumerations" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Fulfillment MEthod +v2.0</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
+			<xsd:choice minOccurs="0">
+				<xsd:element name="FulfilmentMethodTypes" type="FulfilmentMethodListOfEnumerations">
+					<xsd:annotation>
+						<xsd:documentation>Allowed FULFILMENT METHOD types. +v2.1</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="FulfilmentMethodType" type="FulfilmentMethodListOfEnumerations">
+					<xsd:annotation>
+						<xsd:documentation>DEPRECATED - singular name for a list of values, use FulfilmentMethodTypes instead. -v2.1</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
 			<xsd:element ref="FulfilmentMethodRef" minOccurs="0"/>
 			<xsd:element name="PaymentMethod" type="PaymentMethodEnumeration" minOccurs="0">
 				<xsd:annotation>

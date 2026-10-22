@@ -19,6 +19,8 @@
 				</Date>
 				<Date><Modified>2026-07-09</Modified>Add correctly spelt Exchangeable* / IsExchangeable values to NameOfClass alongside deprecated misspelt forms.
 				</Date>
+				<Date><Modified>2026-07-10</Modified>Add FulfilmentMethodTypes and StepLimitUnit values to NameOfClass.
+				</Date>
 				<Description>
 					<p>NeTEx - Network Exchange. This subschema defines data Modification base types.</p>
 				</Description>
@@ -31,7 +33,7 @@
 				<Language>[ISO 639-2/B] ENG</Language>
 				<Publisher>Kizoom Software Ltd, 16 High Holborn, London WC1V 6BX</Publisher>
 				<Rights>Unclassified
- <Copyright>CEN, Crown Copyright 2009-2014</Copyright>
+ 					<Copyright>CEN, Crown Copyright 2009-2014</Copyright>
 				</Rights>
 				<Source>
 					<ul>
@@ -1228,6 +1230,7 @@ Rail transport, Roads and Road transport
 			<xsd:enumeration value="FulfilmentMethodPriceRef"/>
 			<xsd:enumeration value="FulfilmentMethodRef"/>
 			<xsd:enumeration value="FulfilmentMethodType"/>
+			<xsd:enumeration value="FulfilmentMethodTypes"/>
 			<xsd:enumeration value="FullCharge"/>
 			<xsd:enumeration value="FunicularSubmode"/>
 			<xsd:enumeration value="FurtherDetails"/>
@@ -2805,6 +2808,7 @@ Rail transport, Roads and Road transport
 			<xsd:enumeration value="StepLength"/>
 			<xsd:enumeration value="StepLimit"/>
 			<xsd:enumeration value="StepLimitRef"/>
+			<xsd:enumeration value="StepLimitUnit"/>
 			<xsd:enumeration value="StopArea"/>
 			<xsd:enumeration value="StopAreaRef"/>
 			<xsd:enumeration value="StopAssignment"/>
