@@ -312,11 +312,19 @@ Rail transport, Roads and Road transport
 					<xsd:documentation>Whether timings and validity applies to both directions (true) or just to the from-to direction of the TRANSFER.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+						<xsd:choice>
 			<xsd:element name="RestrictionType" type="TransferConstraintTypeEnumeration">
 				<xsd:annotation>
 					<xsd:documentation>Nature of restriction.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element name="TransferDelay" type="xsd:duration">
+				<xsd:annotation>
+					<xsd:documentation>Delay that occurs during transfer (as a penalty).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			</xsd:choice>
 			<xsd:element name="FromPointRef" type="ScheduledStopPointRefStructure" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>From POINT of TRANSFER RESTRICTION.</xsd:documentation>

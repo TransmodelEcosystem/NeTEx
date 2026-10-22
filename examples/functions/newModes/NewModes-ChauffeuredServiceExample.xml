@@ -545,7 +545,7 @@
 										<MaximumNumberOfPersons>1</MaximumNumberOfPersons>
 										<DiscountBasis>free</DiscountBasis>
 									</CompanionProfile>
-								</ServiceEligibilityCondition>								
+								</ServiceEligibilityCondition>
 								<ServiceEligibilityCondition id="sba4" version="1">
 									<CommercialProfile id="cp2" version="1">
 										<Description>**TO BE DISCUSSED**</Description>
@@ -571,41 +571,57 @@
 								</ServiceEligibilityCondition>
 								<ServiceCompetitiveCondition id="sba2" version="1">
 									<Description>Simple exclusion of time and distance from classical line based public transport. As no lines are mentioned, it is valid for all lines</Description>
-																		<DistanceFromClassical>200</DistanceFromClassical>
+									<DistanceFromClassical>200</DistanceFromClassical>
 									<TemporalDistanceFromClassical>PT15M</TemporalDistanceFromClassical>
-									</ServiceCompetitiveCondition>
-									
+								</ServiceCompetitiveCondition>
 								<ServiceCompetitiveCondition id="sba2a" version="1">
-								<Description>For the classic_line 1 the temporal distance needs to be at least 30M</Description>
+									<Description>For the classic_line 1 the temporal distance needs to be at least 30M</Description>
 									<serviceExclusions>
 										<ServiceExclusion id="se1" version="1">
 											<LineRef ref="classic_line" version="1"/>
 										</ServiceExclusion>
 									</serviceExclusions>
-									<TemporalDistanceFromClassical>PT30M</TemporalDistanceFromClassical>		
-									</ServiceCompetitiveCondition>
+									<TemporalDistanceFromClassical>PT30M</TemporalDistanceFromClassical>
+								</ServiceCompetitiveCondition>
 								<ServiceCompetitiveCondition id="sba2b" version="1">
-										<Description>Area based DRT can be "slowed" down also in a different way. By penalising the time used. Otherwise, people are guided by trip planners at the first stop to the DRT, while the classic is more reliable.</Description>
+									<Description>Area based DRT can be "slowed" down also in a different way. By penalising the time used. Otherwise, people are guided by trip planners at the first stop to the DRT, while the classic is more reliable. Also, a minimum drive and maximum drive are defined.</Description>
 									<PenaltyDrivingTimeFactor>1.5</PenaltyDrivingTimeFactor>
 									<PenaltyTransferTimeFactor>1.2</PenaltyTransferTimeFactor>
 									<WalkTimeFactor>1.1</WalkTimeFactor>
+									<MinimumDriveDuration>PT5M</MinimumDriveDuration>
+									<MaximumDriveDuration>PT20M</MaximumDriveDuration>
 								</ServiceCompetitiveCondition>
 								<ServiceCompetitiveCondition id="sba10" version="1">
 									<Description>This shows how the "Google"/NL way can be modeled. There we have the safe_duration_factor and the _safe_duration_offset. The formula is like this. SafeTravelDuration (seconds) = safe_duration_factor × DrivingDuration (seconds) + safe_duration_offset . Be aware that those calculations only provide guide lines for trip planners. The actual timing must come from the reservation/booking/purchase process.</Description>
-										<PenaltyDrivingTimeFactor>1.5</PenaltyDrivingTimeFactor> <!-- used as the safe_duration_factor -->
-										<PenaltyDrivingTimeOffset>PT60S</PenaltyDrivingTimeOffset> <!-- used as the safe_duration_offset -->
+									<PenaltyDrivingTimeFactor>1.5</PenaltyDrivingTimeFactor>
+									<!-- used as the safe_duration_factor -->
+									<PenaltyDrivingTimeOffset>PT60S</PenaltyDrivingTimeOffset>
+									<!-- used as the safe_duration_offset -->
 								</ServiceCompetitiveCondition>
 								<ServiceCompetitiveCondition id="sba7" version="1">
-								<Description></Description>
-
+									<Description>Defines between which services transfers are allowed.</Description>
 									<InterchangeBetweenFlexibleServicesAllowed>true</InterchangeBetweenFlexibleServicesAllowed>
 									<InterchangeWithConventionalServicesAllowed>true</InterchangeWithConventionalServicesAllowed>
 								</ServiceCompetitiveCondition>
 								<ServiceCompetitiveCondition id="sba8" version="1">
-									<Description>xxx</Description>
+									<Description>A transfer restrictions at given "virtual" points. May also be a single area.</Description>
 									<transferRestrictions>
 										<TransferRestriction id="tr1" version="1">
+											<BothWays>true</BothWays>
+											<!-- we generelly suggest not to use BothWays -->
 											<RestrictionType>cannotTransfer</RestrictionType>
+											<!-- if no points are provided it is true for the whole trip. -->
+											<FromPointRef ref="alphaville_airport" version="1"/>
+											<ToPointRef ref="alphaville_centre" version="1"/>
+										</TransferRestriction>
+									</transferRestrictions>
+								</ServiceCompetitiveCondition>
+								<ServiceCompetitiveCondition id="sba8a" version="1">
+									<Description>A transfer restrictions at given "virtual" points. May also be a single area. In this case as a delay</Description>
+									<transferRestrictions>
+										<TransferRestriction id="tr2" version="1">
+											<TransferDelay>PT5M</TransferDelay>
+											<!-- if no points are provided it is true for the whole trip. -->
 										</TransferRestriction>
 									</transferRestrictions>
 								</ServiceCompetitiveCondition>

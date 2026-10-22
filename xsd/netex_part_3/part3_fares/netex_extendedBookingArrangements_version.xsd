@@ -161,6 +161,16 @@ Rail transport, Roads and Road transport
 							<xsd:documentation>Factor to multiply walk time for the classical public transport to calculate if the classical public transport still should dominate the demand responsive traffic.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
+					<xsd:element name="MinimumDriveDuration" type="xsd:duration" default="PT0S" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Minimal drive duration that is allowed to use the service.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="MaximumDriveDuration" type="xsd:duration" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Maximum drive duration that is allowed for the service.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>					
 				</xsd:sequence>
 				<xsd:sequence>
 					<xsd:element name="InterchangeBetweenFlexibleServicesAllowed" type="xsd:boolean" default="false" minOccurs="0">

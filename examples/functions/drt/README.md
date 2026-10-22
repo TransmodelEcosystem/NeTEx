@@ -270,7 +270,16 @@ There are three different ways to hand over to a booking service:
 * Through `bookingUrls/BookingDeepUrl?. There are parameters that are sent in a GET request (see list below).
 * Through the service descriptor in `bookingUrls/BookingService`. For a list of services the end point information is delivered. Be aware you still need the necessary account informations and/or security protocol elements.
 
-| Parameter for deep links| Description |
+| Parameter for deep links | Description                                                                            |
+|--------------------------|----------------------------------------------------------------------------------------|
+| from                     | From where to go coordinates                                                           |
+| to                       | Destination as coordinates                                                             |
+| when                     | Datetime of start                                                                      |
+| numPassengers            | Number of passengers                                                                   |
+| numSuitcases             | Number of suitcases                                                                    |
+| impairment               | If there is a handicap wheelchair / electricWheelshair / cognitive / visuel / auditive |
+| note                     | Additional information                                                                 |
+
 This also will provide more information for connections to booking services **TODO**
 
 ### Competition Rules
@@ -283,6 +292,58 @@ We have a set of parameters that can be set in a `ServiceCompetitiveCondition`:
 - Walk time factor: Factor to multiply walk time for the classical public transport to calculate if the classical public transport still should dominate the demand responsive traffic.
 - Are interchanges with flexible and/or conventional services allowed.
 
+
+```
+<ServiceCompetitiveCondition id="sba2" version="1">
+	<Description>Simple exclusion of time and distance from classical line based public transport. As no lines are mentioned, it is valid for all lines</Description>
+	<DistanceFromClassical>200</DistanceFromClassical>
+	<TemporalDistanceFromClassical>PT15M</TemporalDistanceFromClassical>
+</ServiceCompetitiveCondition>
+<ServiceCompetitiveCondition id="sba2a" version="1">
+	<Description>For the classic_line 1 the temporal distance needs to be at least 30M</Description>
+	<serviceExclusions>
+		<ServiceExclusion id="se1" version="1">
+			<LineRef ref="classic_line" version="1"/>
+		</ServiceExclusion>
+	</serviceExclusions>
+	<TemporalDistanceFromClassical>PT30M</TemporalDistanceFromClassical>
+</ServiceCompetitiveCondition>
+<ServiceCompetitiveCondition id="sba2b" version="1">
+	<Description>Area based DRT can be "slowed" down also in a different way. By penalising the time used. Otherwise, people are guided by trip planners at the first stop to the DRT, while the classic is more reliable. Also, a minimum drive and maximum drive are defined.</Description>
+	<PenaltyDrivingTimeFactor>1.5</PenaltyDrivingTimeFactor>
+	<PenaltyTransferTimeFactor>1.2</PenaltyTransferTimeFactor>
+	<WalkTimeFactor>1.1</WalkTimeFactor>
+	<MinimumDriveDuration>PT5M</MinimumDriveDuration>
+	<MaximumDriveDuration>PT20M</MaximumDriveDuration>
+</ServiceCompetitiveCondition>
+<ServiceCompetitiveCondition id="sba10" version="1">
+	<Description>This shows how the "Google"/NL way can be modeled. There we have the safe_duration_factor and the _safe_duration_offset. The formula is like this. SafeTravelDuration (seconds) = safe_duration_factor × DrivingDuration (seconds) + safe_duration_offset . Be aware that those calculations only provide guide lines for trip planners. The actual timing must come from the reservation/booking/purchase process.</Description>
+	<PenaltyDrivingTimeFactor>1.5</PenaltyDrivingTimeFactor>
+	<!-- used as the safe_duration_factor -->
+	<PenaltyDrivingTimeOffset>PT60S</PenaltyDrivingTimeOffset>
+	<!-- used as the safe_duration_offset -->
+</ServiceCompetitiveCondition>
+<ServiceCompetitiveCondition id="sba7" version="1">
+	<Description>Defines between which services transfers are allowed.</Description>
+	<InterchangeBetweenFlexibleServicesAllowed>true</InterchangeBetweenFlexibleServicesAllowed>
+	<InterchangeWithConventionalServicesAllowed>true</InterchangeWithConventionalServicesAllowed>
+</ServiceCompetitiveCondition>
+<ServiceCompetitiveCondition id="sba8" version="1">
+	<Description>A transfer restrictions at given "virtual" points. May also be a single area.</Description>
+	<transferRestrictions>
+		<TransferRestriction id="tr1" version="1">
+			<BothWays>true</BothWays>
+			<!-- we generelly suggest not to use BothWays -->
+			<RestrictionType>cannotTransfer</RestrictionType>
+			<!-- if no points are provided it is true for the whole trip. -->
+			<FromPointRef ref="alphaville_airport" version="1"/>
+			<ToPointRef ref="alphaville_centre" version="1"/>
+		</TransferRestriction>
+	</transferRestrictions>
+</ServiceCompetitiveCondition>
+```
+
+
 ### Eligibility Rules
 We will use `ServiceEligibilityCondition` to describe the eligibility.
 The eligibility can be based on:
@@ -294,23 +355,61 @@ The eligibility can be based on:
 ```
 <ServiceEligibilityCondition id="sba3" version="1">
 	<ResidentialQualification id="rq1" version="1">
+		<TopographicPlaceRef ref="CantonOfBerne" versionRef="1"/>
 		<ResidenceType>live</ResidenceType>
+		<MinimumDuration>P100D</MinimumDuration>
 	</ResidentialQualification>
 </ServiceEligibilityCondition>
+<ServiceEligibilityCondition id="sba3" version="1">
+	<CompanionProfile id="cp1" version="1">
+		<Description>A profile for an accompanioning family member with a discount and a special price.</Description>
+		<fareTables>
+			<FareTableRef ref="specialfaretable" versionRef="1"/>
+		</fareTables>
+		<prices>
+			<UsageParameterPrice id="upp1" version="1">
+				<IsAllowed>true</IsAllowed>
+			</UsageParameterPrice>
+		</prices>
+		<CompanionRelationshipType>family</CompanionRelationshipType>
+		<MinimumNumberOfPersons>1</MinimumNumberOfPersons>
+		<MaximumNumberOfPersons>1</MaximumNumberOfPersons>
+		<DiscountBasis>discount</DiscountBasis>
+	</CompanionProfile>
+</ServiceEligibilityCondition>
+<ServiceEligibilityCondition id="sba3a" version="1">
+	<CompanionProfile id="cp2" version="1">
+		<Description>A profile for an accompanioning carer for free</Description>
+		<CompanionRelationshipType>carer</CompanionRelationshipType>
+		<MinimumNumberOfPersons>1</MinimumNumberOfPersons>
+		<MaximumNumberOfPersons>1</MaximumNumberOfPersons>
+		<DiscountBasis>free</DiscountBasis>
+	</CompanionProfile>
+</ServiceEligibilityCondition>
+<ServiceEligibilityCondition id="sba4" version="1">
+	<CommercialProfile id="cp2" version="1">
+		<Description>**TO BE DISCUSSED**</Description>
+		<ConsumptionUnits>2</ConsumptionUnits>
+	</CommercialProfile>
+</ServiceEligibilityCondition>
+<ServiceEligibilityCondition id="sba5" version="1">
+	<UserProfile id="up1" version="1">
+		<Description>Must be of a certain age to use the service</Description>
+		<MinimumAge>65</MinimumAge>
+	</UserProfile>
+</ServiceEligibilityCondition>
+<ServiceEligibilityCondition id="sba6" version="1">
+	<UserProfile id="up2" version="1">
+		<Description>Must be a child of a given age, female and must have a student card (e.g. for a school bus).</Description>
+		<UserType>child</UserType>
+		<MinimumAge>4</MinimumAge>
+		<MaximumAge>12</MaximumAge>
+		<LocalResident>true</LocalResident>
+		<GenderLimitation>femaleOnly</GenderLimitation>
+		<ProofRequired>studentCard</ProofRequired>
+	</UserProfile>
+</ServiceEligibilityCondition>
 ```
-
-```
-								<ServiceEligibilityCondition id="sba3" version="1">
-									<CompanionProfile id="cp1" version="1">
-										<MinimumNumberOfPersons>1</MinimumNumberOfPersons>
-									</CompanionProfile>
-								</ServiceEligibilityCondition>
-```
-
-								<ServiceEligibilityCondition id="sba4" version="1">
-									<CommercialProfile id="cp2" version="1">
-										<ConsumptionUnits>2</ConsumptionUnits>
-									</CommercialProfile>
 
 ## Examples 
 
@@ -354,18 +453,30 @@ From https://github.com/google/transit/commit/4ba262f50a6a355f6c849aaf757a9d1b4e
 Current definition:
 > Together, `safe_duration_factor` and `safe_duration_offset` allow an estimation of the longest amount of time a rider can expect the on-demand trip to take, for 95% of cases. <br><br> Data consumers are expected to use `safe_duration_factor` and `safe_duration_offset` to make the following calculation:<br><br> `SafeTravelDuration (seconds) = safe_duration_factor × DrivingDuration (seconds) + safe_duration_offset (seconds)`<br><br>where `DrivingDuration` is the time it would take a private car to travel the distance being calculated for the on-demand service, and `SafeTravelDuration` is the longest amount of time a rider can expect the on-demand trip to take. <br><br>This calculation should only apply to the portion of a trip that is on-demand. If a service is a deviated-fixed service, or if a rider trip includes a transfer from an on-demand to a fixed-route service, the duration of the fixed-route portion of the trip should be calculated according to the `departure_time` and `arrival_time` fields.<br><br>Empty values for `safe_duration_factor` and `safe_duration_offset` are considered as `1.0` and `0`, respectively.
 
-In NeTEx you use: xxx 
+In NeTEx you use: 
+
+```
+<ServiceCompetitiveCondition id="sba10" version="1">
+	<Description>This shows how the "Google"/NL way can be modeled. There we have the safe_duration_factor and the _safe_duration_offset. The formula is like this. SafeTravelDuration (seconds) = safe_duration_factor × DrivingDuration (seconds) + safe_duration_offset . Be aware that those calculations only provide guide lines for trip planners. The actual timing must come from the reservation/booking/purchase process.</Description>
+	<PenaltyDrivingTimeFactor>1.5</PenaltyDrivingTimeFactor>
+	<!-- used as the safe_duration_factor -->
+	<PenaltyDrivingTimeOffset>PT60S</PenaltyDrivingTimeOffset>
+	<!-- used as the safe_duration_offset -->
+</ServiceCompetitiveCondition>
+```
 
 ## Model things from HRDF
 The following relevant things in HRDF can be modeled in NeTEx already:
+
 | HRDF feature | Explanation | NeTEx |
 | -- | -- | -- |
-|need for reservation | - | with `BookingArrangement` or `ServiceReservationFacilityType` set to `reservationsCompulsaory`|
-| no bicyles allowed | - | `LuggageCarriageType`set to `noCycles`|
-| additional fare necessary | - | `UicTrainRateEnum` set to `supplement` |
-| `*R * U 5`  | additional time for transfer at stop | xxx|
-| `*R *DT 14 14`| no competition to classical line | xxx |
-| `*SS *FAT 00 30` | Minimal-maximal drive duration. | xxx |
+|need for reservation | - | with `BookingArrangement` or `ServiceReservationFacilityType` set to `reservationsCompulsaory`|  
+| no bicyles allowed | - | `LuggageCarriageType`set to `noCycles`|  
+| additional fare necessary | - | `UicTrainRateEnum` set to `supplement` |  
+| `*R * U 5` | additional time for transfer at stop | `ServiceCompetitiveCondition/transferRestrictions/TransferRestriction/TransferDelay` |  
+| `*R *DT 14 14`| no competition to classical line |   
+`ServiceCompetitiveCondition/TemporalDistanceFromClassical` |  
+| `*SS *FAT 00 30` | Minimal-maximal drive duration. | `ServiceCompetitiveCondition/MinimumDriveDuration` and `ServiceCompetitiveCondition/MaximumDriveDuration` |
 
 ## Sources
 - Definition of GTFS-Flex: https://gtfs.org/community/extensions/flex/
