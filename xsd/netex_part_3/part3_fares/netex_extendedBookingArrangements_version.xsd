@@ -112,6 +112,16 @@ Rail transport, Roads and Road transport
 			<xsd:documentation>Elements for SERVICE COMPETITIVE CONDITION.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
+			<xsd:element name="Name" type="MultilingualString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Name of the SERVICE COMPETITIVE CONDITION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Description" type="MultilingualString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Description of the SERVICE COMPETITIVE CONDITION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:choice>
 				<xsd:sequence>
 					<xsd:group ref="RoutingConstraintInFrameGroup" minOccurs="0">
@@ -129,9 +139,16 @@ Rail transport, Roads and Road transport
 							<xsd:documentation>Temporal distance to the SERVICE / transfer in the RoutingConstraint or classical public transport in general.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
+				</xsd:sequence>
+				<xsd:sequence>
 					<xsd:element name="PenaltyDrivingTimeFactor" type="xsd:decimal" default="1.0" minOccurs="0">
 						<xsd:annotation>
 							<xsd:documentation>Factor to multiply the classical public drive time with for the calculation of the dominance of the demand responsive traffic.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="PenaltyDrivingTimeOffset" type="xsd:duration" default="PT0S" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Offset in the calculation for the dominance of demand responsive traffic.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:element name="PenaltyTransferTimeFactor" type="xsd:decimal" default="1.0" minOccurs="0">

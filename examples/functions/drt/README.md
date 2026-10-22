@@ -265,6 +265,12 @@ One main advantage now is that many rules can be included.
 ### The BookingArrangement: How to make a reservation / book
 The relevant element is `ServiceBookingArrangement`.
 
+There are three different ways to hand over to a booking service:
+* Normal URL through `BookingUrl` or `bookingUrls/BookingUrl`.
+* Through `bookingUrls/BookingDeepUrl?. There are parameters that are sent in a GET request (see list below).
+* Through the service descriptor in `bookingUrls/BookingService`. For a list of services the end point information is delivered. Be aware you still need the necessary account informations and/or security protocol elements.
+
+| Parameter for deep links| Description |
 This also will provide more information for connections to booking services **TODO**
 
 ### Competition Rules
@@ -282,9 +288,29 @@ We will use `ServiceEligibilityCondition` to describe the eligibility.
 The eligibility can be based on:
 - `UserProfile`: Social profile of the passenger, based on age group, education, profession, social status, gender etc.
 - `CommercialProfile`: A category of users depending on their commercial relations with the operator (e.g. frequency of usage)
-- `ResidentialQualitfication`: e.g. live, work, study, exchange, nonResident
+- `ResidentialQualification`: e.g. live, work, study, exchange, nonResident
 - `CompanionProfile`: The number of characteristics (weight/volume of luggage), but here the CompanionRelationshipType is the important thing: e.g. child, family, dependent, carer)
 
+```
+<ServiceEligibilityCondition id="sba3" version="1">
+	<ResidentialQualification id="rq1" version="1">
+		<ResidenceType>live</ResidenceType>
+	</ResidentialQualification>
+</ServiceEligibilityCondition>
+```
+
+```
+								<ServiceEligibilityCondition id="sba3" version="1">
+									<CompanionProfile id="cp1" version="1">
+										<MinimumNumberOfPersons>1</MinimumNumberOfPersons>
+									</CompanionProfile>
+								</ServiceEligibilityCondition>
+```
+
+								<ServiceEligibilityCondition id="sba4" version="1">
+									<CommercialProfile id="cp2" version="1">
+										<ConsumptionUnits>2</ConsumptionUnits>
+									</CommercialProfile>
 
 ## Examples 
 

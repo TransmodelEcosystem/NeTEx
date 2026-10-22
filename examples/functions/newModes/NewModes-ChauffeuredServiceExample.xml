@@ -9,7 +9,7 @@
                (Additional meeting points would be created by the dynamic systems dynamic 
 
         
-  SOme sample transactiond at is also included
+  Some sample transactions are also included
 (C) CEN 2020
 -->
 	<PublicationTimestamp>2020-12-17T09:30:47.0Z</PublicationTimestamp>
@@ -513,48 +513,96 @@
 									<DepositRequired>true</DepositRequired>
 									<BookingChargeType>none</BookingChargeType>
 								</ServiceBookingArrangement>
-								<ServiceCompetitiveCondition id="sba2" version="1">
-									<!--<serviceExclusions>
-										<ServiceExclusion id="se1" version="1">
-											<LineRef ref="classic_line" version="1"/>
-										</ServiceExclusion>
-									</serviceExclusions>-->
-									<DistanceFromClassical>200</DistanceFromClassical>
-									<TemporalDistanceFromClassical>PT15M</TemporalDistanceFromClassical>
-									<PenaltyDrivingTimeFactor>1.5</PenaltyDrivingTimeFactor>
-									<PenaltyTransferTimeFactor>1.2</PenaltyTransferTimeFactor>
-									<WalkTimeFactor>1.1</WalkTimeFactor>
-								</ServiceCompetitiveCondition>
 								<ServiceEligibilityCondition id="sba3" version="1">
 									<ResidentialQualification id="rq1" version="1">
+										<TopographicPlaceRef ref="CantonOfBerne" versionRef="1"/>
 										<ResidenceType>live</ResidenceType>
+										<MinimumDuration>P100D</MinimumDuration>
 									</ResidentialQualification>
 								</ServiceEligibilityCondition>
 								<ServiceEligibilityCondition id="sba3" version="1">
 									<CompanionProfile id="cp1" version="1">
+										<Description>A profile for an accompanioning family member with a discount and a special price.</Description>
+										<fareTables>
+											<FareTableRef ref="specialfaretable" versionRef="1"/>
+										</fareTables>
+										<prices>
+											<UsageParameterPrice id="upp1" version="1">
+												<IsAllowed>true</IsAllowed>
+											</UsageParameterPrice>
+										</prices>
+										<CompanionRelationshipType>family</CompanionRelationshipType>
 										<MinimumNumberOfPersons>1</MinimumNumberOfPersons>
+										<MaximumNumberOfPersons>1</MaximumNumberOfPersons>
+										<DiscountBasis>discount</DiscountBasis>
 									</CompanionProfile>
 								</ServiceEligibilityCondition>
+								<ServiceEligibilityCondition id="sba3a" version="1">
+									<CompanionProfile id="cp2" version="1">
+										<Description>A profile for an accompanioning carer for free</Description>
+										<CompanionRelationshipType>carer</CompanionRelationshipType>
+										<MinimumNumberOfPersons>1</MinimumNumberOfPersons>
+										<MaximumNumberOfPersons>1</MaximumNumberOfPersons>
+										<DiscountBasis>free</DiscountBasis>
+									</CompanionProfile>
+								</ServiceEligibilityCondition>								
 								<ServiceEligibilityCondition id="sba4" version="1">
 									<CommercialProfile id="cp2" version="1">
+										<Description>**TO BE DISCUSSED**</Description>
 										<ConsumptionUnits>2</ConsumptionUnits>
 									</CommercialProfile>
 								</ServiceEligibilityCondition>
 								<ServiceEligibilityCondition id="sba5" version="1">
 									<UserProfile id="up1" version="1">
+										<Description>Must be of a certain age to use the service</Description>
 										<MinimumAge>65</MinimumAge>
 									</UserProfile>
 								</ServiceEligibilityCondition>
 								<ServiceEligibilityCondition id="sba6" version="1">
 									<UserProfile id="up2" version="1">
+										<Description>Must be a child of a given age, female and must have a student card (e.g. for a school bus).</Description>
+										<UserType>child</UserType>
+										<MinimumAge>4</MinimumAge>
+										<MaximumAge>12</MaximumAge>
+										<LocalResident>true</LocalResident>
 										<GenderLimitation>femaleOnly</GenderLimitation>
+										<ProofRequired>studentCard</ProofRequired>
 									</UserProfile>
 								</ServiceEligibilityCondition>
+								<ServiceCompetitiveCondition id="sba2" version="1">
+									<Description>Simple exclusion of time and distance from classical line based public transport. As no lines are mentioned, it is valid for all lines</Description>
+																		<DistanceFromClassical>200</DistanceFromClassical>
+									<TemporalDistanceFromClassical>PT15M</TemporalDistanceFromClassical>
+									</ServiceCompetitiveCondition>
+									
+								<ServiceCompetitiveCondition id="sba2a" version="1">
+								<Description>For the classic_line 1 the temporal distance needs to be at least 30M</Description>
+									<serviceExclusions>
+										<ServiceExclusion id="se1" version="1">
+											<LineRef ref="classic_line" version="1"/>
+										</ServiceExclusion>
+									</serviceExclusions>
+									<TemporalDistanceFromClassical>PT30M</TemporalDistanceFromClassical>		
+									</ServiceCompetitiveCondition>
+								<ServiceCompetitiveCondition id="sba2b" version="1">
+										<Description>Area based DRT can be "slowed" down also in a different way. By penalising the time used. Otherwise, people are guided by trip planners at the first stop to the DRT, while the classic is more reliable.</Description>
+									<PenaltyDrivingTimeFactor>1.5</PenaltyDrivingTimeFactor>
+									<PenaltyTransferTimeFactor>1.2</PenaltyTransferTimeFactor>
+									<WalkTimeFactor>1.1</WalkTimeFactor>
+								</ServiceCompetitiveCondition>
+								<ServiceCompetitiveCondition id="sba10" version="1">
+									<Description>This shows how the "Google"/NL way can be modeled. There we have the safe_duration_factor and the _safe_duration_offset. The formula is like this. SafeTravelDuration (seconds) = safe_duration_factor × DrivingDuration (seconds) + safe_duration_offset . Be aware that those calculations only provide guide lines for trip planners. The actual timing must come from the reservation/booking/purchase process.</Description>
+										<PenaltyDrivingTimeFactor>1.5</PenaltyDrivingTimeFactor> <!-- used as the safe_duration_factor -->
+										<PenaltyDrivingTimeOffset>PT60S</PenaltyDrivingTimeOffset> <!-- used as the safe_duration_offset -->
+								</ServiceCompetitiveCondition>
 								<ServiceCompetitiveCondition id="sba7" version="1">
+								<Description></Description>
+
 									<InterchangeBetweenFlexibleServicesAllowed>true</InterchangeBetweenFlexibleServicesAllowed>
 									<InterchangeWithConventionalServicesAllowed>true</InterchangeWithConventionalServicesAllowed>
 								</ServiceCompetitiveCondition>
 								<ServiceCompetitiveCondition id="sba8" version="1">
+									<Description>xxx</Description>
 									<transferRestrictions>
 										<TransferRestriction id="tr1" version="1">
 											<RestrictionType>cannotTransfer</RestrictionType>
