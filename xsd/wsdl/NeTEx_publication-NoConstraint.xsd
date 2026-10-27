@@ -94,7 +94,7 @@ Roads and Road transport.
 					<xsd:sequence>
 						<xsd:element name="NetworkFrameTopic" type="NetworkFrameTopicStructure" maxOccurs="unbounded">
 							<xsd:annotation>
-								<xsd:documentation>Values to use select Network Objects.</xsd:documentation>
+								<xsd:documentation>Data filter topic used to select network objects.</xsd:documentation>
 							</xsd:annotation>
 						</xsd:element>
 					</xsd:sequence>
