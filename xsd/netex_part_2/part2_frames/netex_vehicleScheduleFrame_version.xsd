@@ -61,7 +61,7 @@
 		<xsd:sequence>
 			<xsd:element name="VehicleModes" type="AllPublicTransportModesListOfEnumerations" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>PUBLIC TRANPORT MODEs of VEHICLE SCHEDULE.</xsd:documentation>
+					<xsd:documentation>PUBLIC TRANSPORT MODEs of VEHICLE SCHEDULE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

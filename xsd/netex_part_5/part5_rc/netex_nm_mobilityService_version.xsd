@@ -207,7 +207,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="proposedByServices" type="onlineServiceRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Online servicies proposing this service,</xsd:documentation>
+					<xsd:documentation>Online services proposing this service,</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -520,7 +520,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MinimumSharingPeriod" type="xsd:duration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Minmum time period for sharing.</xsd:documentation>
+					<xsd:documentation>Minimum time period for sharing.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MaximumSharingPeriod" type="xsd:duration" minOccurs="0">
@@ -602,7 +602,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MinimumRentalPeriod" type="xsd:duration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Minmum time period for rental;</xsd:documentation>
+					<xsd:documentation>Minimum time period for rental;</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="RentalPolicyUrl" type="xsd:anyURI" minOccurs="0">

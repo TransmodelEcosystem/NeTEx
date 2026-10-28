@@ -101,7 +101,7 @@ Rail transport, Roads and Road transport
 				<xsd:element ref="SiteElementRef"/>
 				<xsd:element name="PlaceRef" type="PlaceRefStructure">
 					<xsd:annotation>
-						<xsd:documentation>DEPRECATED: Reference to a PLACE, including QUAY, ACCESS SPACE, BOARDING POSITION or other node of a SITE. Use more specifc SITE COMPONENT. -v2.0</xsd:documentation>
+						<xsd:documentation>DEPRECATED: Reference to a PLACE, including QUAY, ACCESS SPACE, BOARDING POSITION or other node of a SITE. Use more specific SITE COMPONENT. -v2.0</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
 			</xsd:choice>

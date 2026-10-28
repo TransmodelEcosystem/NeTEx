@@ -311,7 +311,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="RollingStockType" type="TrainElementTypeTypeEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Fixed classication of ROLLING STOCK ITEM.</xsd:documentation>
+					<xsd:documentation>Fixed classification of ROLLING STOCK ITEM.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="TypeOfRollingStockRef" minOccurs="0"/>

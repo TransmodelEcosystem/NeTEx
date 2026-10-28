@@ -1311,7 +1311,7 @@ contained within its parent QUAY.</xsd:documentation>
 	<!-- ======================================================================= -->
 	<xsd:complexType name="vehiclePositionAlignments_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a list of VEHICLE POSTION ALIGNMENTs.</xsd:documentation>
+			<xsd:documentation>Type for a list of VEHICLE POSITION ALIGNMENTs.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="containmentAggregationStructure">
@@ -1345,7 +1345,7 @@ contained within its parent QUAY.</xsd:documentation>
 					</xsd:sequence>
 					<xsd:attribute name="id" type="VehiclePositionAlignmentIdType" use="required">
 						<xsd:annotation>
-							<xsd:documentation>Identifier of VEHICLE POSTION ALIGNMENT.</xsd:documentation>
+							<xsd:documentation>Identifier of VEHICLE POSITION ALIGNMENT.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:attribute>
 				</xsd:restriction>
@@ -1354,7 +1354,7 @@ contained within its parent QUAY.</xsd:documentation>
 	</xsd:element>
 	<xsd:complexType name="VehiclePositionAlignment_VersionStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a VEHICLE POSTION ALIGNMENT.</xsd:documentation>
+			<xsd:documentation>Type for a VEHICLE POSITION ALIGNMENT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="VersionedChildStructure">
@@ -1371,7 +1371,7 @@ contained within its parent QUAY.</xsd:documentation>
 	</xsd:complexType>
 	<xsd:group name="VehiclePositionAlignmentGroup">
 		<xsd:annotation>
-			<xsd:documentation>Elements of a VEHICLE POSTION ALIGNMENT.</xsd:documentation>
+			<xsd:documentation>Elements of a VEHICLE POSITION ALIGNMENT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="VehicleStoppingPositionRef" minOccurs="0"/>

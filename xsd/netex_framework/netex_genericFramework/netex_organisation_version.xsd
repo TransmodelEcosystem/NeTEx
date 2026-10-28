@@ -1067,7 +1067,7 @@ Rail transport, Roads and Road transport
 				<xsd:sequence>
 					<xsd:group ref="ContactGroup">
 						<xsd:annotation>
-							<xsd:documentation>Details for resuable CONTACT.</xsd:documentation>
+							<xsd:documentation>Details for reusable CONTACT.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:group>
 				</xsd:sequence>
