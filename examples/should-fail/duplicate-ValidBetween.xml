@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+	<PublicationTimestamp>2020-01-01T12:00:00Z</PublicationTimestamp>
+	<ParticipantRef>TEST</ParticipantRef>
+	<dataObjects>
+		<ResourceFrame version="1.0" id="TEST:ResourceFrame:1">
+			<ValidBetween id="TEST:ValidBetween:1" version="1.0">
+				<FromDate>2020-01-01T00:00:00Z</FromDate>
+			</ValidBetween>
+		</ResourceFrame>
+		<ServiceFrame version="1.0" id="TEST:ServiceFrame:1">
+			<ValidBetween id="TEST:ValidBetween:1" version="1.0">
+				<FromDate>2020-01-01T00:00:00Z</FromDate>
+			</ValidBetween>
+		</ServiceFrame>
+	</dataObjects>
+</PublicationDelivery>
