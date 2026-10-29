@@ -586,17 +586,17 @@
 								<ServiceCompetitiveCondition id="sba2b" version="1">
 									<Description>Area based DRT can be "slowed" down also in a different way. By penalising the time used. Otherwise, people are guided by trip planners at the first stop to the DRT, while the classic is more reliable. Also, a minimum drive and maximum drive are defined.
 									</Description>
-									<PenaltyDrivingTimeFactor>1.5</PenaltyDrivingTimeFactor>
+									<PenaltyTravelTimeFactor>1.5</PenaltyTravelTimeFactor>
 									<PenaltyTransferTimeFactor>1.2</PenaltyTransferTimeFactor>
 									<WalkTimeFactor>1.1</WalkTimeFactor>
-									<MinimumDriveDuration>PT5M</MinimumDriveDuration>
-									<MaximumDriveDuration>PT20M</MaximumDriveDuration>
+									<MinimumTravelDuration>PT5M</MinimumTravelDuration>
+									<MaximumTravelDuration>PT20M</MaximumTravelDuration>
 								</ServiceCompetitiveCondition>
 								<ServiceCompetitiveCondition id="sba10" version="1">
-									<Description>This shows how the "Google"/NL way can be modeled. There we have the safe_duration_factor and the _safe_duration_offset. The formula is like this. SafeTravelDuration (seconds) = safe_duration_factor × DrivingDuration (seconds) + safe_duration_offset . Be aware that those calculations only provide guide lines for trip planners. The actual timing must come from the reservation/booking/purchase process.</Description>
-									<PenaltyDrivingTimeFactor>1.5</PenaltyDrivingTimeFactor>
+									<Description>This shows how the "Google"/NL way can be modeled. There we have the safe_duration_factor and the _safe_duration_offset. The formula is like this. SafeTravelDuration (seconds) = safe_duration_factor × TravelDuration (seconds) + safe_duration_offset . Be aware that those calculations only provide guide lines for trip planners. The actual timing must come from the reservation/booking/purchase process.</Description>
+									<PenaltyTravelTimeFactor>1.5</PenaltyTravelTimeFactor>
 									<!-- used as the safe_duration_factor -->
-									<PenaltyDrivingTimeOffset>PT60S</PenaltyDrivingTimeOffset>
+									<PenaltyTravelTimeOffset>PT60S</PenaltyTravelTimeOffset>
 									<!-- used as the safe_duration_offset -->
 								</ServiceCompetitiveCondition>
 								<ServiceCompetitiveCondition id="sba7" version="1">
