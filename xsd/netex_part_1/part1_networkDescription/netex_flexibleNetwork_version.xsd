@@ -8,38 +8,20 @@
 	<!-- ======================================================================= -->
 	<xsd:annotation>
 		<xsd:appinfo>
-			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs"><Aggregation>main schema</Aggregation><Audience>e-service developers</Audience><Contributor>V1.0 Christophe Duquesne</Contributor><Contributor>Nicholas Knowles</Contributor><Coverage>Europe</Coverage><Creator>First drafted for NeTEx version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.</Creator><Date>
-					<Created>2010-09-04</Created>
-				</Date><Date><Modified>2011-02-05</Modified>Name Space changes
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs"><Aggregation>main schema</Aggregation><Audience>e-service developers</Audience><Contributor>V1.0 Christophe Duquesne</Contributor><Contributor>Nicholas Knowles</Contributor><Coverage>Europe</Coverage><Creator>First drafted for NeTEx version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.</Creator><Date><Created>2010-09-04</Created></Date><Date><Modified>2011-02-05</Modified>Name Space changes
 				</Date><Date><Modified>2017-05-25</Modified> Documentation corrected. 
 				</Date><Date><Modified>2017-06-11</Modified> Move Booking COntact to shared grou. No functional change
 				</Date><Date><Modified>2023-12-18</Modified>FIX: revise the  #525 implementation of BOOKING ARRANGEMENT 
 					; move booking arrangements up up to line and deprecate use on FLEXIBLE LINE
-				</Date><Description>
-					<p>NeTEx is a European CEN standard for the exchange of Public Transport data including timetables.</p>
-					<p>This sub-schema describes the FLEXIBLE NETWORK types.</p>
-				</Description><Format>
-					<MediaType>text/xml</MediaType>
-					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-					<Description>XML schema, W3C Recommendation 2001</Description>
-				</Format>&gt;<Identifier>{http://www.netex.org.uk/schemas/1.0/xsd/netex_part_1/part1_networkDescription}netex_flexibleNetwork_version.xsd</Identifier><Language>[ISO 639-2/B] ENG</Language><Publisher>Kizoom Software Ltd, 16 High Holborn, London WC1V 6BX </Publisher><Relation>
-					<Requires>http://www.netex.org.uk/schemas/1.0/PATH/netex_prereqfile.xsd</Requires>
-				</Relation><Rights>Unclassified
-					 <Copyright>CEN, Crown Copyright 2009-2023</Copyright></Rights><Source>
-					<ul>
-						<li>Derived from the Transmodel, VDV, TransXChange, NEPTUNE, BISON and Trident standards.</li>
-					</ul>
-				</Source><Status>Version 1.0</Status><Subject>
-					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				</Date><Description><p>NeTEx is a European CEN standard for the exchange of Public Transport data including timetables.</p><p>This sub-schema describes the FLEXIBLE NETWORK types.</p></Description><Format><MediaType>text/xml</MediaType><Syntax>http://www.w3.org/2001/XMLSchema</Syntax><Description>XML schema, W3C Recommendation 2001</Description></Format>&gt;<Identifier>{http://www.netex.org.uk/schemas/1.0/xsd/netex_part_1/part1_networkDescription}netex_flexibleNetwork_version.xsd</Identifier><Language>[ISO 639-2/B] ENG</Language><Publisher>Kizoom Software Ltd, 16 High Holborn, London WC1V 6BX </Publisher><Relation><Requires>http://www.netex.org.uk/schemas/1.0/PATH/netex_prereqfile.xsd</Requires></Relation><Rights>Unclassified
+					 <Copyright>CEN, Crown Copyright 2009-2023</Copyright></Rights><Source><ul><li>Derived from the Transmodel, VDV, TransXChange, NEPTUNE, BISON and Trident standards.</li></ul></Source><Status>Version 1.0</Status><Subject><Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
 Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport , Ports and maritime transport, Public transport,
 Rail transport, Roads and Road transport
-</Category>
-					<Project>CEN TC278 WG3 SG9.</Project>
-				</Subject><Title>NeTEx FLEXIBLE NETWORK types.</Title><Type>Standard</Type></Metadata>
+</Category><Project>CEN TC278 WG3 SG9.</Project></Subject><Title>NeTEx FLEXIBLE NETWORK types.</Title><Type>Standard</Type></Metadata>
 		</xsd:appinfo>
 		<xsd:documentation>NeTEX FLEXIBLE NETWORK types.</xsd:documentation>
 	</xsd:annotation>
