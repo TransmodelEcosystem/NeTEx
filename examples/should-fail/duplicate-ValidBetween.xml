@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
-	<PublicationTimestamp>2020-01-01T12:00:00Z</PublicationTimestamp>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../xsd/NeTEx_publication.xsd">	<PublicationTimestamp>2020-01-01T12:00:00Z</PublicationTimestamp>
 	<ParticipantRef>TEST</ParticipantRef>
 	<dataObjects>
 		<ResourceFrame version="1.0" id="TEST:ResourceFrame:1">
