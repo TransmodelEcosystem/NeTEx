@@ -309,6 +309,9 @@
 								</NoticeAssignment>
 							</noticeAssignments>
 							<bookingArrangements>
+								<ServiceCompetitiveCondition id="generated" version="1">
+									<DistanceFromClassical>300</DistanceFromClassical>
+								</ServiceCompetitiveCondition>
 								<BookingArrangement id="generated" version="1">
 									<BookingContact>
 										<Phone>+41 848 130 130</Phone>
@@ -462,7 +465,14 @@
 							<ServiceJourneyPatternRef ref="ch:1:ServiceJourneyPattern:Innerhalb_Gotthard" version="any"/>
 							<TimeDemandTypeRef ref="ch:1:TimeDemandType:NFZ" version="any"/>
 							<VehicleTypeRef ref="ch:1:VehicleType:01" version="any"/>
-							<LineRef ref="ch:1:FlexibleLine:myBuxi-Gotthard" version="any"/>
+							<FlexibleLineView>
+								<LineRef ref="ch:1:FlexibleLine:myBuxi-Gotthard" version="any"/>
+								<bookingArrangements>
+									<ServiceCompetitiveCondition id="generated2" version="1">
+										<MinimumTravelDuration>PT10M</MinimumTravelDuration>
+									</ServiceCompetitiveCondition>
+								</bookingArrangements>
+							</FlexibleLineView>
 						</ServiceJourney>
 						<ServiceJourney id="ch:1:ServiceJourney:myBuxi-Gotthard_40_55-_2_21600_93600" version="any">
 							<validityConditions>
