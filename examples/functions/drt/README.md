@@ -14,8 +14,6 @@ We expanded for NeTEx 2.1 DRT in serious manner.
 
 ## Types of demand responsive traffic (DRT)
 
-Based on the [concept in Switzerland](https://www.oev-info.ch/sites/default/files/2024-07/Fachkonzept%20On-Demand_v2.1_en.pdf).
-
 ### Scheduled on-demand
 The on-demand service serves the same stops as the normal service, but only 
 on demand (travellers must book their journey in advance). Accordingly, this
@@ -110,7 +108,7 @@ that the operators organise the most ideal pooling and journey schedules possibl
 Measuring quality in terms of punctuality in the conventional sense is only possible to 
 a limited extent. It still needs to be checked what waiting times are acceptable for 
 customers.
-The description of the area-type ODV offer is provided as an offer plan with the following information:
+The description of the area-type ODV offer is provided as an offer plan with the folowing information:
 - Service areas and possible subdivision into zones
 - Public transport stops, collection points or addresses
 - operating times
@@ -272,13 +270,16 @@ There are three different ways to hand over to a booking service:
 
 | Parameter for deep links | Description                                                                            |
 |--------------------------|----------------------------------------------------------------------------------------|
-| from                     | From where to go coordinates                                                           |
-| to                       | Destination as coordinates                                                             |
-| when                     | Datetime of start                                                                      |
-| numPassengers            | Number of passengers                                                                   |
-| numSuitcases             | Number of suitcases                                                                    |
-| impairment               | If there is a handicap wheelchair / electricWheelshair / cognitive / visuel / auditive |
-| note                     | Additional information                                                                 |
+| Origin_Coordinates       | From where to go coordinates                                                           |
+| Destination_Coordinates  | Destination as coordinates                                                             |
+| Origin_Stop              | Origin stop id                                                                         |
+| Destination_Stop         | Destination stop id                                                                    |
+| DepartureDateTime        | Datetime of start                                                                      |
+| ArrivalDateTime          | Arrival time of start                                                                  |
+| NumPassengers            | Number of passengers                                                                   |
+| NumSuitcases             | Number of suitcases                                                                    |
+| Impairment               | If there is a handicap wheelchair / electricWheelshair / cognitive / visuel / auditive |
+| Note                     | Additional information                                                                 |
 
 This also will provide more information for connections to booking services **TODO**
 
@@ -417,6 +418,8 @@ The eligibility can be based on:
 - LineType="flexible"
 - [XML](./CH_DRT_Line_Based_Reservation.xml)
 ### Area oriented with fixed CollectionPoints
+`CollectionPoints` are inoffical stops that will be modeled as `StopPlace with `TypeOfStopPlace = drt:CollectionPoint`.
+
 In the Gotthard area mybuxi is providing services from CollectionPoints that can change a lot. CollectionPoints near railway stations are stable.
 
 - LineType="fixedStopAreaWide"
@@ -427,10 +430,13 @@ In the Gotthard area mybuxi is providing services from CollectionPoints that can
 - LineType="mixedFlexible"
 - [XML](SKY_SKY-FlexibleLine-9ef2772d-b2b5-4b3a-935e-32d49ff6576e_Samnanger-ytre.xml)
 
-## NeTEx to GTFS-Flex hints
+## Comparisons with DRT in other formats and mapping
+Some other formats were studied (a) for inspiration in the improved DRT handling in NeTEx and also to make sure amapping is possible.
+
+### GTFS-Flex
 This chapter deals with mapping NeTEx to GTFS-Flex.
 
-### Things to use in GTFS-Flex
+#### Things to use in GTFS-Flex
 Important are:
 - Areas
 - FlexibleTrips
@@ -465,8 +471,8 @@ In NeTEx you use:
 </ServiceCompetitiveCondition>
 ```
 
-## Model things from HRDF
-The following relevant things in HRDF can be modeled in NeTEx already:
+### Inspiration from the HRDF modeling of DRF
+Another source we studied was the HRDF format. The relevant elements and their modeling in NeTEx are shown below.
 
 | HRDF feature | Explanation | NeTEx |
 | -- | -- | -- |
@@ -482,4 +488,5 @@ The following relevant things in HRDF can be modeled in NeTEx already:
 - Definition of GTFS-Flex: https://gtfs.org/community/extensions/flex/
 - Description, how it was done in Switzerland:
   - https://opentransportdata.swiss/en/cookbook/timetable-cookbook/gtfs-flex/
-  - https://www.oev-info.ch/sites/default/files/2024-04/gtfs_profil_switzerland_version_0_16.pdf?
+  - https://www.oev-info.ch/sites/default/files/2024-04/gtfs_profil_switzerland_version_0_16.pdf
+  - https://www.oev-info.ch/sites/default/files/2024-07/Fachkonzept%20On-Demand_v2.1_en.pdf.
