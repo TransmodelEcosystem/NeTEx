@@ -342,10 +342,10 @@
 											</furtherParameterDescriptions>
 										</BookingDeepUrl>
 										<BookingService>
-											<Endpoint>https://app.mybuxi.ch</Endpoint>
+											<Endpoint>https://app.mybuxi.ch/tomp-api</Endpoint>
 											<EndpointVersion>1.1</EndpointVersion>
 											<BookingServiceType>tomp</BookingServiceType>
-											<SupportedSteps>full</SupportedSteps>
+											<SupportedBookingSteps>full</SupportedBookingSteps>
 										</BookingService>
 									</bookingUrls>
 								</BookingArrangement>

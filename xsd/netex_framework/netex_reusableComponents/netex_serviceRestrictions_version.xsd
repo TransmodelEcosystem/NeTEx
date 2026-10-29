@@ -566,12 +566,12 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="BookingServiceType" type="BookingServiceEnumeration">
 				<xsd:annotation>
-					<xsd:documentation>Service protocol.</xsd:documentation>
+					<xsd:documentation>Service protocol that is used by this end point. This is taken from a list of possible Booking service types (e.g. TOMP, OSDM).</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="SupportedSteps" type="SupportedBookingProcessStepListOfEnumerations">
+			<xsd:element name="SupportedBookingSteps" type="SupportedBookingProcessStepListOfEnumerations">
 				<xsd:annotation>
-					<xsd:documentation>Service protocol.</xsd:documentation>
+					<xsd:documentation>Different reservation / booking protocols support some steps in the process (and perhaps not all). This list shows which of the steps are supported by this service endpoint.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
