@@ -14,12 +14,12 @@
 				</ValueSet>
 				<ValueSet id="vs3" nameOfClass="TypeOfConcession" version="1">
 					<values>
-					<TypeOfConcession id="id" version="1">
-						<Name>This should be ok</Name>
-					</TypeOfConcession>
-					<TypeOfConcession id="id" version="1">
-						<Name>This not</Name>
-					</TypeOfConcession>					
+						<TypeOfConcession id="id" version="1">
+							<Name>This should be ok</Name>
+						</TypeOfConcession>
+						<TypeOfConcession id="id" version="1">
+							<Name>This not</Name>
+						</TypeOfConcession>
 					</values>
 				</ValueSet>
 			</typesOfValue>
