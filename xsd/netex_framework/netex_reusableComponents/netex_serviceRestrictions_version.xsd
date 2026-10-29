@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_serviceRestrictions_version">
 	<xsd:include schemaLocation="../netex_responsibility/netex_typeOfValue_version.xsd"/>
+	<xsd:include schemaLocation="../netex_responsibility/netex_responsibility_version.xsd"/>
 	<xsd:include schemaLocation="../netex_genericFramework/netex_organisation_support.xsd"/>
 	<xsd:include schemaLocation="netex_serviceRestrictions_support.xsd"/>
 	<!-- ======================================================================= -->
@@ -57,8 +58,7 @@
 					<Requires>http://www.netex.org.uk/schemas/1.0/PATH/netex_prereqfile.xsd</Requires>
 				</Relation>
 				<Rights>Unclassified
-				 <Copyright>CEN, Crown Copyright 2009-2023</Copyright>
-				</Rights>
+				 <Copyright>CEN, Crown Copyright 2009-2023</Copyright></Rights>
 				<Source>
 					<ul>
 						<li>Derived from the Transmodel, VDV, TransXChange, NEPTUNE, BISON and Trident standards.</li>
@@ -181,7 +181,12 @@ Rail transport, Roads and Road transport
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="BookingArrangement" substitutionGroup="DataManagedObject">
+	<xsd:element name="BookingArrangement_Dummy" type="DataManagedObjectStructure" abstract="true" substitutionGroup="DataManagedObject">
+		<xsd:annotation>
+			<xsd:documentation>Dummy Supertype for BookingArrangement elements.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="BookingArrangement" substitutionGroup="BookingArrangement_Dummy" id="BookingArrangement">
 		<xsd:annotation>
 			<xsd:documentation>Details of the booking arrangements for a given LINE, STOP, SERVICE etc.</xsd:documentation>
 		</xsd:annotation>
@@ -271,7 +276,12 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="BookingUrl" type="InfoLinkStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>URL for booking. +V1.1</xsd:documentation>
+					<xsd:documentation>Static URL for booking. -V2.1 depreciated</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="bookingUrls" type="serviceBookingUrlInFrame_RelStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>new structure to defines how this can be booked.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="BookingNote" type="MultilingualString" minOccurs="0">
@@ -347,7 +357,226 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- ===== BOOKING ARRANGEMENT ===================================== -->
+	<!-- ===== SERVICE BOOKING URL ===================================== -->
+	<xsd:element name="TypeOfBookingService" substitutionGroup="TypeOfValue">
+		<xsd:annotation>
+			<xsd:documentation>Defines an open classification of what services are supported in this booking service. + v2.1</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:restriction base="TypeOfBookingService_ValueStructure">
+					<xsd:sequence>
+						<xsd:sequence>
+							<xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+						</xsd:sequence>
+						<xsd:sequence>
+							<xsd:group ref="DataManagedObjectGroup"/>
+						</xsd:sequence>
+						<xsd:sequence>
+							<xsd:group ref="TypeOfValueGroup"/>
+						</xsd:sequence>
+						<xsd:sequence>
+							<xsd:group ref="TypeOfBookingServiceGroup"/>
+						</xsd:sequence>
+					</xsd:sequence>
+					<xsd:attribute name="id" type="TypeOfBookingServiceIdType">
+						<xsd:annotation>
+							<xsd:documentation>Identifier of TYPE OF BOOKING SERVICE.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="TypeOfBookingService_ValueStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a TYPE OF BOOKING SERVICE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="TypeOfValue_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="TypeOfBookingServiceGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="TypeOfBookingServiceGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for TYPE OF BOOKING SERVICE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="BookingService" type="BookingServiceEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Booking service value.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="serviceBookingUrlInFrame_RelStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for containment in frame of SERVICE BOOKING URLs</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="containmentAggregationStructure">
+				<xsd:sequence>
+					<xsd:choice minOccurs="1" maxOccurs="unbounded">
+						<xsd:element name="BookingUrl" type="InfoLinkStructure" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Static URL for booking. It might also be a parameterised URL as long as it is still a valid URL. Better however to use BookingDeepUrl or BookingService. +V1.1</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="BookingDeepUrl" type="BookingLinkStructure" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Dynamic URL for booking. +V2.0</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="BookingService" type="BookingServiceStructure" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Service registry entry for booking (based on well known booking protocols). +V2.0</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BookingLinkStructure">
+		<xsd:annotation>
+			<xsd:documentation>A booking link structure. The parameters are added to the endpoint as GET parameters. +V2.1</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Endpoint" type="xsd:anyURI">
+				<xsd:annotation>
+					<xsd:documentation>The endpoint that is used for the deep link. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OriginCoordinatesX" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the origin in coordinates.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OriginCoordinatesY" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the origin in coordinates.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OriginPlaceRef" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the origin as a place reference. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DestinationCoordinatesX" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the destination in coordinates. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DestinationCoordinatesY" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the destination in coordinates. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DestinationPlaceRef" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the destination as a place reference. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DepartureDateTime" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the departure DateTime. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DepartureDate" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the departure Date. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DepartureTime" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the departure Time. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ArrivalDateTime" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the arrival DateTime.  If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ArrivalDate" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the arrival Date.  If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ArrivalTime" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the arrival Time.  If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NumPassengers" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the number of passengers. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NumSuitCases" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the number of suitcases.  If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Wheelchair" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name to inform about a wheelchair. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Note" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for a short note. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="furtherParameterDescriptions" type="KeyListStructure">
+				<xsd:annotation>
+					<xsd:documentation>The parameters and their meaning for the end point. It cannot be assumed that they are supported by most systems.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="BookingServiceStructure">
+		<xsd:annotation>
+			<xsd:documentation>A booking service structure. +V2.1</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="BookingServiceGroup">
+				<xsd:annotation>
+					<xsd:documentation>The definition of the BOOKING SERVICE. +V2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="BookingServiceGroup">
+		<xsd:annotation>
+			<xsd:documentation>The information that is needed for the booking service. +V2.1</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Endpoint" type="xsd:anyURI">
+				<xsd:annotation>
+					<xsd:documentation>The endpoint that is used for the deep link.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EndpointVersion" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>the version.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="BookingServiceType" type="BookingServiceEnumeration">
+				<xsd:annotation>
+					<xsd:documentation>Service protocol that is used by this end point. This is taken from a list of possible Booking service types (e.g. TOMP, OSDM).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SupportedBookingSteps" type="SupportedBookingProcessStepListOfEnumerations">
+				<xsd:annotation>
+					<xsd:documentation>Different reservation / booking protocols support some steps in the process (and perhaps not all). This list shows which of the steps are supported by this service endpoint.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ===== SERVICE BOOKING ARRANGEMENT ===================================== -->
 	<xsd:complexType name="serviceBookingArrangementsInFrame_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for containment in frame of SERVICE BOOKING ARRANGEMENTs</xsd:documentation>
@@ -355,7 +584,7 @@ Rail transport, Roads and Road transport
 		<xsd:complexContent>
 			<xsd:extension base="containmentAggregationStructure">
 				<xsd:sequence>
-					<xsd:element ref="ServiceBookingArrangement" maxOccurs="unbounded">
+					<xsd:element ref="BookingArrangement_Dummy" maxOccurs="unbounded">
 						<xsd:annotation>
 							<xsd:documentation>Information on booking rules and additional data allowing the user to take the decision to book a service and to undertake the booking of a LOCAL SERVICE.</xsd:documentation>
 						</xsd:annotation>
@@ -371,13 +600,13 @@ Rail transport, Roads and Road transport
 		<xsd:complexContent>
 			<xsd:extension base="containmentAggregationStructure">
 				<xsd:choice maxOccurs="unbounded">
-					<xsd:element ref="ServiceBookingArrangementRef"/>
-					<xsd:element ref="ServiceBookingArrangement"/>
+					<xsd:element ref="BookingArrangementRef"/>
+					<xsd:element ref="BookingArrangement_Dummy"/>
 				</xsd:choice>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="ServiceBookingArrangement" substitutionGroup="DataManagedObject">
+	<xsd:element name="ServiceBookingArrangement" substitutionGroup="BookingArrangement_Dummy">
 		<xsd:annotation>
 			<xsd:documentation>Type for a SERVICE BOOKING ARRANGEMENT.</xsd:documentation>
 		</xsd:annotation>
@@ -392,21 +621,17 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="DataManagedObjectGroup"/>
 						</xsd:sequence>
 						<xsd:sequence>
-							<xsd:group ref="BookingArrangementGroup">
-								<xsd:annotation>
-									<xsd:documentation>Details for a BookingArrangement</xsd:documentation>
-								</xsd:annotation>
-							</xsd:group>
+							<xsd:group ref="BookingArrangementGroup"/>
 						</xsd:sequence>
 						<xsd:sequence>
 							<xsd:group ref="ServiceBookingArrangementGroup">
 								<xsd:annotation>
-									<xsd:documentation>Details for BookingArrangement</xsd:documentation>
+									<xsd:documentation>Details for ServiceBookingArrangement</xsd:documentation>
 								</xsd:annotation>
 							</xsd:group>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="BookingArrangementIdType" use="required"/>
+					<xsd:attribute name="id" type="ServiceBookingArrangementIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -434,12 +659,12 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="MinimumBookingDuration" type="xsd:duration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Minimum period for which a booking can be made. +v.1.2.2</xsd:documentation>
+					<xsd:documentation>Minimum period for which a booking can be made based on the departure datetime. +v.1.2.2</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MaximumBookingDuration" type="xsd:duration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Maximum period for which a booking can be made. +v.1.2.2</xsd:documentation>
+					<xsd:documentation>Maximum period for which a booking can be made based on the departure datetime. +v.1.2.2</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="DepositRequired" type="xsd:boolean" minOccurs="0">

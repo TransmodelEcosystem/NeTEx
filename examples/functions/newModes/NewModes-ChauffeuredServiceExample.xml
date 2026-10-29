@@ -9,7 +9,7 @@
                (Additional meeting points would be created by the dynamic systems dynamic 
 
         
-  SOme sample transactiond at is also included
+  Some sample transactions are also included
 (C) CEN 2020
 -->
 	<PublicationTimestamp>2020-12-17T09:30:47.0Z</PublicationTimestamp>
@@ -457,6 +457,13 @@
 						</Parking>
 					</parkings>
 				</SiteFrame>
+				<ServiceFrame id="sf1" version="1">
+					<lines>
+						<Line id="classic_line" version="1">
+							<Name>The classical line not to compete with</Name>
+						</Line>
+					</lines>
+				</ServiceFrame>
 				<!--==== Mobility Service ==== -->
 				<MobilityServiceFrame version="1.0" id="hjm:chauffeured_taxi_example" responsibilitySetRef="hjm:network_data">
 					<prerequisites>
@@ -488,23 +495,138 @@
 							<BrandingRef version="any" ref="myBrand"/>
 							<Name>Home James Cars.</Name>
 							<OperatorRef version="any" ref="noc:HJM"/>
-							<ServiceBookingArrangements>
-								<BookingContact>
-									<Phone>=31666777</Phone>
-									<Url>https://www.homeJames.eu/booking</Url>
-								</BookingContact>
-								<BookingMethods>mobileApp online</BookingMethods>
-								<BookingAccess>authorisedPublic</BookingAccess>
-								<BookWhen>advanceOnly</BookWhen>
-								<BuyWhen>onCheckOut</BuyWhen>
-								<LatestBookingTime>20:00:00</LatestBookingTime>
-								<MinimumBookingPeriod>P1D</MinimumBookingPeriod>
-								<BookingUrl>https://www.homeJames.eu/booking</BookingUrl>
-								<BookingNote>Booklings made online or by pyone  Bookings can be made up to two hour before travel. </BookingNote>
-								<MinimumBookingDuration>PT2H</MinimumBookingDuration>
-								<DepositRequired>true</DepositRequired>
-								<BookingChargeType>none</BookingChargeType>
-							</ServiceBookingArrangements>
+							<serviceBookingArrangements>
+								<ServiceBookingArrangement id="sba1" version="any">
+									<BookingContact>
+										<Phone>=31666777</Phone>
+										<Url>https://www.homeJames.eu/booking</Url>
+									</BookingContact>
+									<BookingMethods>mobileApp online</BookingMethods>
+									<BookingAccess>authorisedPublic</BookingAccess>
+									<BookWhen>advanceOnly</BookWhen>
+									<BuyWhen>onCheckOut</BuyWhen>
+									<LatestBookingTime>20:00:00</LatestBookingTime>
+									<MinimumBookingPeriod>P1D</MinimumBookingPeriod>
+									<BookingUrl>https://www.homeJames.eu/booking</BookingUrl>
+									<BookingNote>Booklings made online or by pyone  Bookings can be made up to two hour before travel. </BookingNote>
+									<MinimumBookingDuration>PT2H</MinimumBookingDuration>
+									<DepositRequired>true</DepositRequired>
+									<BookingChargeType>none</BookingChargeType>
+								</ServiceBookingArrangement>
+								<ServiceEligibilityCondition id="sba3" version="1">
+									<ResidentialQualification id="rq1" version="1">
+										<TopographicPlaceRef ref="CantonOfBerne" versionRef="1"/>
+										<ResidenceType>live</ResidenceType>
+										<MinimumDuration>P100D</MinimumDuration>
+									</ResidentialQualification>
+								</ServiceEligibilityCondition>
+								<ServiceEligibilityCondition id="sba3" version="1">
+									<CompanionProfile id="cp1" version="1">
+										<Description>A profile for an accompanioning family member with a discount and a special price.</Description>
+										<fareTables>
+											<FareTableRef ref="specialfaretable" versionRef="1"/>
+										</fareTables>
+										<prices>
+											<UsageParameterPrice id="upp1" version="1">
+												<IsAllowed>true</IsAllowed>
+											</UsageParameterPrice>
+										</prices>
+										<CompanionRelationshipType>family</CompanionRelationshipType>
+										<MinimumNumberOfPersons>1</MinimumNumberOfPersons>
+										<MaximumNumberOfPersons>1</MaximumNumberOfPersons>
+										<DiscountBasis>discount</DiscountBasis>
+									</CompanionProfile>
+								</ServiceEligibilityCondition>
+								<ServiceEligibilityCondition id="sba3a" version="1">
+									<CompanionProfile id="cp2" version="1">
+										<Description>A profile for an accompanioning carer for free</Description>
+										<CompanionRelationshipType>carer</CompanionRelationshipType>
+										<MinimumNumberOfPersons>1</MinimumNumberOfPersons>
+										<MaximumNumberOfPersons>1</MaximumNumberOfPersons>
+										<DiscountBasis>free</DiscountBasis>
+									</CompanionProfile>
+								</ServiceEligibilityCondition>
+								<ServiceEligibilityCondition id="sba4" version="1">
+									<CommercialProfile id="cp2" version="1">
+										<Description>**TO BE DISCUSSED**</Description>
+										<ConsumptionUnits>2</ConsumptionUnits>
+									</CommercialProfile>
+								</ServiceEligibilityCondition>
+								<ServiceEligibilityCondition id="sba5" version="1">
+									<UserProfile id="up1" version="1">
+										<Description>Must be of a certain age to use the service</Description>
+										<MinimumAge>65</MinimumAge>
+									</UserProfile>
+								</ServiceEligibilityCondition>
+								<ServiceEligibilityCondition id="sba6" version="1">
+									<UserProfile id="up2" version="1">
+										<Description>Must be a child of a given age, female and must have a student card (e.g. for a school bus).</Description>
+										<UserType>child</UserType>
+										<MinimumAge>4</MinimumAge>
+										<MaximumAge>12</MaximumAge>
+										<LocalResident>true</LocalResident>
+										<GenderLimitation>femaleOnly</GenderLimitation>
+										<ProofRequired>studentCard</ProofRequired>
+									</UserProfile>
+								</ServiceEligibilityCondition>
+								<ServiceCompetitiveCondition id="sba2" version="1">
+									<Description>Simple exclusion of time and distance from classical line based public transport. As no lines are mentioned, it is valid for all lines</Description>
+									<MinimalDistanceFromClassical>200</MinimalDistanceFromClassical>
+									<TemporalDistanceFromClassicalAfter>PT15M</TemporalDistanceFromClassicalAfter>
+								</ServiceCompetitiveCondition>
+								<ServiceCompetitiveCondition id="sba2a" version="1">
+									<Description>For the classic_line 1 the temporal distance needs to be at least 30M</Description>
+									<serviceExclusions>
+										<ServiceExclusion id="se1" version="1">
+											<LineRef ref="classic_line" version="1"/>
+										</ServiceExclusion>
+									</serviceExclusions>
+									<TemporalDistanceFromClassicalBefore>PT30M</TemporalDistanceFromClassicalBefore>
+								</ServiceCompetitiveCondition>
+								<ServiceCompetitiveCondition id="sba2b" version="1">
+									<Description>Area based DRT can be "slowed" down also in a different way. By penalising the time used. Otherwise, people are guided by trip planners at the first stop to the DRT, while the classic is more reliable. Also, a minimum drive and maximum drive are defined.
+									</Description>
+									<PenaltyTravelTimeFactor>1.5</PenaltyTravelTimeFactor>
+									<PenaltyTransferTimeFactor>1.2</PenaltyTransferTimeFactor>
+									<WalkTimeFactor>1.1</WalkTimeFactor>
+									<MinimumTravelDuration>PT5M</MinimumTravelDuration>
+									<MaximumTravelDuration>PT20M</MaximumTravelDuration>
+								</ServiceCompetitiveCondition>
+								<ServiceCompetitiveCondition id="sba10" version="1">
+									<Description>This shows how the "Google"/NL way can be modeled. There we have the safe_duration_factor and the _safe_duration_offset. The formula is like this. SafeTravelDuration (seconds) = safe_duration_factor × TravelDuration (seconds) + safe_duration_offset . Be aware that those calculations only provide guide lines for trip planners. The actual timing must come from the reservation/booking/purchase process.</Description>
+									<PenaltyTravelTimeFactor>1.5</PenaltyTravelTimeFactor>
+									<!-- used as the safe_duration_factor -->
+									<PenaltyTravelTimeOffset>PT60S</PenaltyTravelTimeOffset>
+									<!-- used as the safe_duration_offset -->
+								</ServiceCompetitiveCondition>
+								<ServiceCompetitiveCondition id="sba7" version="1">
+									<Description>Defines between which services transfers are allowed.</Description>
+									<InterchangeBetweenFlexibleServicesAllowed>true</InterchangeBetweenFlexibleServicesAllowed>
+									<InterchangeWithConventionalServicesAllowed>true</InterchangeWithConventionalServicesAllowed>
+								</ServiceCompetitiveCondition>
+								<ServiceCompetitiveCondition id="sba8" version="1">
+									<Description>A transfer restrictions at given "virtual" points. May also be a single area.</Description>
+									<transferRestrictions>
+										<TransferRestriction id="tr1" version="1">
+											<BothWays>true</BothWays>
+											<!-- we generelly suggest not to use BothWays -->
+											<RestrictionType>cannotTransfer</RestrictionType>
+											<!-- if no points are provided it is true for the whole trip. -->
+											<FromPointRef ref="alphaville_airport" version="1"/>
+											<ToPointRef ref="alphaville_centre" version="1"/>
+										</TransferRestriction>
+									</transferRestrictions>
+								</ServiceCompetitiveCondition>
+								<ServiceCompetitiveCondition id="sba8a" version="1">
+									<Description>A transfer restrictions at given "virtual" points. May also be a single area. In this case as a delay</Description>
+									<transferRestrictions>
+										<TransferRestriction id="tr2" version="1">
+											<TransferDelay>PT5M</TransferDelay>
+											<!-- if no points are provided it is true for the whole trip. -->
+										</TransferRestriction>
+									</transferRestrictions>
+								</ServiceCompetitiveCondition>
+							</serviceBookingArrangements>
 							<BookingRequired>true</BookingRequired>
 							<RegistrationRequired>true</RegistrationRequired>
 							<proposedByServices>
