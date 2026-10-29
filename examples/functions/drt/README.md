@@ -265,22 +265,27 @@ The relevant element is `ServiceBookingArrangement`.
 
 There are three different ways to hand over to a booking service:
 * Normal URL through `BookingUrl` or `bookingUrls/BookingUrl`.
-* Through `bookingUrls/BookingDeepUrl?. There are parameters that are sent in a GET request (see list below).
-* Through the service descriptor in `bookingUrls/BookingService`. For a list of services the end point information is delivered. Be aware you still need the necessary account informations and/or security protocol elements.
+* Through `bookingUrls/BookingDeepUrl`. There are parameters that are sent in a GET request. The parameters usually need to be mapped. This is done by the description strings that are defined in `BookingDeepUrl`
 
-| Parameter for deep links | Description                                                                            |
-|--------------------------|----------------------------------------------------------------------------------------|
-| Origin_Coordinates       | From where to go coordinates                                                           |
-| Destination_Coordinates  | Destination as coordinates                                                             |
-| Origin_Stop              | Origin stop id                                                                         |
-| Destination_Stop         | Destination stop id                                                                    |
-| DepartureDateTime        | Datetime of start                                                                      |
-| ArrivalDateTime          | Arrival time of start                                                                  |
-| NumPassengers            | Number of passengers                                                                   |
-| NumSuitcases             | Number of suitcases                                                                    |
-| Impairment               | If there is a handicap wheelchair / electricWheelshair / cognitive / visuel / auditive |
-| Note                     | Additional information                                                                 |
-
+```
+<BookingDeepUrl>
+	<Endpoint>https://app.mybuxi.ch/booking_link</Endpoint>
+	<OriginCoordinatesX>Start_X</OriginCoordinatesX>
+	<OriginCoordinatesY>Start_Y</OriginCoordinatesY>
+	<OriginPlaceRef>Start</OriginPlaceRef>
+	<DestinationCoordinatesX>Ziel</DestinationCoordinatesX>
+	<DestinationCoordinatesY>Ziel</DestinationCoordinatesY>
+	<DestinationPlaceRef>Ziel</DestinationPlaceRef>
+	<DepartureDate>Abfahrtsdatum</DepartureDate>
+	<DepartureTime>Abfahrtszeit</DepartureTime>
+	<furtherParameterDescriptions>
+		<KeyValue>
+			<Key>DiscountType</Key>
+			<Value>discount</Value>
+		</KeyValue>
+	</furtherParameterDescriptions>
+</BookingDeepUrl>
+```
 This also will provide more information for connections to booking services **TODO**
 
 ### Competition Rules

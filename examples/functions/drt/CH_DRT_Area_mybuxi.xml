@@ -326,24 +326,20 @@
 										<BookingUrl>https://www.mybuxi.ch</BookingUrl>
 										<BookingDeepUrl>
 											<Endpoint>https://app.mybuxi.ch/booking_link</Endpoint>
-											<parameterDescriptions>
+											<OriginCoordinatesX>Start_X</OriginCoordinatesX>
+											<OriginCoordinatesY>Start_Y</OriginCoordinatesY>
+											<OriginPlaceRef>Start</OriginPlaceRef>
+											<DestinationCoordinatesX>Ziel</DestinationCoordinatesX>
+											<DestinationCoordinatesY>Ziel</DestinationCoordinatesY>
+											<DestinationPlaceRef>Ziel</DestinationPlaceRef>
+											<DepartureDate>Abfahrtsdatum</DepartureDate>
+											<DepartureTime>Abfahrtszeit</DepartureTime>
+											<furtherParameterDescriptions>
 												<KeyValue>
-													<Key>from</Key>
-													<Value>From where to go coordinates</Value>
+													<Key>DiscountType</Key>
+													<Value>discount</Value>
 												</KeyValue>
-												<KeyValue>
-													<Key>to</Key>
-													<Value>Destination as coordinate</Value>
-												</KeyValue>
-												<KeyValue>
-													<Key>when</Key>
-													<Value>datetime of start</Value>
-												</KeyValue>
-												<KeyValue>
-													<Key>numPassengers</Key>
-													<Value>number of passengers</Value>
-												</KeyValue>
-											</parameterDescriptions>
+											</furtherParameterDescriptions>
 										</BookingDeepUrl>
 										<BookingService>
 											<Endpoint>https://app.mybuxi.ch</Endpoint>

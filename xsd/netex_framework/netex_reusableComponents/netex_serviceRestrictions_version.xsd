@@ -432,7 +432,7 @@ Rail transport, Roads and Road transport
 						</xsd:element>
 						<xsd:element name="BookingService" type="BookingServiceStructure" minOccurs="0">
 							<xsd:annotation>
-								<xsd:documentation>Service definition for booking. +V2.0</xsd:documentation>
+								<xsd:documentation>Service registry entry for booking (based on well known booking protocols). +V2.0</xsd:documentation>
 							</xsd:annotation>
 						</xsd:element>
 					</xsd:choice>
@@ -442,17 +442,97 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:complexType name="BookingLinkStructure">
 		<xsd:annotation>
-			<xsd:documentation>A booking link structure. +V2.1</xsd:documentation>
+			<xsd:documentation>A booking link structure. The parameters are added to the endpoint as GET parameters. +V2.1</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="Endpoint" type="xsd:anyURI">
 				<xsd:annotation>
-					<xsd:documentation>The endpoint that is used for the deep link.</xsd:documentation>
+					<xsd:documentation>The endpoint that is used for the deep link. </xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="parameterDescriptions" type="KeyListStructure">
+			<xsd:element name="OriginCoordinatesX" type="xsd:string">
 				<xsd:annotation>
-					<xsd:documentation>The parameters and their meaning for the end point. The list of allowed parameters should be taken from an approved list in the standard.</xsd:documentation>
+					<xsd:documentation>The parameter name for the origin in coordinates.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OriginCoordinatesY" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the origin in coordinates.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OriginPlaceRef" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the origin as a place reference. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DestinationCoordinatesX" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the destination in coordinates. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DestinationCoordinatesY" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the destination in coordinates. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DestinationPlaceRef" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the destination as a place reference. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DepartureDateTime" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the departure DateTime. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DepartureDate" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the departure Date. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DepartureTime" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the departure Time. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ArrivalDateTime" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the arrival DateTime.  If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ArrivalDate" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the arrival Date.  If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ArrivalTime" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the arrival Time.  If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NumPassengers" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the number of passengers. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NumSuitCases" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for the number of suitcases.  If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Wheelchair" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name to inform about a wheelchair. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Note" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The parameter name for a short note. If it is not present, then it is not supported.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="furtherParameterDescriptions" type="KeyListStructure">
+				<xsd:annotation>
+					<xsd:documentation>The parameters and their meaning for the end point. It cannot be assumed that they are supported by most systems.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
