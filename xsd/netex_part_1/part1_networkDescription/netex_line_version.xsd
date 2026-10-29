@@ -467,7 +467,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="bookingArrangements" type="serviceBookingArrangements_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Set of possible Booking Arrangements for this LINE. Using ServiceBookingArrangement for DRT. +v2.0</xsd:documentation>
+					<xsd:documentation>Set of the Booking Arrangements for this LINE. Using ServiceBookingArrangement for DRT. Can also contain ServiceCompetitiveConditions and ServiceEligiblityConditions. They can be define don ServiceJourney, Line or MobilityService. Lower level superseeds higher level. +v2.0</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
