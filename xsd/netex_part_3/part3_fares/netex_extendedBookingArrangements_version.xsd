@@ -129,16 +129,21 @@ Rail transport, Roads and Road transport
 							<xsd:documentation>Restrictions in what the SERVICE is allowed to do in connection with other SERVICES. If not set, then the rules apply in general.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:group>
-					<xsd:element name="DistanceFromClassical" type="xsd:integer" minOccurs="0">
+					<xsd:element name="MinimalDistanceFromClassical" type="xsd:integer" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>Distance in metres to the line/service or classical public transport in general. Builds geometric exclusion zones.</xsd:documentation>
+							<xsd:documentation>Distance in metres to the line/service or classical public transport in general. This is defined as the minimum walking distance from the next StopPlace of a classical public transport. Be aware that this is NOT to be taken into account for StopPlaces where a transfer is intended and defined (e.g. at a railway station). </xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
-					<xsd:element name="TemporalDistanceFromClassical" type="xsd:duration" minOccurs="0">
+					<xsd:element name="TemporalDistanceFromClassicalBefore" type="xsd:duration" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>Temporal distance to the SERVICE / transfer in the RoutingConstraint or classical public transport in general.</xsd:documentation>
+							<xsd:documentation>Temporal distance to the SERVICE / transfer in the RoutingConstraint or classical public transport in general (before the departure at a reasonably nearby stop).</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
+					<xsd:element name="TemporalDistanceFromClassicalAfter" type="xsd:duration" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Temporal distance to the SERVICE / transfer in the RoutingConstraint or classical public transport in general (after the departure at a reasonably nearby stop).</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>					
 				</xsd:sequence>
 				<xsd:sequence>
 					<xsd:element name="PenaltyTravelTimeFactor" type="xsd:decimal" default="1.0" minOccurs="0">

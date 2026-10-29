@@ -310,7 +310,7 @@
 							</noticeAssignments>
 							<bookingArrangements>
 								<ServiceCompetitiveCondition id="generated" version="1">
-									<DistanceFromClassical>300</DistanceFromClassical>
+									<MinimalDistanceFromClassical>300</MinimalDistanceFromClassical>
 								</ServiceCompetitiveCondition>
 								<BookingArrangement id="generated" version="1">
 									<BookingContact>

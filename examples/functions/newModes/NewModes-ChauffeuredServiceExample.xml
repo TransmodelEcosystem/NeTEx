@@ -571,8 +571,8 @@
 								</ServiceEligibilityCondition>
 								<ServiceCompetitiveCondition id="sba2" version="1">
 									<Description>Simple exclusion of time and distance from classical line based public transport. As no lines are mentioned, it is valid for all lines</Description>
-									<DistanceFromClassical>200</DistanceFromClassical>
-									<TemporalDistanceFromClassical>PT15M</TemporalDistanceFromClassical>
+									<MinimalDistanceFromClassical>200</MinimalDistanceFromClassical>
+									<TemporalDistanceFromClassicalAfter>PT15M</TemporalDistanceFromClassicalAfter>
 								</ServiceCompetitiveCondition>
 								<ServiceCompetitiveCondition id="sba2a" version="1">
 									<Description>For the classic_line 1 the temporal distance needs to be at least 30M</Description>
@@ -581,7 +581,7 @@
 											<LineRef ref="classic_line" version="1"/>
 										</ServiceExclusion>
 									</serviceExclusions>
-									<TemporalDistanceFromClassical>PT30M</TemporalDistanceFromClassical>
+									<TemporalDistanceFromClassicalBefore>PT30M</TemporalDistanceFromClassicalBefore>
 								</ServiceCompetitiveCondition>
 								<ServiceCompetitiveCondition id="sba2b" version="1">
 									<Description>Area based DRT can be "slowed" down also in a different way. By penalising the time used. Otherwise, people are guided by trip planners at the first stop to the DRT, while the classic is more reliable. Also, a minimum drive and maximum drive are defined.
