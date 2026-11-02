@@ -7,7 +7,7 @@ This Example shows an extract of  encoding a single  Operator  data     encoded 
  
 (C) NTA 2020
   -->
-	<PublicationTimestamp>20209-12-17T09:30:46.0Z</PublicationTimestamp>
+	<PublicationTimestamp>2019-12-17T09:30:46.0Z</PublicationTimestamp>
 	<ParticipantRef>SYS001</ParticipantRef>
 	<!-- ======WHAT WAS REQUESTED ========== -->
 	<PublicationRequest version="1.0">
