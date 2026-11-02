@@ -497,7 +497,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MinimumAge" type="xsd:nonNegativeInteger" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Minumum age to use TRANSPORT TYPE.</xsd:documentation>
+					<xsd:documentation>Minimum age to use TRANSPORT TYPE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Portable" type="xsd:boolean" minOccurs="0">
@@ -742,7 +742,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="FareClass" type="FareClassEnumeration" default="any" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Fare class for which capacity is specifyed. Default is any, i.e. capacity is for all FARE CLASSes.</xsd:documentation>
+					<xsd:documentation>Fare class for which capacity is specified. Default is any, i.e. capacity is for all FARE CLASSes.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:group ref="CapacityGroup"/>
@@ -1146,7 +1146,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="equipmentProfiles" type="vehicleEquipmentProfileRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Equipment profiles assoicated with model. +v1.2.2</xsd:documentation>
+					<xsd:documentation>Equipment profiles associated with model. +v1.2.2</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="VehicleModelProfileRef" minOccurs="0"/>

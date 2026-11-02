@@ -60,7 +60,7 @@ Rail transport, Roads and Road transport
 	<!-- ======================================================================= -->
 	<xsd:group name="TripReferenceGroup">
 		<xsd:annotation>
-			<xsd:documentation>Elemenst for references to a Trip</xsd:documentation>
+			<xsd:documentation>Elements for references to a Trip</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="TripPatternRef" minOccurs="0"/>
