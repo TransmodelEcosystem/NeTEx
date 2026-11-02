@@ -183,7 +183,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="travelSpecifications" type="travelSpecifications_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Travel details such as validity, price, origin and destination.</xsd:documentation>
+					<xsd:documentation>Travel details bought by Sales Transaction such as validity, price, origin and destination.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="customerPurchasePackages" type="customerPurchasePackages_RelStructure" minOccurs="0">

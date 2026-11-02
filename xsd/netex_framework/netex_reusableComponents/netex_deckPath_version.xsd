@@ -70,7 +70,7 @@ Rail transport, Roads and Road transport
 	<!-- ============================================== -->
 	<xsd:group name="DeckPathGroup">
 		<xsd:annotation>
-			<xsd:documentation>Deck Path elements from DECK</xsd:documentation>
+			<xsd:documentation>Deck Path elements for DECK</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="deckPathJunctions" type="deckPathJunctionRefs_RelStructure" minOccurs="0">
