@@ -51,7 +51,7 @@
 					<codespaces>
 						<Codespace id="op_data">
 							<Xmlns>stg</Xmlns>
-							<XmlnsUrl>http:///www.transdevireland.ie/timetable</XmlnsUrl>
+							<XmlnsUrl>http://www.transdevireland.ie/timetable</XmlnsUrl>
 							<Description>Stage coach TXC  data </Description>
 						</Codespace>
 					</codespaces>
