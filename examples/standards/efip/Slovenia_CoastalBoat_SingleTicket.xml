@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==== Redna poletna ladijska linija Ankaran - Koper - Izola - Piran: enkratna vozovnica ======
+     (Regular summer sea route Ankaran - Koper - Izola - Piran: single ticket)
+Fare products of the seasonal passenger boat between the coastal towns Ankaran, Koper, Izola and Piran, in
+NeTEx (validated against the v2.1-wip-efip XSD), following the profile of Slovenia_IJPP_GeneralTickets.xml:
+  - enkratna vozovnica za ladjo (single ticket between two piers), for adults and children;
+  - prevoz kolesa (bicycle supplement), one bicycle per person, limited space on board.
+  Tickets are bought on board; there is no smart card or online sale.
+File: examples/standards/efip/Slovenia_CoastalBoat_SingleTicket.xml (branch v2.1-wip-efip).
+
+MODELLING
+=========
+- Relacija med pomoloma (pier to pier) -> one DistanceMatrixElement per relation and direction between the four
+    piers (6 relations x 2 directions = 12); the price depends only on the relation, not on the direction.
+- Ladijski prevoz (boat) -> TransportModes water, WaterSubmode localPassengerFerry, in the access element.
+- Sezona (season) -> a ValidDuring validity condition on the Tariff: the 2025 season (1 July to 7 September 2025)
+    with DaysOfWeek Tuesday to Sunday ("daily except Mondays").
+- Popust za otroke (child discount) -> UserProfiles adult (14 and over) and child under 14 (50%), with UserType
+    adult / child and the age limits, DiscountingRules 0% / 50%.
+- Prevoz kolesa (bicycle) -> a SupplementProduct tied to the single ticket (FareProductRef), with a
+    LuggageAllowance (BaggageType bicycle, at most 1 item, charged by item, EUR 1.00 regardless of the relation).
+- Vozovnica na ladji (on-board ticket) -> a paper ticket bought on board, one SalesOfferPackage for both products.
+- Cene (prices) -> one FareTable for the single ticket (one Cell per DistanceMatrixElement and UserProfile,
+    24 cells) and one for the bicycle supplement.
+
+DATA SOURCE
+===========
+- Season, stops, prices, child discount and bicycle fare: notice of the Interreg Italy-Slovenia programme,
+  30 June 2025, https://www.ita-slo.eu/en/news-and-events/news/boat-transports-passengers-and-bicycles-between-ankaran-koper-izola-and-piran
+  (organised by the Regional Development Centre Koper, boat Zlatoperka, circular route twice a day).
+- Earlier seasons (photo of the price board on board, earlier season) had lower fares:
+  Ankaran-Koper 2.00, Ankaran-Izola 3.00, Ankaran-Piran 5.00, Koper-Izola 3.00, Koper-Piran 4.00, Izola-Piran 3.00,
+  bicycle 1.00 (EUR). This file uses the 2025 fares, the latest officially published.
+- The piers are not in the NAP.si stop place export of 2026-09-25 (no water stops are published), so the stop
+  places are created for this example, without coordinates.
+
+CONVENTIONS
+===========
+- ids follow the Slovenian NAP profile, "SI:SI0:<Class>:<uuid>:IJPP" (frames ":NAP"); all objects are created
+  for this example and use the uuid block "1177-00f1" (the IJPP example uses "1177-00f0").
+- PublicationDelivery version "2.1:EFIP" = NeTEx 2.1 + EFIP profile (provisional identifier).
+-->
+<PublicationDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.netex.org.uk/netex" version="2.1:EFIP" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2026-11-04T19:12:47.2916530Z</PublicationTimestamp>
+	<ParticipantRef>NAP</ParticipantRef>
+	<dataObjects>
+		<CompositeFrame id="SI:SI0:CompositeFrame:EU_PI_FARE_PRODUCT_5c3e8a12-7b4d-4f61-9a2e-1d8f0b6c4e73:NAP" created="2026-11-04T19:12:47.2916530Z" version="any">
+			<FrameDefaults>
+				<DefaultLocale>
+					<TimeZone>CET</TimeZone>
+					<SummerTimeZoneOffset>+1</SummerTimeZoneOffset>
+					<DefaultLanguage>sl</DefaultLanguage>
+				</DefaultLocale>
+				<DefaultLocationSystem>WGS84</DefaultLocationSystem>
+				<DefaultCurrency>EUR</DefaultCurrency>
+			</FrameDefaults>
+			<frames>
+				<!-- ===================== RESOURCE FRAME ===================== -->
+				<ResourceFrame id="SI:SI0:ResourceFrame:EU_PI_COMMON_5c3e8a12-7b4d-4f61-9a2e-1d8f0b6c4e73:NAP" created="2026-11-04T19:12:47.2916530Z" version="any">
+					<typesOfValue>
+						<TypeOfTravelDocument id="SI:SI0:TypeOfTravelDocument:00000000-1177-00f1-0000-000000000001:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+							<Name>Papirna vozovnica, kupljena na ladji</Name>
+							<Description>Paper ticket sold on board; seats cannot be reserved in advance</Description>
+							<MediaType>paperTicket</MediaType>
+						</TypeOfTravelDocument>
+					</typesOfValue>
+					<organisations>
+						<!-- Organiser of the service; the boat operator under contract is not named in the source -->
+						<Authority id="SI:SI0:Authority:00000000-1177-00f1-0000-000000000002:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+							<Name>Regionalni razvojni center Koper</Name>
+							<OrganisationType>authority</OrganisationType>
+						</Authority>
+					</organisations>
+				</ResourceFrame>
+				<!-- ===================== SITE FRAME (piers, created for this example) ===================== -->
+				<SiteFrame id="SI:SI0:SiteFrame:5c3e8a12-7b4d-4f61-9a2e-1d8f0b6c4e73:NAP" created="2026-11-04T19:12:47.2916530Z" version="any">
+					<stopPlaces>
+						<StopPlace id="SI:SI0:StopPlace:00000000-1177-00f1-0000-000000000101:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+							<Name>Ankaran, pomol Valdoltra</Name>
+							<TransportMode>water</TransportMode>
+							<StopPlaceType>ferryStop</StopPlaceType>
+							<quays>
+								<Quay id="SI:SI0:Quay:00000000-1177-00f1-0000-000000000111:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Ankaran pomol</Name>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="SI:SI0:StopPlace:00000000-1177-00f1-0000-000000000102:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+							<Name>Koper, zunanji rob parkirišča na Ukmarjevem trgu</Name>
+							<TransportMode>water</TransportMode>
+							<StopPlaceType>ferryStop</StopPlaceType>
+							<quays>
+								<Quay id="SI:SI0:Quay:00000000-1177-00f1-0000-000000000112:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Koper pomol</Name>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="SI:SI0:StopPlace:00000000-1177-00f1-0000-000000000103:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+							<Name>Izola, pomol pred hotelom Marina</Name>
+							<TransportMode>water</TransportMode>
+							<StopPlaceType>ferryStop</StopPlaceType>
+							<quays>
+								<Quay id="SI:SI0:Quay:00000000-1177-00f1-0000-000000000113:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Izola pomol</Name>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="SI:SI0:StopPlace:00000000-1177-00f1-0000-000000000104:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+							<Name>Piran, pomol pri rdečem svetilniku</Name>
+							<TransportMode>water</TransportMode>
+							<StopPlaceType>ferryStop</StopPlaceType>
+							<quays>
+								<Quay id="SI:SI0:Quay:00000000-1177-00f1-0000-000000000114:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Piran pomol</Name>
+								</Quay>
+							</quays>
+						</StopPlace>
+					</stopPlaces>
+				</SiteFrame>
+				<!-- ===================== SERVICE FRAME ===================== -->
+				<ServiceFrame id="SI:SI0:ServiceFrame:EU_PI_NETWORK_5c3e8a12-7b4d-4f61-9a2e-1d8f0b6c4e73:NAP" created="2026-11-04T19:12:47.2916530Z" version="any">
+					<scheduledStopPoints>
+						<ScheduledStopPoint id="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000111:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+							<Name>Ankaran pomol</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000112:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+							<Name>Koper pomol</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000113:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+							<Name>Izola pomol</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000114:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+							<Name>Piran pomol</Name>
+						</ScheduledStopPoint>
+					</scheduledStopPoints>
+					<stopAssignments>
+						<PassengerStopAssignment id="SI:SI0:PassengerStopAssignment:00000000-1177-00f1-0000-000000000111:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1" order="1">
+							<ScheduledStopPointRef version="1" ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000111:IJPP"/>
+							<StopPlaceRef version="1" ref="SI:SI0:StopPlace:00000000-1177-00f1-0000-000000000101:IJPP"/>
+							<QuayRef version="1" ref="SI:SI0:Quay:00000000-1177-00f1-0000-000000000111:IJPP"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="SI:SI0:PassengerStopAssignment:00000000-1177-00f1-0000-000000000112:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1" order="1">
+							<ScheduledStopPointRef version="1" ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000112:IJPP"/>
+							<StopPlaceRef version="1" ref="SI:SI0:StopPlace:00000000-1177-00f1-0000-000000000102:IJPP"/>
+							<QuayRef version="1" ref="SI:SI0:Quay:00000000-1177-00f1-0000-000000000112:IJPP"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="SI:SI0:PassengerStopAssignment:00000000-1177-00f1-0000-000000000113:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1" order="1">
+							<ScheduledStopPointRef version="1" ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000113:IJPP"/>
+							<StopPlaceRef version="1" ref="SI:SI0:StopPlace:00000000-1177-00f1-0000-000000000103:IJPP"/>
+							<QuayRef version="1" ref="SI:SI0:Quay:00000000-1177-00f1-0000-000000000113:IJPP"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="SI:SI0:PassengerStopAssignment:00000000-1177-00f1-0000-000000000114:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1" order="1">
+							<ScheduledStopPointRef version="1" ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000114:IJPP"/>
+							<StopPlaceRef version="1" ref="SI:SI0:StopPlace:00000000-1177-00f1-0000-000000000104:IJPP"/>
+							<QuayRef version="1" ref="SI:SI0:Quay:00000000-1177-00f1-0000-000000000114:IJPP"/>
+						</PassengerStopAssignment>
+					</stopAssignments>
+				</ServiceFrame>
+				<!-- ===================== FARE FRAME ===================== -->
+				<FareFrame id="SI:SI0:FareFrame:EU_PI_FARE_PRODUCT_5c3e8a12-7b4d-4f61-9a2e-1d8f0b6c4e73:NAP" created="2026-11-04T19:12:47.2916530Z" version="any">
+					<Name>
+						<Text lang="sl">Redna poletna ladijska linija Ankaran - Koper - Izola - Piran</Text>
+						<Text lang="en">Regular summer sea route Ankaran - Koper - Izola - Piran</Text>
+					</Name>
+					<PricingParameterSet id="SI:SI0:PricingParameterSet:00000000-1177-00f1-0000-000000000003:IJPP" version="1">
+						<pricingRules>
+							<DiscountingRule id="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000004:IJPP" version="1">
+								<Name>Brez popusta (adult, 0%)</Name>
+								<DiscountAsPercentage>0</DiscountAsPercentage>
+							</DiscountingRule>
+							<DiscountingRule id="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000005:IJPP" version="1">
+								<Name>Otroci do 14 let, 50%</Name>
+								<DiscountAsPercentage>50</DiscountAsPercentage>
+							</DiscountingRule>
+						</pricingRules>
+					</PricingParameterSet>
+					<tariffs>
+						<!-- ===== SINGLE O-D BOAT TARIFF ===== -->
+						<Tariff id="SI:SI0:Tariff:00000000-1177-00f1-0000-000000000010:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+							<validityConditions>
+								<ValidDuring id="SI:SI0:ValidDuring:00000000-1177-00f1-0000-000000000009:IJPP" version="1">
+									<Name>Sezona 2025, vsak dan razen ponedeljka (season 2025, daily except Mondays)</Name>
+									<FromDate>2025-07-01T00:00:00</FromDate>
+									<ToDate>2025-09-07T23:59:59</ToDate>
+									<DaysOfWeek>Tuesday Wednesday Thursday Friday Saturday Sunday</DaysOfWeek>
+								</ValidDuring>
+							</validityConditions>
+							<Name>Ladijski prevoz Ankaran - Koper - Izola - Piran, enkratna vozovnica</Name>
+							<Description>Seasonal circular boat route, twice a day, daily except Mondays; also in bad weather unless navigation is unsafe</Description>
+							<TypeOfTariffRef ref="ntx:point_to_point"/>
+							<TariffBasis>pointToPoint</TariffBasis>
+							<fareStructureElements>
+								<FareStructureElement id="SI:SI0:FareStructureElement:00000000-1177-00f1-0000-000000000011:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Dostop - ladja, relacije med pomoli</Name>
+									<TariffBasis>pointToPoint</TariffBasis>
+									<distanceMatrixElements>
+										<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000201:IJPP"/>
+										<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000202:IJPP"/>
+										<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000203:IJPP"/>
+										<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000204:IJPP"/>
+										<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000205:IJPP"/>
+										<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000206:IJPP"/>
+										<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000207:IJPP"/>
+										<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000208:IJPP"/>
+										<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000209:IJPP"/>
+										<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-00000000020a:IJPP"/>
+										<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-00000000020b:IJPP"/>
+										<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-00000000020c:IJPP"/>
+									</distanceMatrixElements>
+									<GenericParameterAssignment id="SI:SI0:GenericParameterAssignment:00000000-1177-00f1-0000-000000000012:IJPP" version="1" order="1">
+										<TypeOfAccessRightAssignmentRef ref="ntx:can_access"/>
+										<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
+										<validityParameters>
+											<TransportModes>water</TransportModes>
+											<TransportSubmode>
+												<WaterSubmode>localPassengerFerry</WaterSubmode>
+											</TransportSubmode>
+										</validityParameters>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<FareStructureElement id="SI:SI0:FareStructureElement:00000000-1177-00f1-0000-000000000013:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Upravičenost (eligible user types)</Name>
+									<GenericParameterAssignment id="SI:SI0:GenericParameterAssignment:00000000-1177-00f1-0000-000000000014:IJPP" version="1" order="1">
+										<TypeOfAccessRightAssignmentRef ref="ntx:eligible"/>
+										<LimitationGroupingType>XOR</LimitationGroupingType>
+										<limitations>
+											<UserProfile id="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000015:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+												<Name>Odrasli (adult, 14 and over)</Name>
+												<UserType>adult</UserType>
+												<MinimumAge>14</MinimumAge>
+											</UserProfile>
+											<UserProfile id="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000016:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+												<Name>Otroci do 14 let (children under 14)</Name>
+												<UserType>child</UserType>
+												<MaximumAge>13</MaximumAge>
+											</UserProfile>
+										</limitations>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<FareStructureElement id="SI:SI0:FareStructureElement:00000000-1177-00f1-0000-000000000017:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Pogoji uporabe - enkratna vožnja</Name>
+									<GenericParameterAssignment id="SI:SI0:GenericParameterAssignment:00000000-1177-00f1-0000-000000000018:IJPP" version="1" order="1">
+										<TypeOfAccessRightAssignmentRef ref="ntx:condition_of_use"/>
+										<LimitationGroupingType>AND</LimitationGroupingType>
+										<limitations>
+											<RoundTrip id="SI:SI0:RoundTrip:00000000-1177-00f1-0000-000000000019:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+												<Name>Enosmerna vožnja</Name>
+												<TripType>single</TripType>
+											</RoundTrip>
+											<FrequencyOfUse id="SI:SI0:FrequencyOfUse:00000000-1177-00f1-0000-00000000001a:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+												<Name>Ena vožnja</Name>
+												<FrequencyOfUseType>single</FrequencyOfUseType>
+											</FrequencyOfUse>
+										</limitations>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<FareStructureElement id="SI:SI0:FareStructureElement:00000000-1177-00f1-0000-00000000001b:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Kolo (bicycle): največ eno na osebo, omejena zmogljivost</Name>
+									<GenericParameterAssignment id="SI:SI0:GenericParameterAssignment:00000000-1177-00f1-0000-00000000001c:IJPP" version="1" order="1">
+										<TypeOfAccessRightAssignmentRef ref="ntx:condition_of_use"/>
+										<limitations>
+											<LuggageAllowance id="SI:SI0:LuggageAllowance:00000000-1177-00f1-0000-00000000001d:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+												<Name>Kolo, eno na osebo</Name>
+												<BaggageType>bicycle</BaggageType>
+												<LuggageAllowanceType>limited</LuggageAllowanceType>
+												<MaximumNumberItems>1</MaximumNumberItems>
+												<LuggageChargingBasis>chargedByItem</LuggageChargingBasis>
+											</LuggageAllowance>
+										</limitations>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+							</fareStructureElements>
+							<distanceMatrixElements>
+								<DistanceMatrixElement id="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000201:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Ankaran - Koper</Name>
+									<StartStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000111:IJPP"/>
+									<EndStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000112:IJPP"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000202:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Koper - Ankaran</Name>
+									<StartStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000112:IJPP"/>
+									<EndStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000111:IJPP"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000203:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Ankaran - Izola</Name>
+									<StartStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000111:IJPP"/>
+									<EndStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000113:IJPP"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000204:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Izola - Ankaran</Name>
+									<StartStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000113:IJPP"/>
+									<EndStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000111:IJPP"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000205:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Ankaran - Piran</Name>
+									<StartStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000111:IJPP"/>
+									<EndStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000114:IJPP"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000206:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Piran - Ankaran</Name>
+									<StartStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000114:IJPP"/>
+									<EndStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000111:IJPP"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000207:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Koper - Izola</Name>
+									<StartStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000112:IJPP"/>
+									<EndStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000113:IJPP"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000208:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Izola - Koper</Name>
+									<StartStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000113:IJPP"/>
+									<EndStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000112:IJPP"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000209:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Koper - Piran</Name>
+									<StartStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000112:IJPP"/>
+									<EndStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000114:IJPP"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-00000000020a:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Piran - Koper</Name>
+									<StartStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000114:IJPP"/>
+									<EndStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000112:IJPP"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-00000000020b:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Izola - Piran</Name>
+									<StartStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000113:IJPP"/>
+									<EndStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000114:IJPP"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-00000000020c:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Piran - Izola</Name>
+									<StartStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000114:IJPP"/>
+									<EndStopPointRef ref="SI:SI0:ScheduledStopPoint:00000000-1177-00f1-0000-000000000113:IJPP"/>
+								</DistanceMatrixElement>
+							</distanceMatrixElements>
+							<fareTables>
+								<FareTableRef ref="SI:SI0:FareTable:00000000-1177-00f1-0000-000000000040:IJPP"/>
+								<FareTableRef ref="SI:SI0:FareTable:00000000-1177-00f1-0000-000000000060:IJPP"/>
+							</fareTables>
+						</Tariff>
+					</tariffs>
+					<!-- ===== FARE PRODUCTS ===== -->
+					<fareProducts>
+						<PreassignedFareProduct id="SI:SI0:PreassignedFareProduct:00000000-1177-00f1-0000-000000000020:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+							<Name>Enkratna vozovnica za ladjo (single boat ticket)</Name>
+							<Description>Single trip between two piers of the summer sea route, bought on board; the price depends on the relation.</Description>
+							<validableElements>
+								<ValidableElement id="SI:SI0:ValidableElement:00000000-1177-00f1-0000-000000000021:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Ladja</Name>
+									<fareStructureElements>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f1-0000-000000000011:IJPP"/>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f1-0000-000000000013:IJPP"/>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f1-0000-000000000017:IJPP"/>
+									</fareStructureElements>
+								</ValidableElement>
+							</validableElements>
+							<accessRightsInProduct>
+								<AccessRightInProduct id="SI:SI0:AccessRightInProduct:00000000-1177-00f1-0000-000000000022:IJPP" version="1" order="1">
+									<IsFirstInSequence>true</IsFirstInSequence>
+									<IsLastInSequence>true</IsLastInSequence>
+									<ValidableElementRef ref="SI:SI0:ValidableElement:00000000-1177-00f1-0000-000000000021:IJPP"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+							<ProductType>singleTrip</ProductType>
+						</PreassignedFareProduct>
+						<SupplementProduct id="SI:SI0:SupplementProduct:00000000-1177-00f1-0000-000000000023:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+							<Name>Prevoz kolesa (bicycle supplement)</Name>
+							<Description>EUR 1.00 per bicycle regardless of the relation; one bicycle per person, limited capacity on board.</Description>
+							<FareProductRef ref="SI:SI0:PreassignedFareProduct:00000000-1177-00f1-0000-000000000020:IJPP"/>
+							<validableElements>
+								<ValidableElement id="SI:SI0:ValidableElement:00000000-1177-00f1-0000-000000000024:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Kolo na ladji</Name>
+									<fareStructureElements>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f1-0000-000000000011:IJPP"/>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f1-0000-00000000001b:IJPP"/>
+									</fareStructureElements>
+								</ValidableElement>
+							</validableElements>
+							<accessRightsInProduct>
+								<AccessRightInProduct id="SI:SI0:AccessRightInProduct:00000000-1177-00f1-0000-000000000025:IJPP" version="1" order="1">
+									<IsFirstInSequence>true</IsFirstInSequence>
+									<IsLastInSequence>true</IsLastInSequence>
+									<ValidableElementRef ref="SI:SI0:ValidableElement:00000000-1177-00f1-0000-000000000024:IJPP"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+							<ProductType>supplement</ProductType>
+						</SupplementProduct>
+					</fareProducts>
+					<!-- ===== PRICES (fare tables) ===== -->
+					<fareTables>
+						<!-- Season 2025, adults; children under 14 pay half -->
+						<FareTable id="SI:SI0:FareTable:00000000-1177-00f1-0000-000000000040:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+							<Name>Enkratna vozovnica - cene (sezona 2025)</Name>
+							<pricesFor>
+								<PreassignedFareProductRef ref="SI:SI0:PreassignedFareProduct:00000000-1177-00f1-0000-000000000020:IJPP"/>
+								<SalesOfferPackageRef ref="SI:SI0:SalesOfferPackage:00000000-1177-00f1-0000-000000000070:IJPP"/>
+							</pricesFor>
+							<usedIn>
+								<TariffRef ref="SI:SI0:Tariff:00000000-1177-00f1-0000-000000000010:IJPP"/>
+							</usedIn>
+							<cells>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000400:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Ankaran - Koper, odrasli</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000400:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>4.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000004:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000201:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000015:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000401:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Ankaran - Koper, otroci do 14 let</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000401:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>2.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000005:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000201:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000016:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000402:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Koper - Ankaran, odrasli</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000402:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>4.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000004:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000202:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000015:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000403:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Koper - Ankaran, otroci do 14 let</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000403:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>2.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000005:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000202:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000016:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000404:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Ankaran - Izola, odrasli</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000404:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>6.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000004:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000203:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000015:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000405:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Ankaran - Izola, otroci do 14 let</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000405:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>3.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000005:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000203:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000016:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000406:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Izola - Ankaran, odrasli</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000406:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>6.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000004:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000204:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000015:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000407:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Izola - Ankaran, otroci do 14 let</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000407:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>3.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000005:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000204:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000016:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000408:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Ankaran - Piran, odrasli</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000408:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>10.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000004:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000205:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000015:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000409:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Ankaran - Piran, otroci do 14 let</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000409:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>5.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000005:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000205:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000016:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-00000000040a:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Piran - Ankaran, odrasli</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-00000000040a:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>10.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000004:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000206:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000015:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-00000000040b:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Piran - Ankaran, otroci do 14 let</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-00000000040b:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>5.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000005:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000206:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000016:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-00000000040c:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Koper - Izola, odrasli</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-00000000040c:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>6.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000004:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000207:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000015:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-00000000040d:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Koper - Izola, otroci do 14 let</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-00000000040d:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>3.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000005:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000207:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000016:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-00000000040e:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Izola - Koper, odrasli</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-00000000040e:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>6.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000004:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000208:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000015:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-00000000040f:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Izola - Koper, otroci do 14 let</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-00000000040f:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>3.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000005:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000208:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000016:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000410:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Koper - Piran, odrasli</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000410:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>8.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000004:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000209:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000015:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000411:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Koper - Piran, otroci do 14 let</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000411:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>4.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000005:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-000000000209:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000016:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000412:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Piran - Koper, odrasli</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000412:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>8.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000004:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-00000000020a:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000015:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000413:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Piran - Koper, otroci do 14 let</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000413:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>4.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000005:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-00000000020a:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000016:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000414:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Izola - Piran, odrasli</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000414:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>6.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000004:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-00000000020b:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000015:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000415:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Izola - Piran, otroci do 14 let</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000415:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>3.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000005:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-00000000020b:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000016:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000416:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Piran - Izola, odrasli</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000416:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>6.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000004:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-00000000020c:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000015:IJPP"/>
+								</Cell>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000417:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Piran - Izola, otroci do 14 let</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000417:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>3.00</Amount>
+										<DiscountingRuleRef ref="SI:SI0:DiscountingRule:00000000-1177-00f1-0000-000000000005:IJPP"/>
+									</CellPrice>
+									<DistanceMatrixElementRef version="1" ref="SI:SI0:DistanceMatrixElement:00000000-1177-00f1-0000-00000000020c:IJPP"/>
+									<UserProfileRef ref="SI:SI0:UserProfile:00000000-1177-00f1-0000-000000000016:IJPP"/>
+								</Cell>
+							</cells>
+						</FareTable>
+						<FareTable id="SI:SI0:FareTable:00000000-1177-00f1-0000-000000000060:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+							<Name>Prevoz kolesa (sezona 2025)</Name>
+							<pricesFor>
+								<SupplementProductRef ref="SI:SI0:SupplementProduct:00000000-1177-00f1-0000-000000000023:IJPP"/>
+							</pricesFor>
+							<usedIn>
+								<TariffRef ref="SI:SI0:Tariff:00000000-1177-00f1-0000-000000000010:IJPP"/>
+							</usedIn>
+							<cells>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f1-0000-000000000061:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+									<Name>Kolo, ne glede na relacijo</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f1-0000-000000000061:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+										<Amount>1.00</Amount>
+									</CellPrice>
+									<SupplementProductRef ref="SI:SI0:SupplementProduct:00000000-1177-00f1-0000-000000000023:IJPP"/>
+								</Cell>
+							</cells>
+						</FareTable>
+					</fareTables>
+					<!-- ===== SALES: paper ticket on board ===== -->
+					<salesOfferPackages>
+						<SalesOfferPackage id="SI:SI0:SalesOfferPackage:00000000-1177-00f1-0000-000000000070:IJPP" created="2026-11-04T19:12:47.2916530Z" version="1">
+							<Name>Vozovnica na ladji</Name>
+							<distributionAssignments>
+								<DistributionAssignment id="SI:SI0:DistributionAssignment:00000000-1177-00f1-0000-000000000071:IJPP" version="1" order="1">
+									<Name>Nakup na ladji</Name>
+									<DistributionChannelType>onBoard</DistributionChannelType>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<salesOfferPackageElements>
+								<SalesOfferPackageElement id="SI:SI0:SalesOfferPackageElement:00000000-1177-00f1-0000-000000000072:IJPP" version="1" order="1">
+									<TypeOfTravelDocumentRef ref="SI:SI0:TypeOfTravelDocument:00000000-1177-00f1-0000-000000000001:IJPP"/>
+									<PreassignedFareProductRef ref="SI:SI0:PreassignedFareProduct:00000000-1177-00f1-0000-000000000020:IJPP"/>
+								</SalesOfferPackageElement>
+								<SalesOfferPackageElement id="SI:SI0:SalesOfferPackageElement:00000000-1177-00f1-0000-000000000073:IJPP" version="1" order="2">
+									<TypeOfTravelDocumentRef ref="SI:SI0:TypeOfTravelDocument:00000000-1177-00f1-0000-000000000001:IJPP"/>
+									<SupplementProductRef ref="SI:SI0:SupplementProduct:00000000-1177-00f1-0000-000000000023:IJPP"/>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+					</salesOfferPackages>
+				</FareFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>
