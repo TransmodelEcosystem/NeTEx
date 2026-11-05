@@ -22,7 +22,10 @@ MODELLING
     TypeOfTravelDocument with MediaType licencePlate in the SalesOfferPackage, next to the bus pass. "The
     registration number can be changed up to three times per month, effective from the next working day"
     (Marprom order form) has no typed NeTEx usage parameter; it is kept in the product Description.
-    Open modelling question: how to encode a limited number of changes of the vehicle bound to a product.
+    Exchanging/NumberOfExchangesAllowed counts exchanges of the product itself, not changes of the bound vehicle,
+    so it is not used; a typed parameter for this would need a change request.
+- Ni zagotovljenega mesta (no guaranteed space) -> ParkingReservation noReservations on the three car parks: the
+    rental does not reserve a space ("najemodajalec ne jamči prostega parkirnega mesta", Marprom order form).
 - Najemna pogodba (rental contract) -> one SalesOfferPackage with both travel documents (licence plate and bus
     pass), sold at the Marprom parking office.
 - Cene (prices) -> one FareTable: EUR 49.00 per month, the same at all three car parks.
@@ -95,16 +98,19 @@ CONVENTIONS
 							<Name>P+R Koroška cesta (bela cona, rob univerzitetnega kampusa)</Name>
 							<ParkingType>parkAndRide</ParkingType>
 							<TotalCapacity>90</TotalCapacity>
+							<ParkingReservation>noReservations</ParkingReservation>
 						</Parking>
 						<Parking id="SI:SI0:Parking:00000000-1177-00f2-0000-000000000102:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
 							<Name>P+R Pod Koroškim mostom</Name>
 							<ParkingType>parkAndRide</ParkingType>
 							<TotalCapacity>55</TotalCapacity>
+							<ParkingReservation>noReservations</ParkingReservation>
 						</Parking>
 						<Parking id="SI:SI0:Parking:00000000-1177-00f2-0000-000000000103:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
 							<Name>P+R Magdalena</Name>
 							<ParkingType>parkAndRide</ParkingType>
 							<TotalCapacity>220</TotalCapacity>
+							<ParkingReservation>noReservations</ParkingReservation>
 						</Parking>
 					</parkings>
 				</SiteFrame>
