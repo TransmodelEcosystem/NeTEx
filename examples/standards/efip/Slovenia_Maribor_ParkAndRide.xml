@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==== Parkiraj in se pelji (P+R) Maribor: kombinirana vozovnica P+R ======
+     (Park & Ride Maribor: combined monthly ticket, parking + city bus)
+The P+R package of Marprom (Maribor city public transport) in NeTEx (validated against the v2.1-wip-efip XSD),
+following the profile of Slovenia_IJPP_GeneralTickets.xml: a monthly parking space at a P+R car park combined
+with a monthly pass for the city buses ("kombinacija parkirišča in mesečne vozovnice za mestni promet",
+Marprom order form).
+File: examples/standards/efip/Slovenia_Maribor_ParkAndRide.xml (branch v2.1-wip-efip).
+
+MODELLING
+=========
+- Kombinirana vozovnica P+R (parking + city bus) -> ONE PreassignedFareProduct with two ValidableElements:
+    parking (validity limited to the three P+R car parks, ParkingRef, grouped OR) and city bus (TransportModes
+    bus, BusSubmode localBus, OperatorRef Marprom). Same pattern as the bus + rail combination in the IJPP example.
+- Mesečni najem (monthly rental) -> UsageValidityPeriod monthlyPass, StandardDuration P1M, unlimited use.
+    The rent is paid by the last working day of the month for the next month (Marprom order form), which
+    implies calendar months; use starts on the working day after the contract is signed.
+- Parkirišče (parking part) -> not a SupplementProduct: Marprom sells only the package, not parking as an add-on
+    to a bus pass (the parking-only monthly rent, EUR 31.40, and the hourly rate, EUR 0.60, are separate parking
+    tariffs, not modelled here).
+- Registrska oznaka vozila (licence plate) -> the parking right is bound to the car's registration number: a
+    TypeOfTravelDocument with MediaType licencePlate in the SalesOfferPackage, next to the bus pass. "The
+    registration number can be changed up to three times per month, effective from the next working day"
+    (Marprom order form) has no typed NeTEx usage parameter; it is kept in the product Description.
+    Open modelling question: how to encode a limited number of changes of the vehicle bound to a product.
+- Najemna pogodba (rental contract) -> one SalesOfferPackage with both travel documents (licence plate and bus
+    pass), sold at the Marprom parking office.
+- Cene (prices) -> one FareTable: EUR 49.00 per month, the same at all three car parks.
+
+DATA SOURCE
+===========
+- Package, price, car parks and capacities, ordering: Marprom, "Vozni redi P+R",
+  https://www.marprom.si/vozni-redi/vozni-redi-pr/ (read 2026-11-04): "Cena kombiniranega najema parkirišča P+R
+  je 49 EUR/mesec", including "neomejeno parkiranje" and the use of the city buses; Koroška cesta about 90 spaces
+  (white zone), Pod Koroškim mostom 55, Magdalena 220. Order form by e-mail or at the parking office at the main
+  bus station (Mlinska ulica 1), then a rental contract.
+- Payment, start of use, licence plate changes, no guaranteed free space: Marprom order form "Obrazec za
+  naročilo kombinirane vozovnice P+R ali parkirnega mesta" (copy of 9 July 2026).
+- Operator: copied from the NAP.si operator export of 2026-09-25 (contact e-mail left empty, website added).
+- The car parks are not in the NAP.si exports, so they are created for this example, without coordinates.
+
+CONVENTIONS
+===========
+- ids follow the Slovenian NAP profile, "SI:SI0:<Class>:<uuid>:IJPP" (frames ":NAP"); objects created for this
+  example use the uuid block "1177-00f2"; the operator keeps its NAP.si id.
+- PublicationDelivery version "2.1:EFIP" = NeTEx 2.1 + EFIP profile (provisional identifier).
+-->
+<PublicationDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.netex.org.uk/netex" version="2.1:EFIP" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2026-11-04T19:38:05.8120740Z</PublicationTimestamp>
+	<ParticipantRef>NAP</ParticipantRef>
+	<dataObjects>
+		<CompositeFrame id="SI:SI0:CompositeFrame:EU_PI_FARE_PRODUCT_8e1f4c27-0d6a-4b93-b5c8-62a7e9d03f15:NAP" created="2026-11-04T19:38:05.8120740Z" version="any">
+			<FrameDefaults>
+				<DefaultLocale>
+					<TimeZone>CET</TimeZone>
+					<SummerTimeZoneOffset>+1</SummerTimeZoneOffset>
+					<DefaultLanguage>sl</DefaultLanguage>
+				</DefaultLocale>
+				<DefaultLocationSystem>WGS84</DefaultLocationSystem>
+				<DefaultCurrency>EUR</DefaultCurrency>
+			</FrameDefaults>
+			<frames>
+				<!-- ===================== RESOURCE FRAME ===================== -->
+				<ResourceFrame id="SI:SI0:ResourceFrame:EU_PI_COMMON_8e1f4c27-0d6a-4b93-b5c8-62a7e9d03f15:NAP" created="2026-11-04T19:38:05.8120740Z" version="any">
+					<typesOfValue>
+						<TypeOfTravelDocument id="SI:SI0:TypeOfTravelDocument:00000000-1177-00f2-0000-000000000001:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+							<Name>Registrska številka vozila (licence plate)</Name>
+							<Description>The parking right is bound to the registration number of the car in the rental contract</Description>
+							<MediaType>licencePlate</MediaType>
+						</TypeOfTravelDocument>
+						<TypeOfTravelDocument id="SI:SI0:TypeOfTravelDocument:00000000-1177-00f2-0000-000000000002:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+							<Name>Mesečna vozovnica za mestni avtobus</Name>
+							<Description>Monthly pass for the Marprom city buses included in the P+R package</Description>
+							<IsCard>true</IsCard>
+						</TypeOfTravelDocument>
+					</typesOfValue>
+					<organisations>
+						<!-- NAP.si operator export NETEX_PI_01_SI_NAP_OPERATOR_20260925.XML -->
+						<Operator id="SI:SI0:Operator:00000000-1177-0001-0000-000000000495:IJPP" created="2023-10-06T04:51:58.9174842Z" version="1">
+							<PublicCode/>
+							<Name>Javno podjetje za mestni potniški promet Marprom, d.o.o.</Name>
+							<ContactDetails>
+								<Email/>
+								<Phone/>
+								<Url>https://www.marprom.si/</Url>
+							</ContactDetails>
+							<OrganisationType>operator</OrganisationType>
+						</Operator>
+					</organisations>
+				</ResourceFrame>
+				<!-- ===================== SITE FRAME (P+R car parks, created for this example) ===================== -->
+				<SiteFrame id="SI:SI0:SiteFrame:8e1f4c27-0d6a-4b93-b5c8-62a7e9d03f15:NAP" created="2026-11-04T19:38:05.8120740Z" version="any">
+					<parkings>
+						<Parking id="SI:SI0:Parking:00000000-1177-00f2-0000-000000000101:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+							<Name>P+R Koroška cesta (bela cona, rob univerzitetnega kampusa)</Name>
+							<ParkingType>parkAndRide</ParkingType>
+							<TotalCapacity>90</TotalCapacity>
+						</Parking>
+						<Parking id="SI:SI0:Parking:00000000-1177-00f2-0000-000000000102:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+							<Name>P+R Pod Koroškim mostom</Name>
+							<ParkingType>parkAndRide</ParkingType>
+							<TotalCapacity>55</TotalCapacity>
+						</Parking>
+						<Parking id="SI:SI0:Parking:00000000-1177-00f2-0000-000000000103:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+							<Name>P+R Magdalena</Name>
+							<ParkingType>parkAndRide</ParkingType>
+							<TotalCapacity>220</TotalCapacity>
+						</Parking>
+					</parkings>
+				</SiteFrame>
+				<!-- ===================== FARE FRAME ===================== -->
+				<FareFrame id="SI:SI0:FareFrame:EU_PI_FARE_PRODUCT_8e1f4c27-0d6a-4b93-b5c8-62a7e9d03f15:NAP" created="2026-11-04T19:38:05.8120740Z" version="any">
+					<Name>
+						<Text lang="sl">Parkiraj in se pelji (P+R) Maribor</Text>
+						<Text lang="en">Park &amp; Ride Maribor</Text>
+					</Name>
+					<tariffs>
+						<!-- ===== P+R MONTHLY PACKAGE TARIFF ===== -->
+						<Tariff id="SI:SI0:Tariff:00000000-1177-00f2-0000-000000000010:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+							<Name>Paket P+R: mesečni najem parkirnega mesta in mesečna vozovnica za mestni avtobus</Name>
+							<OperatorRef ref="SI:SI0:Operator:00000000-1177-0001-0000-000000000495:IJPP"/>
+							<TariffBasis>flat</TariffBasis>
+							<fareStructureElements>
+								<FareStructureElement id="SI:SI0:FareStructureElement:00000000-1177-00f2-0000-000000000011:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+									<Name>Dostop - parkirišča P+R</Name>
+									<TariffBasis>flat</TariffBasis>
+									<GenericParameterAssignment id="SI:SI0:GenericParameterAssignment:00000000-1177-00f2-0000-000000000012:IJPP" version="1" order="1">
+										<TypeOfAccessRightAssignmentRef ref="ntx:can_access"/>
+										<ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
+										<validityParameters>
+											<ParkingRef ref="SI:SI0:Parking:00000000-1177-00f2-0000-000000000101:IJPP"/>
+											<ParkingRef ref="SI:SI0:Parking:00000000-1177-00f2-0000-000000000102:IJPP"/>
+											<ParkingRef ref="SI:SI0:Parking:00000000-1177-00f2-0000-000000000103:IJPP"/>
+										</validityParameters>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<FareStructureElement id="SI:SI0:FareStructureElement:00000000-1177-00f2-0000-000000000013:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+									<Name>Dostop - mestni avtobus Marprom</Name>
+									<TariffBasis>flat</TariffBasis>
+									<GenericParameterAssignment id="SI:SI0:GenericParameterAssignment:00000000-1177-00f2-0000-000000000014:IJPP" version="1" order="1">
+										<TypeOfAccessRightAssignmentRef ref="ntx:can_access"/>
+										<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
+										<validityParameters>
+											<TransportModes>bus</TransportModes>
+											<TransportSubmode>
+												<BusSubmode>localBus</BusSubmode>
+											</TransportSubmode>
+											<OperatorRef ref="SI:SI0:Operator:00000000-1177-0001-0000-000000000495:IJPP"/>
+										</validityParameters>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<FareStructureElement id="SI:SI0:FareStructureElement:00000000-1177-00f2-0000-000000000015:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+									<Name>Pogoji uporabe - mesečni paket</Name>
+									<TariffBasis>period</TariffBasis>
+									<GenericParameterAssignment id="SI:SI0:GenericParameterAssignment:00000000-1177-00f2-0000-000000000016:IJPP" version="1" order="1">
+										<TypeOfAccessRightAssignmentRef ref="ntx:condition_of_use"/>
+										<LimitationGroupingType>AND</LimitationGroupingType>
+										<limitations>
+											<FrequencyOfUse id="SI:SI0:FrequencyOfUse:00000000-1177-00f2-0000-000000000017:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+												<Name>Neomejeno parkiranje in neomejeno število voženj</Name>
+												<FrequencyOfUseType>unlimited</FrequencyOfUseType>
+											</FrequencyOfUse>
+											<UsageValidityPeriod id="SI:SI0:UsageValidityPeriod:00000000-1177-00f2-0000-000000000018:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+												<Name>Koledarski mesec (calendar month)</Name>
+												<ValidityPeriodType>monthlyPass</ValidityPeriodType>
+												<StandardDuration>P1M</StandardDuration>
+											</UsageValidityPeriod>
+										</limitations>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+							</fareStructureElements>
+							<fareTables>
+								<FareTableRef ref="SI:SI0:FareTable:00000000-1177-00f2-0000-000000000040:IJPP"/>
+							</fareTables>
+						</Tariff>
+					</tariffs>
+					<!-- ===== FARE PRODUCTS ===== -->
+					<fareProducts>
+						<PreassignedFareProduct id="SI:SI0:PreassignedFareProduct:00000000-1177-00f2-0000-000000000020:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+							<Name>Paket P+R Maribor (mesečno)</Name>
+							<Description>Combined monthly package: unlimited parking at the chosen P+R car park and unlimited use of the Marprom city buses. The parking right is bound to the car's registration number, which can be changed up to three times per month; a change takes effect on the next working day.</Description>
+							<OperatorRef ref="SI:SI0:Operator:00000000-1177-0001-0000-000000000495:IJPP"/>
+							<validableElements>
+								<ValidableElement id="SI:SI0:ValidableElement:00000000-1177-00f2-0000-000000000021:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+									<Name>Parkiranje</Name>
+									<fareStructureElements>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f2-0000-000000000011:IJPP"/>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f2-0000-000000000015:IJPP"/>
+									</fareStructureElements>
+								</ValidableElement>
+								<ValidableElement id="SI:SI0:ValidableElement:00000000-1177-00f2-0000-000000000022:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+									<Name>Mestni avtobus</Name>
+									<fareStructureElements>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f2-0000-000000000013:IJPP"/>
+										<FareStructureElementRef ref="SI:SI0:FareStructureElement:00000000-1177-00f2-0000-000000000015:IJPP"/>
+									</fareStructureElements>
+								</ValidableElement>
+							</validableElements>
+							<accessRightsInProduct>
+								<AccessRightInProduct id="SI:SI0:AccessRightInProduct:00000000-1177-00f2-0000-000000000023:IJPP" version="1" order="1">
+									<Name>Parkiranje</Name>
+									<IsFirstInSequence>true</IsFirstInSequence>
+									<IsLastInSequence>false</IsLastInSequence>
+									<ValidableElementRef ref="SI:SI0:ValidableElement:00000000-1177-00f2-0000-000000000021:IJPP"/>
+								</AccessRightInProduct>
+								<AccessRightInProduct id="SI:SI0:AccessRightInProduct:00000000-1177-00f2-0000-000000000024:IJPP" version="1" order="2">
+									<Name>Mestni avtobus</Name>
+									<IsFirstInSequence>false</IsFirstInSequence>
+									<IsLastInSequence>true</IsLastInSequence>
+									<ValidableElementRef ref="SI:SI0:ValidableElement:00000000-1177-00f2-0000-000000000022:IJPP"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+							<ProductType>periodPass</ProductType>
+						</PreassignedFareProduct>
+					</fareProducts>
+					<!-- ===== PRICES (fare tables) ===== -->
+					<fareTables>
+						<FareTable id="SI:SI0:FareTable:00000000-1177-00f2-0000-000000000040:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+							<Name>Paket P+R - cena (Marprom)</Name>
+							<pricesFor>
+								<PreassignedFareProductRef ref="SI:SI0:PreassignedFareProduct:00000000-1177-00f2-0000-000000000020:IJPP"/>
+								<SalesOfferPackageRef ref="SI:SI0:SalesOfferPackage:00000000-1177-00f2-0000-000000000070:IJPP"/>
+							</pricesFor>
+							<usedIn>
+								<TariffRef ref="SI:SI0:Tariff:00000000-1177-00f2-0000-000000000010:IJPP"/>
+							</usedIn>
+							<cells>
+								<Cell id="SI:SI0:Cell:00000000-1177-00f2-0000-000000000041:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+									<Name>Mesečni paket, vsa tri parkirišča P+R</Name>
+									<CellPrice id="SI:SI0:CellPrice:00000000-1177-00f2-0000-000000000041:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+										<Amount>49.00</Amount>
+									</CellPrice>
+									<PreassignedFareProductRef ref="SI:SI0:PreassignedFareProduct:00000000-1177-00f2-0000-000000000020:IJPP"/>
+								</Cell>
+							</cells>
+						</FareTable>
+					</fareTables>
+					<!-- ===== SALES: one package with two travel documents, licence plate and bus pass ===== -->
+					<salesOfferPackages>
+						<SalesOfferPackage id="SI:SI0:SalesOfferPackage:00000000-1177-00f2-0000-000000000070:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+							<Name>Paket P+R (najemna pogodba)</Name>
+							<distributionAssignments>
+								<DistributionAssignment id="SI:SI0:DistributionAssignment:00000000-1177-00f2-0000-000000000071:IJPP" version="1" order="1">
+									<Name>Pisarna mirujočega prometa, glavna avtobusna postaja, Mlinska ulica 1 (obrazec tudi po e-pošti)</Name>
+									<DistributionChannelType>agency</DistributionChannelType>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<salesOfferPackageElements>
+								<SalesOfferPackageElement id="SI:SI0:SalesOfferPackageElement:00000000-1177-00f2-0000-000000000072:IJPP" version="1" order="1">
+									<TypeOfTravelDocumentRef ref="SI:SI0:TypeOfTravelDocument:00000000-1177-00f2-0000-000000000001:IJPP"/>
+									<PreassignedFareProductRef ref="SI:SI0:PreassignedFareProduct:00000000-1177-00f2-0000-000000000020:IJPP"/>
+								</SalesOfferPackageElement>
+								<SalesOfferPackageElement id="SI:SI0:SalesOfferPackageElement:00000000-1177-00f2-0000-000000000073:IJPP" version="1" order="2">
+									<TypeOfTravelDocumentRef ref="SI:SI0:TypeOfTravelDocument:00000000-1177-00f2-0000-000000000002:IJPP"/>
+									<PreassignedFareProductRef ref="SI:SI0:PreassignedFareProduct:00000000-1177-00f2-0000-000000000020:IJPP"/>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+					</salesOfferPackages>
+				</FareFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>
