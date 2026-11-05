@@ -15,9 +15,11 @@ MODELLING
 - Mesečni najem (monthly rental) -> UsageValidityPeriod monthlyPass, StandardDuration P1M, unlimited use.
     The rent is paid by the last working day of the month for the next month (Marprom order form), which
     implies calendar months; use starts on the working day after the contract is signed.
-- Parkirišče (parking part) -> not a SupplementProduct: Marprom sells only the package, not parking as an add-on
-    to a bus pass (the parking-only monthly rent, EUR 31.40, and the hourly rate, EUR 0.60, are separate parking
-    tariffs, not modelled here).
+- Parkirišče (parking part) -> not a SupplementProduct: Marprom sells the package, not parking as an add-on to a
+    bus pass. Parking without the bus is a separate tariff (see "Samo parkiranje").
+- Samo parkiranje (parking only, Koroška cesta) -> a ParkingTariff applying to the Koroška cesta car park, with
+    two ParkingChargeBands: one hour EUR 0.60 (hourly rate) and one month EUR 31.40 (monthly rent of a parking
+    space by rental contract). Marprom gives no parking-only prices for the other two car parks.
 - Registrska oznaka vozila (licence plate) -> the parking right is bound to the car's registration number: a
     TypeOfTravelDocument with MediaType licencePlate in the SalesOfferPackage, next to the bus pass. "The
     registration number can be changed up to three times per month, effective from the next working day"
@@ -37,6 +39,8 @@ DATA SOURCE
   je 49 EUR/mesec", including "neomejeno parkiranje" and the use of the city buses; Koroška cesta about 90 spaces
   (white zone), Pod Koroškim mostom 55, Magdalena 220. Order form by e-mail or at the parking office at the main
   bus station (Mlinska ulica 1), then a rental contract.
+- Parking only at Koroška cesta: "strošek najema le parkirnega mesta znaša 31,40 EUR/mesec", "cena urne postavke
+  na tem parkirišču pa je 0,60 EUR" (same Marprom page); the monthly rent is also on the order form.
 - Payment, start of use, licence plate changes, no guaranteed free space: Marprom order form "Obrazec za
   naročilo kombinirane vozovnice P+R ali parkirnega mesta" (copy of 9 July 2026).
 - Operator: copied from the NAP.si operator export of 2026-09-25 (contact e-mail left empty, website added).
@@ -263,6 +267,48 @@ CONVENTIONS
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 					</salesOfferPackages>
+					<!-- ===== PARKING ONLY: Koroška cesta, hourly rate and monthly rent (no city bus) ===== -->
+					<parkingTariffs>
+						<ParkingTariff id="SI:SI0:ParkingTariff:00000000-1177-00f2-0000-000000000080:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+							<Name>Parkirišče Koroška cesta: samo parkiranje (parking only)</Name>
+							<Description>White zone at the edge of the university campus. Hourly rate EUR 0.60 (charging hours not stated by Marprom); monthly rent of a parking space EUR 31.40, by rental contract, prepaid by the last working day of the month for the next month, no guaranteed free space.</Description>
+							<OperatorRef ref="SI:SI0:Operator:00000000-1177-0001-0000-000000000495:IJPP"/>
+							<timeIntervals>
+								<TimeInterval id="SI:SI0:TimeInterval:00000000-1177-00f2-0000-000000000081:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+									<Name>Ura (one hour)</Name>
+									<Duration>PT1H</Duration>
+								</TimeInterval>
+								<TimeInterval id="SI:SI0:TimeInterval:00000000-1177-00f2-0000-000000000082:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+									<Name>Mesec (one month)</Name>
+									<Duration>P1M</Duration>
+								</TimeInterval>
+							</timeIntervals>
+							<ParkingVehicleTypes>car</ParkingVehicleTypes>
+							<appliesTo>
+								<ParkingRef ref="SI:SI0:Parking:00000000-1177-00f2-0000-000000000101:IJPP"/>
+							</appliesTo>
+							<parkingChargeBands>
+								<ParkingChargeBand id="SI:SI0:ParkingChargeBand:00000000-1177-00f2-0000-000000000083:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+									<Name>Urna postavka (hourly rate)</Name>
+									<TimeIntervalRef ref="SI:SI0:TimeInterval:00000000-1177-00f2-0000-000000000081:IJPP"/>
+									<prices>
+										<ParkingPrice id="SI:SI0:ParkingPrice:00000000-1177-00f2-0000-000000000084:IJPP" version="1">
+											<Amount>0.60</Amount>
+										</ParkingPrice>
+									</prices>
+								</ParkingChargeBand>
+								<ParkingChargeBand id="SI:SI0:ParkingChargeBand:00000000-1177-00f2-0000-000000000085:IJPP" created="2026-11-04T19:38:05.8120740Z" version="1">
+									<Name>Mesečni najem parkirnega mesta (monthly rent of a parking space)</Name>
+									<TimeIntervalRef ref="SI:SI0:TimeInterval:00000000-1177-00f2-0000-000000000082:IJPP"/>
+									<prices>
+										<ParkingPrice id="SI:SI0:ParkingPrice:00000000-1177-00f2-0000-000000000086:IJPP" version="1">
+											<Amount>31.40</Amount>
+										</ParkingPrice>
+									</prices>
+								</ParkingChargeBand>
+							</parkingChargeBands>
+						</ParkingTariff>
+					</parkingTariffs>
 				</FareFrame>
 			</frames>
 		</CompositeFrame>
