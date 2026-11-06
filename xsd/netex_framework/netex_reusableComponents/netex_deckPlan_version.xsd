@@ -725,7 +725,7 @@
 	</xsd:group>
 	<xsd:group name="DeckEntrancePositionGroup">
 		<xsd:annotation>
-			<xsd:documentation>Positional ements for a DECK ENTRANCE.</xsd:documentation>
+			<xsd:documentation>Positional elements for a DECK ENTRANCE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="VehicleSide" type="VehicleSideEnumeration" minOccurs="0">
@@ -748,11 +748,16 @@
 					<xsd:documentation>Height of ENTRANCE from ground.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element name="EdgeToTrackCenterDistance" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Distance from the outer edge of the DECK ENTRANCE (including any fixed outer steps) to the vehicle center (center point between axles). Can be used to calculate the horizontal gap in conjunction with the EdgeToTrackCenterDistance from QUAY. +v2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
 	<xsd:group name="DeckEntranceClassificationGroup">
 		<xsd:annotation>
-			<xsd:documentation>EClassification lements for a DECK ENTRANCE.</xsd:documentation>
+			<xsd:documentation>Classification elements for a DECK ENTRANCE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="DeckEntranceType" type="DeckEntranceTypeEnumeration" minOccurs="0">
