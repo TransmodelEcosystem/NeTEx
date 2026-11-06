@@ -66,32 +66,20 @@ Rail transport, Roads and Road transport
 	<!--======WGS84=======================================================================================-->
 	<xsd:complexType name="LocationStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for geospatial Position of a point. May be expressed in concrete WGS 84 Coordinates or any gml compatible point coordinates format.</xsd:documentation>
+			<xsd:documentation>Type for geospatial Position of a point. May be expressed in concrete WGS 84 Coordinates or any gml compatible point coordinates format. Using Longitude and Latitude is strongly recommended.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:sequence>
-				<xsd:sequence minOccurs="0">
-					<xsd:annotation>
-						<xsd:documentation>WGS84</xsd:documentation>
-					</xsd:annotation>
-					<xsd:element name="Longitude" type="LongitudeType">
-						<xsd:annotation>
-							<xsd:documentation>Longitude from Greenwich Meridian. -180 (East) to +180 (West). Decimal degrees. e.g. 2.356</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element name="Latitude" type="LatitudeType">
-						<xsd:annotation>
-							<xsd:documentation>Latitude from equator. -90 (South) to +90 (North). Decimal degrees. e.g. 56.356</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element name="Altitude" type="AltitudeType" minOccurs="0">
-						<xsd:annotation>
-							<xsd:documentation>Altitude (metres) Above sea level.</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
+			<xsd:choice>
+				<xsd:sequence>
+					<xsd:group ref="WgsGroup"/>
+					<xsd:element ref="gml:pos" minOccurs="0"/>
 				</xsd:sequence>
-				<xsd:element ref="gml:pos" minOccurs="0"/>
-			</xsd:sequence>
+				<xsd:element ref="gml:pos">
+					<xsd:annotation>
+						<xsd:documentation>Specially for the use of relative coordinates (e.g. in DECK PLAN) a gml:pos can be used with srs_name="xy_in_Metres".</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
 			<xsd:element name="Precision" type="DistanceType" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Precision for point measurement. In meters.</xsd:documentation>
