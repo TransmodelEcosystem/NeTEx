@@ -179,6 +179,42 @@ Rail transport, Roads and Road transport
 		</xsd:restriction>
 	</xsd:simpleType>
 	<!-- =================================================== -->
+	<xsd:simpleType name="PriorityUseEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for PRIORITY USE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="none">
+				<xsd:annotation>
+					<xsd:documentation>No prioritisation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<!-- usually for seats: -->
+			<xsd:enumeration value="personWithReducedMobility">
+				<xsd:annotation>
+					<xsd:documentation>On a PASSENGER SPOT this depicts a priority seat as defined in EN 16585-2:2022.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="senior"/>
+			<xsd:enumeration value="disabled"/>
+			<xsd:enumeration value="injured"/>
+			<xsd:enumeration value="pregnantWoman"/>
+			<xsd:enumeration value="infantCarryingPerson"/>
+			<xsd:enumeration value="child"/>
+			<xsd:enumeration value="woman"/>
+			<!-- usually for spaces: -->
+			<xsd:enumeration value="guideDog"/>
+			<xsd:enumeration value="wheelchairUser">
+				<xsd:annotation>
+					<xsd:documentation>On a PASSENGER SPOT this depicts a wheelchair space as defined in EN 16585-2:2022.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="walkingChair"/>
+			<xsd:enumeration value="pram"/>
+			<xsd:enumeration value="bicycle"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- =================================================== -->
 	<xsd:simpleType name="ReservationEnumeration">
 		<xsd:annotation>
 			<xsd:documentation>Allowed values for Reservation. UIC 7037 Code list.</xsd:documentation>

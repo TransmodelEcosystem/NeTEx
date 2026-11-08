@@ -511,6 +511,7 @@
 		</xsd:annotation>
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:enumeration value="seat"/>
+			<xsd:enumeration value="prioritySeat"/>
 			<xsd:enumeration value="bed"/>
 			<xsd:enumeration value="standingSpace"/>
 			<xsd:enumeration value="wheelchairSpace"/>

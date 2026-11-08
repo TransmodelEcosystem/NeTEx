@@ -479,6 +479,11 @@
 					<xsd:documentation>Whether PASSENGER SPOT is facing an aisle.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element ref="PriorityUse" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether some passengers are privileged to use this PASSENGER SPOT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
 	<!-- ====== PASSENGER VEHICLE SPOT =================================== -->

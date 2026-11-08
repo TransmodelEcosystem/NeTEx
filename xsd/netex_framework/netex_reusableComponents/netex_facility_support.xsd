@@ -236,6 +236,7 @@ Rail transport, Roads and Road transport
 			<xsd:enumeration value="unknown"/>
 			<xsd:enumeration value="standing"/>
 			<xsd:enumeration value="seating"/>
+			<xsd:enumeration value="prioritySeating"/>
 			<xsd:enumeration value="sleeper"/>
 			<xsd:enumeration value="singleSleeper"/>
 			<xsd:enumeration value="doubleSleeper"/>

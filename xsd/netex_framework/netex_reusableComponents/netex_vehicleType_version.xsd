@@ -763,6 +763,11 @@ Rail transport, Roads and Road transport
 					<xsd:documentation>The seating capacity of vehicles of the type. For a requirement this is the minimum needed.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element name="PrioritySeatingCapacity" type="NumberOfPassengers" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The number of priority seats on vehicles of the type. For a requirement this is the minimum needed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:element name="StandingCapacity" type="NumberOfPassengers" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>The standing capacity of vehicles of the type. For a requirement this is the minimum needed.</xsd:documentation>
