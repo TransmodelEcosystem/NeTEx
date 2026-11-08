@@ -472,42 +472,42 @@
 	</xsd:simpleType>
 	<xsd:simpleType name="VehicleSideEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>Allowed values for Relation to vehicle of Entrance.</xsd:documentation>
+			<xsd:documentation>Allowed values for Relation to vehicle of an element like an entrance, window or sign.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="leftSide">
 				<xsd:annotation>
-					<xsd:documentation>Entrance is on left side of VEHICLE.</xsd:documentation>
+					<xsd:documentation>Element is on left side of VEHICLE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="rightSide">
 				<xsd:annotation>
-					<xsd:documentation>Entrance is on right side of VEHICLE.</xsd:documentation>
+					<xsd:documentation>Element is on right side of VEHICLE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="frontEnd">
 				<xsd:annotation>
-					<xsd:documentation>Entrance is on front end of VEHICLE.</xsd:documentation>
+					<xsd:documentation>Element is on front end of VEHICLE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="backEnd">
 				<xsd:annotation>
-					<xsd:documentation>Entrance is on back end of VEHICLE.</xsd:documentation>
+					<xsd:documentation>Element is on back end of VEHICLE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="internal">
 				<xsd:annotation>
-					<xsd:documentation>Entrance is interior to VEHICLE.</xsd:documentation>
+					<xsd:documentation>Element is interior to VEHICLE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="above">
 				<xsd:annotation>
-					<xsd:documentation>Entrance is above VEHICLE.</xsd:documentation>
+					<xsd:documentation>Element is above VEHICLE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="below">
 				<xsd:annotation>
-					<xsd:documentation>Entrance is below VEHICLE.</xsd:documentation>
+					<xsd:documentation>Element is below VEHICLE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>

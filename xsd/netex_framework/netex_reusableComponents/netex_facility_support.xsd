@@ -139,9 +139,31 @@ Rail transport, Roads and Road transport
 			<xsd:documentation>Allowed values for Passenger information facility.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:NMTOKEN">
-			<xsd:enumeration value="nextStopIndicator"/>
-			<xsd:enumeration value="stopAnnouncements"/>
-			<xsd:enumeration value="passengerInformationDisplay"/>
+			<xsd:enumeration value="nextStopIndicator">
+				<xsd:annotation>
+					<xsd:documentation>Display or sign showing the next stop inside the vehicle.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="stopAnnouncements">
+				<xsd:annotation>
+					<xsd:documentation>Automatic announcement of the next stop inside the vehicle.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="routeAnnouncements">
+				<xsd:annotation>
+					<xsd:documentation>Automatic announcement of the route and destination on vehicle arrival. May be assigned to a platform or a vehicle depending on where the information is announced from.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="passengerInformationDisplay">
+				<xsd:annotation>
+					<xsd:documentation>An electronic display showing information like next departures, next connections or delays. May be assigned to a platform or a vehicle depending on where the information is displayed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="destinationDisplay">
+				<xsd:annotation>
+					<xsd:documentation>An electronic sign mounted on the front, side or rear of a vehicle, that displays the vehicle's route number and destination.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 			<xsd:enumeration value="realTimeConnections"/>
 			<xsd:enumeration value="other"/>
 		</xsd:restriction>
