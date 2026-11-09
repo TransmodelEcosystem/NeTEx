@@ -384,7 +384,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="WheelchairTurningCircle" type="LengthType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Height of Access Area.</xsd:documentation>
+					<xsd:documentation>Diameter of the turning circle available for a wheelchair.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="CompanionSeat" type="xsd:boolean" minOccurs="0">
