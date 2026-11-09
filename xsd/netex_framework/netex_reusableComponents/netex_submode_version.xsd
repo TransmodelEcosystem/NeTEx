@@ -306,6 +306,14 @@ Local train adapted for running in mountain railway lines.</xsd:documentation>
 			<xsd:enumeration value="schoolBus"/>
 			<xsd:enumeration value="schoolAndPublicServiceBus"/>
 			<xsd:enumeration value="railReplacementBus"/>
+			<xsd:enumeration value="metroReplacementBus"/>
+				<xsd:annotation>
+					<xsd:documentation>+v2.1</xsd:documentation>
+				</xsd:annotation>
+			<xsd:enumeration value="tramReplacementBus"/>
+				<xsd:annotation>
+					<xsd:documentation>+v2.1</xsd:documentation>
+				</xsd:annotation>
 			<xsd:enumeration value="demandAndResponseBus"/>
 			<xsd:enumeration value="airportLinkBus"/>
 		</xsd:restriction>
@@ -485,6 +493,10 @@ Local train adapted for running in mountain railway lines.</xsd:documentation>
 			</xsd:enumeration>
 			<xsd:enumeration value="waterTaxi"/>
 			<xsd:enumeration value="railTaxi"/>
+			<xsd:enumeration value="railReplacementTaxi"/>
+				<xsd:annotation>
+					<xsd:documentation>+v2.1</xsd:documentation>
+				</xsd:annotation>
 			<xsd:enumeration value="bikeTaxi">
 				<xsd:annotation>
 					<xsd:documentation>Bike taxi (other than cycleRickshaw, +v1.2.2).</xsd:documentation>
