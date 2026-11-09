@@ -1,0 +1,2781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+==== Example Bus carnet, 10 trips, Nordland County, Norway (Klippekort buss) ====
+
+This example describes the bus carnet ("Klippekort") of Reis Nordland. Reis Nordland is the public transport brand of Nordland fylkeskommune (Nordland County Authority).
+Product overview:
+  - a carnet of 10 single bus trips, valid for 2 years from purchase;
+  - each trip must be activated by the traveller and is valid for 75 minutes for the first zone,
+    plus 30 minutes for each additional zone;
+  - the price depends on the number of zones travelled (1 to 11 zones, then a flat price for 12 zones
+    or more) and on the user type: adult, child, infant (free), student, senior and military;
+  - valid on the Authority's bus lines in Nordland, except the airport bus;
+  - account-based ticketing only: the traveller identifies the account with a mobile app or a travel card.
+
+========= MODELLING =========
+- The carnet is modelled as an AmountOfPriceUnitProduct (ProductType tripCarnet, numberOfUnits 10), with
+    a ValidableElement that groups the conditions for the carnet as a whole. It has no access rights of its own.
+- A trip in the carnet is modelled as a separate PreassignedFareProduct (unactivatedSingleTicket), that 
+    is never sold on its own and has no SalesOfferPackage. Its ValidableElement holds everything that applies 
+    to a single trip: access, eligibility, activation, interchange, duration.
+    The carnet points to it through a FareStructureElement of type EFIP:carnet_unit (see TODO for possibility to add a reference)
+- Carnet conditions vs. trip conditions are separated by TypeOfFareStructureElement: EFIP:carnet_travel_condition
+    and EFIP:carnet_sales_condition for the carnet (proposed new EFIP types), and the EFIP
+    (travel_condition, access, eligibility, ...) for the trip.
+- Carnet validity of 2 years form purchase -> UsageValidityPeriod on the carnet
+- The carnet can be transferred, and several persons can travel together, each using one trip -> Transferability on the carnet
+- Unused trips can be refunded, also after the carnet has expired -> Refundability on the carnet
+- Activation rules for each trip -> UsageValidityPeriod on the trip
+- Eligibility: There are six UserProfiles: adult (16-66), child (6-15), infant (0-5, free),
+    student (up to 29), senior and military -> UserProfiles on the trip
+- Access to Lines and Zones -> GroupOfLines (all buses run by the Authority) and FareZones on the trip
+- Trip duration: The duration depends on the number of zones selected for travel, starting with 75 minutes for the first zone
+    and additional 30 minutes for each additional zone -> TimeIntervals on the trip. EFIP mandates the use of a FareTable, 
+    and each Cell in the FareTable ties a GeographicalInterval to its TimeInterval. 
+- Number of zones travelled are described as 12 GeographicalIntervals of IntervalType tariffZone: 1, 2, ... 11 zones,
+    and one interval for 12 zones or more
+- Distance between zones: DistanceMatrixElements give the number of zones travelled
+    between two fare zones (Distance, InverseAllowed true). They can be reused by other tariffs (single ticket, period passes). 
+    The example does not include all possible distances, but lists the 136 zone pairs served by line 100 Bodø - Fauske - Narvik/Sortland, calculated as 
+    the shortest path in the zone neighbour graph, counting both start and end zone. The distances have not been reviewed and should not be used 
+    as anything but an example. 
+- The carnet is presented to the public as two SalesOfferPackages, identical except for the TypeOfTravelDocument: mobile app (barcode)
+    and travel card (smart card, NFC)
+- Prices -> one FareTable for the carnet of 10 trips, shared by the product and both
+    SalesOfferPackages (pricesFor). The FareTable contains Cells with CellPrice for the possible combinations of GeographicalInterval, 
+    UserProfile and TimeInterval. All prices are given in NOK and include VAT.
+
+CONVENTIONS
+===========
+- ids use the codespace NOR (Nordland) for data from the Authority and ENT (Entur) for shared national types
+    (TypeOfTravelDocument, FulfilmentMethod).
+- Lines and the Authority keep the ids and versions from the NSR (National Stop Registry) and NOR datasets.
+- External references, not defined in this file: the NOR:FareZone:* in the zone export, the full
+    GroupOfLines / Lines in the NOR timetable dataset, and the EFIP:* types.
+- versionRef is intentionally omitted on the GroupOfLines and Line references, as no specific version targeted in the fare dataset.
+    The Tariff reference to its FareTable is also unreferencec (prices can change without new
+    versions of the tariff or products). The FareZone references in the DistanceMatrixElements use the versionRef
+    with the correct version from the zone export, so that distances can be recalculated if the zones are changed.
+
+========= Issues ============
+There are some issues that need some discussion, noted as TODOs in the example. 
+
+EFIP Fare Product Types in this example: ST-5 (number of zones crossed), SCT-6 (carnet), SLT-1 (different user types)
+-->
+<PublicationDelivery xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.openis.net/gml/3.2" xmlns="http://www.netex.org.uk/netex" version="2.1">
+	<PublicationTimestamp>2026-09-23T12:50:01.827478</PublicationTimestamp>
+	<ParticipantRef>NordlandFylkeskommune</ParticipantRef>
+	<dataObjects>
+		<CompositeFrame id="NOR:CompositeFrame:EU_PI_FARE_PRODUCT_carnet_example" version="1">
+			<FrameDefaults>
+				<DefaultLocale>
+					<TimeZone>Europe/Oslo</TimeZone>
+				</DefaultLocale>
+			</FrameDefaults>
+			<frames>
+				<ResourceFrame id="NOR:ResourceFrame:1" version="1">
+					<typesOfValue>
+						<!-- TBD describe VAT rules -->
+						<TypeOfPricingRule id="ENT:TypeOfPricingRule:transportation" version="1">
+							<Name>Transport VAT</Name>
+							<TaxCategory>transportation</TaxCategory>
+						</TypeOfPricingRule>
+						<!-- TypeOfTravelDocuments -->
+						<TypeOfTravelDocument id="ENT:TypeOfTravelDocument:MobileApplication" version="1">
+							<MediaType>mobileApp</MediaType>
+							<MachineReadable>barCode</MachineReadable>
+						</TypeOfTravelDocument>
+						<TypeOfTravelDocument id="ENT:TypeOfTravelDocument:MTS7" version="1">
+							<MediaType>smartCard</MediaType>
+							<MachineReadable>nfc</MachineReadable>
+						</TypeOfTravelDocument>
+						<TypeOfTravelDocument id="ENT:TypeOfTravelDocument:DesfireTravelCard" version="1">
+							<MediaType>smartCard</MediaType>
+							<MachineReadable>nfc</MachineReadable>
+						</TypeOfTravelDocument>
+					</typesOfValue>
+					<organisations>
+						<Authority id="NOR:Authority:12" version="1244">
+							<CompanyNumber>964982953</CompanyNumber>
+							<Name lang="nn">Nordland fylkeskommune</Name>
+							<LegalName>Nordland fylkeskommune</LegalName>
+							<ContactDetails>
+								<Url>https://www.reisnordland.no/</Url>
+							</ContactDetails>
+							<OrganisationType>authority</OrganisationType>
+						</Authority>
+					</organisations>
+				</ResourceFrame>
+				<!-- The Service Frame is an excerpt from the timetable data delivery, only included to illustrate the link to the network and timetable datasets -->
+				<ServiceFrame id="NOR:ServiceFrame:Common" version="1244">
+					<Network id="NOR:Network:1" changed="2026-08-24T13:57:51.0636820Z" version="1244">
+						<Name>Nordland</Name>
+						<AuthorityRef ref="NOR:Authority:12" version="1244"/>
+						<groupsOfLines>
+							<GroupOfLines id="NOR:GroupOfLines:bus_1" version="1244">
+								<Name>Nordland</Name>
+								<members>
+									<LineRef ref="NOR:Line:12_3701" version="1244"/>
+									<LineRef ref="NOR:Line:12_3703" version="1244"/>
+									<LineRef ref="NOR:Line:12_3704" version="1244"/>
+									<LineRef ref="NOR:Line:12_8616" version="1244"/>
+									<!-- a lot more lines -->
+								</members>
+								<TransportMode>bus</TransportMode>
+							</GroupOfLines>
+						</groupsOfLines>
+					</Network>
+					<lines>
+						<Line id="NOR:Line:12_3701" version="1244">
+							<Name>Brønnøysund-Grong/Namsos</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>regionalBus</BusSubmode>
+							</TransportSubmode>
+							<PublicCode>23-701</PublicCode>
+							<PrivateCode>3701</PrivateCode>
+							<OperatorRef ref="NOR:Operator:183"/>
+							<RepresentedByGroupRef ref="NOR:GroupOfLines:bus_1"/>
+						</Line>
+						<Line id="NOR:Line:12_3703" version="1244">
+							<Name>Brønnøysund-Tosbotn-Mosjøen</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>regionalBus</BusSubmode>
+							</TransportSubmode>
+							<PublicCode>23-703</PublicCode>
+							<PrivateCode>3703</PrivateCode>
+							<OperatorRef ref="NOR:Operator:183"/>
+							<RepresentedByGroupRef ref="NOR:GroupOfLines:bus_1"/>
+						</Line>
+						<Line id="NOR:Line:12_3704" version="1244">
+							<Name>Brønnøysund-Sandnessjøen</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>regionalBus</BusSubmode>
+							</TransportSubmode>
+							<PublicCode>23-704</PublicCode>
+							<PrivateCode>3704</PrivateCode>
+							<OperatorRef ref="NOR:Operator:188"/>
+							<RepresentedByGroupRef ref="NOR:GroupOfLines:bus_1"/>
+						</Line>
+						<Line id="NOR:Line:12_8616" version="1244">
+							<Name>Evenes kai - Harstad/Narvik lufthan Evenes</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>localBus</BusSubmode>
+							</TransportSubmode>
+							<PublicCode>18-616</PublicCode>
+							<PrivateCode>8616</PrivateCode>
+							<OperatorRef ref="NOR:Operator:291"/>
+							<RepresentedByGroupRef ref="NOR:GroupOfLines:bus_1"/>
+						</Line>
+						<!-- more lines -->
+					</lines>
+				</ServiceFrame>
+				<FareFrame id="NOR:FareFrame:1" version="1">
+					<codespaces>
+						<Codespace id="ent">
+							<Xmlns>ENT</Xmlns>
+							<XmlnsUrl>http://www.rutebanken.org/ns/ent</XmlnsUrl>
+						</Codespace>
+						<Codespace id="nor">
+							<Xmlns>NOR</Xmlns>
+							<XmlnsUrl>http://www.rutebanken.org/ns/nor</XmlnsUrl>
+						</Codespace>
+					</codespaces>
+					<geographicalUnits>
+						<GeographicalUnit id="NOR:GeographicalUnit:zones" version="1">
+							<Name>Zone</Name>
+							<!-- TODO is this allowed? Or must unit be in metres? -->
+						</GeographicalUnit>
+					</geographicalUnits>
+					<tariffs>
+						<Tariff id="NOR:Tariff:carnet" version="1">
+							<Name>
+								<Text lang="en">Carnet tariff</Text>
+								<Text lang="nb">Klippekort tariff</Text>
+							</Name>
+							<TariffBasis>distance</TariffBasis>
+							<!-- TODO distance with zones as unit? or something else? -->
+							<GeographicalUnitRef ref="NOR:GeographicalUnit:zones"/>
+							<fareStructureElements>
+								<!-- ===================== FareStructureElements for the overall carnet ===================== -->
+								<FareStructureElement id="NOR:FareStructureElement:1dfe3aa1" version="3">
+									<!-- TODO need a new EFIP TypeOfFareStructureElement for this, to separate from the individual trip? e.g. carnet_travel_condition 
+                                    That way it is clear what is carnet specific and trip specific  -->
+									<TypeOfFareStructureElementRef ref="EFIP:carnet_travel_condition" versionRef="any"/>
+									<!-- The validity of the overall carnet - note that this is different from each trip in the carnet. -->
+									<!-- Carnet is valid for 2 years from purchase. If there are unused trips when the carnet expires, the value of unused 
+                                        trips can be refunded, but trips are no longer valid for travel -->
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="NOR:GenericParameterAssignment:1dfe3aa1" version="3">
+											<LimitationGroupingType>OR</LimitationGroupingType>
+											<limitations>
+												<UsageValidityPeriod id="NOR:UsageValidityPeriod:2yCarnet" version="1">
+													<validityConditions>
+														<ValidBetween>
+															<FromDate>2023-06-03T00:00:00+02:00</FromDate>
+														</ValidBetween>
+													</validityConditions>
+													<Name>
+														<Text lang="en">Carnet is valid 2 years from purchase</Text>
+														<Text lang="nb">Klippekort er gyldig i 2 år fra kjøpsdato</Text>
+													</Name>
+													<ValidityPeriodType>carnet</ValidityPeriodType>
+													<UsageTrigger>purchase</UsageTrigger>
+													<UsageEnd>standardDuration</UsageEnd>
+													<StandardDuration>P2Y</StandardDuration>
+													<ActivationMeans>noneRequired</ActivationMeans>
+												</UsageValidityPeriod>
+											</limitations>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</FareStructureElement>
+								<FareStructureElement id="NOR:FareStructureElement:aeb753e1" version="2">
+									<!-- Transferability for the carnet. The overall carnet can be transferred, not the individual trips. But several persons 
+                                        can travel together, each one using one individual trip from the carnet-->
+									<TypeOfFareStructureElementRef ref="EFIP:carnet_travel_condition" versionRef="any"/>
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="NOR:GenericParameterAssignment:aeb753e1" version="2">
+											<limitations>
+												<Transferability id="NOR:Transferability:fc301a29" version="1">
+													<Name>
+														<Text lang="en">Transfer allowed</Text>
+														<Text lang="nb">Overføring tillatt</Text>
+													</Name>
+													<CanTransfer>true</CanTransfer>
+													<SharedUsage>concurrentUsers</SharedUsage>
+												</Transferability>
+											</limitations>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</FareStructureElement>
+								<FareStructureElement id="NOR:FareStructureElement:62ec5d76" version="3">
+									<!-- Refunding rules for carnet. Unused trips can be refunded, also after the overall carnet expiry of 2 years 
+                                        TODO need a new EFIP TypeOfFareStructureElement for this, to separate from the individual trip? e.g. carnet_sales_condition 
+                                        That way it is clear what is carnet specific and trip specific
+                                    -->
+									<TypeOfFareStructureElementRef ref="EFIP:carnet_sales_condition" versionRef="any"/>
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="NOR:GenericParameterAssignment:62ec5d76" version="3">
+											<limitations>
+												<Refunding id="NOR:Refunding:874439c4" version="1">
+													<validityConditions>
+														<ValidBetween>
+															<FromDate>2021-02-15T00:00:00+01:00</FromDate>
+														</ValidBetween>
+													</validityConditions>
+													<Name>
+														<Text lang="en">Partial refund without charge</Text>
+														<Text lang="nb">Delvis refusjon uten gebyr</Text>
+													</Name>
+													<Allowed>partial</Allowed>
+													<UnusedTicketsOnly>true</UnusedTicketsOnly>
+													<OnlyAtCertainDistributionPoints>false</OnlyAtCertainDistributionPoints>
+													<ResellWhen>anyTime</ResellWhen>
+													<!-- probably some limit, like 6 months after carnet expiry -->
+													<RefundType>unused</RefundType>
+												</Refunding>
+											</limitations>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</FareStructureElement>
+								<FareStructureElement id="NOR:FareStructureElement:KlippekortBuss" version="3">
+									<!-- VAT for transport - still WIP -->
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="NOR:GenericParameterAssignment:KlippekortBuss" version="3">
+											<validityParameters>
+												<TypeOfPricingRuleRef ref="ENT:TypeOfPricingRule:transportation"/>
+											</validityParameters>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</FareStructureElement>
+								<FareStructureElement id="NOR:FareStructureElement:cda3fe1e" version="3">
+									<!-- purchase window for carnet -->
+									<TypeOfFareStructureElementRef ref="EFIP:carnet_sales_condition" versionRef="any"/>
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="NOR:GenericParameterAssignment:cda3fe1e" version="3">
+											<limitations>
+												<PurchaseWindow id="NOR:PurchaseWindow:advance" version="1">
+													<validityConditions>
+														<ValidBetween>
+															<FromDate>2021-10-22T00:00:00+02:00</FromDate>
+														</ValidBetween>
+													</validityConditions>
+													<Name>
+														<Text lang="en">Purchase window Nordland fylkeskommune</Text>
+														<Text lang="nn">Kjøpsvindauge Nordland fylkeskommune</Text>
+														<Text lang="nb">Kjøpsvindu Nordland fylkeskommune</Text>
+													</Name>
+													<PurchaseWhen>advanceAndDayOfTravel</PurchaseWhen>
+												</PurchaseWindow>
+											</limitations>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</FareStructureElement>
+								<FareStructureElement id="NOR:FareStructureElement:carnetUnit" version="1">
+									<TypeOfFareStructureElementRef ref="EFIP:carnet_unit" versionRef="any"/>
+									<!-- EFIP defines this for number of units when using QualityStructureFactor  -->
+									<!-- TODO This is the only way of referencing what the unit in the carnet is? Would prefer a more direct way of doing this from the carnet  itself (the AmountOfPriceUnitProduct) -->
+									<GenericParameterAssignment id="NOR:GenericParameterAssignment:carnetUnit" version="1">
+										<PreassignedFareProductRef ref="NOR:PreassignedFareProduct:unactivatedSingleTicket" version="1"/>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<!-- ===================== FareStructureElements for the individual trips in the carnet ===================== -->
+								<FareStructureElement id="NOR:FareStructureElement:tripValidity" version="1">
+									<TypeOfFareStructureElementRef ref="EFIP:travel_condition" versionRef="any"/>
+									<!-- How the trip is activated -->
+									<GenericParameterAssignment id="NOR:GenericParameterAssignment:tripValidity" version="1">
+										<limitations>
+											<UsageValidityPeriod id="NOR:UsageValidityPeriod:tripInCarnet" version="1">
+												<Name>
+													<Text lang="en">Valid for 75min for first zone, then 30 min for each additional zone</Text>
+													<Text lang="nb">Gyldig i 75min for første sone, og 30 min for hver ekstra sone </Text>
+												</Name>
+												<ValidityPeriodType>singleTrip</ValidityPeriodType>
+												<UsageTrigger>activation</UsageTrigger>
+												<UsageEnd>standardDuration</UsageEnd>
+												<ActivationMeans>useOfMobileDevice</ActivationMeans>
+												<!-- see PR319/1085 to add more than one alternative activationMeans so that smartCard can be added to the list-->
+											</UsageValidityPeriod>
+										</limitations>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<FareStructureElement id="NOR:FareStructureElement:29737fcc" version="3">
+									<TypeOfFareStructureElementRef ref="EFIP:accepted_by" versionRef="any"/>
+									<!-- The Authority that the product give access to travel with (could be omitted when lines are stated explicitly, but nice to add anyway to state clearly) -->
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="NOR:GenericParameterAssignment:29737fcc" version="3">
+											<validityParameters>
+												<AuthorityRef ref="NOR:Authority:12" version="1244"/>
+											</validityParameters>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</FareStructureElement>
+								<FareStructureElement id="NOR:FareStructureElement:b6d3eef5" version="3">
+									<TypeOfFareStructureElementRef ref="EFIP:access" versionRef="any"/>
+									<!-- in which zones the product can be used (all zones for Nordland county). This product is priced based on number of zones traveled, and it does not matter which zones 
+                                you travel - they are all treated the same. Listing them limits which ones can be counted-->
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="NOR:GenericParameterAssignment:b6d3eef5" version="3">
+											<ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
+											<validityParameters>
+												<FareZoneRef ref="NOR:FareZone:63"/>
+												<FareZoneRef ref="NOR:FareZone:57"/>
+												<FareZoneRef ref="NOR:FareZone:74"/>
+												<FareZoneRef ref="NOR:FareZone:54"/>
+												<FareZoneRef ref="NOR:FareZone:29"/>
+												<FareZoneRef ref="NOR:FareZone:76"/>
+												<FareZoneRef ref="NOR:FareZone:37"/>
+												<FareZoneRef ref="NOR:FareZone:72"/>
+												<FareZoneRef ref="NOR:FareZone:33"/>
+												<FareZoneRef ref="NOR:FareZone:38"/>
+												<FareZoneRef ref="NOR:FareZone:9"/>
+												<FareZoneRef ref="NOR:FareZone:20"/>
+												<FareZoneRef ref="NOR:FareZone:52"/>
+												<FareZoneRef ref="NOR:FareZone:10"/>
+												<FareZoneRef ref="NOR:FareZone:17"/>
+												<FareZoneRef ref="NOR:FareZone:53"/>
+												<FareZoneRef ref="NOR:FareZone:46"/>
+												<FareZoneRef ref="NOR:FareZone:1"/>
+												<FareZoneRef ref="NOR:FareZone:28"/>
+												<FareZoneRef ref="NOR:FareZone:7"/>
+												<FareZoneRef ref="NOR:FareZone:36"/>
+												<FareZoneRef ref="NOR:FareZone:18"/>
+												<FareZoneRef ref="NOR:FareZone:50"/>
+												<FareZoneRef ref="NOR:FareZone:77"/>
+												<FareZoneRef ref="NOR:FareZone:67"/>
+												<FareZoneRef ref="NOR:FareZone:48"/>
+												<FareZoneRef ref="NOR:FareZone:34"/>
+												<FareZoneRef ref="NOR:FareZone:81"/>
+												<FareZoneRef ref="NOR:FareZone:45"/>
+												<FareZoneRef ref="NOR:FareZone:25"/>
+												<FareZoneRef ref="NOR:FareZone:43"/>
+												<FareZoneRef ref="NOR:FareZone:4"/>
+												<FareZoneRef ref="NOR:FareZone:6"/>
+												<FareZoneRef ref="NOR:FareZone:64"/>
+												<FareZoneRef ref="NOR:FareZone:62"/>
+												<FareZoneRef ref="NOR:FareZone:59"/>
+												<FareZoneRef ref="NOR:FareZone:11"/>
+												<FareZoneRef ref="NOR:FareZone:73"/>
+												<FareZoneRef ref="NOR:FareZone:82"/>
+												<FareZoneRef ref="NOR:FareZone:69"/>
+												<FareZoneRef ref="NOR:FareZone:19"/>
+												<FareZoneRef ref="NOR:FareZone:39"/>
+												<FareZoneRef ref="NOR:FareZone:27"/>
+												<FareZoneRef ref="NOR:FareZone:68"/>
+												<FareZoneRef ref="NOR:FareZone:32"/>
+												<FareZoneRef ref="NOR:FareZone:16"/>
+												<FareZoneRef ref="NOR:FareZone:23"/>
+												<FareZoneRef ref="NOR:FareZone:78"/>
+												<FareZoneRef ref="NOR:FareZone:40"/>
+												<FareZoneRef ref="NOR:FareZone:56"/>
+												<FareZoneRef ref="NOR:FareZone:60"/>
+												<FareZoneRef ref="NOR:FareZone:66"/>
+												<FareZoneRef ref="NOR:FareZone:30"/>
+												<FareZoneRef ref="NOR:FareZone:61"/>
+												<FareZoneRef ref="NOR:FareZone:49"/>
+												<FareZoneRef ref="NOR:FareZone:51"/>
+												<FareZoneRef ref="NOR:FareZone:35"/>
+												<FareZoneRef ref="NOR:FareZone:5"/>
+												<FareZoneRef ref="NOR:FareZone:44"/>
+												<FareZoneRef ref="NOR:FareZone:21"/>
+												<FareZoneRef ref="NOR:FareZone:58"/>
+												<FareZoneRef ref="NOR:FareZone:65"/>
+												<FareZoneRef ref="NOR:FareZone:41"/>
+												<FareZoneRef ref="NOR:FareZone:75"/>
+												<FareZoneRef ref="NOR:FareZone:31"/>
+												<FareZoneRef ref="NOR:FareZone:71"/>
+												<FareZoneRef ref="NOR:FareZone:13"/>
+												<FareZoneRef ref="NOR:FareZone:12"/>
+												<FareZoneRef ref="NOR:FareZone:70"/>
+												<FareZoneRef ref="NOR:FareZone:15"/>
+												<FareZoneRef ref="NOR:FareZone:80"/>
+												<FareZoneRef ref="NOR:FareZone:79"/>
+												<FareZoneRef ref="NOR:FareZone:26"/>
+												<FareZoneRef ref="NOR:FareZone:47"/>
+												<FareZoneRef ref="NOR:FareZone:42"/>
+												<FareZoneRef ref="NOR:FareZone:14"/>
+												<FareZoneRef ref="NOR:FareZone:55"/>
+												<FareZoneRef ref="NOR:FareZone:8"/>
+											</validityParameters>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</FareStructureElement>
+								<FareStructureElement id="NOR:FareStructureElement:e427e9cd" version="3">
+									<TypeOfFareStructureElementRef ref="EFIP:access" versionRef="any"/>
+									<!-- where the product can be used. Valid for most bus lines in the public transport network of the county of Nordland. An equivalent description 
+                                        is 'all buses with transport submode localbus, regionalBus and schoolBus run by the Authority' 
+                                        TODO Should EFIP recommend the use of GroupOfLines and Network as a systematic method for referencing between the timetable and fares? Having one or a few preferred 
+                                        way of doing this could make life a little easier 
+                                    -->
+									<!-- Valid on all bus lines except the airport line. Stated as general rule with exceptiond, the parameters are ANDed together  -->
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="NOR:GenericParameterAssignment:e427e9cd" version="3">
+											<IsAllowed>true</IsAllowed>
+											<validityParameters>
+												<GroupOfLinesRef ref="NOR:GroupOfLines:bus_1"/>
+												<!-- versionRef is intentionally omitted, as the Group is usually defined in another dataset and no specific version is targeted-->
+											</validityParameters>
+										</GenericParameterAssignment>
+										<GenericParameterAssignment id="NOR:GenericParameterAssignment:notAirportTransfer" version="1">
+											<IsAllowed>false</IsAllowed>
+											<validityParameters>
+												<LineRef ref="NOR:Line:12_8616"/>
+												<!-- versionRef is intentionally omitted, as the Line is usually defined in another dataset and no specific version is targeted-->
+											</validityParameters>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</FareStructureElement>
+								<FareStructureElement id="NOR:FareStructureElement:geoIntervals" version="1">
+									<TypeOfFareStructureElementRef ref="EFIP:access" versionRef="any"/>
+									<!-- Geographical Intervals to count number of zones traveled. These are fine grained intervals increasing with 1 zone at first, then one interval 
+                                        for everything over 12 zones 
+                                        Intervals are:
+                                        1 zone
+                                        2 zones
+                                        3 zones
+                                        ...
+                                        11 zones
+                                        12 - 81 zones
+                                        Add a GeographicalUnit, and use numberOfUnits as well as start/end? -->
+									<geographicalIntervals>
+										<GeographicalInterval id="NOR:GeographicalInterval:042b9066" version="1">
+											<StartGeographicalValue>9</StartGeographicalValue>
+											<EndGeographicalValue>10</EndGeographicalValue>
+											<IntervalType>tariffZone</IntervalType>
+										</GeographicalInterval>
+										<GeographicalInterval id="NOR:GeographicalInterval:3b49dfaa" version="1">
+											<StartGeographicalValue>1</StartGeographicalValue>
+											<EndGeographicalValue>2</EndGeographicalValue>
+											<IntervalType>tariffZone</IntervalType>
+										</GeographicalInterval>
+										<GeographicalInterval id="NOR:GeographicalInterval:3fcf8026" version="1">
+											<StartGeographicalValue>4</StartGeographicalValue>
+											<EndGeographicalValue>5</EndGeographicalValue>
+											<IntervalType>tariffZone</IntervalType>
+										</GeographicalInterval>
+										<GeographicalInterval id="NOR:GeographicalInterval:77104519" version="1">
+											<StartGeographicalValue>7</StartGeographicalValue>
+											<EndGeographicalValue>8</EndGeographicalValue>
+											<IntervalType>tariffZone</IntervalType>
+										</GeographicalInterval>
+										<GeographicalInterval id="NOR:GeographicalInterval:7b642b4d" version="1">
+											<StartGeographicalValue>5</StartGeographicalValue>
+											<EndGeographicalValue>6</EndGeographicalValue>
+											<IntervalType>tariffZone</IntervalType>
+										</GeographicalInterval>
+										<GeographicalInterval id="NOR:GeographicalInterval:8f6dceb1" version="1">
+											<StartGeographicalValue>3</StartGeographicalValue>
+											<EndGeographicalValue>4</EndGeographicalValue>
+											<IntervalType>tariffZone</IntervalType>
+										</GeographicalInterval>
+										<GeographicalInterval id="NOR:GeographicalInterval:9bcf3e21" version="1">
+											<StartGeographicalValue>11</StartGeographicalValue>
+											<EndGeographicalValue>12</EndGeographicalValue>
+											<IntervalType>tariffZone</IntervalType>
+										</GeographicalInterval>
+										<GeographicalInterval id="NOR:GeographicalInterval:a364f7bc" version="1">
+											<StartGeographicalValue>8</StartGeographicalValue>
+											<EndGeographicalValue>9</EndGeographicalValue>
+											<IntervalType>tariffZone</IntervalType>
+										</GeographicalInterval>
+										<GeographicalInterval id="NOR:GeographicalInterval:b13db8e1" version="1">
+											<StartGeographicalValue>10</StartGeographicalValue>
+											<EndGeographicalValue>11</EndGeographicalValue>
+											<IntervalType>tariffZone</IntervalType>
+										</GeographicalInterval>
+										<GeographicalInterval id="NOR:GeographicalInterval:d5055a2f" version="1">
+											<StartGeographicalValue>2</StartGeographicalValue>
+											<EndGeographicalValue>3</EndGeographicalValue>
+											<IntervalType>tariffZone</IntervalType>
+										</GeographicalInterval>
+										<GeographicalInterval id="NOR:GeographicalInterval:e3d9b89c" version="1">
+											<StartGeographicalValue>6</StartGeographicalValue>
+											<EndGeographicalValue>7</EndGeographicalValue>
+											<IntervalType>tariffZone</IntervalType>
+										</GeographicalInterval>
+										<GeographicalInterval id="NOR:GeographicalInterval:f99405ef" version="1">
+											<StartGeographicalValue>12</StartGeographicalValue>
+											<EndGeographicalValue>81</EndGeographicalValue>
+											<IntervalType>tariffZone</IntervalType>
+										</GeographicalInterval>
+									</geographicalIntervals>
+								</FareStructureElement>
+								<FareStructureElement id="NOR:FareStructureElement:timeIntervals" version="1">
+									<TypeOfFareStructureElementRef ref="EFIP:duration" versionRef="any"/>
+									<!-- Intervals for duration of trips in the carnet, based on number of zones purchased. 75min for 1 zone, then 30 additional min for each additional zone. 
+                                            There is not really a maximum duration - the price is deterimined by the distance, and 12 zones or more are at the maximum price, but the duration 
+                                            could still increase to allow long trips -->
+									<timeIntervals>
+										<TimeInterval id="NOR:TimeInterval:75min" version="1">
+											<Duration>PT75M</Duration>
+										</TimeInterval>
+										<TimeInterval id="NOR:TimeInterval:105min" version="1">
+											<Duration>PT105M</Duration>
+										</TimeInterval>
+										<TimeInterval id="NOR:TimeInterval:135min" version="1">
+											<Duration>PT135M</Duration>
+										</TimeInterval>
+										<TimeInterval id="NOR:TimeInterval:165min" version="1">
+											<Duration>PT165M</Duration>
+										</TimeInterval>
+										<TimeInterval id="NOR:TimeInterval:195min" version="1">
+											<Duration>PT195M</Duration>
+										</TimeInterval>
+										<TimeInterval id="NOR:TimeInterval:225min" version="1">
+											<Duration>PT225M</Duration>
+										</TimeInterval>
+										<TimeInterval id="NOR:TimeInterval:255min" version="1">
+											<Duration>PT255M</Duration>
+										</TimeInterval>
+										<TimeInterval id="NOR:TimeInterval:285min" version="1">
+											<Duration>PT285M</Duration>
+										</TimeInterval>
+										<TimeInterval id="NOR:TimeInterval:315min" version="1">
+											<Duration>PT315M</Duration>
+										</TimeInterval>
+										<TimeInterval id="NOR:TimeInterval:345min" version="1">
+											<Duration>PT345M</Duration>
+										</TimeInterval>
+										<TimeInterval id="NOR:TimeInterval:375min" version="1">
+											<Duration>PT375M</Duration>
+										</TimeInterval>
+										<TimeInterval id="NOR:TimeInterval:405min" version="1">
+											<!-- If needed, the last interval could be longer to allow the longest trips -->
+											<Duration>PT405M</Duration>
+										</TimeInterval>
+										<!-- more intervals -->
+									</timeIntervals>
+								</FareStructureElement>
+								<FareStructureElement id="NOR:FareStructureElement:d3487bb8" version="3">
+									<!-- Eligibility, who can travel -->
+									<TypeOfFareStructureElementRef ref="EFIP:eligibility" versionRef="any"/>
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="NOR:GenericParameterAssignment:4102716c" version="3">
+											<LimitationGroupingType>XOR</LimitationGroupingType>
+											<limitations>
+												<UserProfile id="NOR:UserProfile:9ab91391" version="2">
+													<validityConditions>
+														<ValidBetween>
+															<FromDate>2025-10-15T00:00:00+02:00</FromDate>
+														</ValidBetween>
+													</validityConditions>
+													<Name>
+														<Text lang="en">Child</Text>
+														<Text lang="nn">Barn</Text>
+														<Text lang="nb">Barn</Text>
+													</Name>
+													<Description>
+														<Text lang="en">Person age 6-15</Text>
+														<Text lang="nn">Person 6-15 år</Text>
+														<Text lang="nb">Person 6-15 år</Text>
+													</Description>
+													<UserType>child</UserType>
+													<MinimumAge>6</MinimumAge>
+													<MaximumAge>15</MaximumAge>
+													<ProofRequired>noneRequired</ProofRequired>
+												</UserProfile>
+												<UserProfile id="NOR:UserProfile:af448e3d" version="2">
+													<validityConditions>
+														<ValidBetween>
+															<FromDate>2025-10-15T00:00:00+02:00</FromDate>
+														</ValidBetween>
+													</validityConditions>
+													<Name>
+														<Text lang="en">Senior</Text>
+														<Text lang="nn">Honnør</Text>
+														<Text lang="nb">Honnør</Text>
+													</Name>
+													<Description>
+														<Text lang="en">Person age 67 or older, disabled, blind persons, spouse/partner travelling together with person using senior ticket.</Text>
+														<Text lang="nn">Person 67 eller over, personer med uførepensjon, blinde eller ektefelle/partner som reiser saman med person med honnørbillett.</Text>
+														<Text lang="nb">Person 67 eller over, personer med uførepensjon, blinde eller ektefelle/partner som reiser sammen med person med honnørbillett.</Text>
+													</Description>
+													<UserType>senior</UserType>
+													<ProofRequired>identityDocument</ProofRequired>
+												</UserProfile>
+												<UserProfile id="NOR:UserProfile:75c8d617" version="2">
+													<validityConditions>
+														<ValidBetween>
+															<FromDate>2025-10-15T00:00:00+02:00</FromDate>
+														</ValidBetween>
+													</validityConditions>
+													<Name>
+														<Text lang="en">Adult</Text>
+														<Text lang="nn">Vaksen</Text>
+														<Text lang="nb">Voksen</Text>
+													</Name>
+													<Description>
+														<Text lang="en">Person age 16-66</Text>
+														<Text lang="nn">Person 16-66 år</Text>
+														<Text lang="nb">Person 16-66 år</Text>
+													</Description>
+													<UserType>adult</UserType>
+													<MinimumAge>16</MinimumAge>
+													<MaximumAge>66</MaximumAge>
+													<ProofRequired>noneRequired</ProofRequired>
+												</UserProfile>
+												<UserProfile id="NOR:UserProfile:8164c285" version="3">
+													<validityConditions>
+														<ValidBetween>
+															<FromDate>2026-01-15T00:00:00+01:00</FromDate>
+														</ValidBetween>
+													</validityConditions>
+													<Name>
+														<Text lang="en">Student</Text>
+														<Text lang="nn">Student</Text>
+														<Text lang="nb">Student</Text>
+													</Name>
+													<Description>
+														<Text lang="en">Full time students at universities and other schools for higher education, pupils at high schools and trainees. You are entitled to a student discount if you are under 30 years of age.</Text>
+														<Text lang="nn">Heltidsstudenter ved universitet og høgskoler, elever ved videregående skoler og lærlinger. Student gjelder til og med 29 år.</Text>
+														<Text lang="nb">Heltidsstudenter ved universitet og høgskoler, elever ved videregående skoler og lærlinger. Student gjelder til og med 29 år.</Text>
+													</Description>
+													<UserType>student</UserType>
+													<MaximumAge>29</MaximumAge>
+													<ProofRequired>studentCard</ProofRequired>
+												</UserProfile>
+												<UserProfile id="NOR:UserProfile:3aee27ec" version="1">
+													<validityConditions>
+														<ValidBetween>
+															<FromDate>2021-01-05T00:00:00+01:00</FromDate>
+														</ValidBetween>
+													</validityConditions>
+													<Name>
+														<Text lang="en">Infant(0-5)</Text>
+														<Text lang="nn">Barn(0-5)</Text>
+														<Text lang="nb">Barn(0-5)</Text>
+													</Name>
+													<Description>
+														<Text lang="en">Child 0-5 years travel for free</Text>
+														<Text lang="nn">Barn 0-5 år reiser gratis</Text>
+														<Text lang="nb">Barn 0-5 år reiser gratis</Text>
+													</Description>
+													<UserType>infant</UserType>
+													<MaximumAge>5</MaximumAge>
+													<ProofRequired>other</ProofRequired>
+												</UserProfile>
+												<UserProfile id="NOR:UserProfile:6c565b45" version="2">
+													<validityConditions>
+														<ValidBetween>
+															<FromDate>2025-10-15T00:00:00+02:00</FromDate>
+														</ValidBetween>
+													</validityConditions>
+													<Name>
+														<Text lang="en">Military</Text>
+														<Text lang="nn">Militær</Text>
+														<Text lang="nb">Militær</Text>
+													</Name>
+													<Description>
+														<Text lang="en">Person in compulsory military service</Text>
+														<Text lang="nn">Person i førstegangstjeneste</Text>
+														<Text lang="nb">Person i førstegangstjeneste</Text>
+													</Description>
+													<BaseUserProfileRef ref="NOR:UserProfile:2908b030"/>
+													<UserType>military</UserType>
+													<ProofRequired>other</ProofRequired>
+												</UserProfile>
+											</limitations>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</FareStructureElement>
+								<FareStructureElement id="NOR:FareStructureElement:interchangeallowed" version="1">
+									<!-- interchange is allowed -->
+									<TypeOfFareStructureElementRef ref="EFIP:travel_conditions" versionRef="any"/>
+									<GenericParameterAssignment id="NOR:GenericParameterAssignment:2f9b9e9c" version="3">
+										<limitations>
+											<Interchanging id="NOR:Interchanging:323e9839" version="1">
+												<Name>
+													<Text lang="en">Interchange is allowed - through fare</Text>
+													<Text lang="nb">Overgang er tillatt - gjennomgående prising</Text>
+												</Name>
+												<CanInterchange>true</CanInterchange>
+											</Interchanging>
+										</limitations>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<FareStructureElement id="NOR:FareStructureElement:2c5da896" version="3">
+									<TypeOfFareStructureElementRef ref="EFIP:access" versionRef="any"/>
+									<!-- buses are standard class -->
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="NOR:GenericParameterAssignment:2c5da896" version="3">
+											<validityParameters>
+												<FareClass>standardClass</FareClass>
+											</validityParameters>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</FareStructureElement>
+							</fareStructureElements>
+							<distanceMatrixElements>
+								<!-- Example DistanceMatrixElements with the distance/number of zones crossed when travelling from origin to destination.
+                                    Based on line 100 Bodø - Fauske - Narvik/Sortland, not verified against real production data.
+                                -->
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bodo_Bodo" version="1">
+									<Distance>1</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:18" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:18" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bodo_Saltstraumen" version="1">
+									<Distance>2</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:18" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:43" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bodo_Fauske" version="1">
+									<Distance>3</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:18" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:32" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bodo_Straumen" version="1">
+									<Distance>4</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:18" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:31" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bodo_Sommerset" version="1">
+									<Distance>5</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:18" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:30" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bodo_Sildhopen" version="1">
+									<Distance>6</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:18" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:29" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bodo_Innhavet" version="1">
+									<Distance>7</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:18" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:40" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bodo_Hamaroy" version="1">
+									<Distance>8</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:18" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:57" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bodo_Bognes" version="1">
+									<Distance>9</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:18" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:56" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bodo_Kjopsvik" version="1">
+									<Distance>10</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:18" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:26" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bodo_Ballangen" version="1">
+									<Distance>11</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:18" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:25" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bodo_Narvik" version="1">
+									<Distance>12</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:18" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:23" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bodo_Lodingen" version="1">
+									<Distance>10</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:18" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:63" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bodo_Gullesfjordbotn" version="1">
+									<Distance>11</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:18" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:78" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bodo_Kaljord" version="1">
+									<Distance>12</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:18" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:71" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bodo_Sortland" version="1">
+									<Distance>13</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:18" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:81" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Saltstraumen_Saltstraumen" version="1">
+									<Distance>1</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:43" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:43" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Saltstraumen_Fauske" version="1">
+									<Distance>2</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:43" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:32" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Saltstraumen_Straumen" version="1">
+									<Distance>3</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:43" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:31" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Saltstraumen_Sommerset" version="1">
+									<Distance>4</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:43" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:30" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Saltstraumen_Sildhopen" version="1">
+									<Distance>5</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:43" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:29" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Saltstraumen_Innhavet" version="1">
+									<Distance>6</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:43" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:40" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Saltstraumen_Hamaroy" version="1">
+									<Distance>7</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:43" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:57" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Saltstraumen_Bognes" version="1">
+									<Distance>8</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:43" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:56" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Saltstraumen_Kjopsvik" version="1">
+									<Distance>9</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:43" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:26" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Saltstraumen_Ballangen" version="1">
+									<Distance>10</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:43" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:25" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Saltstraumen_Narvik" version="1">
+									<Distance>11</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:43" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:23" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Saltstraumen_Lodingen" version="1">
+									<Distance>9</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:43" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:63" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Saltstraumen_Gullesfjordbotn" version="1">
+									<Distance>10</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:43" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:78" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Saltstraumen_Kaljord" version="1">
+									<Distance>11</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:43" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:71" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Saltstraumen_Sortland" version="1">
+									<Distance>12</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:43" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:81" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Fauske_Fauske" version="1">
+									<Distance>1</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:32" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:32" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Fauske_Straumen" version="1">
+									<Distance>2</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:32" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:31" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Fauske_Sommerset" version="1">
+									<Distance>3</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:32" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:30" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Fauske_Sildhopen" version="1">
+									<Distance>4</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:32" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:29" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Fauske_Innhavet" version="1">
+									<Distance>5</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:32" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:40" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Fauske_Hamaroy" version="1">
+									<Distance>6</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:32" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:57" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Fauske_Bognes" version="1">
+									<Distance>7</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:32" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:56" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Fauske_Kjopsvik" version="1">
+									<Distance>8</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:32" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:26" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Fauske_Ballangen" version="1">
+									<Distance>9</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:32" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:25" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Fauske_Narvik" version="1">
+									<Distance>10</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:32" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:23" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Fauske_Lodingen" version="1">
+									<Distance>8</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:32" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:63" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Fauske_Gullesfjordbotn" version="1">
+									<Distance>9</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:32" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:78" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Fauske_Kaljord" version="1">
+									<Distance>10</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:32" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:71" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Fauske_Sortland" version="1">
+									<Distance>11</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:32" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:81" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Straumen_Straumen" version="1">
+									<Distance>1</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:31" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:31" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Straumen_Sommerset" version="1">
+									<Distance>2</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:31" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:30" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Straumen_Sildhopen" version="1">
+									<Distance>3</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:31" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:29" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Straumen_Innhavet" version="1">
+									<Distance>4</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:31" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:40" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Straumen_Hamaroy" version="1">
+									<Distance>5</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:31" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:57" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Straumen_Bognes" version="1">
+									<Distance>6</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:31" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:56" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Straumen_Kjopsvik" version="1">
+									<Distance>7</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:31" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:26" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Straumen_Ballangen" version="1">
+									<Distance>8</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:31" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:25" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Straumen_Narvik" version="1">
+									<Distance>9</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:31" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:23" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Straumen_Lodingen" version="1">
+									<Distance>7</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:31" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:63" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Straumen_Gullesfjordbotn" version="1">
+									<Distance>8</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:31" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:78" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Straumen_Kaljord" version="1">
+									<Distance>9</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:31" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:71" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Straumen_Sortland" version="1">
+									<Distance>10</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:31" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:81" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sommerset_Sommerset" version="1">
+									<Distance>1</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:30" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:30" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sommerset_Sildhopen" version="1">
+									<Distance>2</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:30" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:29" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sommerset_Innhavet" version="1">
+									<Distance>3</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:30" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:40" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sommerset_Hamaroy" version="1">
+									<Distance>4</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:30" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:57" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sommerset_Bognes" version="1">
+									<Distance>5</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:30" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:56" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sommerset_Kjopsvik" version="1">
+									<Distance>6</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:30" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:26" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sommerset_Ballangen" version="1">
+									<Distance>7</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:30" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:25" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sommerset_Narvik" version="1">
+									<Distance>8</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:30" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:23" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sommerset_Lodingen" version="1">
+									<Distance>6</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:30" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:63" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sommerset_Gullesfjordbotn" version="1">
+									<Distance>7</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:30" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:78" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sommerset_Kaljord" version="1">
+									<Distance>8</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:30" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:71" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sommerset_Sortland" version="1">
+									<Distance>9</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:30" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:81" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sildhopen_Sildhopen" version="1">
+									<Distance>1</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:29" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:29" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sildhopen_Innhavet" version="1">
+									<Distance>2</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:29" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:40" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sildhopen_Hamaroy" version="1">
+									<Distance>3</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:29" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:57" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sildhopen_Bognes" version="1">
+									<Distance>4</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:29" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:56" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sildhopen_Kjopsvik" version="1">
+									<Distance>5</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:29" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:26" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sildhopen_Ballangen" version="1">
+									<Distance>6</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:29" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:25" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sildhopen_Narvik" version="1">
+									<Distance>7</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:29" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:23" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sildhopen_Lodingen" version="1">
+									<Distance>5</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:29" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:63" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sildhopen_Gullesfjordbotn" version="1">
+									<Distance>6</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:29" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:78" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sildhopen_Kaljord" version="1">
+									<Distance>7</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:29" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:71" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sildhopen_Sortland" version="1">
+									<Distance>8</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:29" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:81" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Innhavet_Innhavet" version="1">
+									<Distance>1</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:40" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:40" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Innhavet_Hamaroy" version="1">
+									<Distance>2</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:40" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:57" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Innhavet_Bognes" version="1">
+									<Distance>3</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:40" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:56" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Innhavet_Kjopsvik" version="1">
+									<Distance>4</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:40" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:26" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Innhavet_Ballangen" version="1">
+									<Distance>5</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:40" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:25" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Innhavet_Narvik" version="1">
+									<Distance>6</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:40" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:23" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Innhavet_Lodingen" version="1">
+									<Distance>4</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:40" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:63" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Innhavet_Gullesfjordbotn" version="1">
+									<Distance>5</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:40" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:78" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Innhavet_Kaljord" version="1">
+									<Distance>6</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:40" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:71" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Innhavet_Sortland" version="1">
+									<Distance>7</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:40" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:81" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Hamaroy_Hamaroy" version="1">
+									<Distance>1</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:57" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:57" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Hamaroy_Bognes" version="1">
+									<Distance>2</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:57" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:56" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Hamaroy_Kjopsvik" version="1">
+									<Distance>3</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:57" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:26" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Hamaroy_Ballangen" version="1">
+									<Distance>4</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:57" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:25" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Hamaroy_Narvik" version="1">
+									<Distance>5</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:57" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:23" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Hamaroy_Lodingen" version="1">
+									<Distance>3</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:57" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:63" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Hamaroy_Gullesfjordbotn" version="1">
+									<Distance>4</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:57" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:78" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Hamaroy_Kaljord" version="1">
+									<Distance>5</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:57" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:71" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Hamaroy_Sortland" version="1">
+									<Distance>6</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:57" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:81" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bognes_Bognes" version="1">
+									<Distance>1</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:56" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:56" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bognes_Kjopsvik" version="1">
+									<Distance>2</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:56" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:26" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bognes_Ballangen" version="1">
+									<Distance>3</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:56" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:25" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bognes_Narvik" version="1">
+									<Distance>4</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:56" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:23" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bognes_Lodingen" version="1">
+									<Distance>2</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:56" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:63" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bognes_Gullesfjordbotn" version="1">
+									<Distance>3</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:56" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:78" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bognes_Kaljord" version="1">
+									<Distance>4</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:56" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:71" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Bognes_Sortland" version="1">
+									<Distance>5</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:56" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:81" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Kjopsvik_Kjopsvik" version="1">
+									<Distance>1</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:26" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:26" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Kjopsvik_Ballangen" version="1">
+									<Distance>2</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:26" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:25" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Kjopsvik_Narvik" version="1">
+									<Distance>3</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:26" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:23" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Kjopsvik_Lodingen" version="1">
+									<Distance>3</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:26" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:63" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Kjopsvik_Gullesfjordbotn" version="1">
+									<Distance>4</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:26" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:78" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Kjopsvik_Kaljord" version="1">
+									<Distance>5</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:26" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:71" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Kjopsvik_Sortland" version="1">
+									<Distance>6</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:26" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:81" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Ballangen_Ballangen" version="1">
+									<Distance>1</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:25" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:25" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Ballangen_Narvik" version="1">
+									<Distance>2</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:25" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:23" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Ballangen_Lodingen" version="1">
+									<Distance>4</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:25" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:63" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Ballangen_Gullesfjordbotn" version="1">
+									<Distance>5</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:25" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:78" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Ballangen_Kaljord" version="1">
+									<Distance>6</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:25" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:71" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Ballangen_Sortland" version="1">
+									<Distance>7</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:25" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:81" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Narvik_Narvik" version="1">
+									<Distance>1</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:23" versionRef="25"/>
+									<EndTariffZoneRef ref="NOR:FareZone:23" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Narvik_Lodingen" version="1">
+									<Distance>5</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:23" versionRef="25"/>
+									<EndTariffZoneRef ref="NOR:FareZone:63" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Narvik_Gullesfjordbotn" version="1">
+									<Distance>6</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:23" versionRef="25"/>
+									<EndTariffZoneRef ref="NOR:FareZone:78" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Narvik_Kaljord" version="1">
+									<Distance>7</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:23" versionRef="25"/>
+									<EndTariffZoneRef ref="NOR:FareZone:71" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Narvik_Sortland" version="1">
+									<Distance>8</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:23" versionRef="25"/>
+									<EndTariffZoneRef ref="NOR:FareZone:81" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Lodingen_Lodingen" version="1">
+									<Distance>1</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:63" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:63" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Lodingen_Gullesfjordbotn" version="1">
+									<Distance>2</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:63" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:78" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Lodingen_Kaljord" version="1">
+									<Distance>3</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:63" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:71" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Lodingen_Sortland" version="1">
+									<Distance>4</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:63" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:81" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Gullesfjordbotn_Gullesfjordbotn" version="1">
+									<Distance>1</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:78" versionRef="25"/>
+									<EndTariffZoneRef ref="NOR:FareZone:78" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Gullesfjordbotn_Kaljord" version="1">
+									<Distance>2</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:78" versionRef="25"/>
+									<EndTariffZoneRef ref="NOR:FareZone:71" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Gullesfjordbotn_Sortland" version="1">
+									<Distance>3</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:78" versionRef="25"/>
+									<EndTariffZoneRef ref="NOR:FareZone:81" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Kaljord_Kaljord" version="1">
+									<Distance>1</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:71" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:71" versionRef="24"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Kaljord_Sortland" version="1">
+									<Distance>2</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:71" versionRef="24"/>
+									<EndTariffZoneRef ref="NOR:FareZone:81" versionRef="25"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="NOR:DistanceMatrixElement:Sortland_Sortland" version="1">
+									<Distance>1</Distance>
+									<InverseAllowed>true</InverseAllowed>
+									<StartTariffZoneRef ref="NOR:FareZone:81" versionRef="25"/>
+									<EndTariffZoneRef ref="NOR:FareZone:81" versionRef="25"/>
+								</DistanceMatrixElement>
+							</distanceMatrixElements>
+							<fareTables>
+								<!-- intentionally no version on the FareTable ref - do not want to update everything else to change the prices. -->
+								<FareTableRef ref="NOR:FareTable:ce1e60d5" versionRef="any"/>
+							</fareTables>
+						</Tariff>
+					</tariffs>
+					<!-- FareProducts -->
+					<fareProducts>
+						<PreassignedFareProduct id="NOR:PreassignedFareProduct:unactivatedSingleTicket" version="1">
+							<!-- TODO: This product is not sold individually and exists only to be used in a carnet, so it has no SalesOfferPackage.
+                                 The normal single ticket for a bus trip has a different way of triggering the start of access right at purchase and different refunding rules. Other than that they are almost the same. 
+                                 This PreassignedFareProduct for the unactivated trip has a ValidableElement with FareStructureElements for everything that specifies each individual trip in the carnet -->
+							<Name>
+								<Text lang="en">One bus trip, manually activated</Text>
+							</Name>
+							<Description>
+								<Text lang="nb">En bussreise, må aktiveres manuelt</Text>
+							</Description>
+							<ChargingMomentType>beforeTravel</ChargingMomentType>
+							<AuthorityRef ref="NOR:Authority:12"/>
+							<ConditionSummary>
+								<!-- TODO: The right to travel is based on zones, traveller buys the right to travel in 1, 2, or more zones, so this is a zonalFare but it is also distance based with the distance unit tariffZone ? -->
+								<FareStructureType>zonalFare</FareStructureType>
+								<IsRefundable>true</IsRefundable>
+								<IsExchangable>false</IsExchangable>
+							</ConditionSummary>
+							<validableElements>
+								<ValidableElement id="NOR:ValidableElement:tripInCarnet" version="1">
+									<!-- A validable element for each individual trip in the carnet. Must be manually activated at start of travel. Access is placed here, rather than the overall carnet.
+                                        TODO: The carnet AmountOfPriceUnitProduct has its own ValidableElement that also has to be valid when the individual trip is activated which 
+                                        kind of breaks the integrity of this ValidableElement
+                                    -->
+									<fareStructureElements>
+										<!-- eligibility -->
+										<FareStructureElementRef ref="NOR:FareStructureElement:d3487bb8"/>
+										<!-- travel conditions: how the trip is activated  -->
+										<FareStructureElementRef ref="NOR:FareStructureElement:tripValidity" version="1"/>
+										<!-- travel conditions: interchanging -->
+										<FareStructureElementRef ref="NOR:FareStructureElement:interchangeallowed"/>
+										<!-- access geographical intervals -->
+										<FareStructureElementRef ref="NOR:FareStructureElement:geoIntervals" version="1"/>
+										<!-- access standard class -->
+										<FareStructureElementRef ref="NOR:FareStructureElement:2c5da896"/>
+										<!-- accepted by Authority -->
+										<FareStructureElementRef ref="NOR:FareStructureElement:29737fcc"/>
+										<!-- access to zones -->
+										<FareStructureElementRef ref="NOR:FareStructureElement:b6d3eef5"/>
+										<!-- access to Lines -->
+										<FareStructureElementRef ref="NOR:FareStructureElement:e427e9cd"/>
+										<!-- TimeIntervals for duration -->
+										<FareStructureElementRef ref="NOR:FareStructureElement:timeIntervals"/>
+									</fareStructureElements>
+								</ValidableElement>
+							</validableElements>
+						</PreassignedFareProduct>
+						<AmountOfPriceUnitProduct id="NOR:AmountOfPriceUnitProduct:KlippekortBuss" version="3">
+							<!-- The overall carnet -->
+							<Name>
+								<Text lang="en">Carnet bus, 10 tickets</Text>
+								<Text lang="nn">Klippekort buss, 10 klipp</Text>
+								<Text lang="nb">Klippekort buss, 10 klipp</Text>
+							</Name>
+							<Description>
+								<Text lang="en">Klippekort buss, 10 klipp</Text>
+								<Text lang="nb">Klippekort buss, 10 klipp</Text>
+							</Description>
+							<ChargingMomentType>beforeTravel</ChargingMomentType>
+							<AuthorityRef ref="NOR:Authority:12"/>
+							<ConditionSummary>
+								<FareStructureType>zonalFare</FareStructureType>
+								<IsRefundable>true</IsRefundable>
+								<IsExchangable>false</IsExchangable>
+							</ConditionSummary>
+							<validableElements>
+								<ValidableElement id="NOR:ValidableElement:8131bb18" version="3">
+									<!-- TODO A ValidableElement for the carnet is necessary to group the FareStructureElements - but it doesnt really fit the description 'to be validated in one go'.
+                                    The carnet does have a start and an end as well as refunding rules etc. Deliberately avoiding having any access in the carnet to avoid confusion  -->
+									<validityConditions>
+										<ValidBetween>
+											<FromDate>2026-03-09T00:00:00+01:00</FromDate>
+										</ValidBetween>
+									</validityConditions>
+									<!-- The fare structure elements that applies to the carnet as a whole -->
+									<fareStructureElements>
+										<!-- carnet travel conditions: transferability -->
+										<FareStructureElementRef ref="NOR:FareStructureElement:aeb753e1"/>
+										<!-- carnet travel conditions: carnet duration -->
+										<FareStructureElementRef ref="NOR:FareStructureElement:1dfe3aa1"/>
+										<!-- carnet sales conditions: purchase window -->
+										<FareStructureElementRef ref="NOR:FareStructureElement:cda3fe1e"/>
+										<!-- carnet sales conditions: refunding  -->
+										<FareStructureElementRef ref="NOR:FareStructureElement:62ec5d76"/>
+										<!-- VAT rule for carnet - still WIP -->
+										<FareStructureElementRef ref="NOR:FareStructureElement:KlippekortBuss"/>
+										<!-- TODO the carnet unit, i.e. the single trip - could be replaced by a direct reference? -->
+										<FareStructureElementRef ref="NOR:FareStructureElement:carnetUnit"/>
+										<!-- TODO must add a FareStructureElement with QualityStructureFactors if there are alternatives for number of trips/passes, e.g. 2, 4 or 10 trips. 
+                                            Should EFIP always require the use of a QualityStructureFactor for the number of trips/passes for consistency, even if there is just a fixed number of units in the carnet? -->
+									</fareStructureElements>
+								</ValidableElement>
+							</validableElements>
+							<accessRightsInProduct>
+								<AccessRightInProduct id="NOR:AccessRightInProduct:472f1c18" version="3">
+									<!-- TODO clarify the meaning of the AccessNumber and the other options. AccessNumber could be 10, for each of the individual trips, or a range -->
+									<AccessNumber>10</AccessNumber>
+									<ValidableElementRef ref="NOR:ValidableElement:8131bb18" version="3"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+							<ProductType>tripCarnet</ProductType>
+							<!-- 10 single trips in the carnet -->
+							<Amount>10</Amount>
+							<!-- Pending #1049 change to NumberOfUnits-->
+							<!--  <NumberOfUnits>10</NumberOfUnits>-->
+							<!-- TODO It would be nice to have a reference to the product or validable element that make up the carnet in the AmountOfPriceUnitProduct directly? Similar to PriceUnitRef, implement 
+                                in xsd with a choice so a product can have one or the other
+                                When the reference to the individual trip is just a generic reference in a FareStructureElement which is the only possibility now, it is somewhat difficult to find. Add something like:
+                                <CarnetUnitRef ref="NOR:PreassignedFareProduct:unactivatedSingleTicket" version="1"/> a direct reference to the product that make up the trips in the carnet  
+                            -->
+						</AmountOfPriceUnitProduct>
+					</fareProducts>
+					<!-- FulfilmentMethods -->
+					<fulfilmentMethods>
+						<FulfilmentMethod id="ENT:FulfilmentMethod:IdBasert" version="1">
+							<!-- account based, the customer can use a smart card or a barcode in a mobile app to identify the account that holds the fare contract and access rights -->
+							<FulfilmentMethodType>other</FulfilmentMethodType>
+						</FulfilmentMethod>
+					</fulfilmentMethods>
+					<!-- SalesOfferPackages -->
+					<salesOfferPackages>
+						<!-- Carnet is available on mobile app and smartcard (used as tokens for account based access right) 
+                            The SalesOfferPackages are identical except for the typeOfTravelDocument
+                        -->
+						<SalesOfferPackage id="NOR:SalesPackage:KlippekortBussMobile" version="2">
+							<!-- one sales package for mobile app -->
+							<Name>
+								<Text lang="en">Carnet bus, 10 tickets</Text>
+								<Text lang="nn">Klippekort buss, 10 klipp</Text>
+								<Text lang="nb">Klippekort buss, 10 klipp</Text>
+							</Name>
+							<Description>
+								<Text lang="en">Carnet bus, 10 tickets</Text>
+								<Text lang="nb">Klippekort buss, 10 klipp</Text>
+							</Description>
+							<distributionAssignments>
+								<DistributionAssignment id="NOR:DistributionAssignment:b7c0c657" version="2">
+									<DistributionRights>sell refund</DistributionRights>
+									<DistributionChannelRef ref="NOR:DistributionChannel:SalesAndService"/>
+									<AllowedInChannel>true</AllowedInChannel>
+									<FulfilmentMethodRef ref="ENT:FulfilmentMethod:IdBasert" version="1"/>
+								</DistributionAssignment>
+								<DistributionAssignment id="NOR:DistributionAssignment:f9953163" version="2">
+									<DistributionRights>sell refund</DistributionRights>
+									<DistributionChannelRef ref="NLB:DistributionChannel:MobileTerminal"/>
+									<AllowedInChannel>true</AllowedInChannel>
+									<FulfilmentMethodRef ref="ENT:FulfilmentMethod:IdBasert" version="1"/>
+								</DistributionAssignment>
+								<DistributionAssignment id="NOR:DistributionAssignment:0c199979" version="2">
+									<DistributionRights>sell</DistributionRights>
+									<DistributionChannelRef ref="NOR:DistributionChannel:App"/>
+									<AllowedInChannel>true</AllowedInChannel>
+									<FulfilmentMethodRef ref="ENT:FulfilmentMethod:IdBasert" version="1"/>
+								</DistributionAssignment>
+								<DistributionAssignment id="NOR:DistributionAssignment:130e6ae4" version="2">
+									<DistributionRights>sell</DistributionRights>
+									<DistributionChannelRef ref="NOR:DistributionChannel:Web"/>
+									<AllowedInChannel>true</AllowedInChannel>
+									<FulfilmentMethodRef ref="ENT:FulfilmentMethod:IdBasert" version="1"/>
+								</DistributionAssignment>
+								<!-- there are several others -->
+							</distributionAssignments>
+							<salesOfferPackageElements>
+								<SalesOfferPackageElement id="NOR:SalesPackageElement:KlippekortBuss" version="2">
+									<TypeOfTravelDocumentRef ref="ENT:TypeOfTravelDocument:MobileApplication"/>
+									<FareProductRef ref="NOR:AmountOfPriceUnitProduct:KlippekortBuss" version="3"/>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+						<SalesOfferPackage id="NOR:SalesPackage:KlippekortBussSmartcard" version="2">
+							<!-- one sales package for smartcard -->
+							<Name>
+								<Text lang="en">Carnet bus, 10 tickets on travelcard</Text>
+								<Text lang="nn">Klippekort buss, 10 klipp på reisekort</Text>
+								<Text lang="nb">Klippekort buss, 10 klipp på reisekort</Text>
+							</Name>
+							<Description>
+								<Text lang="en">Carnet bus, 10 tickets</Text>
+								<Text lang="nb">Klippekort buss, 10 klipp</Text>
+							</Description>
+							<distributionAssignments>
+								<DistributionAssignment id="NOR:DistributionAssignment:b7c0c6571" version="2">
+									<DistributionRights>sell refund</DistributionRights>
+									<DistributionChannelRef ref="NOR:DistributionChannel:SalesAndService"/>
+									<AllowedInChannel>true</AllowedInChannel>
+									<FulfilmentMethodRef ref="ENT:FulfilmentMethod:IdBasert" version="1"/>
+								</DistributionAssignment>
+								<DistributionAssignment id="NOR:DistributionAssignment:f99531631" version="2">
+									<DistributionRights>sell refund</DistributionRights>
+									<DistributionChannelRef ref="NLB:DistributionChannel:MobileTerminal"/>
+									<AllowedInChannel>true</AllowedInChannel>
+									<FulfilmentMethodRef ref="ENT:FulfilmentMethod:IdBasert" version="1"/>
+								</DistributionAssignment>
+								<DistributionAssignment id="NOR:DistributionAssignment:0c1999791" version="2">
+									<DistributionRights>sell</DistributionRights>
+									<DistributionChannelRef ref="NOR:DistributionChannel:App"/>
+									<AllowedInChannel>true</AllowedInChannel>
+									<FulfilmentMethodRef ref="ENT:FulfilmentMethod:IdBasert" version="1"/>
+								</DistributionAssignment>
+								<DistributionAssignment id="NOR:DistributionAssignment:130e6ae41" version="2">
+									<DistributionRights>sell</DistributionRights>
+									<DistributionChannelRef ref="NOR:DistributionChannel:Web"/>
+									<AllowedInChannel>true</AllowedInChannel>
+									<FulfilmentMethodRef ref="ENT:FulfilmentMethod:IdBasert" version="1"/>
+								</DistributionAssignment>
+								<!-- there are several others -->
+							</distributionAssignments>
+							<salesOfferPackageElements>
+								<SalesOfferPackageElement id="NOR:SalesPackageElement:KlippekortBussSmartcard" version="2">
+									<TypeOfTravelDocumentRef ref="ENT:TypeOfTravelDocument:DesfireTravelCard"/>
+									<FareProductRef ref="NOR:AmountOfPriceUnitProduct:KlippekortBuss" version="3"/>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+					</salesOfferPackages>
+				</FareFrame>
+				<FareFrame id="NOR:FareFrame:prices" version="1">
+					<fareTables>
+						<FareTable id="NOR:FareTable:ce1e60d5" version="3">
+							<validityConditions>
+								<ValidBetween>
+									<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+								</ValidBetween>
+							</validityConditions>
+							<!-- TODO: Prices given for the carnet of 10 trips. The two SalesOfferPackages for the carnet have exactly the same prices, so do not want to repeat any cells. 
+                                 The documentation for the pricesFor list is 'Combination of Elements for which this table provides PRICEs.' but if the intention 
+                                 is 'This single FareTable applies to all of the products, salesOfferPackages and other PriceableObjects that are listed here and the prices are identical for all of them' 
+                                 then adding all three like this should be fine, but the xsd documentation needs an update. For references that should be added into the combination of the elements in 
+                                 each cell use the specifics list. 
+                                 How can this FareTable be presented to the travellers in a readable manner? The TimeInterval reduces the readability quite a bit
+                            -->
+							<pricesFor>
+								<!-- All of these use this FareTable, the prices are identical -->
+								<AmountOfPriceUnitProductRef ref="NOR:AmountOfPriceUnitProduct:KlippekortBuss" version="3"/>
+								<SalesOfferPackageRef ref="NOR:SalesPackage:KlippekortBussMobile" version="2"/>
+								<SalesOfferPackageRef ref="NOR:SalesPackage:KlippekortBussSmartcard" version="2"/>
+							</pricesFor>
+							<usedIn>
+								<TariffRef ref="NOR:Tariff:carnet" version="1"/>
+							</usedIn>
+							<AuthorityRef ref="NOR:Authority:12" version="1244"/>
+							<cells>
+								<!-- adult price for the carnet of 10 trips. 
+                                    TODO: The number of trips is not stated here, it is only present in the value numberOfUnits on the AmountOfPriceUnitProcuct itself. Good enough? -->
+								<Cell id="NOR:Cell:bfaa50a0" version="3">
+									<CellPrice id="NOR:FarePrice:547d296d" version="3">
+										<Amount>450.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:3b49dfaa"/>
+									<UserProfileRef ref="NOR:UserProfile:75c8d617"/>
+									<!-- TODO: The TimeInterval that specifies duration is included here, as it depends on the number of zones travelled. In effect, 
+                                        we´re using the Cell of the FareTable to tie the combination together. -->
+									<TimeIntervalRef ref="NOR:TimeInterval:75min"/>
+								</Cell>
+								<Cell id="NOR:Cell:9a8149d0" version="3">
+									<CellPrice id="NOR:FarePrice:91b0707b" version="3">
+										<Amount>660.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:75c8d617"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:d5055a2f"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:105min"/>
+								</Cell>
+								<Cell id="NOR:Cell:8bcb2c1a" version="3">
+									<CellPrice id="NOR:FarePrice:97a91d69" version="3">
+										<Amount>1110.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:8f6dceb1"/>
+									<UserProfileRef ref="NOR:UserProfile:75c8d617"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:135min"/>
+								</Cell>
+								<Cell id="NOR:Cell:3d3ffc5b" version="3">
+									<CellPrice id="NOR:FarePrice:77ac2591" version="3">
+										<Amount>1550.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:3fcf8026"/>
+									<UserProfileRef ref="NOR:UserProfile:75c8d617"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:165min"/>
+								</Cell>
+								<Cell id="NOR:Cell:0945f9c4" version="3">
+									<CellPrice id="NOR:FarePrice:af8da0bd" version="3">
+										<Amount>1990.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:7b642b4d"/>
+									<UserProfileRef ref="NOR:UserProfile:75c8d617"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:195min"/>
+								</Cell>
+								<Cell id="NOR:Cell:8e305dae" version="3">
+									<CellPrice id="NOR:FarePrice:58d1a0c6" version="3">
+										<Amount>2440.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:75c8d617"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:e3d9b89c"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:225min"/>
+								</Cell>
+								<Cell id="NOR:Cell:e0218e21" version="3">
+									<CellPrice id="NOR:FarePrice:52d4df26" version="3">
+										<Amount>2870.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:77104519"/>
+									<UserProfileRef ref="NOR:UserProfile:75c8d617"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:255min"/>
+								</Cell>
+								<Cell id="NOR:Cell:7db8cde3" version="3">
+									<CellPrice id="NOR:FarePrice:9b1f562b" version="3">
+										<Amount>3330.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:a364f7bc"/>
+									<UserProfileRef ref="NOR:UserProfile:75c8d617"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:285min"/>
+								</Cell>
+								<Cell id="NOR:Cell:615d5bbd" version="3">
+									<CellPrice id="NOR:FarePrice:1faab54b" version="3">
+										<Amount>3780.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:75c8d617"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:042b9066"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:315min"/>
+								</Cell>
+								<Cell id="NOR:Cell:af9ac00a" version="3">
+									<CellPrice id="NOR:FarePrice:16d0b709" version="3">
+										<Amount>4210.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:b13db8e1"/>
+									<UserProfileRef ref="NOR:UserProfile:75c8d617"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:345min"/>
+								</Cell>
+								<Cell id="NOR:Cell:949d6456" version="3">
+									<CellPrice id="NOR:FarePrice:4578495c" version="3">
+										<Amount>4660.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:9bcf3e21"/>
+									<UserProfileRef ref="NOR:UserProfile:75c8d617"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:375min"/>
+								</Cell>
+								<Cell id="NOR:Cell:6bdfe33b" version="3">
+									<CellPrice id="NOR:FarePrice:5165340f" version="3">
+										<Amount>5100.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:75c8d617"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:f99405ef"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:405min"/>
+								</Cell>
+								<!-- child -->
+								<Cell id="NOR:Cell:c382c51b" version="3">
+									<CellPrice id="NOR:FarePrice:97ffb3c6" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>230.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:3b49dfaa"/>
+									<UserProfileRef ref="NOR:UserProfile:9ab91391"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:75min"/>
+								</Cell>
+								<Cell id="NOR:Cell:781c1842" version="3">
+									<CellPrice id="NOR:FarePrice:e2810d16" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>330.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:9ab91391"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:d5055a2f"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:105min"/>
+								</Cell>
+								<Cell id="NOR:Cell:6b04fd34" version="3">
+									<CellPrice id="NOR:FarePrice:de352e8c" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>560.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:8f6dceb1"/>
+									<UserProfileRef ref="NOR:UserProfile:9ab91391"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:135min"/>
+								</Cell>
+								<Cell id="NOR:Cell:b3fd7527" version="3">
+									<CellPrice id="NOR:FarePrice:eb17b10d" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>780.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:3fcf8026"/>
+									<UserProfileRef ref="NOR:UserProfile:9ab91391"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:165min"/>
+								</Cell>
+								<Cell id="NOR:Cell:3f82a287" version="3">
+									<CellPrice id="NOR:FarePrice:6407dfe3" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1000.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:9ab91391"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:7b642b4d"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:195min"/>
+								</Cell>
+								<Cell id="NOR:Cell:497c97fb" version="3">
+									<CellPrice id="NOR:FarePrice:5704b027" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1220.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:9ab91391"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:e3d9b89c"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:225min"/>
+								</Cell>
+								<Cell id="NOR:Cell:709cc9c6" version="3">
+									<CellPrice id="NOR:FarePrice:c9bcd8bf" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1440.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:77104519"/>
+									<UserProfileRef ref="NOR:UserProfile:9ab91391"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:255min"/>
+								</Cell>
+								<Cell id="NOR:Cell:432fa339" version="3">
+									<CellPrice id="NOR:FarePrice:77c83338" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1670.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:9ab91391"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:a364f7bc"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:285min"/>
+								</Cell>
+								<Cell id="NOR:Cell:51e07e99" version="3">
+									<CellPrice id="NOR:FarePrice:70d75ec8" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1890.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:9ab91391"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:042b9066"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:315min"/>
+								</Cell>
+								<Cell id="NOR:Cell:c616695f" version="3">
+									<CellPrice id="NOR:FarePrice:f9f78e77" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>2110.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:b13db8e1"/>
+									<UserProfileRef ref="NOR:UserProfile:9ab91391"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:345min"/>
+								</Cell>
+								<Cell id="NOR:Cell:1c1af67f" version="3">
+									<CellPrice id="NOR:FarePrice:d93d6e63" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>2330.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:9ab91391"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:9bcf3e21"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:375min"/>
+								</Cell>
+								<Cell id="NOR:Cell:5b9282be" version="3">
+									<CellPrice id="NOR:FarePrice:b99467a8" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>2550.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:9ab91391"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:f99405ef"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:405min"/>
+								</Cell>
+								<!-- infant -->
+								<Cell id="NOR:Cell:3b10a1bd" version="3">
+									<CellPrice id="NOR:FarePrice:84d4a4c1" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>0.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:3b49dfaa"/>
+									<UserProfileRef ref="NOR:UserProfile:3aee27ec"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:75min"/>
+								</Cell>
+								<Cell id="NOR:Cell:fe3bd6d6" version="3">
+									<CellPrice id="NOR:FarePrice:c57ac0c7" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>0.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:3aee27ec"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:d5055a2f"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:105min"/>
+								</Cell>
+								<Cell id="NOR:Cell:c601afa8" version="3">
+									<CellPrice id="NOR:FarePrice:62eca068" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>0.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:8f6dceb1"/>
+									<UserProfileRef ref="NOR:UserProfile:3aee27ec"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:135min"/>
+								</Cell>
+								<Cell id="NOR:Cell:b42f9d71" version="3">
+									<CellPrice id="NOR:FarePrice:a0b4d4ae" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>0.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:3fcf8026"/>
+									<UserProfileRef ref="NOR:UserProfile:3aee27ec"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:165min"/>
+								</Cell>
+								<Cell id="NOR:Cell:7fa05d32" version="3">
+									<CellPrice id="NOR:FarePrice:79aab82e" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>0.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:7b642b4d"/>
+									<UserProfileRef ref="NOR:UserProfile:3aee27ec"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:195min"/>
+								</Cell>
+								<Cell id="NOR:Cell:1c8d8e3f" version="3">
+									<CellPrice id="NOR:FarePrice:722940dd" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>0.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:e3d9b89c"/>
+									<UserProfileRef ref="NOR:UserProfile:3aee27ec"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:225min"/>
+								</Cell>
+								<Cell id="NOR:Cell:599c4e7f" version="3">
+									<CellPrice id="NOR:FarePrice:7642010b" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>0.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:77104519"/>
+									<UserProfileRef ref="NOR:UserProfile:3aee27ec"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:255min"/>
+								</Cell>
+								<Cell id="NOR:Cell:3b4033c0" version="3">
+									<CellPrice id="NOR:FarePrice:1d251491" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>0.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:a364f7bc"/>
+									<UserProfileRef ref="NOR:UserProfile:3aee27ec"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:285min"/>
+								</Cell>
+								<Cell id="NOR:Cell:75d4a7c3" version="3">
+									<CellPrice id="NOR:FarePrice:e7ca8d43" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>0.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:042b9066"/>
+									<UserProfileRef ref="NOR:UserProfile:3aee27ec"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:315min"/>
+								</Cell>
+								<Cell id="NOR:Cell:5c6ebed1" version="3">
+									<CellPrice id="NOR:FarePrice:c16d5080" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>0.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:b13db8e1"/>
+									<UserProfileRef ref="NOR:UserProfile:3aee27ec"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:345min"/>
+								</Cell>
+								<Cell id="NOR:Cell:38bf690b" version="3">
+									<CellPrice id="NOR:FarePrice:a4a9738c" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>0.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:9bcf3e21"/>
+									<UserProfileRef ref="NOR:UserProfile:3aee27ec"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:375min"/>
+								</Cell>
+								<Cell id="NOR:Cell:a3a1f80d" version="3">
+									<CellPrice id="NOR:FarePrice:94300574" version="3">
+										<Amount>0.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:3aee27ec"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:f99405ef"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:405min"/>
+								</Cell>
+								<!-- student -->
+								<Cell id="NOR:Cell:fc5fddc8" version="3">
+									<CellPrice id="NOR:FarePrice:dc127936" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>230.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:3b49dfaa"/>
+									<UserProfileRef ref="NOR:UserProfile:8164c285"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:75min"/>
+								</Cell>
+								<Cell id="NOR:Cell:3cf77ad8" version="3">
+									<CellPrice id="NOR:FarePrice:d4b57de6" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>330.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:8164c285"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:d5055a2f"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:105min"/>
+								</Cell>
+								<Cell id="NOR:Cell:002cd0c1" version="3">
+									<CellPrice id="NOR:FarePrice:6c598372" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>560.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:8f6dceb1"/>
+									<UserProfileRef ref="NOR:UserProfile:8164c285"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:135min"/>
+								</Cell>
+								<Cell id="NOR:Cell:03202fbf" version="3">
+									<CellPrice id="NOR:FarePrice:1b2a2629" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>780.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:3fcf8026"/>
+									<UserProfileRef ref="NOR:UserProfile:8164c285"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:165min"/>
+								</Cell>
+								<Cell id="NOR:Cell:4496bee3" version="3">
+									<CellPrice id="NOR:FarePrice:918081d0" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1000.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:7b642b4d"/>
+									<UserProfileRef ref="NOR:UserProfile:8164c285"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:195min"/>
+								</Cell>
+								<Cell id="NOR:Cell:2ab47097" version="3">
+									<CellPrice id="NOR:FarePrice:9fed8d41" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1220.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:8164c285"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:e3d9b89c"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:225min"/>
+								</Cell>
+								<Cell id="NOR:Cell:8757af7f" version="3">
+									<CellPrice id="NOR:FarePrice:8dd33d42" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1440.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:77104519"/>
+									<UserProfileRef ref="NOR:UserProfile:8164c285"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:255min"/>
+								</Cell>
+								<Cell id="NOR:Cell:dc1ec660" version="3">
+									<CellPrice id="NOR:FarePrice:7d04dd4f" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1670.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:a364f7bc"/>
+									<UserProfileRef ref="NOR:UserProfile:8164c285"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:285min"/>
+								</Cell>
+								<Cell id="NOR:Cell:7b669459" version="3">
+									<CellPrice id="NOR:FarePrice:9df17c04" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1890.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:042b9066"/>
+									<UserProfileRef ref="NOR:UserProfile:8164c285"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:315min"/>
+								</Cell>
+								<Cell id="NOR:Cell:7a43512d" version="3">
+									<CellPrice id="NOR:FarePrice:df2426e7" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>2110.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:b13db8e1"/>
+									<UserProfileRef ref="NOR:UserProfile:8164c285"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:345min"/>
+								</Cell>
+								<Cell id="NOR:Cell:bf9cb485" version="3">
+									<CellPrice id="NOR:FarePrice:7b80ebc9" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>2330.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:9bcf3e21"/>
+									<UserProfileRef ref="NOR:UserProfile:8164c285"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:375min"/>
+								</Cell>
+								<Cell id="NOR:Cell:469d84e7" version="3">
+									<CellPrice id="NOR:FarePrice:df2b6cb9" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>2550.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:8164c285"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:f99405ef"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:405min"/>
+								</Cell>
+								<!-- senior -->
+								<Cell id="NOR:Cell:0241edc6" version="3">
+									<CellPrice id="NOR:FarePrice:a26cbc8e" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>230.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:3b49dfaa"/>
+									<UserProfileRef ref="NOR:UserProfile:af448e3d"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:75min"/>
+								</Cell>
+								<Cell id="NOR:Cell:09a2fd2e" version="3">
+									<CellPrice id="NOR:FarePrice:c1bb1ccd" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>330.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:af448e3d"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:d5055a2f"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:105min"/>
+								</Cell>
+								<Cell id="NOR:Cell:55a4fa61" version="3">
+									<CellPrice id="NOR:FarePrice:20198bbc" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>560.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:8f6dceb1"/>
+									<UserProfileRef ref="NOR:UserProfile:af448e3d"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:135min"/>
+								</Cell>
+								<Cell id="NOR:Cell:baa11c5d" version="3">
+									<CellPrice id="NOR:FarePrice:c6f198c4" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>780.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:3fcf8026"/>
+									<UserProfileRef ref="NOR:UserProfile:af448e3d"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:165min"/>
+								</Cell>
+								<Cell id="NOR:Cell:fe28e832" version="3">
+									<CellPrice id="NOR:FarePrice:76cea1c7" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1000.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:af448e3d"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:7b642b4d"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:195min"/>
+								</Cell>
+								<Cell id="NOR:Cell:01408ae7" version="3">
+									<CellPrice id="NOR:FarePrice:6e2e7ed6" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1220.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:af448e3d"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:e3d9b89c"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:225min"/>
+								</Cell>
+								<Cell id="NOR:Cell:d9360585" version="3">
+									<CellPrice id="NOR:FarePrice:7a5897a7" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1440.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:77104519"/>
+									<UserProfileRef ref="NOR:UserProfile:af448e3d"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:255min"/>
+								</Cell>
+								<Cell id="NOR:Cell:e1103a5c" version="3">
+									<CellPrice id="NOR:FarePrice:4f12de70" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1670.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:af448e3d"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:a364f7bc"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:285min"/>
+								</Cell>
+								<Cell id="NOR:Cell:298fe60d" version="3">
+									<CellPrice id="NOR:FarePrice:2aae4941" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1890.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:af448e3d"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:042b9066"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:315min"/>
+								</Cell>
+								<Cell id="NOR:Cell:2d4c7631" version="3">
+									<CellPrice id="NOR:FarePrice:1a0601e0" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>2110.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:b13db8e1"/>
+									<UserProfileRef ref="NOR:UserProfile:af448e3d"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:345min"/>
+								</Cell>
+								<Cell id="NOR:Cell:9b73f5fd" version="3">
+									<CellPrice id="NOR:FarePrice:da6edb76" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>2330.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:af448e3d"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:9bcf3e21"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:375min"/>
+								</Cell>
+								<Cell id="NOR:Cell:e4b51399" version="3">
+									<CellPrice id="NOR:FarePrice:945ddfee" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>2550.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:af448e3d"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:f99405ef"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:405min"/>
+								</Cell>
+								<!-- military -->
+								<Cell id="NOR:Cell:61a357d0" version="3">
+									<CellPrice id="NOR:FarePrice:d9251193" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>230.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:3b49dfaa"/>
+									<UserProfileRef ref="NOR:UserProfile:6c565b45"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:75min"/>
+								</Cell>
+								<Cell id="NOR:Cell:cdb33c12" version="3">
+									<CellPrice id="NOR:FarePrice:78543841" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>330.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:d5055a2f"/>
+									<UserProfileRef ref="NOR:UserProfile:6c565b45"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:105min"/>
+								</Cell>
+								<Cell id="NOR:Cell:666c2f66" version="3">
+									<CellPrice id="NOR:FarePrice:9fa5b95d" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>560.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:8f6dceb1"/>
+									<UserProfileRef ref="NOR:UserProfile:6c565b45"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:135min"/>
+								</Cell>
+								<Cell id="NOR:Cell:0dd84d9e" version="3">
+									<CellPrice id="NOR:FarePrice:57cb4261" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>780.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:3fcf8026"/>
+									<UserProfileRef ref="NOR:UserProfile:6c565b45"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:165min"/>
+								</Cell>
+								<Cell id="NOR:Cell:ffb25ca4" version="3">
+									<CellPrice id="NOR:FarePrice:6f6b9038" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1000.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:7b642b4d"/>
+									<UserProfileRef ref="NOR:UserProfile:6c565b45"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:195min"/>
+								</Cell>
+								<Cell id="NOR:Cell:9a0ff4a0" version="3">
+									<CellPrice id="NOR:FarePrice:9f641379" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1220.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:e3d9b89c"/>
+									<UserProfileRef ref="NOR:UserProfile:6c565b45"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:225min"/>
+								</Cell>
+								<Cell id="NOR:Cell:7097d527" version="3">
+									<CellPrice id="NOR:FarePrice:98c50d00" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1440.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:77104519"/>
+									<UserProfileRef ref="NOR:UserProfile:6c565b45"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:255min"/>
+								</Cell>
+								<Cell id="NOR:Cell:87967af6" version="3">
+									<CellPrice id="NOR:FarePrice:0d1b3b02" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1670.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:a364f7bc"/>
+									<UserProfileRef ref="NOR:UserProfile:6c565b45"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:285min"/>
+								</Cell>
+								<Cell id="NOR:Cell:bdcf5560" version="3">
+									<CellPrice id="NOR:FarePrice:4b709bc9" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>1890.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:042b9066"/>
+									<UserProfileRef ref="NOR:UserProfile:6c565b45"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:315min"/>
+								</Cell>
+								<Cell id="NOR:Cell:6855b3cd" version="3">
+									<CellPrice id="NOR:FarePrice:1086d28d" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>2110.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:b13db8e1"/>
+									<UserProfileRef ref="NOR:UserProfile:6c565b45"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:345min"/>
+								</Cell>
+								<Cell id="NOR:Cell:a96e7be4" version="3">
+									<CellPrice id="NOR:FarePrice:a1dfd770" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>2330.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:9bcf3e21"/>
+									<UserProfileRef ref="NOR:UserProfile:6c565b45"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:375min"/>
+								</Cell>
+								<Cell id="NOR:Cell:859f0647" version="3">
+									<CellPrice id="NOR:FarePrice:118c2a72" version="3">
+										<validityConditions>
+											<ValidBetween>
+												<FromDate>2026-01-01T00:00:00+01:00</FromDate>
+											</ValidBetween>
+										</validityConditions>
+										<Amount>2550.00</Amount>
+										<Currency>NOK</Currency>
+									</CellPrice>
+									<UserProfileRef ref="NOR:UserProfile:6c565b45"/>
+									<GeographicalIntervalRef ref="NOR:GeographicalInterval:f99405ef"/>
+									<TimeIntervalRef ref="NOR:TimeInterval:405min"/>
+								</Cell>
+							</cells>
+						</FareTable>
+					</fareTables>
+				</FareFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>
