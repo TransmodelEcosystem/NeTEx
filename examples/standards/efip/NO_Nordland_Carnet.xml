@@ -64,7 +64,7 @@ EFIP Fare Product Types in this example: ST-5 (number of zones crossed), SCT-6 (
 -->
 <PublicationDelivery version="2.1" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.openis.net/gml/3.2" xmlns="http://www.netex.org.uk/netex">
     <PublicationTimestamp>2026-09-23T12:50:01.827478</PublicationTimestamp>
-    <ParticipantRef>Nordland Fylkeskommune</ParticipantRef>
+    <ParticipantRef>NordlandFylkeskommune</ParticipantRef>
     <dataObjects>
         <CompositeFrame id="NOR:CompositeFrame:EU_PI_FARE_PRODUCT_carnet_example" version="1">
             <FrameDefaults>
@@ -1684,7 +1684,8 @@ EFIP Fare Product Types in this example: ST-5 (number of zones crossed), SCT-6 (
                             </accessRightsInProduct>
                             <ProductType>tripCarnet</ProductType>
                             <!-- 10 single trips in the carnet -->
-                            <NumberOfUnits>10</NumberOfUnits>
+                            <Amount>10</Amount> <!-- Pending #1049 change to NumberOfUnits-->
+                            <!--  <NumberOfUnits>10</NumberOfUnits>--> 
                             <!-- TODO It would be nice to have a reference to the product or validable element that make up the carnet in the AmountOfPriceUnitProduct directly? Similar to PriceUnitRef, implement 
                                 in xsd with a choice so a product can have one or the other
                                 When the reference to the individual trip is just a generic reference in a FareStructureElement which is the only possibility now, it is somewhat difficult to find. Add something like:
