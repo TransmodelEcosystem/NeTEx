@@ -474,7 +474,7 @@ Rail transport, Roads and Road transport
 			<xsd:extension base="xsd:anyURI">
 				<xsd:attribute name="typeOfInfoLink">
 					<xsd:annotation>
-						<xsd:documentation>Functional classifcation of an info link.</xsd:documentation>
+						<xsd:documentation>Functional classification of an info link.</xsd:documentation>
 					</xsd:annotation>
 					<xsd:simpleType>
 						<xsd:list itemType="TypeOfInfoLinkEnumeration"/>
