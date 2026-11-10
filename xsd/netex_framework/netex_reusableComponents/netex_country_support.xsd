@@ -266,7 +266,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="cf">
 				<xsd:annotation>
-					<xsd:documentation>CEN tral African Republic.</xsd:documentation>
+					<xsd:documentation>Central African Republic.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="cg">
