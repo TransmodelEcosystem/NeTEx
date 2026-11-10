@@ -3,7 +3,7 @@
     <PublicationTimestamp>2026-10-01T11:49:49.535+02:00</PublicationTimestamp>
     <ParticipantRef>urn:uic:rics:1080</ParticipantRef>
     <Description>MANDATORY_DELIVERY</Description>
-    <DataObjects>
+    <dataObjects>
         <SiteFrame id="site_frame_2024.01">
             <stopPlaces>
                 <StopPlace id="urn:uic:stn:8015312">
@@ -4456,5 +4456,5 @@
                 </SalesOfferPackage>
             </salesOfferPackages>
         </FareFrame>
-    </DataObjects>
+    </dataObjects>
 </PublicationDelivery>
