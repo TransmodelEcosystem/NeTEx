@@ -497,7 +497,7 @@ Local train adapted for running in mountain railway lines.</xsd:documentation>
 			<xsd:enumeration value="railTaxi"/>
 			<xsd:enumeration value="railReplacementTaxi">
 				<xsd:annotation>
-					<xsd:documentation>+v2.1</xsd:documentation>
+					<xsd:documentation>A taxi that is part of a replacement of a train. +v2.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="bikeTaxi">
