@@ -98,7 +98,7 @@ Rail transport, Roads and ROAD transport
 	<!-- ===NETWORK RESTRICTIONs================================================= -->
 	<xsd:element name="NetworkRestriction" type="NetworkRestriction_VersionStructure" abstract="true" substitutionGroup="Assignment_Dummy">
 		<xsd:annotation>
-			<xsd:documentation>A constraint on use of a network of INFRASTRUCTURE POINTs and INFRASTUCTURE LINKs.</xsd:documentation>
+			<xsd:documentation>A constraint on use of a network of INFRASTRUCTURE POINTs and INFRASTRUCTURE LINKs.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="NetworkRestriction_VersionStructure" abstract="true">

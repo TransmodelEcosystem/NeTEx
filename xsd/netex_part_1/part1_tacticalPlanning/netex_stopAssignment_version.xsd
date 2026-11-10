@@ -224,7 +224,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:group name="PassengerStopAssignmentGroup">
 		<xsd:annotation>
-			<xsd:documentation>Elements for a PASSENGER STOP ASSIGNMENT. Either StopPlace(Ref) or Quay(Ref) must at least be present. Best practice is to always have at least the StopPlace(Ref). It is also prefered that the Ref are used and the Quay/StopPlace are defined on their own in the appropriate Frame.</xsd:documentation>
+			<xsd:documentation>Elements for a PASSENGER STOP ASSIGNMENT. Either StopPlace(Ref) or Quay(Ref) must at least be present. Best practice is to always have at least the StopPlace(Ref). It is also preferred that the Ref are used and the Quay/StopPlace are defined on their own in the appropriate Frame.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:choice minOccurs="0">
@@ -353,7 +353,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="IsAllowed" type="xsd:boolean" default="true" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether assigment permits or forbids any use of TRAIN COMPONENT at specifed stop. Default is true. +V2.0</xsd:documentation>
+					<xsd:documentation>Whether assignment permits or forbids any use of TRAIN COMPONENT at specified stop. Default is true. +V2.0</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="EntranceToVehicle" type="MultilingualString" minOccurs="0">

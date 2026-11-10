@@ -381,7 +381,7 @@
 			</xsd:element>
 			<xsd:element name="HeadroomForLuggage" type="LengthType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Height avilable for LUGGAGE</xsd:documentation>
+					<xsd:documentation>Height available for LUGGAGE</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="IsLockable" type="xsd:boolean" minOccurs="0">

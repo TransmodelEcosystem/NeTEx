@@ -665,7 +665,7 @@ Rail transport, Roads and Road transport
 			<xsd:enumeration value="automaticallySubstituteProduct"/>
 			<xsd:enumeration value="noAction">
 				<xsd:annotation>
-					<xsd:documentation>If user ceases to be eligible, automatically substitute them with an appropiate replacement product.</xsd:documentation>
+					<xsd:documentation>If user ceases to be eligible, automatically substitute them with an appropriate replacement product.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="other"/>
