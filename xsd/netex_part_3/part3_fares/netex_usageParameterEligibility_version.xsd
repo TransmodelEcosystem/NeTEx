@@ -466,7 +466,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="ParentRef" type="UsageParameterRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Parent USER PROFILE or GROUP TICKET for which this specifes the member rules.</xsd:documentation>
+					<xsd:documentation>Parent USER PROFILE or GROUP TICKET for which this specifies the member rules.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="UserProfileRef" minOccurs="0"/>
@@ -562,7 +562,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="ParentRef" type="UsageParameterRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Parent USER PROFILE or GROUP TICKET for which this specifes the member rules.</xsd:documentation>
+					<xsd:documentation>Parent USER PROFILE or GROUP TICKET for which this specifies the member rules.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MustReside" type="xsd:boolean" minOccurs="0">
@@ -573,7 +573,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="TopographicPlaceRef" minOccurs="0"/>
 			<xsd:element name="ResidenceType" type="ResidenceTypeEnumeration" default="live" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Classifcation of type of residence required, e.g. live, work, study.</xsd:documentation>
+					<xsd:documentation>Classification of type of residence required, e.g. live, work, study.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MinimumDuration" type="xsd:duration" minOccurs="0">
