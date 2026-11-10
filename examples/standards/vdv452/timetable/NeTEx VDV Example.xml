@@ -1077,6 +1077,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR405</ShortName>
+					<RegistrationNumber>FR - SW 100</RegistrationNumber>
 					<OperationalNumber>405</OperationalNumber>
 					<OperatorRef version="1" ref="OP_1"/>
 					<VehicleTypeRef version="1" ref="VT_22"/>
@@ -1120,6 +1121,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR281</ShortName>
+					<RegistrationNumber>FR - SW - 101</RegistrationNumber>
 					<OperationalNumber>281</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_23"/>
 				</Vehicle>
@@ -1129,6 +1131,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR282</ShortName>
+					<RegistrationNumber>FR - SW - 102</RegistrationNumber>
 					<OperationalNumber>282</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_23"/>
 				</Vehicle>
@@ -1158,6 +1161,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR283</ShortName>
+					<RegistrationNumber>FR - SW - 103</RegistrationNumber>
 					<OperationalNumber>283</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_23"/>
 				</Vehicle>
@@ -1167,6 +1171,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR 45</ShortName>
+					<RegistrationNumber>FR - SW - 104</RegistrationNumber>
 					<OperationalNumber>45</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_7"/>
 				</Vehicle>
@@ -1186,6 +1191,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR286</ShortName>
+					<RegistrationNumber>FR - SW - 105</RegistrationNumber>
 					<OperationalNumber>286</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_23"/>
 				</Vehicle>
@@ -1195,6 +1201,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR287</ShortName>
+					<RegistrationNumber>FR - SW - 108</RegistrationNumber>
 					<OperationalNumber>287</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_23"/>
 				</Vehicle>
@@ -1204,6 +1211,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR288</ShortName>
+					<RegistrationNumber>FR - SW - 106</RegistrationNumber>
 					<OperationalNumber>288</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_23"/>
 				</Vehicle>
@@ -1213,6 +1221,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR289</ShortName>
+					<RegistrationNumber>FR - SW - 107</RegistrationNumber>
 					<OperationalNumber>289</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_23"/>
 				</Vehicle>
@@ -1222,6 +1231,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR290</ShortName>
+					<RegistrationNumber>FR - SW - 109</RegistrationNumber>
 					<OperationalNumber>290</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_23"/>
 				</Vehicle>
@@ -1311,6 +1321,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR284</ShortName>
+					<RegistrationNumber>FR - SW - 111</RegistrationNumber>
 					<OperationalNumber>284</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_23"/>
 				</Vehicle>
@@ -1320,6 +1331,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR285</ShortName>
+					<RegistrationNumber>FR - SW - 112</RegistrationNumber>
 					<OperationalNumber>285</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_23"/>
 				</Vehicle>
@@ -1559,6 +1571,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR121</ShortName>
+					<RegistrationNumber>FR - SW - 117</RegistrationNumber>
 					<OperationalNumber>121</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_27"/>
 				</Vehicle>
@@ -1578,6 +1591,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR109</ShortName>
+					<RegistrationNumber>FR - SW - 113</RegistrationNumber>
 					<OperationalNumber>109</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_7"/>
 				</Vehicle>
@@ -1617,6 +1631,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR407</ShortName>
+					<RegistrationNumber>FR - SW - 114</RegistrationNumber>
 					<OperationalNumber>407</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_30"/>
 				</Vehicle>
@@ -1656,6 +1671,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR210</ShortName>
+					<RegistrationNumber>FR - SW - 115</RegistrationNumber>
 					<OperationalNumber>210</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_3"/>
 				</Vehicle>
@@ -1665,6 +1681,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR211</ShortName>
+					<RegistrationNumber>FR - SW - 116</RegistrationNumber>
 					<OperationalNumber>211</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_3"/>
 				</Vehicle>
@@ -1674,6 +1691,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR212</ShortName>
+					<RegistrationNumber>FR - SW - 172</RegistrationNumber>
 					<OperationalNumber>212</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_3"/>
 				</Vehicle>
@@ -1683,6 +1701,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR213</ShortName>
+					<RegistrationNumber>FR - SW - 118</RegistrationNumber>
 					<OperationalNumber>213</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_3"/>
 				</Vehicle>
@@ -1692,6 +1711,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR214</ShortName>
+					<RegistrationNumber>FR - SW - 119</RegistrationNumber>
 					<OperationalNumber>214</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_3"/>
 				</Vehicle>
@@ -1701,6 +1721,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR221</ShortName>
+					<RegistrationNumber>FR - SW - 120</RegistrationNumber>
 					<OperationalNumber>221</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_5"/>
 				</Vehicle>
@@ -1710,6 +1731,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR222</ShortName>
+					<RegistrationNumber>FR - SW - 121</RegistrationNumber>
 					<OperationalNumber>222</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_5"/>
 				</Vehicle>
@@ -1719,6 +1741,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR223</ShortName>
+					<RegistrationNumber>FR - SW - 122</RegistrationNumber>
 					<OperationalNumber>223</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_5"/>
 				</Vehicle>
@@ -1728,6 +1751,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR224</ShortName>
+					<RegistrationNumber>FR - SW - 123</RegistrationNumber>
 					<OperationalNumber>224</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_5"/>
 				</Vehicle>
@@ -1737,6 +1761,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR225</ShortName>
+					<RegistrationNumber>FR - SW - 124</RegistrationNumber>
 					<OperationalNumber>225</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_5"/>
 				</Vehicle>
@@ -1746,6 +1771,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR226</ShortName>
+					<RegistrationNumber>FR - SW - 125</RegistrationNumber>
 					<OperationalNumber>226</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_5"/>
 				</Vehicle>
@@ -1755,6 +1781,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR227</ShortName>
+					<RegistrationNumber>FR - SW - 126</RegistrationNumber>
 					<OperationalNumber>227</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_5"/>
 				</Vehicle>
@@ -1764,6 +1791,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR228</ShortName>
+					<RegistrationNumber>FR - SW - 127</RegistrationNumber>
 					<OperationalNumber>228</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_5"/>
 				</Vehicle>
@@ -1773,6 +1801,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR229</ShortName>
+					<RegistrationNumber>FR - SW - 128</RegistrationNumber>
 					<OperationalNumber>229</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_5"/>
 				</Vehicle>
@@ -1782,6 +1811,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR230</ShortName>
+					<RegistrationNumber>FR - SW - 129</RegistrationNumber>
 					<OperationalNumber>230</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_5"/>
 				</Vehicle>
@@ -1791,6 +1821,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR231</ShortName>
+					<RegistrationNumber>FR - SW - 130</RegistrationNumber>
 					<OperationalNumber>231</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_5"/>
 				</Vehicle>
@@ -1800,6 +1831,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR241</ShortName>
+					<RegistrationNumber>FR - SW - 131</RegistrationNumber>
 					<OperationalNumber>241</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1809,6 +1841,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR242</ShortName>
+					<RegistrationNumber>FR - SW - 132</RegistrationNumber>
 					<OperationalNumber>242</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1818,6 +1851,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR243</ShortName>
+					<RegistrationNumber>FR - SW - 133</RegistrationNumber>
 					<OperationalNumber>243</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1827,6 +1861,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR244</ShortName>
+					<RegistrationNumber>FR - SW - 134</RegistrationNumber>
 					<OperationalNumber>244</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1836,6 +1871,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR245</ShortName>
+					<RegistrationNumber>FR - SW - 135</RegistrationNumber>
 					<OperationalNumber>245</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1845,6 +1881,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR246</ShortName>
+					<RegistrationNumber>FR - SW - 136</RegistrationNumber>
 					<OperationalNumber>246</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1854,6 +1891,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR247</ShortName>
+					<RegistrationNumber>FR - SW - 137</RegistrationNumber>
 					<OperationalNumber>247</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1863,6 +1901,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR248</ShortName>
+					<RegistrationNumber>FR - SW - 138</RegistrationNumber>
 					<OperationalNumber>248</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1872,6 +1911,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR249</ShortName>
+					<RegistrationNumber>FR - SW - 139</RegistrationNumber>
 					<OperationalNumber>249</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1881,6 +1921,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR250</ShortName>
+					<RegistrationNumber>FR - SW - 140</RegistrationNumber>
 					<OperationalNumber>250</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1890,6 +1931,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR251</ShortName>
+					<RegistrationNumber>FR - SW - 141</RegistrationNumber>
 					<OperationalNumber>251</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1899,6 +1941,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR252</ShortName>
+					<RegistrationNumber>FR - SW - 142</RegistrationNumber>
 					<OperationalNumber>252</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1908,6 +1951,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR253</ShortName>
+					<RegistrationNumber>FR - SW - 143</RegistrationNumber>
 					<OperationalNumber>253</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1917,6 +1961,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR254</ShortName>
+					<RegistrationNumber>FR - SW - 144</RegistrationNumber>
 					<OperationalNumber>254</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1926,6 +1971,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR255</ShortName>
+					<RegistrationNumber>FR - SW - 145</RegistrationNumber>
 					<OperationalNumber>255</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1935,6 +1981,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR256</ShortName>
+					<RegistrationNumber>FR - SW - 146</RegistrationNumber>
 					<OperationalNumber>256</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1944,6 +1991,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR257</ShortName>
+					<RegistrationNumber>FR - SW - 147</RegistrationNumber>
 					<OperationalNumber>257</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1953,6 +2001,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR258</ShortName>
+					<RegistrationNumber>FR - SW - 148</RegistrationNumber>
 					<OperationalNumber>258</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1962,6 +2011,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR259</ShortName>
+					<RegistrationNumber>FR - SW - 149</RegistrationNumber>
 					<OperationalNumber>259</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1971,6 +2021,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR260</ShortName>
+					<RegistrationNumber>FR - SW - 150</RegistrationNumber>
 					<OperationalNumber>260</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -1980,6 +2031,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR261</ShortName>
+					<RegistrationNumber>FR - SW - 155</RegistrationNumber>
 					<OperationalNumber>261</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -2019,6 +2071,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR262</ShortName>
+					<RegistrationNumber>FR - SW - 154</RegistrationNumber>
 					<OperationalNumber>262</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -2028,6 +2081,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR263</ShortName>
+					<RegistrationNumber>FR - SW - 156</RegistrationNumber>
 					<OperationalNumber>263</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -2037,6 +2091,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR264</ShortName>
+					<RegistrationNumber>FR - SW - 157</RegistrationNumber>
 					<OperationalNumber>264</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -2046,6 +2101,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR265</ShortName>
+					<RegistrationNumber>FR - SW - 158</RegistrationNumber>
 					<OperationalNumber>265</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -2055,6 +2111,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR266</ShortName>
+					<RegistrationNumber>FR - SW - 159</RegistrationNumber>
 					<OperationalNumber>266</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_4"/>
 				</Vehicle>
@@ -2064,6 +2121,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR271</ShortName>
+					<RegistrationNumber>FR - SW - 160</RegistrationNumber>
 					<OperationalNumber>271</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_23"/>
 				</Vehicle>
@@ -2073,6 +2131,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR273</ShortName>
+					<RegistrationNumber>FR - SW - 161</RegistrationNumber>
 					<OperationalNumber>273</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_23"/>
 				</Vehicle>
@@ -2082,6 +2141,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR274</ShortName>
+					<RegistrationNumber>FR - SW - 162</RegistrationNumber>
 					<OperationalNumber>274</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_23"/>
 				</Vehicle>
@@ -2091,6 +2151,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR275</ShortName>
+					<RegistrationNumber>FR - SW - 163</RegistrationNumber>
 					<OperationalNumber>275</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_23"/>
 				</Vehicle>
@@ -2100,6 +2161,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR276</ShortName>
+					<RegistrationNumber>FR - SW - 164</RegistrationNumber>
 					<OperationalNumber>276</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_23"/>
 				</Vehicle>
@@ -2109,6 +2171,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR277</ShortName>
+					<RegistrationNumber>FR - SW - 165</RegistrationNumber>
 					<OperationalNumber>277</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_23"/>
 				</Vehicle>
@@ -2118,6 +2181,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR278</ShortName>
+					<RegistrationNumber>FR - SW - 167</RegistrationNumber>
 					<OperationalNumber>278</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_23"/>
 				</Vehicle>
@@ -2127,6 +2191,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR279</ShortName>
+					<RegistrationNumber>FR - SW - 168</RegistrationNumber>
 					<OperationalNumber>279</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_23"/>
 				</Vehicle>
@@ -2136,6 +2201,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR 56</ShortName>
+					<RegistrationNumber>FR - SW - 169</RegistrationNumber>
 					<OperationalNumber>56</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_7"/>
 				</Vehicle>
@@ -2255,6 +2321,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR100</ShortName>
+					<RegistrationNumber>FR - SW - 170</RegistrationNumber>
 					<OperationalNumber>100</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_29"/>
 				</Vehicle>
@@ -2333,6 +2400,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>2002</ShortName>
+					<RegistrationNumber>Pseudozählfahrzeug 2</RegistrationNumber>
 					<OperationalNumber>2002</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_125"/>
 				</Vehicle>
@@ -2342,6 +2410,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>2003</ShortName>
+					<RegistrationNumber>Pseudozählfahrzeug 3</RegistrationNumber>
 					<OperationalNumber>2003</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_125"/>
 				</Vehicle>
@@ -2351,6 +2420,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>2004</ShortName>
+					<RegistrationNumber>Pseudozählfahrzeug 4</RegistrationNumber>
 					<OperationalNumber>2004</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_125"/>
 				</Vehicle>
@@ -2360,6 +2430,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>2005</ShortName>
+					<RegistrationNumber>Pseudozählfahrzeug 5</RegistrationNumber>
 					<OperationalNumber>2005</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_125"/>
 				</Vehicle>
@@ -2369,6 +2440,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>3001</ShortName>
+					<RegistrationNumber>Pseudozählfahrzeug 6</RegistrationNumber>
 					<OperationalNumber>3001</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_125"/>
 				</Vehicle>
@@ -2378,6 +2450,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>3002</ShortName>
+					<RegistrationNumber>Pseudozählfahrzeug 7</RegistrationNumber>
 					<OperationalNumber>3002</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_125"/>
 				</Vehicle>
@@ -2387,6 +2460,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>3003</ShortName>
+					<RegistrationNumber>Pseudozählfahrzeug 8</RegistrationNumber>
 					<OperationalNumber>3003</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_125"/>
 				</Vehicle>
@@ -2396,6 +2470,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>3004</ShortName>
+					<RegistrationNumber>Pseudozählfahrzeug 9</RegistrationNumber>
 					<OperationalNumber>3004</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_125"/>
 				</Vehicle>
@@ -2405,6 +2480,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>3005</ShortName>
+					<RegistrationNumber>Pseudozählfahrzeug 10</RegistrationNumber>
 					<OperationalNumber>3005</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_125"/>
 				</Vehicle>
@@ -2444,6 +2520,7 @@
 					</privateCodes>
 					<Name/>
 					<ShortName>STR205</ShortName>
+					<RegistrationNumber>FR - SW - 171</RegistrationNumber>
 					<OperationalNumber>205</OperationalNumber>
 					<VehicleTypeRef version="1" ref="VT_7"/>
 				</Vehicle>
