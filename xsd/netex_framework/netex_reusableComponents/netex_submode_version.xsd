@@ -308,7 +308,7 @@ Local train adapted for running in mountain railway lines.</xsd:documentation>
 			<xsd:enumeration value="railReplacementBus"/>
 			<xsd:enumeration value="metroReplacementBus">
 				<xsd:annotation>
-					<xsd:documentation>+v2.1</xsd:documentation>
+					<xsd:documentation>A bus that replaces a metro. +v2.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="tramReplacementBus">
