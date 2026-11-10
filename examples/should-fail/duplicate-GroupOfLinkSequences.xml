@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+	<PublicationTimestamp>2020-01-01T12:00:00Z</PublicationTimestamp>
+	<ParticipantRef>TEST</ParticipantRef>
+	<dataObjects>
+		<ResourceFrame version="1.0" id="TEST:ResourceFrame:1">
+			<groupsOfEntities>
+				<GroupOfLinkSequences version="1.0" id="TEST:GroupOfLinkSequences:1"/>
+				<GroupOfLinkSequences version="1.0" id="TEST:GroupOfLinkSequences:1"/>
+			</groupsOfEntities>
+		</ResourceFrame>
+	</dataObjects>
+</PublicationDelivery>

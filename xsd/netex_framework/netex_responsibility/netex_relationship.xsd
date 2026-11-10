@@ -63,7 +63,7 @@ Rail transport, Roads and Road transport
 		<xsd:restriction base="xsd:NMTOKEN">
 			<xsd:enumeration value="all">
 				<xsd:annotation>
-					<xsd:documentation>This incldues definitions of one ore more new entities.</xsd:documentation>
+					<xsd:documentation>This includes definitions of one or more new entities.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="changesOnly">

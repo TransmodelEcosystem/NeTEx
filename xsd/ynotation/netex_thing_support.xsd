@@ -124,7 +124,7 @@
 				<xsd:sequence>
 					<xsd:element ref="TypeOfThingRef" minOccurs="0" maxOccurs="unbounded">
 						<xsd:annotation>
-							<xsd:documentation>Refernce to a TYPE OF THING.</xsd:documentation>
+							<xsd:documentation>Reference to a TYPE OF THING.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
