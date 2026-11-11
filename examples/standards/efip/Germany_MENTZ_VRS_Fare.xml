@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Rheinlandtarif Fare Example
 The Rheinlandtarif is a joint fare system between authorities
 - VRS: Verkehrsverbund Rhein-Sieg
@@ -7,7 +7,7 @@ The fare system is based on a zone to zone relation matrix. Each relation is ass
 This example has been created manually.
 
 -->
-<PublicationDelivery xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xmlns="http://www.netex.org.uk/netex" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+<PublicationDelivery xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.netex.org.uk/netex" version="1.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
 	<PublicationTimestamp>2026-10-01T18:16:16.8950233Z</PublicationTimestamp>
 	<ParticipantRef>DIVA_Fares</ParticipantRef>
 	<Description>NeTEx fare export for tariff RLT_2026</Description>
@@ -40,7 +40,7 @@ This example has been created manually.
 					</validityConditions>
 					<Name>Rheinlandtarif Resources</Name>
 					<TypeOfFrameRef ref="efp:TypeOfFrame:EU_FP_COMMON" versionRef="efp:v1.0"/>
-					<typesOfValue>						
+					<typesOfValue>
 						<!-- different types of fare zones -->
 						<TypeOfZone id="TypeOfZone:NormalZone" version="1">
 							<Name>normale Zone</Name>
