@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Rheinlandtarif Fare Example
+The Rheinlandtarif is a joint fare system between authorities
+- VRS: Verkehrsverbund Rhein-Sieg
+- AVV: Aachener Verkehrsverbund
+The fare system is based on a zone to zone relation matrix. Each relation is associated to a fare level. Ticket price depends on the fare level.
+This example has been created manually.
+
+-->
+<PublicationDelivery xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xmlns="http://www.netex.org.uk/netex" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2026-10-01T18:16:16.8950233Z</PublicationTimestamp>
+	<ParticipantRef>DIVA_Fares</ParticipantRef>
+	<Description>NeTEx fare export for tariff RLT_2026</Description>
+	<dataObjects>
+		<CompositeFrame id="CompositeFrame:RLT_2026" version="1">
+			<validityConditions>
+				<ValidBetween>
+					<FromDate>2026-05-31T22:00:00</FromDate>
+					<!-- empty ToDate means "until further notice" -->
+				</ValidBetween>
+			</validityConditions>
+			<Name>Rheinlandtarif</Name>
+			<TypeOfFrameRef ref="efp:TypeOfFrame:EU_FP_FARE_OFFER" versionRef="efp:v1.0"/>
+			<codespaces>
+				<Codespace id="vrs">
+					<Xmlns>de:vrs</Xmlns>
+					<XmlnsUrl>https://www.vrs.de/</XmlnsUrl>
+					<Description>Verkehrsverbund Rhein-Sieg</Description>
+				</Codespace>
+			</codespaces>
+			<FrameDefaults>
+				<DefaultCodespaceRef ref="vrs"/>
+			</FrameDefaults>
+			<frames>
+				<ResourceFrame id="ResourceFrame:RLT_2026" version="1">
+					<validityConditions>
+						<ValidBetween>
+							<FromDate>2026-05-31T22:00:00</FromDate>
+						</ValidBetween>
+					</validityConditions>
+					<Name>Rheinlandtarif Resources</Name>
+					<TypeOfFrameRef ref="efp:TypeOfFrame:EU_FP_COMMON" versionRef="efp:v1.0"/>
+					<typesOfValue>						
+						<!-- different types of fare zones -->
+						<TypeOfZone id="TypeOfZone:NormalZone" version="1">
+							<Name>normale Zone</Name>
+						</TypeOfZone>
+						<TypeOfZone id="TypeOfZone:NeutralZone" version="1">
+							<Name>neutrale TZone</Name>
+						</TypeOfZone>
+						<TypeOfZone id="TypeOfZone:ShortDistanceZone" version="1">
+							<Name>Kurzstreckenzone</Name>
+						</TypeOfZone>
+						<TypeOfZone id="TypeOfZone:FareArea" version="1">
+							<Name>Tarifgebiet</Name>
+						</TypeOfZone>
+						<TypeOfZone id="TypeOfZone:CityZone" version="1">
+							<Name>City Zone</Name>
+						</TypeOfZone>
+						<TypeOfZone id="TypeOfZone:Network" version="1">
+							<Name>Netz</Name>
+						</TypeOfZone>
+					</typesOfValue>
+					<organisations>
+						<Authority id="Authority:VRR" version="1">
+							<PublicCode>VRR</PublicCode>
+							<Name>VERKEHRSVERBUND RHEIN-RUHR AÖR</Name>
+							<ShortName>VRR</ShortName>
+							<Description>Transport authority VRR</Description>
+						</Authority>
+						<Authority id="Authority:VRS" version="1">
+							<PublicCode>VRS</PublicCode>
+							<Name>Verkehrsverbund Rhein-Sieg GmbH</Name>
+							<ShortName>VRS</ShortName>
+							<Description>Transport authority VRS</Description>
+						</Authority>
+						<Authority id="Authority:AVV" version="1">
+							<PublicCode>AVV</PublicCode>
+							<Name>Aachener Verkehrsverbund</Name>
+							<ShortName>AVV</ShortName>
+							<Description>Transport authority AVV</Description>
+						</Authority>
+					</organisations>
+				</ResourceFrame>
+				<FareFrame id="FareFrame:RLT_2026_structure" version="1">
+					<validityConditions>
+						<ValidBetween>
+							<FromDate>2026-05-31T22:00:00</FromDate>
+						</ValidBetween>
+					</validityConditions>
+					<Name>Rheinlandtarif</Name>
+					<Description>Structure frame for fare zones, products and tariff structure.</Description>
+					<TypeOfFrameRef ref="efp:TypeOfFrame:EU_FP_FARE_PRODUCT" versionRef="efp:v1.0"/>
+					<fareZones>
+						<FareZone id="FareZone:FA2100" version="1">
+							<Name>Köln</Name>
+							<ShortName>2100</ShortName>
+							<PrivateCode>2100</PrivateCode>
+							<types>
+								<TypeOfZoneRef ref="TypeOfZone:FareArea" version="1"/>
+							</types>
+							<PublicCode>2100</PublicCode>
+							<ZoneTopology>tiled</ZoneTopology>
+							<ScopingMethod>explicitStops</ScopingMethod>
+						</FareZone>
+						<FareZone id="FareZone:FA2200" version="1">
+							<Name>Leverkusen</Name>
+							<ShortName>2200</ShortName>
+							<PrivateCode>2200</PrivateCode>
+							<types>
+								<TypeOfZoneRef ref="TypeOfZone:FareArea" version="1"/>
+							</types>
+							<PublicCode>2200</PublicCode>
+							<ZoneTopology>tiled</ZoneTopology>
+							<ScopingMethod>explicitStops</ScopingMethod>
+						</FareZone>
+						<FareZone id="FareZone:FA2310" version="1">
+							<Name>Bergisch-Gladbach</Name>
+							<ShortName>2310</ShortName>
+							<PrivateCode>2310</PrivateCode>
+							<types>
+								<TypeOfZoneRef ref="TypeOfZone:FareArea" version="1"/>
+							</types>
+							<PublicCode>2310</PublicCode>
+							<ZoneTopology>tiled</ZoneTopology>
+							<ScopingMethod>explicitStops</ScopingMethod>
+						</FareZone>
+						<FareZone id="FareZone:FA2600" version="1">
+							<Name>Bonn</Name>
+							<ShortName>2600</ShortName>
+							<PrivateCode>2600</PrivateCode>
+							<types>
+								<TypeOfZoneRef ref="TypeOfZone:FareArea" version="1"/>
+							</types>
+							<PublicCode>2600</PublicCode>
+							<ZoneTopology>tiled</ZoneTopology>
+							<ScopingMethod>explicitStops</ScopingMethod>
+						</FareZone>
+						<FareZone id="FareZone:FA3100" version="1">
+							<Name>Aachen</Name>
+							<ShortName>Aachen</ShortName>
+							<PrivateCode>3100</PrivateCode>
+							<types>
+								<TypeOfZoneRef ref="TypeOfZone:FareArea" version="1"/>
+							</types>
+							<PublicCode>3100</PublicCode>
+							<ZoneTopology>tiled</ZoneTopology>
+							<ScopingMethod>explicitStops</ScopingMethod>
+						</FareZone>
+					</fareZones>
+					<groupsOfDistanceMatrixElements>
+						<GroupOfDistanceMatrixElements id="GroupOfDistanceMatrixElements:110" version="1">
+							<Name>Preisstufe 1a relations</Name>
+							<Description>All matrix elements for fare unit 110</Description>
+							<members>
+								<DistanceMatrixElement id="DistanceMatrixElement:2200_2200_R511010" version="1">
+									<Name>2200_2200_R511010</Name>
+									<Description>FA2200 to FA2200</Description>
+									<StartTariffZoneRef ref="FareZone:FA2200" version="1"/>
+									<EndTariffZoneRef ref="FareZone:FA2200" version="1"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="DistanceMatrixElement:2310_2310_R511020" version="1">
+									<Name>2310_2310_R511020</Name>
+									<Description>FA2310 to FA2310</Description>
+									<StartTariffZoneRef ref="FareZone:FA2310" version="1"/>
+									<EndTariffZoneRef ref="FareZone:FA2310" version="1"/>
+								</DistanceMatrixElement>
+								<!-- in reality many more... -->
+							</members>
+						</GroupOfDistanceMatrixElements>
+						<GroupOfDistanceMatrixElements id="GroupOfDistanceMatrixElements:115" version="1">
+							<Name>Preisstufe 1a Mobilpass relations</Name>
+							<Description>All matrix elements for fare unit 115</Description>
+							<members>
+								<DistanceMatrixElement id="DistanceMatrixElement:2200_2200_R511010_1" version="1">
+									<Name>2200_2200_R511010_1</Name>
+									<Description>FA2200 to FA2200</Description>
+									<StartTariffZoneRef ref="FareZone:FA2200" version="1"/>
+									<EndTariffZoneRef ref="FareZone:FA2200" version="1"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="DistanceMatrixElement:2310_2310_R511020_1" version="1">
+									<Name>2310_2310_R511020_1</Name>
+									<Description>FA2310 to FA2310</Description>
+									<StartTariffZoneRef ref="FareZone:FA2310" version="1"/>
+									<EndTariffZoneRef ref="FareZone:FA2310" version="1"/>
+								</DistanceMatrixElement>
+							</members>
+						</GroupOfDistanceMatrixElements>
+						<GroupOfDistanceMatrixElements id="GroupOfDistanceMatrixElements:120" version="1">
+							<Name>Preisstufe 1b relations</Name>
+							<Description>All matrix elements for fare unit 120</Description>
+							<members>
+								<DistanceMatrixElement id="DistanceMatrixElement:2100_2100_R512010" version="1">
+									<Name>2100_2100_R512010</Name>
+									<Description>FA2100 to FA2100</Description>
+									<StartTariffZoneRef ref="FareZone:FA2100" version="1"/>
+									<EndTariffZoneRef ref="FareZone:FA2100" version="1"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="DistanceMatrixElement:2600_2600_R512020" version="1">
+									<Name>2600_2600_R512020</Name>
+									<Description>FA2600 to FA2600</Description>
+									<StartTariffZoneRef ref="FareZone:FA2600" version="1"/>
+									<EndTariffZoneRef ref="FareZone:FA2600" version="1"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="DistanceMatrixElement:3100_3100_R512030" version="1">
+									<Name>3100_3100_R512030</Name>
+									<Description>FA3100 to FA3100</Description>
+									<StartTariffZoneRef ref="FareZone:FA3100" version="1"/>
+									<EndTariffZoneRef ref="FareZone:FA3100" version="1"/>
+								</DistanceMatrixElement>
+							</members>
+						</GroupOfDistanceMatrixElements>
+						<GroupOfDistanceMatrixElements id="GroupOfDistanceMatrixElements:125" version="1">
+							<Name>Preisstufe 1b Mobilpass relations</Name>
+							<Description>All matrix elements for fare unit 125</Description>
+							<members>
+								<DistanceMatrixElement id="DistanceMatrixElement:2100_2100_R512010_1" version="1">
+									<Name>2100_2100_R512010_1</Name>
+									<Description>FA2100 to FA2100</Description>
+									<StartTariffZoneRef ref="FareZone:FA2100" version="1"/>
+									<EndTariffZoneRef ref="FareZone:FA2100" version="1"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement id="DistanceMatrixElement:2600_2600_R512020_1" version="1">
+									<Name>2600_2600_R512020_1</Name>
+									<Description>FA2600 to FA2600</Description>
+									<StartTariffZoneRef ref="FareZone:FA2600" version="1"/>
+									<EndTariffZoneRef ref="FareZone:FA2600" version="1"/>
+								</DistanceMatrixElement>
+							</members>
+						</GroupOfDistanceMatrixElements>
+					</groupsOfDistanceMatrixElements>
+					<fareStructureElements>
+						<!-- Fare structure elements for the different fare units -->
+						<!-- later to be used as validable elements describing the access to public transport services -->
+						<FareStructureElement id="FareStructureElement:fareunit_110" version="1">
+							<Name>Preisstufe 1a</Name>
+							<TypeOfFareStructureElementRef ref="efp:TypeOfFareStructureElement:efp_access" versionRef="efp:v1.0"/>
+							<GroupOfDistanceMatrixElementsRef ref="GroupOfDistanceMatrixElements:110" version="1"/>
+						</FareStructureElement>
+						<FareStructureElement id="FareStructureElement:fareunit_115" version="1">
+							<Name>Preisstufe 1a Mobilpass</Name>
+							<TypeOfFareStructureElementRef ref="efp:TypeOfFareStructureElement:efp_access" versionRef="efp:v1.0"/>
+							<GroupOfDistanceMatrixElementsRef ref="GroupOfDistanceMatrixElements:115" version="1"/>
+						</FareStructureElement>
+						<FareStructureElement id="FareStructureElement:fareunit_120" version="1">
+							<Name>Preisstufe 1b</Name>
+							<TypeOfFareStructureElementRef ref="efp:TypeOfFareStructureElement:efp_access" versionRef="efp:v1.0"/>
+							<GroupOfDistanceMatrixElementsRef ref="GroupOfDistanceMatrixElements:120" version="1"/>
+						</FareStructureElement>
+						<FareStructureElement id="FareStructureElement:fareunit_125" version="1">
+							<Name>Preisstufe 1b Mobilpass</Name>
+							<TypeOfFareStructureElementRef ref="efp:TypeOfFareStructureElement:efp_access" versionRef="efp:v1.0"/>
+							<GroupOfDistanceMatrixElementsRef ref="GroupOfDistanceMatrixElements:125" version="1"/>
+						</FareStructureElement>
+						<!-- Tickets may be used by several person groups / user profiles -->
+						<!-- We therefore generate one fare structure element for each combination that is actually used in tickets -->
+						<!-- later to be used as validable elements describing the eligibility of passengers for a ticket -->
+						<FareStructureElement id="FareStructureElement:UserProfile_1" version="1">
+							<Name>Erwachsene</Name>
+							<TypeOfFareStructureElementRef ref="efp:TypeOfFareStructureElement:efp_eligibility" versionRef="efp:v1.0"/>
+							<GenericParameterAssignment order="1" id="FareStructureElement:UserProfile_1_pa1" version="1">
+								<limitations>
+									<UserProfile id="UserProfile:1" version="1">
+										<Name>Erwachsene</Name>
+										<UserType>adult</UserType>
+									</UserProfile>
+								</limitations>
+							</GenericParameterAssignment>
+						</FareStructureElement>
+						<FareStructureElement id="FareStructureElement:UserProfile_2" version="1">
+							<Name>Kinder (6-14 Jahre)</Name>
+							<TypeOfFareStructureElementRef ref="efp:TypeOfFareStructureElement:efp_eligibility" versionRef="efp:v1.0"/>
+							<GenericParameterAssignment order="1" id="FareStructureElement:UserProfile_2_pa1" version="1">
+								<limitations>
+									<UserProfile id="UserProfile:2" version="1">
+										<Name>Kinder</Name>
+										<UserType>child</UserType>
+									</UserProfile>
+								</limitations>
+							</GenericParameterAssignment>
+						</FareStructureElement>
+						<FareStructureElement id="FareStructureElement:UserProfile_3_4_5" version="1">
+							<Name>Auszubildende, Schüler, Studenten</Name>
+							<TypeOfFareStructureElementRef ref="efp:TypeOfFareStructureElement:efp_eligibility" versionRef="efp:v1.0"/>
+							<GenericParameterAssignment order="1" id="FareStructureElement:UserProfile_3_4_5_pa1" version="1">
+								<!-- more than one limitation - we must say how they are combined -->
+								<LimitationGroupingType>XOR</LimitationGroupingType>
+								<limitations>
+									<UserProfile id="UserProfile:3" version="1">
+										<Name>Auszubildende</Name>
+										<UserType>student</UserType>
+									</UserProfile>
+									<UserProfile id="UserProfile:4" version="1">
+										<Name>Schüler</Name>
+										<UserType>schoolPupil</UserType>
+									</UserProfile>
+									<UserProfile id="UserProfile:5" version="1">
+										<Name>Studenten</Name>
+										<UserType>student</UserType>
+									</UserProfile>
+								</limitations>
+							</GenericParameterAssignment>
+						</FareStructureElement>
+						<!-- Rules relating to Conditions of travel -->
+						<FareStructureElement id="FareStructureElement:conditions_of_travel_1" version="1">
+							<Name>Conditions of Travel</Name>
+							<TypeOfFareStructureElementRef ref="efp:travel_conditions" versionRef="efp:v1.0"/>
+							<GenericParameterAssignment order="1" id="de:vvs:FareStructureElement:conditions_of_travel_1_pa" version="1">
+								<!-- more than one limitation: we need to say how they are combined. Here AND, as they must all be observed -->
+								<LimitationGroupingType>AND</LimitationGroupingType>
+								<limitations>
+									<RoundTrip id="1@conditions_of_travel@round_trip" version="1">
+										<Name>Round trip not allowed</Name>
+										<TripType>single</TripType>
+									</RoundTrip>
+									<Interchanging id="conditions_of_travel@interchanging" version="1">
+										<Name>Interchange allowed</Name>
+										<CanInterchange>true</CanInterchange>
+									</Interchanging>
+									<UsageValidityPeriod id="de:vvs:1@conditions_of_travel@round_trip" version="1">
+										<UsageTrigger>purchase</UsageTrigger>
+										<UsageEnd>standardDuration</UsageEnd>
+										<StandardDuration>PT3H</StandardDuration>
+									</UsageValidityPeriod>
+								</limitations>
+							</GenericParameterAssignment>
+						</FareStructureElement>
+					</fareStructureElements>
+					<tariffs>
+						<Tariff id="Tariff:RLT_2026" version="1">
+							<Name>Rheinlandtarif</Name>
+							<Description>Tariff RLT_2026</Description>
+							<PrivateCode>RLT_2026</PrivateCode>
+							<!-- Alas we can reference only one authority - it has not been foreseen that two authorities create a joint tariff -->
+							<AuthorityRef ref="Authority:VRS"/>
+							<TariffBasis>zoneToZone</TariffBasis>
+						</Tariff>
+					</tariffs>
+					<fareProducts>
+						<PreassignedFareProduct id="PreassignedFareProduct:E_110_10_1" version="1">
+							<Name>EinzelTicket Erwachsene Preisstufe 1a</Name>
+							<validableElements>
+								<ValidableElement id="ValidableElement:E_110" version="1">
+									<fareStructureElements>
+										<!-- access -->
+										<FareStructureElementRef ref="FareStructureElement:fareunit_110" version="1"/>
+										<!-- eligibility -->
+										<FareStructureElementRef ref="FareStructureElement:UserProfile_1" version="1"/>
+										<!-- conditions of travel-->
+										<FareStructureElementRef ref="FareStructureElement:conditions_of_travel_1" version="1"/>
+									</fareStructureElements>
+								</ValidableElement>
+							</validableElements>
+							<ProductType>singleTrip</ProductType>
+						</PreassignedFareProduct>
+						<PreassignedFareProduct id="PreassignedFareProduct:E_120_10_1" version="1">
+							<Name>EinzelTicket Erwachsene Preisstufe 1b</Name>
+							<validableElements>
+								<ValidableElement id="ValidableElement:E_120" version="1">
+									<fareStructureElements>
+										<!-- access -->
+										<FareStructureElementRef ref="FareStructureElement:fareunit_120" version="1"/>
+										<!-- eligibility -->
+										<FareStructureElementRef ref="FareStructureElement:UserProfile_1" version="1"/>
+										<!-- conditions of travel-->
+										<FareStructureElementRef ref="FareStructureElement:conditions_of_travel_1" version="1"/>
+									</fareStructureElements>
+								</ValidableElement>
+							</validableElements>
+							<ProductType>singleTrip</ProductType>
+						</PreassignedFareProduct>
+					</fareProducts>
+					<salesOfferPackages>
+						<SalesOfferPackage id="SalesOfferPackage:E_110_10_1_sop" version="1">
+							<Name>EinzelTicket Erwachsene 1a</Name>
+							<Description>Offer package for EinzelTicket Erwachsene 110</Description>
+							<salesOfferPackageElements>
+								<SalesOfferPackageElement id="SalesOfferPackageElement:E_110_10_1_sope" version="1">
+									<Name>EinzelTicket Erwachsene 1a</Name>
+									<RequiresValidation>true</RequiresValidation>
+									<FareProductRef ref="PreassignedFareProduct:E_110_10_1" version="1"/>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+						<SalesOfferPackage id="SalesOfferPackage:E_120_10_1_sop" version="1">
+							<Name>EinzelTicket Erwachsene 1b</Name>
+							<Description>Offer package for EinzelTicket Erwachsene 1b</Description>
+							<salesOfferPackageElements>
+								<SalesOfferPackageElement id="SalesOfferPackageElement:E_120_10_1_sope" version="1">
+									<Name>EinzelTicket Erwachsene 120</Name>
+									<RequiresValidation>true</RequiresValidation>
+									<FareProductRef ref="PreassignedFareProduct:E_120_10_1" version="1"/>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+					</salesOfferPackages>
+				</FareFrame>
+				<FareFrame id="FareFrame:RLT_2026_prices" version="1">
+					<validityConditions>
+						<ValidBetween>
+							<FromDate>2026-05-31T22:00:00</FromDate>
+						</ValidBetween>
+					</validityConditions>
+					<Name>Rheinlandtarif Prices</Name>
+					<Description>Fixed prices per preassigned fare product.</Description>
+					<TypeOfFrameRef ref="efp:TypeOfFrame:EU_FP_FARE_PRICE" versionRef="efp:v1.0"/>
+					<fareTables>
+						<FareTable id="FareTable:validity-area-relations" version="1">
+							<!-- fare table columns correspond to the fare levels (DE Preisstufe) -->
+							<columns>
+								<FareTableColumn id="FareTableColumn:110" version="1">
+									<Name>Preisstufe 1a</Name>
+								</FareTableColumn>
+								<FareTableColumn id="FareTableColumn:115" version="1">
+									<Name>Preisstufe 1a Mobilpass</Name>
+								</FareTableColumn>
+								<FareTableColumn id="FareTableColumn:120" version="1">
+									<Name>Preisstufe 1b</Name>
+								</FareTableColumn>
+								<FareTableColumn id="FareTableColumn:125" version="1">
+									<Name>Preisstufe 1a Mobilpass</Name>
+								</FareTableColumn>
+							</columns>
+							<!-- fare table rows correspond to the ticket types (DE Ticketarten) -->
+							<rows>
+								<FareTableRow id="FareTableRow:E" version="1">
+									<Name>Einzelticket Erwachsene</Name>
+								</FareTableRow>
+								<FareTableRow id="FareTableRow:EK" version="1">
+									<Name>Einzelticket Kinder</Name>
+								</FareTableRow>
+								<FareTableRow id="FareTableRow:EMP" version="1">
+									<Name>Einzelticket Mobilpass</Name>
+								</FareTableRow>
+							</rows>
+							<cells>
+								<Cell id="Cell:E_110_10_1" version="1">
+									<CellPrice>
+										<Amount>3.50</Amount>
+										<Currency>EUR</Currency>
+									</CellPrice>
+									<SalesOfferPackageRef ref="SalesOfferPackage:E_110_10_1_sop" version="1"/>
+									<ColumnRef ref="FareTableColumn:110" version="1"/>
+									<RowRef ref="FareTableRow:E" version="1"/>
+								</Cell>
+								<Cell id="Cell:E_120_10_1" version="1">
+									<Name>EinzelTicket Erwachsene 120</Name>
+									<CellPrice>
+										<Amount>4.00</Amount>
+										<Currency>EUR</Currency>
+									</CellPrice>
+									<SalesOfferPackageRef ref="SalesOfferPackage:E_120_10_1_sop" version="1"/>
+									<ColumnRef ref="FareTableColumn:120" version="1"/>
+									<RowRef ref="FareTableRow:E" version="1"/>
+								</Cell>
+							</cells>
+						</FareTable>
+					</fareTables>
+				</FareFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>
