@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+	<PublicationTimestamp>2020-01-01T12:00:00Z</PublicationTimestamp>
+	<ParticipantRef>TEST</ParticipantRef>
+	<dataObjects>
+		<ResourceFrame version="1.0" id="TEST:ResourceFrame:1">
+			<organisations>
+				<Authority version="1.0" id="TEST:Authority:1">
+					<Name>A</Name>
+					<ValidityPeriod id="TEST:ValidityPeriod:1" version="1.0">
+						<FromDate>2020-01-01T00:00:00Z</FromDate>
+					</ValidityPeriod>
+				</Authority>
+				<Operator version="1.0" id="TEST:Operator:1">
+					<Name>B</Name>
+					<ValidityPeriod id="TEST:ValidityPeriod:1" version="1.0">
+						<FromDate>2020-01-01T00:00:00Z</FromDate>
+					</ValidityPeriod>
+				</Operator>
+			</organisations>
+		</ResourceFrame>
+	</dataObjects>
+</PublicationDelivery>
