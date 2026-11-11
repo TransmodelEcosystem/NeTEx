@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.netex.org.uk/netex" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" id="netex_passengerInformationEquipment_version">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.netex.org.uk/netex" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" id="netex_passengerInformationEquipment_version">
 	<xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_mode_support.xsd"/>
 	<xsd:include schemaLocation="../part1_networkDescription/netex_line_support.xsd"/>
 	<xsd:include schemaLocation="../part1_ifopt/netex_ifopt_stopPlace_support.xsd"/>
