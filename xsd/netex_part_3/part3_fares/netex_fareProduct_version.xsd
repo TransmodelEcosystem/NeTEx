@@ -41,6 +41,8 @@
 				</Date>
 				<Date><Modified>2023-11-07</Modified>CR0544 Deprecate PrivateCode.
 				</Date>
+				<Date><Modified>2026-07-10</Modified>Add NumberOfUnits to AMOUNT OF PRICE UNIT; deprecate Amount (a number of units, not a monetary amount).
+				</Date>
 				<Description>
 					<p>NeTEx is a European CEN standard for the exchange of Public Transport data including timetables.</p>
 					<p>This sub-schema describes the FARE PRODUCT types.</p>
@@ -854,11 +856,18 @@ Rail transport, Roads and Road transport
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="PriceUnitRef" minOccurs="0"/>
-			<xsd:element name="Amount" type="xsd:decimal" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Number of units. If only one. Otherwise use TARIFF with FARE QUALITY FACTOR to specify a range</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
+			<xsd:choice minOccurs="0">
+				<xsd:element name="NumberOfUnits" type="xsd:decimal">
+					<xsd:annotation>
+						<xsd:documentation>Number of units, if there is only one. Otherwise use TARIFF with FARE QUALITY FACTOR to specify a range. +v2.1</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Amount" type="xsd:decimal">
+					<xsd:annotation>
+						<xsd:documentation>DEPRECATED - despite its name this is a number of units, not a monetary amount; use NumberOfUnits instead. -v2.1</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
 		</xsd:sequence>
 	</xsd:group>
 	<!-- ==== PREASSIGNED FARE PRODUC=============================================== -->
