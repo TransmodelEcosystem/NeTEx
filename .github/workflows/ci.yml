@@ -1,6 +1,8 @@
 name: CI
 
-on: push
+on:
+  push:
+  pull_request:
 
 permissions:
   contents: write
@@ -26,7 +28,11 @@ jobs:
       - name: Validate NeTEx XML examples
         run: ./.github/scripts/validate-examples.sh
 
+      # Only on push: a pull_request run from a fork gets a read-only token
+      # and cannot commit back. Target branches are still normalized by the
+      # push-triggered run that follows the merge.
       - name: Commit changes
+        if: github.event_name == 'push'
         uses: EndBug/add-and-commit@v9 # https://github.com/marketplace/actions/add-commit
         with:
           default_author: github_actions

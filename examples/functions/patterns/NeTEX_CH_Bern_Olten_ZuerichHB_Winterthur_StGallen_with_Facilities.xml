@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Zug 703
+     Bern (8507000)        		  05:29
+	 Olten (8500218) 		06:28 06:37
+	 Zürich HB (8503000)    06:55 06:57
+	 Winterthur (8506000)   07:06 07:08
+	 St. Gallen (8506302)   07:52
+with attributes
+-->
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2025-06-26T14:16:54+02:00</PublicationTimestamp>
+	<ParticipantRef>SBB-Prod</ParticipantRef>
+	<dataObjects>
+		<CompositeFrame id="ch:1:CompositeFrame:J26" version="1">
+			<ValidBetween>
+				<FromDate>2025-12-15T00:00:00</FromDate>
+				<ToDate>2026-12-14T23:59:59</ToDate>
+			</ValidBetween>
+			<frames>
+				<ResourceFrame id="ch:1:ResourceFrame:j26" version="1">
+					<responsibilitySets>
+						<ResponsibilitySet id="ch:1:sboid:100001" version="1">
+							<Name>SBB</Name>
+							<PrivateCode>SBB</PrivateCode>
+							<roles>
+								<ResponsibilityRoleAssignment id="ch:1:sboid:100001:1" version="1">
+									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+									<ResponsibleOrganisationRef ref="ch:1:sboid:100001" version="1"/>
+								</ResponsibilityRoleAssignment>
+								<ResponsibilityRoleAssignment id="ch:1:sboid:100001:2" version="1">
+									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<ResponsibleOrganisationRef ref="ch:1:sboid:100001" version="1"/>
+								</ResponsibilityRoleAssignment>
+							</roles>
+						</ResponsibilitySet>
+					</responsibilitySets>
+					<typesOfValue>
+						<ValueSet id="ch:1:ValueSet:TypeOfProductCategory" version="1" nameOfClass="TypeOfProductCategory">
+							<Name>ProductCategories</Name>
+							<values>
+								<TypeOfProductCategory id="ch:1:TypeOfProductCategory:IC" version="1">
+									<Name lang="de">Intercity</Name>
+									<ShortName>IC</ShortName>
+								</TypeOfProductCategory>
+							</values>
+						</ValueSet>
+						<ValueSet id="ch:1:ValueSet:PurposeOfJourneyPartition" version="1" nameOfClass="PurposeOfJourneyPartition">
+							<Name>Usage of JourneyPart</Name>
+							<values>
+								<PurposeOfJourneyPartition id="ch:1:PurposeOfJourneyPartition:FacilityChange" version="1">
+									<Name>Facility change</Name>
+								</PurposeOfJourneyPartition>
+							</values>
+						</ValueSet>
+						<ValueSet id="ch:1:ValueSet:TypeOfNotice" version="1" nameOfClass="TypeOfNotice">
+							<Name>Type Of Notice</Name>
+							<values>
+								<TypeOfNotice id="ch:1:TypeOfNotice:1" version="1">
+									<Name>Allgemeiner Hinweis</Name>
+									<PrivateCode>1</PrivateCode>
+								</TypeOfNotice>
+								<TypeOfNotice id="ch:1:TypeOfNotice:10" version="1">
+									<Name>Angebot</Name>
+									<PrivateCode>10</PrivateCode>
+								</TypeOfNotice>
+							</values>
+						</ValueSet>
+					</typesOfValue>
+					<organisations>
+						<Operator id="ch:1:sboid:100001" version="1">
+							<keyList>
+								<KeyValue>
+									<Key>GO</Key>
+									<Value>11</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>SBOID</Key>
+									<Value>ch:1:sboid:100001</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sboid">ch:1:sboid:100001&gt;</PrivateCode>
+								<PrivateCode type="go">11</PrivateCode>
+							</privateCodes>
+							<Name>Schweizer Bundesbahn</Name>
+							<ShortName>SBB</ShortName>
+						</Operator>
+					</organisations>
+				</ResourceFrame>
+				<SiteFrame id="ch:1:SiteFrame:j26" version="1">
+					<stopPlaces>
+						<StopPlace id="ch:1:sloid:7000" version="1">
+							<keyList>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:7000</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8507000</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sloid">x</PrivateCode>
+								<PrivateCode type="didok">8507000</PrivateCode>
+							</privateCodes>
+							<Name>Bern</Name>
+							<Centroid>
+								<Location>
+									<Longitude>7.4391308</Longitude>
+									<Latitude>46.9488322</Latitude>
+									<Altitude>540.2</Altitude>
+								</Location>
+							</Centroid>
+							<quays>
+								<Quay id="ch:1:sloid:7000:4:7" version="1">
+									<keyList>
+										<KeyValue>
+											<Key>sloid</Key>
+											<Value>ch:1:sloid:7000:4:7</Value>
+										</KeyValue>
+									</keyList>
+									<privateCodes>
+										<PrivateCode type="sloid">ch:1:sloid:7000:4:7</PrivateCode>
+									</privateCodes>
+									<Centroid>
+										<Location>
+											<Longitude>7.4391308</Longitude>
+											<Latitude>46.9488322</Latitude>
+											<Altitude>540.2</Altitude>
+										</Location>
+									</Centroid>
+									<PublicCode>1</PublicCode>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:sloid:218" version="1">
+							<keyList>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:218</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8500218</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sloid">ch:1:sloid:218</PrivateCode>
+								<PrivateCode type="didok">8500218</PrivateCode>
+							</privateCodes>
+							<Name>Olten</Name>
+							<Centroid>
+								<Location>
+									<Longitude>7.9084951</Longitude>
+									<Latitude>47.3526357</Latitude>
+									<Altitude>398</Altitude>
+								</Location>
+							</Centroid>
+							<quays>
+								<Quay id="ch:1:sloid:218:7" version="1">
+									<keyList>
+										<KeyValue>
+											<Key>SLOID</Key>
+											<Value>ch:1:sloid:218:7</Value>
+										</KeyValue>
+									</keyList>
+									<privateCodes>
+										<PrivateCode type="sloid">ch:1:sloid:218:7</PrivateCode>
+									</privateCodes>
+									<Centroid>
+										<Location>
+											<Longitude>7.9084951</Longitude>
+											<Latitude>47.3526357</Latitude>
+											<Altitude>398</Altitude>
+										</Location>
+									</Centroid>
+									<PublicCode>1</PublicCode>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:sloid:3000" version="1">
+							<keyList>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:3000</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8572203</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sloid">ch:1:sloid:3000</PrivateCode>
+								<PrivateCode type="didok">8572203</PrivateCode>
+							</privateCodes>
+							<Name>Zuerich_HB</Name>
+							<Centroid>
+								<Location>
+									<Longitude>8.54021234910</Longitude>
+									<Latitude>47.3781766</Latitude>
+									<Altitude>407.7</Altitude>
+								</Location>
+							</Centroid>
+							<quays>
+								<Quay id="ch:1:sloid:3000:501:33" version="1">
+									<keyList>
+										<KeyValue>
+											<Key>SLOID</Key>
+											<Value>ch:1:sloid:3000:501:33</Value>
+										</KeyValue>
+									</keyList>
+									<privateCodes>
+										<PrivateCode type="sloid">ch:1:sloid:3000:501:33</PrivateCode>
+									</privateCodes>
+									<Centroid>
+										<Location>
+											<Longitude>8.54021234910</Longitude>
+											<Latitude>47.3781766</Latitude>
+											<Altitude>407.7</Altitude>
+										</Location>
+									</Centroid>
+									<PublicCode>1</PublicCode>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:sloid:6000" version="1">
+							<keyList>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:6000</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8506000</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sloid">ch:1:sloid:6000</PrivateCode>
+								<PrivateCode type="didok">8506000</PrivateCode>
+							</privateCodes>
+							<Name>Winterthur</Name>
+							<Centroid>
+								<Location>
+									<Longitude>7.558970</Longitude>
+									<Latitude>47.4464565</Latitude>
+									<Altitude>426</Altitude>
+								</Location>
+							</Centroid>
+							<quays>
+								<Quay id="ch:1:sloid:6000:5" version="1">
+									<keyList>
+										<KeyValue>
+											<Key>SLOID</Key>
+											<Value>ch:1:sloid:6000:5</Value>
+										</KeyValue>
+									</keyList>
+									<privateCodes>
+										<PrivateCode type="sloid">ch:1:sloid:6000:5</PrivateCode>
+									</privateCodes>
+									<Centroid>
+										<Location>
+											<Longitude>7.558970</Longitude>
+											<Latitude>47.4464565</Latitude>
+											<Altitude>426</Altitude>
+										</Location>
+									</Centroid>
+									<PublicCode>1</PublicCode>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:sloid:6302" version="1">
+							<keyList>
+								<KeyValue>
+									<Key>SLOID</Key>
+									<Value>ch:1:sloid:6302</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>DIDOK</Key>
+									<Value>8506302</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sloid">ch:1:sloid:630</PrivateCode>
+								<PrivateCode type="didok">8506302</PrivateCode>
+							</privateCodes>
+							<Name>St_Gallen</Name>
+							<Centroid>
+								<Location>
+									<Longitude>9.3698966</Longitude>
+									<Latitude>47.4231789</Latitude>
+									<Altitude>669.6</Altitude>
+								</Location>
+							</Centroid>
+							<quays>
+								<Quay id="ch:1:sloid:6302:1" version="1">
+									<keyList>
+										<KeyValue>
+											<Key>SLOID</Key>
+											<Value>ch:1:sloid:6302</Value>
+										</KeyValue>
+									</keyList>
+									<privateCodes>
+										<PrivateCode type="sloid">ch:1:sloid:6302</PrivateCode>
+									</privateCodes>
+									<Centroid>
+										<Location>
+											<Longitude>9.3698966</Longitude>
+											<Latitude>47.4231789</Latitude>
+											<Altitude>669.6</Altitude>
+										</Location>
+									</Centroid>
+									<PublicCode>1</PublicCode>
+								</Quay>
+							</quays>
+						</StopPlace>
+					</stopPlaces>
+				</SiteFrame>
+				<ServiceFrame id="ch:1:ServiceFrame:j26" version="1">
+					<lines>
+						<Line id="ch:1:slnid:1024329" version="1" responsibilitySetRef="ch:1:sboid:100001:1">
+							<keyList>
+								<KeyValue>
+									<Key>SLNID</Key>
+									<Value>ch:1:slnid:1024329</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="slnid">ch:1:slnid:1024329</PrivateCode>
+							</privateCodes>
+							<Name>Bern_Olten_Zurich_HB_Winterthur_St_Gallen</Name>
+							<TransportMode>rail</TransportMode>
+							<TransportSubmode>
+								<RailSubmode>highSpeedRail</RailSubmode>
+							</TransportSubmode>
+							<PublicCode>IC8</PublicCode>
+							<OperatorRef ref="ch:1:sboid:100001" version="1"/>
+							<LineType>fixed</LineType>
+							<TypeOfProductCategoryRef ref="ch:1:TypeOfProductCategory:IC" version="1"/>
+						</Line>
+					</lines>
+					<scheduledStopPoints>
+						<ScheduledStopPoint id="ch:1:sloid:7000:4:7" version="1">
+							<Name>Bern</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:sloid:218:7" version="1">
+							<Name>Olten</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:sloid:3000:501:33" version="1">
+							<Name>Zuerich_HB</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:sloid:6000:5" version="1">
+							<Name>Winterthur</Name>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:sloid:6302:1" version="1">
+							<Name>St_Gallen</Name>
+						</ScheduledStopPoint>
+					</scheduledStopPoints>
+					<stopAssignments>
+						<PassengerStopAssignment id="ch:SBB:PSA:Bahnhof_Bern" version="1" order="1">
+							<ScheduledStopPointRef ref="ch:1:sloid:7000:4:7" version="1"/>
+							<StopPlaceRef ref="ch:1:sloid:7000" version="1"/>
+							<QuayRef ref="ch:1:sloid:7000:4:7" version="1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:SBB:PSA:Bahnhof_Olten" version="1" order="2">
+							<ScheduledStopPointRef ref="ch:1:sloid:218:7" version="1"/>
+							<StopPlaceRef ref="ch:1:sloid:218" version="1"/>
+							<QuayRef ref="ch:1:sloid:218:7" version="1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:SBB:PSA:Zuerich_HB" version="1" order="3">
+							<ScheduledStopPointRef ref="ch:1:sloid:3000:501:33" version="1"/>
+							<StopPlaceRef ref="ch:1:sloid:3000" version="1"/>
+							<QuayRef ref="ch:1:sloid:3000:501:33" version="1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:SBB:PSA:Winterthur" version="1" order="4">
+							<ScheduledStopPointRef ref="ch:1:sloid:6000:5" version="1"/>
+							<StopPlaceRef ref="ch:1:sloid:6000" version="1"/>
+							<QuayRef ref="ch:1:sloid:6000:5" version="1"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:SBB:PSA:St_Gallen" version="1" order="5">
+							<ScheduledStopPointRef ref="ch:1:sloid:6302:1" version="1"/>
+							<StopPlaceRef ref="ch:1:sloid:6302" version="1"/>
+							<QuayRef ref="ch:1:sloid:6302:1" version="1"/>
+						</PassengerStopAssignment>
+					</stopAssignments>
+					<timingLinks>
+						<TimingLink id="generated_1_1" version="1">
+							<Name>Bahn-2000 Strecke</Name>
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:7000:4:7"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:218:7"/>
+						</TimingLink>
+						<TimingLink id="generated_1_2" version="1">
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:218:7"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:3000:501:33"/>
+						</TimingLink>
+						<TimingLink id="generated_1_3" version="1">
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:3000:501:33"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:6000:5"/>
+						</TimingLink>
+						<TimingLink id="generated_1_4" version="1">
+							<FromPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:6000:5"/>
+							<ToPointRef nameOfRefClass="ScheduledStopPoint" version="1" ref="ch:1:sloid:6302:1"/>
+						</TimingLink>
+					</timingLinks>
+					<journeyPatterns>
+						<ServiceJourneyPattern id="ch:SBB:JourneyPattern:703-00" version="1">
+							<Name>Bern_Olten_Zurich_HB_Winterthur_St_Gallen</Name>
+							<RouteView>
+								<LineRef ref="ch:1:slnid:1024329" version="1"/>
+							</RouteView>
+							<DirectionType>outbound</DirectionType>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="ch:SBB:JP:703-00:1" version="1" order="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:7000:4:7" version="1"/>
+									<ForAlighting>false</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:SBB:JP:703-00:2" version="1" order="2">
+									<ScheduledStopPointRef ref="ch:1:sloid:218:7" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:SBB:JP:703-00:3" version="1" order="3">
+									<ScheduledStopPointRef ref="ch:1:sloid:3000:501:33" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:SBB:JP:703-00:4" version="1" order="4">
+									<ScheduledStopPointRef ref="ch:1:sloid:6000:5" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:SBB:JP:703-00:5" version="1" order="5">
+									<ScheduledStopPointRef ref="ch:1:sloid:6302:1" version="1"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>false</ForBoarding>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+						</ServiceJourneyPattern>
+					</journeyPatterns>
+					<timeDemandTypes>
+						<TimeDemandType id="ch:1:TDT:1" version="1">
+							<runTimes>
+								<JourneyRunTime id="jrt-1" version="1">
+									<TimingLinkRef ref="generated_1_1" version="1"/>
+									<RunTime>PT59M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="jrt-2" version="1">
+									<TimingLinkRef ref="generated_1_2" version="1"/>
+									<RunTime>PT18M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="jrt-3" version="1">
+									<TimingLinkRef ref="generated_1_3" version="1"/>
+									<RunTime>PT9M</RunTime>
+								</JourneyRunTime>
+								<JourneyRunTime id="jrt-4" version="1">
+									<TimingLinkRef ref="generated_1_4" version="1"/>
+									<RunTime>PT44M</RunTime>
+								</JourneyRunTime>
+							</runTimes>
+							<waitTimes>
+								<JourneyWaitTime id="jwt-1" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:218:7" version="1"/>
+									<WaitTime>PT9M</WaitTime>
+								</JourneyWaitTime>
+								<JourneyWaitTime id="jwt-1" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:3000:501:33" version="1"/>
+									<WaitTime>PT2M</WaitTime>
+								</JourneyWaitTime>
+								<JourneyWaitTime id="jwt-1" version="1">
+									<ScheduledStopPointRef ref="ch:1:sloid:6000:5" version="1"/>
+									<WaitTime>PT2M</WaitTime>
+								</JourneyWaitTime>
+							</waitTimes>
+						</TimeDemandType>
+					</timeDemandTypes>
+				</ServiceFrame>
+				<ServiceCalendarFrame id="ch:1:ServiceCalendarFrame:j26" version="1">
+					<validityConditions>
+						<AvailabilityCondition id="ch:1:AvailabilityCondition:j26" version="1">
+							<FromDate>2025-12-14T00:00:00</FromDate>
+							<ToDate>2026-12-13T23:59:59</ToDate>
+							<ValidDayBits>0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000</ValidDayBits>
+						</AvailabilityCondition>
+					</validityConditions>
+				</ServiceCalendarFrame>
+				<TimetableFrame id="ch:1:TimetableFrame:ts3" version="1">
+					<ServiceCalendarFrameRef ref="ch:1:ServiceCalendarFrame:j26" version="1"/>
+					<!-- **TODO** we need to discuss if we need this reference -->
+					<vehicleJourneys>
+						<ServiceJourney id="ch:1:sjyid:100001:703-001:1" version="1" responsibilitySetRef="ch:1:sboid:100001:1">
+							<validityConditions>
+								<AvailabilityConditionRef ref="ch:1:AvailabilityCondition:j26" version="1"/>
+							</validityConditions>
+							<keyList>
+								<KeyValue>
+									<Key>SJYID</Key>
+									<Value>sjyid-1</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode type="sjyid">sjyid-1</PrivateCode>
+							</privateCodes>
+							<TransportMode>rail</TransportMode>
+							<TypeOfProductCategoryRef ref="ch:1:TypeOfProductCategory:IC" version="1"/>
+							<TypeOfServiceRef ref="ch:1:TypeOfService:1" version="1"/>
+							<ServiceAlteration>planned</ServiceAlteration>
+							<DepartureTime>05:29:00</DepartureTime>
+							<JourneyPatternRef ref="ch:SBB:JourneyPattern:703-00" version="1" nameOfRefClass="ServiceJourneyPattern"/>
+							<TimeDemandTypeRef ref="ch:1:TDT:1" version="1"/>
+							<OperatorRef ref="ch:1:sboid:100001" version="1"/>
+							<LineRef ref="ch:1:slnid:1024329" version="1"/>
+							<DirectionType>inbound</DirectionType>
+							<trainNumbers>
+								<TrainNumberRef ref="ch:1:Train:703" version="1"/>
+							</trainNumbers>
+							<parts>
+								<JourneyPart id="generated-part-1" version="1">
+									<FromStopPointRef ref="ch:1:sloid:7000:4:7" version="1" nameOfRefClass="ScheduledStopPoint"/>
+									<!-- If modeled with references to ScheduledStopPoints -->
+									<ToStopPointRef ref="ch:1:sloid:218:7" version="1" nameOfRefClass="ScheduledStopPoint"/>
+									<StartTime>05:29:00</StartTime>
+									<StartTimeDayOffset>0</StartTimeDayOffset>
+									<EndTime>06:28:00</EndTime>
+									<EndTimeDayOffset>0</EndTimeDayOffset>
+									<PurposeOfJourneyPartitionRef ref="ch:1:PurposeOfJourneyPartition:FacilityChange" version="1"/>
+									<facilities>
+										<ServiceFacilitySetRef ref="bistro-open" version="1"/>
+									</facilities>
+								</JourneyPart>
+								<JourneyPart id="generated-part-2" version="1">
+									<!--  If modeled with PointInPatternRef -->
+									<FromPointInPatternRef ref="ch:SBB:JP:703-00:4" version="1" nameOfRefClass="StopPointInJourneyPattern"/>
+									<ToPointInPatternRef ref="ch:SBB:JP:703-00:5" version="1" nameOfRefClass="StopPointInJourneyPattern"/>
+									<StartTime>06:57:00</StartTime>
+									<StartTimeDayOffset>0</StartTimeDayOffset>
+									<EndTime>07:52:00</EndTime>
+									<EndTimeDayOffset>0</EndTimeDayOffset>
+									<PurposeOfJourneyPartitionRef ref="ch:1:PurposeOfJourneyPartition:FacilityChange" version="1"/>
+									<facilities>
+										<ServiceFacilitySetRef ref="bistro-open" version="1"/>
+									</facilities>
+								</JourneyPart>
+							</parts>
+							<facilities>
+								<ServiceFacilitySetRef ref="generated-1" version="1"/>
+							</facilities>
+						</ServiceJourney>
+					</vehicleJourneys>
+					<trainNumbers>
+						<TrainNumber id="ch:1:Train:703" version="1">
+							<ForAdvertisement>703</ForAdvertisement>
+						</TrainNumber>
+					</trainNumbers>
+					<serviceFacilitySets>
+						<!-- the two attributes that are valid for the whole ServiceJourney -->
+						<ServiceFacilitySet id="generated-1" version="1">
+							<FareClasses>firstClass</FareClasses>
+							<PassengerCommsFacilityList>freeWifi</PassengerCommsFacilityList>
+						</ServiceFacilitySet>
+						<!-- the restaurant when it is open -->
+						<ServiceFacilitySet id="bistro-open" version="1">
+							<CateringFacilityList>bistro</CateringFacilityList>
+						</ServiceFacilitySet>
+					</serviceFacilitySets>
+					<typesOfService>
+						<TypeOfService id="ch:1:TypeOfService:1" version="1">
+							<Name>running</Name>
+						</TypeOfService>
+					</typesOfService>
+					<!-- offers are also presented as notices -->
+					<notices>
+						<Notice id="ch:1:Notice:A__WS" version="1">
+							<alternativeTexts>
+								<AlternativeText attributeName="Text">
+									<Text>Bistro</Text>
+								</AlternativeText>
+								<AlternativeText attributeName="Text">
+									<Text>Zone catering / Distributeur</Text>
+								</AlternativeText>
+								<AlternativeText attributeName="Text">
+									<Text>Zona catering / Distributore</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<Text lang="de">Bistro</Text>
+							<ShortCode>A__WS</ShortCode>
+							<PrivateCode>A__WS</PrivateCode>
+							<TypeOfNoticeRef ref="ch:1:TypeOfNotice:10" version="1"/>
+							<CanBeAdvertised>true</CanBeAdvertised>
+						</Notice>
+						<Notice id="ch:1:Notice:A___1" version="1">
+							<Text lang="de">Erste Klasse</Text>
+							<ShortCode>A___1</ShortCode>
+							<PrivateCode>A___1</PrivateCode>
+							<TypeOfNoticeRef ref="ch:1:TypeOfNotice:10" version="1"/>
+							<CanBeAdvertised>true</CanBeAdvertised>
+						</Notice>
+						<Notice id="ch:1:Notice:A__WV" version="1">
+							<Text lang="de">WLAN Hotspot verfügbar</Text>
+							<ShortCode>A__WV</ShortCode>
+							<PrivateCode>A__WV</PrivateCode>
+							<TypeOfNoticeRef ref="ch:1:TypeOfNotice:10" version="1"/>
+							<CanBeAdvertised>true</CanBeAdvertised>
+						</Notice>
+					</notices>
+					<noticeAssignments>
+						<NoticeAssignment id="na-1" version="1" order="1">
+							<NoticeRef ref="ch:1:Notice:A___1" version="1"/>
+						</NoticeAssignment>
+						<NoticeAssignment id="na-2" version="1" order="1">
+							<NoticeRef ref="ch:1:Notice:A__WV" version="1"/>
+						</NoticeAssignment>
+						<!-- Offen Bern–Olten: von Punkt 1 bis Punkt 2 -->
+						<NoticeAssignment id="na-3" version="1" order="1">
+							<NoticeRef ref="ch:1:Notice:A__WS" version="1"/>
+							<JourneyPatternRef ref="ch:SBB:JourneyPattern:703-00" version="1"/>
+							<StartPointInPatternRef ref="ch:SBB:JP:703-00:1" version="1"/>
+							<EndPointInPatternRef ref="ch:SBB:JP:703-00:2" version="1"/>
+						</NoticeAssignment>
+						<!-- Offen Zürich–St. Gallen: von Punkt 3 bis Punkt 5 -->
+						<NoticeAssignment id="na-4" version="1" order="3">
+							<NoticeRef ref="ch:1:Notice:A__WS" version="1"/>
+							<JourneyPatternRef ref="ch:SBB:JourneyPattern:703-00" version="1"/>
+							<StartPointInPatternRef ref="ch:SBB:JP:703-00:3" version="1"/>
+							<EndPointInPatternRef ref="ch:SBB:JP:703-00:5" version="1"/>
+						</NoticeAssignment>
+					</noticeAssignments>
+				</TimetableFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

@@ -734,6 +734,7 @@
 					<File FilePath="examples\functions\timetable\NeTEx_50_JourneyFrequencyGroup.xml" HomeFolder="Yes"/>
 					<File FilePath="examples\functions\timetable\Netex_51.1_Occupancy.xml" HomeFolder="Yes"/>
 					<File FilePath="examples\functions\timetable\Netex_52_planned_delay.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\functions\timetable\NeTEx_CH_Bern_Spiez_Zweisimmen_ValidRef.xml" HomeFolder="Yes"/>
 				</Folder>
 				<Folder FolderName="calendar">
 					<File FilePath="examples\functions\calendar\NeTEx_Calendar_se_PA1.xml" HomeFolder="Yes"/>

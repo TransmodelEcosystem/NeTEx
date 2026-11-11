@@ -36,6 +36,8 @@
 				</Date>
 				<Date><Modified>2020-12-10</Modified>FIX - Make ActivationMeans into list
 				</Date>
+				<Date><Modified>2026-07-10</Modified>Add StepLimitUnit to STEP LIMIT; deprecate AdjustmentUnits (name clash with numeric AdjustmentUnits on RULE STEP RESULT).
+				</Date>
 				<Description>
 					<p>NeTEx is a European CEN standard for the exchange of Public Transport data including timetables.</p>
 					<p>This sub-schema describes the Travel USAGE PARAMETER  types.</p>
@@ -267,11 +269,18 @@ Rail transport, Roads and Road transport
 					<xsd:documentation>Whether restricted to a number of stops.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="AdjustmentUnits" type="StepLimitUnitEnumeration" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Units in which steps atre counted.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
+			<xsd:choice minOccurs="0">
+				<xsd:element name="StepLimitUnit" type="StepLimitUnitEnumeration">
+					<xsd:annotation>
+						<xsd:documentation>Units in which steps are counted. +v2.1</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="AdjustmentUnits" type="StepLimitUnitEnumeration">
+					<xsd:annotation>
+						<xsd:documentation>DEPRECATED - use StepLimitUnit instead; the name clashes with the numeric AdjustmentUnits on RULE STEP RESULT. -v2.1</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
 			<xsd:element name="MinimumNumberOfSteps" type="xsd:nonNegativeInteger" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Minimum number of steps allowed.</xsd:documentation>

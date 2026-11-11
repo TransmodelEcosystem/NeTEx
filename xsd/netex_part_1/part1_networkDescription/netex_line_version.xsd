@@ -373,7 +373,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="PublicCode" type="PublicCodeStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Public identifier of a LINe.</xsd:documentation>
+					<xsd:documentation>Public identifier of a LINE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="PrivateCode" minOccurs="0">
@@ -987,6 +987,11 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element ref="LineRef" minOccurs="0"/>
 			<xsd:element ref="DirectionRef" minOccurs="0"/>
+			<xsd:element name="DirectionType" type="DirectionTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>A Direction of a ROUTE, that can be used instead of DirectionRef. The enumeration provides a restricted set of values. +v2.1.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:element name="ExternalLineRef" type="ExternalObjectRefStructure" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Alternative LINE Reference for AVMS system. DEPRECATED - v2.0</xsd:documentation>
