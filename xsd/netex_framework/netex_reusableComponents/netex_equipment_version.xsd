@@ -220,7 +220,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="Fixed" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether the EQUIPMENT is fixed at a place or min a vehicle.</xsd:documentation>
+					<xsd:documentation>Whether the EQUIPMENT is fixed at a place or in a vehicle.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

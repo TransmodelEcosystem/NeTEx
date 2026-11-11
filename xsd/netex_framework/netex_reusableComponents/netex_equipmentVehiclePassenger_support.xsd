@@ -150,7 +150,85 @@ Rail transport, Roads and Road transport
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<!-- ====== WHEELCHAIR VEHICLE EQUIPMEN ================================================ -->
+	<!-- ====== RETRACTABLE STEP VEHICLE EQUIPMENT ================================================= -->
+	<xsd:simpleType name="RetractableStepVehicleEquipmentIdType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a RETRACTABLE STEP VEHICLE EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="VehicleEquipmentIdType"/>
+	</xsd:simpleType>
+	<xsd:element name="RetractableStepVehicleEquipmentRef" type="RetractableStepVehicleEquipmentRefStructure" substitutionGroup="VehicleEquipmentRef">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a RETRACTABLE STEP VEHICLE EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="RetractableStepVehicleEquipmentRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a reference to a RETRACTABLE STEP VEHICLE EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="VehicleEquipmentRefStructure">
+				<xsd:attribute name="ref" type="RetractableStepVehicleEquipmentIdType" use="required">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of a RETRACTABLE STEP VEHICLE EQUIPMENT.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ====== RAMP VEHICLE EQUIPMENT ================================================= -->
+	<xsd:simpleType name="RampVehicleEquipmentIdType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a RAMP VEHICLE EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="VehicleEquipmentIdType"/>
+	</xsd:simpleType>
+	<xsd:element name="RampVehicleEquipmentRef" type="RampVehicleEquipmentRefStructure" substitutionGroup="VehicleEquipmentRef">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a RAMP VEHICLE EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="RampVehicleEquipmentRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a reference to a RAMP VEHICLE EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="VehicleEquipmentRefStructure">
+				<xsd:attribute name="ref" type="RampVehicleEquipmentIdType" use="required">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of a RAMP VEHICLE EQUIPMENT.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ====== HOIST VEHICLE EQUIPMENT ================================================= -->
+	<xsd:simpleType name="HoistVehicleEquipmentIdType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a HOIST VEHICLE EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="VehicleEquipmentIdType"/>
+	</xsd:simpleType>
+	<xsd:element name="HoistVehicleEquipmentRef" type="HoistVehicleEquipmentRefStructure" substitutionGroup="VehicleEquipmentRef">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a HOIST VEHICLE EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="HoistVehicleEquipmentRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a reference to a HOIST VEHICLE EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="VehicleEquipmentRefStructure">
+				<xsd:attribute name="ref" type="HoistVehicleEquipmentIdType" use="required">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of a HOIST VEHICLE EQUIPMENT.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ====== WHEELCHAIR VEHICLE EQUIPMENT ================================================ -->
 	<xsd:simpleType name="WheelchairVehicleEquipmentIdType">
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a WHEELCHAIR VEHICLE EQUIPMENT.</xsd:documentation>
