@@ -106,7 +106,7 @@ Rail transport, Roads and Road transport
 	<!-- ======================================================================= -->
 	<xsd:complexType name="logEntries_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a list of LOG ENTries +v1.1.</xsd:documentation>
+			<xsd:documentation>Type for a list of LOG ENTRies +v1.1.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="strictContainmentAggregationStructure">
