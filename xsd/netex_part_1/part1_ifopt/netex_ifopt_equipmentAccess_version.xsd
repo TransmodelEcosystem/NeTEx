@@ -969,7 +969,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="AccousticAnnouncements" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>DEPRECATED - Spelling correction renamed to audio announcements. THis value will be dropped at - so</xsd:documentation>
+					<xsd:documentation>DEPRECATED - Spelling correction renamed to audio announcements. THIS value will be dropped at - so</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ReachedFloorAnnouncement" type="ReachedFloorAnnouncementEnumeration" default="visual" minOccurs="0">
