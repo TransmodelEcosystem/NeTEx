@@ -169,7 +169,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:group ref="NoticeLinkAssignmentGroup">
 				<xsd:annotation>
-					<xsd:documentation>Link assigbment Elements for a NOTICE ASSIGNMENT. That restrict NOTICE to a specific pattern or partial pattern.</xsd:documentation>
+					<xsd:documentation>Link assignment Elements for a NOTICE ASSIGNMENT. That restrict NOTICE to a specific pattern or partial pattern.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:group>
 			<xsd:group ref="NoticeAssignmentPropertiesGroup"/>
