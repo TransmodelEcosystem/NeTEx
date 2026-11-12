@@ -222,7 +222,7 @@ Rail transport, Roads and Road transport
 				</xsd:element>
 				<xsd:element name="members" type="commonSectionPointMembers_RelStructure">
 					<xsd:annotation>
-						<xsd:documentation>[DEPRECATED: renamed to PointsOnSection - included for backwards comaptibilty - use PointsOnSection instead Ordered collection of POINTS used in the COMMON SECTION.</xsd:documentation>
+						<xsd:documentation>[DEPRECATED: renamed to PointsOnSection - included for backwards compatibility - use PointsOnSection instead Ordered collection of POINTS used in the COMMON SECTION.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
 			</xsd:choice>
