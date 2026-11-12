@@ -220,7 +220,7 @@ Rail transport, Roads and Road transport
 	</xsd:simpleType>
 	<xsd:element name="ResidentialQualificationEligibilityRef" type="ResidentialQualificationEligibilityRefStructure" substitutionGroup="CustomerEligibilityRef">
 		<xsd:annotation>
-			<xsd:documentation>Reference to a RESIDENTIAL QUALIFICATION ELIGIBILIT..</xsd:documentation>
+			<xsd:documentation>Reference to a RESIDENTIAL QUALIFICATION ELIGIBILITY.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="ResidentialQualificationEligibilityRefStructure">

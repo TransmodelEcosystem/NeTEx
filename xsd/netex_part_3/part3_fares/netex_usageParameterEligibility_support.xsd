@@ -35,7 +35,7 @@ OnBecomingEnumeration
 
 OnCeasingEnumeration - Allowed values  
  
-* immediateTermination - If user ceases to be eligible, automatically terminate validity of an  elibility dependent product.
+* immediateTermination - If user ceases to be eligible, automatically terminate validity of an  eligibility dependent product.
 * useUntilExpiry - If user ceases to be eligible, they may go on using the product until it  expires..
 * terminateAfterGracePeriod - If user ceases to be eligible,  termination  take place after the end of a grace period
 * _automaticallySubstituteProduct_ - If user ceases to be eligible, assign them an appropiate  replacement product. 
@@ -649,7 +649,7 @@ Rail transport, Roads and Road transport
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:enumeration value="immediateTermination">
 				<xsd:annotation>
-					<xsd:documentation>If user ceases to be eligible, automatically terminate validity of an elibility dependent product.</xsd:documentation>
+					<xsd:documentation>If user ceases to be eligible, automatically terminate validity of an eligibility dependent product.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="useUntilExpiry">
