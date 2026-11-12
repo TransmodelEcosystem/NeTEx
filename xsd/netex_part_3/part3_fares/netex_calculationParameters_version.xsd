@@ -68,7 +68,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="pricingServices" type="pricingServices_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>FARE PRICING SREVICEs in FRAME.</xsd:documentation>
+					<xsd:documentation>FARE PRICING SERVICEs in FRAME.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
