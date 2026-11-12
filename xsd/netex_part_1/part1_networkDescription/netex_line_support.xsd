@@ -186,17 +186,55 @@ Rail transport, Roads and Road transport
 			<xsd:enumeration value="express"/>
 			<xsd:enumeration value="seasonal"/>
 			<xsd:enumeration value="replacement"/>
-			<xsd:enumeration value="flexible"/>
-			<xsd:enumeration value="corridorService"/>
+			<xsd:enumeration value="flexible">
+				<xsd:annotation>
+					<xsd:documentation>This case is very similar to fixed line operation: journey patterns are defined as usual, but stops are served only if there is a passenger booking for it. Several vehicles may be allocated to the same journey when high level of demand occurs. Virtual line can be operated with fixed or dynamic passing times.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="corridorService">
+				<xsd:annotation>
+					<xsd:documentation>A minimal list and order of stops are defined determining a “main and minimal” journey pattern. Possible additional stops are defined but will be served only in case of passenger reservation.
+A range of journey patterns is determined through a stop list and order defined dynamically according to the passenger reservations and "around" the “main and minimal” journey pattern. N.B.This may mess with the timebehaviour, so we suggest to avoid corridorService as a pattern. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 			<xsd:enumeration value="mainRouteWithFlexibleEnds"/>
-			<xsd:enumeration value="flexibleAreasOnly"/>
-			<xsd:enumeration value="hailAndRideSections"/>
-			<xsd:enumeration value="fixedStopAreaWide"/>
-			<xsd:enumeration value="freeAreaAreaWide"/>
+			<xsd:enumeration value="flexibleAreasOnly">
+				<xsd:annotation>
+					<xsd:documentation>The line covers up to N areas, while the service will cover part of these N areas based on demand. Pickup and dropoff can be booked for any given location within the defined area, at any time within the given operating times. The actual route that is operated is based on the bookings.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="hailAndRideSections">
+				<xsd:annotation>
+					<xsd:documentation>Following a defined route, the service can pick up or drop off passengers in certain sections based on demand. A fixed route with fixed stops, but where boarding and alighting is allowed at certain sections between stops. Operation can be requested by signalling to the driver. The route is defined, but the Journey Pattern only has a start and an end. Boarding or alighting is obtained by signalling the driver that one wishes to board/alight and can occur anywhere along the Route. It also sometimes happens that boarding occurs on fixed stop, and only alighting can occur on demand anywhere along the Route.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fixedStopAreaWide">
+				<xsd:annotation>
+					<xsd:documentation>The service is scheduled based on passenger demand; all pick-up and drop-off must be done at existing stops. The service is scheduled based on passenger demand; all pick-up and drop-off must be done at existing stops.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="freeAreaAreaWide">
+				<xsd:annotation>
+					<xsd:documentation>The service is defined by one or several zones (in sequence). Each zone is defined by a set of possible stops. Stops served and stop order are defined for each vehicle journey according to the reservations. Passing times (entry and exit time) are usually defined for each zone. They may also be defined for each stop.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 			<xsd:enumeration value="mixedFlexible"/>
-			<xsd:enumeration value="mixedFlexibleAndFixed"/>
-			<xsd:enumeration value="fixed"/>
-			<xsd:enumeration value="other"/>
+			<xsd:enumeration value="mixedFlexibleAndFixed">
+				<xsd:annotation>
+					<xsd:documentation>A line operates both a fixed service (fixed stops, fixed schedule) and a specific flexible service
+. The possible stops of the journey pattern are known, and the possible stop sequences are also defined, and the real stop list and order are defined dynamically according to the passenger reservations without any reference to a main pattern.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fixed">
+				<xsd:annotation>
+					<xsd:documentation>Standard line with official steps and a linear route.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="other">
+				<xsd:annotation>
+					<xsd:documentation>This value should only be used, when none of the others apply.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<!-- ======================================================================= -->

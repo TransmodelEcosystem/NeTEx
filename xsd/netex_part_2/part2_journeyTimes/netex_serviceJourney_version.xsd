@@ -3,6 +3,7 @@
 	<xsd:include schemaLocation="netex_vehicleJourney_version.xsd"/>
 	<xsd:include schemaLocation="netex_flexibleService_version.xsd"/>
 	<xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_serviceCalendar_version.xsd"/>
+	<xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_serviceRestrictions_version.xsd"/>
 	<xsd:include schemaLocation="../../netex_part_1/part1_networkDescription/netex_flexibleNetwork_version.xsd"/>
 	<xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_equipmentVehiclePassenger_version.xsd"/>
 	<xsd:include schemaLocation="netex_call_version.xsd"/>

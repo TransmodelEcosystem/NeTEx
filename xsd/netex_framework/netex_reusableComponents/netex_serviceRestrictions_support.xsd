@@ -51,8 +51,7 @@
 				<Language>[ISO 639-2/B] ENG</Language>
 				<Publisher>Kizoom Software Ltd, 16 High Holborn, London WC1V 6BX</Publisher>
 				<Rights>Unclassified
-					 <Copyright>CEN, Crown Copyright 2009-2024</Copyright>
-				</Rights>
+					 <Copyright>CEN, Crown Copyright 2009-2024</Copyright></Rights>
 				<Source>
 					<ul>
 						<li>Derived from Transmodel and the SIRI standards.</li>
@@ -87,9 +86,9 @@ Rail transport, Roads and Road transport
 			<xsd:documentation>Reference to a CLASS OF USE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
-			<xsd:complexContent>
+			<xsd:simpleContent>
 				<xsd:extension base="ClassOfUseRefStructure"/>
-			</xsd:complexContent>
+			</xsd:simpleContent>
 		</xsd:complexType>
 	</xsd:element>
 	<xsd:complexType name="ClassOfUseRefStructure">
@@ -697,9 +696,9 @@ Rail transport, Roads and Road transport
 			<xsd:documentation>Reference to a TYPE OF PAYMENT METHOD.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
-			<xsd:complexContent>
+			<xsd:simpleContent>
 				<xsd:extension base="TypeOfPaymentMethodRefStructure"/>
-			</xsd:complexContent>
+			</xsd:simpleContent>
 		</xsd:complexType>
 	</xsd:element>
 	<xsd:complexType name="TypeOfPaymentMethodRefStructure">
@@ -1056,4 +1055,102 @@ See ERA B.4 7037 Characteristic description code.</xsd:documentation>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<!-- ======================================================================= -->
+	<xsd:simpleType name="TypeOfBookingServiceIdType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a TYPE OF Booking SERVICE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="TypeOfValueIdType"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="BookingServiceEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed Booking Services. +V2.1</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="tomp">
+				<xsd:annotation>
+					<xsd:documentation>tOMP.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="osdm">
+				<xsd:annotation>
+					<xsd:documentation>OSDM.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="bob">
+				<xsd:annotation>
+					<xsd:documentation>BOB.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="trias">
+				<xsd:annotation>
+					<xsd:documentation>TRIAS, VDV 431.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ojp">
+				<xsd:annotation>
+					<xsd:documentation>OJP service (only availability and price).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="other">
+				<xsd:annotation>
+					<xsd:documentation>Other means of payment .</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- =================================================== -->
+	<xsd:simpleType name="SupportedBookingProcessStepEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>supported booking process steps. +V2.1</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="tripPlanning">
+				<xsd:annotation>
+					<xsd:documentation>Trip Planning</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="pricing">
+				<xsd:annotation>
+					<xsd:documentation>Getting price information</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="availability">
+				<xsd:annotation>
+					<xsd:documentation>simple availability request</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="booking">
+				<xsd:annotation>
+					<xsd:documentation>booking</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="reservation">
+				<xsd:annotation>
+					<xsd:documentation>Reservation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fulfillment">
+				<xsd:annotation>
+					<xsd:documentation>Fullfillment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="full">
+				<xsd:annotation>
+					<xsd:documentation>The full process including fullfillment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="other">
+				<xsd:annotation>
+					<xsd:documentation>Other means of payment .</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="SupportedBookingProcessStepListOfEnumerations">
+		<xsd:annotation>
+			<xsd:documentation>List of supported booking process steps.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:list itemType="SupportedBookingProcessStepEnumeration"/>
+	</xsd:simpleType>
+	<!-- =================================================== -->
 </xsd:schema>
