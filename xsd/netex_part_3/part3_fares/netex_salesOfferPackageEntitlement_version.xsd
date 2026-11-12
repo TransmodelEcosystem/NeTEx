@@ -119,7 +119,7 @@ Rail transport, Roads and Road transport
 	<!-- ====SALES OFFER PACKAGE ENTITLEMENT REQUIRED================================================= -->
 	<xsd:element name="SalesOfferPackageEntitlementRequired" substitutionGroup="UsageParameter_Dummy">
 		<xsd:annotation>
-			<xsd:documentation>A rerirement to a SALES OFFER PACKAGE in order to purchase or use PRODUCT.</xsd:documentation>
+			<xsd:documentation>A requirement to a SALES OFFER PACKAGE in order to purchase or use PRODUCT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
