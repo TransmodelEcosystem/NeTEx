@@ -248,7 +248,7 @@ Rail transport, Roads and Road transport
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<!-- === DRIVEETRIP TIME -->
+	<!-- === DRIVE TRIP TIME -->
 	<xsd:simpleType name="DriverTripTimeIdType">
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a DRIVER TRIP TIME.</xsd:documentation>
