@@ -411,7 +411,7 @@ The RULE STEP RESULT  Adjustment Amount is  the difference between the original 
 	</xsd:complexType>
 	<xsd:group name="StepCalculationAmountGroup">
 		<xsd:annotation>
-			<xsd:documentation>Step anounts for for FARE STEP RESULT.</xsd:documentation>
+			<xsd:documentation>Step amounts for for FARE STEP RESULT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="RateUsed" type="xsd:decimal" minOccurs="0">
