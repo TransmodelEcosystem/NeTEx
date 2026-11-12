@@ -6100,7 +6100,7 @@
 			<xsd:field xpath="@version"/>
 		</xsd:key>
 		<!-- ===== PathLink Target PLACE Reference============================ -->
-		<!-- =====PathLink PTarget LACE Reference== Key ========================== -->
+		<!-- =====PathLink Target PLACE Reference== Key ========================== -->
 		<xsd:keyref name="PathLink_Place_KeyRef" refer="netex:PathLinkTarget_AnyVersionedKey">
 			<xsd:selector xpath=" .//netex:SitePathLink/netex:To/netex:PlaceRef  | .//netex:PathLink/netex:To/netex:PlaceRef | .//netex:SitePathLink/netex:From/netex:PlaceRef | .//netex:PathLink/netex:From/netex:PlaceRef "/>
 			<xsd:field xpath="@ref"/>
