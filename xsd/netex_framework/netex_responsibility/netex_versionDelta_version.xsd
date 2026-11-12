@@ -105,7 +105,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="ObjectRef" type="VersionOfObjectRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Identifier of ENTITY IN VERSION that has been created or modiifed.</xsd:documentation>
+					<xsd:documentation>Identifier of ENTITY IN VERSION that has been created or modified.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ChangedAt" type="xsd:dateTime">
