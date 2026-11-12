@@ -635,7 +635,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="DiscountAsValue" type="CurrencyAmountType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Discount amount. i.e. DIfference between full and discounted price.</xsd:documentation>
+					<xsd:documentation>Discount amount. i.e. Difference between full and discounted price.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="CanBeCumulative" type="xsd:boolean" default="true" minOccurs="0">
