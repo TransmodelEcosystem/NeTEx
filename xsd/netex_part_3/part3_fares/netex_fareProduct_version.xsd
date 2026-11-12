@@ -852,7 +852,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="ProductType" type="AmountOfPriceUnitEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Classification of PEEASSIGNED FARE PRODUCT. +v1.1</xsd:documentation>
+					<xsd:documentation>Classification of PREASSIGNED FARE PRODUCT. +v1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="PriceUnitRef" minOccurs="0"/>
@@ -922,7 +922,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="ProductType" type="PreassignedFareProductEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Classification of PEEASSIGNED FARE PRODUCT. +v1.1</xsd:documentation>
+					<xsd:documentation>Classification of PREASSIGNED FARE PRODUCT. +v1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
