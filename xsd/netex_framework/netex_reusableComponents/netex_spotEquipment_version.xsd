@@ -137,7 +137,7 @@
 			</xsd:element>
 			<xsd:element name="Length" type="LengthType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Length deont to back of SPOT EQUIPMENT.</xsd:documentation>
+					<xsd:documentation>Length down to back of SPOT EQUIPMENT.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Height" type="LengthType" minOccurs="0">
