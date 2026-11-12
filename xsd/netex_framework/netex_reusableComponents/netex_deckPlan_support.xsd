@@ -843,7 +843,7 @@
 			</xsd:enumeration>
 			<xsd:enumeration value="other">
 				<xsd:annotation>
-					<xsd:documentation>WOther type of Window.</xsd:documentation>
+					<xsd:documentation>Other type of Window.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>
