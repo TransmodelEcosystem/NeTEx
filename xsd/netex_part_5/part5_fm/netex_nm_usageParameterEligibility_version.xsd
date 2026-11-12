@@ -110,7 +110,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="HostUserProfileRef" type="UserProfileRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Host uder profile offering these pooler preferences</xsd:documentation>
+					<xsd:documentation>Host user profile offering these pooler preferences</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="SmokingAllowed" type="xsd:boolean" default="false" minOccurs="0">
