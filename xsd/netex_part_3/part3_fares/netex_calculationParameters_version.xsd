@@ -131,7 +131,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="pricingRules" type="pricingRules_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Table of Month Validty offsets for each month.</xsd:documentation>
+					<xsd:documentation>Table of Month Validity offsets for each month.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="AllowCumulativeDiscounts" type="xsd:boolean" minOccurs="0">
@@ -148,7 +148,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="DayTypeRef" minOccurs="0"/>
 			<xsd:element name="monthValidityOffsets" type="monthValidityOffsets_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Table of Month Validty offsets for each month.</xsd:documentation>
+					<xsd:documentation>Table of Month Validity offsets for each month.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="pricingServices" type="pricingServices_RelStructure" minOccurs="0"/>
