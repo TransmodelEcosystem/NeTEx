@@ -183,7 +183,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 		</xsd:choice>
 	</xsd:group>
-	<!--======USEr need types=====================================================================================-->
+	<!--======User need types=====================================================================================-->
 	<xsd:simpleType name="MobilityList">
 		<xsd:annotation>
 			<xsd:documentation>List of Allowed values for of mobility needs.</xsd:documentation>
