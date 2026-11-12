@@ -251,7 +251,7 @@ Rail transport, Roads and Road transport
 			<xsd:enumeration value="expiredHeld"/>
 			<xsd:enumeration value="reserved">
 				<xsd:annotation>
-					<xsd:documentation>Spot is resreved.</xsd:documentation>
+					<xsd:documentation>Spot is reserved.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="unknown">
