@@ -150,7 +150,7 @@ Rail transport, Roads and Road transport
 			<xsd:restriction base="VersionOfObjectRefStructure">
 				<xsd:attribute name="ref" type="InterchangeIdType" use="required">
 					<xsd:annotation>
-						<xsd:documentation>Identifier of an INTERCHANGe.</xsd:documentation>
+						<xsd:documentation>Identifier of an INTERCHANGE.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 				<xsd:attribute name="nameOfRefClass" type="NameOfClassInterchangeRefStructureType">
@@ -197,7 +197,7 @@ Rail transport, Roads and Road transport
 			<xsd:restriction base="InterchangeRefStructure">
 				<xsd:attribute name="ref" type="DefaultInterchangeIdType" use="required">
 					<xsd:annotation>
-						<xsd:documentation>Identifier of a DEFAULT INTERCHANGe.</xsd:documentation>
+						<xsd:documentation>Identifier of a DEFAULT INTERCHANGE.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 				<xsd:attribute name="nameOfRefClass" type="NameOfClassDefaultInterchangeRefStructureType" default="DefaultInterchange">
@@ -244,7 +244,7 @@ Rail transport, Roads and Road transport
 			<xsd:restriction base="InterchangeRefStructure">
 				<xsd:attribute name="ref" type="ServiceJourneyInterchangeIdType" use="required">
 					<xsd:annotation>
-						<xsd:documentation>Identifier of a SERVICE JOURNEY INTERCHANGe.</xsd:documentation>
+						<xsd:documentation>Identifier of a SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 				<xsd:attribute name="nameOfRefClass" type="NameOfClassServiceJourneyInterchangeRefStructureType" default="ServiceJourneyInterchange">
@@ -291,7 +291,7 @@ Rail transport, Roads and Road transport
 			<xsd:restriction base="InterchangeRefStructure">
 				<xsd:attribute name="ref" type="ServiceJourneyPatternInterchangeIdType" use="required">
 					<xsd:annotation>
-						<xsd:documentation>Identifier of a SERVICE JOURNEY INTERCHANGe.</xsd:documentation>
+						<xsd:documentation>Identifier of a SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 				<xsd:attribute name="nameOfRefClass" type="NameOfClassServiceJourneyPatternInterchangeRefStructureType" default="ServiceJourneyPatternInterchange">
@@ -338,7 +338,7 @@ Rail transport, Roads and Road transport
 			<xsd:restriction base="InterchangeRefStructure">
 				<xsd:attribute name="ref" type="InterchangeRuleIdType" use="required">
 					<xsd:annotation>
-						<xsd:documentation>Identifier of an INTERCHANGe.</xsd:documentation>
+						<xsd:documentation>Identifier of an INTERCHANGE.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 				<xsd:attribute name="nameOfRefClass" type="NameOfClassInterchangeRuleRefStructureType" default="InterchangeRule">
@@ -412,7 +412,7 @@ Rail transport, Roads and Road transport
 			<xsd:restriction base="JourneyTimingRefStructure">
 				<xsd:attribute name="ref" type="InterchangeRuleTimingIdType" use="required">
 					<xsd:annotation>
-						<xsd:documentation>Identifier of an INTERCHANGe.</xsd:documentation>
+						<xsd:documentation>Identifier of an INTERCHANGE.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 				<xsd:attribute name="nameOfRefClass" type="NameOfClassInterchangeRuleTimingRefStructureType" default="InterchangeRuleTiming">
