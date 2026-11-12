@@ -383,7 +383,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="PresentationPosition" type="SeriesPresentationEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Relative positiion to be given to name of point when presenting it in a list of stops (Left, right etc). Allows TAP itinerary to be constructed.</xsd:documentation>
+					<xsd:documentation>Relative position to be given to name of point when presenting it in a list of stops (Left, right etc). Allows TAP itinerary to be constructed.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="IsForbidden" type="xsd:boolean" default="false" minOccurs="0">
