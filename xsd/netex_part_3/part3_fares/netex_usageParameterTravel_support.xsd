@@ -758,7 +758,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="other">
 				<xsd:annotation>
-					<xsd:documentation>Journey Break must be marked by othermeans.</xsd:documentation>
+					<xsd:documentation>Journey Break must be marked by other means.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>
