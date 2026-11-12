@@ -589,7 +589,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="TravelSpecificationSummaryView" minOccurs="0"/>
 			<xsd:element name="travelSpecifications" type="travelSpecifications_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>TRAVEL SPEECIFICATIONs for FARE CONTRACT.</xsd:documentation>
+					<xsd:documentation>TRAVEL SPECIFICATIONs for FARE CONTRACT.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="validityParameterAssignments" type="customerPurchaseParameterAssignments_RelStructure" minOccurs="0">
