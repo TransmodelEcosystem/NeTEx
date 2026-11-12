@@ -226,7 +226,7 @@ Rail transport, Roads and Road transport
 	<!-- ====== TRAIN SIZE ====================================================== -->
 	<xsd:element name="TrainSize" type="TrainSizeStructure">
 		<xsd:annotation>
-			<xsd:documentation>Requirements for TRAIN SIZe.</xsd:documentation>
+			<xsd:documentation>Requirements for TRAIN SIZE.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="TrainSizeStructure">
