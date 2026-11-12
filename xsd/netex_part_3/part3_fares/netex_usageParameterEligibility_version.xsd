@@ -472,7 +472,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="UserProfileRef" minOccurs="0"/>
 			<xsd:element name="CompanionRelationshipType" type="CompanionRelationshipEnumeration" default="anyone" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Required Relationship of companion to eliigble user +V1.1.</xsd:documentation>
+					<xsd:documentation>Required Relationship of companion to eligible user +V1.1.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MinimumNumberOfPersons" type="NumberOfPassengers" minOccurs="0">
