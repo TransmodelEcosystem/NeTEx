@@ -199,7 +199,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="alternativeNames" type="alternativeNames_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>ATERNATIVE NAMEs for TARIFF.</xsd:documentation>
+					<xsd:documentation>ALTERNATIVE NAMEs for TARIFF.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Description" type="MultilingualString" minOccurs="0">
