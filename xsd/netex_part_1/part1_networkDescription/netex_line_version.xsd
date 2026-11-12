@@ -1091,7 +1091,7 @@ Rail transport, Roads and Road transport
 	<!-- ======================================================================= -->
 	<xsd:complexType name="destinationDisplayViews_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a list of DSETINATION DISPLAY VIEWs.</xsd:documentation>
+			<xsd:documentation>Type for a list of DESTINATION DISPLAY VIEWs.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="containmentAggregationStructure">
