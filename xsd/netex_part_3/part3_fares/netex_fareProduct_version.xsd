@@ -432,7 +432,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="ProductType" type="SaleDiscountRightEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Classification of USAGE DISOCUNT RIGHT. +v1.1</xsd:documentation>
+					<xsd:documentation>Classification of USAGE DISCOUNT RIGHT. +v1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:group ref="OtherProductGroup" minOccurs="0">
@@ -599,7 +599,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="ProductType" type="UsageDiscountRightEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Classification of USAGE DISOCUNT RIGHT. +v1.1</xsd:documentation>
+					<xsd:documentation>Classification of USAGE DISCOUNT RIGHT. +v1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
