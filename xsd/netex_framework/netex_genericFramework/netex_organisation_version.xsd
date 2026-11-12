@@ -828,12 +828,12 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="StartValue" type="xsd:normalizedString" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Start range for codes allocateed by Organisation under this CODESPACE ASSIGNMENT. +V1.1</xsd:documentation>
+					<xsd:documentation>Start range for codes allocated by Organisation under this CODESPACE ASSIGNMENT. +V1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="EndValue" type="xsd:normalizedString" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>End range for codes allocateed by Organisation under this CODESPACE ASSIGNMENT. +V1.1</xsd:documentation>
+					<xsd:documentation>End range for codes allocated by Organisation under this CODESPACE ASSIGNMENT. +V1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
