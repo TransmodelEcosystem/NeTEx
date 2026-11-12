@@ -725,7 +725,7 @@
 	</xsd:group>
 	<xsd:group name="DeckEntrancePositionGroup">
 		<xsd:annotation>
-			<xsd:documentation>Positional ements for a DECK ENTRANCE.</xsd:documentation>
+			<xsd:documentation>Positional elements for a DECK ENTRANCE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="VehicleSide" type="VehicleSideEnumeration" minOccurs="0">
