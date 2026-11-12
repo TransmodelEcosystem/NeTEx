@@ -407,7 +407,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="garagePoints" type="garagePoints_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>GARAGE POINTsin GARAGE</xsd:documentation>
+					<xsd:documentation>GARAGE POINTs in GARAGE</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="crewBases" type="crewBaseRefs_RelStructure" minOccurs="0">
