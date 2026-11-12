@@ -269,7 +269,7 @@ Rail transport, Roads and Road transport
 	<!-- ==Line============================================================ -->
 	<xsd:complexType name="linesInFrame_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for containment in frame of LINe.</xsd:documentation>
+			<xsd:documentation>Type for containment in frame of LINE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="containmentAggregationStructure">
@@ -281,7 +281,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:element name="Line_Dummy" type="DataManagedObjectStructure" abstract="true" substitutionGroup="DataManagedObject">
 		<xsd:annotation>
-			<xsd:documentation>Dummy Supertype for LINE &amp; FLEXIBLE LINe.</xsd:documentation>
+			<xsd:documentation>Dummy Supertype for LINE &amp; FLEXIBLE LINE.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="Line" substitutionGroup="Line_Dummy" id="Line">
@@ -491,7 +491,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="TypeOfLineRef" minOccurs="0"/>
 			<xsd:element name="ExternalProductCategoryRef" type="ExternalObjectRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>An default product classification for all journeys of the lin e for use in AVMS systems. For VDV compatibility. +v1.1. DEPRECATED - use privateCodes -v2.0</xsd:documentation>
+					<xsd:documentation>An default product classification for all journeys of the line for use in AVMS systems. For VDV compatibility. +v1.1. DEPRECATED - use privateCodes -v2.0</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="TypeOfProductCategoryRef" minOccurs="0"/>
