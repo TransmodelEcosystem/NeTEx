@@ -104,7 +104,7 @@ Rail transport, Roads and Road transport
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<!-- === ENTTITLEMENT GIven PARAMETER======================================= -->
+	<!-- === ENTTITLEMENT GIVEN PARAMETER======================================= -->
 	<xsd:simpleType name="SalesOfferPackageEntitlementGivenIdType">
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a SALES OFFER F ENTITLEMENT GIVEN parameter.</xsd:documentation>
