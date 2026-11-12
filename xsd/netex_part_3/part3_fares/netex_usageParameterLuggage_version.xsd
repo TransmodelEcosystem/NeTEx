@@ -130,7 +130,7 @@ Rail transport, Roads and Road transport
 			<xsd:group ref="LuggageAllowanceSizeGroup"/>
 			<xsd:element name="LuggageChargingBasis" type="LuggageChargingBasisEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Basis on which lugggage is charged.</xsd:documentation>
+					<xsd:documentation>Basis on which luggage is charged.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
