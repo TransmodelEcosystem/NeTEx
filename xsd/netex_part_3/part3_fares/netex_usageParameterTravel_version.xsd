@@ -288,12 +288,12 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MaximumNumberOfSteps" type="xsd:nonNegativeInteger" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Miaxmum number of steps allowed.</xsd:documentation>
+					<xsd:documentation>Maximum number of steps allowed.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MaximumNumberOfTrips" type="xsd:nonNegativeInteger" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Miaxmum number of Overall trips allowed.</xsd:documentation>
+					<xsd:documentation>Maximum number of Overall trips allowed.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
