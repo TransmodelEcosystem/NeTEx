@@ -284,7 +284,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="available">
 				<xsd:annotation>
-					<xsd:documentation>Assistance is nornally available.</xsd:documentation>
+					<xsd:documentation>Assistance is normally available.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="availableIfBooked">
