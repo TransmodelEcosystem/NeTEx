@@ -819,7 +819,7 @@ Rail transport, Roads and Road transport
 		</xsd:annotation>
 		<xsd:list itemType="AccessibilityToolEnumeration"/>
 	</xsd:simpleType>
-	<!-- ===Accommodation Accss====================================== -->
+	<!-- ===Accommodation Access====================================== -->
 	<xsd:element name="AccommodationAccess" type="AccommodationAccessEnumeration">
 		<xsd:annotation>
 			<xsd:documentation>Classification of ACCOMMODATION ACCESS type -</xsd:documentation>
