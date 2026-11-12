@@ -174,7 +174,7 @@
 			</xsd:element>
 			<xsd:element name="replaces" type="seriesConstraintRefs_RelStructure" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation>Replaces the speciified SERIES CONSTRAINTs (Needed for TAP TSI)</xsd:documentation>
+					<xsd:documentation>Replaces the specified SERIES CONSTRAINTs (Needed for TAP TSI)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
