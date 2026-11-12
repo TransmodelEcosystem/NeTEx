@@ -122,7 +122,7 @@ Rail transport, Roads and Road transport
 	<!-- ====ENTITLEMENT REQUIRED================================================= -->
 	<xsd:element name="EntitlementRequired" substitutionGroup="UsageParameter_Dummy">
 		<xsd:annotation>
-			<xsd:documentation>A rerirement to a SERVICE ACCESS RIGHT in order to purchase or use PRODUCT.</xsd:documentation>
+			<xsd:documentation>A requirement to a SERVICE ACCESS RIGHT in order to purchase or use PRODUCT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
