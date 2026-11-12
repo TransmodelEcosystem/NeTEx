@@ -4818,7 +4818,7 @@
 			<xsd:field xpath="@id"/>
 			<xsd:field xpath="@version"/>
 		</xsd:key>
-		<!-- NB TRAIN ELEMENT is deprecated In future shoudk eb renamed to TrainELementTyepa and be made abstarct -->
+		<!-- NB TRAIN ELEMENT is deprecated In future shoudk eb renamed to TrainELementTyepa and be made abstract -->
 		<!-- =====Train Component============================== -->
 		<!-- =====TrainComponent unique========================== -->
 		<xsd:unique name="TrainComponent_UniqueBy_Id_Version_Order">
