@@ -220,7 +220,7 @@
 			</xsd:element>
 			<xsd:element name="SeatDepth" type="LengthType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Depgth of Seat from front to back.</xsd:documentation>
+					<xsd:documentation>Depth of Seat from front to back.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="IsFoldup" type="xsd:boolean" default="false" minOccurs="0">
