@@ -156,7 +156,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="TypeOfFacilityRef" minOccurs="0"/>
 			<xsd:element name="otherFacilities" type="typesOfEquipment_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Arbitrary user defined Faciliy.</xsd:documentation>
+					<xsd:documentation>Arbitrary user defined Facility.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:group ref="CommonFacilityGroup"/>
