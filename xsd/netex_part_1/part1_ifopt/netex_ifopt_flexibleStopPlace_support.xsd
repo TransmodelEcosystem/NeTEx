@@ -182,7 +182,7 @@ Rail transport, Roads and Road transport
 			<xsd:restriction base="FlexibleQuayRefStructure">
 				<xsd:attribute name="ref" type="FlexibleAreaIdType" use="required">
 					<xsd:annotation>
-						<xsd:documentation>Identifier of a FLEXIBLE AREa.</xsd:documentation>
+						<xsd:documentation>Identifier of a FLEXIBLE AREA.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 				<xsd:attribute name="nameOfRefClass" type="NameOfClassFlexibleAreaRefStructureType" default="FlexibleArea">
