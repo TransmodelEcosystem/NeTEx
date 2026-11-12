@@ -232,7 +232,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- ===TICEKT VALIDATOR EQUIPMENT============================================ -->
+	<!-- ===TICKET VALIDATOR EQUIPMENT============================================ -->
 	<xsd:element name="TicketValidatorEquipment" substitutionGroup="PassengerEquipment">
 		<xsd:annotation>
 			<xsd:documentation>Specialisation of INSTALLED EQUIPMENT describing a ticket validator.</xsd:documentation>
