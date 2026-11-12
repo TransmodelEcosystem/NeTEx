@@ -248,7 +248,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="Chains" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether vehicle has remopvable chains.</xsd:documentation>
+					<xsd:documentation>Whether vehicle has removable chains.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="TrailerHitch" type="xsd:boolean" default="false" minOccurs="0">
