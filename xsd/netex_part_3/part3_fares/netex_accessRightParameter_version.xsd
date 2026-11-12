@@ -870,7 +870,7 @@ Rail transport, Roads and Road transport
 	<!-- ==== SPECIFIC PARAMETER ASSIGNMENT=================================================== -->
 	<xsd:group name="OptimisedOneManyAssignmentGroup">
 		<xsd:annotation>
-			<xsd:documentation>Optimised GENERIC PARAMETER ASSIGNMENT GROUP. ALlows a single Parameter to be given without a wrapper tag.</xsd:documentation>
+			<xsd:documentation>Optimised GENERIC PARAMETER ASSIGNMENT GROUP. Allows a single Parameter to be given without a wrapper tag.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:choice>
 			<xsd:element name="validityParameterAssignments" type="genericParameterAssignments_RelStructure">
