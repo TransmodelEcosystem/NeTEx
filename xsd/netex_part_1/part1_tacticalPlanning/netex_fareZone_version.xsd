@@ -211,7 +211,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="AccountingStopPointRef" type="FareScheduledStopPointRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Station to use for accounting (TAP TSi B1)</xsd:documentation>
+					<xsd:documentation>Station to use for accounting (TAP TSI B1)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="BorderPointRef" minOccurs="0"/>
