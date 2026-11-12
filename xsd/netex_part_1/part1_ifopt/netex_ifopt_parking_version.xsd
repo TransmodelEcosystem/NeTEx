@@ -665,7 +665,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="ParkingVisibility" type="ParkingVisibilityEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Visibible Indication of parking area. +v1.2.2</xsd:documentation>
+					<xsd:documentation>Visible Indication of parking area. +v1.2.2</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MonitoredBays" type="xsd:boolean" minOccurs="0">
