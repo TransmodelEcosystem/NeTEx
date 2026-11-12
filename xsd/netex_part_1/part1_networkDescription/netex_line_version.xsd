@@ -611,7 +611,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="TransportOrganisationRef" minOccurs="0"/>
 			<xsd:element name="groupsOfOperators" type="groupsOfOperatorsRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Groups of OPERATORs AUTHORTies or OPERATORS) (in NETWORK.</xsd:documentation>
+					<xsd:documentation>Groups of OPERATORs AUTHORITies or OPERATORS) (in NETWORK.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="groupsOfLines" type="groupsOfLinesInFrame_RelStructure" minOccurs="0">

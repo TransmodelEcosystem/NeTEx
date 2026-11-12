@@ -300,7 +300,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:element name="AllAuthoritiesRef" type="AllAuthoritiesRefStructure" substitutionGroup="AllPublicTransportOrganisationsRef">
 		<xsd:annotation>
-			<xsd:documentation>Reference to all AUTHORITIies.</xsd:documentation>
+			<xsd:documentation>Reference to all AUTHORITies.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="AllAuthoritiesRefStructure">
@@ -335,7 +335,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:group name="OneOrAllAuthoritiesRefGroup">
 		<xsd:annotation>
-			<xsd:documentation>One or all AUTHORITIies.</xsd:documentation>
+			<xsd:documentation>One or all AUTHORITies.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:choice>
 			<xsd:element ref="AllAuthoritiesRef"/>
