@@ -339,7 +339,7 @@ Rail transport, Roads and Road transport
 	</xsd:element>
 	<xsd:complexType name="SiteEntrance_VersionStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for SITE ENTRANCe.</xsd:documentation>
+			<xsd:documentation>Type for SITE ENTRANCE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="SiteComponent_VersionStructure">
