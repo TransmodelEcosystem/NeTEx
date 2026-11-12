@@ -59,7 +59,7 @@ Rail transport, Roads and Road transport
 				<Type>Standard</Type>
 			</Metadata>
 		</xsd:appinfo>
-		<xsd:documentation>NeTEx LINE NEtwork Types.</xsd:documentation>
+		<xsd:documentation>NeTEx LINE Network Types.</xsd:documentation>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
 	<xsd:simpleType name="LineLinkIdType">
