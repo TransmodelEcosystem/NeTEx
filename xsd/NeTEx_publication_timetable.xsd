@@ -155,7 +155,7 @@ Roads and Road transport.
 		<xsd:annotation>
 			<xsd:documentation>A set of NeTEx objects as assembled by a publication request or other service
 
-Provides a general purose wrapper for NeTEx data content.</xsd:documentation>
+Provides a general purpose wrapper for NeTEx data content.</xsd:documentation>
 		</xsd:annotation>
 		<!-- =======START OF CONSTRAINTS================================ -->
 		<!-- =====REFERENTIAL INTEGRITY Constraints========================= -->
