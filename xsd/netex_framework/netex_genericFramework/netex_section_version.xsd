@@ -226,7 +226,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:element name="PointOnSection_Dummy" type="PointInLinkSequence_VersionedChildStructure" abstract="true" substitutionGroup="PointInLinkSequence">
 		<xsd:annotation>
-			<xsd:documentation>DUmmy Supertype for Point On SECTION. +v1.1.</xsd:documentation>
+			<xsd:documentation>Dummy Supertype for Point On SECTION. +v1.1.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="PointOnSection" substitutionGroup="PointOnSection_Dummy">
