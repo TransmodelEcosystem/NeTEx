@@ -297,7 +297,7 @@ Rail transport, Roads and Road transport
 	</xsd:simpleType>
 	<xsd:simpleType name="SameTypeOfTravelDocumentEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>Allowed values for Type of Trave lDocument ENTITLEMENT CONSTRAINT.</xsd:documentation>
+			<xsd:documentation>Allowed values for Type of Travel Document ENTITLEMENT CONSTRAINT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:enumeration value="any"/>
