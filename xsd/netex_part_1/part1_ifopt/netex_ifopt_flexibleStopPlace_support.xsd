@@ -135,7 +135,7 @@ Rail transport, Roads and Road transport
 			<xsd:restriction base="PlaceRefStructure">
 				<xsd:attribute name="ref" type="FlexibleQuayIdType" use="required">
 					<xsd:annotation>
-						<xsd:documentation>Identifier of a FLIEXIBLE QUAY.</xsd:documentation>
+						<xsd:documentation>Identifier of a FLEXIBLE QUAY.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 				<xsd:attribute name="nameOfRefClass" type="NameOfClassFlexibleQuayRefStructureType" default="FlexibleQuay">
