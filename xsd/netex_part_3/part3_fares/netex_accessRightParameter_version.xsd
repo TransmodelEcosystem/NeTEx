@@ -343,7 +343,7 @@ Rail transport, Roads and Road transport
 	</xsd:group>
 	<xsd:group name="AccessRightParameterValidityParameterGroup">
 		<xsd:annotation>
-			<xsd:documentation>Validity parametersfor ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+			<xsd:documentation>Validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="ValidityParameterAssignmentType" type="RelativeOperatorEnumeration" default="EQ" minOccurs="0">
@@ -509,7 +509,7 @@ Rail transport, Roads and Road transport
 	</xsd:group>
 	<xsd:group name="SiteValidityParametersGroup">
 		<xsd:annotation>
-			<xsd:documentation>SITE validity parametersfor ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+			<xsd:documentation>SITE validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="GroupOfSitesRef" minOccurs="0"/>
