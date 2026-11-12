@@ -75,7 +75,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="TrolleyStandEquipment" minOccurs="0"/>
 			<xsd:element ref="WaitingRoomEquipment" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Specialisation of WAITING EQUIPMENTfor waiting rooms, classified by TYPE OF WAITING ROOM.</xsd:documentation>
+					<xsd:documentation>Specialisation of WAITING EQUIPMENT for waiting rooms, classified by TYPE OF WAITING ROOM.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
