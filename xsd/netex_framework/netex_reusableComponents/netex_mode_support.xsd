@@ -336,7 +336,7 @@ Rail transport, Roads and Road transport
 			<xsd:restriction base="VersionOfObjectRefStructure">
 				<xsd:attribute name="ref" type="OpenTransportModeIdType" use="required">
 					<xsd:annotation>
-						<xsd:documentation>Identifier of MODe.</xsd:documentation>
+						<xsd:documentation>Identifier of MODE.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 				<xsd:attribute name="nameOfRefClass" type="NameOfClassOpenTransportModeRefStructureType" default="OpenTransportMode">
