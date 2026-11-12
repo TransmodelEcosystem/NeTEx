@@ -196,7 +196,7 @@ Rail transport, Roads and Road transport
 			<xsd:enumeration value="returnOnly"/>
 			<xsd:enumeration value="multiple">
 				<xsd:annotation>
-					<xsd:documentation>Multtrip carnet.</xsd:documentation>
+					<xsd:documentation>Multi-trip carnet.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>
