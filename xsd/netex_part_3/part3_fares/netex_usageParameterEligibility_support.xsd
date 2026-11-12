@@ -621,7 +621,7 @@ Rail transport, Roads and Road transport
 	</xsd:element>
 	<xsd:simpleType name="OnBecomingEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>Allowed values for Becoming Eiiigble + v1.1</xsd:documentation>
+			<xsd:documentation>Allowed values for Becoming Eligible + v1.1</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:enumeration value="automatic">
