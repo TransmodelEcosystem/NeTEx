@@ -111,7 +111,7 @@ Rail transport, Roads and Road transport
 			<xsd:enumeration value="alias"/>
 			<xsd:enumeration value="translation">
 				<xsd:annotation>
-					<xsd:documentation>Deprecated in v2.0 for AlternativeName. Use MultiligualString directly with Text subelements.</xsd:documentation>
+					<xsd:documentation>Deprecated in v2.0 for AlternativeName. Use MultilingualString directly with Text subelements.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="copy"/>
