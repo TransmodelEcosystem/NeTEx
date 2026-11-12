@@ -157,7 +157,7 @@ Rail transport, Roads and Road transport
 				<xsd:element ref="NoticeRef"/>
 				<xsd:element name="GroupOfNoticesRef" type="GeneralGroupOfEntitiesRefStructure">
 					<xsd:annotation>
-						<xsd:documentation>A group of Notiices.</xsd:documentation>
+						<xsd:documentation>A group of Notices.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
 				<xsd:element ref="Notice"/>
