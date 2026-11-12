@@ -401,7 +401,7 @@ Rail transport, Roads and Road transport
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<!-- ==== OPERATIONAL CONTEX ======================================================= -->
+	<!-- ==== OPERATIONAL CONTEXT ======================================================= -->
 	<xsd:simpleType name="OperationalContextIdType">
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of an OPERATIONAL CONTEXT.</xsd:documentation>
