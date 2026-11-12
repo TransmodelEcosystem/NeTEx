@@ -860,7 +860,7 @@ Default is false.</xsd:documentation>
 				<xsd:sequence>
 					<xsd:element name="ServiceJourneyRef" type="ServiceJourneyRefStructure">
 						<xsd:annotation>
-							<xsd:documentation>Service Journey to which srevice connects.</xsd:documentation>
+							<xsd:documentation>Service Journey to which service connects.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:choice minOccurs="0">
