@@ -179,7 +179,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="priceGroups" type="priceGroups_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>PRICE GROUPSs making up FARE PRODUCT.</xsd:documentation>
+					<xsd:documentation>PRICE GROUPs making up FARE PRODUCT.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="fareTables" type="fareTables_RelStructure" minOccurs="0">
