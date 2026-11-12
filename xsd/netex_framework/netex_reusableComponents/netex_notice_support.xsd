@@ -272,7 +272,7 @@ Rail transport, Roads and Road transport
 			<xsd:restriction base="TypeOfValueRefStructure">
 				<xsd:attribute name="ref" type="TypeOfDeliveryVariantIdType" use="required">
 					<xsd:annotation>
-						<xsd:documentation>Identifier of a TYPE OF DELVIERY VARIANT.</xsd:documentation>
+						<xsd:documentation>Identifier of a TYPE OF DELIVERY VARIANT.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 				<xsd:attribute name="nameOfRefClass" type="NameOfClassTypeOfDeliveryVariantRefStructureType" default="TypeOfDeliveryVariant">
