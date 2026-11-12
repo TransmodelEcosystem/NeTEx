@@ -101,7 +101,7 @@ Rail transport, Roads and Road transport
 	</xsd:group>
 	<xsd:complexType name="vehiclesInFrame_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for containment in frame of VEHICLEs. NB SLight break v2.0 v2 Vehicle Element moved to</xsd:documentation>
+			<xsd:documentation>Type for containment in frame of VEHICLEs. NB Slight break v2.0 v2 Vehicle Element moved to</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="containmentAggregationStructure">
