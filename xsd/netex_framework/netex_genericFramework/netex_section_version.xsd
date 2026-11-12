@@ -188,7 +188,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="linksOnSection" type="linksOnSection_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Ordered collection of LINKSused in the GENERAL SECTION.</xsd:documentation>
+					<xsd:documentation>Ordered collection of LINKs used in the GENERAL SECTION.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
