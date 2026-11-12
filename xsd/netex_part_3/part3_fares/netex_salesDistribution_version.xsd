@@ -221,7 +221,7 @@ Rail transport, Roads and Road transport
 				</xsd:element>
 				<xsd:element name="DistributionGroupRef" minOccurs="0">
 					<xsd:annotation>
-						<xsd:documentation>Prefined Group of specified points to which distribution is restricted, if any.</xsd:documentation>
+						<xsd:documentation>Predefined Group of specified points to which distribution is restricted, if any.</xsd:documentation>
 					</xsd:annotation>
 					<xsd:complexType>
 						<xsd:simpleContent>
