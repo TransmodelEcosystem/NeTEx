@@ -987,7 +987,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:choice>
 				<xsd:annotation>
-					<xsd:documentation>Optimised multipel choice</xsd:documentation>
+					<xsd:documentation>Optimised multiple choice</xsd:documentation>
 				</xsd:annotation>
 				<xsd:element name="SupplementToFareProductRef" type="FareProductRefStructure" minOccurs="0">
 					<xsd:annotation>
