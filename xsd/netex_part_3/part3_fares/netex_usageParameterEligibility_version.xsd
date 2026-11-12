@@ -567,7 +567,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MustReside" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whthere the user must reside or must not reside in given place.</xsd:documentation>
+					<xsd:documentation>Whether the user must reside or must not reside in given place.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="TopographicPlaceRef" minOccurs="0"/>

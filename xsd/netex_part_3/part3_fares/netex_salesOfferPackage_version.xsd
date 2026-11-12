@@ -766,7 +766,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="RequiresRegistration" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whetee fDistribution requires the user to register.</xsd:documentation>
+					<xsd:documentation>Whether distribution requires the user to register.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="FulfilmentMethodRef" minOccurs="0"/>
