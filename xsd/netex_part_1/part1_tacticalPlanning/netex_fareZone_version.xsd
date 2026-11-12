@@ -111,7 +111,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:complexType name="fareScheduledStopPointsInFrame_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for containment in frame of FARE SCHEUDLED STOP POINT.</xsd:documentation>
+			<xsd:documentation>Type for containment in frame of FARE SCHEDULED STOP POINT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="frameContainmentStructure">
