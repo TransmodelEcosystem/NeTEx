@@ -760,7 +760,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="CappingStartConstraintType" type="CappingPeriodStartConstraintTypeEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Indicates if start of cappig period is variable on fixed. +v1.1</xsd:documentation>
+					<xsd:documentation>Indicates if start of capping period is variable on fixed. +v1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="startOnlyOn" minOccurs="0">
