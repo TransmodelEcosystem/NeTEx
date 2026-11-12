@@ -183,7 +183,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:group ref="InterchangeRuleFilteringGroup">
 				<xsd:annotation>
-					<xsd:documentation>Filter Elements for an INTERCHANGE RULE. SIngle Elements are Logically ANDED together . Multiple elements (e.g. Line) are Logically ORed with each other.</xsd:documentation>
+					<xsd:documentation>Filter Elements for an INTERCHANGE RULE. Single Elements are Logically ANDED together . Multiple elements (e.g. Line) are Logically ORed with each other.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:group>
 		</xsd:sequence>
