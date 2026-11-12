@@ -323,7 +323,7 @@ Rail transport, Roads and Road transport
 	</xsd:simpleType>
 	<xsd:simpleType name="BoardingPermissionEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>Allowed values or Boarding Permission Facility: UIc.</xsd:documentation>
+			<xsd:documentation>Allowed values or Boarding Permission Facility: UIC.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:NMTOKEN">
 			<xsd:enumeration value="normal"/>
@@ -334,7 +334,7 @@ Rail transport, Roads and Road transport
 	</xsd:simpleType>
 	<xsd:simpleType name="CouchetteFacilityEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>Allowed values for Couchette Facility: UIc.</xsd:documentation>
+			<xsd:documentation>Allowed values for Couchette Facility: UIC.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:NMTOKEN">
 			<xsd:enumeration value="unknown"/>
