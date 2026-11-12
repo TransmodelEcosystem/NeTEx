@@ -144,5 +144,5 @@ Rail transport, Roads and Road transport
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<!-- ====Jouurney========================================-->
+	<!-- ====Journey========================================-->
 </xsd:schema>

@@ -69,7 +69,7 @@ Rail transport, Roads and Road transport
 	<!-- ===ENTIITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
 	<xsd:complexType name="frequencyGroupsInFrame_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for containment in frame of OURNEY FREQUENCY GROUPs.</xsd:documentation>
+			<xsd:documentation>Type for containment in frame of JOURNEY FREQUENCY GROUPs.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="containmentAggregationStructure">
