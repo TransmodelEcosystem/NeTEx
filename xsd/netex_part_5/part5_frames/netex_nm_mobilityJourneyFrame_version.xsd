@@ -167,7 +167,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="singleJourneyPaths" type="singleJourneyPaths_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>SINGLE JOURNEY PATHss in frame.</xsd:documentation>
+					<xsd:documentation>SINGLE JOURNEY PATHs in frame.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="groupsOfSingleJourneys" type="groupsOfSingleJourneys_RelStructure" minOccurs="0">
