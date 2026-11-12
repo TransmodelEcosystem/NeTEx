@@ -60,7 +60,7 @@ Rail transport, Roads and Road transport
 		<xsd:documentation>NeTEx NM PARKING BAY STATUS identifier types</xsd:documentation>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
-	<!-- ====  MONITORE VEHICLE SHARING PARKING ================================================== -->
+	<!-- ====  MONITORED VEHICLE SHARING PARKING ================================================== -->
 	<xsd:simpleType name="MonitoredVehicleSharingParkingBayIdType">
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a MONITORED VEHICLE SHARING PARKING BAY.</xsd:documentation>
