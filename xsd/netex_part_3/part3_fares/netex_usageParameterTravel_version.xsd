@@ -770,12 +770,12 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MinimumNumberOfNightsAway" type="xsd:integer" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Minimum number of nighst away that must be spent.</xsd:documentation>
+					<xsd:documentation>Minimum number of nights away that must be spent.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MaximumNumberOfNightsAway" type="xsd:integer" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Minimum number of nighst that can be spent away on trip.</xsd:documentation>
+					<xsd:documentation>Minimum number of nights that can be spent away on trip.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
