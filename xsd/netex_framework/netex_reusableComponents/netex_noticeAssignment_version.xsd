@@ -189,7 +189,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="EndPointInPatternRef" type="PointInSequenceRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>POINT at which applicabiity of NOTICE endsIf absent same as Start Point.</xsd:documentation>
+					<xsd:documentation>POINT at which applicability of NOTICE endsIf absent same as Start Point.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
