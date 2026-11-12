@@ -77,7 +77,7 @@ Rail transport, Roads and Road transport
 	<!-- ====Namespace =================================================================== -->
 	<xsd:element name="Codespace">
 		<xsd:annotation>
-			<xsd:documentation>A system for uniquely identifying objects of a given type. Used for the distributed management of objects from many different sources. For example each region of a country may be given a different codespace to use when allocating stop identifieres which will be unique within a country.</xsd:documentation>
+			<xsd:documentation>A system for uniquely identifying objects of a given type. Used for the distributed management of objects from many different sources. For example each region of a country may be given a different codespace to use when allocating stop identifiers which will be unique within a country.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
