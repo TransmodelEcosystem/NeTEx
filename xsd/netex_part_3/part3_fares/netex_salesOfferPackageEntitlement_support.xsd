@@ -57,7 +57,7 @@ Rail transport, Roads and Road transport
 		<xsd:documentation>NeTEX: SALES OFFER ENTITLEMENT USAGE PARAMETER identifier types.</xsd:documentation>
 	</xsd:annotation>
 	<xsd:include schemaLocation="netex_usageParameter_support.xsd"/>
-	<!-- === ENTTITLEMENT REQUIRED PARAMETER======================================= -->
+	<!-- === ENTITLEMENT REQUIRED PARAMETER======================================= -->
 	<xsd:simpleType name="SalesOfferPackageEntitlementRequiredIdType">
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a SALES OFFER ENTITLEMENT REQUIRED parameter.</xsd:documentation>
@@ -104,7 +104,7 @@ Rail transport, Roads and Road transport
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<!-- === ENTTITLEMENT GIVEN PARAMETER======================================= -->
+	<!-- === ENTITLEMENT GIVEN PARAMETER======================================= -->
 	<xsd:simpleType name="SalesOfferPackageEntitlementGivenIdType">
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a SALES OFFER F ENTITLEMENT GIVEN parameter.</xsd:documentation>
