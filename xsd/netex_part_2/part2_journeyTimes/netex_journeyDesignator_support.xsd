@@ -137,7 +137,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="DepartureDayOffset" type="DayOffsetType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Daya offset if Time of departure of JOURNEY from origin POINT from current OPERATING DAY.</xsd:documentation>
+					<xsd:documentation>Day offset if Time of departure of JOURNEY from origin POINT from current OPERATING DAY.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ArrivalTime" type="xsd:time" minOccurs="0">
@@ -147,7 +147,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="ArrivalDayOffset" type="DayOffsetType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Daya offset if Time of arrival of JOURNEY at destination POINT.</xsd:documentation>
+					<xsd:documentation>Day offset if Time of arrival of JOURNEY at destination POINT.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="DayTypeRef" minOccurs="0"/>
