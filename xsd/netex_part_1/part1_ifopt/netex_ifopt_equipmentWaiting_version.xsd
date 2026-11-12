@@ -287,7 +287,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="AirConditioned" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether shelter has air conditioining.</xsd:documentation>
+					<xsd:documentation>Whether shelter has air conditioning.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
