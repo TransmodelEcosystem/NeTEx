@@ -174,7 +174,7 @@ Roads and road transport
 					<xsd:documentation>Level of detail to return. Default is all.
 All = Return all data and geometry, but not Xref
 NoGeometry = Return all, omitting geometry. 
-XRef - Return Xcross Reference data , e.g. links for zones.</xsd:documentation>
+XRef - Return Cross Reference data , e.g. links for zones.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
