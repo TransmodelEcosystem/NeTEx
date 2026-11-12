@@ -739,7 +739,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="CappingPeriod" type="CappingPeriodEnumeration" default="day" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Period with which capping accumulation is done. Default is 'day'. A USAGE VALIDITY PERIDO parameter can be used to add a more specific definition.</xsd:documentation>
+					<xsd:documentation>Period with which capping accumulation is done. Default is 'day'. A USAGE VALIDITY PERIOD parameter can be used to add a more specific definition.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="CappedDiscountRightRef" minOccurs="0" maxOccurs="unbounded"/>
