@@ -236,7 +236,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="TypeOfResponsibilityRoleRef" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- ==== RESPONSIBILITY ROLE ASSIGNEMNT ============================================================ -->
+	<!-- ==== RESPONSIBILITY ROLE ASSIGNMENT ============================================================ -->
 	<xsd:element name="ResponsibilityRoleAssignment">
 		<xsd:annotation>
 			<xsd:documentation>Assignment of a specific RESPONSIBILITY ROLE to a specific organisation and/or subdivision.</xsd:documentation>

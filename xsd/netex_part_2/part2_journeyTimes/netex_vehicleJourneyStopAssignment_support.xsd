@@ -154,24 +154,24 @@ Rail transport, Roads and Road transport
 	<!-- ==== TRAIN COMPONENT LABEL ASSIGNMENT ================================= -->
 	<xsd:simpleType name="TrainComponentLabelAssignmentIdType">
 		<xsd:annotation>
-			<xsd:documentation>Type for identifier of a TRAIN COMPONENT NUMBER ASSIGNNMENT.</xsd:documentation>
+			<xsd:documentation>Type for identifier of a TRAIN COMPONENT NUMBER ASSIGNMENT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="AssignmentIdType"/>
 	</xsd:simpleType>
 	<xsd:element name="TrainComponentLabelAssignmentRef" type="TrainComponentLabelAssignmentRefStructure" substitutionGroup="AssignmentRef">
 		<xsd:annotation>
-			<xsd:documentation>Reference to a TRAIN COMPONENT NUMBER ASSIGNNMENT.</xsd:documentation>
+			<xsd:documentation>Reference to a TRAIN COMPONENT NUMBER ASSIGNMENT.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="TrainComponentLabelAssignmentRefStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a reference to a TRAIN COMPONENT NUMBER ASSIGNNMENT.</xsd:documentation>
+			<xsd:documentation>Type for a reference to a TRAIN COMPONENT NUMBER ASSIGNMENT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:simpleContent>
 			<xsd:restriction base="AssignmentRefStructure">
 				<xsd:attribute name="ref" type="TrainComponentLabelAssignmentIdType" use="required">
 					<xsd:annotation>
-						<xsd:documentation>Identifier of a TRAIN COMPONENT NUMBER ASSIGNNMENT.</xsd:documentation>
+						<xsd:documentation>Identifier of a TRAIN COMPONENT NUMBER ASSIGNMENT.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 				<xsd:attribute name="nameOfRefClass" type="NameOfClassTrainComponentLabelAssignmentRefStructureType" default="TrainComponentLabelAssignment">
@@ -200,7 +200,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:complexType name="TrainComponentLabelAssignmentRefs_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a list of TRAIN COMPONENT NUMBER ASSIGNNMENTs.</xsd:documentation>
+			<xsd:documentation>Type for a list of TRAIN COMPONENT NUMBER ASSIGNMENTs.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="oneToManyRelationshipStructure">
