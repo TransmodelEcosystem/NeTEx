@@ -72,7 +72,7 @@ Rail transport, Roads and Road transport
 		<xsd:documentation>POINT AND LINK types for NeTEx.</xsd:documentation>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
-	<!-- ===ENTIITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
 	<xsd:group name="CommonPointAndLInkFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>ROUTE elements in frame.</xsd:documentation>

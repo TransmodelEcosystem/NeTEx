@@ -61,7 +61,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NeTEX: Day types for NeTEx.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
 	<xsd:complexType name="dayTypesInFrame_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for containment in frame of DAY TYPEs.</xsd:documentation>
