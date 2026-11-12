@@ -372,7 +372,7 @@ Rail transport, Roads and Road transport
 			<xsd:enumeration value="plug"/>
 			<xsd:enumeration value="pantographAbove">
 				<xsd:annotation>
-					<xsd:documentation>DEPRECATED. Will be panthograph. -v2.0</xsd:documentation>
+					<xsd:documentation>DEPRECATED. Will be pantograph. -v2.0</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="pantograph"/>
