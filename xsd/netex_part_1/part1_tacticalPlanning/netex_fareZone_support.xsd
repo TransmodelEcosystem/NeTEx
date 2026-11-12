@@ -132,7 +132,7 @@ Rail transport, Roads and Road transport
 	</xsd:simpleType>
 	<xsd:element name="BorderPointRef" type="BorderPointRefStructure" substitutionGroup="TimingPointRef">
 		<xsd:annotation>
-			<xsd:documentation>Reference to a BORDER POINT. (TAP TSI B.1.3 Border Boint Code).</xsd:documentation>
+			<xsd:documentation>Reference to a BORDER POINT. (TAP TSI B.1.3 Border Point Code).</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="BorderPointRefStructure">
