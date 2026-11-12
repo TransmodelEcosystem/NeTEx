@@ -773,7 +773,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- === CFARE TABLE COLUMN  HEADING ======================================= -->
+	<!-- === FARE TABLE COLUMN  HEADING ======================================= -->
 	<xsd:complexType name="fareTableColumns_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for a list of FARE FARE TABLE COLUMN HEADINGs.</xsd:documentation>
