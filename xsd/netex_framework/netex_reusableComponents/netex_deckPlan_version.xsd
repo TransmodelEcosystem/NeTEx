@@ -740,7 +740,7 @@
 			</xsd:element>
 			<xsd:element name="SequenceFromFront" type="xsd:positiveInteger" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Positional sequence of door from front (orr left side end) of VEHICLE. 1 - forward,</xsd:documentation>
+					<xsd:documentation>Positional sequence of door from front (or left side end) of VEHICLE. 1 - forward,</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="HeightFromGround" type="LengthType" minOccurs="0">
