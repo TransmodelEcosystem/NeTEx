@@ -62,7 +62,7 @@ Rail transport, Roads and Road transport
 		<xsd:documentation>NeTEx: FLEXIBLE STOP PLACE types.</xsd:documentation>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
-	<!-- ===ENTIITY IN VERSION IN FRAME====(Used in SITE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====(Used in SITE FRAME)=================================================== -->
 	<xsd:complexType name="flexibleStopPlacesInFrame_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for containment in frame of FLEXIBLE STOP PLACE.</xsd:documentation>

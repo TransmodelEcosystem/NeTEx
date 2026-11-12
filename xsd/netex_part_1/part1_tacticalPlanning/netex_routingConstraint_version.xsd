@@ -120,7 +120,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NeTEX: ROUTING CONSTRAINT types.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
 	<xsd:group name="RoutingConstraintInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>ROUTING CONSTRAINT related elements in frame.</xsd:documentation>

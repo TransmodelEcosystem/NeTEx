@@ -104,7 +104,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NeTEX LINE types.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
 	<xsd:group name="NetworkInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation> NETWORK elements in frame.</xsd:documentation>

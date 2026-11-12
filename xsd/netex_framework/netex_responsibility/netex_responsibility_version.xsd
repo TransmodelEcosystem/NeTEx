@@ -109,7 +109,7 @@ Rail transport, Roads and Road transport
 	<!-- ======================================================================= -->
 	<xsd:element name="VersionedChild" type="VersionedChildStructure" abstract="true" substitutionGroup="EntityInVersion">
 		<xsd:annotation>
-			<xsd:documentation>A child ENTIITY whose RESPONSIBILITY SET must be the same as its containing parent object, and which cannot exist independently of its parent.</xsd:documentation>
+			<xsd:documentation>A child ENTITY whose RESPONSIBILITY SET must be the same as its containing parent object, and which cannot exist independently of its parent.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="VersionedChildStructure">

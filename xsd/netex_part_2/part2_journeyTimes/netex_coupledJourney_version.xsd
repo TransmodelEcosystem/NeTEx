@@ -80,7 +80,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NeTEx: COUPLED JOURNEY types.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
 	<xsd:complexType name="journeyPartsInFrame_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for containment in frame of JOURNEY PARTs.</xsd:documentation>

@@ -60,7 +60,7 @@ Rail transport, Roads and ROAD transport
 		<xsd:documentation>NeTEx: NETWORK INFRASTRUCTURE Types.</xsd:documentation>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
-	<!-- ===ENTIITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
 	<xsd:group name="NetworkInfrastuctureInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>Elements for a NETWORK INFRASTRUCTURE in frame.</xsd:documentation>
