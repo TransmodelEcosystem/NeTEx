@@ -243,7 +243,7 @@ Rail transport, Roads and Road transport
 							<xsd:element ref="TypeOfFareStructureFactorRef" minOccurs="0"/>
 							<xsd:element name="Factor" type="xsd:anyType" minOccurs="0">
 								<xsd:annotation>
-									<xsd:documentation>Factor value assoictaed with init.</xsd:documentation>
+									<xsd:documentation>Factor value assoictaed with unit.</xsd:documentation>
 								</xsd:annotation>
 							</xsd:element>
 						</xsd:sequence>
