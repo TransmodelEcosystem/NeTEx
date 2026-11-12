@@ -271,7 +271,7 @@ Rail transport, Roads and Road transport
 				<xsd:element ref="TypeOfFareProductRef"/>
 				<xsd:element name="typesOfFareProduct" type="typeOfFareProductRefs_RelStructure">
 					<xsd:annotation>
-						<xsd:documentation>Classifications of FARE PROFUDCT .</xsd:documentation>
+						<xsd:documentation>Classifications of FARE PRODUCT .</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
 			</xsd:choice>
@@ -870,7 +870,7 @@ Rail transport, Roads and Road transport
 			</xsd:choice>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- ==== PREASSIGNED FARE PRODUC=============================================== -->
+	<!-- ==== PREASSIGNED FARE PRODUCT=============================================== -->
 	<xsd:element name="PreassignedFareProduct" substitutionGroup="FareProduct_Dummy">
 		<xsd:annotation>
 			<xsd:documentation>A FARE PRODUCT consisting of one or several VALIDABLE ELEMENTs, specific to a CHARGING MOMENT.</xsd:documentation>
@@ -927,7 +927,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- ==== PREASSIGNED FARE PRODUC=============================================== -->
+	<!-- ==== PREASSIGNED FARE PRODUCT=============================================== -->
 	<xsd:element name="SupplementProduct" substitutionGroup="FareProduct_Dummy">
 		<xsd:annotation>
 			<xsd:documentation>A FARE PRODUCT consisting of one or several VALIDABLE ELEMENTs, specific to a CHARGING MOMENT.</xsd:documentation>
@@ -996,7 +996,7 @@ Rail transport, Roads and Road transport
 				</xsd:element>
 				<xsd:element name="supplementTo" type="fareProductRefs_RelStructure" minOccurs="0">
 					<xsd:annotation>
-						<xsd:documentation>FARE PRODUCTa to which this SUPPLEMENT PRODUCT can be a a supplement.</xsd:documentation>
+						<xsd:documentation>FARE PRODUCTs to which this SUPPLEMENT PRODUCT can be a a supplement.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
 			</xsd:choice>

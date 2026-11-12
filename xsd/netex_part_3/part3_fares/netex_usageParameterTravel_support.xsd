@@ -415,7 +415,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="specifiedStartDate">
 				<xsd:annotation>
-					<xsd:documentation>Validity period starts on date specified on produc..</xsd:documentation>
+					<xsd:documentation>Validity period starts on date specified on product..</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="startOutboundRide">
