@@ -991,47 +991,47 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="ExchangeableFromAnyTime">
 				<xsd:annotation>
-					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+					<xsd:documentation>Replaces previously misspelled value. +v2.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="ExchangeableFromDuration">
 				<xsd:annotation>
-					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+					<xsd:documentation>Replaces previously misspelled value. +v2.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="ExchangeableFromIntervalRef">
 				<xsd:annotation>
-					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+					<xsd:documentation>Replaces previously misspelled value. +v2.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="ExchangeableFromPercentUse">
 				<xsd:annotation>
-					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+					<xsd:documentation>Replaces previously misspelled value. +v2.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="ExchangeableTo">
 				<xsd:annotation>
-					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+					<xsd:documentation>Replaces previously misspelled value. +v2.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="ExchangeableUntilAnyTime">
 				<xsd:annotation>
-					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+					<xsd:documentation>Replaces previously misspelled value. +v2.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="ExchangeableUntilDuration">
 				<xsd:annotation>
-					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+					<xsd:documentation>Replaces previously misspelled value. +v2.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="ExchangeableUntilIntervalRef">
 				<xsd:annotation>
-					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+					<xsd:documentation>Replaces previously misspelled value. +v2.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="ExchangeableUntilPercentUse">
 				<xsd:annotation>
-					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+					<xsd:documentation>Replaces previously misspelled value. +v2.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="Exchanging"/>
@@ -1468,7 +1468,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="IsExchangeable">
 				<xsd:annotation>
-					<xsd:documentation>Replaces previously missplet value. +v2.1</xsd:documentation>
+					<xsd:documentation>Replaces previously misspelled value. +v2.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="IsExit"/>
