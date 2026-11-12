@@ -35,6 +35,6 @@ The Purpose of this file is to overcome a technical limitation in Xerces (and po
 	<xsd:include schemaLocation="netex_ifopt_vehicleStopping_support.xsd"/>
 	<xsd:include schemaLocation="netex_rechargingPointAssignment_support.xsd"/>
 	<xsd:include schemaLocation="netex_rechargingPointAssignment_version.xsd"/>
-	<!--  For some reason OXygen doesnt like this <xsd:include schemaLocation="netex_assistanceBooking_support.xsd"/> -->
+	<!--  For some reason OXygen doesn't like this <xsd:include schemaLocation="netex_assistanceBooking_support.xsd"/> -->
 	<xsd:include schemaLocation="netex_assistanceBooking_version.xsd"/>
 </xsd:schema>
