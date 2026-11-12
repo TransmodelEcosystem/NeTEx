@@ -122,7 +122,7 @@ Rail transport, Roads and Road transport
 						<xsd:sequence>
 							<xsd:element name="Type" type="xsd:NCName" minOccurs="0">
 								<xsd:annotation>
-									<xsd:documentation>Name of Class associated with uit, e.g. gDay, gTime, etc.</xsd:documentation>
+									<xsd:documentation>Name of Class associated with unit, e.g. gDay, gTime, etc.</xsd:documentation>
 								</xsd:annotation>
 							</xsd:element>
 							<xsd:element name="Duration" type="xsd:duration" minOccurs="0">
@@ -159,7 +159,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="Type" type="xsd:NCName" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Name of Class associated with uit, e.g. gDay, gTime, etc.</xsd:documentation>
+					<xsd:documentation>Name of Class associated with unit, e.g. gDay, gTime, etc.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Duration" type="xsd:duration" minOccurs="0">
