@@ -135,7 +135,7 @@
 			<xsd:group ref="DeckPlanAssignToServiceJourneyGroup"/>
 			<xsd:element name="configurationConditions" type="validityConditionRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Validity coniditions in effect for JOURNEY or JOURNEY PART.</xsd:documentation>
+					<xsd:documentation>Validity conditions in effect for JOURNEY or JOURNEY PART.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
