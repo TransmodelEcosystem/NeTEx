@@ -258,7 +258,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="RoofRack" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>WHether VEHICLE has a roof rack.</xsd:documentation>
+					<xsd:documentation>Whether VEHICLE has a roof rack.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="CycleRack" type="xsd:boolean" default="false" minOccurs="0">
