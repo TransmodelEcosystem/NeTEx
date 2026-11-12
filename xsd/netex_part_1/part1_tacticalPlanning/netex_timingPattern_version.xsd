@@ -487,7 +487,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- ==GROUP OF OPERATORss============================================================ -->
+	<!-- ==GROUP OF OPERATORs============================================================ -->
 	<xsd:element name="GroupOfTimingLinks" substitutionGroup="GroupOfEntities">
 		<xsd:annotation>
 			<xsd:documentation>A set of TIMING LINKs grouped together according to the similarity of TIME BANDs which are relevant to them. There may be a GROUP OF TIMING LINKS which covers all TIMING LINKs, for use when different GROUPs OF TIMING LINKS are not needed.</xsd:documentation>
