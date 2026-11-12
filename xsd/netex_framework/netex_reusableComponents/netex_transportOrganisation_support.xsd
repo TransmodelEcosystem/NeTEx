@@ -204,7 +204,7 @@ Rail transport, Roads and Road transport
 	</xsd:element>
 	<xsd:complexType name="AllOperatorsRefStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a reference to all OPERATORss.</xsd:documentation>
+			<xsd:documentation>Type for a reference to all OPERATORs.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:simpleContent>
 			<xsd:extension base="AllAuthoritiesRefStructure"/>
@@ -342,7 +342,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="AuthorityRef"/>
 		</xsd:choice>
 	</xsd:group>
-	<!-- ==GROUP OF OPERATORss============================================================ -->
+	<!-- ==GROUP OF OPERATORs============================================================ -->
 	<xsd:complexType name="groupsOfOperatorsRefs_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for a list of references to list of GROUPs OF OPERATORS.</xsd:documentation>
