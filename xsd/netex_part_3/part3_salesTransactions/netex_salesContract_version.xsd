@@ -415,7 +415,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- ====P ASSENGER CONTRACT ENTRY-->
+	<!-- ====PASSENGER CONTRACT ENTRY-->
 	<xsd:complexType name="fareContractEntries_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for a list of FARE CONTRACT ENTRYs.</xsd:documentation>
