@@ -223,7 +223,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="GroupTicketRef" minOccurs="0"/>
 			<xsd:element name="MaximumNumberOfUsers" type="NumberOfPassengers" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Maimum number of users on a GROUP TICKET.</xsd:documentation>
+					<xsd:documentation>Maximum number of users on a GROUP TICKET.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
