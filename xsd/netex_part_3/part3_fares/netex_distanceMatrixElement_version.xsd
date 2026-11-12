@@ -200,7 +200,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="prices" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>prices associated with DSISTANCE MATRIX ELEMENT.</xsd:documentation>
+					<xsd:documentation>prices associated with DISTANCE MATRIX ELEMENT.</xsd:documentation>
 				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:complexContent>
@@ -424,7 +424,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="FareTableRef" minOccurs="0"/>
 			<xsd:element name="prices" type="distanceMatrixElementPrices_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>prices associated with DSISTANCE MATRIX ELEMENT.</xsd:documentation>
+					<xsd:documentation>prices associated with DISTANCE MATRIX ELEMENT.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
