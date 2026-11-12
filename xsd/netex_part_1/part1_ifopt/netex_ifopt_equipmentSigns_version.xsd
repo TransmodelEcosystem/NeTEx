@@ -177,7 +177,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="PrintedPresentation" type="PrintPresentationStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Presentatuon characteristics including font size +v1.1 .</xsd:documentation>
+					<xsd:documentation>Presentation characteristics including font size +v1.1 .</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Contrast" type="PercentageType" minOccurs="0">
