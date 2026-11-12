@@ -1252,7 +1252,7 @@ Rail transport, Roads and Road transport
 		</xsd:annotation>
 		<xsd:list itemType="ReservationEnumeration"/>
 	</xsd:simpleType>
-	<!-- ===Reserver space FACILITY====================================== -->
+	<!-- ===Reserved space FACILITY====================================== -->
 	<xsd:element name="ReservedSpaceFacility" type="ReservedSpaceFacilityEnumeration" default="unknown">
 		<xsd:annotation>
 			<xsd:documentation>Classification of RESERVED SPACE FACILITY.</xsd:documentation>
