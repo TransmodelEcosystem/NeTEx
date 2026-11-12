@@ -243,7 +243,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:simpleType name="SameStationReentryPolicyEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>Allowed values for Same Station Rentry Policy.</xsd:documentation>
+			<xsd:documentation>Allowed values for Same Station Re-entry Policy.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:enumeration value="blocked"/>
