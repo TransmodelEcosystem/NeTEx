@@ -697,7 +697,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="PublicCode" type="PublicCodeStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Public Code assosociated with ADMINISTRATIVE ZONE.</xsd:documentation>
+					<xsd:documentation>Public Code associated with ADMINISTRATIVE ZONE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="OrganisationRef_Dummy" minOccurs="0"/>

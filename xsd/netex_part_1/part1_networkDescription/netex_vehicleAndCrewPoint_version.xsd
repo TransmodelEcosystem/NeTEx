@@ -412,7 +412,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="crewBases" type="crewBaseRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>CREW BASEs asspicated with GARAGE.</xsd:documentation>
+					<xsd:documentation>CREW BASEs associated with GARAGE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
