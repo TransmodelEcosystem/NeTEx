@@ -742,7 +742,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="OnBecomingEligiblePolicy" type="OnBecomingEnumeration" default="noAction" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Policy to apply onproduct holder becoming eligible.</xsd:documentation>
+					<xsd:documentation>Policy to apply on product holder becoming eligible.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="OnCeasingToBeEligiblePolicy" type="OnCeasingEnumeration" minOccurs="0">
