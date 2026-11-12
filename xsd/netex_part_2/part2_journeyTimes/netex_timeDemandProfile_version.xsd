@@ -60,7 +60,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NeTEx: TIME DEMAND PROFILE types.</xsd:documentation>
 	</xsd:annotation>
-	<!-- === TIme Demand ========================================================= -->
+	<!-- === Time Demand ========================================================= -->
 	<xsd:element name="TimeDemandProfile" substitutionGroup="DataManagedObject">
 		<xsd:annotation>
 			<xsd:documentation>TIME DEMAND PROFILE.</xsd:documentation>
