@@ -283,7 +283,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="mainTerminusForPlaces" type="topographicPlaceRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>TOPOGRAPHICAL PLACEs for which the STOP PLACE is a main terminus. Only certain stations will be deemed the main STOP PLACEs points. For example London has many rail stations but only some are main line terminii. Geographic containment is not necessarily implied For example London Gatwick and, London Stansted airports are not in London, but are designated airports for London. Norwich station is not in Norwich, etc.</xsd:documentation>
+					<xsd:documentation>TOPOGRAPHICAL PLACEs for which the STOP PLACE is a main terminus. Only certain stations will be deemed the main STOP PLACEs points. For example London has many rail stations but only some are main line termini. Geographic containment is not necessarily implied For example London Gatwick and, London Stansted airports are not in London, but are designated airports for London. Norwich station is not in Norwich, etc.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="LimitedUse" type="LimitedUseTypeEnumeration" minOccurs="0">
