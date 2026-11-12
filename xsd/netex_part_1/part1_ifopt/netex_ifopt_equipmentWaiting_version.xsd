@@ -139,7 +139,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:group name="LuggageLockerEquipmentGroup">
 		<xsd:annotation>
-			<xsd:documentation>Eements for Luggage Locker EQUIPMENT type.</xsd:documentation>
+			<xsd:documentation>Elements for Luggage Locker EQUIPMENT type.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="NumberOfLockers" type="xsd:integer" minOccurs="0">
