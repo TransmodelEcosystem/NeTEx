@@ -289,7 +289,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="ParkingRef"/>
 			<xsd:element name="IsOperational" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether the parking is zurrently operational.</xsd:documentation>
+					<xsd:documentation>Whether the parking is currently operational.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="IsRenting" type="xsd:boolean" minOccurs="0">
