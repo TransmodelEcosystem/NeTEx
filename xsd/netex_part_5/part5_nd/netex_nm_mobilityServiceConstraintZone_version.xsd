@@ -131,7 +131,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="MobilityServiceRef" minOccurs="0"/>
 			<xsd:element name="vehicleRestrictions" type="vehicleTypeZoneRestrictions_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Vehclie restrictions in Zone</xsd:documentation>
+					<xsd:documentation>Vehicle restrictions in Zone</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -292,7 +292,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="ParkingRef" minOccurs="0"/>
 			<xsd:element name="parkingComponents" type="parkingComponentRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Vehclie restrictions in Zone</xsd:documentation>
+					<xsd:documentation>Vehicle restrictions in Zone</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MustReturnToSameBay" type="xsd:boolean" minOccurs="0">
