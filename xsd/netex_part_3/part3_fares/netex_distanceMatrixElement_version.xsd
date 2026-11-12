@@ -485,7 +485,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:group name="DistanceMatrixElementPriceGroup">
 		<xsd:annotation>
-			<xsd:documentation>Elements for a DISTANCE MATRIX ELEMENT PRICe.</xsd:documentation>
+			<xsd:documentation>Elements for a DISTANCE MATRIX ELEMENT PRICE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:choice>
 			<xsd:element ref="DistanceMatrixElementRef"/>

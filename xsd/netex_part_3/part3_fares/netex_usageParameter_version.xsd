@@ -198,7 +198,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:group name="UsageParameterPriceGroup">
 		<xsd:annotation>
-			<xsd:documentation>Elements for USAGE PARAMETER PRICEE Group.</xsd:documentation>
+			<xsd:documentation>Elements for USAGE PARAMETER PRICE Group.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="UsageParameterRef" minOccurs="0"/>
