@@ -139,7 +139,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="OperatingDayRef" minOccurs="0"/>
 			<xsd:element name="datedPassingTimes" type="targetPassingTimes_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>DATED PASSING TIMEsfor SINGLE JOURNEY.</xsd:documentation>
+					<xsd:documentation>DATED PASSING TIMEs for SINGLE JOURNEY.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="meetingPointAssignments" type="vehicleMeetingPointAssignments_RelStructure" minOccurs="0">
