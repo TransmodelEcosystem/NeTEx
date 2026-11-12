@@ -205,7 +205,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="typesOfPaymentMethod" type="TypeOfPaymentMethodRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Additional methods for paymen + v1.1</xsd:documentation>
+					<xsd:documentation>Additional methods for payment + v1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="DistributionRights" type="DistributionRightsListOfEnumerations" minOccurs="0">
