@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri">
 	<!-- ======================================================================= -->
-	<!-- REPLACE THESE PACKAGES WITH OTHER FINCTIONAL SERVICES -->
+	<!-- REPLACE THESE PACKAGES WITH OTHER FUNCTIONAL SERVICES -->
 	<xsd:include schemaLocation="wsdl/siri_all_functionalServices.xsd"/>
 	<!-- END OF FUNCTIONAL SERVICES -->
 	<xsd:annotation>
