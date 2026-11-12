@@ -447,12 +447,12 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:group ref="UsageValidityPeriodFixedPeriodGroup">
 				<xsd:annotation>
-					<xsd:documentation>Elements defining a validtiy period in terms of an absolute calendar date</xsd:documentation>
+					<xsd:documentation>Elements defining a validity period in terms of an absolute calendar date</xsd:documentation>
 				</xsd:annotation>
 			</xsd:group>
 			<xsd:group ref="UsageValidityPeriodStartConstraintGroup">
 				<xsd:annotation>
-					<xsd:documentation>Elements defining a permitted validitiy period in terms of an calendar date</xsd:documentation>
+					<xsd:documentation>Elements defining a permitted validity period in terms of an calendar date</xsd:documentation>
 				</xsd:annotation>
 			</xsd:group>
 			<xsd:element name="BlackoutUse" type="BlackoutStartEnumeration" minOccurs="0">

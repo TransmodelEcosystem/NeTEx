@@ -851,7 +851,7 @@ Rail transport, Roads and Road transport
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:enumeration value="variable">
 				<xsd:annotation>
-					<xsd:documentation>Validty start date can be chosen by user.</xsd:documentation>
+					<xsd:documentation>Validity start date can be chosen by user.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="fixed">
