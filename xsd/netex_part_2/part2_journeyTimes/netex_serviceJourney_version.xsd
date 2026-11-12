@@ -641,7 +641,7 @@ The VIEW includes derived ancillary data from referenced entities.</xsd:document
 	</xsd:group>
 	<xsd:complexType name="DeadRunEndpointStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for DEAD RUN ENDPOINT (Production Timetable Service). Should not Contradict EDEAD RUN JOURNEY PATTERN.</xsd:documentation>
+			<xsd:documentation>Type for DEAD RUN ENDPOINT (Production Timetable Service). Should not Contradict DEAD RUN JOURNEY PATTERN.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="PointRef" minOccurs="0"/>
