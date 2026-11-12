@@ -6,7 +6,7 @@
 	<!-- ======================================================================= -->
 	<xsd:include schemaLocation="netex_grouping_version.xsd"/>
 	<xsd:include schemaLocation="netex_projection_version.xsd"/>
-	<!--fulll gml dependency-->
+	<!--full gml dependency-->
 	<xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../gml/gml_extract_all_objects_v_3_2_1.xsd"/>
 	<!--actual gml dependency-->
 	<xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../gml/geometryBasic0d1d-extract-v3_2_1.xsd"/>
