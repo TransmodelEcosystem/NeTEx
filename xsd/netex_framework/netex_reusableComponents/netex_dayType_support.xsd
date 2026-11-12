@@ -147,7 +147,7 @@ Rail transport, Roads and Road transport
 			<xsd:restriction base="VersionOfObjectRefStructure">
 				<xsd:attribute name="ref" type="TimebandIdType" use="required">
 					<xsd:annotation>
-						<xsd:documentation>Identifier of TIMEBANd.</xsd:documentation>
+						<xsd:documentation>Identifier of TIMEBAND.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 				<xsd:attribute name="nameOfRefClass" type="NameOfClassTimebandRefStructureType" default="Timeband">
