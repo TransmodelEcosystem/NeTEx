@@ -558,7 +558,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="cardsOnly">
 				<xsd:annotation>
-					<xsd:documentation>Paymentonly with debit or credit card (no cash).</xsd:documentation>
+					<xsd:documentation>Payment only with debit or credit card (no cash).</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="travelCard">
