@@ -405,7 +405,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- ====START TIME AT STOP (For FARE DEMAD FACTOR) .============================= -->
+	<!-- ====START TIME AT STOP (For FARE DEMAND FACTOR) .============================= -->
 	<xsd:complexType name="startTimeAtStopPoints_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for a list of START TIME AT STOP POINT.</xsd:documentation>
