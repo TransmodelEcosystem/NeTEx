@@ -922,7 +922,7 @@ Rail transport, Roads and Road transport
 			<xsd:restriction base="TypeOfValueRefStructure">
 				<xsd:attribute name="ref" type="ChargingMomentIdType" use="required">
 					<xsd:annotation>
-						<xsd:documentation>Reference to a CHARGING METHOd.</xsd:documentation>
+						<xsd:documentation>Reference to a CHARGING METHOD.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 				<xsd:attribute name="nameOfRefClass" type="NameOfClassChargingMomentRefStructureType" default="ChargingMoment">
