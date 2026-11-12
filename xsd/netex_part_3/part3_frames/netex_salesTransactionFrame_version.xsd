@@ -176,5 +176,5 @@ Rail transport, Roads and Road transport
 			<xsd:group ref="SpotAllocationsInFrameGroup"/>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- ====Jouurney========================================-->
+	<!-- ====Journey========================================-->
 </xsd:schema>

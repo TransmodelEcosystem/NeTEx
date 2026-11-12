@@ -59,7 +59,7 @@ Rail transport, Roads and Road transport
 		<xsd:documentation>NeTEx: VEHICLE JOURNEY FREQUENCY types.</xsd:documentation>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
-	<!-- ===TEMPLATE JORUNEY=================================================== -->
+	<!-- ===TEMPLATE JOURNEY=================================================== -->
 	<xsd:simpleType name="TemplateVehicleJourneyTypeEnumeration">
 		<xsd:annotation>
 			<xsd:documentation>Allowed values for TEMPLATE VEHICLE JOURNEY type.</xsd:documentation>
