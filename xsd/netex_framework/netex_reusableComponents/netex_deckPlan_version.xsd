@@ -1063,7 +1063,7 @@
 			</xsd:element>
 			<xsd:element name="ControlledLocking" type="xsd:boolean" default="true" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether door is normally locked for safety when in motiion. Default is true.</xsd:documentation>
+					<xsd:documentation>Whether door is normally locked for safety when in motion. Default is true.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="DeckEntranceRef" minOccurs="0"/>
