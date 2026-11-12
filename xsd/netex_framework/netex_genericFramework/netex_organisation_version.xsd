@@ -197,7 +197,7 @@ Rail transport, Roads and Road transport
 			<xsd:group ref="OrganisationDelegationGroup"/>
 			<xsd:element name="relatedOrganisations" type="relatedOrganisations_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Related ORGABISATIONs +v1.2,2</xsd:documentation>
+					<xsd:documentation>Related ORGANISATIONs +v1.2,2</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -621,7 +621,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="OrganisationRef_Dummy" minOccurs="0"/>
 			<xsd:element name="OrganisationRoleType" type="OrganisationRoleEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Role of the related Organbisation</xsd:documentation>
+					<xsd:documentation>Role of the related Organisation</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="ResponsibilityRoleRef" minOccurs="0"/>
