@@ -542,7 +542,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="areas" type="parkingAreaRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>PARKING AREA to which prperties apply +v1.1.</xsd:documentation>
+					<xsd:documentation>PARKING AREA to which properties apply +v1.1.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -628,7 +628,7 @@ Rail transport, Roads and Road transport
 			</xsd:group>
 			<xsd:element name="areas" type="parkingAreaRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>PARKING AREA to which prpoerties apply +v1.1.</xsd:documentation>
+					<xsd:documentation>PARKING AREA to which properties apply +v1.1.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="spaces" type="parkingCapacities_RelStructure" minOccurs="0">

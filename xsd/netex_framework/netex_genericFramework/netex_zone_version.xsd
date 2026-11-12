@@ -388,7 +388,7 @@ Rail transport, Roads and Road transport
 	<!-- ======================================================================= -->
 	<xsd:element name="ZoneView" type="Zone_DerivedViewStructure" substitutionGroup="DerivedView">
 		<xsd:annotation>
-			<xsd:documentation>Simplified view of SCHEDULED STOP POINT. Includes derived some propertries of a stop.</xsd:documentation>
+			<xsd:documentation>Simplified view of SCHEDULED STOP POINT. Includes derived some properties of a stop.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="Zone_DerivedViewStructure">
