@@ -269,7 +269,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="ReservingRequirements" type="ServiceReservationFacilityListOfEnumerations" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Nature of resrevation required.</xsd:documentation>
+					<xsd:documentation>Nature of reservation required.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MinimumNumberToReserve" type="NumberOfPassengers" minOccurs="0">
@@ -319,7 +319,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="ReservationChargeType" type="ReservationChargeTypeEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Nature of reervation fee.</xsd:documentation>
+					<xsd:documentation>Nature of reservation fee.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="FeeBasis" type="PerBasisEnumeration" minOccurs="0">
