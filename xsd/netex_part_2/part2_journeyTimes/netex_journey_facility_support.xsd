@@ -117,7 +117,7 @@
 			</xsd:choice>
 			<xsd:element ref="AvailabilityConditionRef" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>AVAILABILITY CONDITION (further) restricting the applicabillity.</xsd:documentation>
+					<xsd:documentation>AVAILABILITY CONDITION (further) restricting the applicability.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
