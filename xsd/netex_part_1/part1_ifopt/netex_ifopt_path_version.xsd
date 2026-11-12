@@ -405,7 +405,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="placeEquipments" type="placeEquipments_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Items of fixed EQUIPMENT that may be lused at the spot 0 in a particular SIGN EQUIPMENT and BEACON EQUIPMENT. +v2.0</xsd:documentation>
+					<xsd:documentation>Items of fixed EQUIPMENT that may be used at the spot 0 in a particular SIGN EQUIPMENT and BEACON EQUIPMENT. +v2.0</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
