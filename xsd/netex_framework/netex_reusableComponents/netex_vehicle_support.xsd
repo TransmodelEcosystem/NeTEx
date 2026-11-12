@@ -177,7 +177,7 @@ Rail transport, Roads and Road transport
 	<!-- ====== TRACTIVE ROLLING STOCK ITEM ========================================= -->
 	<xsd:simpleType name="TractiveRollingStockItemIdType">
 		<xsd:annotation>
-			<xsd:documentation>Type for identifier of a TRACTIVE ROLLING STOCKITEM.</xsd:documentation>
+			<xsd:documentation>Type for identifier of a TRACTIVE ROLLING STOCK ITEM.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="RollingStockItemIdType"/>
 	</xsd:simpleType>
@@ -224,7 +224,7 @@ Rail transport, Roads and Road transport
 	<!-- ====== TRAILING ROLLING STOCK ITEM ========================================= -->
 	<xsd:simpleType name="TrailingRollingStockItemIdType">
 		<xsd:annotation>
-			<xsd:documentation>Type for identifier of a TRAILING ROLLING STOCKITEM.</xsd:documentation>
+			<xsd:documentation>Type for identifier of a TRAILING ROLLING STOCK ITEM.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="RollingStockItemIdType"/>
 	</xsd:simpleType>
