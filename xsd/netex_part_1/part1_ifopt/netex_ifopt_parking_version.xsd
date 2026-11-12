@@ -220,7 +220,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="PrincipalCapacity" type="xsd:nonNegativeInteger" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Number of parking places normamally available excluding special spaces, reserved spaces etc.</xsd:documentation>
+					<xsd:documentation>Number of parking places normally available excluding special spaces, reserved spaces etc.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="TotalCapacity" type="xsd:nonNegativeInteger" minOccurs="0">
