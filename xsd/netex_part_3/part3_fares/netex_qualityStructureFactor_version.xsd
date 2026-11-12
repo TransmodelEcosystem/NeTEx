@@ -465,7 +465,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="EndTime" type="xsd:time" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Time at stop at whichARE DEMAND PERIODends.</xsd:documentation>
+					<xsd:documentation>Time at stop at whichARE DEMAND PERIOD ends.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="DayOffset" type="DayOffsetType" default="0" minOccurs="0">
