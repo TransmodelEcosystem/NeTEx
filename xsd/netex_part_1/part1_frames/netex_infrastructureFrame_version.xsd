@@ -163,17 +163,17 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="MeetingsRestricted" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Default sense for MEETING RESTRICTIONs in frame. If 'true', meetings at all points are restricted unless explicitly permittted, If 'false', meetings at all points are allowed, unless explicitly forbidden by a MEETING RESTRICTION. Default is 'f'alse'.</xsd:documentation>
+					<xsd:documentation>Default sense for MEETING RESTRICTIONs in frame. If 'true', meetings at all points are restricted unless explicitly permittted, If 'false', meetings at all points are allowed, unless explicitly forbidden by a MEETING RESTRICTION. Default is 'false'.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="RestrictedManoeuvres" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Default sense for RESTRICTED MANOEUVRE in frame. If 'true', manoevres at all points are restricted unless explicitly permittted, If 'false', meeting at all points is allowed, unless explicitly forbidden by a RESTRICTED MANOEUVRE. Default is 'f'alse'.</xsd:documentation>
+					<xsd:documentation>Default sense for RESTRICTED MANOEUVRE in frame. If 'true', manoevres at all points are restricted unless explicitly permittted, If 'false', meeting at all points is allowed, unless explicitly forbidden by a RESTRICTED MANOEUVRE. Default is 'false'.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="OvertakingPossibilitiesRestricted" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Default sense for OVERTAKING POSSIBILITY restrictions in frame. If true, overtaking at all points is restricted unless explicitly permitted, If 'false', meeting at all points is allowed, unless explicitly forbidden by an OVERTAKING POSSIBILITY. Default is 'f'alse'.</xsd:documentation>
+					<xsd:documentation>Default sense for OVERTAKING POSSIBILITY restrictions in frame. If true, overtaking at all points is restricted unless explicitly permitted, If 'false', meeting at all points is allowed, unless explicitly forbidden by an OVERTAKING POSSIBILITY. Default is 'false'.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
