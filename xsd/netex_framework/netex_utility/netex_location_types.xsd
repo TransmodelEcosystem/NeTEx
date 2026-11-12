@@ -197,7 +197,7 @@ Lower right corner.
 		</xsd:annotation>
 		<xsd:restriction base="xsd:float"/>
 	</xsd:simpleType>
-	<!--======Compas Points======================================================================================-->
+	<!--======Compass Points======================================================================================-->
 	<xsd:simpleType name="CompassBearing16Enumeration">
 		<xsd:annotation>
 			<xsd:documentation>16 point compass.</xsd:documentation>
