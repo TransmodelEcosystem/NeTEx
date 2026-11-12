@@ -170,7 +170,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="ReliefPointRef"/>
 			<xsd:element name="garages" type="garageRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>garages associated with CREW BASe.</xsd:documentation>
+					<xsd:documentation>garages associated with CREW BASE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
