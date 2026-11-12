@@ -284,7 +284,7 @@ Rail transport, Roads and Road transport
 			<xsd:choice>
 				<xsd:element name="EndPointOnLinkRef" type="PointOnLinkRefStructure" minOccurs="0">
 					<xsd:annotation>
-						<xsd:documentation>End POINTof PROJECTION on link . May be omitted if same as start POINT of POINT ON LINK.</xsd:documentation>
+						<xsd:documentation>End POINT of PROJECTION on link . May be omitted if same as start POINT of POINT ON LINK.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
 				<xsd:element name="EndPointOnLinkByValue" type="PointOnLinkByValueStructure" minOccurs="0">

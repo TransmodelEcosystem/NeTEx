@@ -933,7 +933,7 @@ Rail transport, Roads and Road transport
 					</xsd:sequence>
 					<xsd:attribute name="id" type="VehicleManoeuvringRequirementIdType" use="required">
 						<xsd:annotation>
-							<xsd:documentation>Identifier of VEHICLE MANOEVRING REQUIREMENT.</xsd:documentation>
+							<xsd:documentation>Identifier of VEHICLE MANOEUVRING REQUIREMENT.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:attribute>
 				</xsd:restriction>
@@ -1280,7 +1280,7 @@ Rail transport, Roads and Road transport
 					</xsd:sequence>
 					<xsd:attribute name="id" type="VehicleEquipmentProfileMemberIdType" use="required">
 						<xsd:annotation>
-							<xsd:documentation>Identifier of VEHICLE EQUIPMENT PROILE.</xsd:documentation>
+							<xsd:documentation>Identifier of VEHICLE EQUIPMENT PROFILE.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:attribute>
 				</xsd:restriction>

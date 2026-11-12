@@ -159,7 +159,7 @@ Rail transport, Roads and Road transport
 	</xsd:simpleType>
 	<xsd:simpleType name="SetOperatorEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>Allowed values for set operations.where there are one or more GROUPs OF ENTITTies of a given type - used to distinguish between selection of a whole group or of an item in the group).  Used  in a  product description  to indicate the range from which a choice may be made and in a sales transaction to record the nature of a choice that has been made.
+			<xsd:documentation>Allowed values for set operations.where there are one or more GROUPs OF ENTITies of a given type - used to distinguish between selection of a whole group or of an item in the group).  Used  in a  product description  to indicate the range from which a choice may be made and in a sales transaction to record the nature of a choice that has been made.
 			              member                                              Set
            AND         AllMembersAllSets                             AllMembersAllSets
            OR           OneItem 											AllMembers Of OnSet
@@ -169,27 +169,27 @@ Rail transport, Roads and Road transport
 		<xsd:restriction base="xsd:NMTOKEN">
 			<xsd:enumeration value="oneOfAnyOneSet">
 				<xsd:annotation>
-					<xsd:documentation>Only one item from all referenced GROUPs OF ENTITTies of a given type may be selected/has been selected.</xsd:documentation>
+					<xsd:documentation>Only one item from all referenced GROUPs OF ENTITies of a given type may be selected/has been selected.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="oneOfEachSet">
 				<xsd:annotation>
-					<xsd:documentation>One item from each specified referenced GROUP OF ENTITTies of a given type must be selected/has been selected..</xsd:documentation>
+					<xsd:documentation>One item from each specified referenced GROUP OF ENTITies of a given type must be selected/has been selected..</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="someOfAnySet">
 				<xsd:annotation>
-					<xsd:documentation>Multiple items from any referenced GROUP OF ENTITTies of a given type may be selected/have been selected.</xsd:documentation>
+					<xsd:documentation>Multiple items from any referenced GROUP OF ENTITies of a given type may be selected/have been selected.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="allOfOneSet">
 				<xsd:annotation>
-					<xsd:documentation>All items from one specified referenced GROUP OF ENTITTies of a given type may be selected/have been selected.</xsd:documentation>
+					<xsd:documentation>All items from one specified referenced GROUP OF ENTITies of a given type may be selected/have been selected.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="allOfAllSets">
 				<xsd:annotation>
-					<xsd:documentation>All items from all referenced GROUPs OF ENTITTies of a given type may be selected/have been selected.</xsd:documentation>
+					<xsd:documentation>All items from all referenced GROUPs OF ENTITies of a given type may be selected/have been selected.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>

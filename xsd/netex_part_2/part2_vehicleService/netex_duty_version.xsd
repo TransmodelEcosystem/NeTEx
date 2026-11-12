@@ -349,7 +349,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="EndDayOffset" type="DayOffsetType" default="0" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Day offset for end time. Number of days after the starting departure time of the journey if not same calendar day as starting timey. Default is 0 for same day.</xsd:documentation>
+					<xsd:documentation>Day offset for end time. Number of days after the starting departure time of the journey if not same calendar day as starting time. Default is 0 for same day.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="StartPointRef" type="TimingPointRefStructure" minOccurs="0">

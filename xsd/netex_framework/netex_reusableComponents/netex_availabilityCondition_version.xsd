@@ -187,7 +187,7 @@ Rail transport, Roads and Road transport
 	<!-- ===A simple availability condition==================================================================== -->
 	<xsd:element name="ValidDuring" substitutionGroup="ValidityCondition_Dummy">
 		<xsd:annotation>
-			<xsd:documentation> OPTIMISATION: Sversion of an AVAILABILITY CONDITION Comprises a simple period and DAY TYPE.</xsd:documentation>
+			<xsd:documentation> OPTIMISATION: Version of an AVAILABILITY CONDITION Comprises a simple period and DAY TYPE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>

@@ -389,7 +389,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="Ticketing" type="GroupTicketingEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Natute of tickets issued for group</xsd:documentation>
+					<xsd:documentation>Nature of tickets issued for group</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="JointCheckIn" type="GroupCheckInEnumeration" minOccurs="0">
@@ -472,7 +472,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="UserProfileRef" minOccurs="0"/>
 			<xsd:element name="CompanionRelationshipType" type="CompanionRelationshipEnumeration" default="anyone" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Required Relationship of companion to eliigble user +V1.1.</xsd:documentation>
+					<xsd:documentation>Required Relationship of companion to eligible user +V1.1.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MinimumNumberOfPersons" type="NumberOfPassengers" minOccurs="0">
@@ -552,12 +552,12 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="Name" type="MultilingualString" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Name of RESIDENTIAL QUALIFICATIO.</xsd:documentation>
+					<xsd:documentation>Name of RESIDENTIAL QUALIFICATION.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Description" type="MultilingualString" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Description of RESIDENTIAL QUALIFICATIO.</xsd:documentation>
+					<xsd:documentation>Description of RESIDENTIAL QUALIFICATION.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ParentRef" type="UsageParameterRefStructure" minOccurs="0">
@@ -567,7 +567,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MustReside" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whthere the user must reside or must not reside in given place.</xsd:documentation>
+					<xsd:documentation>Whether the user must reside or must not reside in given place.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="TopographicPlaceRef" minOccurs="0"/>
@@ -742,7 +742,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="OnBecomingEligiblePolicy" type="OnBecomingEnumeration" default="noAction" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Policy to apply onproduct holder becoming eligible.</xsd:documentation>
+					<xsd:documentation>Policy to apply on product holder becoming eligible.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="OnCeasingToBeEligiblePolicy" type="OnCeasingEnumeration" minOccurs="0">

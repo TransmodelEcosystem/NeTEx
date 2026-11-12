@@ -104,7 +104,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NeTEX LINE types.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
 	<xsd:group name="NetworkInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation> NETWORK elements in frame.</xsd:documentation>
@@ -269,7 +269,7 @@ Rail transport, Roads and Road transport
 	<!-- ==Line============================================================ -->
 	<xsd:complexType name="linesInFrame_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for containment in frame of LINe.</xsd:documentation>
+			<xsd:documentation>Type for containment in frame of LINE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="containmentAggregationStructure">
@@ -281,7 +281,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:element name="Line_Dummy" type="DataManagedObjectStructure" abstract="true" substitutionGroup="DataManagedObject">
 		<xsd:annotation>
-			<xsd:documentation>Dummy Supertype for LINE &amp; FLEXIBLE LINe.</xsd:documentation>
+			<xsd:documentation>Dummy Supertype for LINE &amp; FLEXIBLE LINE.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="Line" substitutionGroup="Line_Dummy" id="Line">
@@ -491,7 +491,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="TypeOfLineRef" minOccurs="0"/>
 			<xsd:element name="ExternalProductCategoryRef" type="ExternalObjectRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>An default product classification for all journeys of the lin e for use in AVMS systems. For VDV compatibility. +v1.1. DEPRECATED - use privateCodes -v2.0</xsd:documentation>
+					<xsd:documentation>An default product classification for all journeys of the line for use in AVMS systems. For VDV compatibility. +v1.1. DEPRECATED - use privateCodes -v2.0</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="TypeOfProductCategoryRef" minOccurs="0"/>
@@ -611,7 +611,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="TransportOrganisationRef" minOccurs="0"/>
 			<xsd:element name="groupsOfOperators" type="groupsOfOperatorsRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Groups of OPERATORs AUTHORTies or OPERATORS) (in NETWORK.</xsd:documentation>
+					<xsd:documentation>Groups of OPERATORs AUTHORITies or OPERATORS) (in NETWORK.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="groupsOfLines" type="groupsOfLinesInFrame_RelStructure" minOccurs="0">
@@ -957,7 +957,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="DirectionRef"/>
 			<xsd:element name="Presentation" type="PresentationStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Pesentation to use for DIRECTION. +v1.1..</xsd:documentation>
+					<xsd:documentation>Presentation to use for DIRECTION. +v1.1..</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -1091,7 +1091,7 @@ Rail transport, Roads and Road transport
 	<!-- ======================================================================= -->
 	<xsd:complexType name="destinationDisplayViews_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a list of DSETINATION DISPLAY VIEWs.</xsd:documentation>
+			<xsd:documentation>Type for a list of DESTINATION DISPLAY VIEWs.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="containmentAggregationStructure">

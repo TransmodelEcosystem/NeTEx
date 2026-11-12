@@ -197,7 +197,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="IsRestricted" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether restricted to certain toutes.</xsd:documentation>
+					<xsd:documentation>Whether restricted to certain routes.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ReturnRouteIdentical" type="xsd:boolean" minOccurs="0">
@@ -207,7 +207,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="ForwardsOnly" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Passenger may only take routes that proceed in a single direction. (They may not use product to achieve a return trip for the cost of a single trip by purchasing a circular route and a making a journe break).</xsd:documentation>
+					<xsd:documentation>Passenger may only take routes that proceed in a single direction. (They may not use product to achieve a return trip for the cost of a single trip by purchasing a circular route and a making a journey break).</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="CrossBorder" type="xsd:boolean" minOccurs="0">
@@ -288,12 +288,12 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MaximumNumberOfSteps" type="xsd:nonNegativeInteger" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Miaxmum number of steps allowed.</xsd:documentation>
+					<xsd:documentation>Maximum number of steps allowed.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MaximumNumberOfTrips" type="xsd:nonNegativeInteger" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Miaxmum number of Overall trips allowed.</xsd:documentation>
+					<xsd:documentation>Maximum number of Overall trips allowed.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -447,12 +447,12 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:group ref="UsageValidityPeriodFixedPeriodGroup">
 				<xsd:annotation>
-					<xsd:documentation>Elements defining a validtiy period in terms of an absolute calendar date</xsd:documentation>
+					<xsd:documentation>Elements defining a validity period in terms of an absolute calendar date</xsd:documentation>
 				</xsd:annotation>
 			</xsd:group>
 			<xsd:group ref="UsageValidityPeriodStartConstraintGroup">
 				<xsd:annotation>
-					<xsd:documentation>Elements defining a permitted validitiy period in terms of an calendar date</xsd:documentation>
+					<xsd:documentation>Elements defining a permitted validity period in terms of an calendar date</xsd:documentation>
 				</xsd:annotation>
 			</xsd:group>
 			<xsd:element name="BlackoutUse" type="BlackoutStartEnumeration" minOccurs="0">
@@ -518,7 +518,7 @@ Rail transport, Roads and Road transport
 	</xsd:group>
 	<xsd:complexType name="FixedStartWindowStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for Fiexd Start WIndow.</xsd:documentation>
+			<xsd:documentation>Type for Fixed Start Window.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="MaximumServicesBefore" type="xsd:nonNegativeInteger" minOccurs="0">
@@ -671,7 +671,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="CanInterchange" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether an Jinterchange can be made.</xsd:documentation>
+					<xsd:documentation>Whether an interchange can be made.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="FromMode" type="AllPublicTransportModesEnumeration" minOccurs="0">
@@ -686,7 +686,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MaximumNumberOfInterchanges" type="xsd:integer" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Maximum number of interhanges between SERVICE JOURNEYs that can be made in a single TRIP.</xsd:documentation>
+					<xsd:documentation>Maximum number of interchanges between SERVICE JOURNEYs that can be made in a single TRIP.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MaximumTimeToMakeATransfer" type="xsd:duration" minOccurs="0">
@@ -770,12 +770,12 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MinimumNumberOfNightsAway" type="xsd:integer" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Minimum number of nighst away that must be spent.</xsd:documentation>
+					<xsd:documentation>Minimum number of nights away that must be spent.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MaximumNumberOfNightsAway" type="xsd:integer" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Minimum number of nighst that can be spent away on trip.</xsd:documentation>
+					<xsd:documentation>Minimum number of nights that can be spent away on trip.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

@@ -183,7 +183,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 		</xsd:choice>
 	</xsd:group>
-	<!--======USEr need types=====================================================================================-->
+	<!--======User need types=====================================================================================-->
 	<xsd:simpleType name="MobilityList">
 		<xsd:annotation>
 			<xsd:documentation>List of Allowed values for of mobility needs.</xsd:documentation>
@@ -260,7 +260,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:element name="Suitability">
 		<xsd:annotation>
-			<xsd:documentation>The SUITABILTY of a component to meet a specific USER NEED.</xsd:documentation>
+			<xsd:documentation>The SUITABILITY of a component to meet a specific USER NEED.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>

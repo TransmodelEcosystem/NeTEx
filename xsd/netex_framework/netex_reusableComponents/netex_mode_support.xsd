@@ -262,7 +262,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="cableway">
 				<xsd:annotation>
-					<xsd:documentation>Can be only two cabines or multiple.</xsd:documentation>
+					<xsd:documentation>Can be only two cabins or multiple.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="funicular">
@@ -336,7 +336,7 @@ Rail transport, Roads and Road transport
 			<xsd:restriction base="VersionOfObjectRefStructure">
 				<xsd:attribute name="ref" type="OpenTransportModeIdType" use="required">
 					<xsd:annotation>
-						<xsd:documentation>Identifier of MODe.</xsd:documentation>
+						<xsd:documentation>Identifier of MODE.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 				<xsd:attribute name="nameOfRefClass" type="NameOfClassOpenTransportModeRefStructureType" default="OpenTransportMode">
@@ -383,7 +383,7 @@ Rail transport, Roads and Road transport
 			<xsd:restriction base="VersionOfObjectRefStructure">
 				<xsd:attribute name="ref" type="SubmodeIdType" use="required">
 					<xsd:annotation>
-						<xsd:documentation>Identifier of SUBMODe.</xsd:documentation>
+						<xsd:documentation>Identifier of SUBMODE.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 				<xsd:attribute name="nameOfRefClass" type="NameOfClassSubmodeRefStructureType" default="Submode">

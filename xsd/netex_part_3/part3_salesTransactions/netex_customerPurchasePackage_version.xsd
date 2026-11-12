@@ -102,7 +102,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NeTEx: CUSTOMER PURCHASE PACKAGE types.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
 	<xsd:group name="CustomerPurchasePackageInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>CUSTOMER PURCHASE PACKAGEs of a FARE FRAME.</xsd:documentation>
@@ -453,7 +453,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="DistributionAssignmentRef" minOccurs="0"/>
 			<xsd:element name="RetailingOrganizationRef" type="OrganisationRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Organizatio that sold product. instance.</xsd:documentation>
+					<xsd:documentation>Organization that sold product. instance.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="CollectionPointRef" type="PointRefStructure" minOccurs="0">
@@ -589,7 +589,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="TravelSpecificationSummaryView" minOccurs="0"/>
 			<xsd:element name="travelSpecifications" type="travelSpecifications_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>TRAVEL SPEECIFICATIONs for FARE CONTRACT.</xsd:documentation>
+					<xsd:documentation>TRAVEL SPECIFICATIONs for FARE CONTRACT.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="validityParameterAssignments" type="customerPurchaseParameterAssignments_RelStructure" minOccurs="0">

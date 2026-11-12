@@ -431,7 +431,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="ProjectedObjectRef" type="VersionOfObjectRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Object being projected onto TOPOGRAPHIC AALCE&gt; May be given by context.</xsd:documentation>
+					<xsd:documentation>Object being projected onto TOPOGRAPHIC PLACE. May be given by context.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:choice>

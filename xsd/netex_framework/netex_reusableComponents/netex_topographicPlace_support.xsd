@@ -56,7 +56,7 @@ Rail transport, Roads and Road transport
 				<Type>Standard</Type>
 			</Metadata>
 		</xsd:appinfo>
-		<xsd:documentation>TOPOGRAPHIC PLACEtypes for NeTEx IFOPT Fixed Objects in Public Transport.</xsd:documentation>
+		<xsd:documentation>TOPOGRAPHIC PLACE types for NeTEx IFOPT Fixed Objects in Public Transport.</xsd:documentation>
 	</xsd:annotation>
 	<!-- =====NPTGClassifiers================================================================== -->
 	<xsd:simpleType name="TopographicPlaceTypeEnumeration">

@@ -61,7 +61,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NeTEx INDIVIDUAL TRAVELLER types.</xsd:documentation>
 	</xsd:annotation>
-	<!-- === ENTIITY IN VERSION IN FRAME= === ================================================== -->
+	<!-- === ENTITY IN VERSION IN FRAME= === ================================================== -->
 	<xsd:group name="IndividualTravellersInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>INDIVIDUAL TRAVELLERs in FRAME.</xsd:documentation>
@@ -244,7 +244,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="IndividualTravellerRef" minOccurs="0"/>
 			<xsd:element name="Ranking" type="GlobalRankingType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Meanrating for driver.</xsd:documentation>
+					<xsd:documentation>Mean rating for driver.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="LastTripDate" type="xsd:dateTime" minOccurs="0">

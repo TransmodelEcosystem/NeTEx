@@ -375,7 +375,7 @@ Rail transport, Roads and Road transport
 					</xsd:sequence>
 					<xsd:attribute name="id" type="CarPoolingServiceIdType" use="required">
 						<xsd:annotation>
-							<xsd:documentation>Identifier of GENERAL POOLIMG SERVICE.</xsd:documentation>
+							<xsd:documentation>Identifier of GENERAL POOLING SERVICE.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:attribute>
 				</xsd:restriction>

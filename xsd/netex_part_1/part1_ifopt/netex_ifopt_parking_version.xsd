@@ -75,7 +75,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>PARKING types for IFOPT Fixed Objects in Public Transport.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====(Used in SITEFRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====(Used in SITEFRAME)=================================================== -->
 	<xsd:complexType name="parkingsInFrame_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for containment in frame of PARKING.</xsd:documentation>
@@ -220,7 +220,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="PrincipalCapacity" type="xsd:nonNegativeInteger" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Number of parking places normamally available excluding special spaces, reserved spaces etc.</xsd:documentation>
+					<xsd:documentation>Number of parking places normally available excluding special spaces, reserved spaces etc.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="TotalCapacity" type="xsd:nonNegativeInteger" minOccurs="0">
@@ -363,7 +363,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="PaymentUrl" type="xsd:anyURI" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>URL to make paymnet.</xsd:documentation>
+					<xsd:documentation>URL to make payment.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="PaymentAppDownloadUrl" type="xsd:anyURI" minOccurs="0">
@@ -511,7 +511,7 @@ Rail transport, Roads and Road transport
 						<xsd:sequence>
 							<xsd:element name="areas" type="parkingAreaRefs_RelStructure" minOccurs="0">
 								<xsd:annotation>
-									<xsd:documentation>PARKING AREA to which PARKING PASSENGER ENTRANCE gives accessappky +v1.1.</xsd:documentation>
+									<xsd:documentation>PARKING AREA to which PARKING PASSENGER ENTRANCE gives access apply +v1.1.</xsd:documentation>
 								</xsd:annotation>
 							</xsd:element>
 						</xsd:sequence>
@@ -527,7 +527,7 @@ Rail transport, Roads and Road transport
 	</xsd:element>
 	<xsd:complexType name="ParkingPassengerEntrance_VersionStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a PARKING PASSENGER ENTRANCe.</xsd:documentation>
+			<xsd:documentation>Type for a PARKING PASSENGER ENTRANCE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="SiteEntrance_VersionStructure">
@@ -537,12 +537,12 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:group name="ParkingPassengerEntranceGroup">
 		<xsd:annotation>
-			<xsd:documentation>Elements of a PARKING PASSENGER ENTRANCe.</xsd:documentation>
+			<xsd:documentation>Elements of a PARKING PASSENGER ENTRANCE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="areas" type="parkingAreaRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>PARKING AREA to which prperties appky +v1.1.</xsd:documentation>
+					<xsd:documentation>PARKING AREA to which properties apply +v1.1.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -628,7 +628,7 @@ Rail transport, Roads and Road transport
 			</xsd:group>
 			<xsd:element name="areas" type="parkingAreaRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>PARKING AREA to which prpoerties appky +v1.1.</xsd:documentation>
+					<xsd:documentation>PARKING AREA to which properties apply +v1.1.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="spaces" type="parkingCapacities_RelStructure" minOccurs="0">
@@ -665,7 +665,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="ParkingVisibility" type="ParkingVisibilityEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Visibible Indication of parking area. +v1.2.2</xsd:documentation>
+					<xsd:documentation>Visible Indication of parking area. +v1.2.2</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MonitoredBays" type="xsd:boolean" minOccurs="0">

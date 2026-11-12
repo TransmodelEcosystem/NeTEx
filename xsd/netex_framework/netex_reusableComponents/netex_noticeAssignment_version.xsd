@@ -157,7 +157,7 @@ Rail transport, Roads and Road transport
 				<xsd:element ref="NoticeRef"/>
 				<xsd:element name="GroupOfNoticesRef" type="GeneralGroupOfEntitiesRefStructure">
 					<xsd:annotation>
-						<xsd:documentation>A group of Notiices.</xsd:documentation>
+						<xsd:documentation>A group of Notices.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
 				<xsd:element ref="Notice"/>
@@ -169,7 +169,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:group ref="NoticeLinkAssignmentGroup">
 				<xsd:annotation>
-					<xsd:documentation>Link assigbment Elements for a NOTICE ASSIGNMENT. That restrict NOTICE to a specific pattern or partial pattern.</xsd:documentation>
+					<xsd:documentation>Link assignment Elements for a NOTICE ASSIGNMENT. That restrict NOTICE to a specific pattern or partial pattern.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:group>
 			<xsd:group ref="NoticeAssignmentPropertiesGroup"/>
@@ -189,7 +189,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="EndPointInPatternRef" type="PointInSequenceRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>POINT at which applicabiity of NOTICE endsIf absent same as Start Point.</xsd:documentation>
+					<xsd:documentation>POINT at which applicability of NOTICE endsIf absent same as Start Point.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

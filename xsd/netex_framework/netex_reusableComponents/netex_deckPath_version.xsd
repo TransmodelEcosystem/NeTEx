@@ -510,7 +510,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="facilities" type="serviceFacilitySets_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Facilities available at SITe.</xsd:documentation>
+					<xsd:documentation>Facilities available at SITE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1" id="netex_publication_timetable">
-	<!-- ==+ THIS SCHEMA PROVIDS A REDUCED VERSION OF THE FULL NETEX PULICATION SCHEMA ===== -->
+	<!-- ==+ THIS SCHEMA PROVIDES A REDUCED VERSION OF THE FULL NETEX PUBLICATION SCHEMA ===== -->
 	<!-- ==+ IT INCLUDES ELEMENTS RELEVANT FOR THE EXCHANGE OF TIMETABLES ===== -->
 	<!-- ==+ANY DOCUMENT COMPLIANT WITH THIS SCHEMA WILL ALSO BE COMPLIANT WITH NetEx_publication.xsd ===== -->
 	<!-- ===Dependencies ======================================= -->
@@ -155,7 +155,7 @@ Roads and Road transport.
 		<xsd:annotation>
 			<xsd:documentation>A set of NeTEx objects as assembled by a publication request or other service
 
-Provides a general purose wrapper for NeTEx data content.</xsd:documentation>
+Provides a general purpose wrapper for NeTEx data content.</xsd:documentation>
 		</xsd:annotation>
 		<!-- =======START OF CONSTRAINTS================================ -->
 		<!-- =====REFERENTIAL INTEGRITY Constraints========================= -->

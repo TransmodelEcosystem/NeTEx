@@ -66,7 +66,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>CHECK CONSTRAINT types for IFOPT Fixed Objects in Public Transport.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====(Used in SITE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====(Used in SITE FRAME)=================================================== -->
 	<xsd:group name="CheckConstraintInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>CHECK CONSTRAINT elements in frame.</xsd:documentation>

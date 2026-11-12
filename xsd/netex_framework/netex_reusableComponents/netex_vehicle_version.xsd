@@ -101,7 +101,7 @@ Rail transport, Roads and Road transport
 	</xsd:group>
 	<xsd:complexType name="vehiclesInFrame_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for containment in frame of VEHICLEs. NB SLight breaaka v2.0 v2 Vehicle ELement moved to</xsd:documentation>
+			<xsd:documentation>Type for containment in frame of VEHICLEs. NB Slight break v2.0 v2 Vehicle Element moved to</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="containmentAggregationStructure">
@@ -234,7 +234,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="RegistrationDate" type="xsd:date" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Date of registration or commissioning - may be used to determine the age of a vehice.</xsd:documentation>
+					<xsd:documentation>Date of registration or commissioning - may be used to determine the age of a vehicle.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -317,7 +317,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="TypeOfRollingStockRef" minOccurs="0"/>
 			<xsd:element name="facilities" type="ServiceFacilitySet_VersionStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Faciliies found in ROLLING STOCK ITEM.</xsd:documentation>
+					<xsd:documentation>Facilities found in ROLLING STOCK ITEM.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -499,7 +499,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="TransportOrganisationRef" minOccurs="0"/>
 			<xsd:element name="rollingStockItems" type="rollingStockItems_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Faciliies found in ROLLING STOCK ITEM.</xsd:documentation>
+					<xsd:documentation>Facilities found in ROLLING STOCK ITEM.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

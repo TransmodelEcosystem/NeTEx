@@ -142,7 +142,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MaximumAccess" type="xsd:nonNegativeInteger" default="1" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Maximum number of times use of this element mayoccur in a given trip. +v1.1</xsd:documentation>
+					<xsd:documentation>Maximum number of times use of this element may occur in a given trip. +v1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="AccessNumber" type="xsd:integer" minOccurs="0">

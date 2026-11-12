@@ -468,7 +468,7 @@ Rail transport, Roads and Road transport
 			<xsd:restriction base="TypeOfValueRefStructure">
 				<xsd:attribute name="ref" type="TypeOfLineIdType" use="required">
 					<xsd:annotation>
-						<xsd:documentation>Reference to a TYPE OF LINe.</xsd:documentation>
+						<xsd:documentation>Reference to a TYPE OF LINE.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 				<xsd:attribute name="nameOfRefClass" type="NameOfClassTypeOfLineRefStructureType" default="TypeOfLine">

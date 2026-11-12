@@ -51,14 +51,14 @@
 	<!-- ======================================================================= -->
 	<xsd:simpleType name="ChildThingIdType">
 		<xsd:annotation>
-			<xsd:documentation>Type for an identifier of a CHild Thing</xsd:documentation>
+			<xsd:documentation>Type for an identifier of a Child Thing</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="ObjectIdType"/>
 	</xsd:simpleType>
 	<!-- ======================================================================= -->
 	<xsd:complexType name="somethingElseRefs_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a list of relalted SOMETHING ELSES</xsd:documentation>
+			<xsd:documentation>Type for a list of related SOMETHING ELSES</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="oneToManyRelationshipStructure">

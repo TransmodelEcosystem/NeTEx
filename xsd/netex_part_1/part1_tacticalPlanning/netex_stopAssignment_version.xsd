@@ -70,7 +70,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>STOP ASSIGNMENT types for NeTEx.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
 	<xsd:group name="StopAssignmentInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>STOP ASSIGNMENT related elements in frame.</xsd:documentation>
@@ -289,7 +289,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:element name="PassengerBoardingPositionAssignment" substitutionGroup="StopAssignment">
 		<xsd:annotation>
-			<xsd:documentation>The default allocation of a SCHEDULED STOP POINT to a specific STOP PLACE, and also possibly a QUAY and BOARDING POSITION. NB Rebmed from TRAIN STOP ASSIGNMENT in v2.</xsd:documentation>
+			<xsd:documentation>The default allocation of a SCHEDULED STOP POINT to a specific STOP PLACE, and also possibly a QUAY and BOARDING POSITION. NB Renamed from TRAIN STOP ASSIGNMENT in v2.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>

@@ -221,7 +221,7 @@ Rail transport, Roads and Road transport
 				<xsd:element ref="GroupOfSalesOfferPackagesRef"/>
 				<xsd:element name="groupsOfSaleOfferPackages" type="groupOfSalesOfferPackageRefs_RelStructure">
 					<xsd:annotation>
-						<xsd:documentation>Reference to multiple GROUP of SALES OFFER PACKAGEs with whicj this SALES OFFER PACKAGE shares properties.</xsd:documentation>
+						<xsd:documentation>Reference to multiple GROUP of SALES OFFER PACKAGEs with which this SALES OFFER PACKAGE shares properties.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
 			</xsd:choice>
@@ -419,7 +419,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="SalesOfferPackageElementRef" minOccurs="0"/>
 		</xsd:choice>
 	</xsd:group>
-	<!-- ====SALES OFFER PACKAGE SUBSTITUTIOIN================================= -->
+	<!-- ====SALES OFFER PACKAGE SUBSTITUTION================================= -->
 	<xsd:complexType name="salesOfferPackageSubstitutions_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for a list of SALES OFFER PACKAGE SUBSTITUTIONs.</xsd:documentation>
@@ -676,7 +676,7 @@ Rail transport, Roads and Road transport
 			<xsd:group ref="DistributionDetailsGroup"/>
 			<xsd:element name="noticeAssignments" type="noticeAssignments_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>NOTICEs for SALES PACKAGe.</xsd:documentation>
+					<xsd:documentation>NOTICEs for SALES PACKAGE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -766,7 +766,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="RequiresRegistration" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whetee fDistribution requires the user to register.</xsd:documentation>
+					<xsd:documentation>Whether distribution requires the user to register.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="FulfilmentMethodRef" minOccurs="0"/>

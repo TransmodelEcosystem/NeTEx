@@ -226,7 +226,7 @@ Rail transport, Roads and Road transport
 	</xsd:element>
 	<xsd:complexType name="TypeOfEntity_VersionStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a TYPE OFENTITY. Abstract supertype used to define open classifications of value types.</xsd:documentation>
+			<xsd:documentation>Type for a TYPE OF ENTITY. Abstract supertype used to define open classifications of value types.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="TypeOfValue_VersionStructure">

@@ -120,7 +120,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="IsPersonal" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether the product is personaised or anonymous.</xsd:documentation>
+					<xsd:documentation>Whether the product is personalised or anonymous.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="RequiresPhoto" type="xsd:boolean" default="false" minOccurs="0">
@@ -253,7 +253,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="AllowCompanionDiscounts" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether the product allows a companion discountt for eligible users.</xsd:documentation>
+					<xsd:documentation>Whether the product allows a companion discount for eligible users.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="HasMinimumPrice" type="xsd:boolean" default="false" minOccurs="0">

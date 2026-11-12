@@ -392,7 +392,7 @@
 			</xsd:element>
 			<xsd:element name="SmokingAllowed" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether smoking is allowed in DECK SPACE. Defaukts is false.</xsd:documentation>
+					<xsd:documentation>Whether smoking is allowed in DECK SPACE. Defaults is false.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="TypeOfDeckSpaceRef" minOccurs="0"/>
@@ -725,7 +725,7 @@
 	</xsd:group>
 	<xsd:group name="DeckEntrancePositionGroup">
 		<xsd:annotation>
-			<xsd:documentation>Positional ements for a DECK ENTRANCE.</xsd:documentation>
+			<xsd:documentation>Positional elements for a DECK ENTRANCE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="VehicleSide" type="VehicleSideEnumeration" minOccurs="0">
@@ -740,7 +740,7 @@
 			</xsd:element>
 			<xsd:element name="SequenceFromFront" type="xsd:positiveInteger" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Positional sequence of door from front (orr left side end) of VEHICLE. 1 - forward,</xsd:documentation>
+					<xsd:documentation>Positional sequence of door from front (or left side end) of VEHICLE. 1 - forward,</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="HeightFromGround" type="LengthType" minOccurs="0">
@@ -1018,7 +1018,7 @@
 					</xsd:sequence>
 					<xsd:attribute name="id" type="DeckEntranceUsageIdType" use="required">
 						<xsd:annotation>
-							<xsd:documentation>Identifier of VEHICLE EQUIPMENT PROILE.</xsd:documentation>
+							<xsd:documentation>Identifier of VEHICLE EQUIPMENT PROFILE.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:attribute>
 				</xsd:restriction>
@@ -1063,7 +1063,7 @@
 			</xsd:element>
 			<xsd:element name="ControlledLocking" type="xsd:boolean" default="true" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether door is normally locked for safety when in motiion. Default is true.</xsd:documentation>
+					<xsd:documentation>Whether door is normally locked for safety when in motion. Default is true.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="DeckEntranceRef" minOccurs="0"/>
@@ -1401,7 +1401,7 @@
 			<xsd:element ref="TypeOfLocatableSpotRef" minOccurs="0"/>
 			<xsd:element name="Capacity" type="NumberOfPassengers" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>The total capacity for passengers or vehciles of the type.</xsd:documentation>
+					<xsd:documentation>The total capacity for passengers or vehicles of the type.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

@@ -343,7 +343,7 @@ Rail transport, Roads and Road transport
 	</xsd:group>
 	<xsd:group name="AccessRightParameterValidityParameterGroup">
 		<xsd:annotation>
-			<xsd:documentation>Validity parametersfor ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+			<xsd:documentation>Validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="ValidityParameterAssignmentType" type="RelativeOperatorEnumeration" default="EQ" minOccurs="0">
@@ -509,7 +509,7 @@ Rail transport, Roads and Road transport
 	</xsd:group>
 	<xsd:group name="SiteValidityParametersGroup">
 		<xsd:annotation>
-			<xsd:documentation>SITE validity parametersfor ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+			<xsd:documentation>SITE validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="GroupOfSitesRef" minOccurs="0"/>
@@ -613,7 +613,7 @@ Rail transport, Roads and Road transport
 	</xsd:group>
 	<xsd:group name="ConventionalServiceValidityParametersGroup">
 		<xsd:annotation>
-			<xsd:documentation>Connventional Service validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
+			<xsd:documentation>Conventional Service validity parameters for ACCESS RIGHT PARAMETER ASSIGNMENT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="ServiceJourneyRef" minOccurs="0"/>
@@ -659,7 +659,7 @@ Rail transport, Roads and Road transport
 			<xsd:group ref="DeckSpaceReferenceGroup"/>
 			<xsd:group ref="SpotValidityParametersGroup">
 				<xsd:annotation>
-					<xsd:documentation>RReference to a SPOT VALIDITY PARAMETER GROUP to which the ACCESS RIGHT PARAMETER ASSIGNMENTs applies. +v2.0</xsd:documentation>
+					<xsd:documentation>Reference to a SPOT VALIDITY PARAMETER GROUP to which the ACCESS RIGHT PARAMETER ASSIGNMENTs applies. +v2.0</xsd:documentation>
 				</xsd:annotation>
 			</xsd:group>
 			<xsd:element ref="PassengerSeatRef" minOccurs="0"/>
@@ -870,7 +870,7 @@ Rail transport, Roads and Road transport
 	<!-- ==== SPECIFIC PARAMETER ASSIGNMENT=================================================== -->
 	<xsd:group name="OptimisedOneManyAssignmentGroup">
 		<xsd:annotation>
-			<xsd:documentation>Optimised GENERIC PARAMETER ASSIGNMENT GROUP. ALlows a single Parameter to be given without a wrapper tag.</xsd:documentation>
+			<xsd:documentation>Optimised GENERIC PARAMETER ASSIGNMENT GROUP. Allows a single Parameter to be given without a wrapper tag.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:choice>
 			<xsd:element name="validityParameterAssignments" type="genericParameterAssignments_RelStructure">

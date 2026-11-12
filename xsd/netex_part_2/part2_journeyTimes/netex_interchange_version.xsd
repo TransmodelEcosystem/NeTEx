@@ -70,7 +70,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NeTEX INTERCHANGE types.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
 	<xsd:complexType name="journeyMeetingsInFrame_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for containment in frame of JOURNEY MEETINGs.</xsd:documentation>
@@ -410,7 +410,7 @@ Rail transport, Roads and Road transport
 	<!-- ======================================================================= -->
 	<xsd:element name="Interchange_Dummy" type="DataManagedObjectStructure" abstract="true" substitutionGroup="DataManagedObject">
 		<xsd:annotation>
-			<xsd:documentation>Dummy supertype for INTERCHANGe.</xsd:documentation>
+			<xsd:documentation>Dummy supertype for INTERCHANGE.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="Interchange" abstract="true" substitutionGroup="DataManagedObject">
@@ -860,7 +860,7 @@ Default is false.</xsd:documentation>
 				<xsd:sequence>
 					<xsd:element name="ServiceJourneyRef" type="ServiceJourneyRefStructure">
 						<xsd:annotation>
-							<xsd:documentation>Service Journey to which srevice connects.</xsd:documentation>
+							<xsd:documentation>Service Journey to which service connects.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:choice minOccurs="0">

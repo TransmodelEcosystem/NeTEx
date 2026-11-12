@@ -176,7 +176,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="period">
 				<xsd:annotation>
-					<xsd:documentation>Tariff is based on temporal durtaions, e.g minutes or days of travel.</xsd:documentation>
+					<xsd:documentation>Tariff is based on temporal durations, e.g minutes or days of travel.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="free">

@@ -58,7 +58,7 @@ Rail transport, Roads and Road transport
 		<xsd:documentation>NetEX: NOTICE types for NeTEx Network Exchange.</xsd:documentation>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
-	<!-- ===ENTIITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
 	<xsd:complexType name="noticesInFrame_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for containment in frame of NOTICEs.</xsd:documentation>
@@ -155,7 +155,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="Text" type="MultilingualString" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Text content of NOTICe.</xsd:documentation>
+					<xsd:documentation>Text content of NOTICE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="PublicCode" type="PublicCodeStructure" minOccurs="0">
@@ -284,7 +284,7 @@ Rail transport, Roads and Road transport
 	</xsd:element>
 	<xsd:complexType name="TypeOfNotice_ValueStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a TYPE OF NOTICe.</xsd:documentation>
+			<xsd:documentation>Type for a TYPE OF NOTICE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="TypeOfEntity_VersionStructure"/>

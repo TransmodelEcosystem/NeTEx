@@ -169,7 +169,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- ==  QULAITY STRUCTURE FACTOR PRICE.================================ -->
+	<!-- ==  QUALITY STRUCTURE FACTOR PRICE.================================ -->
 	<xsd:complexType name="qualityStructureFactorPrices_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for a list of QUALITY STRUCTURE FACTOR PRICEs.</xsd:documentation>
@@ -405,7 +405,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- ====START TIME AT STOP (For FARE DEMAD FACTOR) .============================= -->
+	<!-- ====START TIME AT STOP (For FARE DEMAND FACTOR) .============================= -->
 	<xsd:complexType name="startTimeAtStopPoints_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for a list of START TIME AT STOP POINT.</xsd:documentation>
@@ -465,7 +465,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="EndTime" type="xsd:time" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Time at stop at whichARE DEMAND PERIODends.</xsd:documentation>
+					<xsd:documentation>Time at stop at whichARE DEMAND PERIOD ends.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="DayOffset" type="DayOffsetType" default="0" minOccurs="0">

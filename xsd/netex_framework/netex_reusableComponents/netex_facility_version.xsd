@@ -70,7 +70,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NeTEx: FACILITY types for NeTEx.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
 	<xsd:group name="FacilitySetsInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>Elements for FACILITIES. +V1.2.2</xsd:documentation>
@@ -156,7 +156,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="TypeOfFacilityRef" minOccurs="0"/>
 			<xsd:element name="otherFacilities" type="typesOfEquipment_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Arbitrary user defined Faciliy.</xsd:documentation>
+					<xsd:documentation>Arbitrary user defined Facility.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:group ref="CommonFacilityGroup"/>
@@ -728,7 +728,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="Name" type="MultilingualString" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Name of ON BOARD STay +v1.1</xsd:documentation>
+					<xsd:documentation>Name of ON BOARD STAY +v1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="ServiceFacilitySetRef" minOccurs="0"/>
@@ -819,7 +819,7 @@ Rail transport, Roads and Road transport
 		</xsd:annotation>
 		<xsd:list itemType="AccessibilityToolEnumeration"/>
 	</xsd:simpleType>
-	<!-- ===Accommodation Accss====================================== -->
+	<!-- ===Accommodation Access====================================== -->
 	<xsd:element name="AccommodationAccess" type="AccommodationAccessEnumeration">
 		<xsd:annotation>
 			<xsd:documentation>Classification of ACCOMMODATION ACCESS type -</xsd:documentation>
@@ -1252,7 +1252,7 @@ Rail transport, Roads and Road transport
 		</xsd:annotation>
 		<xsd:list itemType="ReservationEnumeration"/>
 	</xsd:simpleType>
-	<!-- ===Reserver space FACILITY====================================== -->
+	<!-- ===Reserved space FACILITY====================================== -->
 	<xsd:element name="ReservedSpaceFacility" type="ReservedSpaceFacilityEnumeration" default="unknown">
 		<xsd:annotation>
 			<xsd:documentation>Classification of RESERVED SPACE FACILITY.</xsd:documentation>

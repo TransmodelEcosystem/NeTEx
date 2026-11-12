@@ -141,7 +141,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="infoLinks" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Hyperlinks associated with GPRICEABLE OBLECT. Can be used to associated pfs, web pages etc, conditions of use etc.</xsd:documentation>
+					<xsd:documentation>Hyperlinks associated with PRICEABLE OBJECT. Can be used to associated PDFs, web pages etc, conditions of use etc.</xsd:documentation>
 				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:complexContent>
@@ -179,12 +179,12 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="priceGroups" type="priceGroups_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>PRICE GROUPSs making up FARE PRODUCT.</xsd:documentation>
+					<xsd:documentation>PRICE GROUPs making up FARE PRODUCT.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="fareTables" type="fareTables_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Other FARE TABLESs for DISTANCE MATRIX ELEMENT.</xsd:documentation>
+					<xsd:documentation>Other FARE TABLEs for DISTANCE MATRIX ELEMENT.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -196,7 +196,7 @@ Rail transport, Roads and Road transport
 	</xsd:element>
 	<xsd:complexType name="fareTables_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a list of FAREFARE TABLE PRICE GROUP.s.</xsd:documentation>
+			<xsd:documentation>Type for a list of FARE TABLE PRICE GROUP.s.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="strictContainmentAggregationStructure">
@@ -293,7 +293,7 @@ Rail transport, Roads and Road transport
 			<xsd:group ref="FarePriceCalculationGroup"/>
 			<xsd:element name="Ranking" type="xsd:integer" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Ranking to give this discount relatove to other applicable discounts.</xsd:documentation>
+					<xsd:documentation>Ranking to give this discount relative to other applicable discounts.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -411,7 +411,7 @@ The RULE STEP RESULT  Adjustment Amount is  the difference between the original 
 	</xsd:complexType>
 	<xsd:group name="StepCalculationAmountGroup">
 		<xsd:annotation>
-			<xsd:documentation>Step anounts for for FARE STEP RESULT.</xsd:documentation>
+			<xsd:documentation>Step amounts for for FARE STEP RESULT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="RateUsed" type="xsd:decimal" minOccurs="0">

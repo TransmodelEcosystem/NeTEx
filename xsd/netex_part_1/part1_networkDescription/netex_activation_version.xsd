@@ -64,7 +64,7 @@ Rail transport, Roads and Road transport
 		<xsd:documentation>NeTEX: ACTIVATION types.</xsd:documentation>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
-	<!-- ===ENTIITY IN VERSION IN FRAME====Used in INFRASTRUCTURE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====Used in INFRASTRUCTURE FRAME)=================================================== -->
 	<xsd:group name="ActivationInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>Elements for an ACTIVATION in frame.</xsd:documentation>

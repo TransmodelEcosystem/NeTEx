@@ -179,7 +179,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="Duration" type="xsd:duration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>DUration for trip or pass</xsd:documentation>
+					<xsd:documentation>Duration for trip or pass</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="journeys" type="travelSpecificationJourneyRefs_RelStructure" minOccurs="0">
@@ -189,7 +189,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="seriesConstraints" type="seriesConstraintRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Routig for trip</xsd:documentation>
+					<xsd:documentation>Routing for trip</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:choice minOccurs="0">
@@ -223,7 +223,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="GroupTicketRef" minOccurs="0"/>
 			<xsd:element name="MaximumNumberOfUsers" type="NumberOfPassengers" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Maimum number of users on a GROUP TICKET.</xsd:documentation>
+					<xsd:documentation>Maximum number of users on a GROUP TICKET.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

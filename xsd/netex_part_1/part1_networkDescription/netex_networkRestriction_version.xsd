@@ -60,7 +60,7 @@ Rail transport, Roads and ROAD transport
 		</xsd:appinfo>
 		<xsd:documentation>NeTEx NETWORK RESTRICTION types.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
 	<!-- ======================================================================= -->
 	<xsd:group name="NetworkDescriptionInFrameGroup">
 		<xsd:annotation>
@@ -373,7 +373,7 @@ Rail transport, Roads and ROAD transport
 			</xsd:element>
 			<xsd:element name="AgainstVehicleTypeRef" type="TransportTypeRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Type of vehicle that may use backwards direction of INFRASTRUCTURE LINK. For a meeting restriction this is for the vehicle going in the reveser sense of the link. For overtaking possibility this is for the vehicle being overtaken.</xsd:documentation>
+					<xsd:documentation>Type of vehicle that may use backwards direction of INFRASTRUCTURE LINK. For a meeting restriction this is for the vehicle going in the reverse sense of the link. For overtaking possibility this is for the vehicle being overtaken.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

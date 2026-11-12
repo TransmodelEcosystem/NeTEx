@@ -75,7 +75,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="TrolleyStandEquipment" minOccurs="0"/>
 			<xsd:element ref="WaitingRoomEquipment" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Specialisation of WAITING EQUIPMENTfor waiting rooms, classified by TYPE OF WAITING ROOM.</xsd:documentation>
+					<xsd:documentation>Specialisation of WAITING EQUIPMENT for waiting rooms, classified by TYPE OF WAITING ROOM.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -139,7 +139,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:group name="LuggageLockerEquipmentGroup">
 		<xsd:annotation>
-			<xsd:documentation>Eements for Luggage Locker EQUIPMENT type.</xsd:documentation>
+			<xsd:documentation>Elements for Luggage Locker EQUIPMENT type.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="NumberOfLockers" type="xsd:integer" minOccurs="0">
@@ -287,7 +287,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="AirConditioned" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether shelter has air conditioining.</xsd:documentation>
+					<xsd:documentation>Whether shelter has air conditioning.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
