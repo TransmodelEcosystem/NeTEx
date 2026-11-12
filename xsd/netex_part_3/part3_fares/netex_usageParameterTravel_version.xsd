@@ -671,7 +671,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="CanInterchange" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether an Jinterchange can be made.</xsd:documentation>
+					<xsd:documentation>Whether an interchange can be made.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="FromMode" type="AllPublicTransportModesEnumeration" minOccurs="0">
@@ -686,7 +686,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MaximumNumberOfInterchanges" type="xsd:integer" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Maximum number of interhanges between SERVICE JOURNEYs that can be made in a single TRIP.</xsd:documentation>
+					<xsd:documentation>Maximum number of interchanges between SERVICE JOURNEYs that can be made in a single TRIP.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MaximumTimeToMakeATransfer" type="xsd:duration" minOccurs="0">

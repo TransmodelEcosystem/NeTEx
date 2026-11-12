@@ -237,7 +237,7 @@ Rail transport, Roads and Road transport
 			</xsd:choice>
 			<xsd:element name="MaximumInterchangeWindow" type="xsd:duration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Maximum interval for making INTERCHANGe.</xsd:documentation>
+					<xsd:documentation>Maximum interval for making INTERCHANGE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -353,7 +353,7 @@ Rail transport, Roads and Road transport
 			</xsd:choice>
 			<xsd:element name="MaximumInterchangeWindow" type="xsd:duration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Maximum interval for making INTERCHANGe.</xsd:documentation>
+					<xsd:documentation>Maximum interval for making INTERCHANGE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="TransportMode" type="AllPublicTransportModesEnumeration" default="all" minOccurs="0">
