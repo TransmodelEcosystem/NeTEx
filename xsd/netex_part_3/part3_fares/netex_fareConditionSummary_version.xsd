@@ -120,7 +120,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="IsPersonal" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether the product is personaised or anonymous.</xsd:documentation>
+					<xsd:documentation>Whether the product is personalised or anonymous.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="RequiresPhoto" type="xsd:boolean" default="false" minOccurs="0">
