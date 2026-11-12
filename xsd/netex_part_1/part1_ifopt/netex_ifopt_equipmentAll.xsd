@@ -15,9 +15,9 @@ Public transport, Bus services, Coach services, Bus stops and stations,
 Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport , Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
-</Category><Project>CEN TC278 WG3 SG9.</Project></Subject><Title>NeTEx Network Exchange (IFOPT subset) - All EQIPMENT types. </Title><Type>Standard</Type></Metadata>
+</Category><Project>CEN TC278 WG3 SG9.</Project></Subject><Title>NeTEx Network Exchange (IFOPT subset) - All EQUIPMENT types. </Title><Type>Standard</Type></Metadata>
 		</xsd:appinfo>
-		<xsd:documentation>All EQIPMENT types. NeTEx.</xsd:documentation>
+		<xsd:documentation>All EQUIPMENT types. NeTEx.</xsd:documentation>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
 	<!--.....These are the actual dependencies...-->

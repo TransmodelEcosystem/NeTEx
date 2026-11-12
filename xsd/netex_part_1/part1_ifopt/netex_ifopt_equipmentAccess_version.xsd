@@ -1145,7 +1145,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:group name="RampEquipmentGroup">
 		<xsd:annotation>
-			<xsd:documentation>Elements for RAMP EQUIPMEN/</xsd:documentation>
+			<xsd:documentation>Elements for RAMP EQUIPMENT/</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="Length" type="LengthType" minOccurs="0">

@@ -273,7 +273,7 @@ LOGICAL DISPLAY corresponds to a SIRI STOP MONITORING point.</xsd:documentation>
 					<xsd:element ref="DisplayAssignmentRef"/>
 					<xsd:element ref="DisplayAssignment">
 						<xsd:annotation>
-							<xsd:documentation>The assignment of one SCHEDULED STOP POINT and one JOURNEY PATTERN to a PASSENGER INFORMATION EQUIPMENTI specifying that information on the SCHEDULED STOP POINT and the JOURNEY PATTERN will be provided (e.g. displayed, printed).</xsd:documentation>
+							<xsd:documentation>The assignment of one SCHEDULED STOP POINT and one JOURNEY PATTERN to a PASSENGER INFORMATION EQUIPMENT specifying that information on the SCHEDULED STOP POINT and the JOURNEY PATTERN will be provided (e.g. displayed, printed).</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:choice>
