@@ -137,7 +137,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="TypeOfPaymentMethodRef" minOccurs="0"/>
 			<xsd:element name="LastVerifiedDate" type="xsd:dateTime" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Dat that means was last verified by an authentication process.</xsd:documentation>
+					<xsd:documentation>Date that means was last verified by an authentication process.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
