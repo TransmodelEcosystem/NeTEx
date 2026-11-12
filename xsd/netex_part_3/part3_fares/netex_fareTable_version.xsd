@@ -444,7 +444,7 @@ Rail transport, Roads and Road transport
 					<xsd:element ref="Cell" maxOccurs="unbounded"/>
 					<xsd:element name="CellInContext" maxOccurs="unbounded">
 						<xsd:annotation>
-							<xsd:documentation>An individual combination of features in a FARE TABLE, used to associate a FARE PRICE. An optimisation of CELL that can be used in a Faretable without a cell id. SHould have a unique identity through its other attributes.</xsd:documentation>
+							<xsd:documentation>An individual combination of features in a FARE TABLE, used to associate a FARE PRICE. An optimisation of CELL that can be used in a Faretable without a cell id. Should have a unique identity through its other attributes.</xsd:documentation>
 						</xsd:annotation>
 						<xsd:complexType>
 							<xsd:complexContent>
