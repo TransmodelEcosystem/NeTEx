@@ -527,7 +527,7 @@ Rail transport, Roads and Road transport
 	</xsd:element>
 	<xsd:complexType name="ParkingPassengerEntrance_VersionStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a PARKING PASSENGER ENTRANCe.</xsd:documentation>
+			<xsd:documentation>Type for a PARKING PASSENGER ENTRANCE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="SiteEntrance_VersionStructure">
@@ -537,7 +537,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:group name="ParkingPassengerEntranceGroup">
 		<xsd:annotation>
-			<xsd:documentation>Elements of a PARKING PASSENGER ENTRANCe.</xsd:documentation>
+			<xsd:documentation>Elements of a PARKING PASSENGER ENTRANCE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="areas" type="parkingAreaRefs_RelStructure" minOccurs="0">
