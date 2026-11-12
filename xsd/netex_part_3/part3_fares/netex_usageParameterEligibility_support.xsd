@@ -428,7 +428,7 @@ Rail transport, Roads and Road transport
 	</xsd:simpleType>
 	<xsd:simpleType name="ProofOfIdentityEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>Allowed values for PROOF REQUIIRED Type.</xsd:documentation>
+			<xsd:documentation>Allowed values for PROOF REQUIRED Type.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:enumeration value="noneRequired"/>
@@ -449,7 +449,7 @@ Rail transport, Roads and Road transport
 	</xsd:simpleType>
 	<xsd:simpleType name="ProofOfIdentityListOfEnumerations">
 		<xsd:annotation>
-			<xsd:documentation>List of values for PROOF REQUIIRED</xsd:documentation>
+			<xsd:documentation>List of values for PROOF REQUIRED</xsd:documentation>
 		</xsd:annotation>
 		<xsd:list itemType="ProofOfIdentityEnumeration"/>
 	</xsd:simpleType>
