@@ -141,7 +141,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="infoLinks" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Hyperlinks associated with GPRICEABLE OBJECT. Can be used to associated PDFs, web pages etc, conditions of use etc.</xsd:documentation>
+					<xsd:documentation>Hyperlinks associated with PRICEABLE OBJECT. Can be used to associated PDFs, web pages etc, conditions of use etc.</xsd:documentation>
 				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:complexContent>
