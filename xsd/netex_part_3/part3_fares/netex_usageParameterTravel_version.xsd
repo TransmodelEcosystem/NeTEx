@@ -197,7 +197,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="IsRestricted" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether restricted to certain toutes.</xsd:documentation>
+					<xsd:documentation>Whether restricted to certain routes.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ReturnRouteIdentical" type="xsd:boolean" minOccurs="0">
