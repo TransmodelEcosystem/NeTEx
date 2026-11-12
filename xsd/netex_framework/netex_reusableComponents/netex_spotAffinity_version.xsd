@@ -144,7 +144,7 @@
 			</xsd:element>
 			<xsd:element name="members" type="locatableSpotRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>:ocatable SPOTs for element.</xsd:documentation>
+					<xsd:documentation>Locatable SPOTs for element.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
