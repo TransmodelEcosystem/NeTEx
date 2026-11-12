@@ -293,7 +293,7 @@ Rail transport, Roads and Road transport
 			<xsd:group ref="FarePriceCalculationGroup"/>
 			<xsd:element name="Ranking" type="xsd:integer" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Ranking to give this discount relatove to other applicable discounts.</xsd:documentation>
+					<xsd:documentation>Ranking to give this discount relative to other applicable discounts.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
