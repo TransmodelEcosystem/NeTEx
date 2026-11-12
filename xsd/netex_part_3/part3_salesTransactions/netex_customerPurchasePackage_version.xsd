@@ -453,7 +453,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="DistributionAssignmentRef" minOccurs="0"/>
 			<xsd:element name="RetailingOrganizationRef" type="OrganisationRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Organizatio that sold product. instance.</xsd:documentation>
+					<xsd:documentation>Organization that sold product. instance.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="CollectionPointRef" type="PointRefStructure" minOccurs="0">
