@@ -153,7 +153,7 @@ References to a DATA SOURCE are useful in an interoperated computer system.</xsd
 			</xsd:element>
 			<xsd:element name="DataLicenceUrl" type="xsd:anyURI" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation> URL fto Data Licence +v1.2.2</xsd:documentation>
+					<xsd:documentation> URL for Data Licence +v1.2.2</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
