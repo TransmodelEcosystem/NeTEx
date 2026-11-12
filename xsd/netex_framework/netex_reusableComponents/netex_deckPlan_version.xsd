@@ -1401,7 +1401,7 @@
 			<xsd:element ref="TypeOfLocatableSpotRef" minOccurs="0"/>
 			<xsd:element name="Capacity" type="NumberOfPassengers" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>The total capacity for passengers or vehciles of the type.</xsd:documentation>
+					<xsd:documentation>The total capacity for passengers or vehicles of the type.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

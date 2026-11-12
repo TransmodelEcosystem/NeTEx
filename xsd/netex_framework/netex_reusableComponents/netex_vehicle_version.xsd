@@ -234,7 +234,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="RegistrationDate" type="xsd:date" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Date of registration or commissioning - may be used to determine the age of a vehice.</xsd:documentation>
+					<xsd:documentation>Date of registration or commissioning - may be used to determine the age of a vehicle.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

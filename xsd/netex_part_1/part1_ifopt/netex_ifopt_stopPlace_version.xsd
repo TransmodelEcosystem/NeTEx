@@ -1227,7 +1227,7 @@ contained within its parent QUAY.</xsd:documentation>
 			</xsd:element>
 			<xsd:element name="RelationToVehicle" type="RelationToVehicleEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Relationship of position to VHEICLE.</xsd:documentation>
+					<xsd:documentation>Relationship of position to VEHICLE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Bearing" type="xsd:integer" minOccurs="0">

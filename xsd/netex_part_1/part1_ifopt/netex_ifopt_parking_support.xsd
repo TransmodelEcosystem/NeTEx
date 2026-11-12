@@ -641,7 +641,7 @@ Rail transport, Roads and Road transport
 	</xsd:simpleType>
 	<xsd:simpleType name="ParkingVehicleListOfEnumerations">
 		<xsd:annotation>
-			<xsd:documentation>Allowed values for list of PARKING VEGICLE types.</xsd:documentation>
+			<xsd:documentation>Allowed values for list of PARKING VEHICLE types.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:list itemType="ParkingVehicleEnumeration"/>
 	</xsd:simpleType>

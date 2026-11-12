@@ -216,7 +216,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="vehiclePreferences" type="vehicleTypePreferences_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>VWHICLE PREFERENCEs for TIME DEMAND TYPE.</xsd:documentation>
+					<xsd:documentation>VEHICLE PREFERENCEs for TIME DEMAND TYPE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
