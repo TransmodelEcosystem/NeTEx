@@ -418,7 +418,7 @@ Rail transport, Roads and Road transport
 		</xsd:annotation>
 		<xsd:restriction base="ObjectIdType"/>
 	</xsd:simpleType>
-	<!-- =====PATH  related ENums=================================================== -->
+	<!-- =====PATH  related Enums=================================================== -->
 	<xsd:simpleType name="PathDirectionEnumeration">
 		<xsd:annotation>
 			<xsd:documentation>Allowed values for flow direction.</xsd:documentation>
