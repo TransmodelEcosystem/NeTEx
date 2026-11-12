@@ -348,7 +348,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="Locker" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether there is a lockable luggafe container.</xsd:documentation>
+					<xsd:documentation>Whether there is a lockable luggage container.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Basket" type="xsd:boolean" minOccurs="0">

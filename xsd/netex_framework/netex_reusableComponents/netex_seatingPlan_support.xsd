@@ -411,7 +411,7 @@
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<!-- ====== LOGGAGE SPOT ======================================= -->
+	<!-- ====== LUGGAGE SPOT ======================================= -->
 	<xsd:simpleType name="LuggageSpotIdType">
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a LUGGAGE SPOT.</xsd:documentation>
