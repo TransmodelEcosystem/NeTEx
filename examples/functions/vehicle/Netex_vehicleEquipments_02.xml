@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2010-12-17T09:30:47.0Z</PublicationTimestamp>
+	<ParticipantRef>SYS001</ParticipantRef>
+	<Description>Bus example with kneeling and ramp</Description>
+	<dataObjects>
+		<CompositeFrame version="any" id="CompositeFrame:1">
+			<frames>
+				<ResourceFrame version="any"  id="ResourceFrame:1">
+					<equipments>
+						<AccessVehicleEquipment version="any" id="AccessVehicleEquipment:1">
+							<BoardingHeight>0.2</BoardingHeight>
+							<Kneeling>true</Kneeling>
+						</AccessVehicleEquipment>
+						<AccessVehicleEquipment version="any" id="AccessVehicleEquipment:2">
+							<BoardingHeight>0.3</BoardingHeight>
+							<Kneeling>false</Kneeling>
+						</AccessVehicleEquipment>
+						<RampVehicleEquipment version="any" id="RampVehicleEquipment:1">
+							<Fixed>true</Fixed>
+							<IsAutomatic>false</IsAutomatic>
+							<AssistanceRequired>true</AssistanceRequired>
+							<ExternalLength>1</ExternalLength>
+							<ExternalWidth>1</ExternalWidth>
+							<BearingCapacity>350</BearingCapacity>
+						</RampVehicleEquipment>
+					</equipments>
+
+					<vehicleTypes>
+						<VehicleType version="any" id="VehicleType:1">
+							<Name>Bus</Name>
+							<DeckPlanRef ref="DeckPlan:1"></DeckPlanRef>
+						</VehicleType>
+					</vehicleTypes>
+
+					<deckPlans>
+						<DeckPlan version="any" id="DeckPlan:1">
+							<decks>
+								<Deck version="any" id="Deck:1">
+									<deckSpaces>
+										<PassengerSpace version="any" id="PassengerSpace:1">
+											<deckEntrances>
+												<!-- Front entrance -->
+												<PassengerEntrance version="any" id="PassengerEntrance:1">
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment>
+															<AccessVehicleEquipmentRef ref="AccessVehicleEquipment:1"/>
+														</ActualVehicleEquipment>
+														<ActualVehicleEquipment>
+															<AccessVehicleEquipmentRef ref="AccessVehicleEquipment:2"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+												</PassengerEntrance>
+												<!-- Middle entrance -->
+												<PassengerEntrance version="any" id="PassengerEntrance:2">
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment>
+															<AccessVehicleEquipmentRef ref="AccessVehicleEquipment:1"/>
+														</ActualVehicleEquipment>
+														<ActualVehicleEquipment>
+															<AccessVehicleEquipmentRef ref="AccessVehicleEquipment:2"/>
+														</ActualVehicleEquipment>
+														<ActualVehicleEquipment>
+															<RampVehicleEquipmentRef ref="RampVehicleEquipment:1"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+												</PassengerEntrance>
+											</deckEntrances>
+										</PassengerSpace>
+									</deckSpaces>
+								</Deck>
+							</decks>
+						</DeckPlan>
+					</deckPlans>
+				</ResourceFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

@@ -72,6 +72,9 @@ Rail transport, Roads and Road transport
 		<xsd:choice>
 			<xsd:element ref="AccessVehicleEquipment"/>
 			<xsd:element ref="WheelchairVehicleEquipment"/>
+			<xsd:element ref="RetractableStepVehicleEquipment"/>
+			<xsd:element ref="RampVehicleEquipment"/>
+			<xsd:element ref="HoistVehicleEquipment"/>
 		</xsd:choice>
 	</xsd:group>
 	<xsd:complexType name="vehicleEquipments_RelStructure">
@@ -83,6 +86,9 @@ Rail transport, Roads and Road transport
 				<xsd:choice maxOccurs="unbounded">
 					<xsd:element ref="AccessVehicleEquipment"/>
 					<xsd:element ref="WheelchairVehicleEquipment"/>
+					<xsd:element ref="RetractableStepVehicleEquipment"/>
+					<xsd:element ref="RampVehicleEquipment"/>
+					<xsd:element ref="HoistVehicleEquipment"/>
 				</xsd:choice>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -152,11 +158,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="EquipmentGroup"/>
 						</xsd:sequence>
 						<xsd:sequence>
-							<xsd:element name="Fixed" type="xsd:boolean" minOccurs="0">
-								<xsd:annotation>
-									<xsd:documentation>Whether the EQUIPMENT is fixed at a place or min a vehicle.</xsd:documentation>
-								</xsd:annotation>
-							</xsd:element>
+							<xsd:group ref="PassengerEquipmentGroup"/>
 						</xsd:sequence>
 						<xsd:sequence>
 							<xsd:group ref="ActualVehicleEquipmentGroup"/>
@@ -237,6 +239,11 @@ Rail transport, Roads and Road transport
 					<xsd:documentation>Maximum step height to board.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element name="Kneeling" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>When set, BoardingHeight and FloorHeight values reflect the height when kneeling is active/inactive.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:element name="EquipmentLength" type="LengthType" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Length of the EQUIPMENT be it hoist or ramp. When fully extended and only the part outside the VEHICLE. +v2.0</xsd:documentation>
@@ -304,6 +311,228 @@ Rail transport, Roads and Road transport
 		</xsd:sequence>
 	</xsd:group>
 	<!-- ======================================================================= -->
+	<xsd:group name="BoardingEquipmentOperationGroup">
+		<xsd:annotation>
+			<xsd:documentation>Additional information about the operation of the EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="IsAutomatic" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the EQUIPMENT operates automatically, meaning the entire operation from start to finish requires no manual handling (except of pressing e.g. a button).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AssistanceRequired" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the usage or operation of the EQUIPMENT requires assistance, meaning the passenger either physically or legally cannot board/alight independently.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="InOperationDuration" type="xsd:duration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The time it takes to retract the EQUIPMENT. For none automatic equipment an estimated or average usage time can be provided.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OutOperationDuration" type="xsd:duration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The time it takes to deploy the EQUIPMENT. For none automatic equipment an estimated or average usage time can be provided.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ======================================================================= -->
+	<xsd:group name="BoardingEquipmentHorizontalGapReductionGroup">
+		<xsd:annotation>
+			<xsd:documentation>Additional information about the horizontal gap the EQUIPMENT can bridge.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ExternalLength" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Length of the EQUIPMENT when fully extended and only the part outside the VEHICLE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="IsAdjustableLength" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the EQUIPMENT (like a sliding step or telescopic ramp) can be adjusted to be used at shorter lengths. Useful if there is not enough space to deploy the equipment at its full length.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ExternalWidth" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Width of the EQUIPMENT when fully extended and only the part outside the VEHICLE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="BearingCapacity" type="WeightType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Maximum weight that the EQUIPMENT can bear.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ======================================================================= -->
+	<xsd:element name="RetractableStepVehicleEquipment" substitutionGroup="PassengerEquipment">
+		<xsd:annotation>
+			<xsd:documentation>A special VEHICLE EQUIPMENT to sliding and folding steps which reduce the horizontal and partially vertical gap between vehicle and platform.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:restriction base="RetractableStepVehicleEquipment_VersionStructure">
+					<xsd:sequence>
+						<xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+						<xsd:group ref="DataManagedObjectGroup"/>
+						<xsd:group ref="EquipmentGroup"/>
+						<xsd:group ref="RetractableStepVehicleEquipmentGroup"/>
+					</xsd:sequence>
+					<xsd:attribute name="id" type="RetractableStepVehicleEquipmentIdType"/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="RetractableStepVehicleEquipment_VersionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a RETRACTABLE STEP VEHICLE EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="PassengerEquipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="RetractableStepVehicleEquipmentGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="RetractableStepVehicleEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a RETRACTABLE STEP VEHICLE EQUIPMENT type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="BoardingEquipmentOperationGroup"/>
+			<xsd:group ref="BoardingEquipmentHorizontalGapReductionGroup"/>
+			<xsd:element name="BoardingHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The height from ground to the lowest retractable step. For a sliding step also know as gap filler which are used to bridge the horizontal gap, this is almost identical to the VEHICLE BOARDING HEIGHT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NumberOfTreads" type="xsd:positiveInteger" minOccurs="0" default="1">
+				<xsd:annotation>
+					<xsd:documentation>Number of retractable steps.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NumberOfSteps" type="xsd:nonNegativeInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Total number of steps, starting from the lowest step and also including any fixed steps, to access the VEHICLE. "Steps" is to be understood as rises wherefore it can be 0 for a single sliding step.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StepHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The height difference of the individual steps or if only one step is described the height difference from the step BOARDING HEIGHT to the VEHICLE BOARDING HEIGHT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ======================================================================= -->
+	<xsd:element name="RampVehicleEquipment" substitutionGroup="PassengerEquipment">
+		<xsd:annotation>
+			<xsd:documentation>A special VEHICLE EQUIPMENT to model ramps used to bridge the horizontal and vertical gap between vehicle and platform.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:restriction base="RampVehicleEquipment_VersionStructure">
+					<xsd:sequence>
+						<xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+						<xsd:group ref="DataManagedObjectGroup"/>
+						<xsd:group ref="EquipmentGroup"/>
+						<xsd:group ref="PassengerEquipmentGroup"/>
+						<xsd:group ref="RampVehicleEquipmentGroup"/>
+					</xsd:sequence>
+					<xsd:attribute name="id" type="RampVehicleEquipmentIdType"/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="RampVehicleEquipment_VersionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a RAMP VEHICLE EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="PassengerEquipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="RampVehicleEquipmentGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="RampVehicleEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a RAMP VEHICLE EQUIPMENT type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="BoardingEquipmentOperationGroup"/>
+			<xsd:group ref="BoardingEquipmentHorizontalGapReductionGroup"/>
+			<xsd:element name="Length" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The length of the ramp when fully extended. Can be used to calculate the slope together with FloorHeight and PlatformHeight.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ======================================================================= -->
+	<xsd:element name="HoistVehicleEquipment" substitutionGroup="PassengerEquipment">
+		<xsd:annotation>
+			<xsd:documentation>A special VEHICLE EQUIPMENT to model hoists and lifts used to bridge the vertical and partially horizontal gap between vehicle and platform.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:restriction base="HoistVehicleEquipment_VersionStructure">
+					<xsd:sequence>
+						<xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+						<xsd:group ref="DataManagedObjectGroup"/>
+						<xsd:group ref="EquipmentGroup"/>
+						<xsd:group ref="HoistVehicleEquipmentGroup"/>
+					</xsd:sequence>
+					<xsd:attribute name="id" type="HoistVehicleEquipmentIdType"/>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="HoistVehicleEquipment_VersionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a HOIST VEHICLE EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="PassengerEquipment_VersionStructure">
+				<xsd:sequence>
+					<xsd:group ref="HoistVehicleEquipmentGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="HoistVehicleEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a HOIST VEHICLE EQUIPMENT type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="BoardingEquipmentOperationGroup"/>
+			<xsd:group ref="BoardingEquipmentHorizontalGapReductionGroup"/>
+			<xsd:element name="InnerLength" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The usable length of the lifting platform. Can be used to determine if a wheelchair fits on the lift.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="InnerWidth" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The usable width of the lifting platform. Can be used to determine if a wheelchair fits on the lift.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LiftingHeight" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The maximum height difference the lift can overcome. In other words the distance between the VEHICLE’s floor height and the lowest point the lift can reach.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OperatingRadius" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Distance from VEHICLE needed to operate hoist.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ======================================================================= -->
 	<xsd:element name="WheelchairVehicleEquipment" substitutionGroup="PassengerEquipment">
 		<xsd:annotation>
 			<xsd:documentation>Specialisation of VEHICLE EQUIPMENT for Wheel chair accessibility on board a VEHICLE providing information such as the number of wheel chair areas and the access dimensions.</xsd:documentation>
@@ -322,11 +551,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="EquipmentGroup"/>
 						</xsd:sequence>
 						<xsd:sequence>
-							<xsd:element name="Fixed" type="xsd:boolean" minOccurs="0">
-								<xsd:annotation>
-									<xsd:documentation>Whether the EQUIPMENT is fixed at a place or min a vehicle.</xsd:documentation>
-								</xsd:annotation>
-							</xsd:element>
+							<xsd:group ref="PassengerEquipmentGroup"/>
 						</xsd:sequence>
 						<xsd:sequence>
 							<xsd:group ref="ActualVehicleEquipmentGroup"/>

@@ -2783,6 +2783,69 @@
 			<xsd:field xpath="@id"/>
 			<xsd:field xpath="@version"/>
 		</xsd:key>
+		<!-- =====RetractableStepVehicleEquipment============================== -->
+		<!-- =====RetractableStepVehicleEquipment unique========================== -->
+		<xsd:unique name="RetractableStepVehicleEquipment_UniqueBy_Id_Version">
+			<xsd:annotation>
+				<xsd:documentation>Every [RetractableStepVehicleEquipment Id + Version] must be unique within document.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:selector xpath=".//netex:RetractableStepVehicleEquipment"/>
+			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
+		</xsd:unique>
+		<!-- =====RetractableStepVehicleEquipment Key ========================== -->
+		<xsd:keyref name="RetractableStepVehicleEquipment_AnyKeyRef" refer="netex:RetractableStepVehicleEquipment_AnyVersionedKey">
+			<xsd:selector xpath=".//netex:RetractableStepVehicleEquipmentRef"/>
+			<xsd:field xpath="@ref"/>
+			<xsd:field xpath="@version"/>
+		</xsd:keyref>
+		<xsd:key name="RetractableStepVehicleEquipment_AnyVersionedKey">
+			<xsd:selector xpath=".//netex:RetractableStepVehicleEquipment"/>
+			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
+		</xsd:key>
+		<!-- =====RampVehicleEquipment============================== -->
+		<!-- =====RampVehicleEquipment unique========================== -->
+		<xsd:unique name="RampVehicleEquipment_UniqueBy_Id_Version">
+			<xsd:annotation>
+				<xsd:documentation>Every [RampVehicleEquipment Id + Version] must be unique within document.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:selector xpath=".//netex:RampVehicleEquipment"/>
+			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
+		</xsd:unique>
+		<!-- =====RampVehicleEquipment Key ========================== -->
+		<xsd:keyref name="RampVehicleEquipment_AnyKeyRef" refer="netex:RampVehicleEquipment_AnyVersionedKey">
+			<xsd:selector xpath=".//netex:RampVehicleEquipmentRef"/>
+			<xsd:field xpath="@ref"/>
+			<xsd:field xpath="@version"/>
+		</xsd:keyref>
+		<xsd:key name="RampVehicleEquipment_AnyVersionedKey">
+			<xsd:selector xpath=".//netex:RampVehicleEquipment"/>
+			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
+		</xsd:key>
+		<!-- =====HoistVehicleEquipment============================== -->
+		<!-- =====HoistVehicleEquipment unique========================== -->
+		<xsd:unique name="HoistVehicleEquipment_UniqueBy_Id_Version">
+			<xsd:annotation>
+				<xsd:documentation>Every [HoistVehicleEquipment Id + Version] must be unique within document.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:selector xpath=".//netex:HoistVehicleEquipment"/>
+			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
+		</xsd:unique>
+		<!-- =====HoistVehicleEquipment Key ========================== -->
+		<xsd:keyref name="HoistVehicleEquipment_AnyKeyRef" refer="netex:HoistVehicleEquipment_AnyVersionedKey">
+			<xsd:selector xpath=".//netex:HoistVehicleEquipmentRef"/>
+			<xsd:field xpath="@ref"/>
+			<xsd:field xpath="@version"/>
+		</xsd:keyref>
+		<xsd:key name="HoistVehicleEquipment_AnyVersionedKey">
+			<xsd:selector xpath=".//netex:HoistVehicleEquipment"/>
+			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
+		</xsd:key>
 		<!-- =====CycleStorageEquipment=========================== -->
 		<!-- =====CycleStorageEquipment unique========================== -->
 		<xsd:unique name="CycleStorageEquipment_UniqueBy_Id_Version">
