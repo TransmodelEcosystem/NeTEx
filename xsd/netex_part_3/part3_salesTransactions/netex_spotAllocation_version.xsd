@@ -80,7 +80,7 @@ Rail transport, Roads and Road transport
 	<!-- ==== VEHICLE JOURNEY SPOT ALLOCATION  ==== -->
 	<xsd:element name="VehicleJourneySpotAllocation" substitutionGroup="DataManagedObject">
 		<xsd:annotation>
-			<xsd:documentation>An identified person or organisation involved in a fare process. There may be a FARE CONTRACT between the VEHICLE JOURNEY SPOT ALLOCATION and the OPERATOR or the AUTHORITY ruling the consumption of services. +v2.0</xsd:documentation>
+			<xsd:documentation>The set of current allocations of on-board LOCATABLE SPOTs (i.e., seats, vehicle berths, etc.) for a given NORMAL DATED VEHICLE JOURNEY. +v2.0</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
@@ -163,7 +163,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:element name="PassengerSpotAllocation" substitutionGroup="VersionedChild">
 		<xsd:annotation>
-			<xsd:documentation>Whether a specific TRANSPORT CUSTOMER is eligible for a FARE PRODUCT with a specific validity Parameter. This may be subject to a particular VALIDITY CONDITION. +v2.0</xsd:documentation>
+			<xsd:documentation>Current ALLOCATION of a LOCATABLE SPOT such as a passenger seat or on-board vehicle space to a customer between two STOP POINTs. +v2.0</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
