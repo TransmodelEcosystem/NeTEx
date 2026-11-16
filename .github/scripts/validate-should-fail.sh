@@ -29,6 +29,7 @@ should_fail "${PUB}" examples/should-fail/duplicate-GroupOfLinkSequences.xml    
 should_fail "${PUB}" examples/should-fail/duplicate-TemplateVehicleJourney.xml         "Duplicate key-sequence ['TEST:TemplateVehicleJourney:1', '1.0']"
 should_fail "${PUB}" examples/should-fail/duplicate-ValidBetween.xml                   "Duplicate key-sequence ['TEST:ValidBetween:1', '1.0']"
 should_fail "${PUB}" examples/should-fail/duplicate-ValidityPeriod.xml                 "Duplicate key-sequence ['TEST:ValidityPeriod:1', '1.0']"
+should_fail "${TT}"  examples/should-fail/timetable/duplicate-GroupOfLinkSequences.xml "Duplicate key-sequence ['TEST:GroupOfLinkSequences:1', '1.0']"
 
 out=""
 for schema in "${PUB}" "${TT}"; do
