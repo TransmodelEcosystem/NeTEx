@@ -645,6 +645,15 @@ Provides a general purose wrapper for NeTEx data content.</xsd:documentation>
 			<xsd:field xpath="@version"/>
 		</xsd:key>
 		<!-- =====SectionInSequence ============================== -->
+		<!-- =====SectionInSequence unique========================== -->
+		<xsd:unique name="SectionInSequence_UniqueBy_Id_Version_Order">
+			<xsd:annotation>
+				<xsd:documentation>Every [SectionInSequence Id + Version] must be unique within document.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:selector xpath=".//netex:SectionInSequence"/>
+			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
+		</xsd:unique>
 		<!-- =====Zone============================== -->
 		<xsd:keyref name="Zone_AnyKeyRef" refer="netex:Zone_AnyVersionedKey">
 			<xsd:selector xpath=".//netex:ZoneRef |   .//netex:ParentZoneRef | .//netex:ProjectedZoneRef | .//netex:ProjectToZoneRef  |.//netex:ProjectedObjectRef"/>
@@ -777,6 +786,15 @@ Provides a general purose wrapper for NeTEx data content.</xsd:documentation>
 			<xsd:field xpath="@version"/>
 		</xsd:key>
 		<!-- =====GroupOfLinkSequences============================== -->
+		<!-- =====GroupOfLinkSequences unique========================== -->
+		<xsd:unique name="GroupOfLinkSequences_UniqueBy_Id_Version">
+			<xsd:annotation>
+				<xsd:documentation>Every [GroupOfLinkSequences Id + Version] must be unique within document.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:selector xpath=".//netex:GroupOfLinkSequences"/>
+			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
+		</xsd:unique>
 		<!-- =====SimpleFeature============================== -->
 		<!-- =====SimpleFeature Key ========================== -->
 		<xsd:keyref name="SimpleFeature_KeyRef" refer="netex:SimpleFeature_AnyVersionedKey">
@@ -1694,6 +1712,15 @@ Provides a general purose wrapper for NeTEx data content.</xsd:documentation>
 			<xsd:field xpath="@version"/>
 		</xsd:key>
 		<!-- =====OperatingDay============================== -->
+		<!-- =====OperatingDay unique==In Calendar======================== -->
+		<xsd:unique name="OperatingDay_UniqueCalendarDateInCalendar">
+			<xsd:annotation>
+				<xsd:documentation>Each date is only allowed once per calendar.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:selector xpath=".//netex:ServiceCalendarFrame/netex:operatingDays/netex:OperatingDay"/>
+			<xsd:field xpath="netex:CalendarDate"/>
+			<xsd:field xpath="@version"/>
+		</xsd:unique>
 		<!-- =====OperatingDay Key ========================== -->
 		<xsd:keyref name="OperatingDay_KeyRef" refer="netex:OperatingDay_AnyVersionedKey">
 			<xsd:selector xpath=".//netex:OperatingDayRef | .//netex:FromOperatingDayRef | .//netex:ToOperatingDayRef"/>
@@ -1742,6 +1769,15 @@ Provides a general purose wrapper for NeTEx data content.</xsd:documentation>
 			<xsd:field xpath="@version"/>
 		</xsd:key>
 		<!-- =====ValidityCondition============================== -->
+		<!-- =====ValidityCondition unique========================== -->
+		<xsd:unique name="ValidityCondition_UniqueBy_Id_Version">
+			<xsd:annotation>
+				<xsd:documentation>Every [ValidityCondition Id + Version] must be unique within document.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:selector xpath=".//netex:ValidityCondition | .//netex:ValidityTrigger | .//netex:ValidityRuleParameter | .//netex:ValidBetween"/>
+			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
+		</xsd:unique>
 		<!-- =====ValidityCondition Key ========================== -->
 		<xsd:keyref name="ValidityCondition_KeyRef" refer="netex:ValidityCondition_AnyVersionedKey">
 			<xsd:selector xpath=".//netex:ValidityConditionRef | .//netex:ValidityTriggerRef | .//netex:ValidityRuleParameterRef | .//netex:WithConditionRef"/>
@@ -3368,6 +3404,14 @@ Provides a general purose wrapper for NeTEx data content.</xsd:documentation>
 		</xsd:key>
 		<!-- =====JOURNEY Constraints========================= -->
 		<!-- ===== Journey================== -->
+		<xsd:unique name="TemplateVehicleJourney_UniqueBy_Id_Version">
+			<xsd:annotation>
+				<xsd:documentation>Every [TemplateVehicleJourney Id + Version] must be unique within document.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:selector xpath=".//netex:TemplateVehicleJourney"/>
+			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
+		</xsd:unique>
 		<!-- =====Journey Key ========================== -->
 		<xsd:keyref name="Journey_KeyRef" refer="netex:Journey_AnyVersionedKey">
 			<xsd:selector xpath=".//netex:ServiceJourneyRef | .//netex:VehicleJourneyRef | .//netex:TemplateServiceJourneyRef | .//netex:DeadRunRef | .//netex:FromJourneyRef | .//netex:ToJourneyRef"/>

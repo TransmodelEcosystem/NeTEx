@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" version="1.0">
+	<PublicationTimestamp>2020-01-01T12:00:00Z</PublicationTimestamp>
+	<ParticipantRef>TEST</ParticipantRef>
+	<dataObjects>
+		<GeneralFrame version="1.0" id="TEST:GeneralFrame:1">
+			<members>
+				<TemplateVehicleJourney version="1.0" id="TEST:TemplateVehicleJourney:1"/>
+				<TemplateVehicleJourney version="1.0" id="TEST:TemplateVehicleJourney:1"/>
+			</members>
+		</GeneralFrame>
+	</dataObjects>
+</PublicationDelivery>
