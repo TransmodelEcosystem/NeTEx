@@ -602,8 +602,9 @@
 		</xsd:key>
 		<!-- =====TypeOfValue Key========================== -->
 		<xsd:key name="TypeOfValue_Key">
-			<xsd:selector xpath=".//values/TypeOfValue"/>
+			<xsd:selector xpath=".//netex:TypeOfValue"/>
 			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
 		</xsd:key>
 		<!-- =====ValueSet unique========================== -->
 		<xsd:unique name="ValueSet_UniqueBy_Id_Version">
