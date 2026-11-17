@@ -355,21 +355,21 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 						</Connection>
 					</connections>
 					<stopAssignments>
-						<FlexibleStopAssignment version="any" id="RUT:PassengerStopAssignment:ID-HANABORG">
+						<FlexibleStopAssignment version="any" id="RUT:PassengerStopAssignment:ID-HANABORG" order="1">
 							<ScheduledStopPointRef version="any" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST-NORD"/>
 							<FlexibleStopPlaceRef version="any" ref="NHR:FlexibleStopPlace:ID-HANABORG-NORD"/>
 						</FlexibleStopAssignment>
-						<PassengerStopAssignment version="any" order="0" id="RUT:PassengerStopAssignment:ID-HANABORG">
+						<PassengerStopAssignment version="any" order="1" id="RUT:PassengerStopAssignment:ID-HANABORG">
 							<ScheduledStopPointRef version="any" ref="RUT:ScheduledStopPoint:ID-HANABORG_ST"/>
 							<StopPlaceRef version="any" ref="NHR:StopPlace:ID-HANABORG_ST"/>
 							<QuayRef version="any" ref="NHR:Quay:ID-HANABORG_ST-QUAY"/>
 						</PassengerStopAssignment>
-						<PassengerStopAssignment version="any" order="0" id="RUT:PassengerStopAssignment:ID-LORENSKOG">
+						<PassengerStopAssignment version="any" order="1" id="RUT:PassengerStopAssignment:ID-LORENSKOG">
 							<ScheduledStopPointRef ref="RUT:ScheduledStopPoint:ID-LORENSKOG"/>
 							<StopPlaceRef version="any" ref="NHR:StopPlace:ID-LORENSKOGSENTRUM"/>
 							<QuayRef version="any" ref="NHR:Quay:ID-LORENSKOGSENTRUM-QUAY"/>
 						</PassengerStopAssignment>
-						<PassengerStopAssignment version="any" order="0" id="RUT:PassengerStopAssignment:ID-TRIADEN">
+						<PassengerStopAssignment version="any" order="1" id="RUT:PassengerStopAssignment:ID-TRIADEN">
 							<ScheduledStopPointRef version="any" ref="RUT:ScheduledStopPoint:ID-TRIADEN"/>
 							<StopPlaceRef version="any" ref="NHR:StopPlace:ID-TRIADEN-ENTRANCE"/>
 							<QuayRef version="any" ref="NHR:Quay:ID-TRIADEN-ENTRANCE-QUAY"/>
@@ -444,16 +444,16 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 						</Notice>
 					</notices>
 					<noticeAssignments>
-						<NoticeAssignment version="any" id="RUT:NoticeAssignment:863" order="0">
+						<NoticeAssignment version="any" id="RUT:NoticeAssignment:863" order="1">
 							<NoticeRef ref="RUT:Notice:863"/>
 							<NoticedObjectRef version="any" ref="RUT:StopPointInJourneyPattern:ID-TRIADEN-fraLorenskog"/>
 							<!--NoticedObjectRef ref="RUT:FlexibleLine:863"/-->
 						</NoticeAssignment>
-						<NoticeAssignment version="any" id="RUT:NoticeAssignment:863-TilLorenskog" order="0">
+						<NoticeAssignment version="any" id="RUT:NoticeAssignment:863-TilLorenskog" order="1">
 							<NoticeRef ref="RUT:Notice:863-Henting"/>
 							<NoticedObjectRef ref="RUT:Route:863-TilLorenskog"/>
 						</NoticeAssignment>
-						<NoticeAssignment version="any" id="RUT:NoticeAssignment:863-FraLorenskog" order="0">
+						<NoticeAssignment version="any" id="RUT:NoticeAssignment:863-FraLorenskog" order="1">
 							<NoticeRef ref="RUT:Notice:863-Levering"/>
 							<NoticedObjectRef ref="RUT:Route:863-FraLorenskog"/>
 						</NoticeAssignment>
@@ -508,19 +508,19 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 							<JourneyPatternRef ref="RUT:JourneyPattern:863-TilLorenskog"/>
 							<FlexibleLineRef ref="RUT:FlexibleLine:863"/>
 							<passingTimes>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="RUT:ServiceJourney:0863-TilLorenskog_1">
 									<!-- Flexi-sone (sted og tid avtales ved bestilling) -->
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-HANABORG-NORD-tilLorenskog" version="any"/>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="RUT:ServiceJourney:0863-TilLorenskog_2">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-HANABORG_ST-tilLorenskog" version="any"/>
 									<ArrivalTime>10:15:00</ArrivalTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="RUT:ServiceJourney:0863-TilLorenskog_3">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-LORENSKOG-tilLorenskog" version="any"/>
 									<ArrivalTime>10:20:00</ArrivalTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="RUT:ServiceJourney:0863-TilLorenskog_4">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-TRIADEN-tilLorenskog" version="any"/>
 									<ArrivalTime>10:25:00</ArrivalTime>
 								</TimetabledPassingTime>
@@ -533,19 +533,19 @@ example/functions/timetable/Netex_07.2_Bus_FlexibleTimetable_WithPattern.xml
 							<JourneyPatternRef ref="RUT:JourneyPattern:863-FraLorenskog"/>
 							<FlexibleLineRef ref="RUT:FlexibleLine:863"/>
 							<passingTimes>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="RUT:ServiceJourney:0863-FraLorenskog_01">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-TRIADEN-fraLorenskog" version="any"/>
 									<DepartureTime>12:25:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="RUT:ServiceJourney:0863-FraLorenskog_02">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-LORENSKOG-fraLorenskog" version="any"/>
 									<DepartureTime>12:30:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="RUT:ServiceJourney:0863-FraLorenskog_03">
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-HANABORG_ST-fraLorenskog" version="any"/>
 									<DepartureTime>12:35:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="RUT:ServiceJourney:0863-FraLorenskog_04">
 									<!-- Flexi-sone (leveringssted avtales ved bestilling) -->
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:ID-HANABORG-NORD-fraLorenskog" version="any"/>
 								</TimetabledPassingTime>

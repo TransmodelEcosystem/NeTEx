@@ -51,13 +51,15 @@ The example is taken from ERA/TD/2009-04/INT: Annex B,1 of Tap TSI
 									<Value>A070</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode type="olduic">00000</PrivateCode>
+							</privateCodes>
 							<Name>Aachen Hbf </Name>
 							<Location>
 								<Longitude>0</Longitude>
 								<Latitude>0</Latitude>
 							</Location>
 							<ShortName>Aachen Hbf</ShortName>
-							<PrivateCode type="olduic">00000</PrivateCode>
 							<Presentation>
 								<TextFont>2</TextFont>
 							</Presentation>
@@ -276,8 +278,10 @@ The example is taken from ERA/TD/2009-04/INT: Annex B,1 of Tap TSI
 						</TariffZone>
 						<!--  ===TZ example B.51 ==== -->
 						<TariffZone version="01" id="tap:25466">
+							<privateCodes>
+								<PrivateCode type="UIC">1 0 8 8</PrivateCode>
+							</privateCodes>
 							<Name lang="en">All Belgium Stations</Name>
-							<PrivateCode type="UIC">1 0 8 8</PrivateCode>
 							<members>
 								<FareScheduledStopPointRef ref="tap:21006" version="01"/>
 								<FareScheduledStopPointRef ref="tap:41004" version="01"/>

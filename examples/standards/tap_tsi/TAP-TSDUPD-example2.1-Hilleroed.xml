@@ -102,6 +102,9 @@ UIC_Code1	UIC_Code2	Duration	Duration_Unit	13	6_footPath_or_14_Hierarchy	Attribu
 			<FrameDefaults>
 				<DefaultCodespaceRef ref="uic_cs"/>
 			</FrameDefaults>
+			<dataSources>
+				<DataSource id="uic:1186" version="any"/>
+			</dataSources>
 			<organisations>
 				<Operator version="any" id="uic:0064">
 				</Operator>
@@ -209,7 +212,7 @@ The bus terminal in front of the station is a major hub for transportation throu
 							<AccessibilityAssessment version="any" id="uic:008600683">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
-									<AccessibilityLimitation>
+									<AccessibilityLimitation id="uic:008600683" version="any">
 										<WheelchairAccess>true</WheelchairAccess>
 									</AccessibilityLimitation>
 								</limitations>
@@ -306,7 +309,7 @@ The bus terminal in front of the station is a major hub for transportation throu
 008600683	008658683	3	MIN	13	6
 008600683	008659683	3	MIN	13	6
 -->
-						<SiteConnection version="any" id="e1:008600683+008650683" responsibilitySetRef="0086">
+						<SiteConnection version="any" id="e1:008600683+008650683:1" responsibilitySetRef="0086">
 							<!-- RFR+X01:008600683'
 RFR+AWN:008650683'
 MES+3:MIN'
@@ -690,7 +693,7 @@ The bus terminal in front of the station is a major hub for transportation throu
 							<AccessibilityAssessment version="any" id="uic2:008600683">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
-									<AccessibilityLimitation>
+									<AccessibilityLimitation id="uic2:008600683" version="any">
 										<WheelchairAccess>true</WheelchairAccess>
 									</AccessibilityLimitation>
 								</limitations>

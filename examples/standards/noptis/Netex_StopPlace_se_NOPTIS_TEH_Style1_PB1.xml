@@ -57,9 +57,11 @@
 						</StopPlace>
 						<!-- ========== Metro========= -->
 						<StopPlace version="any" id="noptis:9021001002221000">
+							<privateCodes>
+								<PrivateCode>22210</PrivateCode>
+							</privateCodes>
 							<Name>Tekniska högskolan</Name>
 							<ShortName>TEH</ShortName>
-							<PrivateCode>22210</PrivateCode>
 							<Centroid>
 								<Location srsName="WGS84">
 									<Longitude>18.0717945909683</Longitude>
@@ -273,9 +275,11 @@
 						</StopPlace>
 						<!-- ========== BUS ========= -->
 						<StopPlace version="any" id="noptis:9021001060080000">
+							<privateCodes>
+								<PrivateCode>22210-2</PrivateCode>
+							</privateCodes>
 							<Name>Tekniska högskolan</Name>
 							<ShortName>TEH</ShortName>
-							<PrivateCode>22210-2</PrivateCode>
 							<Centroid>
 								<Location srsName="WGS84">
 									<Longitude>18.0693156587631</Longitude>

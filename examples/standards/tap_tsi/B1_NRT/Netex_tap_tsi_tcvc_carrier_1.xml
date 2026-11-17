@@ -151,7 +151,7 @@ The example is taken from ERA/TD/2009-04/INT: Annex B,1 of Tap TSI
 								<ResponsibilitySet id="tap:0010" version="any">
 									<roles>
 										<ResponsibilityRoleAssignment id="tap:0010" version="any">
-											<StakeholderRoleType>Operation</StakeholderRoleType>
+											<StakeholderRoleType>operation</StakeholderRoleType>
 											<ResponsibleOrganisationRef ref="tap:0020"/>
 										</ResponsibilityRoleAssignment>
 									</roles>

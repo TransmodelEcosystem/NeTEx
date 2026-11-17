@@ -168,7 +168,7 @@
 							</placeTypes>
 							<Covered>outdoors</Covered>
 							<Gated>openArea</Gated>
-							<OrganisationRef ref="org:auth:ruter"/>
+							<AuthorityRef ref="org:auth:ruter"/>
 							<TransportMode>bus</TransportMode>
 							<OtherTransportModes>tram</OtherTransportModes>
 							<tariffZones>
@@ -194,7 +194,7 @@
 							<AccessibilityAssessment id="NHR:AccessibilityAssessment:3" version="any">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
-									<AccessibilityLimitation>
+									<AccessibilityLimitation id="NHR:AccessibilityAssessment:3" version="any">
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>true</StepFreeAccess>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
@@ -256,7 +256,7 @@
 							<AccessibilityAssessment id="NHR:AccessibilityAssessment:4" version="any">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
-									<AccessibilityLimitation>
+									<AccessibilityLimitation id="NHR:AccessibilityAssessment:4" version="any">
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>true</StepFreeAccess>
 									</AccessibilityLimitation>
@@ -316,7 +316,7 @@
 							<AccessibilityAssessment id="NHR:AccessibilityAssessment:5" version="any">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
-									<AccessibilityLimitation>
+									<AccessibilityLimitation id="NHR:AccessibilityAssessment:5" version="any">
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>true</StepFreeAccess>
 									</AccessibilityLimitation>
@@ -378,7 +378,7 @@
 							<AccessibilityAssessment id="NHR:AccessibilityAssessment:6" version="any">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
-									<AccessibilityLimitation>
+									<AccessibilityLimitation id="NHR:AccessibilityAssessment:6" version="any">
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>true</StepFreeAccess>
 										<AudibleSignalsAvailable>true</AudibleSignalsAvailable>

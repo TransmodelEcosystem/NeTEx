@@ -376,7 +376,7 @@ Two tariffs are defined  - oen for indviduals, one for groups
 					</salesOfferPackages>
 				</FareFrame>
 				<!--   === PRICES  =====-->
-				<FareFrame id="tap:NRT_Example@prices" version="1.0" modification="revise">
+				<FarePriceFrame id="tap:NRT_Example@prices" version="1.0" modification="revise">
 					<prerequisites>
 						<FareFrameRef version="1.0" ref="tap:NRT_Example@products"/>
 					</prerequisites>
@@ -439,7 +439,7 @@ Two tariffs are defined  - oen for indviduals, one for groups
 							</includes>
 						</FareTable>
 					</fareTables>
-				</FareFrame>
+				</FarePriceFrame>
 				<!-- ====RESOURCE FRAME======== -->
 				<ResourceFrame version="1.0" id="tap:Common_resources">
 					<typesOfValue>

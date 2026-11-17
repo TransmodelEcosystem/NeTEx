@@ -788,27 +788,27 @@ Two GROUP of SERVICEs  groups two sets of      journeys.
 	C		1	 |   15:15 		 |  16:30 			|	C to B: 15mn
 	B		1	 |  15:30  		 |  16:45 			|	B to A	15mn
     A	 	2	 |   15:45 		 |  17:00 			| 	   -->
-								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@01@Alpha1">
+								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@01@01-Alpha1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42c@A+E@01"/>
 									<DepartureTime>14:30:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@01@Bravo1">
+								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@01@02-Bravo1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42c@A+E@02"/>
 									<DepartureTime>14:40:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@01@Charley1">
+								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@01@03-Charley1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42c@A+E@03"/>
 									<DepartureTime>15:00:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@01@Delta1">
+								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@01@04-Delta1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42c@A+E@04"/>
 									<DepartureTime>15:15:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@01@Echo1">
+								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@01@05-Echo1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42c@A+E@05"/>
 									<DepartureTime>15:30:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@01@Alpha2">
+								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@01@06-Alpha2">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42c@A+E@06"/>
 									<ArrivalTime>15:45:00.0Z</ArrivalTime>
 								</TimetabledPassingTime>
@@ -816,6 +816,7 @@ Two GROUP of SERVICEs  groups two sets of      journeys.
 							<calls>
 								<Call version="any" id="hde:sj_42c@A+E@01@Alpha1" order="1">
 									<VisitNumber>1</VisitNumber>
+									<ScheduledStopPointRef version="any" ref="mybus:Alpha"/>
 									<Arrival>
 										<ForAlighting>false</ForAlighting>
 									</Arrival>
@@ -923,27 +924,27 @@ Two GROUP of SERVICEs  groups two sets of      journeys.
 	C		1	 |   15:15 		 |  16:30 			|	C to B: 15mn
 	B		1	 |  15:30  		 |  16:45 			|	B to A	15mn
     A	 	2	 |   15:45 		 |  17:00 			| 	   -->
-								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@02@Alpha1">
+								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@02@01-Alpha1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42c@A+E@01"/>
 									<DepartureTime>15:45:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@02@Bravo1">
+								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@02@02-Bravo1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42c@A+E@02"/>
 									<DepartureTime>16:00:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@02@Charley1">
+								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@02@03-Charley1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42c@A+E@03"/>
 									<DepartureTime>16:15:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@02@Delta1">
+								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@02@04-Delta1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42c@A+E@04"/>
 									<DepartureTime>16:30:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@02@Echo1">
+								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@02@05-Echo1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42c@A+E@05"/>
 									<DepartureTime>16:45:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@02@Alpha2">
+								<TimetabledPassingTime version="any" id="mybus:tpt_42c@A+E@02@06-Alpha2">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42c@A+E@06"/>
 									<ArrivalTime>17:00:00.0Z</ArrivalTime>
 								</TimetabledPassingTime>
@@ -1058,27 +1059,27 @@ Two GROUP of SERVICEs  groups two sets of      journeys.
 	B		1	 |  15:30  		 |  16:45 			|	A to E	15mn
     E	 	2	 |   15:45 		 |  17:00 			| 	 
    -->
-								<TimetabledPassingTime version="any" id="mybus:tpt_42a@E+A@03@Echo1">
+								<TimetabledPassingTime version="any" id="hde:sj_42a@E+A@03@01-Echo1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42a@E+A@01"/>
 									<DepartureTime>14:30:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42a@E+A@03@Delta1">
+								<TimetabledPassingTime version="any" id="hde:sj_42a@E+A@03@02-Delta1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42a@E+A@02"/>
 									<DepartureTime>14:45:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42a@E+A@03@Charley1">
+								<TimetabledPassingTime version="any" id="hde:sj_42a@E+A@03@03-Charley1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42a@E+A@03"/>
 									<DepartureTime>15:00:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42a@E+A@03@Bravo1">
+								<TimetabledPassingTime version="any" id="hde:sj_42a@E+A@03@04-Bravo1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42a@E+A@04"/>
 									<DepartureTime>15:15:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42a@E+A@03@Alpha2">
+								<TimetabledPassingTime version="any" id="hde:sj_42a@E+A@03@05-Alpha2">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42a@E+A@05"/>
 									<DepartureTime>15:30:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42a@E+A@03@Echo1">
+								<TimetabledPassingTime version="any" id="hde:sj_42a@E+A@03@06-Echo1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42a@E+A@06"/>
 									<ArrivalTime>15:45:00.0Z</ArrivalTime>
 								</TimetabledPassingTime>
@@ -1194,27 +1195,27 @@ Two GROUP of SERVICEs  groups two sets of      journeys.
 	B		1	 |  15:30  		 |  16:45 			|	A to E	15mn
     E	 	2	 |   15:45 		 |  17:00 			| 	 
    -->
-								<TimetabledPassingTime version="any" id="mybus:tpt_42a@E+A@04_Echo1">
+								<TimetabledPassingTime version="any" id="hde:sj_42a@E+A@04_01-Echo1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42a@E+A@01"/>
 									<DepartureTime>15:45:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42a@E+A@04_Delta1">
+								<TimetabledPassingTime version="any" id="hde:sj_42a@E+A@04_02=Delta1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42a@E+A@02"/>
 									<DepartureTime>16:00:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42a@E+A@04_Charley1">
+								<TimetabledPassingTime version="any" id="hde:sj_42a@E+A@04_03-Charley1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42a@E+A@03"/>
 									<DepartureTime>16:15:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42a@E+A@04_Bravo1">
+								<TimetabledPassingTime version="any" id="hde:sj_42a@E+A@04_04-Bravo1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42a@E+A@04"/>
 									<DepartureTime>16:30:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42a@E+A@04_Alpha2">
+								<TimetabledPassingTime version="any" id="hde:sj_42a@E+A@04_05-Alpha2">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42a@E+A@05"/>
 									<DepartureTime>16:45:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="mybus:tpt_42a@E+A@04_Echo1">
+								<TimetabledPassingTime version="any" id="hde:sj_42a@E+A@04_06-Echo1">
 									<StopPointInJourneyPatternRef version="any" ref="hde:spijp_42a@E+A@06"/>
 									<ArrivalTime>17:00:00.0Z</ArrivalTime>
 								</TimetabledPassingTime>

@@ -1419,6 +1419,9 @@ The Calendar is shown coded in two differnt ways
 
 -->
 						<ActivationPoint version="any" id="hde:ap_01">
+							<privateCodes>
+								<PrivateCode>MyPoint23</PrivateCode>
+							</privateCodes>
 							<Name>AP 1   before Bravo  start of activation link al1</Name>
 							<Location>
 								<Longitude>0.3</Longitude>
@@ -1445,9 +1448,11 @@ The Calendar is shown coded in two differnt ways
 									<Distance>80</Distance>
 								</PointProjection>
 							</projections>
-							<PrivateCode>MyPoint23</PrivateCode>
 						</ActivationPoint>
 						<ActivationPoint version="any" id="hde:ap_02">
+							<privateCodes>
+								<PrivateCode>MyPoint24</PrivateCode>
+							</privateCodes>
 							<Name>AP2 at  Bravo  end of activation link</Name>
 							<Location>
 								<Longitude>0.35</Longitude>
@@ -1467,9 +1472,11 @@ The Calendar is shown coded in two differnt ways
 									<ProjectToPointRef version="any" ref="mybus:Rtpt_RT_002@"/>
 								</PointProjection>
 							</projections>
-							<PrivateCode>MyPoint24</PrivateCode>
 						</ActivationPoint>
 						<ActivationPoint version="any" id="hde:ap_03">
+							<privateCodes>
+								<PrivateCode>MyPoint25</PrivateCode>
+							</privateCodes>
 							<Name>AP2  Between Bravo and Charlwey </Name>
 							<Location>
 								<Longitude>0.35</Longitude>
@@ -1493,7 +1500,6 @@ The Calendar is shown coded in two differnt ways
 									<ProjectToPointRef version="any" ref="mybus:Rtpt_RT_24_5"/>
 								</PointProjection>
 							</projections>
-							<PrivateCode>MyPoint25</PrivateCode>
 						</ActivationPoint>
 						<BeaconPoint version="any" id="hde:BeaconPoint:bp_01">
 							<Name>BeaconP1 Between Alpha and Bravo and Charlwey </Name>

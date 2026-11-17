@@ -7,7 +7,7 @@ This Example shows an extract of  encoding a single  Operator  data     encoded 
  
 (C) NTA 2020
   -->
-	<PublicationTimestamp>20209-12-17T09:30:46.0Z</PublicationTimestamp>
+	<PublicationTimestamp>2019-12-17T09:30:46.0Z</PublicationTimestamp>
 	<ParticipantRef>SYS001</ParticipantRef>
 	<!-- ======WHAT WAS REQUESTED ========== -->
 	<PublicationRequest version="1.0">
@@ -62,12 +62,6 @@ This Example shows an extract of  encoding a single  Operator  data     encoded 
 							<Description>Stage coach TXC  data </Description>
 						</Codespace>
 					</codespaces>
-					<versions>
-						<Version id="op:1,0" version="any">
-							<Description>Version 1 of timetable</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="op:Transdev" version="op:1.0">
 							<Email>data@http://www.transdevireland.ie/</Email>
@@ -80,7 +74,7 @@ This Example shows an extract of  encoding a single  Operator  data     encoded 
 							<roles>
 								<ResponsibilityRoleAssignment version="op:1.04" id="op:Operator_stop_data">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>Other</StakeholderRoleType>
+									<StakeholderRoleType>other</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="noc:01" version="any"/>
 								</ResponsibilityRoleAssignment>
 							</roles>

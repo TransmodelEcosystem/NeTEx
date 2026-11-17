@@ -63,6 +63,22 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 				<DefaultCodespaceRef ref="op6_cs"/>
 			</FrameDefaults>
 			<frames>
+				<ResourceFrame version="any" id="RF1">
+					<dataSources>
+						<DataSource id="uic:0060" version="any"/>
+					</dataSources>
+				</ResourceFrame>
+				<!--  Narrative:  The SERVICE CALENDAR FRAME provides a container to organise the operational dates -->
+				<ServiceCalendarFrame id="uic:SKDUPD_example_6_CheckIn" version="any">
+					<operatingPeriods>
+						<UicOperatingPeriod id="uic:SKDUPD_example_6_CheckIn" version="any">
+							<!-- POP+273:2022-01-29/2022-04-16::100000010000001000000100000010000001000000100000010000001000000100000010000001' -->
+							<FromDate>2022-01-29T00:00:00</FromDate>
+							<ToDate>2022-04-16T23:59:59</ToDate>
+							<ValidDayBits>100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
+						</UicOperatingPeriod>
+					</operatingPeriods>
+				</ServiceCalendarFrame>
 				<ServiceFrame version="any" id="SKDUPD_example_6_CheckIn">
 					<scheduledStopPoints>
 						<ScheduledStopPoint version="any" id="uic:008600824">
@@ -79,7 +95,7 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 				</ServiceFrame>
 				<TimetableFrame version="any" id="SKDUPD_example_6CheckIn">
 					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="6" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						<ServiceJourney version="any" id="6" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<!-- PRD+74000015:::32:::Check in+X284' -->
 							<!-- SKPUPD_TRAIN
 ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	not_used	Reservation_system	First_day	Last_day	Operation_days	Second_service_number
@@ -93,6 +109,10 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="32">bus</TypeOfServiceRef>
 							<!--  TapTsi B.4.7009   	32 Bus -->
 							<DepartureTime>08:06:00</DepartureTime>
+							<!-- POP+273:2022-01-29/2022-04-16::100000010000001000000100000010000001000000100000010000001000000100000010000001' -->
+							<dayTypes>
+								<DayTypeRef ref="uic:SKDUPD_example_6_CheckIn"/>
+							</dayTypes>
 							<OperatorRef versionRef="EXTERNAL" ref="uic:X284">Movia</OperatorRef>
 							<trainNumbers>
 								<TrainNumberRef ref="74000015"/>
@@ -103,7 +123,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 6	1	008600824			0806					1				803
 6	2	008600830	0846							2				
   -->
-								<Call version="any" id="6" order="1">
+								<Call version="any" id="6-1">
 									<!-- POR+008600824+*0806+'
 ASD+44::0803'  -->
 									<ScheduledStopPointRef version="any" ref="uic:008600824">Nyekoebing G</ScheduledStopPointRef>
@@ -118,7 +138,7 @@ ASD+44::0803'  -->
 									<!-- ASD+44::0803' -->
 									<Note>Check in time 0803</Note>
 								</Call>
-								<Call version="any" id="6" order="2">
+								<Call version="any" id="6-2">
 									<!-- POR+008600830+0846+'  -->
 									<ScheduledStopPointRef version="any" ref="uic:008600830">Gedser Faerge</ScheduledStopPointRef>
 									<Arrival>
@@ -177,13 +197,7 @@ ASD+44::0803'  -->
 									<!-- NB TODO NeTEx Should have checkin value. Missing. Use 'Boarding' for temporary workaround  -->
 								</CheckConstraint>
 							</checkConstraints>
-							<UicOperatingPeriod id="6" version="any">
-								<!-- POP+273:2022-01-29/2022-04-16::100000010000001000000100000010000001000000100000010000001000000100000010000001' -->
-								<FromDate>2022-01-29T00:00:00</FromDate>
-								<ToDate>2022-04-16T23:59:59</ToDate>
-								<ValidDayBits>100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
 			</frames>

@@ -48,7 +48,7 @@
 						<ResponsibilitySet id="FR:ResponsibilitySet:0123" version="any">
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="GE:ResponsibilityRoleAssignment:01">
-									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+									<StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="GE:Organsation:25"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -64,8 +64,8 @@
 						<SimpleVehicleType version="any" id="GE:SimpleVehicleType:1">
 							<EuroClass>3</EuroClass>
 							<!--instead of CO2Factor -->
-							<PropulsionType>combustion</PropulsionType>
-							<FuelType>diesel</FuelType>
+							<PropulsionTypes>combustion</PropulsionTypes>
+							<FuelTypes>diesel</FuelTypes>
 							<MaximumRange>845</MaximumRange>
 							<TransportMode>selfDrive</TransportMode>
 							<Length>4</Length>

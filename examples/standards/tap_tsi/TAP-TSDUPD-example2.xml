@@ -91,6 +91,12 @@ UIC_Code1	UIC_Code2	Duration	Duration_Unit	13	6_footPath_or_14_Hierarchy
 				<DefaultCodespaceRef ref="e1_cs"/>
 			</FrameDefaults>
 			<frames>
+				<ResourceFrame version="any" id="RF1">
+					<dataSources>
+						<DataSource id="uic:1186" version="any"/>
+						<DataSource id="uic:1183" version="any"/>
+					</dataSources>
+				</ResourceFrame>
 				<SiteFrame version="any" id="TSDUPD-example_Hilleroed_1-Station+Quays" responsibilitySetRef="0086">
 					<!-- =========== Topographic Places==== -->
 					<topographicPlaces>
@@ -130,7 +136,7 @@ The bus terminal in front of the station is a major hub for transportation throu
 							<AccessibilityAssessment version="any" id="uic:008600683">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
-									<AccessibilityLimitation>
+									<AccessibilityLimitation id="uic:008600683" version="any">
 										<WheelchairAccess>true</WheelchairAccess>
 									</AccessibilityLimitation>
 								</limitations>
@@ -380,7 +386,7 @@ The bus terminal in front of the station is a major hub for transportation throu
 							<AccessibilityAssessment version="any" id="uic2:008600683">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
-									<AccessibilityLimitation>
+									<AccessibilityLimitation id="uic2:008600683" version="any">
 										<WheelchairAccess>true</WheelchairAccess>
 									</AccessibilityLimitation>
 								</limitations>
@@ -703,7 +709,7 @@ The bus terminal in front of the station is a major hub for transportation throu
 							<AccessibilityAssessment version="any" id="uic:008301700">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
-									<AccessibilityLimitation>
+									<AccessibilityLimitation id="uic:008301700" version="any">
 										<WheelchairAccess>true</WheelchairAccess>
 									</AccessibilityLimitation>
 								</limitations>

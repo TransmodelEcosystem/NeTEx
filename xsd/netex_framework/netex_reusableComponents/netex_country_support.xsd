@@ -7,7 +7,7 @@
 				<Aggregation>main schema</Aggregation>
 				<Audience>e-service developers</Audience>
 				<Coverage>Europe</Coverage>
-				<Creator>First drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles.  mailto:schemer@netex.org.uk</Creator>
+				<Creator>First drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles.</Creator>
 				<Date>
 					<Created>2010-09-04</Created>
 				</Date>
@@ -266,7 +266,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="cf">
 				<xsd:annotation>
-					<xsd:documentation>CEN tral African Republic.</xsd:documentation>
+					<xsd:documentation>Central African Republic.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="cg">
@@ -1337,9 +1337,9 @@ Rail transport, Roads and Road transport
 			<xsd:documentation>Reference to a country ISO 3166-1 Note that GB is used for UK . May be qualified with a 3166-2 subdivision e.g. gb +m ENG, GB + SCT, GB See www.iso.org/iso/country_codes/iso_3166_code_lists.htm.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
-			<xsd:complexContent>
-				<xsd:extension base="CountryRefStructure"/>
-			</xsd:complexContent>
+			<xsd:simpleContent>
+				<xsd:restriction base="CountryRefStructure"/>
+			</xsd:simpleContent>
 		</xsd:complexType>
 	</xsd:element>
 	<xsd:complexType name="CountryRefStructure">

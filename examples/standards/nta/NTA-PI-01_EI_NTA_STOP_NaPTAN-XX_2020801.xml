@@ -360,7 +360,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 										<TypeOfPlaceRef version="napt:v2.1" ref="napt:StopType@CUS"/>
 									</placeTypes>
 									<alternativeNames>
-										<AlternativeName id="naptStop:700000009127" version="11" created="2016-02-07T00:00:00" modification="new" changed="2016-02-07T06:28:16">
+										<AlternativeName id="naptStop:700000009239" version="11" created="2016-02-07T00:00:00" modification="new" changed="2016-02-07T06:28:16">
 											<Name lang="ga">Dún Geanain</Name>
 										</AlternativeName>
 									</alternativeNames>
@@ -589,7 +589,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 									<AccessibilityAssessment id="naptStop:8220DB007590" version="11">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="naptStop:8220DB007590" version="11">
 												<WheelchairAccess>true</WheelchairAccess>
 											</AccessibilityLimitation>
 										</limitations>
@@ -808,7 +808,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 							<roles>
 								<ResponsibilityRoleAssignment version="eix:v1.0" id="eix:EIX_metadata:NTA">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:NTA" versionRef="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgRegion:EIRE" versionRef="nptg:v2.1"/>
 								</ResponsibilityRoleAssignment>
@@ -949,12 +949,6 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 						<DefaultDataSourceRef ref="napt:NTA" version="napt:v2.4"/>
 						<DefaultResponsibilitySetRef ref="napt:NaPTAN_metadata" version="napt:v2.4"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="napt:v2.4" version="any">
-							<Description>NaPTAN  version 2.4</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="napt:NTA" version="napt:v2.4">
 							<Email>standards@nationaltransportauthority.ie</Email>
@@ -967,7 +961,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 							<roles>
 								<ResponsibilityRoleAssignment version="napt:v2.4" id="napt:NaPTAN_metadata">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:NTA" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgRegion:EIRE" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">Irish </ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -978,7 +972,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 							<roles>
 								<ResponsibilityRoleAssignment version="napt:v2.4" id="napt:naptan_data">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>Other</StakeholderRoleType>
+									<StakeholderRoleType>other</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:NTA" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgRegion:EIRE" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">Irish </ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -1160,12 +1154,6 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 						<DefaultDataSourceRef ref="nptg:NTA" version="nptg:v2.1"/>
 						<DefaultResponsibilitySetRef ref="nptg:NPTG_metadata" version="nptg:v2.1"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="nptg:v2.1" version="any">
-							<Description>NPTG version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="nptg:NTA" version="nptg:v2.1">
 							<Email>standards@nationtransportauthority.ie</Email>
@@ -1178,7 +1166,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 							<roles>
 								<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:NPTG_metadata">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:NTA" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgRegion:IE" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">Irish </ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -1189,7 +1177,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 							<roles>
 								<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:NPTG_data">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+									<StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:NTA" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptg:IE">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>

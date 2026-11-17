@@ -1,0 +1,1859 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2.2" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<!-- Simplified example DECK PLAN for a Railway train -->
+	<!-- This example provides a simpliefied example of describing a TRAIN  with its composition of  carriages (TRAIN ELEMENTs) and detailed  layout (DECK PLANs, DECks and PASSENGER SPACEs) of the carriages. -->
+	<!-- === Standard IC coach ###
+
+============/::::::\==========
+|@@@@@@@@@@@  /__  \ @@@@@@@@|
+|@@@@@@     Front       @@@@@|
+|@@@@@@     Entrance    @@@@@|
+/ Entrance            Entrance\
+/ Forward             Forward \    Entrance for 01-76
+|@  Left               Right @|
+|@                 @@@@@@@@@@@|
+|@                 @    WC   @|
+|@                 @         @|
+|@                 / Entrance@|
+|@                 @  [Door  @|
+|@@@@@@@@@@@@/:::::\@@@@@@@@@@|
+|@  Luggage          Luggage @|
+|@                           @|
+|@++++++++++       ++++++++++@|
+|@:::::::::+       +:::::::::@|
+|@ 12 + 18 +       + 14 + 16 @| r01  forwards
+|@++++++++++       ++++++++++@|
+|@:::::::::+       +:::::::::@|
+|@ 21 + 23 +       + 27 + 25 @| r02  forwards
+|@++++++++++       ++++++++++@|
+|@:::::::::+       +:::::::::@|
+|@ 22 + 28 +       + 24 + 26 @| r03  forwards
+|@++++++++++       ++++++++++@|
+|@:::::::::+       +:::::::::@|
+|@ 31 + 33 +       + 37 + 35 @| r04  forwards
+|@++++++++++       ++++++++++@|
+|@:::::::::+       +:::::::::@|
+|@ 32 + 38 +       + 34 + 46 @| r05  forwards
+|@++++++++++       ++++++++++@|
+|@:::::::::+       +:::::::::@|
+|@ 41 + 43 +       + 47 + 45 @| r06  forwards
+|@+[table]++       ++[table]+@|
+|@ 42 + 48 +       + 44 + 46 @| r07  backwards
+|@++++++++++       ++++++++++@|
+|@:::::::::+       +:::::::::@|
+|@ 51 + 53 +       + 57 + 55 @| r08  backwards
+|@++++++++++       ++++++++++@|
+|@:::::::::+       +:::::::::@|
+|@ 52 + 58 +       + 54 + 56 @| r09  backwards
+|@++++++++++       ++++++++++@|
+|@:::::::::+       +:::::::::@|
+|@ 61 + 63 +       + 67 + 65 @| r10  backwards
+|@++++++++++       ++++++++++@|
+|@:::::::::+       +:::::::::@|
+|@ 62 + 68 +       + 64 + 66 @| r11  backwards
+|@++++++++++       ++++++++++@|
+|@:::::::::+       +:::::::::@|
+|@ 71 + 73 +       + 77 + 75 @| r12  backwards
+|@++++++++++       ++++++++++@|
+|@:::::::::+       +:::::::::@|
+|@ 72 + 78 +       + 74 + 76 @| r13  backwards
+|@++++++++++       ++++++++++@|
+|@:::::::::+       +:::::::::@|
+|@ 81 + 83 +       + 87 + 85 @| r14  forwards
+|@++++++++++       ++++++++++@|
+|@:::::::::+       +:::::::::@|
+|@ 82 + 88 +       + 84 + 86 @| r15  forwards
+|@++++++++++       ++++++++++@|
+|@:::::::::+       +:::::::::@|
+|@ 91 + 93 +       + 97 + 95 @| r16  forwards
+|@+[table]++       ++[table]+@|
+|@ 92 + 98 +       + 94 + 96 @| r17  backwards
+|@++++++++++       ++++++++++@|
+|@:::::::::+       +:::::::::@|
+|@ 101+103 +       + 107+105 @| r18  backwards
+|@++++++++++       ++++++++++@|
+|@:::::::::+       +:::::::::@|
+|@ 102+108 +       + 104+106 @| r19  backwards
+|@++++++++++       ++++++++++@|
+|@:::::::::+       +:::::::::@|
+|@ 111+113 +       + 117+115 @| r20  backwards
+|@@+++++++++       +++++++++@@|
+|@  Luggage          Luggage @|
+|@                           @|
+|@@@@@@@@@@@/:::::\@@@@@@@@@@@|
+|@                 @   WC    @|
+|@                 @         @|
+|@                 / Entrance@|
+|@                 @ [Door   @|
+|@                 @@@@@@@@@@@|
+/ Entrance            Entrance\
+/ Rear                   Rear \   Entrance for 81-115
+|@    Left             Right @|
+|@@@@@@@@@@  Back   @@@@@@@@@@|
+============\:::::::/==========
+ -->
+	<PublicationTimestamp>2020-12-17T09:30:47.0Z</PublicationTimestamp>
+	<ParticipantRef>SYS001</ParticipantRef>
+	<!-- ======WHAT WAS REQUESTED ========== -->
+	<PublicationRequest version="1.0">
+		<RequestTimestamp>2020-12-17T09:30:46.0Z</RequestTimestamp>
+		<ParticipantRef>SYS002</ParticipantRef>
+	</PublicationRequest>
+	<PublicationRefreshInterval>P1M</PublicationRefreshInterval>
+	<Description>Example of DeckPlans</Description>
+	<!-- =============== RESULTS =========== -->
+	<dataObjects>
+		<CompositeFrame version="1.0" id="rc:CF-deck_plan_example_rail" responsibilitySetRef="rc:RS-service_data">
+			<ValidBetween>
+				<FromDate>2023-01-01T00:00:00</FromDate>
+				<ToDate>2023-12-31T12:00:00</ToDate>
+			</ValidBetween>
+			<Name>Deck Plan  Example</Name>
+			<Description>This is an example showing how one might encode a Deck plan for a train in NeTEx.</Description>
+			<!--==== CODESPACEs ==== -->
+			<codespaces>
+				<Codespace id="CS-rc_data">
+					<Xmlns>rc</Xmlns>
+					<XmlnsUrl>http://www.frail.eu/</XmlnsUrl>
+					<Description>Frail rail data</Description>
+				</Codespace>
+			</codespaces>
+			<!--==== FRAME DEFAULTS ==== -->
+			<FrameDefaults>
+				<!---  The default means that actually we could leave off all id s that belong to the mb: namespace. -->
+				<DefaultCodespaceRef ref="CS-rc_data"/>
+			</FrameDefaults>
+			<frames>
+				<!--==== VEHICLE TYPES and DECK PLANS ==== -->
+				<ResourceFrame version="1.0" id="rc:RF-deck_plan_example_rail" responsibilitySetRef="rc:RS-vehicle_data">
+					<Name>Rail examples of IC train seating cars</Name>
+					<Description>Describes a train with IC wagons.</Description>
+					<typesOfValue>
+						<ValueSet version="any" id="rc:VS-TypeOfDeckEntranceUsage" classOfValues="TypeOfDeckEntranceUsage">
+							<values>
+								<TypeOfDeckEntranceUsage version="any" id="rc:TDEU-staff_with_key"/>
+								<TypeOfDeckEntranceUsage version="any" id="rc:TDEU-staff_with_key"/>
+							</values>
+						</ValueSet>
+					</typesOfValue>
+					<organisations>
+						<!-- ==== ORGANISATIONS ==== -->
+						<Operator version="any" id="rc:OP-mrc_123">
+							<PublicCode>MRC</PublicCode>
+							<Name>Motor Rail CO</Name>
+							<ShortName>Moto</ShortName>
+							<TradingName>Motovacation SA</TradingName>
+							<OrganisationType>operator</OrganisationType>
+							<Address>
+								<Street>Prince Rupert Street</Street>
+								<Town>Strelsau</Town>
+								<PostCode>z354</PostCode>
+								<PostalRegion>Ruritania</PostalRegion>
+							</Address>
+							<PrimaryMode>bus</PrimaryMode>
+						</Operator>
+					</organisations>
+					<equipments>
+						<!-- === Door  Related === -->
+						<EntranceEquipment version="any" id="rc:EE-external_door">
+							<Name>Passenger Train door</Name>
+							<SafeForGuideDog>true</SafeForGuideDog>
+							<DoorType>hingedSingle</DoorType>
+							<AutomaticDoor>true</AutomaticDoor>
+							<WheelchairPassable>true</WheelchairPassable>
+							<WheelchairUnaided>false</WheelchairUnaided>
+						</EntranceEquipment>
+						<EntranceEquipment version="any" id="rc:EE-inter_wagon_passenger_door">
+							<SafeForGuideDog>true</SafeForGuideDog>
+							<DoorType>slidingPair</DoorType>
+							<AutomaticDoor>true</AutomaticDoor>
+							<WheelchairPassable>true</WheelchairPassable>
+							<WheelchairUnaided>true</WheelchairUnaided>
+						</EntranceEquipment>
+						<EntranceEquipment version="any" id="rc:EE-sliding_door">
+							<Name>Sliding door to the entrance room</Name>
+							<SafeForGuideDog>true</SafeForGuideDog>
+							<DoorType>slidingSingle</DoorType>
+							<AutomaticDoor>true</AutomaticDoor>
+							<WheelchairPassable>false</WheelchairPassable>
+							<WheelchairUnaided>true</WheelchairUnaided>
+						</EntranceEquipment>
+						<EntranceEquipment version="any" id="rc:EE-toilet_door">
+							<Name>Hinged door to compartment</Name>
+							<SafeForGuideDog>true</SafeForGuideDog>
+							<DoorType>hingedSingle</DoorType>
+							<AutomaticDoor>false</AutomaticDoor>
+							<WheelchairPassable>true</WheelchairPassable>
+							<WheelchairUnaided>true</WheelchairUnaided>
+						</EntranceEquipment>
+						<SeatEquipment version="any" id="rc:SEq-standard_chair">
+							<Name>Standard carriage seate</Name>
+							<HeightFromFloor>0.48</HeightFromFloor>
+							<SeatBackHeight>0.50</SeatBackHeight>
+							<SeatDepth>0.50</SeatDepth>
+							<IsFoldup>false</IsFoldup>
+						</SeatEquipment>
+						<!-- Luggage  Related -->
+						<LuggageSpotEquipment version="any" id="rc:LSE-luggage_area">
+							<Name>luggage area</Name>
+							<Width>4.00</Width>
+							<Length>1.25</Length>
+							<Height>0.40</Height>
+							<HeightFromFloor>1.90</HeightFromFloor>
+							<LuggageSpotType>luggageBay</LuggageSpotType>
+							<HeadroomForLuggage>0.40</HeadroomForLuggage>
+							<IsLockable>false</IsLockable>
+						</LuggageSpotEquipment>
+						<!-- Other -->
+						<SanitaryEquipment version="any" id="rc:SEq-train_toilet">
+							<SanitaryFacilityList>toilet washbasin</SanitaryFacilityList>
+							<NumberOfToilets>1</NumberOfToilets>
+							<FreeToUse>true</FreeToUse>
+						</SanitaryEquipment>
+					</equipments>
+					<serviceFacilitySets>
+						<!-- Seat wagon -->
+						<ServiceFacilitySet version="any" id="rc:SFS-seat_general_facilities">
+							<Description>General facilities</Description>
+							<FareClasses>standardClass</FareClasses>
+							<NuisanceFacilityList>mobilePhoneUseZone noSmoking</NuisanceFacilityList>
+							<PassengerCommsFacilityList>publicWifi   powerSupplySockets</PassengerCommsFacilityList>
+							<PassengerInformationFacilityList>nextStopIndicator passengerInformationDisplay realTimeConnections stopAnnouncements</PassengerInformationFacilityList>
+							<SanitaryFacilityList>toilet</SanitaryFacilityList>
+							<AccommodationFacilityList>seating</AccommodationFacilityList>
+							<LuggageCarriageFacilityList>baggageStorage luggageRacks</LuggageCarriageFacilityList>
+						</ServiceFacilitySet>
+					</serviceFacilitySets>
+					<vehicleTypes>
+						<!-- == Trains ==== -->
+						<Train version="any" id="rco:Tr-rail_IC_train_1">
+							<Name> 4 carriage train</Name>
+							<Description>[Seating car 3] [Seating car 3] [Seating car 2] [Seating car 1] [Engine]</Description>
+							<SelfPropelled> true</SelfPropelled>
+							<PropulsionTypes>electric</PropulsionTypes>
+							<capacities>
+								<PassengerCapacity version="any" id="rco:PC-rst_rail_IC_train_1@passenger_capacity">
+									<!-- seated 100 x 4 carriages-->
+									<TotalCapacity>400</TotalCapacity>
+									<!-- seated 80 x 4 carriages-->
+									<SeatingCapacity>320</SeatingCapacity>
+									<!-- standing   20 x 4 carriages -->
+									<StandingCapacity>80</StandingCapacity>
+								</PassengerCapacity>
+							</capacities>
+							<LowFloor>false</LowFloor>
+							<HasLiftOrRamp>false</HasLiftOrRamp>
+							<BoardingHeight>0.40</BoardingHeight>
+							<facilities>
+								<ServiceFacilitySetRef version="any" ref="rc:SFS-seat_general_facilities"/>
+							</facilities>
+							<components>
+								<TrainComponent version="any" id="rco:TC-rail_IC_train_1-1">
+									<Label>Engine </Label>
+									<Description>Engine</Description>
+									<TractiveElementTypeRef version="any" ref="rco:TraET-X444"/>
+									<OperationalOrientation>forwards</OperationalOrientation>
+									<ForwardCoupling>
+										<Splittable>true</Splittable>
+										<ThroughAccess>noThroughAccess</ThroughAccess>
+									</ForwardCoupling>
+								</TrainComponent>
+								<TrainComponent version="any" id="rco:TC-rail_IC_train_1-2">
+									<Label>F01</Label>
+									<Description>Seating car</Description>
+									<TrailingElementTypeRef version="any" ref="rco:TriET-S645"/>
+									<OperationalOrientation>forwards</OperationalOrientation>
+									<ForwardCoupling>
+										<Splittable>true</Splittable>
+										<ThroughAccess>door</ThroughAccess>
+									</ForwardCoupling>
+								</TrainComponent>
+								<TrainComponent version="any" id="rco:TC-rail_IC_train_1-3">
+									<Label>F02</Label>
+									<Description>Seating car</Description>
+									<TrailingElementTypeRef version="any" ref="rco:TriET-S645"/>
+									<OperationalOrientation>forwards</OperationalOrientation>
+									<ForwardCoupling>
+										<Splittable>true</Splittable>
+										<ThroughAccess>door</ThroughAccess>
+									</ForwardCoupling>
+								</TrainComponent>
+								<TrainComponent version="any" id="rco:TC-rail_IC_train_1-4">
+									<Label>F03</Label>
+									<Description>Seating car</Description>
+									<TrailingElementTypeRef version="any" ref="rco:TriET-S645"/>
+									<OperationalOrientation>forwards</OperationalOrientation>
+									<ForwardCoupling>
+										<Splittable>true</Splittable>
+										<ThroughAccess>door</ThroughAccess>
+									</ForwardCoupling>
+								</TrainComponent>
+								<TrainComponent version="any" id="rco:TC-rail_IC_train_1-5">
+									<Label>F04</Label>
+									<Description>Seating car</Description>
+									<TrailingElementTypeRef version="any" ref="rco:TriET-S645"/>
+									<OperationalOrientation>forwards</OperationalOrientation>
+									<ForwardCoupling>
+										<Splittable>true</Splittable>
+										<ThroughAccess>door</ThroughAccess>
+									</ForwardCoupling>
+								</TrainComponent>
+							</components>
+						</Train>
+					</vehicleTypes>
+					<trainElementTypes>
+						<TractiveElementType version="any" id="rco:TraET-X444">
+							<Name>Engine</Name>
+							<TrainElementType>engine</TrainElementType>
+							<Length>10</Length>
+							<Width>3.5</Width>
+							<Height>4</Height>
+							<Weight>1000</Weight>
+						</TractiveElementType>
+						<TrailingElementType version="any" id="rco:TriET-S645">
+							<Name>Seating car</Name>
+							<TrainElementType>carriage</TrainElementType>
+							<FareClasses>economyClass</FareClasses>
+							<LowFloor>false</LowFloor>
+							<HasLiftOrRamp>false</HasLiftOrRamp>
+							<BoardingHeight>0.15</BoardingHeight>
+							<Length>26.4</Length>
+							<Width>2.825</Width>
+							<Height>4</Height>
+							<Weight>43000</Weight>
+							<DeckPlanRef version="any" ref="rc:DP-IC-seating_car"/>
+						</TrailingElementType>
+					</trainElementTypes>
+					<deckPlans>
+						<DeckPlan version="any" id="rc:DP-IC-seating_car">
+							<Name>IC seat wagon (DB Bpmmz284)</Name>
+							<decks>
+								<Deck version="any" id="rc:Dk-bfc_deck_1">
+									<Name>Seat car Passenger deck</Name>
+									<Label>1</Label>
+									<deckSpaces>
+										<PassengerSpace version="any" id="rc:PS-bfc_deck_1@seating_area@">
+											<Name>@seating_area@</Name>
+											<ServiceFacilitySetRef version="any" ref="rc:SFS-seat_general_facilities"/>
+											<SmokingAllowed>false</SmokingAllowed>
+											<deckEntrances>
+												<!-- external doors to  carriage -->
+												<PassengerEntrance version="any" id="rc:PE-bfc_deck_1@seating_area@forward_external_left">
+													<Name>Front Door</Name>
+													<Label>D1</Label>
+													<Width>0.80</Width>
+													<Height>1.90</Height>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@@seating_area@forward_external_left@door">
+															<Units>1</Units>
+															<EntranceEquipmentRef version="any" ref="rc:EE-external_door"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<PublicUse>true</PublicUse>
+													<VehicleSide>leftSide</VehicleSide>
+													<SequenceFromFront>1</SequenceFromFront>
+													<HeightFromGround>0.20</HeightFromGround>
+													<DeckEntranceType>external</DeckEntranceType>
+													<IsEmergencyExit>true</IsEmergencyExit>
+													<HasDoor>true</HasDoor>
+													<IsAutomatic>true</IsAutomatic>
+												</PassengerEntrance>
+												<PassengerEntrance version="any" id="rc:PE-bfc_deck_1@seating_area@forward_external_right">
+													<Name>Front Right  External  Door</Name>
+													<Label>D2</Label>
+													<Width>1.00</Width>
+													<Height>1.90</Height>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@forward_external@door">
+															<Units>1</Units>
+															<EntranceEquipmentRef version="any" ref="rc:EE-external_door"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<PublicUse>true</PublicUse>
+													<VehicleSide>rightSide</VehicleSide>
+													<SequenceFromFront>1</SequenceFromFront>
+													<HeightFromGround>0.20</HeightFromGround>
+													<DeckEntranceType>external</DeckEntranceType>
+													<IsEmergencyExit>true</IsEmergencyExit>
+													<HasDoor>true</HasDoor>
+													<IsAutomatic>true</IsAutomatic>
+												</PassengerEntrance>
+												<PassengerEntrance version="any" id="rc:PE-bfc_deck_1@seating_area@rear_external_left">
+													<Name>Rear External Door</Name>
+													<Label>D2</Label>
+													<Width>0.95</Width>
+													<Height>1.90</Height>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@rear_external_left@door">
+															<Units>1</Units>
+															<EntranceEquipmentRef version="any" ref="rc:EE-external_door"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<PublicUse>true</PublicUse>
+													<VehicleSide>leftSide</VehicleSide>
+													<SequenceFromFront>2</SequenceFromFront>
+													<HeightFromGround>0.20</HeightFromGround>
+													<DeckEntranceType>external</DeckEntranceType>
+													<IsEmergencyExit>true</IsEmergencyExit>
+													<HasDoor>true</HasDoor>
+													<IsAutomatic>true</IsAutomatic>
+												</PassengerEntrance>
+												<PassengerEntrance version="any" id="rc:PE-bfc_deck_1@seating_area@rear_external_right">
+													<Name>Rear Right External Door</Name>
+													<Label>D2</Label>
+													<Width>0.95</Width>
+													<Height>1.90</Height>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@rear_external_right@door">
+															<Units>1</Units>
+															<EntranceEquipmentRef version="any" ref="rc:EE-external_door"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<PublicUse>true</PublicUse>
+													<VehicleSide>rightSide</VehicleSide>
+													<SequenceFromFront>2</SequenceFromFront>
+													<HeightFromGround>0.20</HeightFromGround>
+													<DeckEntranceType>external</DeckEntranceType>
+													<IsEmergencyExit>true</IsEmergencyExit>
+													<HasDoor>true</HasDoor>
+													<IsAutomatic>true</IsAutomatic>
+												</PassengerEntrance>
+												<!-- end doors to next carriage -->
+												<PassengerEntrance version="any" id="rc:PE-bfc_deck_1@seating_area@front_end_connecting">
+													<Name>Rear end door connecting to next carriage</Name>
+													<Label>F1</Label>
+													<Width>0.80</Width>
+													<Height>1.90</Height>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@front_end_connecting@door">
+															<EntranceEquipmentRef version="any" ref="rc:EE-inter_wagon_passenger_door"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<PublicUse>true</PublicUse>
+													<VehicleSide>frontEnd</VehicleSide>
+													<DeckEntranceType>communicating</DeckEntranceType>
+													<IsEmergencyExit>false</IsEmergencyExit>
+													<HasDoor>true</HasDoor>
+													<IsAutomatic>true</IsAutomatic>
+												</PassengerEntrance>
+												<PassengerEntrance version="any" id="rc:PE-bfc_deck_1@seating_area@back_end_connecting">
+													<Name>Rear end door connecting to next carriage</Name>
+													<Label>Rear</Label>
+													<Width>0.80</Width>
+													<Height>1.90</Height>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@back_end_connecting@door">
+															<EntranceEquipmentRef version="any" ref="rc:EE-inter_wagon_passenger_door"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<PublicUse>true</PublicUse>
+													<VehicleSide>backEnd</VehicleSide>
+													<DeckEntranceType>communicating</DeckEntranceType>
+													<IsEmergencyExit>false</IsEmergencyExit>
+													<HasDoor>true</HasDoor>
+													<IsAutomatic>true</IsAutomatic>
+												</PassengerEntrance>
+												<!-- Toilet doors internal to carriage -->
+												<PassengerEntrance version="any" id="rc:PE-bfc_deck_1@seating_area@toilet">
+													<Name>Compartment 1 door</Name>
+													<Width>0.80</Width>
+													<Height>1.80</Height>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@toilet">
+															<EntranceEquipmentRef version="any" ref="rc:EE-toilet_door"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<DeckEntranceType>internal</DeckEntranceType>
+													<HasDoor>true</HasDoor>
+													<IsAutomatic>false</IsAutomatic>
+												</PassengerEntrance>
+											</deckEntrances>
+											<deckEntranceUsages>
+												<!-- External to carriage -->
+												<DeckEntranceUsage version="any" id="rc:DEU-bfc_deck_1@seating_area@forward_external_left">
+													<EntranceUsageType>entryAndExit</EntranceUsageType>
+													<EntranceSetting>shut</EntranceSetting>
+													<ControlledLocking>true</ControlledLocking>
+													<PassengerEntranceRef version="any" ref="rc:PE-bfc_deck_1@seating_area@forward_external_left"/>
+													<StartSpot>
+														<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_01_col_A">Seat 12</PassengerSpotRef>
+													</StartSpot>
+													<EndSpot>
+														<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_13_col_D">Seat 76</PassengerSpotRef>
+													</EndSpot>
+												</DeckEntranceUsage>
+												<DeckEntranceUsage version="any" id="rc:DEU-bfc_deck_1@seating_area@forward_external_right">
+													<EntranceUsageType>entryAndExit</EntranceUsageType>
+													<EntranceSetting>shut</EntranceSetting>
+													<ControlledLocking>true</ControlledLocking>
+													<PassengerEntranceRef version="any" ref="rc:PE-bfc_deck_1@seating_area@forward_external_right"/>
+													<StartSpot>
+														<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_01_col_A">Seat 12</PassengerSpotRef>
+													</StartSpot>
+													<EndSpot>
+														<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_06_col_D">Seat 76</PassengerSpotRef>
+													</EndSpot>
+												</DeckEntranceUsage>
+												<DeckEntranceUsage version="any" id="rc:DEU-bfc_deck_1@seating_area@rear_external_left">
+													<EntranceUsageType>entryAndExit</EntranceUsageType>
+													<EntranceSetting>shut</EntranceSetting>
+													<ControlledLocking>true</ControlledLocking>
+													<PassengerEntranceRef version="any" ref="rc:PE-bfc_deck_1@seating_area@rear_external_left"/>
+													<StartSpot>
+														<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_14_col_A">Seat 81</PassengerSpotRef>
+													</StartSpot>
+													<EndSpot>
+														<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_20_col_D">Seat 115</PassengerSpotRef>
+													</EndSpot>
+												</DeckEntranceUsage>
+												<DeckEntranceUsage version="any" id="rc:DEU-bfc_deck_1@rear_external_right">
+													<EntranceUsageType>entryAndExit</EntranceUsageType>
+													<EntranceSetting>shut</EntranceSetting>
+													<ControlledLocking>true</ControlledLocking>
+													<PassengerEntranceRef version="any" ref="rc:PE-bfc_deck_1@seating_area@rear_external_right"/>
+													<StartSpot>
+														<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_14_col_A">Seat 81</PassengerSpotRef>
+													</StartSpot>
+													<EndSpot>
+														<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_20_col_D">Seat 115</PassengerSpotRef>
+													</EndSpot>
+												</DeckEntranceUsage>
+												<!-- internal use -->
+												<DeckEntranceUsage version="any" id="rc:DEU-bfc_deck_1@seating_area@front_end_connecting">
+													<EntranceUsageType>entryAndExit</EntranceUsageType>
+													<EntranceSetting>shut</EntranceSetting>
+													<ControlledLocking>true</ControlledLocking>
+													<PassengerEntranceRef version="any" ref="rc:PE-bfc_deck_1@seating_area@front_end_connecting"/>
+												</DeckEntranceUsage>
+												<DeckEntranceUsage version="any" id="rc:DEU-bfc_deck_1@seating_area@back_end_connecting">
+													<EntranceUsageType>entryAndExit</EntranceUsageType>
+													<TypeOfDeckEntranceUsageRef version="any" ref="rc:TDEU-staff_with_key"/>
+													<EntranceSetting>shut</EntranceSetting>
+													<ControlledLocking>true</ControlledLocking>
+													<PassengerEntranceRef version="any" ref="rc:PE-bfc_deck_1@seating_area@back_end_connecting"/>
+												</DeckEntranceUsage>
+											</deckEntranceUsages>
+											<deckWindows>
+												<!-- TODO How to use different windows on left/right side -->
+												<DeckWindow version="any" id="rc:DW-bfc_deck_1@seating_area@Windows_1">
+													<Width>900</Width>
+													<SequenceFromFront>1</SequenceFromFront>
+													<DistanceFromFront>3.250</DistanceFromFront>
+													<HasBlind>true</HasBlind>
+													<CanBeOpened>false</CanBeOpened>
+												</DeckWindow>
+												<DeckWindow version="any" id="rc:DW-bfc_deck_1@seating_area@Windows_2">
+													<Width>1400</Width>
+													<SequenceFromFront>2</SequenceFromFront>
+													<DistanceFromFront>4.415</DistanceFromFront>
+													<HasBlind>true</HasBlind>
+													<CanBeOpened>false</CanBeOpened>
+												</DeckWindow>
+												<DeckWindow version="any" id="rc:DW-bfc_deck_1@seating_area@Windows_3">
+													<Width>1400</Width>
+													<SequenceFromFront>3</SequenceFromFront>
+													<DistanceFromFront>6.415</DistanceFromFront>
+													<HasBlind>true</HasBlind>
+													<CanBeOpened>false</CanBeOpened>
+												</DeckWindow>
+												<!-- etc etc -->
+											</deckWindows>
+											<TotalCapacity>80</TotalCapacity>
+											<deckSpaceCapacities>
+												<DeckSpaceCapacity version="any" id="rc:DSC-bfc_deck_1@seating_area@standing_capacity">
+													<LocatableSpotType>standingSpace</LocatableSpotType>
+													<Capacity>20</Capacity>
+												</DeckSpaceCapacity>
+											</deckSpaceCapacities>
+											<StandingAllowed>true</StandingAllowed>
+											<passengerSpots>
+												<!-- Row 01 for 01-04 (forward facing)-->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_01_col_A">
+													<Label>12</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_01_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_01"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_01_col_B">
+													<Label>18</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_01_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_01"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_01_col_C">
+													<Label>14</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_01_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_01"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_01_col_D">
+													<Label>16</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_01_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_01"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!-- Row 02 for 21-27 (forward facing)-->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_02_col_A">
+													<Label>21</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_02_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_02"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_02_col_B">
+													<Label>23</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_02_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_02"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_02_col_C">
+													<Label>27</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_02_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_01"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_02_col_D">
+													<Label>25</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_02_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_02"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<!-- Row row_03 for 22-26 (forwards facing) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_03_col_A">
+													<Label>22</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_03_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_03"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_03_col_B">
+													<Label>28</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_03_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_03"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_03_col_C">
+													<Label>24</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_03_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_03"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_03_col_D">
+													<Label>26</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_03_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_03"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!-- Row row_04 for 31-35 (forwards facing) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_04_col_A">
+													<Label>31</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_04_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_04"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_04_col_B">
+													<Label>33</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_04_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_04"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_04_col_C">
+													<Label>37</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_04_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_04"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_04_col_D">
+													<Label>35</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_04_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_04"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!-- Row row_05 for 32-36 (forwards facing) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_05_col_A">
+													<Label>32</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_05_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_05"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_05_col_B">
+													<Label>38</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_05_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_05"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_05_col_C">
+													<Label>34</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_05_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_05"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_05_col_D">
+													<Label>46</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_05_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_05"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!-- Row row_06 for 41-45 (forwards facing) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_06_col_A">
+													<Label>41</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_06_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_06"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>fixedFlat</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_06_col_B">
+													<Label>43</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_06_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_06"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>fixedFlat</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_06_col_C">
+													<Label>47</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_06_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_06"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>fixedFlat</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_06_col_D">
+													<Label>45</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_06_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_06"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>fixedFlat</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!-- Row row_07 for 42-46 (backwards facing) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_07_col_A">
+													<Label>42</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_07_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_07"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>fixedFlat</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_07_col_B">
+													<Label>48</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_07_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_07"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>fixedFlat</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_07_col_C">
+													<Label>44</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_07_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_07"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>fixedFlat</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_07_col_D">
+													<Label>46</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_07_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_07"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>fixedFlat</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!-- Row row_08 for 51-55 (backwards facing) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_08_col_A">
+													<Label>51</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_08_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_08"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_08_col_B">
+													<Label>53</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_08_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_08"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_08_col_C">
+													<Label>57</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_08_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_08"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_08_col_D">
+													<Label>55</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_08_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_08"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!-- Row row_09 for 52-56 (backwards facing) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_09_col_A">
+													<Label>52</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_09_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_09"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_09_col_B">
+													<Label>58</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_09_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_09"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_09_col_C">
+													<Label>54</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_09_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_09"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_09_col_D">
+													<Label>54</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_09_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_09"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!-- Row row_10 for 61-65 (backwards facing) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_10_col_A">
+													<Label>61</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_10_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_10"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_10_col_B">
+													<Label>63</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_10_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_10"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_10_col_C">
+													<Label>67</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_10_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_10"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_10_col_D">
+													<Label>65</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_10_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_10"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!-- Row row_11 for 62-66 (backwards facing) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_11_col_A">
+													<Label>62</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_11_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_11"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_11_col_B">
+													<Label>68</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_11_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_11"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_11_col_C">
+													<Label>64</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_11_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_11"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_11_col_D">
+													<Label>66</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_11_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_11"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!-- Row row_12 for 71-75 (backwards facing) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_12_col_A">
+													<Label>71</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_12_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_12"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_12_col_B">
+													<Label>73</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_12_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_12"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_12_col_C">
+													<Label>77</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_12_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_12"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_12_col_D">
+													<Label>75</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_12_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_12"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!-- Row row_13 for 72-76 (backwards facing) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_13_col_A">
+													<Label>72</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_13_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_13"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_13_col_B">
+													<Label>78</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_13_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_13"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_13_col_C">
+													<Label>74</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_13_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_13"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_13_col_D">
+													<Label>76</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_13_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_13"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!-- Row row_14 for 81-85 (forwards facing) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_14_col_A">
+													<Label>81</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_14_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_14"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_14_col_B">
+													<Label>83</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_14_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_14"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_14_col_C">
+													<Label>87</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_14_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_14"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_14_col_D">
+													<Label>85</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_14_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_14"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!-- Row row_15 for 82-86 (forwards facing) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_15_col_A">
+													<Label>82</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_15_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_15"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_15_col_B">
+													<Label>88</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_15_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_15"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_15_col_C">
+													<Label>84</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_15_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_15"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_15_col_D">
+													<Label>86</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_15_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_15"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!-- Row row_16 for 91-95 (forwards facing) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_16_col_A">
+													<Label>91</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_16_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_16"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>seatBackFolding</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_16_col_B">
+													<Label>93</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_16_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_16"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>seatBackFolding</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_16_col_C">
+													<Label>97</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_16_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_16"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>seatBackFolding</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_16_col_D">
+													<Label>95</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_16_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_16"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>seatBackFolding</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!-- Row row_17 for 92-96 (backwards facing) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_17_col_A">
+													<Label>92</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_17_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_17"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>seatBackFolding</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_17_col_B">
+													<Label>98</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_17_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_17"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>seatBackFolding</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_17_col_C">
+													<Label>94</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_17_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_17"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>seatBackFolding</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_17_col_D">
+													<Label>96</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_17_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_17"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>seatBackFolding</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!-- Row row_18 for 101-105 (backwards facing) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_18_col_A">
+													<Label>101</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_18_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_18"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_18_col_B">
+													<Label>103</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_18_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_18"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_18_col_C">
+													<Label>107</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_18_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_18"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_18_col_D">
+													<Label>105</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_18_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_18"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!-- Row row_19 for 102-106 (backwards facing) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_19_col_A">
+													<Label>102</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_19_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_19"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_19_col_B">
+													<Label>108</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_19_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_19"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_19_col_C">
+													<Label>104</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_19_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_19"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_19_col_D">
+													<Label>106</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_19_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_19"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!-- Row row_20 for 111-115 (backwards facing) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_20_col_A">
+													<Label>111</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_20_col_A@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_20"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_20_col_B">
+													<Label>113</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_20_col_B@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_20"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_20_col_C">
+													<Label>117</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_20_col_C@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_20"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_20_col_D">
+													<Label>115</Label>
+													<Orientation>backwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@seating_area@row_20_col_D@seat">
+															<SeatEquipmentRef version="any" ref="rc:SEq-standard_chair"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_20"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+													<TableType>none</TableType>
+													<HasPower>true</HasPower>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+											</passengerSpots>
+										</PassengerSpace>
+										<!-- == Toilet == -->
+										<PassengerSpace version="any" id="rc:PS-bfc_deck_1@toilet">
+											<Name>WC</Name>
+											<actualVehicleEquipments>
+												<ActualVehicleEquipment version="any" id="rc:AVE-bfc_deck_1@toilet">
+													<Units>1</Units>
+													<SanitaryEquipmentRef version="any" ref="rc:SEq-train_toilet"/>
+												</ActualVehicleEquipment>
+											</actualVehicleEquipments>
+											<PublicUse>true</PublicUse>
+											<AirConditioned>true</AirConditioned>
+											<SmokingAllowed>false</SmokingAllowed>
+											<TotalCapacity>1</TotalCapacity>
+										</PassengerSpace>
+										<!-- == Luggage compartment == -->
+										<PassengerSpace version="any" id="rc:PS-bfc_deck_1@luggage_bay">
+											<Name>Luggage</Name>
+											<PublicUse>true</PublicUse>
+											<AirConditioned>true</AirConditioned>
+											<SmokingAllowed>false</SmokingAllowed>
+											<ParentDeckSpaceRef ref="rc:PS-bfc_deck_1@seating_area@"/>
+										</PassengerSpace>
+									</deckSpaces>
+									<spotRows>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_01"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_02"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_03"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_04"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_05"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_06"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_07"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_08"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_09"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_10"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_11"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_12"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_13"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_14"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_15"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_16"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_17"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_18"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_19"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_20"/>
+									</spotRows>
+									<spotColumns>
+										<SpotColumn version="any" id="rc:SC-bfc_deck_1@col_A">
+											<Label>Column A</Label>
+										</SpotColumn>
+										<SpotColumn version="any" id="rc:SC-bfc_deck_1@col_B">
+											<Label>Column B</Label>
+										</SpotColumn>
+										<SpotColumn version="any" id="rc:SC-bfc_deck_1@col_C">
+											<Label>Column C</Label>
+										</SpotColumn>
+										<SpotColumn version="any" id="rc:SC-bfc_deck_1@col_D">
+											<Label>Column D</Label>
+										</SpotColumn>
+									</spotColumns>
+								</Deck>
+							</decks>
+						</DeckPlan>
+					</deckPlans>
+				</ResourceFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

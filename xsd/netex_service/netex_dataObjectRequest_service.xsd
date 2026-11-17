@@ -12,7 +12,7 @@
 				<Audience>e-service developers</Audience>
 				<Contributor>NeTEx Project. NeTEx XML working Group. See main package headers </Contributor>
 				<Coverage>Europe</Coverage>
-				<Creator>First drafted for version 1.0   NeTEx. Nicholas Knowles Kizoom mailto:schemer@/www.netex.org.uk/</Creator>
+				<Creator>First drafted for version 1.0   NeTEx. Nicholas Knowles Kizoom</Creator>
 				<Date>
 					<Created>2010-09-04</Created>
 					<!-- Documentation headers added -->
@@ -69,7 +69,7 @@ Roads and road transport</Category>
 	<!-- ==== Service=============================================== -->
 	<xsd:element name="DataObjectRequest" type="DataObjectRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
 		<xsd:annotation>
-			<xsd:documentation>Service Request for one or more  NeTEx Data Objects,.</xsd:documentation>
+			<xsd:documentation>Service Request for one or more NeTEx Data Objects,.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="DataObjectRequestStructure">
@@ -92,7 +92,7 @@ Roads and road transport</Category>
 		<xsd:sequence>
 			<xsd:element name="topics">
 				<xsd:annotation>
-					<xsd:documentation>One or more Request filters that specify tthe data to be included in output. Multiple filters are logically ANDed.</xsd:documentation>
+					<xsd:documentation>One or more filters applied to a Request, that specify the data to be included in output. Multiple filters are combined with AND.</xsd:documentation>
 				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:sequence>
@@ -116,7 +116,7 @@ Roads and road transport</Category>
 	</xsd:element>
 	<xsd:complexType name="DataObjectSubscriptionStructure">
 		<xsd:annotation>
-			<xsd:documentation>Data type for Subscription Request for  NeTEx Data Object  Service.</xsd:documentation>
+			<xsd:documentation>Data type for Subscription Request for NeTEx Data Object Service.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="siri:AbstractSubscriptionStructure">
@@ -136,7 +136,7 @@ Roads and road transport</Category>
 	<!-- ======================================================================= -->
 	<xsd:complexType name="DeliveriesStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for Deliveries for  Service.</xsd:documentation>
+			<xsd:documentation>Type for Deliveries for Service.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="DataObjectDelivery" maxOccurs="unbounded">
@@ -149,12 +149,12 @@ Roads and road transport</Category>
 	<!-- ======================================================================= -->
 	<xsd:element name="DataObjectDelivery" type="DataObjectDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
 		<xsd:annotation>
-			<xsd:documentation>Delivery for NeTEx   Service containing  one or more  NeTEx  Data Objects,.</xsd:documentation>
+			<xsd:documentation>Delivery for NeTEx Service containing one or more NeTEx Data Objects,.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="DataObjectDeliveryStructure">
 		<xsd:annotation>
-			<xsd:documentation>Data type for Delivery for  Service containing  one or more  NeTEx  Data Objects,.</xsd:documentation>
+			<xsd:documentation>Data type for Delivery for Service containing one or more NeTEx Data Objects,.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="siri:AbstractServiceDeliveryStructure">

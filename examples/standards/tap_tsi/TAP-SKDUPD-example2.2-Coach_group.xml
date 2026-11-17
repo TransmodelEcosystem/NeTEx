@@ -64,6 +64,46 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 				<DefaultCodespaceRef ref="op2_cs"/>
 			</FrameDefaults>
 			<frames>
+				<ResourceFrame version="any" id="RF1">
+					<dataSources>
+						<DataSource id="uic:0060" version="any"/>
+					</dataSources>
+				</ResourceFrame>
+				<!--  Narrative:  The SERVICE CALENDAR FRAME provides a container to organise the operational dates -->
+				<ServiceCalendarFrame id="uic:SKDUPD_example_2_Coach_group" version="any">
+					<operatingPeriods>
+						<UicOperatingPeriod id="e1:41" version="any">
+							<!-- POP+273:2021-12-19/2022-01-25::11100000000000000000000000000000000111' -->
+							<FromDate>2021-12-19T00:00:00</FromDate>
+							<ToDate>2022-01-25T00:00:00</ToDate>
+							<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="e2:41" version="any">
+							<!-- POP+273:2021-12-19/2022-01-25::11100000000000000000000000000000000111' -->
+							<FromDate>2021-12-19T00:00:00</FromDate>
+							<ToDate>2022-01-25T23:59:59</ToDate>
+							<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="e2:41a" version="any">
+							<!-- POP+273:2021-12-19/2022-01-25::11100000000000000000000000000000000111' -->
+							<FromDate>2021-12-19T00:00:00</FromDate>
+							<ToDate>2022-01-25T23:59:59</ToDate>
+							<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="e2:41b" version="any">
+							<!-- POP+273:2021-12-19/2022-01-25::11100000000000000000000000000000000111' -->
+							<FromDate>2021-12-19T00:00:00</FromDate>
+							<ToDate>2022-01-25T23:59:59</ToDate>
+							<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="e2:41c" version="any">
+							<!-- POP+273:2021-12-19/2022-01-25::11100000000000000000000000000000000111' -->
+							<FromDate>2021-12-19T00:00:00</FromDate>
+							<ToDate>2022-01-25T23:59:59</ToDate>
+							<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
+						</UicOperatingPeriod>
+					</operatingPeriods>
+				</ServiceCalendarFrame>
 				<ServiceFrame version="any" id="SKDUPD_2_example_Coach_Group">
 					<!--- comment: THESE STOP DECLARATIONS COULD BE EXTERNAL as in a TSDUPD location , they are here so as to be able to define names -->
 					<scheduledStopPoints>
@@ -94,77 +134,77 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 					<vehicleTypes>
 						<CompoundTrain version="any" id="41">
 							<components>
-								<TrainInCompoundTrain version="any" id="41" order="1">
-									<Train version="any" id="41">
+								<TrainInCompoundTrain version="any" id="41-1">
+									<PoweredTrain version="any" id="41">
 										<Name>Engine</Name>
 										<SelfPropelled>true</SelfPropelled>
 										<TransportMode>intercityRail</TransportMode>
 										<components>
-											<TrainComponent version="any" id="41" order="1">
-												<TrainElementRef versionRef="EXTERNAL" ref="engine26"/>
+											<TrainComponent version="any" id="41-1">
+												<TractiveElementTypeRef versionRef="EXTERNAL" ref="engine26"/>
 											</TrainComponent>
 											<!--  etc etc -->
 										</components>
-									</Train>
+									</PoweredTrain>
 								</TrainInCompoundTrain>
-								<TrainInCompoundTrain version="any" id="41@C-407" order="1">
+								<TrainInCompoundTrain version="any" id="41@C-407-1">
 									<!--	RFR+AUE:407' -->
-									<Train version="any" id="C-407">
+									<UnpoweredTrain version="any" id="C-407">
 										<Name>Coach Group C-407</Name>
 										<SelfPropelled>false</SelfPropelled>
 										<components>
-											<TrainComponent version="any" id="C-407" order="1">
+											<TrainComponent version="any" id="C-407-1">
 												<!--	RFR+AUE:407' -->
 												<Label>C-407 Coach 1</Label>
-												<TrainElementRef versionRef="EXTERNAL" ref="waggon756"/>
+												<TrailingElementTypeRef versionRef="EXTERNAL" ref="waggon756"/>
 											</TrainComponent>
-											<TrainComponent version="any" id="C-407" order="2">
+											<TrainComponent version="any" id="C-407-2">
 												<Label>C-407 Coach 2</Label>
-												<TrainElementRef versionRef="EXTERNAL" ref="waggon1234"/>
+												<TrailingElementTypeRef versionRef="EXTERNAL" ref="waggon1234"/>
 											</TrainComponent>
-											<TrainComponent version="any" id="C-407" order="3">
+											<TrainComponent version="any" id="C-407-3">
 												<Label>C-407 Coach 3</Label>
-												<TrainElementRef versionRef="EXTERNAL" ref="waggon12564"/>
+												<TrailingElementTypeRef versionRef="EXTERNAL" ref="waggon12564"/>
 											</TrainComponent>
 											<!--  etc etc -->
 										</components>
-									</Train>
+									</UnpoweredTrain>
 								</TrainInCompoundTrain>
-								<TrainInCompoundTrain version="any" id="41@C-457" order="2">
+								<TrainInCompoundTrain version="any" id="41@C-457-2">
 									<!--	RFR+AUE:457' -->
-									<Train version="any" id="C-457">
+									<UnpoweredTrain version="any" id="C-457">
 										<Name>Coach Group C-407</Name>
 										<SelfPropelled>false</SelfPropelled>
 										<components>
-											<TrainComponent version="any" id="C-457" order="1">
+											<TrainComponent version="any" id="C-457-1">
 												<Label>C-457 Coach 1</Label>
-												<TrainElementRef versionRef="EXTERNAL" ref="waggon2245"/>
+												<TrailingElementTypeRef versionRef="EXTERNAL" ref="waggon2245"/>
 											</TrainComponent>
-											<TrainComponent version="any" id="C-457" order="2">
+											<TrainComponent version="any" id="C-457-2">
 												<Label>C-457 Coach 2</Label>
-												<TrainElementRef versionRef="EXTERNAL" ref="waggon888"/>
+												<TrailingElementTypeRef versionRef="EXTERNAL" ref="waggon888"/>
 											</TrainComponent>
 											<!--  etc etc -->
 										</components>
-									</Train>
+									</UnpoweredTrain>
 								</TrainInCompoundTrain>
-								<TrainInCompoundTrain version="any" id="41@C-477" order="3">
+								<TrainInCompoundTrain version="any" id="41@C-477-3">
 									<!--	RFR+AUE:477' -->
-									<Train version="any" id="C-477">
+									<UnpoweredTrain version="any" id="C-477">
 										<Name>Coach Group C-407</Name>
 										<SelfPropelled>false</SelfPropelled>
 										<components>
-											<TrainComponent version="any" id="C-477" order="1">
+											<TrainComponent version="any" id="C-477-1">
 												<Label>C-477 Coach 1</Label>
-												<TrainElementRef versionRef="EXTERNAL" ref="waggon233"/>
+												<TrailingElementTypeRef versionRef="EXTERNAL" ref="waggon233"/>
 											</TrainComponent>
-											<TrainComponent version="any" id="C-477" order="2">
+											<TrainComponent version="any" id="C-477-2">
 												<Label>C-477 Coach 2</Label>
-												<TrainElementRef versionRef="EXTERNAL" ref="waggon817"/>
+												<TrailingElementTypeRef versionRef="EXTERNAL" ref="waggon817"/>
 											</TrainComponent>
 											<!--  etc etc -->
 										</components>
-									</Train>
+									</UnpoweredTrain>
 								</TrainInCompoundTrain>
 							</components>
 						</CompoundTrain>
@@ -176,7 +216,7 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 			               A single journey with three parts, each with a different Coach train number to  </Description>
 					<VehicleModes>rail</VehicleModes>
 					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="e1:41" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						<ServiceJourney version="any" id="e1:41" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<!-- PRD+41:::31:::Connecting to+1154' -->
 							<!-- SKPUPD_TRAIN
 ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	not_used	Reservation_system	First_day	Last_day	Operation_days	Second_service_number
@@ -190,18 +230,22 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="31">Coach Group</TypeOfServiceRef>
 							<!-- TapTsi B.4.7009   	31 Coach group G    -->
 							<DepartureTime>06:57:00</DepartureTime>
+							<!-- POP+273:2021-12-19/2022-01-25::11100000000000000000000000000000000111' -->
+							<dayTypes>
+								<DayTypeRef ref="e1:41"/>
+							</dayTypes>
 							<CompoundTrainRef version="any" ref="41"/>
 							<OperatorRef versionRef="EXTERNAL" ref="uic:1154">CD</OperatorRef>
 							<trainNumbers>
 								<TrainNumberRef version="any" ref="e1:41"/>
 							</trainNumbers>
 							<parts>
-								<JourneyPart version="any" id="e1:41@005103865+005433124" order="1">
+								<JourneyPart version="any" id="e1:41@005103865+005433124-1">
 									<!-- POR+005103865++'
 RFR+AUE:407' 
 RLS+13+6' -->
 									<ParentJourneyRef version="any" ref="e1:41"/>
-									<MainPartRef version="any" ref="e1:41@005103865+005433124"/>
+									<MainPartRef version="any" ref="e1:41@005103865+005433124-1"/>
 									<TrainNumberRef version="any" ref="e1:C-407"/>
 									<FromStopPointRef version="any" ref="uic:005103865">Warsaw</FromStopPointRef>
 									<ToStopPointRef version="any" ref="uic:005434124">Bohumin</ToStopPointRef>
@@ -211,12 +255,12 @@ RLS+13+6' -->
 									<!-- BOGUS VALUE -->
 									<PurposeOfJourneyPartitionRef versionRef="EXTERNAL" ref="coach_group"/>
 								</JourneyPart>
-								<JourneyPart version="any" id="e1:41@005433124+005433425" order="2">
+								<JourneyPart version="any" id="e1:41@005433124+005433425-2">
 									<!-- POR+005434124++'
 RFR+AUE:457'
 RLS+13+6'  -->
 									<ParentJourneyRef version="any" ref="e1:41"/>
-									<MainPartRef version="any" ref="e1:41@005103865+005433124"/>
+									<MainPartRef version="any" ref="e1:41@005103865+005433124-1"/>
 									<TrainNumberRef version="any" ref="e1:C-457"/>
 									<FromStopPointRef version="any" ref="uic:005434124">Bohumin</FromStopPointRef>
 									<ToStopPointRef version="any" ref="uic:005433425">Breclaw</ToStopPointRef>
@@ -226,12 +270,12 @@ RLS+13+6'  -->
 									<!-- BOGUS VALUE -->
 									<PurposeOfJourneyPartitionRef versionRef="EXTERNAL" ref="coach_group"/>
 								</JourneyPart>
-								<JourneyPart version="any" id="e1:41@005433425+005510033" order="3">
+								<JourneyPart version="any" id="e1:41@005433425+005510033-3">
 									<!-- POR+005433425++'
 RFR+AUE:477'
 RLS+13+6' -->
 									<ParentJourneyRef version="any" ref="e1:41"/>
-									<MainPartRef version="any" ref="e1:41@005103865+005433124"/>
+									<MainPartRef version="any" ref="e1:41@005103865+005433124-1"/>
 									<TrainNumberRef version="any" ref="e1:C-477"/>
 									<FromStopPointRef version="any" ref="uic:005433425">Breclaw</FromStopPointRef>
 									<ToStopPointRef version="any" ref="uic:005510033">Budapest-Nuygati</ToStopPointRef>
@@ -249,7 +293,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 2	2	005434124													
 2	3	005433425													
 2	4	005510033		-->
-								<Call version="any" id="e1:41" order="1">
+								<Call version="any" id="e1:41-1">
 									<!-- POR+005103865++'
 RFR+AUE:407'
 RLS+13+6'  -->
@@ -258,19 +302,19 @@ RLS+13+6'  -->
 										<ForAlighting>false</ForAlighting>
 									</Arrival>
 								</Call>
-								<Call version="any" id="e1:41" order="2">
+								<Call version="any" id="e1:41-2">
 									<!-- POR+005434124++' -->
 									<!-- RFR+AUE:457' 
  RLS+13+6' -->
 									<ScheduledStopPointRef version="any" ref="uic:005434124">Bohumin</ScheduledStopPointRef>
 								</Call>
-								<Call version="any" id="e1:41" order="3">
+								<Call version="any" id="e1:41-3">
 									<!-- POR+005433425++'  
  RFR+AUE:477'
 RLS+13+6'-->
 									<ScheduledStopPointRef version="any" ref="uic:005433425">Breclaw</ScheduledStopPointRef>
 								</Call>
-								<Call version="any" id="e1:41" order="4">
+								<Call version="any" id="e1:41-4">
 									<!-- POR+005510033++'	-->
 									<ScheduledStopPointRef version="any" ref="uic:005510033">Budapest-Nuygati</ScheduledStopPointRef>
 									<Departure>
@@ -278,13 +322,7 @@ RLS+13+6'-->
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="e1:41" version="any">
-								<!-- POP+273:2021-12-19/2022-01-25::11100000000000000000000000000000000111' -->
-								<FromDate>2021-12-19T00:00:00</FromDate>
-								<ToDate>2022-01-25T00:00:00</ToDate>
-								<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 					<trainNumbers>
 						<TrainNumber version="any" id="e1:41">
@@ -355,7 +393,7 @@ ID	Stop_number	Service	Relation	Transfer_time	Certainty
 			                representing the  splitting at off coaches at each stage</Description>
 					<VehicleModes>rail</VehicleModes>
 					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="e2:41" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						<ServiceJourney version="any" id="e2:41" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<!-- PRD+41:::31:::Connecting to+1154' -->
 							<!-- SKPUPD_TRAIN
 ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	not_used	Reservation_system	First_day	Last_day	Operation_days	Second_service_number
@@ -369,6 +407,9 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="31">Coach Group</TypeOfServiceRef>
 							<!-- TapTsi B.4.7009   	31 Coach group G    -->
 							<DepartureTime>06:57:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="e2:41"/>
+							</dayTypes>
 							<CompoundTrainRef version="any" ref="41"/>
 							<!-- BOGUS VALUE -->
 							<OperatorRef versionRef="EXTERNAL" ref="uic:1154">CD</OperatorRef>
@@ -382,7 +423,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 2	2	005434124													
 2	3	005433425													
 2	4	005510033		-->
-								<Call version="any" id="e2:41" order="1">
+								<Call version="any" id="e2:41-1">
 									<!-- POR+005103865++'
 RFR+AUE:407'
 RLS+13+6' -->
@@ -391,16 +432,16 @@ RLS+13+6' -->
 										<ForAlighting>false</ForAlighting>
 									</Arrival>
 								</Call>
-								<Call version="any" id="e2:41" order="2">
+								<Call version="any" id="e2:41-2">
 									<!--  POR+005434124++'
 RFR+AUE:457'
 RLS+13+6' -->
 									<ScheduledStopPointRef version="any" ref="uic:005434124">Bohumin</ScheduledStopPointRef>
 								</Call>
-								<Call version="any" id="e2:41" order="3">
+								<Call version="any" id="e2:41-3">
 									<ScheduledStopPointRef version="any" ref="uic:005433425">Breclaw</ScheduledStopPointRef>
 								</Call>
-								<Call version="any" id="e2:41" order="4">
+								<Call version="any" id="e2:41-4">
 									<!-- POR+005433425++'
 RFR+AUE:477'
 RLS+13+6'
@@ -411,14 +452,8 @@ POR+005510033++' -->
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="e2:41" version="any">
-								<!-- POP+273:2021-12-19/2022-01-25::11100000000000000000000000000000000111' -->
-								<FromDate>2021-12-19T00:00:00</FromDate>
-								<ToDate>2022-01-25T23:59:59</ToDate>
-								<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="e2:41a" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						</ServiceJourney>
+						<ServiceJourney version="any" id="e2:41a" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<Name>Connecting to: Coaches C407  Warsaw  Bohumin </Name>
 							<TransportMode>rail</TransportMode>
 							<TransportSubmode>
@@ -427,15 +462,18 @@ POR+005510033++' -->
 							<TypeOfProductCategoryRef versionRef="EXTERNAL" ref="63">Intercity</TypeOfProductCategoryRef>
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="31">Coach Group</TypeOfServiceRef>
 							<DepartureTime>06:57:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="e2:41a"/>
+							</dayTypes>
 							<!-- BOGUS VALUE -->
 							<OperatorRef versionRef="EXTERNAL" ref="uic:1154">CD</OperatorRef>
 							<trainNumbers>
 								<TrainNumberRef version="any" ref="e2:C-407"/>
 							</trainNumbers>
 							<parts>
-								<JourneyPart version="any" id="e2:41a@005103865+005433124" order="1">
+								<JourneyPart version="any" id="e2:41a@005103865+005433124-1">
 									<ParentJourneyRef version="any" ref="e2:41a"/>
-									<MainPartRef version="any" ref="e2:41a@005103865+005433124"/>
+									<MainPartRef version="any" ref="e2:41a@005103865+005433124-1"/>
 									<FromStopPointRef version="any" ref="uic:005103865">Warsaw</FromStopPointRef>
 									<ToStopPointRef version="any" ref="uic:005434124">Bohumin</ToStopPointRef>
 									<StartTime>06:57:00</StartTime>
@@ -445,14 +483,8 @@ POR+005510033++' -->
 									<PurposeOfJourneyPartitionRef versionRef="EXTERNAL" ref="join Split"/>
 								</JourneyPart>
 							</parts>
-							<UicOperatingPeriod id="e2:41a" version="any">
-								<!-- POP+273:2021-12-19/2022-01-25::11100000000000000000000000000000000111' -->
-								<FromDate>2021-12-19T00:00:00</FromDate>
-								<ToDate>2022-01-25T23:59:59</ToDate>
-								<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="e2:41b" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						</ServiceJourney>
+						<ServiceJourney version="any" id="e2:41b" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<Name>Connecting to  Warsaw  Breclaw</Name>
 							<TransportMode>rail</TransportMode>
 							<TransportSubmode>
@@ -461,15 +493,18 @@ POR+005510033++' -->
 							<TypeOfProductCategoryRef versionRef="EXTERNAL" ref="63">Intercity</TypeOfProductCategoryRef>
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="31">Coach Group</TypeOfServiceRef>
 							<DepartureTime>06:57:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="e2:41b"/>
+							</dayTypes>
 							<!-- BOGUS VALUE -->
 							<OperatorRef versionRef="EXTERNAL" ref="uic:1154">CD</OperatorRef>
 							<trainNumbers>
 								<TrainNumberRef version="any" ref="e2:C-457"/>
 							</trainNumbers>
 							<parts>
-								<JourneyPart version="any" id="e2:41b@005103865+005433124" order="1">
+								<JourneyPart version="any" id="e2:41b@005103865+005433124-2">
 									<ParentJourneyRef version="any" ref="e2:41b"/>
-									<MainPartRef version="any" ref="e2:41b@005103865+005433124"/>
+									<MainPartRef version="any" ref="e2:41b@005103865+005433124-2"/>
 									<FromStopPointRef version="any" ref="uic:005103865">Warsaw</FromStopPointRef>
 									<ToStopPointRef version="any" ref="uic:005434124">Bohumin</ToStopPointRef>
 									<StartTime>06:57:00</StartTime>
@@ -478,9 +513,9 @@ POR+005510033++' -->
 									<!-- BOGUS VALUE -->
 									<PurposeOfJourneyPartitionRef versionRef="EXTERNAL" ref="join Split"/>
 								</JourneyPart>
-								<JourneyPart version="any" id="e2:41b@005433124+005433425" order="2">
+								<JourneyPart version="any" id="e2:41b@005433124+005433425-2">
 									<ParentJourneyRef version="any" ref="e2:41b"/>
-									<MainPartRef version="any" ref="e2:41b@005103865+005433124"/>
+									<MainPartRef version="any" ref="e2:41b@005103865+005433124-2"/>
 									<FromStopPointRef version="any" ref="uic:005434124">Bohumin</FromStopPointRef>
 									<ToStopPointRef version="any" ref="uic:005433425">Breclaw</ToStopPointRef>
 									<StartTime>11:41:00</StartTime>
@@ -490,14 +525,8 @@ POR+005510033++' -->
 									<PurposeOfJourneyPartitionRef versionRef="EXTERNAL" ref="join Split"/>
 								</JourneyPart>
 							</parts>
-							<UicOperatingPeriod id="e2:41b" version="any">
-								<!-- POP+273:2021-12-19/2022-01-25::11100000000000000000000000000000000111' -->
-								<FromDate>2021-12-19T00:00:00</FromDate>
-								<ToDate>2022-01-25T23:59:59</ToDate>
-								<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="e2:41c" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						</ServiceJourney>
+						<ServiceJourney version="any" id="e2:41c" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<Name>Connecting to: Warsaw   Budapest-Nuygati</Name>
 							<TransportMode>rail</TransportMode>
 							<TransportSubmode>
@@ -506,15 +535,18 @@ POR+005510033++' -->
 							<TypeOfProductCategoryRef versionRef="EXTERNAL" ref="63">Intercity</TypeOfProductCategoryRef>
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="31">Coach Group</TypeOfServiceRef>
 							<DepartureTime>06:57:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="e2:41c"/>
+							</dayTypes>
 							<!-- BOGUS VALUE -->
 							<OperatorRef versionRef="EXTERNAL" ref="uic:1154">CD</OperatorRef>
 							<trainNumbers>
 								<TrainNumberRef version="any" ref="e2:C-477"/>
 							</trainNumbers>
 							<parts>
-								<JourneyPart version="any" id="e2:41c@005103865+005433124" order="1">
+								<JourneyPart version="any" id="e2:41c@005103865+005433124-3">
 									<ParentJourneyRef version="any" ref="e2:41c"/>
-									<MainPartRef version="any" ref="e2:41c@005103865+005433124"/>
+									<MainPartRef version="any" ref="e2:41c@005103865+005433124-3"/>
 									<FromStopPointRef version="any" ref="uic:005103865">Warsaw</FromStopPointRef>
 									<ToStopPointRef version="any" ref="uic:005434124">Bohumin</ToStopPointRef>
 									<StartTime>06:57:00</StartTime>
@@ -523,9 +555,9 @@ POR+005510033++' -->
 									<!-- BOGUS VALUE -->
 									<PurposeOfJourneyPartitionRef versionRef="EXTERNAL" ref="join Split"/>
 								</JourneyPart>
-								<JourneyPart version="any" id="e2:41c@005433124+005433425" order="2">
+								<JourneyPart version="any" id="e2:41c@005433124+005433425-3">
 									<ParentJourneyRef version="any" ref="e2:41c"/>
-									<MainPartRef version="any" ref="e2:41c@005103865+005433124"/>
+									<MainPartRef version="any" ref="e2:41c@005103865+005433124-3"/>
 									<FromStopPointRef version="any" ref="uic:005434124">Bohumin</FromStopPointRef>
 									<ToStopPointRef version="any" ref="uic:005433425">Breclaw</ToStopPointRef>
 									<StartTime>11:41:00</StartTime>
@@ -534,9 +566,9 @@ POR+005510033++' -->
 									<!-- BOGUS VALUE -->
 									<PurposeOfJourneyPartitionRef versionRef="EXTERNAL" ref="join Split"/>
 								</JourneyPart>
-								<JourneyPart version="any" id="e2:41c@005433425+005510033" order="3">
+								<JourneyPart version="any" id="e2:41c@005433425+005510033-3">
 									<ParentJourneyRef version="any" ref="e2:41c"/>
-									<MainPartRef version="any" ref="e2:41c@005103865+005433124"/>
+									<MainPartRef version="any" ref="e2:41c@005103865+005433124-3"/>
 									<FromStopPointRef version="any" ref="uic:005433425">Breclaw</FromStopPointRef>
 									<ToStopPointRef version="any" ref="uic:005510033">Budapest-Nuygati</ToStopPointRef>
 									<StartTime>15:00:00</StartTime>
@@ -546,13 +578,7 @@ POR+005510033++' -->
 									<PurposeOfJourneyPartitionRef versionRef="EXTERNAL" ref="join Split"/>
 								</JourneyPart>
 							</parts>
-							<UicOperatingPeriod id="e2:41c" version="any">
-								<!-- POP+273:2021-12-19/2022-01-25::11100000000000000000000000000000000111' -->
-								<FromDate>2021-12-19T00:00:00</FromDate>
-								<ToDate>2022-01-25T23:59:59</ToDate>
-								<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 					<trainNumbers>
 						<TrainNumber version="any" id="e2:41">
@@ -575,7 +601,7 @@ POR+005510033++' -->
 					</trainNumbers>
 					<!--  Journey Part Couples  === -->
 					<journeyPartCouples>
-						<JourneyPartCouple version="any" id="e2:005103865+005434124" order="1">
+						<JourneyPartCouple version="any" id="e2:005103865+005434124-1">
 							<Description>Warsaw -Bohumin</Description>
 							<StartTime>06:57:00</StartTime>
 							<!-- BOGUS VALUE -->
@@ -583,15 +609,15 @@ POR+005510033++' -->
 							<!-- BOGUS VALUE -->
 							<FromStopPointRef version="any" ref="uic:005103865">Warsaw</FromStopPointRef>
 							<ToStopPointRef version="any" ref="uic:005434124">Bohumin</ToStopPointRef>
-							<MainPartRef version="any" ref="e2:41b@005103865+005433124"/>
+							<MainPartRef version="any" ref="e2:41b@005103865+005433124-2"/>
 							<journeyParts>
-								<JourneyPartRef version="any" ref="e2:41a@005103865+005433124"/>
-								<JourneyPartRef version="any" ref="e2:41b@005103865+005433124"/>
-								<JourneyPartRef version="any" ref="e2:41c@005103865+005433124"/>
+								<JourneyPartRef version="any" ref="e2:41a@005103865+005433124-1"/>
+								<JourneyPartRef version="any" ref="e2:41b@005103865+005433124-2"/>
+								<JourneyPartRef version="any" ref="e2:41c@005103865+005433124-3"/>
 							</journeyParts>
 							<TrainNumberRef version="any" ref="e2:41">Train 41, Reservation 31</TrainNumberRef>
 						</JourneyPartCouple>
-						<JourneyPartCouple version="any" id="e2:005434124+005433425" order="2">
+						<JourneyPartCouple version="any" id="e2:005434124+005433425-2">
 							<Description>Bohumin Breclaw</Description>
 							<StartTime>11:41:00</StartTime>
 							<!-- BOGUS VALUE -->
@@ -599,14 +625,14 @@ POR+005510033++' -->
 							<!-- BOGUS VALUE -->
 							<FromStopPointRef version="any" ref="uic:005434124">Bohumin</FromStopPointRef>
 							<ToStopPointRef version="any" ref="uic:005433425">Breclaw</ToStopPointRef>
-							<MainPartRef version="any" ref="e2:41b@005103865+005433124"/>
+							<MainPartRef version="any" ref="e2:41b@005103865+005433124-2"/>
 							<journeyParts>
-								<JourneyPartRef version="any" ref="e2:41b@005433124+005433425"/>
-								<JourneyPartRef version="any" ref="e2:41c@005433124+005433425"/>
+								<JourneyPartRef version="any" ref="e2:41b@005433124+005433425-2"/>
+								<JourneyPartRef version="any" ref="e2:41c@005433124+005433425-3"/>
 							</journeyParts>
 							<TrainNumberRef version="any" ref="e2:41">Train 41, Reservation 31</TrainNumberRef>
 						</JourneyPartCouple>
-						<JourneyPartCouple version="any" id="e2:005433425+005510033" order="3">
+						<JourneyPartCouple version="any" id="e2:005433425+005510033-3">
 							<Description>Breclaw to Budapest-Nuygati</Description>
 							<StartTime>11:41:00</StartTime>
 							<!-- BOGUS VALUE -->
@@ -616,7 +642,7 @@ POR+005510033++' -->
 							<ToStopPointRef version="any" ref="uic:005510033">Budapest-Nuygati</ToStopPointRef>
 							<MainPartRef version="any" ref="e2:41b@005433425+005510033"/>
 							<journeyParts>
-								<JourneyPartRef version="any" ref="e2:41c@005433425+005510033"/>
+								<JourneyPartRef version="any" ref="e2:41c@005433425+005510033-3"/>
 							</journeyParts>
 							<TrainNumberRef version="any" ref="e2:41">Train 41, Reservation 31</TrainNumberRef>
 						</JourneyPartCouple>

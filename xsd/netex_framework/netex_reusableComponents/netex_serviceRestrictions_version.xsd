@@ -12,7 +12,7 @@
 				<Contributor>V1.0 Christophe Duquesne</Contributor>
 				<Contributor>Nicholas Knowles</Contributor>
 				<Coverage>Europe</Coverage>
-				<Creator>First drafted for NeTEx version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.  mailto:schemer@netex.org.uk</Creator>
+				<Creator>First drafted for NeTEx version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.</Creator>
 				<Date>
 					<Created>2010-09-04</Created>
 				</Date>
@@ -104,9 +104,9 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="ClassOfUseGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="ClassOfUseIdType">
+					<xsd:attribute name="id" type="ClassOfUseIdType" use="required">
 						<xsd:annotation>
-							<xsd:documentation>Identifier of  CLASS OF USE.</xsd:documentation>
+							<xsd:documentation>Identifier of CLASS OF USE.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:attribute>
 				</xsd:restriction>
@@ -150,7 +150,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="serviceBookingArrangements" type="serviceBookingArrangementsInFrame_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>SERVICE  BOOKING ARRANGEMENT in frame.  v2.0</xsd:documentation>
+					<xsd:documentation>SERVICE BOOKING ARRANGEMENT in frame. v2.0</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -183,8 +183,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:element name="BookingArrangement" substitutionGroup="DataManagedObject">
 		<xsd:annotation>
-			<xsd:documentation>Details of the booking arrangements for a given LINE, STOP, SERVICE etc. 
-		</xsd:documentation>
+			<xsd:documentation>Details of the booking arrangements for a given LINE, STOP, SERVICE etc.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
@@ -209,7 +208,7 @@ Rail transport, Roads and Road transport
 			</xsd:complexContent>
 		</xsd:complexType>
 	</xsd:element>
-	<xsd:complexType name="BookingArrangement_VersionStructure" abstract="false">
+	<xsd:complexType name="BookingArrangement_VersionStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for a BOOKING ARRANGEMENT</xsd:documentation>
 		</xsd:annotation>
@@ -252,7 +251,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="BuyWhen" type="PurchaseMomentListOfEnumerations" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>When purchase can be made.  +V1.1</xsd:documentation>
+					<xsd:documentation>When purchase can be made. +V1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="LatestBookingTime" type="xsd:time" minOccurs="0">
@@ -267,7 +266,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MaximumBookingPeriod" type="xsd:duration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Maximum interval in advance of departure day or time that Service may be ordered. +V1.2..2</xsd:documentation>
+					<xsd:documentation>Maximum interval in advance of departure day or time that Service may be ordered. +V1.2.2</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="BookingUrl" type="InfoLinkStructure" minOccurs="0">
@@ -283,7 +282,7 @@ Rail transport, Roads and Road transport
 		</xsd:sequence>
 	</xsd:group>
 	<!-- =Deprecated structures for BookingArrangements (for backward compatibility only)========== -->
-	<xsd:complexType name="BookingArrangementsStructure" abstract="false">
+	<xsd:complexType name="BookingArrangementsStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for BOOKING ARRANGEMENTs.</xsd:documentation>
 		</xsd:annotation>
@@ -333,7 +332,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MaximumBookingPeriod" type="xsd:duration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Maximum interval in advance of departure day or time that a service may be ordered. +V1.2..2</xsd:documentation>
+					<xsd:documentation>Maximum interval in advance of departure day or time that a service may be ordered. +V1.2.2</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="BookingUrl" type="InfoLinkStructure" minOccurs="0">
@@ -358,7 +357,7 @@ Rail transport, Roads and Road transport
 				<xsd:sequence>
 					<xsd:element ref="ServiceBookingArrangement" maxOccurs="unbounded">
 						<xsd:annotation>
-							<xsd:documentation>Information on booking rules and additional data allowing the user to take the decision to book a service and to undertake the booking of a LOCAL SERVICE. </xsd:documentation>
+							<xsd:documentation>Information on booking rules and additional data allowing the user to take the decision to book a service and to undertake the booking of a LOCAL SERVICE.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
@@ -412,7 +411,7 @@ Rail transport, Roads and Road transport
 			</xsd:complexContent>
 		</xsd:complexType>
 	</xsd:element>
-	<xsd:complexType name="ServiceBookingArrangement_VersionStructure" abstract="false">
+	<xsd:complexType name="ServiceBookingArrangement_VersionStructure">
 		<xsd:annotation>
 			<xsd:documentation>Version of a SERVICE BOOKING ARRANGEMENT.</xsd:documentation>
 		</xsd:annotation>
@@ -458,7 +457,7 @@ Rail transport, Roads and Road transport
 	<!-- ======================================================================= -->
 	<xsd:element name="TypeOfPaymentMethod" substitutionGroup="TypeOfValue">
 		<xsd:annotation>
-			<xsd:documentation>Defines an open classification  payment methods. + v1.1</xsd:documentation>
+			<xsd:documentation>Defines an open classification payment methods. + v1.1</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
@@ -477,9 +476,9 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="TypeOfPaymentMethodGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="TypeOfPaymentMethodIdType">
+					<xsd:attribute name="id" type="TypeOfPaymentMethodIdType" use="required">
 						<xsd:annotation>
-							<xsd:documentation>Identifier of  TYPE OF PAYMENT METHOD.</xsd:documentation>
+							<xsd:documentation>Identifier of TYPE OF PAYMENT METHOD.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:attribute>
 				</xsd:restriction>
@@ -529,7 +528,7 @@ Rail transport, Roads and Road transport
 		</xsd:complexContent>
 	</xsd:complexType>
 	<!-- ======================================================================= -->
-	<xsd:element name="TypeOfService" abstract="false" substitutionGroup="TypeOfEntity">
+	<xsd:element name="TypeOfService" substitutionGroup="TypeOfEntity">
 		<xsd:annotation>
 			<xsd:documentation>Classification of a Service.</xsd:documentation>
 		</xsd:annotation>
@@ -547,7 +546,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="TypeOfValueGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="TypeOfServiceIdType">
+					<xsd:attribute name="id" type="TypeOfServiceIdType" use="required">
 						<xsd:annotation>
 							<xsd:documentation>Reference to a TYPE OF SERVICE.</xsd:documentation>
 						</xsd:annotation>
@@ -556,7 +555,7 @@ Rail transport, Roads and Road transport
 			</xsd:complexContent>
 		</xsd:complexType>
 	</xsd:element>
-	<xsd:complexType name="TypeOfServiceStructure" abstract="false">
+	<xsd:complexType name="TypeOfServiceStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for a TYPE OF SERVICE.</xsd:documentation>
 		</xsd:annotation>
@@ -565,7 +564,7 @@ Rail transport, Roads and Road transport
 		</xsd:complexContent>
 	</xsd:complexType>
 	<!-- ======================================================================= -->
-	<xsd:element name="TypeOfProductCategory" abstract="false" substitutionGroup="TypeOfValue">
+	<xsd:element name="TypeOfProductCategory" substitutionGroup="TypeOfValue">
 		<xsd:annotation>
 			<xsd:documentation>Classification of a PRODUCT CATEGORY.</xsd:documentation>
 		</xsd:annotation>
@@ -586,7 +585,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="TypeOfProductCategoryGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="TypeOfProductCategoryIdType">
+					<xsd:attribute name="id" type="TypeOfProductCategoryIdType" use="required">
 						<xsd:annotation>
 							<xsd:documentation>Reference to a TYPE OF PRODUCT CATEGORY.</xsd:documentation>
 						</xsd:annotation>
@@ -595,7 +594,7 @@ Rail transport, Roads and Road transport
 			</xsd:complexContent>
 		</xsd:complexType>
 	</xsd:element>
-	<xsd:complexType name="TypeOfProductCategoryStructure" abstract="false">
+	<xsd:complexType name="TypeOfProductCategoryStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for a TYPE OF PRODUCT CATEGORY.</xsd:documentation>
 		</xsd:annotation>
@@ -609,12 +608,12 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:group name="TypeOfProductCategoryGroup">
 		<xsd:annotation>
-			<xsd:documentation>Elements for a  TYPE OF PRODUCT CATEGORY.</xsd:documentation>
+			<xsd:documentation>Elements for a TYPE OF PRODUCT CATEGORY.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="ExternalProductCategoryRef" type="ExternalObjectRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>An alternative code that uniquely identifies the PRODUCT CATEGORY. Specifically for use in AVMS systems that require an alias, if code is different from main identifier. For VDV compatibility.</xsd:documentation>
+					<xsd:documentation>An alternative code that uniquely identifies the PRODUCT CATEGORY. Specifically for use in AVMS systems that require an alias, if code is different from main identifier. For VDV compatibility. DEPRECATED - use privateCodes -v2.0</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Presentation" type="PresentationStructure" minOccurs="0">

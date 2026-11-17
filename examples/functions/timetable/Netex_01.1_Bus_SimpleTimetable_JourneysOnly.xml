@@ -152,7 +152,7 @@ The Calendar is shown coded as
 							<ShortName>Bravo Rd</ShortName>
 							<PublicCode>BRAV</PublicCode>
 							<variants>
-								<DestinationDisplayVariant>
+								<DestinationDisplayVariant id="mybus:Bravo-tts" version="any">
 									<DestinationDisplayVariantMediaType>textToSpeech</DestinationDisplayVariantMediaType>
 									<Name>Bravo</Name>
 									<vias>
@@ -265,6 +265,17 @@ The Calendar is shown coded as
 									</Arrival>
 									<Departure>
 										<Time>14:20:00.0Z</Time>
+										<occupancies>
+											<OccupancyView version="any" id="occ1">
+												<OccupancyLevel>fewSeatsAvailable</OccupancyLevel>
+												<OccupancyPercentage>40</OccupancyPercentage>
+												<WheelchairsOnboardCount>1</WheelchairsOnboardCount>
+												<GroupReservation>
+													<NameOfGroup>a group</NameOfGroup>
+													<NumberOfReservedSeats>4</NumberOfReservedSeats>
+												</GroupReservation>
+											</OccupancyView>
+										</occupancies>
 									</Departure>
 								</Call>
 								<Call version="any" id="acs:sj_24o_01_002" order="2">

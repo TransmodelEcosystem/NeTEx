@@ -11,6 +11,11 @@
 		<CompositeFrame version="1" id="ENT:school_carnet:38" dataSourceRef="ENT:fare_data">
 			<frames>
 				<!--==== FRAME DEFAULTS ==== -->
+				<ResourceFrame id="ENT:1" version="1">
+					<dataSources>
+						<DataSource id="ENT:fare_data" version="1"/>
+					</dataSources>
+				</ResourceFrame>
 				<FareFrame id="ENT:1" version="1">
 					<tariffs>
 						<Tariff version="1" id="ENT:school_carnet:380">

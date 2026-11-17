@@ -633,11 +633,11 @@ Shows examples of  Series
 								<ValidableElementRef ref="tap:upgrade@second-first" version="01"/>
 							</validableElements>
 							<accessRightsInProduct>
-								<AccessRightInProduct order="1" id="tap:Nrt_Product" version="01">
+								<AccessRightInProduct order="1" id="tap:Nrt_Product@01" version="01">
 									<Name>Product covers domestic trips</Name>
 									<ValidableElementRef ref="tap:domestic_train_ride" version="01"/>
 								</AccessRightInProduct>
-								<AccessRightInProduct order="2" id="tap:Nrt_Product" version="01">
+								<AccessRightInProduct order="2" id="tap:Nrt_Product@02" version="02">
 									<Name>Product covers international trips</Name>
 									<ValidableElementRef ref="tap:international_train_ride" version="01"/>
 								</AccessRightInProduct>

@@ -335,11 +335,11 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 							<sections>
 								<LineSection version="any" id="mybus:LS_Yankee_Alpha">
 									<pointsOnSection>
-										<PointOnLineSection version="any" id="mybus:LSM_Yankee_Alpha" order="01">
+										<PointOnLineSection version="any" id="mybus:LSM_Yankee_Alpha:01">
 											<ScheduledStopPointRef version="any" ref="mybus:Yankee"/>
 											<ServiceLinkRef version="any" ref="mybus:SL@Yankee+Alpha"/>
 										</PointOnLineSection>
-										<PointOnLineSection version="any" id="mybus:LSM_Yankee_Alpha" order="02">
+										<PointOnLineSection version="any" id="mybus:LSM_Yankee_Alpha:02">
 											<ScheduledStopPointRef version="any" ref="mybus:Alpha"/>
 										</PointOnLineSection>
 									</pointsOnSection>
@@ -347,11 +347,11 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 								</LineSection>
 								<LineSection version="any" id="mybus:LS_Zulu_Alpha">
 									<pointsOnSection>
-										<PointOnLineSection version="any" id="mybus:LSM_Zulu_Alpha" order="01">
+										<PointOnLineSection version="any" id="mybus:LSM_Zulu_Alpha@1">
 											<ScheduledStopPointRef version="any" ref="mybus:Zulu"/>
 											<ServiceLinkRef version="any" ref="mybus:SL@Zulu+Alpha"/>
 										</PointOnLineSection>
-										<PointOnLineSection version="any" id="mybus:LSM_Zulu_Alpha" order="02">
+										<PointOnLineSection version="any" id="mybus:LSM_Zulu_Alpha@2">
 											<ScheduledStopPointRef version="any" ref="mybus:Alpha"/>
 										</PointOnLineSection>
 									</pointsOnSection>
@@ -359,15 +359,15 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 								</LineSection>
 								<LineSection version="any" id="mybus:LS_Alpha_Charley">
 									<pointsOnSection>
-										<PointOnLineSection version="any" id="mybus:LSM_Alpha_Charley" order="1">
+										<PointOnLineSection version="any" id="mybus:LSM_Alpha_Charley@1">
 											<ScheduledStopPointRef version="any" ref="mybus:Alpha"/>
 											<ServiceLinkRef version="any" ref="mybus:SL@Alpha+Bravo"/>
 										</PointOnLineSection>
-										<PointOnLineSection version="any" id="mybus:LSM_Alpha_Charley" order="2">
+										<PointOnLineSection version="any" id="mybus:LSM_Alpha_Charley@2">
 											<ScheduledStopPointRef version="any" ref="mybus:Bravo"/>
 											<ServiceLinkRef version="any" ref="mybus:SL@Bravo+Charley"/>
 										</PointOnLineSection>
-										<PointOnLineSection version="any" id="mybus:LSM_Alpha_Charley" order="3">
+										<PointOnLineSection version="any" id="mybus:LSM_Alpha_Charley@3">
 											<ScheduledStopPointRef version="any" ref="mybus:Charley"/>
 										</PointOnLineSection>
 									</pointsOnSection>
@@ -375,11 +375,11 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 								</LineSection>
 								<LineSection version="any" id="mybus:LS_Charley_Papa">
 									<pointsOnSection>
-										<PointOnLineSection version="any" id="mybus:LSM_Charley_Papa" order="01">
+										<PointOnLineSection version="any" id="mybus:LSM_Charley_Papa@1">
 											<ScheduledStopPointRef version="any" ref="mybus:Charley"/>
 											<ServiceLinkRef version="any" ref="mybus:SL@Charley+Papa"/>
 										</PointOnLineSection>
-										<PointOnLineSection version="any" id="mybus:LSM_Charley_Papa" order="02">
+										<PointOnLineSection version="any" id="mybus:LSM_Charley_Papa@2">
 											<ScheduledStopPointRef version="any" ref="mybus:Papa"/>
 										</PointOnLineSection>
 									</pointsOnSection>
@@ -387,11 +387,11 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 								</LineSection>
 								<LineSection version="any" id="mybus:LS_Charley_Quebec">
 									<pointsOnSection>
-										<PointOnLineSection version="any" id="mybus:LSM_Charley_Quebec" order="01">
+										<PointOnLineSection version="any" id="mybus:LSM_Charley_Quebec@1">
 											<ScheduledStopPointRef version="any" ref="mybus:Charley"/>
 											<ServiceLinkRef version="any" ref="mybus:SL@Charley+Quebec"/>
 										</PointOnLineSection>
-										<PointOnLineSection version="any" id="mybus:LSM_Charley_Quebec" order="02">
+										<PointOnLineSection version="any" id="mybus:LSM_Charley_Quebec@2">
 											<ScheduledStopPointRef version="any" ref="mybus:Quebec"/>
 										</PointOnLineSection>
 									</pointsOnSection>
@@ -545,7 +545,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 								<ServiceJourneyPatternRef version="any" ref="hde:sjp_CPo"/>
 							</journeyPatterns>
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="any" order="1" id="hde:spip_YPo_01">
+								<StopPointInJourneyPattern version="any" id="hde:spip_YPo_01">
 									<ScheduledStopPointRef version="any" ref="mybus:Yankee"/>
 									<ForAlighting>false</ForAlighting>
 									<DestinationDisplayRef version="any" ref="mybus:DST_Papa"/>
@@ -559,7 +559,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 									</vias>
 									<ChangeOfDestinationDisplay>true</ChangeOfDestinationDisplay>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" order="2" id="hde:spip_YPo_02">
+								<StopPointInJourneyPattern version="any" id="hde:spip_YPo_02">
 									<ScheduledStopPointRef version="any" ref="mybus:Alpha"/>
 									<DestinationDisplayRef version="any" ref="mybus:DST_Papa"/>
 									<vias>
@@ -569,7 +569,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 									</vias>
 									<ChangeOfDestinationDisplay>true</ChangeOfDestinationDisplay>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" order="3" id="hde:spip_YPo_03">
+								<StopPointInJourneyPattern version="any" id="hde:spip_YPo_03">
 									<ScheduledStopPointRef version="any" ref="mybus:Bravo"/>
 									<DestinationDisplayRef version="any" ref="mybus:DST_Papa"/>
 									<vias>
@@ -579,7 +579,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 									</vias>
 									<ChangeOfDestinationDisplay>true</ChangeOfDestinationDisplay>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" order="4" id="hde:spip_YPo_04">
+								<StopPointInJourneyPattern version="any" id="hde:spip_YPo_04">
 									<ScheduledStopPointRef version="any" ref="mybus:Charley"/>
 									<DestinationDisplayRef version="any" ref="mybus:DST_Papa"/>
 									<vias>
@@ -587,16 +587,16 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 									</vias>
 									<ChangeOfDestinationDisplay>true</ChangeOfDestinationDisplay>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" order="5" id="hde:spip_YPo_05">
+								<StopPointInJourneyPattern version="any" id="hde:spip_YPo_05">
 									<ScheduledStopPointRef version="any" ref="mybus:Papa"/>
 									<ForBoarding>false</ForBoarding>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
 							<linksInSequence>
-								<ServiceLinkInJourneyPattern version="any" order="1" id="hde:jp_YPo_01">
+								<ServiceLinkInJourneyPattern version="any" id="hde:jp_YPo_01">
 									<ServiceLinkRef version="any" ref="mybus:SL@Yankee+Alpha"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="any" order="2" id="hde:jp_YPo_02">
+								<ServiceLinkInJourneyPattern version="any" id="hde:jp_YPo_02">
 									<ServiceLinkRef version="any" ref="mybus:SL@Alpha+Bravo"/>
 								</ServiceLinkInJourneyPattern>
 								<ServiceLinkInJourneyPattern version="any" order="3" id="hde:jp_YPo_03">
@@ -617,7 +617,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 								<ServiceJourneyPatternRef version="any" ref="hde:sjp_CQo"/>
 							</journeyPatterns>
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="any" order="1" id="hde:spip_YQo_01">
+								<StopPointInJourneyPattern version="any" id="hde:spip_YQo_01">
 									<ScheduledStopPointRef version="any" ref="mybus:Yankee"/>
 									<ForAlighting>false</ForAlighting>
 									<DestinationDisplayRef version="any" ref="mybus:DST_Quebec"/>
@@ -665,7 +665,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
 							<linksInSequence>
-								<ServiceLinkInJourneyPattern version="any" order="1" id="hde:jp_YQo_01">
+								<ServiceLinkInJourneyPattern version="any" id="hde:jp_YQo_01">
 									<ServiceLinkRef version="any" ref="mybus:SL@Yankee+Alpha"/>
 								</ServiceLinkInJourneyPattern>
 								<ServiceLinkInJourneyPattern version="any" order="2" id="hde:jp_YQo_02">
@@ -689,7 +689,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 								<ServiceJourneyPatternRef version="any" ref="hde:sjp_CPo"/>
 							</journeyPatterns>
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="any" order="1" id="hde:spip_ZPo_01">
+								<StopPointInJourneyPattern version="any" id="hde:spip_ZPo_01">
 									<ScheduledStopPointRef version="any" ref="mybus:Zulu"/>
 									<ForAlighting>false</ForAlighting>
 									<DestinationDisplayRef version="any" ref="mybus:DST_Papa"/>
@@ -737,7 +737,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
 							<linksInSequence>
-								<ServiceLinkInJourneyPattern version="any" order="1" id="hde:jp_ZPo_01">
+								<ServiceLinkInJourneyPattern version="any" id="hde:jp_ZPo_01">
 									<ServiceLinkRef version="any" ref="mybus:SL@Zulu+Alpha"/>
 								</ServiceLinkInJourneyPattern>
 								<ServiceLinkInJourneyPattern version="any" order="2" id="hde:jp_ZPo_02">
@@ -761,7 +761,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 								<ServiceJourneyPatternRef version="any" ref="hde:sjp_CQo"/>
 							</journeyPatterns>
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="any" order="1" id="hde:spip_ZQo_01">
+								<StopPointInJourneyPattern version="any" id="hde:spip_ZQo_01">
 									<ScheduledStopPointRef version="any" ref="mybus:Zulu"/>
 									<ForAlighting>false</ForAlighting>
 									<DestinationDisplayRef version="any" ref="mybus:DST_Quebec"/>
@@ -809,7 +809,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
 							<linksInSequence>
-								<ServiceLinkInJourneyPattern version="any" order="1" id="hde:jp_ZQo_01">
+								<ServiceLinkInJourneyPattern version="any" id="hde:jp_ZQo_01">
 									<ServiceLinkRef version="any" ref="mybus:SL@Zulu+Alpha"/>
 								</ServiceLinkInJourneyPattern>
 								<ServiceLinkInJourneyPattern version="any" order="2" id="hde:jp_ZQo_02">
@@ -915,7 +915,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 							<RouteRef ref="mybus:rt_YPo">EXTERNAL</RouteRef>
 							<DirectionType>outbound</DirectionType>
 							<pointsInSequence>
-								<TimingPointInJourneyPattern version="any" order="1" id="hde:tpip_YAo_01">
+								<TimingPointInJourneyPattern version="any" id="hde:tpip_YAo_01">
 									<TimingPointRef version="any" xsi:type="ScheduledStopPointRefStructure" ref="mybus:Yankee"/>
 								</TimingPointInJourneyPattern>
 								<TimingPointInJourneyPattern version="any" order="2" id="hde:tpip_YAo_02">
@@ -928,7 +928,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 							<RouteRef ref="mybus:rt_ZPo">EXTERNAL</RouteRef>
 							<DirectionType>outbound</DirectionType>
 							<pointsInSequence>
-								<TimingPointInJourneyPattern version="any" order="1" id="hde:tpip_ZAo_01">
+								<TimingPointInJourneyPattern version="any" id="hde:tpip_ZAo_01">
 									<TimingPointRef version="any" xsi:type="ScheduledStopPointRefStructure" ref="mybus:Zulu"/>
 								</TimingPointInJourneyPattern>
 								<TimingPointInJourneyPattern version="any" order="2" id="hde:tpip_ZAo_02">
@@ -941,7 +941,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 							<RouteRef ref="mybus:rt_YPo">EXTERNAL</RouteRef>
 							<DirectionType>outbound</DirectionType>
 							<pointsInSequence>
-								<TimingPointInJourneyPattern version="any" order="1" id="hde:tpip_ABCo_01">
+								<TimingPointInJourneyPattern version="any" id="hde:tpip_ABCo_01">
 									<TimingPointRef version="any" xsi:type="ScheduledStopPointRefStructure" ref="mybus:Alpha"/>
 								</TimingPointInJourneyPattern>
 								<TimingPointInJourneyPattern version="any" order="2" id="hde:tpip_ABCo_02">
@@ -957,7 +957,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 							<RouteRef ref="mybus:rt_YPo">EXTERNAL</RouteRef>
 							<DirectionType>outbound</DirectionType>
 							<pointsInSequence>
-								<TimingPointInJourneyPattern version="any" order="1" id="hde:tpip_CPo_01">
+								<TimingPointInJourneyPattern version="any" id="hde:tpip_CPo_01">
 									<TimingPointRef version="any" xsi:type="ScheduledStopPointRefStructure" ref="mybus:Charley"/>
 								</TimingPointInJourneyPattern>
 								<TimingPointInJourneyPattern version="any" order="2" id="hde:tpip_CPo_02">
@@ -970,7 +970,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 							<RouteRef ref="mybus:rt_YQo">EXTERNAL</RouteRef>
 							<DirectionType>outbound</DirectionType>
 							<pointsInSequence>
-								<TimingPointInJourneyPattern version="any" order="1" id="hde:tpip_CQo_01">
+								<TimingPointInJourneyPattern version="any" id="hde:tpip_CQo_01">
 									<TimingPointRef version="any" xsi:type="ScheduledStopPointRefStructure" ref="mybus:Charley"/>
 								</TimingPointInJourneyPattern>
 								<TimingPointInJourneyPattern version="any" order="2" id="hde:tpip_CQo_02">
@@ -986,7 +986,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 							<DirectionType>outbound</DirectionType>
 							<TimingPatternRef version="any" ref="hde:tp_YAo"/>
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="any" order="1" id="hde:pijp_YAo_01">
+								<StopPointInJourneyPattern version="any" id="hde:pijp_YAo_01">
 									<ScheduledStopPointRef version="any" ref="mybus:Yankee"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="any" order="2" id="hde:pijp_YAo_02">
@@ -994,7 +994,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
 							<linksInSequence>
-								<ServiceLinkInJourneyPattern version="any" order="1" id="hde:lijp_YAo_01">
+								<ServiceLinkInJourneyPattern version="any" id="hde:lijp_YAo_01">
 									<ServiceLinkRef version="any" ref="mybus:SL@Yankee+Alpha"/>
 								</ServiceLinkInJourneyPattern>
 							</linksInSequence>
@@ -1004,7 +1004,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 							<DirectionType>outbound</DirectionType>
 							<TimingPatternRef version="any" ref="hde:tp_ZAo"/>
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="any" order="1" id="hde:pijp_ZAo_01">
+								<StopPointInJourneyPattern version="any" id="hde:pijp_ZAo_01">
 									<ScheduledStopPointRef version="any" ref="mybus:Zulu"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="any" order="2" id="hde:pijp_ZAo_02">
@@ -1012,7 +1012,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
 							<linksInSequence>
-								<ServiceLinkInJourneyPattern version="any" order="1" id="hde:lijp_ZAo_01">
+								<ServiceLinkInJourneyPattern version="any" id="hde:lijp_ZAo_01">
 									<ServiceLinkRef version="any" ref="mybus:SL@Zulu+Alpha"/>
 								</ServiceLinkInJourneyPattern>
 							</linksInSequence>
@@ -1022,7 +1022,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 							<DirectionType>outbound</DirectionType>
 							<TimingPatternRef version="any" ref="hde:tp_ABCo"/>
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="any" order="1" id="hde:pijp_ABCo_01">
+								<StopPointInJourneyPattern version="any" id="hde:pijp_ABCo_01">
 									<ScheduledStopPointRef version="any" ref="mybus:Alpha"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="any" order="2" id="hde:pijp_ABCo_02">
@@ -1046,7 +1046,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 							<DirectionType>outbound</DirectionType>
 							<TimingPatternRef version="any" ref="hde:tp_CPo"/>
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="any" order="1" id="hde:pijp_CPo_01">
+								<StopPointInJourneyPattern version="any" id="hde:pijp_CPo_01">
 									<ScheduledStopPointRef version="any" ref="mybus:Charley"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="any" order="2" id="hde:pijp_CPo_02">
@@ -1054,7 +1054,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
 							<linksInSequence>
-								<ServiceLinkInJourneyPattern version="any" order="1" id="hde:lijp_CPo_04">
+								<ServiceLinkInJourneyPattern version="any" id="hde:lijp_CPo_04">
 									<ServiceLinkRef version="any" ref="mybus:SL@Charley+Papa"/>
 								</ServiceLinkInJourneyPattern>
 							</linksInSequence>
@@ -1064,7 +1064,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 							<DirectionType>outbound</DirectionType>
 							<TimingPatternRef version="any" ref="hde:tp_CQo"/>
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="any" order="1" id="hde:pijp_CQo_01">
+								<StopPointInJourneyPattern version="any" id="hde:pijp_CQo_01">
 									<ScheduledStopPointRef version="any" ref="mybus:Charley"/>
 								</StopPointInJourneyPattern>
 								<StopPointInJourneyPattern version="any" order="2" id="hde:pijp_CQo_02">
@@ -1072,7 +1072,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
 							<linksInSequence>
-								<ServiceLinkInJourneyPattern version="any" order="1" id="hde:lijp_CQo_01">
+								<ServiceLinkInJourneyPattern version="any" id="hde:lijp_CQo_01">
 									<ServiceLinkRef version="any" ref="mybus:SL@Charley+Quebec"/>
 								</ServiceLinkInJourneyPattern>
 							</linksInSequence>
@@ -1350,37 +1350,37 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 						</DayType>
 					</dayTypes>
 					<dayTypeAssignments>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-01">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-01">
 							<Description>Monday 2010-11-01</Description>
 							<Date>2010-11-01</Date>
 							<DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-02">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-02">
 							<Description>Tuesday 2010-11-02</Description>
 							<Date>2010-11-02</Date>
 							<DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-03">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-03">
 							<Description>Wednesday 2010-11-03</Description>
 							<Date>2010-11-03</Date>
 							<DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-04">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-04">
 							<Description>Thusday 2010-11-04</Description>
 							<Date>2010-11-04</Date>
 							<DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-05">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-05">
 							<Description>MFriday 2010-11-05</Description>
 							<Date>2010-11-05</Date>
 							<DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-06">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-06">
 							<Description>Saturday 2010-11-06</Description>
 							<Date>2010-11-06</Date>
 							<DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-07">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-07">
 							<Description>Sunday 2010-11-07</Description>
 							<Date>2010-11-07</Date>
 							<DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>

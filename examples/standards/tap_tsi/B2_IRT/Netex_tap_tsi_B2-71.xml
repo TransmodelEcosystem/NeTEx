@@ -532,13 +532,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="AVE:01">
 							<Name lang="es">GAMA PUBLICA</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="AVE:01">
+								<AlternativeName version="any" order="1" id="AVE:01@fr">
 									<Name lang="fr">GAMME PUBLIQUE</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="AVE:01">
+								<AlternativeName version="any" order="2" id="AVE:01@de">
 									<Name lang="de">ÖFFENTLICHE TARIFE</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="AVE:01">
+								<AlternativeName version="any" order="3" id="AVE:01@en">
 									<Name lang="en">PUBLIC RANGE</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -546,13 +546,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="ELI:01">
 							<Name lang="en">Public Range</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="ELI:01">
+								<AlternativeName version="any" order="1" id="ELI:01@fr">
 									<Name lang="fr">Gamme Publique</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="ELI:01">
+								<AlternativeName version="any" order="2" id="ELI:01@de">
 									<Name lang="de">Öffentliche Tarife</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="ELI:01">
+								<AlternativeName version="any" order="3" id="ELI:01@en">
 									<Name lang="en">Public Range</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -560,13 +560,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="ELI:02">
 							<Name lang="en">RIT Range</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="ELI:02">
+								<AlternativeName version="any" order="1" id="ELI:02@fr">
 									<Name lang="fr">Gamme RIT</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="ELI:02">
+								<AlternativeName version="any" order="2" id="ELI:02@de">
 									<Name lang="de">RIT-Tarife</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="ELI:02">
+								<AlternativeName version="any" order="3" id="ELI:02@en">
 									<Name lang="en">RIT Range</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -574,13 +574,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="ELI:03">
 							<Name lang="en">Group Range</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="ELI:03">
+								<AlternativeName version="any" order="1" id="ELI:03@fr">
 									<Name lang="fr">Gamme Groupes</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="ELI:03">
+								<AlternativeName version="any" order="2" id="ELI:03@de">
 									<Name lang="de">Gruppentarife</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="ELI:03">
+								<AlternativeName version="any" order="3" id="ELI:03@en">
 									<Name lang="en">Group Range</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -588,13 +588,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="ELI:04">
 							<Name lang="en">Confidential Tariffs</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="ELI:04">
+								<AlternativeName version="any" order="1" id="ELI:04@fr">
 									<Name lang="fr">Gamme Confidentiels</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="ELI:04">
+								<AlternativeName version="any" order="2" id="ELI:04@de">
 									<Name lang="de">Vertraulicher Tarif</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="ELI:04">
+								<AlternativeName version="any" order="3" id="ELI:04@en">
 									<Name lang="en">Confidential Tariffs</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -602,13 +602,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="ELI:12">
 							<Name lang="fr">Grand Voyageur</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="ELI:12">
+								<AlternativeName version="any" order="1" id="ELI:12@fr">
 									<Name lang="fr">Grand Voyageur</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="ELI:12">
+								<AlternativeName version="any" order="2" id="ELI:12@de">
 									<Name lang="de">Grand Voyageur</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="ELI:12">
+								<AlternativeName version="any" order="3" id="ELI:12@en">
 									<Name lang="en">Grand Voyageur</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -619,10 +619,10 @@ PCZO0071XXX0143
 								<AlternativeName version="any" order="1" id="ELI:13">
 									<Name lang="fr">Grand Public hors BPG</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="ELI:13">
+								<AlternativeName version="any" order="2" id="ELI:13@de">
 									<Name lang="de">Grand Public hors BPG</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="ELI:13">
+								<AlternativeName version="any" order="3" id="ELI:13@en">
 									<Name lang="en">Grand Public hors BPG</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -630,13 +630,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="ELI:14">
 							<Name lang="fr">VSC</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="ELI:14">
+								<AlternativeName version="any" order="1" id="ELI:14@fr">
 									<Name lang="fr">VSC</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="ELI:14">
+								<AlternativeName version="any" order="2" id="ELI:14@de">
 									<Name lang="de">VSC</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="ELI:14">
+								<AlternativeName version="any" order="3" id="ELI:14@en">
 									<Name lang="en">VSC</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -644,13 +644,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="ELI:15">
 							<Name lang="fr">Groupes</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="ELI:15">
+								<AlternativeName version="any" order="1" id="ELI:15@fr">
 									<Name lang="fr">Groupes</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="ELI:15">
+								<AlternativeName version="any" order="2" id="ELI:15@de">
 									<Name lang="de">Groupes</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="ELI:15">
+								<AlternativeName version="any" order="3" id="ELI:15@en">
 									<Name lang="en">Groupes</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -658,13 +658,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="GL:01">
 							<Name lang="es">GAMA PUBLICA</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="GL:01">
+								<AlternativeName version="any" order="1" id="GL:01@fr">
 									<Name lang="fr">GAMME PUBLIQUE</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="GL:01">
+								<AlternativeName version="any" order="2" id="GL:01@de">
 									<Name lang="de">ÖFFENTLICHE TARIFE</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="GL:01">
+								<AlternativeName version="any" order="3" id="GL:01@en">
 									<Name lang="en">PUBLIC RANGE</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -672,13 +672,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="GL:04">
 							<Name lang="es">GAMA PRIVADA</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="GL:04">
+								<AlternativeName version="any" order="1" id="GL:04@fr">
 									<Name lang="fr">GAMME CONFIDENTIELS</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="GL:04">
+								<AlternativeName version="any" order="2" id="GL:04@de">
 									<Name lang="de">VERTRAULICHER TARIF</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="GL:04">
+								<AlternativeName version="any" order="3" id="GL:04@en">
 									<Name lang="en">CONFIDENTIAL TARIFS</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -686,13 +686,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="LUS:01">
 							<Name lang="en">Public Range</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="LUS:01">
+								<AlternativeName version="any" order="1" id="LUS:01@fr">
 									<Name lang="fr">Gamme Publique</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="LUS:01">
+								<AlternativeName version="any" order="2" id="LUS:01@de">
 									<Name lang="de">Öffentliche Tarife</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="LUS:01">
+								<AlternativeName version="any" order="3" id="LUS:01@en">
 									<Name lang="en">Public Range</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -700,13 +700,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="LUS:02">
 							<Name lang="en">RIT Range</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="LUS:02">
+								<AlternativeName version="any" order="1" id="LUS:02@fr">
 									<Name lang="fr">Gamme RIT</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="LUS:02">
+								<AlternativeName version="any" order="2" id="LUS:02@de">
 									<Name lang="de">RIT-Tarife</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="LUS:02">
+								<AlternativeName version="any" order="3" id="LUS:02@en">
 									<Name lang="en">RIT Range</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -717,10 +717,10 @@ PCZO0071XXX0143
 								<AlternativeName version="any" order="1" id="LUS:03">
 									<Name lang="fr">Gamme Groupes</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="LUS:03">
+								<AlternativeName version="any" order="2" id="LUS:03@de">
 									<Name lang="de">GruppenTarife</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="LUS:03">
+								<AlternativeName version="any" order="3" id="LUS:03@en">
 									<Name lang="en">Group Range</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -728,13 +728,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="LUS:04">
 							<Name lang="en">Confidential Tariffs</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="LUS:04">
+								<AlternativeName version="any" order="1" id="LUS:04@fr">
 									<Name lang="fr">Gamme Confidentiels</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="LUS:04">
+								<AlternativeName version="any" order="2" id="LUS:04@de">
 									<Name lang="de">Vertraulicher Tarif</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="LUS:04">
+								<AlternativeName version="any" order="3" id="LUS:04@en">
 									<Name lang="en">Confidential Tariffs</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -742,13 +742,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="REG:01">
 							<Name lang="es">GAMA PUBLICA</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="REG:01">
+								<AlternativeName version="any" order="1" id="REG:01@fr">
 									<Name lang="fr">GAMME PUBLIQUE</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="REG:01">
+								<AlternativeName version="any" order="2" id="REG:01@de">
 									<Name lang="de">ÖFFENTLICHE Tarife</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="REG:01">
+								<AlternativeName version="any" order="3" id="REG:01@en">
 									<Name lang="en">PUBLIC RANGE</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -756,13 +756,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="REG:02">
 							<Name lang="es">GAMA RIT</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="REG:02">
+								<AlternativeName version="any" order="1" id="REG:02@fr">
 									<Name lang="fr">GAMME RIT</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="REG:02">
+								<AlternativeName version="any" order="2" id="REG:02@de">
 									<Name lang="de">RIT-Tarife</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="REG:02">
+								<AlternativeName version="any" order="3" id="REG:02@en">
 									<Name lang="en">RIT RANGE</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -770,13 +770,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="TAJ:01">
 							<Name lang="en">Public Range</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="TAJ:01">
+								<AlternativeName version="any" order="1" id="TAJ:01@fr">
 									<Name lang="fr">Gamme Publique</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="TAJ:01">
+								<AlternativeName version="any" order="2" id="TAJ:01@de">
 									<Name lang="de">Öffentliche Tarife</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="TAJ:01">
+								<AlternativeName version="any" order="3" id="TAJ:01@en">
 									<Name lang="en">Public Range</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -784,13 +784,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="TAJ:02">
 							<Name lang="en">RIT Range</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="TAJ:02">
+								<AlternativeName version="any" order="1" id="TAJ:02@fr">
 									<Name lang="fr">Gamme RIT</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="TAJ:02">
+								<AlternativeName version="any" order="2" id="TAJ:0@de2">
 									<Name lang="de">RIT-Tarife</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="TAJ:02">
+								<AlternativeName version="any" order="3" id="TAJ:02@en">
 									<Name lang="en">RIT Range</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -798,13 +798,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="TAJ:03">
 							<Name lang="en">Group Range</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="TAJ:03">
+								<AlternativeName version="any" order="1" id="TAJ:03@fr">
 									<Name lang="fr">Gamme Groupes</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="TAJ:03">
+								<AlternativeName version="any" order="2" id="TAJ:03'de">
 									<Name lang="de">GruppenTarife</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="TAJ:03">
+								<AlternativeName version="any" order="3" id="TAJ:03@en">
 									<Name lang="en">Group Range</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -812,13 +812,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="TAJ:04">
 							<Name lang="en">Confidential Tariffs</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="TAJ:04">
+								<AlternativeName version="any" order="1" id="TAJ:04@fr">
 									<Name lang="fr">Gamme Confidentiels</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="TAJ:04">
+								<AlternativeName version="any" order="2" id="TAJ:04@de">
 									<Name lang="de">Vertraulicher Tarif</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="TAJ:04">
+								<AlternativeName version="any" order="3" id="TAJ:04@en">
 									<Name lang="en">Confidential Tariffs</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -826,13 +826,13 @@ PCZO0071XXX0143
 						<GroupOfSalesOfferPackages version="any" id="TAJ:13">
 							<Name lang="fr">Grand Voyageur</Name>
 							<alternativeNames>
-								<AlternativeName version="any" order="1" id="TAJ:13">
+								<AlternativeName version="any" order="1" id="TAJ:13@fr">
 									<Name lang="fr">Grand Voyageur</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="2" id="TAJ:13">
+								<AlternativeName version="any" order="2" id="TAJ:13@de">
 									<Name lang="de">Grand Voyageur</Name>
 								</AlternativeName>
-								<AlternativeName version="any" order="3" id="TAJ:13">
+								<AlternativeName version="any" order="3" id="TAJ:13@en">
 									<Name lang="en">Grand Voyageur</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -10679,7 +10679,7 @@ PCZO0071XXX0143
 						</UsageValidityPeriod>
 					</usageParameters>
 					<accessRightParameterAssignments>
-						<GenericParameterAssignment version="any" id="REG:01:100 " order="1" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:100@1" order="1" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:100"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10691,7 +10691,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:100 " order="2" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:100@02" order="2" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:100"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10703,7 +10703,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:100 " order="3" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:100@03" order="3" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:100"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10715,7 +10715,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:100 " order="4" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:100@04" order="4" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:100"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10727,7 +10727,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:100 " order="5" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:100@05" order="5" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:100"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10739,7 +10739,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:101 " order="1" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:101@01" order="1" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:101"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10751,7 +10751,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:101 " order="2" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:101@02" order="2" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:101"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10763,7 +10763,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:101 " order="3" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:101@03" order="3" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:101"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10775,7 +10775,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:101 " order="4" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:101@04" order="4" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:101"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10787,7 +10787,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:101 " order="5" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:101@05" order="5" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:101"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10799,7 +10799,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:102 " order="1" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:102@01" order="1" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:102"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10811,7 +10811,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:102 " order="2" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:102@02" order="2" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:102"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10823,7 +10823,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:102 " order="3" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:102@03" order="3" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:102"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10835,7 +10835,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:102 " order="4" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:102@04" order="4" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:102"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10847,7 +10847,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:102 " order="5" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:102@05" order="5" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:102"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10859,7 +10859,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:103 " order="1" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:103@01" order="1" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:103"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10871,7 +10871,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:103 " order="2" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:103@02" order="2" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:103"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10883,7 +10883,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:103 " order="3" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:103@03" order="3" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:103"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10895,7 +10895,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:103 " order="4" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:103@04" order="4" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:103"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10907,7 +10907,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:103 " order="5" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:103@05" order="5" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:103"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10919,7 +10919,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:104 " order="1" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:104@01" order="1" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:104"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10931,7 +10931,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:104 " order="2" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:104@02" order="2" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:104"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10943,7 +10943,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:104 " order="3" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:104@03" order="3" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:104"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10955,7 +10955,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:104 " order="4" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:104@04" order="4" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:104"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10967,7 +10967,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:104 " order="5" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:104@05" order="5" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:104"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10979,7 +10979,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:200 " order="1" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:200@01" order="1" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:200"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -10991,7 +10991,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:200 " order="2" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:200@02" order="2" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:200"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11003,7 +11003,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:200 " order="3" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:200@03" order="3" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:200"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11015,7 +11015,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:200 " order="4" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:200@04" order="4" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:200"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11027,7 +11027,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:200 " order="5" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:200@05" order="5" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:200"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11039,7 +11039,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:200 " order="6" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:200@06" order="6" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:200"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11051,7 +11051,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:200 " order="7" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:200@07" order="7" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:200"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11063,7 +11063,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:201 " order="1" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:201@01" order="1" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:201"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11075,7 +11075,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:201 " order="2" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:201@02" order="2" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:201"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11087,7 +11087,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:201 " order="3" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:201@03" order="3" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:201"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11099,7 +11099,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:201 " order="4" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:201@04" order="4" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:201"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11111,7 +11111,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:201 " order="5" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:201@05" order="5" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:201"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11123,7 +11123,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:201 " order="6" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:201@06" order="6" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:201"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11135,7 +11135,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:201 " order="7" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:201@07" order="7" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:201"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11147,7 +11147,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:202 " order="1" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:202@01" order="1" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:202"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11159,7 +11159,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:202 " order="2" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:202@02" order="2" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:202"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11171,7 +11171,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:202 " order="3" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:202@03" order="3" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:202"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11183,7 +11183,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:202 " order="4" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:202@04" order="4" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:202"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11195,7 +11195,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:202 " order="5" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:202@05" order="5" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:202"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11207,7 +11207,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:202 " order="6" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:202@06" order="6" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:202"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11219,7 +11219,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:202 " order="7" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:202@07" order="7" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:202"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11231,7 +11231,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:203 " order="1" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:203@01" order="1" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:203"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11243,7 +11243,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:203 " order="2" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:203@02" order="2" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:203"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11255,7 +11255,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:203 " order="3" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:203@03" order="3" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:203"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11267,7 +11267,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:203 " order="4" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:203@04" order="4" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:203"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11279,7 +11279,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:203 " order="5" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:203@05" order="5" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:203"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11291,7 +11291,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:203 " order="6" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:203@06" order="6" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:203"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11303,7 +11303,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:203 " order="7" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:203@07" order="7" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:203"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11315,7 +11315,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:204 " order="1" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:204@01" order="1" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:204"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11327,7 +11327,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:204 " order="2" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:204@02" order="2" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:204"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11339,7 +11339,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:204 " order="3" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:204@03" order="3" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:204"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11351,7 +11351,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:204 " order="4" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:204@04" order="4" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:204"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11363,7 +11363,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:204 " order="5" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:204@05" order="5" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:204"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11375,7 +11375,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:204 " order="6" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:204@06" order="6" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:204"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11387,7 +11387,7 @@ PCZO0071XXX0143
 								<OperatorRef ref="All"/>
 							</validityParameters>
 						</GenericParameterAssignment>
-						<GenericParameterAssignment version="any" id="REG:01:204 " order="7" responsibilitySetRef="0071">
+						<GenericParameterAssignment version="any" id="REG:01:204@07" order="7" responsibilitySetRef="0071">
 							<BrandingRef version="any" ref="REG"/>
 							<SalesOfferPackageRef version="any" ref="REG:01:204"/>
 							<GroupOfSalesOfferPackagesRef version="any" ref="REG:01"/>
@@ -11409,16 +11409,16 @@ PCZO0071XXX0143
 							<Name lang="en">Companion blind/weelchair</Name>
 							<TypeOfNoticeRef version="any" ref="M"/>
 							<variants>
-								<DeliveryVariant order="1">
+								<DeliveryVariant id="ELI:50-1" order="1">
 									<VariantText lang="fr">Accompagn. aveugle/faut. roulant</VariantText>
 								</DeliveryVariant>
-								<DeliveryVariant order="2">
+								<DeliveryVariant id="ELI:50-2" order="2">
 									<VariantText lang="de">Begleiter </VariantText>
 								</DeliveryVariant>
-								<DeliveryVariant order="3">
+								<DeliveryVariant id="ELI:50-3" order="3">
 									<VariantText lang="en">Companion blind/weelchair</VariantText>
 								</DeliveryVariant>
-								<DeliveryVariant order="4">
+								<DeliveryVariant id="ELI:50-4" order="4">
 									<VariantText lang="ru">Companion blind/weelchair</VariantText>
 								</DeliveryVariant>
 							</variants>
@@ -11427,16 +11427,16 @@ PCZO0071XXX0143
 							<Name lang="en">Valid for passholders</Name>
 							<TypeOfNoticeRef version="any" ref="M"/>
 							<variants>
-								<DeliveryVariant order="1">
+								<DeliveryVariant id="ELI:51-1" order="1">
 									<VariantText lang="fr">Réservé aux titulaires d_un</VariantText>
 								</DeliveryVariant>
-								<DeliveryVariant order="2">
-									<VariantText lang="de">Gültig für passholders                                                                                                Valid </VariantText>
+								<DeliveryVariant id="ELI:51-2" order="2">
+									<VariantText lang="de">Gültig für passholders</VariantText>
 								</DeliveryVariant>
-								<DeliveryVariant order="3">
+								<DeliveryVariant id="ELI:51-3" order="3">
 									<VariantText lang="en">Valid for passholders</VariantText>
 								</DeliveryVariant>
-								<DeliveryVariant order="4">
+								<DeliveryVariant id="ELI:51-4" order="4">
 									<VariantText lang="ru">Valid for passholders</VariantText>
 								</DeliveryVariant>
 							</variants>
@@ -11445,16 +11445,16 @@ PCZO0071XXX0143
 							<Name lang="en">Unknown paxtype</Name>
 							<TypeOfNoticeRef version="any" ref="M"/>
 							<variants>
-								<DeliveryVariant order="1">
+								<DeliveryVariant id="ELI:99-1" order="1">
 									<VariantText lang="fr">Unknown paxtype</VariantText>
 								</DeliveryVariant>
-								<DeliveryVariant order="2">
+								<DeliveryVariant id="ELI:99-2" order="2">
 									<VariantText lang="de">Unknown paxtype </VariantText>
 								</DeliveryVariant>
-								<DeliveryVariant order="3">
+								<DeliveryVariant id="ELI:99-3" order="3">
 									<VariantText lang="en">Unknown paxtype</VariantText>
 								</DeliveryVariant>
-								<DeliveryVariant order="4">
+								<DeliveryVariant id="ELI:99-4" order="4">
 									<VariantText lang="ru">Unknown paxtype</VariantText>
 								</DeliveryVariant>
 							</variants>
@@ -29670,8 +29670,8 @@ PCZO0071XXX0143
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="0071">
 									<DataRoleType>collects distributes</DataRoleType>
-									<StakeholderRoleType>Operation Reservation</StakeholderRoleType>
-									<ResponsibleOrganisationRef version="any" ref="0071" nameOfRefClass="OperatorRef" xsi:type="OperatorRefStructure"/>
+									<StakeholderRoleType>operation reservation</StakeholderRoleType>
+									<ResponsibleOrganisationRef version="any" ref="0071" nameOfRefClass="Operator"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
 						</ResponsibilitySet>
@@ -29693,7 +29693,6 @@ PCZO0071XXX0143
 									<Name>Lusitania</Name>
 								</Branding>
 								<Branding version="any" id="REG">
-							 
 								</Branding>
 								<Branding version="any" id="TAJ">
 									<Name>TAJ</Name>
@@ -29704,9 +29703,8 @@ PCZO0071XXX0143
 							<Name>Types of concession for 0071</Name>
 							<values>
 								<TypeOfConcession version="any" id="0011">
- 
 								</TypeOfConcession>
-								<TypeOfConcession version="any" id="0010"> 
+								<TypeOfConcession version="any" id="0010">
 								</TypeOfConcession>
 							</values>
 						</ValueSet>

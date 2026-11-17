@@ -8,7 +8,7 @@
 				<Aggregation>main schema</Aggregation>
 				<Audience>e-service developers</Audience>
 				<Coverage>Europe</Coverage>
-				<Creator>First Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles.  mailto:schemer@netex.org.uk</Creator>
+				<Creator>First Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles.</Creator>
 				<Date>
 					<Created>2010-09-04</Created>
 				</Date>
@@ -150,7 +150,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="other">
 				<xsd:annotation>
-					<xsd:documentation>Like draft, proposed, and deprecated, this version should not be used for operational purposes (for other reasons, however). </xsd:documentation>
+					<xsd:documentation>Like draft, proposed, and deprecated, this version should not be used for operational purposes (for other reasons, however).</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>
@@ -186,7 +186,7 @@ Rail transport, Roads and Road transport
 		</xsd:attribute>
 		<xsd:attribute name="version" type="VersionIdType" use="optional">
 			<xsd:annotation>
-				<xsd:documentation>Version number of entity.</xsd:documentation>
+				<xsd:documentation>Version number of entity. The value may be "any" or a VERSION number adhering to agreed-upon formatting and interpretation rules (representing, e.g., a number or a date). Consecutive VERSION numbers should be strictly increasing.</xsd:documentation>
 			</xsd:annotation>
 		</xsd:attribute>
 		<xsd:attribute name="status" type="StatusEnumeration" use="optional" default="active">

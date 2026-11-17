@@ -6,7 +6,7 @@
 				<Aggregation>main schema</Aggregation>
 				<Audience>e-service developers</Audience>
 				<Coverage>Europe</Coverage>
-				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles, Kizoom. mailto:schemer@netex.org.uk</Creator>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles, Kizoom.</Creator>
 				<Date>
 					<Created>2010-09-04</Created>
 				</Date>
@@ -87,7 +87,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="unknown">
 				<xsd:annotation>
-					<xsd:documentation>It is not known whether PLACE meets accessibility  criteria.</xsd:documentation>
+					<xsd:documentation>It is not known whether PLACE meets accessibility criteria.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="partial">
@@ -137,7 +137,7 @@ Rail transport, Roads and Road transport
 	</xsd:element>
 	<xsd:element name="StairFreeAccess" type="LimitationStatusEnumeration" default="unknown">
 		<xsd:annotation>
-			<xsd:documentation>Whether a PLACE has stair free access, in comparison with step free access one single step in the route is allowed.</xsd:documentation>
+			<xsd:documentation>Whether a PLACE has stair free access, in comparison with step free access one single step in the route is allowed. +v2.0</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="EscalatorFreeAccess" type="LimitationStatusEnumeration" default="unknown">
@@ -152,14 +152,12 @@ Rail transport, Roads and Road transport
 	</xsd:element>
 	<xsd:element name="RampFreeAccess" type="LimitationStatusEnumeration" default="unknown">
 		<xsd:annotation>
-			<xsd:documentation>Whether a PLACE has ramp free access. Ramp free isn't necessary absolute. If a ramp is not steep, then a PLACE 
-			can still be considered ramp free.</xsd:documentation>
+			<xsd:documentation>Whether a PLACE has ramp free access. Ramp free isn't necessary absolute. If a ramp is not steep, then a PLACE can still be considered ramp free.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="LevelAccessIntoVehicle" type="LimitationStatusEnumeration" default="unknown">
 		<xsd:annotation>
-			<xsd:documentation>Whether the platform is high enough and gap is small enough for level access into vehicle. 
-At least at a designated wheelchair door position the gap between platform and vehicle floor (of level access vehicle) does not exceed 75 mm measured horizontally and 50 mm measured vertically including sliding step (according to PRM TSI).</xsd:documentation>
+			<xsd:documentation>Whether the platform is high enough and gap is small enough for level access into vehicle. At least at a designated wheelchair door position the gap between platform and vehicle floor (of level access vehicle) does not exceed 75 mm measured horizontally and 50 mm measured vertically including sliding step (according to PRM TSI).</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="AudibleSignalsAvailable" type="LimitationStatusEnumeration" default="unknown">

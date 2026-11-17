@@ -34,6 +34,11 @@ Overview
 	<PublicationRefreshInterval>PT5M0S</PublicationRefreshInterval>
 	<!--- =============== RESULTS =========== -->
 	<dataObjects>
+		<ResourceFrame id="pkg:RF01" version="any">
+			<dataSources>
+				<DataSource id="parkopedia" version="any"/>
+			</dataSources>
+		</ResourceFrame>
 		<SiteFrame version="any" id="pkg:SF01">
 			<validityConditions>
 				<AvailabilityCondition version="any" id="pkg:PP01_Opening_Hours">

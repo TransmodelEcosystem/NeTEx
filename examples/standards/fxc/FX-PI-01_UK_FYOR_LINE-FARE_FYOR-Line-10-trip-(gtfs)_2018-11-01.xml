@@ -66,7 +66,7 @@ Free to use under a Creative Commons license.
 	<Description>Fares for York</Description>
 	<!-- =============== RESULTS =========== -->
 	<dataObjects>
-		<CompositeFrame version="1.0" id="epd:UK:FYOR_NoE:FareFrame_UK_PI_NETWORK_FARE_OFFER:Trip@York@10etc:frst" dataSourceRef="frst:NoE" responsibilitySetRef="frst:tariffs">
+		<CompositeFrame version="1.0" id="epd:UK:FYOR_NoE:FareFrame_UK_PI_NETWORK_FARE_OFFER:Trip@York@10etc:frst" dataSourceRef="frst:First_York" responsibilitySetRef="frst:tariffs">
 			<ValidBetween>
 				<FromDate>2018-11-01T00:00:00</FromDate>
 			</ValidBetween>
@@ -2605,7 +2605,7 @@ Free to use under a Creative Commons license.
 								<FareStructureElement id="frst:Tariff@York_Z2Z@Trip@access_modes" version="1.0">
 									<Name>Available modes</Name>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:access"/>
-									<GenericParameterAssignment order="1" id="frst:Tariff@York_Z2Z@Trip@access_modes" version="1.0">
+									<GenericParameterAssignment id="frst:Tariff@York_Z2Z@Trip@access_modes-1" version="1.0">
 										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:can_access"/>
 										<ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
 										<validityParameters>
@@ -2616,7 +2616,7 @@ Free to use under a Creative Commons license.
 								<FareStructureElement version="1.0" id="frst:Tariff@York_Z2Z@Trip@eligibility">
 									<Name>eligible user types</Name>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:eligibility"/>
-									<GenericParameterAssignment order="1" id="frst:Tariff@York_Z2Z@eligibility" version="1.0">
+									<GenericParameterAssignment id="frst:Tariff@York_Z2Z@eligibility-1" version="1.0">
 										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:eligible"/>
 										<LimitationGroupingType>XOR</LimitationGroupingType>
 										<limitations>
@@ -2629,7 +2629,7 @@ Free to use under a Creative Commons license.
 								<FareStructureElement id="frst:Tariff@York_Z2Z@Trip@access_lines" version="1.0">
 									<Name>Available lines</Name>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:access"/>
-									<GenericParameterAssignment order="1" id="frst:Tariff@York_Z2Z@Trip@access_lines" version="1.0">
+									<GenericParameterAssignment id="frst:Tariff@York_Z2Z@Trip@access_lines-1" version="1.0">
 										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:can_access"/>
 										<validityParameters>
 											<LineRef version="1.0" ref="frst:SVRYWAO010"/>
@@ -2667,7 +2667,7 @@ Free to use under a Creative Commons license.
 								<FareStructureElement id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWAO010" version="1.0">
 									<Name>Available modes</Name>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:access"/>
-									<GenericParameterAssignment order="1" id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWAO010" version="1.0">
+									<GenericParameterAssignment id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWAO010-1" version="1.0">
 										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:can_access"/>
 										<GroupOfDistanceMatrixElementsRef version="1.0" ref="frst:SVRYWAO010"/>
 										<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
@@ -2696,7 +2696,7 @@ Free to use under a Creative Commons license.
 								<FareStructureElement id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWAO011" version="1.0">
 									<Name>Available modes</Name>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:access"/>
-									<GenericParameterAssignment version="1.0" order="1" id="frst:Tariff@York_Z2Z@Trip@lines@SV">
+									<GenericParameterAssignment version="1.0" id="frst:Tariff@York_Z2Z@Trip@lines@SV-1">
 										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:can_access"/>
 										<GroupOfDistanceMatrixElementsRef version="1.0" ref="frst:SVRYWAO011"/>
 										<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
@@ -2725,7 +2725,7 @@ Free to use under a Creative Commons license.
 								<FareStructureElement id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWBO001" version="1.0">
 									<Name>Available lines</Name>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:access"/>
-									<GenericParameterAssignment order="1" id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWBO001" version="1.0">
+									<GenericParameterAssignment id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWBO001-1" version="1.0">
 										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:can_access"/>
 										<GroupOfDistanceMatrixElementsRef version="1.0" ref="frst:SVRYWBO001"/>
 										<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
@@ -2754,7 +2754,7 @@ Free to use under a Creative Commons license.
 								<FareStructureElement id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWBO002" version="1.0">
 									<Name>Available lines</Name>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:access"/>
-									<GenericParameterAssignment order="1" id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWBO002" version="1.0">
+									<GenericParameterAssignment id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWBO002-1" version="1.0">
 										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:can_access"/>
 										<GroupOfDistanceMatrixElementsRef version="1.0" ref="frst:SVRYWBO002"/>
 										<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
@@ -2783,7 +2783,7 @@ Free to use under a Creative Commons license.
 								<FareStructureElement id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWBO003" version="1.0">
 									<Name>Available lines</Name>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:access"/>
-									<GenericParameterAssignment order="1" id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWBO003" version="1.0">
+									<GenericParameterAssignment id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWBO003-1" version="1.0">
 										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:can_access"/>
 										<GroupOfDistanceMatrixElementsRef version="1.0" ref="frst:SVRYWBO003"/>
 										<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
@@ -2812,7 +2812,7 @@ Free to use under a Creative Commons license.
 								<FareStructureElement id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWBO004" version="1.0">
 									<Name>Available lines</Name>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:access"/>
-									<GenericParameterAssignment order="1" id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWBO004" version="1.0">
+									<GenericParameterAssignment id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWBO004-1" version="1.0">
 										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:can_access"/>
 										<GroupOfDistanceMatrixElementsRef version="1.0" ref="frst:SVRYWBO004"/>
 										<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
@@ -2841,7 +2841,7 @@ Free to use under a Creative Commons license.
 								<FareStructureElement id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWBO006" version="1.0">
 									<Name>Available lines</Name>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:access"/>
-									<GenericParameterAssignment order="1" id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWBO006" version="1.0">
+									<GenericParameterAssignment id="frst:Tariff@York_Z2Z@Trip@lines@SVRYWBO006-1" version="1.0">
 										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:can_access"/>
 										<GroupOfDistanceMatrixElementsRef version="1.0" ref="frst:SVRYWBO006"/>
 										<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
@@ -2877,7 +2877,7 @@ Free to use under a Creative Commons license.
 										<FareStructureElementRef version="1.0" ref="frst:Tariff@York_Z2Z@Trip@eligibility"/>
 									</fareStructureElements>
 									<validityParameterAssignments>
-										<GenericParameterAssignment version="1.0" order="1" id="frst:York_Z2Z@Trip@single@travel@conditions">
+										<GenericParameterAssignment version="1.0" id="frst:York_Z2Z@Trip@single@travel@conditions-1">
 											<Name>Non transferable, single use</Name>
 											<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:condition_of_use"/>
 											<LimitationGroupingType>AND</LimitationGroupingType>
@@ -2895,7 +2895,7 @@ Free to use under a Creative Commons license.
 							</validableElements>
 							<!--==== ACCESS RIGHTs ===== -->
 							<accessRightsInProduct>
-								<AccessRightInProduct version="1.0" id="frst:York_Z2Z@Trip_single" order="1">
+								<AccessRightInProduct version="1.0" id="frst:York_Z2Z@Trip_single-1">
 									<ValidableElementRef version="1.0" ref="frst:York_Z2Z@Trip_single@travel"/>
 								</AccessRightInProduct>
 							</accessRightsInProduct>
@@ -2913,7 +2913,7 @@ Free to use under a Creative Commons license.
 										<FareStructureElementRef version="1.0" ref="frst:Tariff@York_Z2Z@Trip@eligibility"/>
 									</fareStructureElements>
 									<validityParameterAssignments>
-										<GenericParameterAssignment version="1.0" order="1" id="frst:York_Z2Z@Trip_return@travel@inboutboundound@conditions">
+										<GenericParameterAssignment version="1.0" id="frst:York_Z2Z@Trip_return@travel@inboutboundound@conditions-1">
 											<Name>Non transferable, single use</Name>
 											<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:condition_of_use"/>
 											<LimitationGroupingType>AND</LimitationGroupingType>
@@ -2937,7 +2937,7 @@ Free to use under a Creative Commons license.
 										<FareStructureElementRef version="1.0" ref="frst:Tariff@York_Z2Z@Trip@eligibility"/>
 									</fareStructureElements>
 									<validityParameterAssignments>
-										<GenericParameterAssignment version="1.0" order="1" id="frst:York_Z2Z@Trip_return@travel@inbound@conditions">
+										<GenericParameterAssignment version="1.0" id="frst:York_Z2Z@Trip_return@travel@inbound@conditions-1">
 											<Name>Non transferable, single use</Name>
 											<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:condition_of_use"/>
 											<LimitationGroupingType>AND</LimitationGroupingType>
@@ -2956,10 +2956,10 @@ Free to use under a Creative Commons license.
 							</validableElements>
 							<!--==== ACCESS RIGHTs ===== -->
 							<accessRightsInProduct>
-								<AccessRightInProduct version="1.0" id="frst:York_Z2Z@Trip_return" order="1">
+								<AccessRightInProduct version="1.0" id="frst:York_Z2Z@Trip_return-1">
 									<ValidableElementRef version="1.0" ref="frst:York_Z2Z@Trip_return@travel@outbound"/>
 								</AccessRightInProduct>
-								<AccessRightInProduct version="1.0" id="frst:York_Z2Z@Trip_return" order="2">
+								<AccessRightInProduct version="1.0" id="frst:York_Z2Z@Trip_return-2">
 									<ValidableElementRef version="1.0" ref="frst:York_Z2Z@Trip_return@travel@inbound"/>
 								</AccessRightInProduct>
 							</accessRightsInProduct>
@@ -2968,16 +2968,18 @@ Free to use under a Creative Commons license.
 					<!-- === SALES OFFER PACKAGES === -->
 					<salesOfferPackages>
 						<SalesOfferPackage version="1.0" id="frst:250-[York_Z2Z@Trip_single-SOP@adult]">
+							<privateCodes>
+								<PrivateCode type="frst:product">250</PrivateCode>
+							</privateCodes>
 							<BrandingRef version="1.0" ref="frst:FYOR@brand"/>
 							<Name>Adult single</Name>
-							<PrivateCode type="frst:product">250</PrivateCode>
 							<TypeOfSalesOfferPackageRef version="fxc:v1.0" ref="fxc:standard_product@operator"/>
 							<salesOfferPackageElements>
-								<SalesOfferPackageElement version="1.0" id="frst:250-[York_Z2Z@Trip_single-SOP@adult]" order="1">
+								<SalesOfferPackageElement version="1.0" id="frst:250-[York_Z2Z@Trip_single-SOP@adult]-1">
 									<TypeOfTravelDocumentRef version="1.0" ref="frst:p-ticket"/>
 									<PreassignedFareProductRef version="1.0" ref="frst:York_Z2Z@Trip_single"/>
 									<validityParameterAssignments>
-										<GenericParameterAssignment version="1.0" order="1" id="frst:250-[York_Z2Z@Trip_single-SOP@adult]@eligible">
+										<GenericParameterAssignment version="1.0" id="frst:250-[York_Z2Z@Trip_single-SOP@adult]@eligible-1">
 											<Name>Non transferable, single use</Name>
 											<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:eligible"/>
 											<LimitationGroupingType>AND</LimitationGroupingType>
@@ -2990,16 +2992,18 @@ Free to use under a Creative Commons license.
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage version="1.0" id="frst:251-[York_Z2Z@Trip_single-SOP@young_person]">
+							<privateCodes>
+								<PrivateCode type="frst:product">251</PrivateCode>
+							</privateCodes>
 							<BrandingRef version="1.0" ref="frst:FYOR@brand"/>
 							<Name>Toung persopnsingle</Name>
-							<PrivateCode type="frst:product">251</PrivateCode>
 							<TypeOfSalesOfferPackageRef version="fxc:v1.0" ref="fxc:standard_product@operator"/>
 							<salesOfferPackageElements>
-								<SalesOfferPackageElement version="1.0" id="frst:251-[York_Z2Z@Trip_single-SOP@young_person]" order="1">
+								<SalesOfferPackageElement version="1.0" id="frst:251-[York_Z2Z@Trip_single-SOP@young_person]-1">
 									<TypeOfTravelDocumentRef version="1.0" ref="frst:p-ticket"/>
 									<PreassignedFareProductRef version="1.0" ref="frst:York_Z2Z@Trip_single"/>
 									<validityParameterAssignments>
-										<GenericParameterAssignment version="1.0" order="1" id="frst:251-[York_Z2Z@Trip_single-SOP@young_person]@eligible">
+										<GenericParameterAssignment version="1.0" id="frst:251-[York_Z2Z@Trip_single-SOP@young_person]@eligible-1">
 											<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:eligible"/>
 											<LimitationGroupingType>AND</LimitationGroupingType>
 											<limitations>
@@ -3011,16 +3015,18 @@ Free to use under a Creative Commons license.
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage version="1.0" id="frst:252-[York_Z2Z@Trip_return-SOP@adult]">
+							<privateCodes>
+								<PrivateCode type="frst:product">252</PrivateCode>
+							</privateCodes>
 							<BrandingRef version="1.0" ref="frst:FYOR@brand"/>
 							<Name>Adult single</Name>
-							<PrivateCode type="frst:product">252</PrivateCode>
 							<TypeOfSalesOfferPackageRef version="fxc:v1.0" ref="fxc:standard_product@operator"/>
 							<salesOfferPackageElements>
-								<SalesOfferPackageElement version="1.0" id="frst:252-[York_Z2Z@Trip_return-SOP@adult]" order="1">
+								<SalesOfferPackageElement version="1.0" id="frst:252-[York_Z2Z@Trip_return-SOP@adult]-1">
 									<TypeOfTravelDocumentRef version="1.0" ref="frst:p-ticket"/>
 									<PreassignedFareProductRef version="1.0" ref="frst:York_Z2Z@Trip_single"/>
 									<validityParameterAssignments>
-										<GenericParameterAssignment version="1.0" order="1" id="frst:252-[York_Z2Z@Trip_return-SOP@adult]@eligible">
+										<GenericParameterAssignment version="1.0" id="frst:252-[York_Z2Z@Trip_return-SOP@adult]@eligible-1">
 											<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:eligible"/>
 											<LimitationGroupingType>AND</LimitationGroupingType>
 											<limitations>
@@ -7259,7 +7265,7 @@ Free to use under a Creative Commons license.
 							<roles>
 								<ResponsibilityRoleAssignment version="1.0" id="frst:tariff_data@creates">
 									<DataRoleType>creates</DataRoleType>
-									<StakeholderRoleType>FareManagement</StakeholderRoleType>
+									<StakeholderRoleType>fareManagement</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="noc:FYOR" version="1.0"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -7269,7 +7275,7 @@ Free to use under a Creative Commons license.
 							<roles>
 								<ResponsibilityRoleAssignment version="1.0" id="frst:network_data@creates">
 									<DataRoleType>creates</DataRoleType>
-									<StakeholderRoleType>Planning</StakeholderRoleType>
+									<StakeholderRoleType>planning</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="noc:FYOR" version="1.0"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -7307,8 +7313,10 @@ Free to use under a Creative Commons license.
 					<organisations>
 						<!--==== Operators ==== -->
 						<Operator version="1.0" id="noc:FYOR">
+							<privateCodes>
+								<PrivateCode type="nocn">nocn:136365</PrivateCode>
+							</privateCodes>
 							<PublicCode>FYOR</PublicCode>
-							<PrivateCode type="nocn">nocn:136365</PrivateCode>
 							<Name>First York Limited</Name>
 							<ShortName>First</ShortName>
 							<TradingName>First York</TradingName>
@@ -7370,7 +7378,7 @@ Free to use under a Creative Commons license.
 							<roles>
 								<ResponsibilityRoleAssignment version="fxc:v1.0" id="fxc:FXC_metadata:DfT">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" versionRef="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" versionRef="nptg:v2.1"/>
 								</ResponsibilityRoleAssignment>
@@ -7496,13 +7504,17 @@ Free to use under a Creative Commons license.
 					<PricingParameterSet id="fxc:Common_Resources" version="fxc:v1.0">
 						<priceUnits>
 							<PriceUnit id="fxc:GBP" version="fxc:v1.0">
+								<privateCodes>
+									<PrivateCode>£</PrivateCode>
+								</privateCodes>
 								<Name>Pound Sterling</Name>
-								<PrivateCode>£</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 							<PriceUnit id="fxc:EUR" version="fxc:v1.0">
+								<privateCodes>
+									<PrivateCode>€</PrivateCode>
+								</privateCodes>
 								<Name>Euro</Name>
-								<PrivateCode>€</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 						</priceUnits>
@@ -7581,10 +7593,10 @@ Free to use under a Creative Commons license.
 						<DistributionChannel id="fxc:online" version="fxc:v1.0">
 							<ShortName>Internet sales</ShortName>
 							<alternativeNames>
-								<AlternativeName order="1" id="fxc:online_de" version="fxc:v1.0">
+								<AlternativeName id="fxc:online_de-1" version="fxc:v1.0">
 									<Name lang="de">Internetverkauf</Name>
 								</AlternativeName>
-								<AlternativeName order="1" id="fxc:online_fr" version="fxc:v1.0">
+								<AlternativeName id="fxc:online_fr-1" version="fxc:v1.0">
 									<Name lang="fr">A vendre par l'internet</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -7612,10 +7624,10 @@ Free to use under a Creative Commons license.
 						<DistributionChannel id="fxc:at_counter" version="fxc:v1.0">
 							<ShortName>Ticket counter sale</ShortName>
 							<alternativeNames>
-								<AlternativeName order="1" id="fxc:at_counter_de" version="fxc:v1.0">
+								<AlternativeName id="fxc:at_counter_de-1" version="fxc:v1.0">
 									<Name lang="de">Schalter</Name>
 								</AlternativeName>
-								<AlternativeName order="1" id="fxc:at_counter_fr" version="fxc:v1.0">
+								<AlternativeName id="fxc:at_counter_fr-1" version="fxc:v1.0">
 									<Name lang="fr">A vendre par le guichet</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -7804,15 +7816,6 @@ Free to use under a Creative Commons license.
 						<DefaultSystemOfUnits>SiKilometresAndMetres</DefaultSystemOfUnits>
 						<DefaultCurrency>GBP</DefaultCurrency>
 					</FrameDefaults>
-					<versions>
-						<Version id="fxc:v1.0" version="any">
-							<ValidBetween>
-								<FromDate>2019-01-01T01:01:01Z</FromDate>
-							</ValidBetween>
-							<Description>FXC version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<typesOfValue>
 						<!-- ======== Code sets ========= -->
 						<ValueSet version="fxc:v1.0" id="fxc:PointsOfInterest_Classifications" classOfValues="PointOfInterestClassification">

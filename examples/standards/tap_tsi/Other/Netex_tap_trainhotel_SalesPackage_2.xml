@@ -45,10 +45,10 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 						<GroupOfServices id="thx:Miro" version="any">
 							<Name>Trains for Miro</Name>
 							<members>
-								<GroupOfServicesMember id="thx:Miro" order="1" version="any">
+								<GroupOfServicesMember id="thx:Miro@01" order="1" version="any">
 									<TrainNumberRef ref="thx:475" version="01"/>
 								</GroupOfServicesMember>
-								<GroupOfServicesMember id="thx:Miro" order="2" version="any">
+								<GroupOfServicesMember id="thx:Miro@02" order="2" version="any">
 									<TrainNumberRef ref="thx:477" version="01"/>
 								</GroupOfServicesMember>
 							</members>
@@ -56,10 +56,10 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 						<GroupOfServices id="thx:Goya" version="any">
 							<Name>Trains for Goya</Name>
 							<members>
-								<GroupOfServicesMember id="thx:Goya" order="1" version="any">
+								<GroupOfServicesMember id="thx:Goya@01" order="1" version="any">
 									<TrainNumberRef ref="thx:407" version="01"/>
 								</GroupOfServicesMember>
-								<GroupOfServicesMember id="thx:Goya" order="2" version="any">
+								<GroupOfServicesMember id="thx:Goya@02" order="2" version="any">
 									<TrainNumberRef ref="thx:409" version="01"/>
 								</GroupOfServicesMember>
 							</members>
@@ -3359,7 +3359,7 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 								<RequiresReservation>true</RequiresReservation>
 							</ConditionSummary>
 							<validityParameterAssignments>
-								<GenericParameterAssignment order="1" id="thx:Train_Hotel" version="01">
+								<GenericParameterAssignment order="1" id="thx:Train_Hotel@01" version="01">
 									<Name lang="fr">Accommodation classes</Name>
 									<TypeOfAccessRightAssignmentRef version="any" ref="thx:canAccess"/>
 									<validityParameters>
@@ -3367,7 +3367,7 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 										<TypeOfFareProductRef ref="thx:TypeOfFareProduct:Train_Hotel" version="any"/>
 									</validityParameters>
 								</GenericParameterAssignment>
-								<GenericParameterAssignment order="2" id="thx:Train_Hotel" version="01">
+								<GenericParameterAssignment order="2" id="thx:Train_Hote@02" version="01">
 									<Name lang="fr">Series </Name>
 									<TypeOfAccessRightAssignmentRef version="any" ref="thx:canAccess"/>
 									<ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
@@ -3378,7 +3378,7 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 										<SeriesConstraintRef order="1" ref="thx:SalvadorDali" version="01"/>
 									</validityParameters>
 								</GenericParameterAssignment>
-								<GenericParameterAssignment order="3" id="thx:Train_Hotel" version="01">
+								<GenericParameterAssignment order="3" id="thx:Train_Hotel@03" version="01">
 									<Name lang="fr">ConditionsOfUse </Name>
 									<TypeOfAccessRightAssignmentRef version="any" ref="thx:conditionOfUse"/>
 									<limitations>
@@ -3436,10 +3436,12 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 					<!-- ====SALES OFFER PACKAGE ========     -->
 					<salesOfferPackages>
 						<SalesOfferPackage id="thx:Adulte" version="01">
+							<privateCodes>
+								<PrivateCode>PT00AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Adulte</Name>
 							<Description lang="fr">Sans condition</Description>
-							<PrivateCode>PT00AD</PrivateCode>
-							<TypeOfSalesOfferPackageRef ref="thx:TypeOfSalesOfferPackage:TS" version="any"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="thx:TypeOfSalesOfferPackage:TS"/>
 							<ConditionSummary>
 								<CanBreakJourney>false</CanBreakJourney>
 								<IsRefundable>true</IsRefundable>
@@ -3464,10 +3466,12 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="thx:Enfant" version="01">
+							<privateCodes>
+								<PrivateCode>PT0012</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Enfant</Name>
 							<Description lang="fr">Enfants de 4 à moins de 12 ans le jour du voyage</Description>
-							<PrivateCode>PT0012</PrivateCode>
-							<TypeOfSalesOfferPackageRef ref="thx:TypeOfSalesOfferPackage:TS" version="any"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="thx:TypeOfSalesOfferPackage:TS"/>
 							<ConditionSummary>
 								<CanBreakJourney>false</CanBreakJourney>
 								<IsRefundable>true</IsRefundable>
@@ -3502,10 +3506,12 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="thx:Loisir" version="01">
+							<privateCodes>
+								<PrivateCode>ND00AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Loisir</Name>
 							<Description lang="fr">Aller/Retour obligatoire</Description>
-							<PrivateCode>ND00AD</PrivateCode>
-							<TypeOfSalesOfferPackageRef ref="thx:TypeOfSalesOfferPackage:AR" version="any"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="thx:TypeOfSalesOfferPackage:AR"/>
 							<ConditionSummary>
 								<CanBreakJourney>false</CanBreakJourney>
 								<IsRefundable>true</IsRefundable>
@@ -3538,10 +3544,12 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="thx:Prems" version="01">
+							<privateCodes>
+								<PrivateCode>PP05AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Prems</Name>
 							<Description lang="fr">Achat jusqu_à J-14. Places limitées.</Description>
-							<PrivateCode>PP05AD</PrivateCode>
-							<TypeOfSalesOfferPackageRef ref="thx:TypeOfSalesOfferPackage:TS" version="any"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="thx:TypeOfSalesOfferPackage:TS"/>
 							<ConditionSummary>
 								<CanBreakJourney>false</CanBreakJourney>
 								<IsRefundable>false</IsRefundable>
@@ -3581,10 +3589,12 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="thx:MiniADeux" version="01">
+							<privateCodes>
+								<PrivateCode>PP05AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">MiniADeux</Name>
 							<Description lang="fr">SAchat jusqu_à J-14. Places limitées. 2 personnes voyageant ensemble</Description>
-							<PrivateCode>PP05AD</PrivateCode>
-							<TypeOfSalesOfferPackageRef ref="thx:TypeOfSalesOfferPackage:TS" version="any"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="thx:TypeOfSalesOfferPackage:TS"/>
 							<ConditionSummary>
 								<CanBreakJourney>false</CanBreakJourney>
 								<IsRefundable>false</IsRefundable>
@@ -3624,6 +3634,9 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="thx:Duo" version="01">
+							<privateCodes>
+								<PrivateCode>PE07AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Duo</Name>
 							<Description lang="fr">2 personnes voyageant ensemble (3). Places limitées. Compartiment "Famille" sauf en classe A</Description>
 							<noticeAssignments>
@@ -3632,8 +3645,7 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 									<Mark>(3)</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>PE07AD</PrivateCode>
-							<TypeOfSalesOfferPackageRef ref="thx:TypeOfSalesOfferPackage:TS" version="any"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="thx:TypeOfSalesOfferPackage:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>
@@ -3678,6 +3690,9 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="thx:espace_plus" version="01">
+							<privateCodes>
+								<PrivateCode>PE08AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">espace_plus</Name>
 							<Description lang="fr">3 ou 4 personnes voyageant ensemble. Compartiment "Famille"</Description>
 							<noticeAssignments>
@@ -3686,8 +3701,7 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 									<Mark>(4)</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>PE08AD</PrivateCode>
-							<TypeOfSalesOfferPackageRef ref="thx:TypeOfSalesOfferPackage:TS" version="any"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="thx:TypeOfSalesOfferPackage:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>
@@ -3728,6 +3742,9 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="thx:Jeune" version="01">
+							<privateCodes>
+								<PrivateCode>PT0026</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Jeune</Name>
 							<Description lang="fr">De 12 à moins de 26 ans le jour du voyage</Description>
 							<noticeAssignments>
@@ -3736,8 +3753,7 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 									<Mark>(5)</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>PT0026</PrivateCode>
-							<TypeOfSalesOfferPackageRef ref="thx:TypeOfSalesOfferPackage:TS" version="any"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="thx:TypeOfSalesOfferPackage:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>
@@ -3773,6 +3789,9 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="thx:Senior" version="01">
+							<privateCodes>
+								<PrivateCode>PT0060</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Senior</Name>
 							<Description lang="fr">Avoir au moins 60 ans le jour du voyage</Description>
 							<noticeAssignments>
@@ -3781,8 +3800,7 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 									<Mark>@</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>PT0060</PrivateCode>
-							<TypeOfSalesOfferPackageRef ref="thx:TypeOfSalesOfferPackage:TS" version="any"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="thx:TypeOfSalesOfferPackage:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>
@@ -3817,10 +3835,12 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="thx:Congress_Salons" version="01">
+							<privateCodes>
+								<PrivateCode>CN20AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Congrès _ Salons</Name>
 							<Description lang="fr">Sur présentation d_un justificatif à dates spécifiques (mail de confirmation ou billet d_entrée)</Description>
-							<PrivateCode>CN20AD</PrivateCode>
-							<TypeOfSalesOfferPackageRef ref="thx:TypeOfSalesOfferPackage:AR" version="any"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="thx:TypeOfSalesOfferPackage:AR"/>
 							<ConditionSummary>
 								<CanBreakJourney>false</CanBreakJourney>
 								<IsRefundable>true</IsRefundable>
@@ -3854,6 +3874,9 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="thx:Pass" version="01">
+							<privateCodes>
+								<PrivateCode>EP00AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Pass</Name>
 							<Description lang="fr">Titulaire d_un Pass couvrant au moins un des pays du parcours</Description>
 							<noticeAssignments>
@@ -3866,8 +3889,7 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 									<Mark>(7)</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>EP00AD</PrivateCode>
-							<TypeOfSalesOfferPackageRef ref="thx:TypeOfSalesOfferPackage:TS" version="any"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="thx:TypeOfSalesOfferPackage:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>
@@ -3902,10 +3924,12 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="thx:Groupe_Adulte_s" version="01">
+							<privateCodes>
+								<PrivateCode>GR00AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Groupe Adulte (TS)</Name>
 							<Description lang="fr">Minimum 12 adultes. Demande effectuée par le client au 0810 879 479 (Agence Commerciale Voyageurs)</Description>
-							<PrivateCode>GR00AD</PrivateCode>
-							<TypeOfSalesOfferPackageRef ref="thx:TypeOfSalesOfferPackage:TS" version="any"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="thx:TypeOfSalesOfferPackage:TS"/>
 							<ConditionSummary>
 								<CanBreakJourney>false</CanBreakJourney>
 								<IsRefundable>true</IsRefundable>
@@ -3946,10 +3970,12 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="thx:Groupe_Adulte_Ar" version="01">
+							<privateCodes>
+								<PrivateCode>GR02AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Groupe Adulte (TS)</Name>
 							<Description lang="fr">Minimum 12 adultes. Demande effectuée par le client au 0810 879 479 (Agence Commerciale Voyageurs)</Description>
-							<PrivateCode>GR02AD</PrivateCode>
-							<TypeOfSalesOfferPackageRef ref="thx:TypeOfSalesOfferPackage:AR" version="any"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="thx:TypeOfSalesOfferPackage:AR"/>
 							<ConditionSummary>
 								<CanBreakJourney>false</CanBreakJourney>
 								<IsRefundable>true</IsRefundable>
@@ -3990,6 +4016,9 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="thx:Guide_Handicape" version="01">
+							<privateCodes>
+								<PrivateCode>GG99AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Guide d_handicapé ou d_aveugle</Name>
 							<Description lang="fr">L_handicapé ou l_aveugle doivent être titulaire d_une carte d_invalidité. Pour un handicapé en fauteuil roulant, celui-ci doit être pliable.</Description>
 							<noticeAssignments>
@@ -3998,8 +4027,7 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 									<Mark>@</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>GG99AD</PrivateCode>
-							<TypeOfSalesOfferPackageRef ref="thx:TypeOfSalesOfferPackage:TS" version="any"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="thx:TypeOfSalesOfferPackage:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>
@@ -4034,6 +4062,9 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="thx:Fip_Loisir" version="01">
+							<privateCodes>
+								<PrivateCode>EM01AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Fip_Loisir</Name>
 							<Description lang="fr">Carte FIP</Description>
 							<noticeAssignments>
@@ -4042,8 +4073,7 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 									<Mark>(7)</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>EM01AD</PrivateCode>
-							<TypeOfSalesOfferPackageRef ref="thx:TypeOfSalesOfferPackage:TS" version="any"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="thx:TypeOfSalesOfferPackage:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>
@@ -4079,6 +4109,9 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="thx:FipService" version="01">
+							<privateCodes>
+								<PrivateCode>CT02AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">FIP Service</Name>
 							<Description lang="fr">Sur présentation de la Carte FIP</Description>
 							<noticeAssignments>
@@ -4087,8 +4120,7 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 									<Mark>(7)</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>CT02AD</PrivateCode>
-							<TypeOfSalesOfferPackageRef ref="thx:TypeOfSalesOfferPackage:TS" version="any"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="thx:TypeOfSalesOfferPackage:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>
@@ -4135,6 +4167,9 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="thx:Enfant_Partegean_un_Lit" version="01">
+							<privateCodes>
+								<PrivateCode>PE0112</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Enfant Partegeant Un Lit</Name>
 							<Description lang="fr">Cabine entièrement réservée. Compartiment " Famille "</Description>
 							<noticeAssignments>
@@ -4143,8 +4178,7 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 									<Mark>(8)</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>PE0112</PrivateCode>
-							<TypeOfSalesOfferPackageRef ref="thx:TypeOfSalesOfferPackage:TS" version="any"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="thx:TypeOfSalesOfferPackage:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>
@@ -4178,20 +4212,22 @@ This Variation uses a single  "Train Hotel" FARE PRODUCT and multiple SALES OFFE
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="thx:Animaux_Domestiques" version="01">
+							<privateCodes>
+								<PrivateCode>CH50CH</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Animaux domestiques</Name>
 							<Description lang="fr">Cabine entièrement réservée (10). Compartiment "famille"</Description>
 							<noticeAssignments>
-								<NoticeAssignment order="1" id="thx:Animaux_Domestiques@Animaux_Domestiques@09" version="01">
+								<NoticeAssignment order="1" id="thx:Animaux_Domestiques@Animaux_Domestiques@01" version="01">
 									<NoticeRef ref="thx:Product@Animaux_Domestiques@09" version="01"/>
 									<Mark>(9)</Mark>
 								</NoticeAssignment>
-								<NoticeAssignment order="2" id="thx:Animaux_Domestiques@Chiens_Guide_DAveugle@10" version="01">
+								<NoticeAssignment order="2" id="thx:Animaux_Domestiques@Chiens_Guide_DAveugle@02" version="01">
 									<NoticeRef ref="thx:Product@Chiens_Guide_DAveugle@10" version="01"/>
 									<Mark>(10)</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>CH50CH</PrivateCode>
-							<TypeOfSalesOfferPackageRef ref="thx:TypeOfSalesOfferPackage:TS" version="any"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="thx:TypeOfSalesOfferPackage:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>

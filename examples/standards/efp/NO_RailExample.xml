@@ -1,0 +1,1556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<!-- 
+Hege Dreiem <hege.dreiem@entur.org>
+Attachments
+Tue, 14 Nov 2023, 08:31
+to me
+
+Hi Nick,
+
+
+I have written up an example from rail fares in Norway for short and mid range journeys, partly as preparation for the next EU fares profile meeting, and partly for internal use - these were some of the first fares we implemented using Transmodel and NeTEx concepts and we need to do some restructuring based on what we’ve learned over the last few years. I´ll try to expand this a little further before the next fares profile meeting, adding a few more products and perhaps some supplement products. 
+
+
+As you probably know by now, we are using derived fares for rail in Norway. As derived fares are outside scope for the profile, I’ve added alternatives to show both precalculated prices and the pricing rules necessary to derive the prices - although I’m not quite happy with the pricing rules yet. The base prices and  pricing rules are organised into FareTables in order to put them into separate Frames, and I´ve added a TypeOfFareTable to tell the base prices from the pricing rules.
+
+
+
+I have tried to structure the example using VersionFrames and FareStructureElements according to the discussions in the Fare profile meetings, which means that the example is a mix of existing and theoretical elements, but I hope it’s still readable. Unfortunately, data export is not a top priority for Entur so most of the xml is hand coded.
+
+
+A few points that may be of interest:
+
+The use of the distance unit called ‘TEN’ (which literally translates as ‘Fare Unit’) is mandatory for single and period tickets on most rail in Norway. The distances between the rail stations are set and maintained by the Norwegian Railway Directorate. When travelling more than one leg the distance in TEN should be looked up based on the total trip, and not for each leg individually.
+
+
+The rail operators require the single tickets to be sold to a specific departure. For longer rail journeys the fare products usually require a seat reservation, but for shorter trips a seat reservation is usually not required. I am not sure how the requirement that one (or more) DatedServiceJourneys should be specified before the ticket can be bought is best put into the product definition, any ideas would be appreciated. 
+
+-->
+	<PublicationTimestamp>2023-06-01T07:53:56.296</PublicationTimestamp>
+	<ParticipantRef>VYG</ParticipantRef>
+	<dataObjects>
+		<!-- 
+        Encodes some of the VY fare system for Østlandet (eastern part of Norway)
+        Products include single tickets (stage based and point-to-point) with and without FaraQuotas, period tickets (stage and p2p) 
+        
+        There is one composite frame for common elements, with one ServiceFrame and a FareFrame with Tariff containing common FareStructureElements.
+        There are separate COMPOSITE FRAMEs for single trip products and period products. Product definition and prices are placed in separate frames.
+        There are two alternatives frames for prices, one using derived fares based on how the data are currently modeled, and one using precalulated prices. 
+        Does not include multiple languages, in real implementation AlternativeText is used to support name + description in multiple languages
+        
+        
+        The products:
+        
+        Enkeltbillett (Single ticket): 
+        * Uses Geographical Intervals to define fares based on distance (termed TEN for TakstENhet) rather than the origin-destination direcly
+        * Concessions for some user profiles (infant, child, senior, military, student). For UserProfile 'military' and 'student', there is a minimum
+            amount
+        * Access to all train lines in the Operators network except the line Bratsbergbanen, and allows access to one bus line Lillehammer-Trondheim. 
+            The included/excluded lines are modelled on the FareStructureElement for GeographicalIntervals as these requirements apply to all products 
+            that use TEN, but it could have been a separate FareStructureElement?    
+        * Interchange is allowed and more than one ride should be represented by the same ValidableElement. The price should be calculated based 
+            on the total distance if there are interchanges. 
+        * The ticket is only valid for the specified departure(s), and is valid from the start of the first ride to the end of the last ride.
+        * No seat reservation is included, the traveller may use any available seat
+        * Some trains are composed of wagons where seat reservations are available as well as wagons with non-reservable seats. The single ticket 
+            allows the traveller to sit in the reservable wagons if there are available seats, but must move if another traveller has reserved that seat.
+        * Can buy up to 90days in advance
+        * Refundable, exchangeable, transferable - not included for now
+        * One sales package with the single ticket and several optional SupplementProducts. Only a few DistributionChannels are included in this example
+        
+        
+        Family Ticket (group variation of the single ticket):
+        * One (or two) adult that pays regular fare can bring up to 2 children aged 6-17 free of charge on weekends. The adult can be anyone older than 18 
+        (UserProfiles adult, senior, military or student).
+        * Uses the same Geographical Intervals as the Single Ticket as base price
+        * Only available in short periods of time and/or specified lines, e.g. all lines in december, or a specified line in february. Modelled as limitations
+            on the SalesOfferPackages. The operator would like to quickly create new variants that can be sold for a limited period of time, e.g. winter holidays, concerts etc.
+        * Although the operator often runs marketing campaigns to promote the familiy ticket/discount, the operator do not require the family ticket to be a separate 
+            product. It is modelled as a separate product in this example to make it clearer that we need different FareStructureElements (Group, FareDemandFactor) than the normal 
+            single ticket. This will make for simpler product definitions but perhaps not simpler pricing
+        * The operator wants to try out different group definitions, e.g. discounted CompanionProfiles rather than no discount/free, two adults rather than just one adult etc.
+            The discounts should be cumulative to the normal UserProfile discounts. Not included in the example, but could be added as separate GroupTicket options later?
+        
+        Lavpris (lowfare):
+        * Uses Geographical Intervals as base price, combined with FareQuotas to discount the base price based on the demand for each departure and
+            how long in advance the ticket is bought. The possible discounts are statically defined, but the availability of each quota for a DatedServiceJourney 
+            is handled by the fare engine and a yielding engine. 
+        * No concessions except for infants (free of charge)    
+        * Interchange is allowed. The FareQuotas apply to each leg separately, so that two legs can use different quotas. For trips with more than one leg there should be 
+            one ValidableElement for each leg in the trip in the offer 
+        * Not refundable or exhchangeable
+        
+        
+        TODO: Lokal Telemark single ticket:
+        * Uses point-to-point fare defined with DistanceMatrixElements between stops on the line 'Bratsbergbanen'
+        * Concessions for user profiles
+        * Applies to only one line
+        * No interchange
+        * In all other aspects similar to the single ticket
+        
+        TODO: 
+        * Supplement products (seat reservations for single and period tickets, dogs, bicycles, prams, journeyAddons to travel with local buses) 
+        * Period tickets (7,30,365 days)
+        * Kombinasjonsbillett 30 dager (bus and train combination ticket, gives access to one train line and bus travel in a county)
+        
+        
+        -->
+		<CompositeFrame id="VYG:CompositeFrame:commomFareData" version="VYG:CompositeFrame:1">
+			<validityConditions>
+				<ValidBetween>
+					<FromDate>2023-01-01T00:00:00Z</FromDate>
+					<!-- open ended -->
+				</ValidBetween>
+			</validityConditions>
+			<!--- ======= CODESPACEs======== -->
+			<codespaces>
+				<Codespace id="VYG">
+					<Xmlns>vyg</Xmlns>
+					<Description>Fare data</Description>
+				</Codespace>
+				<Codespace id="NSB">
+					<Xmlns>nsb</Xmlns>
+					<Description>Route data</Description>
+				</Codespace>
+				<Codespace id="VYX">
+					<Xmlns>vyx</Xmlns>
+					<Description>Vy bus</Description>
+				</Codespace>
+				<Codespace id="NOG">
+					<Xmlns>nog</Xmlns>
+					<Description>Organisations in public transportation</Description>
+				</Codespace>
+			</codespaces>
+			<FrameDefaults>
+				<!-- define a default codespace so that we dont need to repeat on every element -->
+				<DefaultCodespaceRef ref="VYG"/>
+			</FrameDefaults>
+			<frames>
+				<ResourceFrame id="VYG:ResourceFrame:resources" version="1.0">
+					<!-- European Fare Profile definitions used in example-->
+					<typesOfValue>
+						<ValueSet id="efp:fareStructureElementTypes" version="efp">
+							<values>
+								<TypeOfFareStructureElement id="efp:access" version="efp"/>
+								<TypeOfFareStructureElement id="efp:durations" version="efp"/>
+								<TypeOfFareStructureElement id="efp:eligibility" version="efp"/>
+								<TypeOfFareStructureElement id="efp:groups" version="efp"/>
+								<TypeOfFareStructureElement id="efp:intervals" version="efp">
+									<!-- Use for GeographicalIntervals? -->
+								</TypeOfFareStructureElement>
+								<TypeOfFareStructureElement id="efp:access_when" version="efp"/>
+								<TypeOfFareStructureElement id="efp:quotas" version="efp"/>
+								<TypeOfFareStructureElement id="efp:travel_conditions" version="efp"/>
+							</values>
+						</ValueSet>
+						<ValueSet id="fareTableTypes" version="any">
+							<values>
+								<TypeOfFareTable id="basePrices" version="any"/>
+								<TypeOfFareTable id="pricingRules" version="any"/>
+							</values>
+						</ValueSet>
+					</typesOfValue>
+					<organisations>
+						<Operator id="NOG:Operator:20" version="any">
+							<PrivateCode>20</PrivateCode>
+							<Name lang="nob">Vy Gruppen</Name>
+							<ShortName lang="nob">VYG</ShortName>
+							<Description>Vy-gruppen</Description>
+						</Operator>
+						<Operator id="NOG:Operator:201" version="any">
+							<PrivateCode>201</PrivateCode>
+							<Name lang="nob">Vy Buss</Name>
+							<Description>Vy buss</Description>
+						</Operator>
+					</organisations>
+				</ResourceFrame>
+				<ServiceCalendarFrame id="VYG:ServiceCalendarFrame:RushOgRabatt" version="1.0" responsibilitySetRef="vyg_products:VYG">
+					<Name>Kalender med dager og tider for f.eks. rushtid og rabatter</Name>
+					<contentValidityConditions>
+						<AvailabilityCondition id="VYG:AvailabilityCondition:anyTime" version="1.0">
+							<Name>Alltid</Name>
+							<Description/>
+							<IsAvailable>true</IsAvailable>
+							<dayTypes>
+								<FareDayTypeRef ref="VYG:FareDayType:everyday"/>
+							</dayTypes>
+						</AvailabilityCondition>
+						<AvailabilityCondition id="VYG:AvailabilityCondition:weekends" version="1.0">
+							<Name>Lørdager, søndager</Name>
+							<IsAvailable>true</IsAvailable>
+							<dayTypes>
+								<FareDayTypeRef ref="RUT:FareDayType:weekend"/>
+							</dayTypes>
+						</AvailabilityCondition>
+						<AvailabilityCondition id="VYG:AvailabilityCondition:summer" version="1">
+							<Name>3.06 - 30.09 2023</Name>
+							<FromDate>2023-06-03T00:00:00</FromDate>
+							<ToDate>2023-09-30T23:59:00</ToDate>
+							<!-- inclusive -->
+							<IsAvailable>true</IsAvailable>
+						</AvailabilityCondition>
+					</contentValidityConditions>
+					<dayTypes>
+						<FareDayType id="VYG:FareDayType:everyday" version="1">
+							<Name>Alle dager</Name>
+							<Description>Alle dager, inkludert helligdager</Description>
+							<EarliestTime>00:00:00</EarliestTime>
+							<properties>
+								<PropertyOfDay>
+									<DaysOfWeek>Everyday</DaysOfWeek>
+									<HolidayTypes>AnyDay</HolidayTypes>
+								</PropertyOfDay>
+							</properties>
+						</FareDayType>
+						<FareDayType id="VYG:FareDayType:weekend" version="1">
+							<Name>Helg</Name>
+							<Description>Lørdag Søndag</Description>
+							<EarliestTime>00:00:00</EarliestTime>
+							<properties>
+								<PropertyOfDay>
+									<DaysOfWeek>Saturday Sunday</DaysOfWeek>
+								</PropertyOfDay>
+							</properties>
+						</FareDayType>
+					</dayTypes>
+				</ServiceCalendarFrame>
+				<FareFrame id="VYG:FareFrame:commonElements" version="1.0">
+					<Name>Common</Name>
+					<geographicalUnits>
+						<!--- ====Geographical Unit======== -->
+						<GeographicalUnit id="VYG:GeographicalUnit:TEN" version="1.0">
+							<alternativeTexts>
+								<AlternativeText attributeName="Description" useForLanguage="eng">
+									<Text>Unit for distance between origin-destination used on rail</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<Name>TEN</Name>
+							<Description lang="nob">Takstenhet mellom stasjonspar (felles enhet for distanse på jernbane)</Description>
+						</GeographicalUnit>
+					</geographicalUnits>
+					<tariffs>
+						<!-- Place intervals and fare structure elemenst inside TARIFF   -->
+						<Tariff id="VYG:Tariff:felles" version="1.0">
+							<Name>Common elements</Name>
+							<geographicalIntervals>
+								<GeographicalInterval id="VYG:GeographicalInterval:5d0e2cc3" version="VYG:Version:GSF-c3216b60-6dc1-4b70-982a-9552f1efc64f">
+									<StartGeographicalValue>1</StartGeographicalValue>
+									<EndGeographicalValue>2</EndGeographicalValue>
+									<IntervalType>distance</IntervalType>
+									<GeographicalUnitRef ref="VYG:GeographicalUnit:TEN"/>
+								</GeographicalInterval>
+								<GeographicalInterval id="VYG:GeographicalInterval:081dabfc" version="VYG:Version:GSF-c3216b60-6dc1-4b70-982a-9552f1efc64f">
+									<StartGeographicalValue>2</StartGeographicalValue>
+									<EndGeographicalValue>3</EndGeographicalValue>
+									<IntervalType>distance</IntervalType>
+									<GeographicalUnitRef ref="VYG:GeographicalUnit:TEN"/>
+								</GeographicalInterval>
+								<GeographicalInterval id="VYG:GeographicalInterval:e11be7e1" version="VYG:Version:GSF-c3216b60-6dc1-4b70-982a-9552f1efc64f">
+									<StartGeographicalValue>3</StartGeographicalValue>
+									<EndGeographicalValue>4</EndGeographicalValue>
+									<IntervalType>distance</IntervalType>
+									<GeographicalUnitRef ref="VYG:GeographicalUnit:TEN"/>
+								</GeographicalInterval>
+								<GeographicalInterval id="VYG:GeographicalInterval:dba02ff7" version="VYG:Version:GSF-c3216b60-6dc1-4b70-982a-9552f1efc64f">
+									<StartGeographicalValue>4</StartGeographicalValue>
+									<EndGeographicalValue>5</EndGeographicalValue>
+									<IntervalType>distance</IntervalType>
+									<GeographicalUnitRef ref="VYG:GeographicalUnit:TEN"/>
+								</GeographicalInterval>
+								<GeographicalInterval id="VYG:GeographicalInterval:a2c4d30d" version="VYG:Version:GSF-c3216b60-6dc1-4b70-982a-9552f1efc64f">
+									<StartGeographicalValue>5</StartGeographicalValue>
+									<EndGeographicalValue>6</EndGeographicalValue>
+									<IntervalType>distance</IntervalType>
+									<GeographicalUnitRef ref="VYG:GeographicalUnit:TEN"/>
+								</GeographicalInterval>
+								<!-- etc -->
+								<GeographicalInterval id="VYG:GeographicalInterval:ecd18217" version="VYG:Version:GSF-c3216b60-6dc1-4b70-982a-9552f1efc64f">
+									<StartGeographicalValue>11</StartGeographicalValue>
+									<EndGeographicalValue>12</EndGeographicalValue>
+									<IntervalType>distance</IntervalType>
+									<GeographicalUnitRef ref="VYG:GeographicalUnit:TEN"/>
+								</GeographicalInterval>
+								<GeographicalInterval id="VYG:GeographicalInterval:8807400d" version="VYG:Version:GSF-c3216b60-6dc1-4b70-982a-9552f1efc64f">
+									<StartGeographicalValue>12</StartGeographicalValue>
+									<EndGeographicalValue>13</EndGeographicalValue>
+									<IntervalType>distance</IntervalType>
+									<GeographicalUnitRef ref="VYG:GeographicalUnit:TEN"/>
+								</GeographicalInterval>
+								<!-- etc There are about 2000 intervals -->
+							</geographicalIntervals>
+							<qualityStructureFactors>
+								<FareDemandFactor id="VYG:FareDemandFactor:Anytime" version="1.0">
+									<validityConditions>
+										<AvailabilityConditionRef ref="VYG:AvailabilityCondition:anyTime"/>
+									</validityConditions>
+									<Description>Usa any time of day</Description>
+									<FareDemandType>peak</FareDemandType>
+								</FareDemandFactor>
+								<FareDemandFactor id="VYG:FareDemandFactor:Weekends" version="1.0">
+									<validityConditions>
+										<AvailabilityConditionRef ref="VYG:AvailabilityCondition:weekends"/>
+									</validityConditions>
+									<Description>Saturdays, sundays</Description>
+									<FareDemandType>offPeak</FareDemandType>
+								</FareDemandFactor>
+							</qualityStructureFactors>
+							<fareStructureElements>
+								<!-- The geographical intervals are used by most fare products -->
+								<!-- Fare profile: Should this be classified as TypeOfFareStructure access or intervals? We would like the ServiceJourneys documented 
+                                    in the sales transaction as well, if those are put in a separate FareStructureElement that may be a better fit for the access type? -->
+								<FareStructureElement id="VYG:FareStructureElement:c8dae81a" version="VYG:Version:FSE-cc93564b-328a-491c-a42a-d227d9666492">
+									<Name>Geographical intervals</Name>
+									<TypeOfFareStructureElementRef ref="efp:intervals"/>
+									<!-- Which type (access or intervali) is better? The intervals do not identify where one can travel, only how far  -->
+									<geographicalIntervals>
+										<GeographicalIntervalRef ref="VYG:GeographicalInterval:5d0e2cc3"/>
+										<GeographicalIntervalRef ref="VYG:GeographicalInterval:081dabfc"/>
+										<GeographicalIntervalRef ref="VYG:GeographicalInterval:e11be7e1"/>
+										<GeographicalIntervalRef ref="VYG:GeographicalInterval:dba02ff7"/>
+										<GeographicalIntervalRef ref="VYG:GeographicalInterval:a2c4d30d"/>
+										<!-- etc -->
+									</geographicalIntervals>
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="VYG:GenericParameterAssignment:excludedTrainLine" version="1.0" order="1">
+											<!-- Added parameters to describe where travel is allowed -->
+											<Name>Alle tog for operatøren unntatt Bratsbergbanen</Name>
+											<IncludesGroupingType>AND</IncludesGroupingType>
+											<includes>
+												<GenericParameterAssignmentInContext id="1">
+													<IsAllowed>true</IsAllowed>
+													<validityParameters>
+														<OperatorRef ref="NOG:Operator:20"/>
+														<!-- Valid for travel on all lines run by this operator -->
+													</validityParameters>
+												</GenericParameterAssignmentInContext>
+												<GenericParameterAssignmentInContext id="2">
+													<!-- except for this one line that uses a different fare model  -->
+													<IsAllowed>false</IsAllowed>
+													<validityParameters>
+														<LineRef ref="NSB:Line:52"/>
+													</validityParameters>
+												</GenericParameterAssignmentInContext>
+											</includes>
+										</GenericParameterAssignment>
+										<GenericParameterAssignment id="VYG:GenericParameterAssignment:includedBusLine" version="1.0" order="2">
+											<Name>Inkludert Vy Buss linje 125 mellom Lillehammer-Trondheim</Name>
+											<!-- Valid for one line by this operator -->
+											<IsAllowed>true</IsAllowed>
+											<IncludesGroupingType>AND</IncludesGroupingType>
+											<includes>
+												<GenericParameterAssignmentInContext id="3">
+													<validityParameters>
+														<OperatorRef ref="NOG:Operator:201"/>
+													</validityParameters>
+												</GenericParameterAssignmentInContext>
+												<GenericParameterAssignmentInContext id="4">
+													<validityParameters>
+														<LineRef ref="VYX:Line:125"/>
+													</validityParameters>
+												</GenericParameterAssignmentInContext>
+											</includes>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</FareStructureElement>
+								<FareStructureElement id="VYG:FareStructureElement:eligibility" version="1.0">
+									<Name>User types for single tickets</Name>
+									<TypeOfFareStructureElementRef ref="efp:eligibility"/>
+									<GenericParameterAssignment order="1" id="VYG:GenericParameterAssignment:singleTicketEligibility" version="1.0">
+										<LimitationGroupingType>XOR</LimitationGroupingType>
+										<limitations>
+											<UserProfile id="VYG:UserProfile:63375f2a" version="VYG:Version:UP-63131e30-b0f8-490f-a78e-7114df4b8e09">
+												<Name>Barn 0-5 år</Name>
+												<Description>Barn under 6 år reiser gratis.</Description>
+												<UserType>infant</UserType>
+												<MaximumAge>5</MaximumAge>
+												<ProofRequired>noneRequired</ProofRequired>
+											</UserProfile>
+											<UserProfile id="VYG:UserProfile:cda254b8" version="VYG:Version:UP-b8d080ce-93b5-4619-94c5-57c7b779cd41">
+												<Name>Honnør</Name>
+												<Description>Honnørrabatt gis til reisende som har fylt 67 år, eller som er uføretrygdet eller blind. 
+                                                Det gis også til personer som reiser sammen med sin ektefelle eller registrerte partner (ikke samboer)
+                                                med  honnørrabatt, samt til ledsager for blinde. ...</Description>
+												<UserType>senior</UserType>
+												<ProofRequired>identityDocument</ProofRequired>
+											</UserProfile>
+											<UserProfile id="VYG:UserProfile:860c0b33" version="VYG:Version:UP-6607fcf7-a8c6-4f8a-98e1-58f27b12a5f2">
+												<Name>Militær</Name>
+												<Description>Militærrabatt gis kun til vernepliktige i det norske Forsvaret. Rett til rabatt må 
+                                                    dokumenteres med Forsvarets ID-kort eller innkallingsbrev. Les mer på 
+                                                    [s nettsider](https://www.vy.no/togbilletter/om-vare-billetter).</Description>
+												<UserType>military</UserType>
+												<ProofRequired>other</ProofRequired>
+											</UserProfile>
+											<UserProfile id="VYG:UserProfile:e5114529" version="VYG:Version:UP-d852361a-0a0a-4118-8cfe-55d6098fd73d">
+												<Name>Student</Name>
+												<Description>Studentrabatt gjeld frå og med 18 år for enkeltbillett. Studentar frå 18 år til og med 
+                                                    30 år får òg rabatt på 30-dagarsbillett. Skulebevis med foto og stadfesting på betalt 
+                                                    semesteravgift som er gyldig for gjeldande skuleår, utskrive av skular og læreinstitusjoner som 
+                                                    blir omfatta av ordninga, må framvisast. Elevar som ikkje har fått utskrive skulebevis, kan 
+                                                    framlegge eit skriv der skulen dokumenterer at vedkomande er elev ved skulen. ID-kort eller 
+                                                    kopi av pass må framvisast.</Description>
+												<UserType>student</UserType>
+												<MinimumAge>18</MinimumAge>
+												<ProofRequired>studentCard</ProofRequired>
+											</UserProfile>
+											<UserProfile id="VYG:UserProfile:ef3e1c08" version="VYG:Version:UP-d41390ec-caf7-47aa-af06-7acfb3875823">
+												<Name>Barn 6 - 17 år</Name>
+												<Description>Barn fra 6 til og med 17 år får billett med barnerabatt</Description>
+												<UserType>child</UserType>
+												<MinimumAge>6</MinimumAge>
+												<MaximumAge>17</MaximumAge>
+												<ProofRequired>identityDocument</ProofRequired>
+											</UserProfile>
+											<UserProfile id="VYG:UserProfile:865d10e5" version="VYG:Version:UP-b38dd4de-f458-46b4-99d1-9be303e92879">
+												<Name>Voksen</Name>
+												<Description>Reisende fra 18 år, uten krav på moderasjon, må kjøpe voksenbillett.</Description>
+												<UserType>adult</UserType>
+												<MinimumAge>18</MinimumAge>
+												<ProofRequired>noneRequired</ProofRequired>
+											</UserProfile>
+										</limitations>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<FareStructureElement id="VYG:FareStructureElement:TravelConditions" version="1.0">
+									<TypeOfFareStructureElementRef ref="efp:travel_conditions"/>
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="VYG:GenericParameterAssignment:RoundTrip" version="1.0" order="1">
+											<limitations>
+												<RoundTrip id="VYG:RoundTrip:Single" version="1.0">
+													<TripType>single</TripType>
+												</RoundTrip>
+											</limitations>
+										</GenericParameterAssignment>
+										<GenericParameterAssignment id="VYG:GenericParameterAssignment:2b831807" version="VYG:Version:FP-d1b00769-c496-47cf-8222-4e0b3421bd59" order="2">
+											<validityParameters>
+												<FareClass>standardClass</FareClass>
+											</validityParameters>
+										</GenericParameterAssignment>
+										<GenericParameterAssignment id="VYG:GenericParameterAssignment:FrequencyOfUse" version="1.0" order="3">
+											<limitations>
+												<FrequencyOfUse id="VYG:FrequencyOfUse:single" version="1.0">
+													<FrequencyOfUseType>single</FrequencyOfUseType>
+												</FrequencyOfUse>
+											</limitations>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+									<!-- No interchange on this level, we want separate ValidableElements for each leg -->
+								</FareStructureElement>
+							</fareStructureElements>
+						</Tariff>
+					</tariffs>
+				</FareFrame>
+			</frames>
+		</CompositeFrame>
+		<CompositeFrame id="VYG:CompositeFrame:singleTickets" version="1.0">
+			<validityConditions>
+				<ValidBetween>
+					<FromDate>2023-01-01T00:00:00Z</FromDate>
+					<!-- open ended -->
+				</ValidBetween>
+			</validityConditions>
+			<prerequisites>
+				<CompositeFrameRef ref="VYG:CompositeFrame:commomFareData" version="VYG:CompositeFrame:1"/>
+			</prerequisites>
+			<frames>
+				<FareFrame id="VYG:FareFrame:singleTicketProducts" version="1.0">
+					<PricingParameterSet id="VYG:PricingParameterSet:quotas" version="1.0">
+						<!-- Example values -->
+						<pricingRules>
+							<LimitingRule id="VYG:LimitingRule:Lavpris1" version="1.0">
+								<DiscountAsPercentage>10</DiscountAsPercentage>
+								<MinimumLimitPrice>249</MinimumLimitPrice>
+								<!-- Do not offer if the price falls below this amount after discount is applied -->
+							</LimitingRule>
+							<LimitingRule id="VYG:LimitingRule:Lavpris2" version="1.0">
+								<DiscountAsPercentage>20</DiscountAsPercentage>
+								<MinimumLimitPrice>249</MinimumLimitPrice>
+							</LimitingRule>
+							<LimitingRule id="VYG:LimitingRule:Lavpris3" version="1.0">
+								<DiscountAsPercentage>30</DiscountAsPercentage>
+								<MinimumLimitPrice>249</MinimumLimitPrice>
+							</LimitingRule>
+							<LimitingRule id="VYG:LimitingRule:Lavpris4" version="1.0">
+								<DiscountAsPercentage>40</DiscountAsPercentage>
+								<MinimumLimitPrice>249</MinimumLimitPrice>
+							</LimitingRule>
+							<LimitingRule id="VYG:LimitingRule:Lavpris5" version="1.0">
+								<DiscountAsPercentage>50</DiscountAsPercentage>
+								<MinimumLimitPrice>249</MinimumLimitPrice>
+							</LimitingRule>
+							<LimitingRule id="VYG:LimitingRule:Lavpris6" version="1.0">
+								<DiscountAsPercentage>60</DiscountAsPercentage>
+								<MinimumLimitPrice>249</MinimumLimitPrice>
+							</LimitingRule>
+							<LimitingRule id="VYG:LimitingRule:Lavpris7" version="1.0">
+								<DiscountAsPercentage>70</DiscountAsPercentage>
+								<MinimumLimitPrice>249</MinimumLimitPrice>
+							</LimitingRule>
+							<LimitingRule id="VYG:LimitingRule:Lavpris8" version="1.0">
+								<DiscountAsPercentage>80</DiscountAsPercentage>
+								<MinimumLimitPrice>249</MinimumLimitPrice>
+							</LimitingRule>
+							<LimitingRule id="VYG:LimitingRule:Lavpris9" version="1.0">
+								<DiscountAsPercentage>90</DiscountAsPercentage>
+								<MinimumLimitPrice>249</MinimumLimitPrice>
+							</LimitingRule>
+						</pricingRules>
+						<pricingServices>
+							<PricingService id="enturPricingService" version="1.0">
+								<Name>Dynamic pricing engine</Name>
+								<!-- todo describe the service, url, organisation etc -->
+							</PricingService>
+						</pricingServices>
+					</PricingParameterSet>
+					<tariffs>
+						<Tariff id="VYG:Tariff:singleTickets" version="1.0">
+							<Name>VY enkeltbillettprodukter Østlandet</Name>
+							<OperatorRef ref="NOG:Operator:20"/>
+							<!-- A GroupOfOperators for Vy and Vy Buss would have been more accurate? -->
+							<TariffBasis>distance</TariffBasis>
+							<!-- Distance is the basis for these fares even though that FareStructureElement is defined in the common frame -->
+							<qualityStructureFactors>
+								<!---   number of persons in groupTicket -->
+								<QualityStructureFactor id="VYG:QualityStructureFactor:1child" version="1.0">
+									<Name>1 child</Name>
+									<Value>1</Value>
+								</QualityStructureFactor>
+								<QualityStructureFactor id="VYG:QualityStructureFactor:2children" version="1.0">
+									<Name>2 children</Name>
+									<Value>2</Value>
+								</QualityStructureFactor>
+								<QualityStructureFactor id="VYG:QualityStructureFactor:1adult" version="1.0">
+									<Name>1 adult</Name>
+									<Value>1</Value>
+								</QualityStructureFactor>
+								<QualityStructureFactor id="VYG:QualityStructureFactor:2adults" version="1.0">
+									<Name>2 adults</Name>
+									<Value>2</Value>
+								</QualityStructureFactor>
+							</qualityStructureFactors>
+							<fareStructureElements>
+								<FareStructureElement id="VYG:FareStructureElement:2d48e62b" version="VYG:Version:FSE-cbdbc72a-c121-4a40-a4d7-0f08f17931c9">
+									<!-- Lowfare quotas -->
+									<Name>Lavpris kvoter</Name>
+									<PricingServiceRef ref="enturPricingService"/>
+									<!-- will need a pricing service to resolve which quota to use -->
+									<!-- It could be useful to include enough information that it is possible to know the range that the Lavpris product may be sold for,
+                                        so added the pricingrules (not real values). -->
+									<TypeOfFareStructureElementRef ref="efp:quotas"/>
+									<qualityStructureFactors>
+										<FareQuotaFactor id="VYG:FareQuotaFactor:8cc3fbc9" version="VYG:Version:FSE-cbdbc72a-c121-4a40-a4d7-0f08f17931c9">
+											<Name>Priskvote Lavpris 1</Name>
+											<Description>The number of instances of the fare using this price that is available per departure is decided by a yielding engine</Description>
+											<PricingRuleRef ref="VYG:LimitingRule:Lavpris1"/>
+										</FareQuotaFactor>
+										<FareQuotaFactor id="VYG:FareQuotaFactor:01be8085" version="VYG:Version:FSE-cbdbc72a-c121-4a40-a4d7-0f08f17931c9">
+											<Name>Priskvote Lavpris 2</Name>
+											<Description>The number of instances of the fare using this price that is available per departure is decided by a yielding engine</Description>
+											<PricingRuleRef ref="VYG:LimitingRule:Lavpris2"/>
+										</FareQuotaFactor>
+										<FareQuotaFactor id="VYG:FareQuotaFactor:50c608f3" version="VYG:Version:FSE-cbdbc72a-c121-4a40-a4d7-0f08f17931c9">
+											<Name>Priskvote Lavpris 3</Name>
+											<Description>The number of instances of the fare using this price that is available per departure is decided by a yielding engine</Description>
+											<PricingRuleRef ref="VYG:LimitingRule:Lavpris3"/>
+										</FareQuotaFactor>
+										<FareQuotaFactor id="VYG:FareQuotaFactor:f5b1f51b" version="VYG:Version:FSE-cbdbc72a-c121-4a40-a4d7-0f08f17931c9">
+											<Name>Priskvote Lavpris 4</Name>
+											<Description>The number of instances of the fare using this price that is available per departure is decided by a yielding engine</Description>
+											<PricingRuleRef ref="VYG:LimitingRule:Lavpris4"/>
+										</FareQuotaFactor>
+										<FareQuotaFactor id="VYG:FareQuotaFactor:56625270" version="VYG:Version:FSE-cbdbc72a-c121-4a40-a4d7-0f08f17931c9">
+											<Name>Priskvote Lavpris 5</Name>
+											<Description>The number of instances of the fare using this price that is available per departure is decided by a yielding engine</Description>
+											<PricingRuleRef ref="VYG:LimitingRule:Lavpris5"/>
+										</FareQuotaFactor>
+										<FareQuotaFactor id="VYG:FareQuotaFactor:67c05496" version="VYG:Version:FSE-cbdbc72a-c121-4a40-a4d7-0f08f17931c9">
+											<Name>Priskvote Lavpris 6</Name>
+											<Description>The number of instances of the fare using this price that is available per departure is decided by a yielding engine</Description>
+											<PricingRuleRef ref="VYG:LimitingRule:Lavpris6"/>
+										</FareQuotaFactor>
+										<FareQuotaFactor id="VYG:FareQuotaFactor:858c0509" version="VYG:Version:FSE-cbdbc72a-c121-4a40-a4d7-0f08f17931c9">
+											<Name>Priskvote Lavpris 7</Name>
+											<Description>The number of instances of the fare using this price that is available per departure is decided by a yielding engine</Description>
+											<PricingRuleRef ref="VYG:LimitingRule:Lavpris7"/>
+										</FareQuotaFactor>
+										<FareQuotaFactor id="VYG:FareQuotaFactor:1fa9acac" version="VYG:Version:FSE-cbdbc72a-c121-4a40-a4d7-0f08f17931c9">
+											<Name>Priskvote Lavpris 8</Name>
+											<Description>The number of instances of the fare using this price that is available per departure is decided by a yielding engine</Description>
+											<PricingRuleRef ref="VYG:LimitingRule:Lavpris8"/>
+										</FareQuotaFactor>
+										<FareQuotaFactor id="VYG:FareQuotaFactor:e163b842" version="VYG:Version:FSE-cbdbc72a-c121-4a40-a4d7-0f08f17931c9">
+											<Name>Priskvote Lavpris 9</Name>
+											<Description>The number of instances of the fare using this price that is available per departure is decided by a yielding engine</Description>
+											<PricingRuleRef ref="VYG:LimitingRule:Lavpris9"/>
+										</FareQuotaFactor>
+									</qualityStructureFactors>
+								</FareStructureElement>
+								<FareStructureElement id="VYG:FareStructureElement:GroupDefinition" version="1.0">
+									<Name>Group ticket variants for single tickets</Name>
+									<TypeOfFareStructureElementRef ref="efp:groups"/>
+									<!-- As the pricing is perPerson, we need some way of counting persons that can be used in a fare table. Use a QualityFactor for that? -->
+									<qualityStructureFactors>
+										<QualityStructureFactorRef ref="VYG:QualityStructureFactor:1child"/>
+										<QualityStructureFactorRef ref="VYG:QualityStructureFactor:2children"/>
+										<QualityStructureFactorRef ref="VYG:QualityStructureFactor:1adult"/>
+										<QualityStructureFactorRef ref="VYG:QualityStructureFactor:2adults"/>
+									</qualityStructureFactors>
+									<validityParameterAssignments>
+										<GenericParameterAssignment order="1" id="VYG:GenericParameterAssignment:groupEligibility" version="1.0">
+											<limitations>
+												<GroupTicket id="VYG:GroupTicket:Family" version="1.0">
+													<!-- Any of the user profiles adult, senior, student or military paying their normal fare can bring 2 children for free.
+                                                    The definition in this example only applies to the adult user profile -->
+													<Name>1-2 adults paying regular fare can bring up to 2 children free of charge</Name>
+													<MinimumNumberOfPersons>2</MinimumNumberOfPersons>
+													<MaximumNumberOfPersons>3</MaximumNumberOfPersons>
+													<companionProfiles>
+														<CompanionProfile id="VYG:CompanionProfile:FamilyAdult" version="1.0">
+															<Name>En eller to betalende voksen kan ta med inntil to barn gratis</Name>
+															<UserProfileRef ref="VYG:UserProfile:865d10e5"/>
+															<MinimumNumberOfPersons>1</MinimumNumberOfPersons>
+															<MaximumNumberOfPersons>2</MaximumNumberOfPersons>
+															<DiscountBasis>none</DiscountBasis>
+														</CompanionProfile>
+														<CompanionProfile id="VYG:CompanionProfile:FamilyChild" version="1.0">
+															<Name>Inntil to barn reiser gratis sammen med voksen</Name>
+															<UserProfileRef ref="VYG:UserProfile:ef3e1c08"/>
+															<MinimumNumberOfPersons>1</MinimumNumberOfPersons>
+															<MaximumNumberOfPersons>2</MaximumNumberOfPersons>
+															<DiscountBasis>free</DiscountBasis>
+														</CompanionProfile>
+													</companionProfiles>
+													<PricingBasis>perPerson</PricingBasis>
+												</GroupTicket>
+											</limitations>
+										</GenericParameterAssignment>
+										<!-- There are two possibilities for the count of the child companionProfile -->
+										<GenericParameterAssignment id="childCount" version="1.0" order="1">
+											<IncludesGroupingType>XOR</IncludesGroupingType>
+											<includes>
+												<GenericParameterAssignment id="oneChild" version="1.0" order="1">
+													<limitations>
+														<CompanionProfileRef ref="VYG:CompanionProfile:FamilyChild" version="1.0"/>
+													</limitations>
+													<QualityStructureFactorRef ref="VYG:QualityStructureFactor:1person"/>
+												</GenericParameterAssignment>
+												<GenericParameterAssignment id="twoChildren" version="1.0" order="1">
+													<limitations>
+														<CompanionProfileRef ref="VYG:CompanionProfile:FamilyChild" version="1.0"/>
+													</limitations>
+													<QualityStructureFactorRef ref="VYG:QualityStructureFactor:2persons"/>
+												</GenericParameterAssignment>
+											</includes>
+										</GenericParameterAssignment>
+										<!-- There are two possibilities for the count of the adult companionProfile -->
+										<GenericParameterAssignment id="adultCount" version="1.0" order="1">
+											<IncludesGroupingType>XOR</IncludesGroupingType>
+											<includes>
+												<GenericParameterAssignment id="oneAdult" version="1.0" order="1">
+													<limitations>
+														<CompanionProfileRef ref="VYG:CompanionProfile:FamilyAdult" version="1.0"/>
+													</limitations>
+													<QualityStructureFactorRef ref="VYG:QualityStructureFactor:1adult"/>
+												</GenericParameterAssignment>
+												<GenericParameterAssignment id="twoAdults" version="1.0" order="1">
+													<limitations>
+														<CompanionProfileRef ref="VYG:CompanionProfile:FamilyAdult" version="1.0"/>
+													</limitations>
+													<QualityStructureFactorRef ref="VYG:QualityStructureFactor:2adults"/>
+												</GenericParameterAssignment>
+											</includes>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</FareStructureElement>
+								<FareStructureElement id="VYG:FareStructureElement:GroupAccessWhen" version="1.0">
+									<TypeOfFareStructureElementRef ref="efp:access_when"/>
+									<qualityStructureFactors>
+										<FareDemandFactorRef ref="VYG:FareDemandFactor:Weekends"/>
+									</qualityStructureFactors>
+								</FareStructureElement>
+							</fareStructureElements>
+						</Tariff>
+					</tariffs>
+					<usageParameters>
+						<Interchanging id="VYG:Interchanging:0d77044a" version="VYG:Version:INT-dc38f25d-e90c-4bd1-8a55-0cebd86a2ba1">
+							<Name>Overgang tillatt</Name>
+							<CanInterchange>true</CanInterchange>
+							<MaximumTimeToMakeATransfer>PT12H</MaximumTimeToMakeATransfer>
+							<CanBreakJourney>false</CanBreakJourney>
+						</Interchanging>
+						<UsageValidityPeriod id="VYG:UsageValidityPeriod:4a1f7216" version="VYG:Version:64b6e3df-b6b2-41e8-bfe9-2e1ed4fdef3c">
+							<Name>Reisens varighet</Name>
+							<UsageTrigger>startOutboundRide</UsageTrigger>
+							<UsageEnd>endOfTrip</UsageEnd>
+							<ActivationMeans>noneRequired</ActivationMeans>
+							<UsageStartConstraintType>fixed</UsageStartConstraintType>
+						</UsageValidityPeriod>
+					</usageParameters>
+					<fareProducts>
+						<PreassignedFareProduct id="VYG:PreassignedFareProduct:61fa0163" version="VYG:Version:FP-d1b00769-c496-47cf-8222-4e0b3421bd59">
+							<Name lang="nob">Enkeltbillett</Name>
+							<Description lang="nob">- Kan endres og refunderes\n- Ingen bestemt plass\n- [Mer info hos Vy](https://www.vy.no/alt-om-reisen/tog/billetter)</Description>
+							<ChargingMomentType>beforeTravel</ChargingMomentType>
+							<ConditionSummary>
+								<FareStructureType>pointToPointDistanceFare</FareStructureType>
+								<!-- pointToPointDistanceFare rather than stage because we want the origin-destination to 
+                                    be specified when the ticket is bought and not only the distance-->
+								<IsRefundable>true</IsRefundable>
+								<IsExchangable>true</IsExchangable>
+							</ConditionSummary>
+							<validableElements>
+								<ValidableElement id="VYG:ValidableElement:21e747cf" version="VYG:Version:VE-7f710b20-0014-4a36-a26e-aac45b6e41f6">
+									<!-- Each of the choices needed to travel with a specific access right is documented as a FareStructureElement -->
+									<fareStructureElements>
+										<!-- The geographical intervals -->
+										<FareStructureElementRef ref="VYG:FareStructureElement:c8dae81a"/>
+										<!-- The conditions of travel -->
+										<FareStructureElementRef ref="VYG:FareStructureElement:TravelConditions"/>
+										<!-- The eligibility, who can travel -->
+										<FareStructureElementRef ref="VYG:FareStructureElement:eligibility"/>
+									</fareStructureElements>
+									<validityParameterAssignments>
+										<!-- Fare profile: When should these be wrapped in a validityParameterAssignment element, and when should 
+                                            they be added directly? PreassignedFareProduct and FareStructureElement support both, ValidableElement only wrapped as validityParameterAssignment ?-->
+										<GenericParameterAssignment id="VYG:GenericParameterAssignment:e823655b" version="VYG:Version:VE-7f710b20-0014-4a36-a26e-aac45b6e41f6" order="1">
+											<limitations>
+												<InterchangingRef ref="VYG:Interchanging:0d77044a"/>
+											</limitations>
+										</GenericParameterAssignment>
+										<GenericParameterAssignment id="VYG:GenericParameterAssignment:27aeca26" version="VYG:Version:VE-7f710b20-0014-4a36-a26e-aac45b6e41f6" order="2">
+											<limitations>
+												<UsageValidityPeriodRef ref="VYG:UsageValidityPeriod:4a1f7216"/>
+											</limitations>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</ValidableElement>
+							</validableElements>
+							<accessRightsInProduct>
+								<AccessRightInProduct id="VYG:AccessRightInProduct:2036666d" version="VYG:Version:FP-d1b00769-c496-47cf-8222-4e0b3421bd59" order="1">
+									<ValidableElementRef ref="VYG:ValidableElement:21e747cf"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+							<ProductType>singleTrip</ProductType>
+						</PreassignedFareProduct>
+						<PreassignedFareProduct id="VYG:PreassignedFareProduct:FamilyTicket" version="1.0">
+							<Name lang="nob">Enkeltbillett. En voksen kan ta med inntil to barn gratis</Name>
+							<Description lang="nob">- Kan endres og refunderes\n- Ingen bestemt plass\n- [Mer info hos Vy](https://www.vy.no/alt-om-reisen/tog/billetter)</Description>
+							<ChargingMomentType>beforeTravel</ChargingMomentType>
+							<ConditionSummary>
+								<FareStructureType>pointToPointDistanceFare</FareStructureType>
+								<!-- pointToPointDistanceFare vs stageFare? -->
+								<IsRefundable>true</IsRefundable>
+								<IsExchangable>true</IsExchangable>
+							</ConditionSummary>
+							<validableElements>
+								<ValidableElement id="VYG:ValidableElement:GroupValidableElement" version="1.0">
+									<!-- Each of the choices needed to travel with a specific access right is documented as a FareStructureElement -->
+									<fareStructureElements>
+										<!-- The geographical intervals -->
+										<FareStructureElementRef ref="VYG:FareStructureElement:c8dae81a"/>
+										<!-- The conditions of travel -->
+										<FareStructureElementRef ref="VYG:FareStructureElement:TravelConditions"/>
+										<!-- The group definition -->
+										<FareStructureElementRef ref="VYG:FareStructureElement:GroupDefinition"/>
+										<!-- Restrictions on when it is possible to travel with the group ticket -->
+										<FareStructureElementRef ref="VYG:FareStructureElement:GroupAccessWhen"/>
+									</fareStructureElements>
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="VYG:GenericParameterAssignment:InterchangingForGroup" version="1.0" order="1">
+											<limitations>
+												<InterchangingRef ref="VYG:Interchanging:0d77044a"/>
+											</limitations>
+										</GenericParameterAssignment>
+										<GenericParameterAssignment id="VYG:GenericParameterAssignment:UsageValidityForGroup" version="1.0" order="2">
+											<limitations>
+												<UsageValidityPeriodRef ref="VYG:UsageValidityPeriod:4a1f7216"/>
+											</limitations>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</ValidableElement>
+							</validableElements>
+							<accessRightsInProduct>
+								<AccessRightInProduct id="VYG:AccessRightInProduct:GroupAccessRight" version="1.0" order="1">
+									<ValidableElementRef ref="VYG:ValidableElement:GroupValidableElement"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+							<ProductType>singleTrip</ProductType>
+						</PreassignedFareProduct>
+						<PreassignedFareProduct id="VYG:PreassignedFareProduct:cb5c9d2d" version="VYG:Version:FP-b1707b31-f362-4776-8d5a-bccb0570afd9">
+							<Name lang="nob">Lavpris</Name>
+							<!-- Lowfare -->
+							<PricingServiceRef ref="enturPricingService"/>
+							<ChargingMomentType>beforeTravel</ChargingMomentType>
+							<ConditionSummary>
+								<FareStructureType>pointToPointDistanceFare</FareStructureType>
+								<IsRefundable>false</IsRefundable>
+								<IsExchangable>false</IsExchangable>
+								<HasDynamicPricing>true</HasDynamicPricing>
+								<HasQuota>true</HasQuota>
+							</ConditionSummary>
+							<validityParameterAssignments>
+								<GenericParameterAssignment id="VYG:GenericParameterAssignment:InterchangingLowfare" version="1.0" order="1">
+									<limitations>
+										<InterchangingRef ref="VYG:Interchanging:0d77044a"/>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<validableElements>
+								<ValidableElement id="VYG:ValidableElement:34c6b5f0" version="VYG:Version:VE-046bcdd3-f227-42d1-b0e6-7eb1f9191fab">
+									<fareStructureElements>
+										<!-- The geographical intervals -->
+										<FareStructureElementRef ref="VYG:FareStructureElement:c8dae81a"/>
+										<!-- The conditions of travel -->
+										<FareStructureElementRef ref="VYG:FareStructureElement:TravelConditions"/>
+										<!-- The eligibility, who can travel -->
+										<FareStructureElementRef ref="VYG:FareStructureElement:eligibility"/>
+										<!-- Quotas for availability and discounts -->
+										<FareStructureElementRef ref="VYG:FareStructureElement:quotas"/>
+									</fareStructureElements>
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="VYG:GenericParameterAssignment:UsageValidityLowfare" version="1.0" order="2">
+											<limitations>
+												<UsageValidityPeriodRef ref="VYG:UsageValidityPeriod:4a1f7216"/>
+											</limitations>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</ValidableElement>
+							</validableElements>
+							<accessRightsInProduct>
+								<AccessRightInProduct id="VYG:AccessRightInProduct:12bd11a2" version="VYG:Version:FP-b1707b31-f362-4776-8d5a-bccb0570afd9" order="1">
+									<ValidableElementRef ref="VYG:ValidableElement:34c6b5f0"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+						</PreassignedFareProduct>
+					</fareProducts>
+					<salesOfferPackages>
+						<SalesOfferPackage id="VYG:SalesPackage:219e5c31" version="VYG:Version:SP-93719a59-28c4-4e8d-b4ea-c2672c36b58e">
+							<Name>Enkeltbillett</Name>
+							<validityParameterAssignments>
+								<GenericParameterAssignment id="VYG:GenericParameterAssignment:purchaseWindow" version="1.0" order="1">
+									<limitations>
+										<PurchaseWindow id="VYG:PurchaseWindow:8495736d" version="1.0">
+											<PurchaseWhen>advanceOnly</PurchaseWhen>
+											<MaximumPeriodBeforeDeparture>P90D</MaximumPeriodBeforeDeparture>
+										</PurchaseWindow>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<distributionAssignments>
+								<DistributionAssignment id="VYG:DistributionAssignment:dad6164a" version="VYG:Version:SP-93719a59-28c4-4e8d-b4ea-c2672c36b58e" order="1">
+									<DistributionRights>sell refund</DistributionRights>
+									<DistributionChannelRef ref="VYG:DistributionChannel:SalesAndService"/>
+								</DistributionAssignment>
+								<DistributionAssignment id="VYG:DistributionAssignment:033acca5" version="VYG:Version:SP-93719a59-28c4-4e8d-b4ea-c2672c36b58e" order="1">
+									<DistributionRights>sell refund</DistributionRights>
+									<DistributionChannelRef ref="VYG:DistributionChannel:App"/>
+								</DistributionAssignment>
+								<!-- etc -->
+							</distributionAssignments>
+							<salesOfferPackageElements>
+								<SalesOfferPackageElement id="VYG:SalesPackageElement:8e689b27" version="VYG:Version:SP-93719a59-28c4-4e8d-b4ea-c2672c36b58e" order="1">
+									<PreassignedFareProductRef ref="VYG:PreassignedFareProduct:61fa0163"/>
+								</SalesOfferPackageElement>
+								<!-- TODO Supplement products -->
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+						<SalesOfferPackage id="VYG:SalesPackage:GroupTicketDecemberWeekends" version="1.0">
+							<!-- Restrictions are added to the salesOfferPackage, e.g. if family ticket should only apply to a specific line or have a limited validity condition-->
+							<!-- Example: Buy in advance, sales period november, travel period december, only on line R10.  -->
+							<ValidBetween>
+								<FromDate>2023-11-01T00:00:00Z</FromDate>
+								<ToDate>2023-11-30T00:00:00Z</ToDate>
+							</ValidBetween>
+							<Name>Enkeltbillett med familierabatt</Name>
+							<validityParameterAssignments>
+								<GenericParameterAssignment id="VYG:GenericParameterAssignment:purchasePeriod" version="1.0" order="1">
+									<limitations>
+										<PurchaseWindow id="VYG:PurchaseWindow:purchasePeriod" version="1.0">
+											<PurchaseAction>purchase</PurchaseAction>
+											<PurchaseWhen>advanceOnly</PurchaseWhen>
+										</PurchaseWindow>
+									</limitations>
+								</GenericParameterAssignment>
+								<GenericParameterAssignment id="VYG:GenericParameterAssignment:travelPeriod" version="1.0" order="2">
+									<limitations>
+										<UsageValidityPeriod id="VYG:UsageValidityPeriod:travelPeriod" version="1.0">
+											<StartDate>2023-12-01</StartDate>
+											<EndDate>2023-12-31</EndDate>
+										</UsageValidityPeriod>
+									</limitations>
+								</GenericParameterAssignment>
+								<GenericParameterAssignment id="VYG:GenericParameterAssignment:line" version="1.0" order="3">
+									<validityParameters>
+										<LineRef ref="NSB:Line:R10"/>
+									</validityParameters>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<distributionAssignments>
+								<DistributionAssignment id="VYG:DistributionAssignment:App" version="1.0" order="1">
+									<DistributionRights>sell</DistributionRights>
+									<DistributionChannelRef ref="VYG:DistributionChannel:App"/>
+								</DistributionAssignment>
+								<!-- etc -->
+							</distributionAssignments>
+							<salesOfferPackageElements>
+								<SalesOfferPackageElement id="VYG:SalesPackageElement:FamiliyTicket" version="1.0" order="1">
+									<PreassignedFareProductRef ref="VYG:PreassignedFareProduct:FamilyTicket"/>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+					</salesOfferPackages>
+					<!-- TODO SalesOfferPackage for the Lowfare product -->
+				</FareFrame>
+				<!-- PRICING  -->
+				<!-- Two alternatives are included in the example, one with derived prices and one with precalculated prices (for single and family ticket), each in a separate FareFrame. 
+                    There is a FareFrame for PricingParameters for the single tickets, used as a prerequisite for the other pricing frames -->
+				<FareFrame id="VYG:FareFrame:pricingParameters" version="1.0">
+					<PricingParameterSet id="VYG:PricingParameterSet:concessionalDiscounts" version="1.0">
+						<pricingRules>
+							<!-- Discounting rules for concessions on the SingleTicket -->
+							<DiscountingRule id="VYG:DiscountingRule:child50percent" version="1.0">
+								<DiscountAsPercentage>50</DiscountAsPercentage>
+								<CanBeCumulative>false</CanBeCumulative>
+							</DiscountingRule>
+							<DiscountingRule id="VYG:DiscountingRule:infant100percent" version="1.0">
+								<DiscountAsPercentage>100</DiscountAsPercentage>
+							</DiscountingRule>
+							<DiscountingRule id="VYG:DiscountingRule:senior50percent" version="1.0">
+								<DiscountAsPercentage>50</DiscountAsPercentage>
+								<CanBeCumulative>false</CanBeCumulative>
+							</DiscountingRule>
+							<LimitingRule id="VYG:LimitingRule:student25percent" version="1.0">
+								<!-- The discounted price for student should not fall below the limit - adjust fare if neccessary -->
+								<DiscountAsPercentage>25</DiscountAsPercentage>
+								<CanBeCumulative>false</CanBeCumulative>
+								<MinimumPrice>47</MinimumPrice>
+							</LimitingRule>
+							<LimitingRule id="VYG:LimitingRule:military90percent" version="1.0">
+								<!-- The discounted price for military should not fall below the limit - adjust fare if neccessary -->
+								<DiscountAsPercentage>90</DiscountAsPercentage>
+								<CanBeCumulative>false</CanBeCumulative>
+								<MinimumPrice>47</MinimumPrice>
+							</LimitingRule>
+							<DiscountingRule id="VYG:DiscountingRule:noConcession" version="1.0">
+								<DiscountAsPercentage>0</DiscountAsPercentage>
+								<CanBeCumulative>true</CanBeCumulative>
+							</DiscountingRule>
+							<!-- Discounting rules for the Family Ticket, these build on the regular concessional discounts (chained pricing rules)  -->
+							<DiscountingRule id="VYG:DiscountingRule:adultInFamilyTicket" version="1.0">
+								<PricingRuleRef ref="VYG:DiscountingRule:noConcession"/>
+								<DiscountAsPercentage>0</DiscountAsPercentage>
+								<CanBeCumulative>true</CanBeCumulative>
+							</DiscountingRule>
+							<DiscountingRule id="VYG:DiscountingRule:childInFamilyTicket" version="1.0">
+								<PricingRuleRef ref="VYG:DiscountingRule:child50percent"/>
+								<DiscountAsPercentage>100</DiscountAsPercentage>
+								<CanBeCumulative>true</CanBeCumulative>
+							</DiscountingRule>
+						</pricingRules>
+						<roundings>
+							<Rounding id="VYG:Rounding:Split" version="1.0">
+								<Name>Avrunding til nærmeste hele krone</Name>
+								<RoundingMethod>split</RoundingMethod>
+							</Rounding>
+							<Rounding id="VYG:Rounding:uptoNine" version="1.0">
+								<Name>Avrunding opp til nærmeste 9 kr</Name>
+								<RoundingMethod>up</RoundingMethod>
+								<RoundingModulus>9</RoundingModulus>
+							</Rounding>
+						</roundings>
+					</PricingParameterSet>
+				</FareFrame>
+				<FareFrame id="VYG:FareFrame:singleTicketsDerivedPrices" version="1.0">
+					<!-- Alternative 1 Base price and derived fares  -->
+					<validityConditions>
+						<ValidBetween>
+							<!-- The prices are usually adjusted 1.February each year -->
+							<FromDate>2023-02-01T00:00:00Z</FromDate>
+							<ToDate>2024-02-01T00:00:00Z</ToDate>
+						</ValidBetween>
+					</validityConditions>
+					<Name>Single ticket prices</Name>
+					<Description>The base prices are provided based on number of TEN units traveled. There are concessions for most user profiles. 
+                        Some of the user profiles have minimum prices</Description>
+					<FrameDefaults>
+						<DefaultCurrency>NOK</DefaultCurrency>
+					</FrameDefaults>
+					<prerequisites>
+						<FareFrameRef ref="VYG:FareFrame:singleTicketProducts" version="1.0"/>
+						<FareFrameRef ref="VYG:FareFrame:pricingParameters" version="1.0"/>
+					</prerequisites>
+					<fareTables>
+						<FareTable id="VYG:FareTable:BasePrice" version="1.0">
+							<Name>GeographicalInterval prices, commonly used as base price</Name>
+							<TypeOfFareTableRef ref="basePrices"/>
+							<usedIn>
+								<TariffRef ref="VYG:Tariff:singleTickets"/>
+							</usedIn>
+							<cells>
+								<Cell id="VYG:Cell:BasePrice1TEN" version="1.0" order="1">
+									<Name>GeographicalInterval base price</Name>
+									<CellPrice id="basePrice1TEN">
+										<Amount>47</Amount>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:GeographicalInterval:5d0e2cc3">
+										<!-- 1TEN -->
+									</PriceableObjectRef>
+								</Cell>
+								<Cell id="VYG:Cell:BasePrice2TEN" version="1.0" order="2">
+									<Name>GeographicalInterval base price</Name>
+									<CellPrice id="basePrice2TEN">
+										<Amount>47</Amount>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:GeographicalInterval:081dabfc">
+										<!-- 2TEN -->
+									</PriceableObjectRef>
+								</Cell>
+								<!-- etc -->
+								<Cell id="VYG:Cell:BasePrice11TEN" version="1.0" order="3">
+									<Name>GeographicalInterval base price</Name>
+									<CellPrice id="basePrice11TEN">
+										<Amount>48</Amount>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:GeographicalInterval:ecd18217">
+										<!-- 11TEN -->
+									</PriceableObjectRef>
+								</Cell>
+								<Cell id="VYG:Cell:BasePrice12TEN" version="1.0" order="4">
+									<Name>GeographicalInterval base price</Name>
+									<CellPrice id="basePrice12TEN">
+										<Amount>52</Amount>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:GeographicalInterval:8807400d">
+										<!-- 12TEN -->
+									</PriceableObjectRef>
+								</Cell>
+								<!-- etc, up to 2000 TEN -->
+							</cells>
+						</FareTable>
+						<FareTable id="VYG:FareTable:SingleTicketPricingRules" version="1.0">
+							<!-- Discounting rules that describe the derived fares for the single ticket product, i.e. concessions on the base price. 
+                                TODO: there is no obvious connection between this fare table with the pricing rules and the one with the base prices for the GeograhpicalIntervals -->
+							<RoundingRef ref="VYG:Rounding:Split"/>
+							<TypeOfFareTableRef ref="pricingRules"/>
+							<pricesFor>
+								<PreassignedFareProductRef ref="VYG:PreassignedFareProduct:61fa0163"/>
+							</pricesFor>
+							<usedIn>
+								<TariffRef ref="VYG:Tariff:singleTickets"/>
+							</usedIn>
+							<cells>
+								<Cell id="VYG:Cell:AdultFare" version="1.0" order="1">
+									<CellPrice id="adultConcession">
+										<!--  TODO If we use a GeographicalIntervalPriceRef here to point out the base price, we will have to create a cell for each GeographicalInterval...  -->
+										<PricingRuleRef ref="VYG:DiscountingRule:noConcession"/>
+										<Ranking>1</Ranking>
+										<!-- When do we need ranking? Apply diskcount with lowest number first? -->
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:865d10e5">
+										<!--Adult -->
+									</PriceableObjectRef>
+								</Cell>
+								<Cell id="VYG:Cell:ChildFare" version="1.0" order="2">
+									<CellPrice id="childConcession">
+										<PricingRuleRef ref="VYG:DiscountingRule:child50percent"/>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:ef3e1c08">
+										<!--Child -->
+									</PriceableObjectRef>
+								</Cell>
+								<Cell id="VYG:Cell:InfantFare" version="1.0" order="3">
+									<CellPrice id="infantConcession">
+										<PricingRuleRef ref="VYG:DiscountingRule:infant100percent"/>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:63375f2a">
+										<!-- Infant -->
+									</PriceableObjectRef>
+								</Cell>
+								<Cell id="VYG:Cell:SeniorFare" version="1.0" order="4">
+									<CellPrice id="seniorConcession">
+										<PricingRuleRef ref="VYG:DiscountingRule:senior50percent"/>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:cda254b8">
+										<!--Senior -->
+									</PriceableObjectRef>
+								</Cell>
+								<Cell id="VYG:Cell:StudentFare" version="1.0" order="5">
+									<CellPrice id="studentConcession">
+										<PricingRuleRef ref="VYG:DiscountingRule:student25percent"/>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:e5114529">
+										<!--Student -->
+									</PriceableObjectRef>
+								</Cell>
+								<Cell id="VYG:Cell:MilitaryFare" version="1.0" order="6">
+									<CellPrice id="MilitaryConcession">
+										<PricingRuleRef ref="VYG:DiscountingRule:military90percent"/>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:860c0b33">
+										<!--Military-->
+									</PriceableObjectRef>
+								</Cell>
+							</cells>
+						</FareTable>
+						<FareTable id="VYG:FareTable:FamilyTicketDerivedPrices" version="1.0">
+							<RoundingRef ref="VYG:Rounding:Split"/>
+							<TypeOfFareTableRef ref="pricingRules"/>
+							<pricesFor>
+								<PreassignedFareProductRef ref="VYG:PreassignedFareProduct:FamilyTicket"/>
+							</pricesFor>
+							<usedIn>
+								<TariffRef ref="VYG:Tariff:singleTickets"/>
+							</usedIn>
+							<cells>
+								<Cell id="VYG:Cell:AdultWithFamily" version="1.0" order="1">
+									<CellPrice id="adultWithFamily">
+										<PricingRuleRef ref="VYG:DiscountingRule:adultInFamilyTicket"/>
+										<Ranking>2</Ranking>
+										<!-- apply after the normal discount for UserProfile -->
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:CompanionProfile:FamilyAdult"/>
+								</Cell>
+								<Cell id="VYG:Cell:ChildWithFamily" version="1.0" order="1">
+									<CellPrice id="childWithFamily">
+										<PricingRuleRef ref="VYG:DiscountingRule:childInFamilyTicket"/>
+										<Ranking>2</Ranking>
+										<!-- apply after the normal discount for UserProfile -->
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:CompanionProfile:FamilyChild"/>
+								</Cell>
+							</cells>
+							<!-- Are we still missing one pricing rule, to add the CompanionProfile prices to get the price for the whole group, or is that 
+                        described clearly enough with the 'perPerson' on the GroupTicket definition? -->
+						</FareTable>
+						<FareTable id="VYG:FareTable:LowFarePricingRules" version="1.0">
+							<RoundingRef ref="VYG:Rounding:uptoNine"/>
+							<TypeOfFareTableRef ref="pricingRules"/>
+							<pricesFor>
+								<PreassignedFareProductRef ref="VYG:PreassignedFareProduct:cb5c9d2d"/>
+								<!-- lowfare -->
+							</pricesFor>
+							<usedIn>
+								<TariffRef ref="VYG:Tariff:singleTickets"/>
+							</usedIn>
+							<cells>
+								<Cell id="VYG:Cell:adultLowfare" version="1.0" order="1">
+									<CellPrice id="adultLowfarePrice">
+										<!-- If we use a GeographicalIntervalPriceRef here to point out the base price, we will have to create a cell for each GeographicalInterval... 
+                                    Now we have a base price from the GeographicIntervals, pricing rules with discounts and limits for the FaraQuotaFacotrs, and the concessions for 
+                                    user profiles in this table. The order of the steps is not quite clear though -->
+										<PricingRuleRef ref="VYG:DiscountingRule:noConcession"/>
+										<Ranking>2</Ranking>
+										<!--Limiting rules from FareQuotas should go first and the concessions second -->
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:865d10e5">
+										<!--Adult -->
+									</PriceableObjectRef>
+								</Cell>
+								<Cell id="VYG:Cell:childLowfare" version="1.0" order="2">
+									<CellPrice id="childLowfarePrice">
+										<PricingRuleRef ref="VYG:DiscountingRule:noConcession"/>
+										<Ranking>2</Ranking>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:ef3e1c08">
+										<!--Child -->
+									</PriceableObjectRef>
+								</Cell>
+								<Cell id="VYG:Cell:InfantLowfare" version="1.0" order="3">
+									<CellPrice id="infantLowfarePrice">
+										<PricingRuleRef ref="VYG:DiscountingRule:infant100percent"/>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:63375f2a">
+										<!-- Infant -->
+									</PriceableObjectRef>
+								</Cell>
+								<Cell id="VYG:Cell:SeniorLowfare" version="1.0" order="4">
+									<CellPrice id="seniorConcession">
+										<PricingRuleRef ref="VYG:DiscountingRule:noConcession"/>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:cda254b8">
+										<!--Senior -->
+									</PriceableObjectRef>
+								</Cell>
+								<Cell id="VYG:Cell:StudentLowfare" version="1.0" order="5">
+									<CellPrice id="studentLowfarePrice">
+										<PricingRuleRef ref="VYG:DiscountingRule:noConcession"/>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:e5114529">
+										<!--Student -->
+									</PriceableObjectRef>
+								</Cell>
+								<Cell id="VYG:Cell:MilitaryLowfare" version="1.0" order="6">
+									<CellPrice id="MilitaryLowfarePrice">
+										<PricingRuleRef ref="VYG:DiscountingRule:noConcession"/>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:860c0b33">
+										<!--Military-->
+									</PriceableObjectRef>
+								</Cell>
+							</cells>
+						</FareTable>
+					</fareTables>
+				</FareFrame>
+				<FareFrame id="VYG:FareFrame:singleTicketPrecalculatedPrices" version="1.0">
+					<!-- Alternative 2 Precalculated fares using RuleStepResult to document the steps in the calculation.
+                        Only a few cells are included in the example -->
+					<validityConditions>
+						<ValidBetween>
+							<FromDate>2023-02-01T00:00:00Z</FromDate>
+							<ToDate>2024-02-01T00:00:00Z</ToDate>
+						</ValidBetween>
+					</validityConditions>
+					<Name>Priser for enkeltbillett</Name>
+					<Description>The base prices are provided based on number of TEN units traveled. There are concessions for most user profiles.Some of the user profiles have minimum prices</Description>
+					<FrameDefaults>
+						<DefaultCurrency>NOK</DefaultCurrency>
+					</FrameDefaults>
+					<prerequisites>
+						<FareFrameRef ref="VYG:FareFrame:pricingParameters"/>
+					</prerequisites>
+					<fareTables>
+						<FareTable id="VYG:FareTable:EnkeltbillettPrecalculatedPrices" version="1.0">
+							<Name>Priser for enkeltbillett </Name>
+							<pricesFor>
+								<PriceableObjectRef ref="VYG:PreassignedFareProduct:61fa0163"/>
+							</pricesFor>
+							<usedIn>
+								<TariffRef ref="VYG:Tariff:singleTickets"/>
+							</usedIn>
+							<EmbargoUntil>2022-11-11T00:00:00Z</EmbargoUntil>
+							<cells>
+								<!-- Adult prices. Only a few cells are included in the example. This example uses explicit cells with CellPrices and refs to the two priceableObjects. Ref to PreassignedFareProduct on table -->
+								<Cell id="VYG:Cell:Adult1TEN" version="1.0" order="1">
+									<Name>GeographicalInterval price for adult</Name>
+									<CellPrice id="adult1TEN" version="1.0">
+										<Amount>47</Amount>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:865d10e5">
+										<!--Adult -->
+									</PriceableObjectRef>
+									<PriceableObjectRef ref="VYG:GeographicalInterval:5d0e2cc3">
+										<!-- 1TEN -->
+									</PriceableObjectRef>
+								</Cell>
+								<Cell id="VYG:Cell:Adult2TEN" version="1.0" order="2">
+									<Name>GeographicalInterval price for adult</Name>
+									<CellPrice id="adult2TEN">
+										<Amount>47</Amount>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:865d10e5">
+										<!--Adult -->
+									</PriceableObjectRef>
+									<PriceableObjectRef ref="VYG:GeographicalInterval:081dabfc">
+										<!-- 2TEN -->
+									</PriceableObjectRef>
+								</Cell>
+								<Cell id="VYG:Cell:Adult11TEN" version="1.0" order="3">
+									<Name>GeographicalInterval price for adult</Name>
+									<CellPrice id="adult11TEN">
+										<Amount>48</Amount>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:865d10e5">
+										<!--Adult -->
+									</PriceableObjectRef>
+									<PriceableObjectRef ref="VYG:GeographicalInterval:ecd18217">
+										<!-- 11TEN -->
+									</PriceableObjectRef>
+								</Cell>
+								<Cell id="VYG:Cell:Adult12TEN" version="1.0" order="4">
+									<Name>GeographicalInterval price for adult</Name>
+									<CellPrice id="adult12TEN">
+										<Amount>52</Amount>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:865d10e5">
+										<!--Adult -->
+									</PriceableObjectRef>
+									<PriceableObjectRef ref="VYG:GeographicalInterval:8807400d">
+										<!-- 12TEN -->
+									</PriceableObjectRef>
+								</Cell>
+								<!-- etc -->
+								<!-- Child prices. Only a few cells are included in the example. This example uses explicit cells with CellPrices and refs to the two priceableObjects. Ref to PreassignedFareProduct on table -->
+								<Cell id="VYG:Cell:Child1TEN" version="1.0" order="5">
+									<Name>GeographicalInterval price for child</Name>
+									<CellPrice id="child1TEN">
+										<Amount>24</Amount>
+										<ruleStepResults>
+											<RuleStepResult id="concession1" order="1">
+												<FarePriceRef ref="adult1TEN"/>
+												<!-- the base price -->
+												<RateUsed>50</RateUsed>
+												<!-- The discount used  -->
+												<AdjustmentAmount>24</AdjustmentAmount>
+												<!-- The difference between base amount and result amount -->
+												<PricingRuleRef ref="VYG:DiscountingRule:child50percent"/>
+												<RoundingRef ref="VYG:Rounding:Split"/>
+											</RuleStepResult>
+										</ruleStepResults>
+										<FarePriceRef ref="adult1TEN"/>
+										<!-- The original base price from which this fare price is derived -->
+										<PricingRuleRef ref="VYG:DiscountingRule:child50percent"/>
+										<!-- This is the pricing rule used to derive the new price -->
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:ef3e1c08">
+										<!--Child -->
+									</PriceableObjectRef>
+									<PriceableObjectRef ref="VYG:GeographicalInterval:5d0e2cc3">
+										<!-- 1TEN -->
+									</PriceableObjectRef>
+								</Cell>
+								<Cell id="VYG:Cell:Child2TEN" version="1.0" order="6">
+									<Name>GeographicalInterval price for child</Name>
+									<CellPrice id="child2TEN">
+										<Amount>24</Amount>
+										<ruleStepResults>
+											<RuleStepResult id="concession2" order="1">
+												<FarePriceRef ref="adult2TEN"/>
+												<!-- the base price -->
+												<RateUsed>50</RateUsed>
+												<!-- The discount used  -->
+												<AdjustmentAmount>24</AdjustmentAmount>
+												<!-- The difference between base amount and result amount -->
+												<PricingRuleRef ref="VYG:DiscountingRule:child50percent"/>
+											</RuleStepResult>
+										</ruleStepResults>
+										<FarePriceRef ref="adult2TEN"/>
+										<!-- The original base price from which this fare price is derived -->
+										<PricingRuleRef ref="VYG:DiscountingRule:child50percent"/>
+										<!-- This is the pricing rule used to derive the new price -->
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:ef3e1c08">
+										<!--Child -->
+									</PriceableObjectRef>
+									<PriceableObjectRef ref="VYG:GeographicalInterval:081dabfc">
+										<!-- 2TEN -->
+									</PriceableObjectRef>
+								</Cell>
+								<Cell id="VYG:Cell:Child11TEN" version="1.0" order="7">
+									<Name>GeographicalInterval price for child</Name>
+									<CellPrice id="child11TEN">
+										<Amount>24</Amount>
+										<!-- The finished amount that should be presented to the traveller -->
+										<ruleStepResults>
+											<RuleStepResult id="concession3" order="1">
+												<FarePriceRef ref="adult11TEN"/>
+												<!-- the base price -->
+												<RateUsed>50</RateUsed>
+												<!-- The discount used  -->
+												<AdjustmentAmount>24</AdjustmentAmount>
+												<!-- The difference between base amount and result amount -->
+												<PricingRuleRef ref="VYG:DiscountingRule:child50percent"/>
+											</RuleStepResult>
+										</ruleStepResults>
+										<FarePriceRef ref="adult11TEN"/>
+										<!-- The original base price from which this fare price is derived -->
+										<PricingRuleRef ref="VYG:DiscountingRule:child50percent"/>
+										<!-- This is the pricing rule used to derive the new price -->
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:ef3e1c08">
+										<!--Child -->
+									</PriceableObjectRef>
+									<PriceableObjectRef ref="VYG:GeographicalInterval:ecd18217">
+										<!-- 11TEN -->
+									</PriceableObjectRef>
+								</Cell>
+								<Cell id="VYG:Cell:Child12TEN" version="1.0" order="8">
+									<Name>GeographicalInterval price for child</Name>
+									<CellPrice>
+										<Amount>26</Amount>
+										<!--Base price 52-->
+										<ruleStepResults>
+											<RuleStepResult id="concession4" order="1">
+												<FarePriceRef ref="adult12TEN"/>
+												<!-- the base price -->
+												<RateUsed>50</RateUsed>
+												<!-- The discount used  -->
+												<AdjustmentAmount>26</AdjustmentAmount>
+												<!-- The difference between base amount and result amount -->
+												<PricingRuleRef ref="VYG:DiscountingRule:child50percent"/>
+											</RuleStepResult>
+										</ruleStepResults>
+										<FarePriceRef ref="adult12TEN"/>
+										<!-- The original base price from which this fare price is derived -->
+										<PricingRuleRef ref="VYG:DiscountingRule:child50percent"/>
+										<!-- This is the pricing rule used to derive the new price -->
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:UserProfile:ef3e1c08">
+										<!--Child -->
+									</PriceableObjectRef>
+									<PriceableObjectRef ref="VYG:GeographicalInterval:8807400d">
+										<!-- 12TEN -->
+									</PriceableObjectRef>
+								</Cell>
+								<!-- etc -->
+							</cells>
+						</FareTable>
+						<FareTable id="VYG:FareTable:GroupTicketPrecalculatedPrices" version="1.0">
+							<!-- QualityFactors are used to count the number of persons travelling.
+                                In the RuleStepResults, the focus this time is on documenting the amount each person in the group adds to the final price of the group-->
+							<Name>Prices for family ticket </Name>
+							<pricesFor>
+								<PriceableObjectRef ref="VYG:PreassignedFareProduct:FamilyTicket"/>
+							</pricesFor>
+							<usedIn>
+								<TariffRef ref="VYG:Tariff:singleTickets"/>
+							</usedIn>
+							<EmbargoUntil>2022-11-11T00:00:00Z</EmbargoUntil>
+							<cells>
+								<Cell id="VYG:Cell:1adult1child" version="1.0" order="1">
+									<Name>Price for 1 adult + 1 child traveling as a group, 1 TEN</Name>
+									<CellPrice>
+										<Amount>47</Amount>
+										<ruleStepResults>
+											<RuleStepResult id="step1" order="1">
+												<Amount>47</Amount>
+												<Currency>NOK</Currency>
+												<AdjustmentAmount>47</AdjustmentAmount>
+												<PricingRuleRef ref="VYG:DiscountingRule:adultInFamilyTicket"/>
+												<Narrative>Normal fare for adult</Narrative>
+											</RuleStepResult>
+											<RuleStepResult id="step2" order="2">
+												<Amount>47</Amount>
+												<Currency>NOK</Currency>
+												<AdjustmentAmount>0</AdjustmentAmount>
+												<PricingRuleRef ref="VYG:DiscountingRule:childInFamilyTicket"/>
+												<Narrative>Children free of charge</Narrative>
+											</RuleStepResult>
+										</ruleStepResults>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:GeographicalInterval:5d0e2cc3">
+										<!-- 1TEN -->
+									</PriceableObjectRef>
+									<PriceableObjectRef ref="VYG:GroupTicket:Family"/>
+									<PriceableObjectRef ref="VYG:CompanionProfile:FamilyAdult"/>
+									<PriceableObjectRef ref="VYG:QualityStructureFactor:1adult"/>
+									<PriceableObjectRef ref="VYG:CompanionProfile:FamilyChild"/>
+									<PriceableObjectRef ref="VYG:QualityStructureFactor:1child"/>
+								</Cell>
+								<Cell id="VYG:Cell:1adult2children" version="1.0" order="1">
+									<Name>Price for 1 adult + 2 children traveling as a group, 1 TEN</Name>
+									<CellPrice>
+										<Amount>47</Amount>
+										<ruleStepResults>
+											<RuleStepResult id="step1" order="1">
+												<Amount>47</Amount>
+												<Currency>NOK</Currency>
+												<AdjustmentAmount>47</AdjustmentAmount>
+												<PricingRuleRef ref="VYG:DiscountingRule:adultInFamilyTicket"/>
+												<Narrative>Normal fare for adult</Narrative>
+											</RuleStepResult>
+											<RuleStepResult id="step2" order="2">
+												<Amount>47</Amount>
+												<Currency>NOK</Currency>
+												<AdjustmentAmount>0</AdjustmentAmount>
+												<PricingRuleRef ref="VYG:DiscountingRule:childInFamilyTicket"/>
+												<Narrative>Child free of charge</Narrative>
+											</RuleStepResult>
+											<RuleStepResult id="step3" order="3">
+												<Amount>47</Amount>
+												<Currency>NOK</Currency>
+												<AdjustmentAmount>0</AdjustmentAmount>
+												<PricingRuleRef ref="VYG:DiscountingRule:childInFamilyTicket"/>
+												<Narrative>Child free of charge</Narrative>
+											</RuleStepResult>
+										</ruleStepResults>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:GeographicalInterval:5d0e2cc3">
+										<!-- 1TEN -->
+									</PriceableObjectRef>
+									<PriceableObjectRef ref="VYG:GroupTicket:Family"/>
+									<PriceableObjectRef ref="VYG:CompanionProfile:FamilyAdult"/>
+									<PriceableObjectRef ref="VYG:QualityStructureFactor:1adult"/>
+									<PriceableObjectRef ref="VYG:CompanionProfile:FamilyChild"/>
+									<PriceableObjectRef ref="VYG:QualityStructureFactor:2children"/>
+								</Cell>
+								<Cell id="VYG:Cell:2adults1child" version="1.0" order="1">
+									<Name>Price for 2 adult + 1 child traveling as a group, 1 TEN</Name>
+									<CellPrice>
+										<Amount>94</Amount>
+										<ruleStepResults>
+											<RuleStepResult id="step1" order="1">
+												<Amount>47</Amount>
+												<Currency>NOK</Currency>
+												<AdjustmentAmount>47</AdjustmentAmount>
+												<PricingRuleRef ref="VYG:DiscountingRule:adultInFamilyTicket"/>
+												<Narrative>Normal fare for adult</Narrative>
+											</RuleStepResult>
+											<RuleStepResult id="step2" order="2">
+												<Amount>94</Amount>
+												<Currency>NOK</Currency>
+												<AdjustmentAmount>47</AdjustmentAmount>
+												<PricingRuleRef ref="VYG:DiscountingRule:adultInFamilyTicket"/>
+												<Narrative>Normal fare for adult</Narrative>
+											</RuleStepResult>
+											<RuleStepResult id="step3" order="3">
+												<Amount>94</Amount>
+												<Currency>NOK</Currency>
+												<AdjustmentAmount>0</AdjustmentAmount>
+												<PricingRuleRef ref="VYG:DiscountingRule:childInFamilyTicket"/>
+												<Narrative>Child free of charge</Narrative>
+											</RuleStepResult>
+										</ruleStepResults>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:GeographicalInterval:5d0e2cc3">
+										<!-- 1TEN -->
+									</PriceableObjectRef>
+									<PriceableObjectRef ref="VYG:GroupTicket:Family"/>
+									<PriceableObjectRef ref="VYG:CompanionProfile:FamilyAdult"/>
+									<PriceableObjectRef ref="VYG:QualityStructureFactor:2adults"/>
+									<PriceableObjectRef ref="VYG:CompanionProfile:FamilyChild"/>
+									<PriceableObjectRef ref="VYG:QualityStructureFactor:1chil"/>
+								</Cell>
+								<Cell id="VYG:Cell:2adults2children" version="1.0" order="1">
+									<Name>Price for 2 adult + 2 children traveling as a group, 1 TEN</Name>
+									<CellPrice>
+										<Amount>94</Amount>
+										<ruleStepResults>
+											<RuleStepResult id="step1" order="1">
+												<Amount>47</Amount>
+												<Currency>NOK</Currency>
+												<AdjustmentAmount>47</AdjustmentAmount>
+												<PricingRuleRef ref="VYG:DiscountingRule:adultInFamilyTicket"/>
+												<Narrative>Normal fare for adult</Narrative>
+											</RuleStepResult>
+											<RuleStepResult id="step2" order="2">
+												<Amount>94</Amount>
+												<Currency>NOK</Currency>
+												<AdjustmentAmount>47</AdjustmentAmount>
+												<PricingRuleRef ref="VYG:DiscountingRule:adultInFamilyTicket"/>
+												<Narrative>Normal fare for adult</Narrative>
+											</RuleStepResult>
+											<RuleStepResult id="step3" order="3">
+												<Amount>94</Amount>
+												<Currency>NOK</Currency>
+												<AdjustmentAmount>0</AdjustmentAmount>
+												<PricingRuleRef ref="VYG:DiscountingRule:childInFamilyTicket"/>
+												<Narrative>Child free of charge</Narrative>
+											</RuleStepResult>
+											<RuleStepResult id="step4" order="4">
+												<Amount>94</Amount>
+												<Currency>NOK</Currency>
+												<AdjustmentAmount>0</AdjustmentAmount>
+												<PricingRuleRef ref="VYG:DiscountingRule:childInFamilyTicket"/>
+												<Narrative>Child free of charge</Narrative>
+											</RuleStepResult>
+										</ruleStepResults>
+									</CellPrice>
+									<PriceableObjectRef ref="VYG:GeographicalInterval:5d0e2cc3">
+										<!-- 1TEN -->
+									</PriceableObjectRef>
+									<PriceableObjectRef ref="VYG:GroupTicket:Family"/>
+									<PriceableObjectRef ref="VYG:CompanionProfile:FamilyAdult"/>
+									<PriceableObjectRef ref="VYG:QualityStructureFactor:2adults"/>
+									<PriceableObjectRef ref="VYG:CompanionProfile:FamilyChild"/>
+									<PriceableObjectRef ref="VYG:QualityStructureFactor:2children"/>
+								</Cell>
+								<!-- etc for the rest of the geographicalIntervals -->
+							</cells>
+						</FareTable>
+					</fareTables>
+				</FareFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

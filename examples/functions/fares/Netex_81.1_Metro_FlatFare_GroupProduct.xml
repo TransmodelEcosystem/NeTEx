@@ -91,7 +91,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 				</Codespace>
 				<Codespace id="myfares">
 					<Xmlns>myfares</Xmlns>
-					<XmlnsUrl>http://www.myfares,com/fares</XmlnsUrl>
+					<XmlnsUrl>http://www.myfares.com/fares</XmlnsUrl>
 					<Description>Fare data</Description>
 				</Codespace>
 			</codespaces>
@@ -114,7 +114,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 							<TypeOfTariffRef version="ntx:v1.0" ref="ntx:flat"/>
 							<fareStructureElements>
 								<FareStructureElement version="1.0" id="myfares:Flat@access">
-									<GenericParameterAssignment order="1" id="myfares:Flat@access" version="1.0">
+									<GenericParameterAssignment id="myfares:Flat@access-1" version="1.0">
 										<TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_access"/>
 										<ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
 										<validityParameters>
@@ -125,7 +125,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 								</FareStructureElement>
 								<FareStructureElement version="1.0" id="myfares:Flat@eligibility">
 									<Name>Eligible user types</Name>
-									<GenericParameterAssignment order="1" id="myfares:Flat@eligibility" version="1.0">
+									<GenericParameterAssignment id="myfares:Flat@eligibility-1" version="1.0">
 										<TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:eligible"/>
 										<LimitationGroupingType>XOR</LimitationGroupingType>
 										<limitations>
@@ -147,7 +147,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 								</FareStructureElement>
 								<FareStructureElement id="myfares:Flat@conditions_of_travel@single" version="1.0">
 									<Name>Conditions of travel</Name>
-									<GenericParameterAssignment version="1.0" order="1" id="myfares:Flat@conditions_of_travel@single">
+									<GenericParameterAssignment version="1.0" id="myfares:Flat@conditions_of_travel@single-1">
 										<Name>Conditions of travel</Name>
 										<TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_use"/>
 										<LimitationGroupingType>AND</LimitationGroupingType>
@@ -171,7 +171,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 								</FareStructureElement>
 								<FareStructureElement id="myfares:Flat@conditions_of_travel@outbound" version="1.0">
 									<Name>Conditions of travel</Name>
-									<GenericParameterAssignment version="1.0" order="1" id="myfares:Flat@conditions_of_travel@outbound">
+									<GenericParameterAssignment version="1.0" id="myfares:Flat@conditions_of_travel@outbound-1">
 										<Name>Conditions of travel</Name>
 										<TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_use"/>
 										<LimitationGroupingType>AND</LimitationGroupingType>
@@ -193,7 +193,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 								</FareStructureElement>
 								<FareStructureElement id="myfares:Flat@conditions_of_travel@inbound" version="1.0">
 									<Name>Conditions of travel</Name>
-									<GenericParameterAssignment version="1.0" order="1" id="myfares:Flat@conditions_of_travel@inbound">
+									<GenericParameterAssignment version="1.0" id="myfares:Flat@conditions_of_travel@inbound-1">
 										<Name>Conditions of travel</Name>
 										<TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_use"/>
 										<LimitationGroupingType>AND</LimitationGroupingType>
@@ -239,7 +239,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 							</validableElements>
 							<!--- ====ACCESS RIGHTs======= -->
 							<accessRightsInProduct>
-								<AccessRightInProduct version="1.0" id="myfares:Single_trip@travel" order="1">
+								<AccessRightInProduct version="1.0" id="myfares:Single_trip@travel-1">
 									<Name>First ride</Name>
 									<IsFirstInSequence>true</IsFirstInSequence>
 									<IsLastInSequence>true</IsLastInSequence>
@@ -272,13 +272,13 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 							</validableElements>
 							<!--- ====ACCESS RIGHTs======= -->
 							<accessRightsInProduct>
-								<AccessRightInProduct version="1.0" id="myfares:Return_trip@travel" order="1">
+								<AccessRightInProduct version="1.0" id="myfares:Return_trip@travel-1">
 									<Name>Outbound  trip</Name>
 									<IsFirstInSequence>false</IsFirstInSequence>
 									<IsLastInSequence>true</IsLastInSequence>
 									<ValidableElementRef version="1.0" ref="myfares:Return_trip@travel@outbound"/>
 								</AccessRightInProduct>
-								<AccessRightInProduct version="1.0" id="myfares:Return_trip@travel" order="2">
+								<AccessRightInProduct version="1.0" id="myfares:Return_trip@travel-2">
 									<Name>Return tripe</Name>
 									<IsFirstInSequence>false</IsFirstInSequence>
 									<IsLastInSequence>true</IsLastInSequence>
@@ -292,7 +292,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 						<SalesOfferPackage version="1.0" id="myfares:Single_trip-SOP@p-ticket@individual">
 							<Name>Individual Single, Paper Ticket </Name>
 							<validityParameterAssignments>
-								<GenericParameterAssignment order="1" id="myfares:Single_trip-SOP@p-ticket@individual" version="1.0">
+								<GenericParameterAssignment id="myfares:Single_trip-SOP@p-ticket@individual-1" version="1.0">
 									<TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:eligible"/>
 									<LimitationGroupingType>XOR</LimitationGroupingType>
 									<limitations>
@@ -303,7 +303,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
 							<salesOfferPackageElements>
-								<SalesOfferPackageElement order="1" version="1.0" id="myfares:Single_trip-SOP@p-ticket@individual">
+								<SalesOfferPackageElement id="myfares:Single_trip-SOP@p-ticket@individual-1" version="1.0">
 									<TypeOfTravelDocumentRef version="any" ref="myfares:paper_ticket"/>
 									<FareProductRef version="1.0" ref="myfares:Single_trip"/>
 								</SalesOfferPackageElement>
@@ -312,7 +312,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 						<SalesOfferPackage version="1.0" id="myfares:Return_trip-SOP@p-ticket@individual">
 							<Name>Individual Return, Paper Ticket </Name>
 							<validityParameterAssignments>
-								<GenericParameterAssignment order="1" id="myfares:Return_trip-SOP@p-ticket@individual" version="1.0">
+								<GenericParameterAssignment id="myfares:Return_trip-SOP@p-ticket@individual-1" version="1.0">
 									<TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:eligible"/>
 									<LimitationGroupingType>XOR</LimitationGroupingType>
 									<limitations>
@@ -323,7 +323,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
 							<salesOfferPackageElements>
-								<SalesOfferPackageElement order="1" version="1.0" id="myfares:Return_trip-SOP@p-ticket@individual">
+								<SalesOfferPackageElement id="myfares:Return_trip-SOP@p-ticket@individual-1" version="1.0">
 									<TypeOfTravelDocumentRef version="any" ref="myfares:paper_ticket"/>
 									<FareProductRef version="1.0" ref="myfares:Return_trip"/>
 								</SalesOfferPackageElement>
@@ -332,7 +332,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 						<SalesOfferPackage version="1.0" id="myfares:Single_trip-SOP@p-ticket@group">
 							<Name>Group Single, Paper Ticket </Name>
 							<validityParameterAssignments>
-								<GenericParameterAssignment order="1" id="myfares:Single_trip-SOP@p-ticket@group" version="1.0">
+								<GenericParameterAssignment id="myfares:Single_trip-SOP@p-ticket@group-1" version="1.0">
 									<TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:eligible"/>
 									<LimitationGroupingType>XOR</LimitationGroupingType>
 									<limitations>
@@ -342,7 +342,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
 							<salesOfferPackageElements>
-								<SalesOfferPackageElement order="1" version="1.0" id="myfares:Single_trip-SOP@p-tickett@group">
+								<SalesOfferPackageElement id="myfares:Single_trip-SOP@p-tickett@group-1" version="1.0">
 									<TypeOfTravelDocumentRef version="any" ref="myfares:paper_ticket"/>
 									<FareProductRef version="1.0" ref="myfares:Single_trip"/>
 								</SalesOfferPackageElement>
@@ -351,7 +351,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 						<SalesOfferPackage version="1.0" id="myfares:Return_trip-SOP@p-ticket@group">
 							<Name>Group Return , Paper Ticket </Name>
 							<validityParameterAssignments>
-								<GenericParameterAssignment order="1" id="myfares:Return_trip-SOP@p-ticket@group" version="1.0">
+								<GenericParameterAssignment id="myfares:Return_trip-SOP@p-ticket@group-1" version="1.0">
 									<TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:eligible"/>
 									<LimitationGroupingType>XOR</LimitationGroupingType>
 									<limitations>
@@ -361,7 +361,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
 							<salesOfferPackageElements>
-								<SalesOfferPackageElement order="1" version="1.0" id="myfares:Return_trip-SOP@p-ticket@group">
+								<SalesOfferPackageElement id="myfares:Return_trip-SOP@p-ticket@group-1" version="1.0">
 									<TypeOfTravelDocumentRef version="any" ref="myfares:paper_ticket"/>
 									<FareProductRef version="1.0" ref="myfares:Return_trip"/>
 								</SalesOfferPackageElement>
@@ -370,7 +370,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 					</salesOfferPackages>
 				</FareFrame>
 				<!--- ====Fare Prices======= -->
-				<FareFrame version="1.0" id="myfares:DTA@Flat@prices">
+				<FarePriceFrame version="1.0" id="myfares:DTA@Flat@prices">
 					<prerequisites>
 						<FareFrameRef version="1.0" ref="myfares:DTA@Flat@products"/>
 					</prerequisites>
@@ -413,7 +413,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 							</members>
 						</PriceGroup>
 					</priceGroups>
-				</FareFrame>
+				</FarePriceFrame>
 				<!--- ===========RESOURCEs========== -->
 				<ResourceFrame version="1.0" id="mybus:DTA@Common_Resources">
 					<Name>Common Resources</Name>

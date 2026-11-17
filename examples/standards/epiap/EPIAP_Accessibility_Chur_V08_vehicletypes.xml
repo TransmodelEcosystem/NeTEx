@@ -1,0 +1,2542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2021-10-25T10:49:51.6560213+02:00</PublicationTimestamp>
+	<ParticipantRef>MENTZ</ParticipantRef>
+	<Description>NeTEx Export, Version: 19.9.0.3016</Description>
+	<dataObjects>
+		<CompositeFrame id="ch:sbb:CompositeFrame:1:91YYY_.j21" version="any">
+			<ValidBetween>
+				<FromDate>2020-12-13T00:00:00</FromDate>
+				<ToDate>2021-12-11T23:59:59</ToDate>
+			</ValidBetween>
+			<TypeOfFrameRef ref="epip:EU_PI_LINE_OFFER"/>
+			<codespaces>
+				<Codespace id="epip_data">
+					<Xmlns>epd</Xmlns>
+					<XmlnsUrl>http://netex-cen.eu/epip_data</XmlnsUrl>
+					<Description>EPIP data</Description>
+				</Codespace>
+			</codespaces>
+			<FrameDefaults>
+				<DefaultCodespaceRef ref="epip_data"/>
+				<DefaultResponsibilitySetRef ref="ch:1:Authority:1:" version="any"/>
+			</FrameDefaults>
+			<frames>
+				<ResourceFrame id="ch:1:ResourceFrame:1:91YYY_.j21" version="any">
+					<TypeOfFrameRef ref="epip:EU_PI_COMMON"/>
+					<!--ToDo anpassen-->
+					<responsibilitySets>
+						<ResponsibilitySet id="ch:1:Authority:1:" version="any">
+							<roles>
+								<ResponsibilityRoleAssignment id="ch:1:Authority:1:" version="any">
+									<DataRoleType>creates</DataRoleType>
+									<StakeholderRoleType>planning</StakeholderRoleType>
+									<ResponsibleOrganisationRef ref="ch:1:Authority:1:" version="any"/>
+								</ResponsibilityRoleAssignment>
+							</roles>
+						</ResponsibilitySet>
+						<ResponsibilitySet id="ch:1:ResponsibilitySet:SBB_SBB:" version="any">
+							<privateCodes>
+								<PrivateCode>SBB</PrivateCode>
+							</privateCodes>
+							<Name lang="de">Schweizerische Bundesbahnen SBB</Name>
+							<roles>
+								<ResponsibilityRoleAssignment id="ch:1:ResponsibilityRoleAssignment:SBB_SBB:1:" version="any">
+									<StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
+									<ResponsibleOrganisationRef ref="ch:1:Operator:11:" version="any"/>
+								</ResponsibilityRoleAssignment>
+								<ResponsibilityRoleAssignment id="ch:1:ResponsibilityRoleAssignment:SBB_SBB:2:" version="any">
+									<StakeholderRoleType>operation</StakeholderRoleType>
+									<ResponsibleOrganisationRef ref="ch:1:Operator:11:" version="any"/>
+								</ResponsibilityRoleAssignment>
+							</roles>
+						</ResponsibilitySet>
+					</responsibilitySets>
+					<typesOfValue>
+						<ValueSet id="ch:1:ValueSet:TypeOfProductCategory:" version="any" nameOfClass="TypeOfProductCategory">
+							<Name lang="de">ProductCategories</Name>
+							<values>
+								<TypeOfProductCategory id="ch:1:TypeOfProductCategory:B:" version="any">
+									<Name lang="de">Bus</Name>
+									<ShortName lang="de">B</ShortName>
+								</TypeOfProductCategory>
+							</values>
+						</ValueSet>
+					</typesOfValue>
+					<organisations>
+						<Operator id="ch:1:Operator:11:" version="any">
+							<privateCodes>
+								<PrivateCode>11</PrivateCode>
+							</privateCodes>
+							<Name lang="de">Schweizerische Bundesbahnen SBB</Name>
+							<ShortName lang="de">SBB</ShortName>
+						</Operator>
+						<Authority id="ch:1:Authority:1:" version="any">
+							<PublicCode>Accessibility NeTEx</PublicCode>
+							<Name>1</Name>
+							<ShortName>1</ShortName>
+						</Authority>
+					</organisations>
+					<operationalContexts>
+						<OperationalContext id="ch:1:OperatingBranch:91:" version="any">
+							<privateCodes>
+								<PrivateCode>91</PrivateCode>
+							</privateCodes>
+							<Name lang="de">Schiene</Name>
+							<ShortName lang="de">91</ShortName>
+						</OperationalContext>
+					</operationalContexts>
+					<!--ToDo: Details aus Erfassung nachtragen -->
+					<equipments>
+						<LeftLuggageService id="ch:1:LeftLuggageService:1" version="any">
+							<Name lang="en">Locker storage</Name>
+							<CounterService>false</CounterService>
+							<SelfServiceLockers>true</SelfServiceLockers>
+							<FeePerBag>false</FeePerBag>
+							<LockerFee>true</LockerFee>
+							<MaximumBagWidth>0.5</MaximumBagWidth>
+							<MaximumBagHeight>1</MaximumBagHeight>
+							<MaximumBagDepth>1</MaximumBagDepth>
+							<MaximumDuration>P7D</MaximumDuration>
+						</LeftLuggageService>
+						<LuggageService id="ch:1:LuggageService:1" version="any">
+							<LuggageServiceFacilityList>freeTrolleys</LuggageServiceFacilityList>
+							<LuggageTrolleys>true</LuggageTrolleys>
+							<WheelchairLuggageTrolleys>true</WheelchairLuggageTrolleys>
+							<FreeToUse>true</FreeToUse>
+						</LuggageService>
+						<PassengerBeaconEquipment id="ch:1:PassengerBeaconEquipment:1231231-123123" version="any">
+							<PublicCode>1239123112311231</PublicCode>
+							<BeaconDirection>unidirectional</BeaconDirection>
+							<BeaconProtocol>Eddystone</BeaconProtocol>
+							<BeaconBackendUrl>https://123.12.2.21/beaconbackend/</BeaconBackendUrl>
+						</PassengerBeaconEquipment>
+						<AccessVehicleEquipment id="AccessVehicleEquipment:1" version="any">
+							<Name>Door</Name>
+							<BoardingHeight>1</BoardingHeight>
+							<HeightOfAccessArea>0.20</HeightOfAccessArea>
+							<AutomaticDoors>true</AutomaticDoors>
+							<SuitableFor>assistedWheelchair</SuitableFor>
+						</AccessVehicleEquipment>
+						<RampEquipment id="RampEquipment:1" version="any">
+							<Name>Ramp</Name>
+							<Width>1</Width>
+							<TactileGuidanceStrips>true</TactileGuidanceStrips>
+						</RampEquipment>
+					</equipments>
+					<vehicleTypes>
+						<VehicleType id="ch:1:VehicleType:C1:" version="any">
+							<Name lang="de">CitaroK Churbus</Name>
+							<ShortName lang="de">CitaroK</ShortName>
+							<LowFloor>true</LowFloor>
+							<HasLiftOrRamp>true</HasLiftOrRamp>
+							<HasHoist>false</HasHoist>
+							<Length>11</Length>
+							<Width>2.550</Width>
+							<Height>1</Height>
+							<facilities>
+								<ServiceFacilitySet id="ServiceFacilitySet:C1:1" version="any">
+									<AccessibilityInfoFacilityList>audioInformation</AccessibilityInfoFacilityList>
+									<TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
+									<VehicleAccessFacilityList>automaticRamp</VehicleAccessFacilityList>
+								</ServiceFacilitySet>
+							</facilities>
+						</VehicleType>
+						<Train id="RABe-525" version="any">
+							<ReversingDirection>true</ReversingDirection>
+							<LowFloor>true</LowFloor>
+							<components>
+								<TrainComponent id="RABe-525-1" version="any" order="1">
+									<TrainElement id="RABe-525-1" version="any">
+										<Name>Wagen 1</Name>
+										<TrainElementType>engine</TrainElementType>
+										<FareClasses>secondClass</FareClasses>
+										<PassengerCapacity id="RABe-525-1" version="any">
+											<SeatingCapacity>46</SeatingCapacity>
+											<StandingCapacity>10</StandingCapacity>
+											<WheelchairPlaceCapacity>2</WheelchairPlaceCapacity>
+										</PassengerCapacity>
+										<facilities>
+											<ServiceFacilitySet id="RABe-525-1-1" version="any">
+												<SanitaryFacilityList>wheelchairAccessToilet</SanitaryFacilityList>
+											</ServiceFacilitySet>
+										</facilities>
+									</TrainElement>
+								</TrainComponent>
+								<TrainComponent id="RABe-525-2" version="any" order="2">
+									<TrainElement id="RABe-525-2" version="any">
+										<Name>Wagen 2</Name>
+										<TrainElementType>carriage</TrainElementType>
+										<FareClasses>secondClass</FareClasses>
+										<PassengerCapacity id="RABe-525-2" version="any">
+											<SeatingCapacity>45</SeatingCapacity>
+											<StandingCapacity>20</StandingCapacity>
+											<WheelchairPlaceCapacity>0</WheelchairPlaceCapacity>
+										</PassengerCapacity>
+										<facilities>
+											<ServiceFacilitySet id="RABe-525-1-2" version="any">
+												<LuggageCarriageFacilityList>cyclesAllowedInCarriage baggageStorage</LuggageCarriageFacilityList>
+											</ServiceFacilitySet>
+										</facilities>
+									</TrainElement>
+								</TrainComponent>
+								<TrainComponent id="RABe-525-3" version="any" order="3">
+									<TrainElement id="RABe-525-3" version="any">
+										<Name>Wagen 3</Name>
+										<TrainElementType>carriage</TrainElementType>
+										<FareClasses>firstClass secondClass</FareClasses>
+										<PassengerCapacity id="RABe-525-3" version="any">
+											<SeatingCapacity>38</SeatingCapacity>
+											<StandingCapacity>20</StandingCapacity>
+											<WheelchairPlaceCapacity>0</WheelchairPlaceCapacity>
+										</PassengerCapacity>
+										<facilities>
+											<ServiceFacilitySet id="RABe-525-1-3" version="any">
+												<LuggageCarriageFacilityList>cyclesAllowedInCarriage baggageStorage</LuggageCarriageFacilityList>
+											</ServiceFacilitySet>
+										</facilities>
+									</TrainElement>
+								</TrainComponent>
+								<TrainComponent id="RABe-525-4" version="any" order="3">
+									<TrainElement id="RABe-525-4" version="any">
+										<Name>Wagen 4</Name>
+										<TrainElementType>engine</TrainElementType>
+										<FareClasses>secondClass</FareClasses>
+										<PassengerCapacity id="RABe-525-4" version="any">
+											<SeatingCapacity>46</SeatingCapacity>
+											<StandingCapacity>10</StandingCapacity>
+											<WheelchairPlaceCapacity>0</WheelchairPlaceCapacity>
+										</PassengerCapacity>
+										<facilities>
+											<ServiceFacilitySet id="RABe-525-1-4" version="any">
+												<LuggageCarriageFacilityList>cyclesAllowedInCarriage baggageStorage</LuggageCarriageFacilityList>
+											</ServiceFacilitySet>
+										</facilities>
+									</TrainElement>
+								</TrainComponent>
+							</components>
+						</Train>
+						<Train id="S5-Bern-Payerne" version="any">
+							<components>
+								<TrainComponentRef ref="RABe-525-1" version="any"/>
+								<TrainComponentRef ref="RABe-525-2" version="any"/>
+								<TrainComponentRef ref="RABe-525-3" version="any"/>
+								<TrainComponentRef ref="RABe-525-4" version="any"/>
+							</components>
+						</Train>
+						<Train id="S5-Bern-Neuchâtel" version="any">
+							<components>
+								<TrainComponentRef ref="RABe-525-1" version="any"/>
+								<TrainComponentRef ref="RABe-525-2" version="any"/>
+								<TrainComponentRef ref="RABe-525-3" version="any"/>
+								<TrainComponentRef ref="RABe-525-4" version="any"/>
+							</components>
+						</Train>
+					</vehicleTypes>
+					<vehicleModels>
+						<VehicleModel id="VehicleModel:1" version="any">
+							<Name>VehicleModeStandardBus</Name>
+							<VehicleTypeRef ref="ch:1:VehicleType:C1:"/>
+							<equipmentProfiles>
+								<VehicleEquipmentProfileRef ref="VehicleEquipmentProfile:1"/>
+								<VehicleEquipmentProfileRef ref="VehicleEquipmentProfile:2"/>
+							</equipmentProfiles>
+						</VehicleModel>
+					</vehicleModels>
+					<vehicleEquipmentProfiles>
+						<VehicleEquipmentProfile id="VehicleEquipmentProfile:1" version="any">
+							<AccessVehicleEquipmentRef ref="AccessVehicleEquipment:1"/>
+							<Units>3</Units>
+							<Manufacturer>DoorManufacturer</Manufacturer>
+						</VehicleEquipmentProfile>
+						<VehicleEquipmentProfile id="VehicleEquipmentProfile:2" version="any">
+							<RampEquipmentRef ref="RampEquipment:1"/>
+							<Units>1</Units>
+							<Manufacturer>RampManufacturer</Manufacturer>
+						</VehicleEquipmentProfile>
+					</vehicleEquipmentProfiles>
+				</ResourceFrame>
+				<SiteFrame id="ch:1:SiteFrame:1:91YYY_.j21" version="any">
+					<TypeOfFrameRef ref="epip:EU_PI_STOP"/>
+					<topographicPlaces>
+						<TopographicPlace id="ch:1:TopographicPlace:8b930b7b-059b-4d0e-8db1-6512f12bc1b9:" version="any">
+							<keyList>
+								<KeyValue>
+									<Key>GlobalId</Key>
+									<Value>8b930b7b-059b-4d0e-8db1-6512f12bc1b9</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>GKZ</Key>
+									<Value>011901</Value>
+								</KeyValue>
+							</keyList>
+							<Descriptor>
+								<Name lang="de">Chur</Name>
+							</Descriptor>
+							<TopographicPlaceType>town</TopographicPlaceType>
+							<CountryRef>CH</CountryRef>
+						</TopographicPlace>
+					</topographicPlaces>
+					<stopPlaces>
+						<StopPlace id="ch:1:StopPlace:8509000:" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+								<ToDate>2500-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							<keyList>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>8509000</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode>8509000</PrivateCode>
+							</privateCodes>
+							<Name lang="de">Chur</Name>
+							<ShortName lang="de">CH</ShortName>
+							<TopographicPlaceRef version="any" ref="ch:1:TopographicPlace:8b930b7b-059b-4d0e-8db1-6512f12bc1b9:"/>
+							<ParentSiteRef version="any" ref="ch:1:StopPlace:8509000:"/>
+							<levels>
+								<Level id="ch:1:Level:8509000:-1" version="any">
+									<Name>Basement</Name>
+									<PublicCode>-1</PublicCode>
+								</Level>
+								<Level id="ch:1:Level:8509000:0" version="any">
+									<Name>Ground</Name>
+									<PublicCode>0</PublicCode>
+								</Level>
+								<Level id="ch:1:Level:8509000:1" version="any">
+									<Name>Upper</Name>
+									<PublicCode>1</PublicCode>
+								</Level>
+							</levels>
+							<entrances>
+								<StopPlaceEntrance id="ch:1:StopPlaceEntrance:8509000:80:" version="any">
+									<privateCodes>
+										<PrivateCode>80</PrivateCode>
+									</privateCodes>
+									<Name lang="de">Zugang Gürtel</Name>
+									<ShortName lang="de">ZUG</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<placeEquipments>
+										<EntranceEquipment id="ch:1:EntranceEquipment:8509000:80:" version="any">
+											<RevolvingDoor>true</RevolvingDoor>
+											<WheelchairPassable>true</WheelchairPassable>
+										</EntranceEquipment>
+									</placeEquipments>
+								</StopPlaceEntrance>
+								<StopPlaceEntrance id="ch:1:StopPlaceEntrance:8509000:82:" version="any">
+									<privateCodes>
+										<PrivateCode>82</PrivateCode>
+									</privateCodes>
+									<Name lang="de">Zugang Bahnhofsplatz</Name>
+									<ShortName lang="de">ZuB</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+								</StopPlaceEntrance>
+								<StopPlaceEntrance id="ch:1:StopPlaceEntrance:8509000:83:" version="any">
+									<privateCodes>
+										<PrivateCode>83</PrivateCode>
+									</privateCodes>
+									<Name lang="de">Zugang Postauto</Name>
+									<ShortName lang="de">ZuP</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:1" version="any"/>
+								</StopPlaceEntrance>
+								<StopPlaceEntrance id="ch:1:StopPlaceEntrance:8509000:84:" version="any">
+									<privateCodes>
+										<PrivateCode>84</PrivateCode>
+									</privateCodes>
+									<Name lang="de">Zu Bahnsteig 1</Name>
+									<ShortName lang="de">ZuB1</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+								</StopPlaceEntrance>
+							</entrances>
+							<placeEquipments>
+								<HelpPointEquipmentRef ref=""/>
+							</placeEquipments>
+							<quays>
+								<Quay id="ch:1:Quay:8509000:1:" version="any">
+									<Name lang="de">Bahnsteig 1</Name>
+									<ShortName lang="de">BS1</ShortName>
+									<PublicCode>BS1</PublicCode>
+									<QuayType>railPlatform</QuayType>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:3:" version="any">
+									<privateCodes>
+										<PrivateCode>3</PrivateCode>
+									</privateCodes>
+									<Name lang="de">Bahnsteig 3</Name>
+									<ShortName lang="de">BS3</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>BS3</PublicCode>
+									<QuayType>railPlatform</QuayType>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:4:" version="any">
+									<privateCodes>
+										<PrivateCode>4</PrivateCode>
+									</privateCodes>
+									<Name lang="de">Bahnsteig 4</Name>
+									<ShortName lang="de">BS4</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>BS4</PublicCode>
+									<QuayType>railPlatform</QuayType>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:5:" version="any">
+									<privateCodes>
+										<PrivateCode>5</PrivateCode>
+									</privateCodes>
+									<Name lang="de">Bahnsteig 5</Name>
+									<ShortName lang="de">BS5</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>BS5</PublicCode>
+									<QuayType>railPlatform</QuayType>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:6:" version="any">
+									<privateCodes>
+										<PrivateCode>6</PrivateCode>
+									</privateCodes>
+									<Name lang="de">Zug1</Name>
+									<ShortName lang="de">Z1</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>Z1</PublicCode>
+									<QuayType>railPlatform</QuayType>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:7:" version="any">
+									<privateCodes>
+										<PrivateCode>7</PrivateCode>
+									</privateCodes>
+									<Name lang="de">Zug 2</Name>
+									<ShortName lang="de">Z2</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>Z2</PublicCode>
+									<QuayType>railPlatform</QuayType>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:70:" version="any">
+									<privateCodes>
+										<PrivateCode>70</PrivateCode>
+									</privateCodes>
+									<Name lang="de">Zwischengeschoss</Name>
+									<ShortName lang="de">ZW</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:-1" version="any"/>
+									<PublicCode>ZW</PublicCode>
+									<QuayType>other</QuayType>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:71:" version="any">
+									<privateCodes>
+										<PrivateCode>71</PrivateCode>
+									</privateCodes>
+									<Name lang="de">Zw Brücke</Name>
+									<ShortName lang="de">ZWB</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:1" version="any"/>
+									<PublicCode>ZWB</PublicCode>
+									<QuayType>other</QuayType>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:72:" version="any">
+									<privateCodes>
+										<PrivateCode>72</PrivateCode>
+									</privateCodes>
+									<Name lang="de">ZW Bahnsteig 1</Name>
+									<ShortName lang="de">ZW1</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:-1" version="any"/>
+									<PublicCode>ZW1</PublicCode>
+									<QuayType>other</QuayType>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:80:" version="any">
+									<privateCodes>
+										<PrivateCode>80</PrivateCode>
+									</privateCodes>
+									<Name lang="de">Zugang Gürtel</Name>
+									<ShortName lang="de">ZUG</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>ZUG</PublicCode>
+									<QuayType>other</QuayType>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:82:" version="any">
+									<privateCodes>
+										<PrivateCode>82</PrivateCode>
+									</privateCodes>
+									<Name lang="de">Zugang Bahnhofsplatz</Name>
+									<ShortName lang="de">ZuB</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>ZuB</PublicCode>
+									<QuayType>other</QuayType>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:83:" version="any">
+									<privateCodes>
+										<PrivateCode>83</PrivateCode>
+									</privateCodes>
+									<Name lang="de">Zugang Postauto</Name>
+									<ShortName lang="de">ZuP</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:1" version="any"/>
+									<PublicCode>ZuP</PublicCode>
+									<QuayType>other</QuayType>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:84:" version="any">
+									<privateCodes>
+										<PrivateCode>84</PrivateCode>
+									</privateCodes>
+									<Name lang="de">Zu Bahnsteig 1</Name>
+									<ShortName lang="de">ZuB1</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>ZuB1</PublicCode>
+									<QuayType>other</QuayType>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:6:1" version="any">
+									<Name lang="de">1</Name>
+									<ShortName lang="de">1</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>1</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8509000:6:" version="any"/>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:7:2" version="any">
+									<Name lang="de">2</Name>
+									<ShortName lang="de">2</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>2</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8509000:7:" version="any"/>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:3:10" version="any">
+									<Name lang="de">3</Name>
+									<ShortName lang="de">3</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>10</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8509000:3:" version="any"/>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:3:10ABC" version="any">
+									<Name lang="de">10ABC</Name>
+									<ShortName lang="de">10ABC</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>10ABC</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8509000:3:" version="any"/>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:3:10DE" version="any">
+									<Name lang="de">10DE</Name>
+									<ShortName lang="de">10DE</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>10DE</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8509000:3:" version="any"/>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:3:10E" version="any">
+									<Name lang="de">10E</Name>
+									<ShortName lang="de">10E</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>10E</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8509000:3:" version="any"/>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:4:11" version="any">
+									<Name lang="de">11</Name>
+									<ShortName lang="de">11</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>11</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8509000:4:" version="any"/>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:4:12" version="any">
+									<Name lang="de">12</Name>
+									<ShortName lang="de">12</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>12</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8509000:4:" version="any"/>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:5:13" version="any">
+									<Name lang="de">13</Name>
+									<ShortName lang="de">13</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>13</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8509000:5:" version="any"/>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:5:14" version="any">
+									<Name lang="de">14</Name>
+									<ShortName lang="de">14</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>14</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8509000:5:" version="any"/>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:1:4" version="any">
+									<Name lang="de">4</Name>
+									<ShortName lang="de">4</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>4</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8509000:1:" version="any"/>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:1:5" version="any">
+									<Name lang="de">5</Name>
+									<ShortName lang="de">5</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>5</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8509000:1:" version="any"/>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:2:7" version="any">
+									<Name lang="de">7</Name>
+									<ShortName lang="de">7</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>7</PublicCode>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:2:8" version="any">
+									<Name lang="de">8</Name>
+									<ShortName lang="de">8</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>8</PublicCode>
+								</Quay>
+								<Quay id="ch:1:Quay:8509000:3:9" version="any">
+									<Name lang="de">9</Name>
+									<ShortName lang="de">9</ShortName>
+									<LevelRef ref="ch:1:Level:8509000:0" version="any"/>
+									<PublicCode>9</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8509000:3:" version="any"/>
+								</Quay>
+							</quays>
+							<accessSpaces>
+								<AccessSpace id="ch:1:AccessSpace:8509000:70:" version="any">
+									<ShortName lang="de">ZW</ShortName>
+									<facilities>
+										<SiteFacilitySet id="ch:1:SiteFacility:8509000:70:1" version="any">
+											<LuggageLockerFacilityList>lockers</LuggageLockerFacilityList>
+										</SiteFacilitySet>
+									</facilities>
+								</AccessSpace>
+								<AccessSpace id="ch:1:AccessSpace:8509000:72:" version="any">
+									<ShortName lang="de">ZW1</ShortName>
+									<Description lang="de">ZW Bahnsteig 1</Description>
+									<LevelRef ref="ch:1:Level:8509000:-1"/>
+								</AccessSpace>
+							</accessSpaces>
+						</StopPlace>
+						<StopPlace id="ch:1:StopPlace:8575112:" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+								<ToDate>2500-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							<keyList>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>8575112</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode>8575112</PrivateCode>
+							</privateCodes>
+							<Name lang="de">Chur, Postautostation</Name>
+							<TopographicPlaceRef version="any" ref="ch:1:TopographicPlace:8b930b7b-059b-4d0e-8db1-6512f12bc1b9:"/>
+							<ParentSiteRef version="any" ref="ch:1:StopPlace:8575112:"/>
+							<levels>
+								<Level id="ch:1:Level:8575112:0" version="any">
+									<Name>Ground</Name>
+									<PublicCode>0</PublicCode>
+								</Level>
+							</levels>
+							<quays>
+								<Quay id="ch:1:Quay:8575112::" version="any">
+									<privateCodes>
+										<PrivateCode>0</PrivateCode>
+									</privateCodes>
+									<LevelRef ref="ch:1:Level:8575112:0" version="any"/>
+									<QuayType>other</QuayType>
+								</Quay>
+								<!--Frage: warum gibt es hier keine Bereiche und Steige?-->
+								<Quay id="ch:1:Quay:8575112:" version="any">
+									<PublicCode>Gen</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8575112::" version="any"/>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:StopPlace:8581044:" version="any">
+							<ValidBetween>
+								<FromDate>1978-10-01T00:00:00</FromDate>
+								<ToDate>2500-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							<keyList>
+								<KeyValue>
+									<Key>GlobalID</Key>
+									<Value>8581044</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode>8581044</PrivateCode>
+							</privateCodes>
+							<Name lang="de">Chur, Bahnhofplatz</Name>
+							<ShortName lang="de">CHBA</ShortName>
+							<TopographicPlaceRef version="any" ref="ch:1:TopographicPlace:8b930b7b-059b-4d0e-8db1-6512f12bc1b9:"/>
+							<ParentSiteRef version="any" ref="ch:1:StopPlace:8581044:"/>
+							<levels>
+								<Level id="ch:1:Level:8581044:0" version="any">
+									<Name>Ground</Name>
+									<PublicCode>0</PublicCode>
+								</Level>
+							</levels>
+							<quays>
+								<Quay id="ch:1:Quay:8581044:1:" version="any">
+									<privateCodes>
+										<PrivateCode>1</PrivateCode>
+									</privateCodes>
+									<Name lang="de">Bahnsteig 1</Name>
+									<ShortName lang="de">BS1</ShortName>
+									<LevelRef ref="ch:1:Level:8581044:0" version="any"/>
+									<PublicCode>BS1</PublicCode>
+									<QuayType>other</QuayType>
+								</Quay>
+								<!--Frage: klären warum Steige den Bereichsnamen und Kurzbezeichnung erhalten -->
+								<Quay id="ch:1:Quay:8581044:1:A" version="any">
+									<Name lang="de">A</Name>
+									<ShortName lang="de">A</ShortName>
+									<LevelRef ref="ch:1:Level:8581044:0" version="any"/>
+									<PublicCode>A</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8581044:1:" version="any"/>
+								</Quay>
+								<Quay id="ch:1:Quay:8581044:1:B" version="any">
+									<Name lang="de">B</Name>
+									<ShortName lang="de">B</ShortName>
+									<LevelRef ref="ch:1:Level:8581044:0" version="any"/>
+									<PublicCode>B</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8581044:1:" version="any"/>
+								</Quay>
+								<Quay id="ch:1:Quay:8581044:1:C" version="any">
+									<Name lang="de">C</Name>
+									<ShortName lang="de">C</ShortName>
+									<LevelRef ref="ch:1:Level:8581044:0" version="any"/>
+									<PublicCode>C</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8581044:1:" version="any"/>
+								</Quay>
+								<Quay id="ch:1:Quay:8581044:1:D" version="any">
+									<Name lang="de">D</Name>
+									<ShortName lang="de">D</ShortName>
+									<LevelRef ref="ch:1:Level:8581044:0" version="any"/>
+									<PublicCode>D</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8581044:1:" version="any"/>
+								</Quay>
+								<Quay id="ch:1:Quay:8581044:1:E" version="any">
+									<Name lang="de">E</Name>
+									<ShortName lang="de">E</ShortName>
+									<LevelRef ref="ch:1:Level:8581044:0" version="any"/>
+									<PublicCode>E</PublicCode>
+									<ParentQuayRef ref="ch:1:Quay:8581044:1:" version="any"/>
+								</Quay>
+							</quays>
+						</StopPlace>
+						<StopPlace id="ch:1:StopPlace:8507000:" version="any">
+							<keyList>
+								<KeyValue>
+									<Key>HstnrLokal</Key>
+									<Value>7000</Value>
+								</KeyValue>
+								<KeyValue>
+									<Key>HstnrNational</Key>
+									<Value>49000817</Value>
+								</KeyValue>
+							</keyList>
+							<privateCodes>
+								<PrivateCode>7000</PrivateCode>
+							</privateCodes>
+							<Name lang="de">Bern</Name>
+							<Centroid>
+								<Location>
+									<Longitude>7.4391195476977394</Longitude>
+									<Latitude>46.94882495970554</Latitude>
+									<Altitude>0</Altitude>
+								</Location>
+							</Centroid>
+						</StopPlace>
+					</stopPlaces>
+					<pathLinks>
+						<PathLink id="ch:1:PathLink:ch:1:Quay:8509000:6::_ch:1:Quay:8509000:7::" version="any">
+							<From>
+								<PlaceRef ref="ch:1:Quay:8509000:6:" version="any"/>
+							</From>
+							<To>
+								<PlaceRef ref="ch:1:Quay:8509000:7:" version="any"/>
+							</To>
+							<AllowedUse>oneWay</AllowedUse>
+							<AccessFeatureType>barrier</AccessFeatureType>
+							<TactileGuidingStrip>true</TactileGuidingStrip>
+							<TransferDuration>
+								<DefaultDuration>PT5M30S</DefaultDuration>
+							</TransferDuration>
+						</PathLink>
+						<PathLink id="ch:1:PathLink:ch:1:Entrance:8509000:6:_ch:1:Entrance:8509000:80::" version="any">
+							<From>
+								<PlaceRef ref="ch:1:StopPlace:8509000:" version="any"/>
+							</From>
+							<To>
+								<PlaceRef ref="ch:1:StopPlace:8509000:" version="any"/>
+								<EntranceRef ref="ch:1:Entrance:8509000:80:" version="any"/>
+							</To>
+							<AllowedUse>oneWay</AllowedUse>
+							<AccessFeatureType>barrier</AccessFeatureType>
+							<TransferDuration>
+								<DefaultDuration>PT3M30S</DefaultDuration>
+							</TransferDuration>
+						</PathLink>
+						<PathLink id="ch:1:PathLink:ch:1:Entrance:8509000:6:_ch:1:Entrance:8509000:82::" version="any">
+							<From>
+								<PlaceRef ref="ch:1:StopPlace:8509000:" version="any"/>
+							</From>
+							<To>
+								<PlaceRef ref="ch:1:StopPlace:8509000:" version="any"/>
+								<EntranceRef ref="ch:1:Entrance:8509000:82:" version="any"/>
+							</To>
+							<AllowedUse>oneWay</AllowedUse>
+							<AccessFeatureType>barrier</AccessFeatureType>
+							<TransferDuration>
+								<DefaultDuration>PT3M</DefaultDuration>
+							</TransferDuration>
+						</PathLink>
+					</pathLinks>
+				</SiteFrame>
+				<ServiceFrame id="ch:1:ServiceFrame:1:91YYY_.j21" version="any">
+					<TypeOfFrameRef ref="epip:EU_PI_NETWORK"/>
+					<directions>
+						<Direction id="ch:1:Direction:H:" version="any">
+							<Name lang="de">Hin</Name>
+							<ShortName lang="de">H</ShortName>
+							<DirectionType>outbound</DirectionType>
+						</Direction>
+						<Direction id="ch:1:Direction:R:" version="any">
+							<Name lang="de">Rück</Name>
+							<ShortName lang="de">R</ShortName>
+							<DirectionType>inbound</DirectionType>
+						</Direction>
+					</directions>
+					<lines>
+						<Line id="ch:1:Line:91YYY_.j21:" version="1" responsibilitySetRef="ch:1:ResponsibilitySet:SBB_SBB:">
+							<ValidBetween>
+								<FromDate>2020-12-13T00:00:00</FromDate>
+							</ValidBetween>
+							<Name lang="de">YYY</Name>
+							<ShortName lang="de">YYY</ShortName>
+							<TransportMode>unknown</TransportMode>
+							<PublicCode>YYY</PublicCode>
+							<OperatorRef ref="ch:1:Operator:11:" version="any"/>
+							<OperationalContextRef ref="ch:1:OperatingBranch:91:" version="any"/>
+						</Line>
+					</lines>
+					<scheduledStopPoints>
+						<ScheduledStopPoint id="ch:1:ScheduledStopPoint:8575112:-0-Gen" version="any">
+							<Name lang="de">Chur, Postautostation</Name>
+							<ShortName lang="de">Gen</ShortName>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:ScheduledStopPoint:8991974:" version="any">
+							<Name lang="de">Chur, Bahnhofplatz</Name>
+							<ShortName lang="de">A</ShortName>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:ScheduledStopPoint:8992506:" version="any">
+							<Name lang="de">Chur</Name>
+							<ShortName lang="de">4</ShortName>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint id="ch:1:ScheduledStopPoint:8507000::1:A" version="any">
+						</ScheduledStopPoint>
+					</scheduledStopPoints>
+					<serviceLinks>
+						<ServiceLink id="ch:1:ServiceLink:91_850900001004_8575112:" version="any">
+							<Distance>30</Distance>
+							<FromPointRef ref="ch:1:ScheduledStopPoint:8992506:" version="any"/>
+							<ToPointRef ref="ch:1:ScheduledStopPoint:8575112:-0-Gen" version="any"/>
+						</ServiceLink>
+						<ServiceLink id="ch:1:ServiceLink:91_8575112_85810440100A:" version="any">
+							<Distance>50</Distance>
+							<FromPointRef ref="ch:1:ScheduledStopPoint:8575112:-0-Gen" version="any"/>
+							<ToPointRef ref="ch:1:ScheduledStopPoint:8991974:" version="any"/>
+						</ServiceLink>
+					</serviceLinks>
+					<!-- connections ggf. rauswerfen -->
+					<stopAssignments>
+						<PassengerStopAssignment id="ch:1:PassengerStopAssignment:8507000_0_Gen:A" version="any" order="2">
+							<ScheduledStopPointRef ref="ch:1:ScheduledStopPoint:8507000::1:A" version="any"/>
+							<StopPlaceRef ref="ch:1:StopPlace:8507000:" version="any"/>
+							<passengerBoardingPositionAssignments>
+								<PassengerBoardingPositionAssignment id="ch:1:TrainStopAssignement:1" version="any" order="1">
+									<TrainRef ref="S5-Bern-Payerne" version="any"/>
+									<TrainComponentRef ref="RABe-525-1" version="any"/>
+								</PassengerBoardingPositionAssignment>
+								<PassengerBoardingPositionAssignment id="ch:1:TrainStopAssignement:2" version="any" order="1">
+									<TrainRef ref="S5-Bern-Payerne" version="any"/>
+									<TrainComponentRef ref="RABe-525-2" version="any"/>
+								</PassengerBoardingPositionAssignment>
+							</passengerBoardingPositionAssignments>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:1:PassengerStopAssignment:8992506:" version="any" order="3">
+							<ScheduledStopPointRef ref="ch:1:ScheduledStopPoint:8992506:" version="any"/>
+							<StopPlaceRef ref="ch:1:StopPlace:8509000:" version="any"/>
+							<QuayRef ref="ch:1:Quay:8509000:4:" version="any"/>
+						</PassengerStopAssignment>
+						<PassengerStopAssignment id="ch:1:PassengerStopAssignment:8991974:" version="any" order="4">
+							<ScheduledStopPointRef ref="ch:1:ScheduledStopPoint:8991974:" version="any"/>
+							<StopPlaceRef ref="ch:1:StopPlace:8581044:" version="any"/>
+							<QuayRef ref="ch:1:Quay:8581044:1:A" version="any"/>
+						</PassengerStopAssignment>
+					</stopAssignments>
+					<journeyPatterns>
+						<ServiceJourneyPattern id="ch:1:JourneyPattern:91YYY_.j21100201:" version="any">
+							<privateCodes>
+								<PrivateCode>1</PrivateCode>
+							</privateCodes>
+							<Name lang="de">1</Name>
+							<ShortName lang="de">1</ShortName>
+							<DirectionType>outbound</DirectionType>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="ch:1:StopPointInJourneyPattern:91YYY_.j21-1-0020101:" version="any" order="1">
+									<ScheduledStopPointRef ref="ch:1:ScheduledStopPoint:8992506:" version="any"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<RequestStop>false</RequestStop>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:1:StopPointInJourneyPattern:91YYY_.j21-1-0020102:" version="any" order="2">
+									<ScheduledStopPointRef ref="ch:1:ScheduledStopPoint:8575112:-0-Gen" version="any"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<RequestStop>false</RequestStop>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:1:StopPointInJourneyPattern:91YYY_.j21-1-0020103:" version="any" order="3">
+									<ScheduledStopPointRef ref="ch:1:ScheduledStopPoint:8991974:" version="any"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<RequestStop>false</RequestStop>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+							<linksInSequence>
+								<ServiceLinkInJourneyPattern id="ch:1:ServiceLinkInJourneyPattern:91YYY_.j21-1-0020102:" version="any" order="2">
+									<ServiceLinkRef ref="ch:1:ServiceLink:91_850900001004_8575112:" version="any"/>
+								</ServiceLinkInJourneyPattern>
+								<ServiceLinkInJourneyPattern id="ch:1:ServiceLinkInJourneyPattern:91YYY_.j21-1-0020103:" version="any" order="3">
+									<ServiceLinkRef ref="ch:1:ServiceLink:91_8575112_85810440100A:" version="any"/>
+								</ServiceLinkInJourneyPattern>
+							</linksInSequence>
+							<ServiceJourneyPatternType>passenger</ServiceJourneyPatternType>
+						</ServiceJourneyPattern>
+						<ServiceJourneyPattern id="ch:1:JourneyPattern:91YYY_.j21100301:" version="any">
+							<privateCodes>
+								<PrivateCode>1</PrivateCode>
+							</privateCodes>
+							<Name lang="de">1</Name>
+							<ShortName lang="de">1</ShortName>
+							<DirectionType>inbound</DirectionType>
+							<pointsInSequence>
+								<StopPointInJourneyPattern id="ch:1:StopPointInJourneyPattern:91YYY_.j21-1-0030101:" version="any" order="1">
+									<ScheduledStopPointRef ref="ch:1:ScheduledStopPoint:8992506:" version="any"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<RequestStop>false</RequestStop>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:1:StopPointInJourneyPattern:91YYY_.j21-1-0030102:" version="any" order="2">
+									<ScheduledStopPointRef ref="ch:1:ScheduledStopPoint:8575112:-0-Gen" version="any"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<RequestStop>false</RequestStop>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+								<StopPointInJourneyPattern id="ch:1:StopPointInJourneyPattern:91YYY_.j21-1-0030103:" version="any" order="3">
+									<ScheduledStopPointRef ref="ch:1:ScheduledStopPoint:8991974:" version="any"/>
+									<ForAlighting>true</ForAlighting>
+									<ForBoarding>true</ForBoarding>
+									<RequestStop>false</RequestStop>
+									<StopUse>access</StopUse>
+								</StopPointInJourneyPattern>
+							</pointsInSequence>
+							<linksInSequence>
+								<ServiceLinkInJourneyPattern id="ch:1:ServiceLinkInJourneyPattern:91YYY_.j21-1-0030102:" version="any" order="2">
+									<ServiceLinkRef ref="ch:1:ServiceLink:91_850900001004_8575112:" version="any"/>
+								</ServiceLinkInJourneyPattern>
+								<ServiceLinkInJourneyPattern id="ch:1:ServiceLinkInJourneyPattern:91YYY_.j21-1-0030103:" version="any" order="3">
+									<ServiceLinkRef ref="ch:1:ServiceLink:91_8575112_85810440100A:" version="any"/>
+								</ServiceLinkInJourneyPattern>
+							</linksInSequence>
+							<ServiceJourneyPatternType>passenger</ServiceJourneyPatternType>
+						</ServiceJourneyPattern>
+					</journeyPatterns>
+				</ServiceFrame>
+				<ServiceCalendarFrame id="ch:1:ServiceCalendarFrame:1:91YYY_.j21" version="any">
+					<TypeOfFrameRef ref="epip:EU_PI_CALENDAR"/>
+					<ServiceCalendar id="ch:1:ServiceCalendar:1:j21:" version="any">
+						<Name>Fahrplan 2021</Name>
+						<FromDate>2020-12-13</FromDate>
+						<ToDate>2021-12-11</ToDate>
+						<dayTypeAssignments>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::1" version="any" order="1">
+								<Date>2020-12-13</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::2" version="any" order="2">
+								<Date>2020-12-14</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::3" version="any" order="3">
+								<Date>2020-12-15</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::4" version="any" order="4">
+								<Date>2020-12-16</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::5" version="any" order="5">
+								<Date>2020-12-17</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::6" version="any" order="6">
+								<Date>2020-12-18</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::7" version="any" order="7">
+								<Date>2020-12-19</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::8" version="any" order="8">
+								<Date>2020-12-20</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::9" version="any" order="9">
+								<Date>2020-12-21</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::10" version="any" order="10">
+								<Date>2020-12-22</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::11" version="any" order="11">
+								<Date>2020-12-23</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::12" version="any" order="12">
+								<Date>2020-12-24</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::13" version="any" order="13">
+								<Date>2020-12-25</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::14" version="any" order="14">
+								<Date>2020-12-26</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::15" version="any" order="15">
+								<Date>2020-12-27</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::16" version="any" order="16">
+								<Date>2020-12-28</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::17" version="any" order="17">
+								<Date>2020-12-29</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::18" version="any" order="18">
+								<Date>2020-12-30</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::19" version="any" order="19">
+								<Date>2020-12-31</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::20" version="any" order="20">
+								<Date>2021-01-01</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::21" version="any" order="21">
+								<Date>2021-01-02</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::22" version="any" order="22">
+								<Date>2021-01-03</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::23" version="any" order="23">
+								<Date>2021-01-04</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::24" version="any" order="24">
+								<Date>2021-01-05</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::25" version="any" order="25">
+								<Date>2021-01-06</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::26" version="any" order="26">
+								<Date>2021-01-07</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::27" version="any" order="27">
+								<Date>2021-01-08</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::28" version="any" order="28">
+								<Date>2021-01-09</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::29" version="any" order="29">
+								<Date>2021-01-10</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::30" version="any" order="30">
+								<Date>2021-01-11</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::31" version="any" order="31">
+								<Date>2021-01-12</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::32" version="any" order="32">
+								<Date>2021-01-13</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::33" version="any" order="33">
+								<Date>2021-01-14</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::34" version="any" order="34">
+								<Date>2021-01-15</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::35" version="any" order="35">
+								<Date>2021-01-16</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::36" version="any" order="36">
+								<Date>2021-01-17</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::37" version="any" order="37">
+								<Date>2021-01-18</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::38" version="any" order="38">
+								<Date>2021-01-19</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::39" version="any" order="39">
+								<Date>2021-01-20</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::40" version="any" order="40">
+								<Date>2021-01-21</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::41" version="any" order="41">
+								<Date>2021-01-22</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::42" version="any" order="42">
+								<Date>2021-01-23</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::43" version="any" order="43">
+								<Date>2021-01-24</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::44" version="any" order="44">
+								<Date>2021-01-25</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::45" version="any" order="45">
+								<Date>2021-01-26</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::46" version="any" order="46">
+								<Date>2021-01-27</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::47" version="any" order="47">
+								<Date>2021-01-28</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::48" version="any" order="48">
+								<Date>2021-01-29</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::49" version="any" order="49">
+								<Date>2021-01-30</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::50" version="any" order="50">
+								<Date>2021-01-31</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::51" version="any" order="51">
+								<Date>2021-02-01</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::52" version="any" order="52">
+								<Date>2021-02-02</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::53" version="any" order="53">
+								<Date>2021-02-03</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::54" version="any" order="54">
+								<Date>2021-02-04</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::55" version="any" order="55">
+								<Date>2021-02-05</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::56" version="any" order="56">
+								<Date>2021-02-06</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::57" version="any" order="57">
+								<Date>2021-02-07</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::58" version="any" order="58">
+								<Date>2021-02-08</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::59" version="any" order="59">
+								<Date>2021-02-09</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::60" version="any" order="60">
+								<Date>2021-02-10</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::61" version="any" order="61">
+								<Date>2021-02-11</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::62" version="any" order="62">
+								<Date>2021-02-12</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::63" version="any" order="63">
+								<Date>2021-02-13</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::64" version="any" order="64">
+								<Date>2021-02-14</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::65" version="any" order="65">
+								<Date>2021-02-15</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::66" version="any" order="66">
+								<Date>2021-02-16</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::67" version="any" order="67">
+								<Date>2021-02-17</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::68" version="any" order="68">
+								<Date>2021-02-18</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::69" version="any" order="69">
+								<Date>2021-02-19</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::70" version="any" order="70">
+								<Date>2021-02-20</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::71" version="any" order="71">
+								<Date>2021-02-21</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::72" version="any" order="72">
+								<Date>2021-02-22</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::73" version="any" order="73">
+								<Date>2021-02-23</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::74" version="any" order="74">
+								<Date>2021-02-24</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::75" version="any" order="75">
+								<Date>2021-02-25</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::76" version="any" order="76">
+								<Date>2021-02-26</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::77" version="any" order="77">
+								<Date>2021-02-27</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::78" version="any" order="78">
+								<Date>2021-02-28</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::79" version="any" order="79">
+								<Date>2021-03-01</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::80" version="any" order="80">
+								<Date>2021-03-02</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::81" version="any" order="81">
+								<Date>2021-03-03</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::82" version="any" order="82">
+								<Date>2021-03-04</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::83" version="any" order="83">
+								<Date>2021-03-05</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::84" version="any" order="84">
+								<Date>2021-03-06</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::85" version="any" order="85">
+								<Date>2021-03-07</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::86" version="any" order="86">
+								<Date>2021-03-08</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::87" version="any" order="87">
+								<Date>2021-03-09</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::88" version="any" order="88">
+								<Date>2021-03-10</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::89" version="any" order="89">
+								<Date>2021-03-11</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::90" version="any" order="90">
+								<Date>2021-03-12</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::91" version="any" order="91">
+								<Date>2021-03-13</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::92" version="any" order="92">
+								<Date>2021-03-14</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::93" version="any" order="93">
+								<Date>2021-03-15</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::94" version="any" order="94">
+								<Date>2021-03-16</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::95" version="any" order="95">
+								<Date>2021-03-17</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::96" version="any" order="96">
+								<Date>2021-03-18</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::97" version="any" order="97">
+								<Date>2021-03-19</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::98" version="any" order="98">
+								<Date>2021-03-20</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::99" version="any" order="99">
+								<Date>2021-03-21</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::100" version="any" order="100">
+								<Date>2021-03-22</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::101" version="any" order="101">
+								<Date>2021-03-23</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::102" version="any" order="102">
+								<Date>2021-03-24</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::103" version="any" order="103">
+								<Date>2021-03-25</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::104" version="any" order="104">
+								<Date>2021-03-26</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::105" version="any" order="105">
+								<Date>2021-03-27</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::106" version="any" order="106">
+								<Date>2021-03-28</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::107" version="any" order="107">
+								<Date>2021-03-29</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::108" version="any" order="108">
+								<Date>2021-03-30</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::109" version="any" order="109">
+								<Date>2021-03-31</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::110" version="any" order="110">
+								<Date>2021-04-01</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::111" version="any" order="111">
+								<Date>2021-04-02</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::112" version="any" order="112">
+								<Date>2021-04-03</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::113" version="any" order="113">
+								<Date>2021-04-04</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::114" version="any" order="114">
+								<Date>2021-04-05</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::115" version="any" order="115">
+								<Date>2021-04-06</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::116" version="any" order="116">
+								<Date>2021-04-07</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::117" version="any" order="117">
+								<Date>2021-04-08</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::118" version="any" order="118">
+								<Date>2021-04-09</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::119" version="any" order="119">
+								<Date>2021-04-10</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::120" version="any" order="120">
+								<Date>2021-04-11</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::121" version="any" order="121">
+								<Date>2021-04-12</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::122" version="any" order="122">
+								<Date>2021-04-13</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::123" version="any" order="123">
+								<Date>2021-04-14</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::124" version="any" order="124">
+								<Date>2021-04-15</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::125" version="any" order="125">
+								<Date>2021-04-16</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::126" version="any" order="126">
+								<Date>2021-04-17</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::127" version="any" order="127">
+								<Date>2021-04-18</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::128" version="any" order="128">
+								<Date>2021-04-19</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::129" version="any" order="129">
+								<Date>2021-04-20</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::130" version="any" order="130">
+								<Date>2021-04-21</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::131" version="any" order="131">
+								<Date>2021-04-22</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::132" version="any" order="132">
+								<Date>2021-04-23</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::133" version="any" order="133">
+								<Date>2021-04-24</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::134" version="any" order="134">
+								<Date>2021-04-25</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::135" version="any" order="135">
+								<Date>2021-04-26</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::136" version="any" order="136">
+								<Date>2021-04-27</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::137" version="any" order="137">
+								<Date>2021-04-28</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::138" version="any" order="138">
+								<Date>2021-04-29</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::139" version="any" order="139">
+								<Date>2021-04-30</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::140" version="any" order="140">
+								<Date>2021-05-01</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::141" version="any" order="141">
+								<Date>2021-05-02</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::142" version="any" order="142">
+								<Date>2021-05-03</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::143" version="any" order="143">
+								<Date>2021-05-04</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::144" version="any" order="144">
+								<Date>2021-05-05</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::145" version="any" order="145">
+								<Date>2021-05-06</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::146" version="any" order="146">
+								<Date>2021-05-07</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::147" version="any" order="147">
+								<Date>2021-05-08</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::148" version="any" order="148">
+								<Date>2021-05-09</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::149" version="any" order="149">
+								<Date>2021-05-10</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::150" version="any" order="150">
+								<Date>2021-05-11</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::151" version="any" order="151">
+								<Date>2021-05-12</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::152" version="any" order="152">
+								<Date>2021-05-13</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::153" version="any" order="153">
+								<Date>2021-05-14</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::154" version="any" order="154">
+								<Date>2021-05-15</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::155" version="any" order="155">
+								<Date>2021-05-16</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::156" version="any" order="156">
+								<Date>2021-05-17</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::157" version="any" order="157">
+								<Date>2021-05-18</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::158" version="any" order="158">
+								<Date>2021-05-19</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::159" version="any" order="159">
+								<Date>2021-05-20</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::160" version="any" order="160">
+								<Date>2021-05-21</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::161" version="any" order="161">
+								<Date>2021-05-22</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::162" version="any" order="162">
+								<Date>2021-05-23</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::163" version="any" order="163">
+								<Date>2021-05-24</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::164" version="any" order="164">
+								<Date>2021-05-25</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::165" version="any" order="165">
+								<Date>2021-05-26</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::166" version="any" order="166">
+								<Date>2021-05-27</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::167" version="any" order="167">
+								<Date>2021-05-28</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::168" version="any" order="168">
+								<Date>2021-05-29</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::169" version="any" order="169">
+								<Date>2021-05-30</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::170" version="any" order="170">
+								<Date>2021-05-31</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::171" version="any" order="171">
+								<Date>2021-06-01</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::172" version="any" order="172">
+								<Date>2021-06-02</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::173" version="any" order="173">
+								<Date>2021-06-03</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::174" version="any" order="174">
+								<Date>2021-06-04</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::175" version="any" order="175">
+								<Date>2021-06-05</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::176" version="any" order="176">
+								<Date>2021-06-06</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::177" version="any" order="177">
+								<Date>2021-06-07</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::178" version="any" order="178">
+								<Date>2021-06-08</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::179" version="any" order="179">
+								<Date>2021-06-09</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::180" version="any" order="180">
+								<Date>2021-06-10</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::181" version="any" order="181">
+								<Date>2021-06-11</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::182" version="any" order="182">
+								<Date>2021-06-12</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::183" version="any" order="183">
+								<Date>2021-06-13</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::184" version="any" order="184">
+								<Date>2021-06-14</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::185" version="any" order="185">
+								<Date>2021-06-15</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::186" version="any" order="186">
+								<Date>2021-06-16</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::187" version="any" order="187">
+								<Date>2021-06-17</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::188" version="any" order="188">
+								<Date>2021-06-18</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::189" version="any" order="189">
+								<Date>2021-06-19</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::190" version="any" order="190">
+								<Date>2021-06-20</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::191" version="any" order="191">
+								<Date>2021-06-21</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::192" version="any" order="192">
+								<Date>2021-06-22</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::193" version="any" order="193">
+								<Date>2021-06-23</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::194" version="any" order="194">
+								<Date>2021-06-24</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::195" version="any" order="195">
+								<Date>2021-06-25</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::196" version="any" order="196">
+								<Date>2021-06-26</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::197" version="any" order="197">
+								<Date>2021-06-27</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::198" version="any" order="198">
+								<Date>2021-06-28</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::199" version="any" order="199">
+								<Date>2021-06-29</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::200" version="any" order="200">
+								<Date>2021-06-30</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::201" version="any" order="201">
+								<Date>2021-07-01</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::202" version="any" order="202">
+								<Date>2021-07-02</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::203" version="any" order="203">
+								<Date>2021-07-03</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::204" version="any" order="204">
+								<Date>2021-07-04</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::205" version="any" order="205">
+								<Date>2021-07-05</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::206" version="any" order="206">
+								<Date>2021-07-06</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::207" version="any" order="207">
+								<Date>2021-07-07</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::208" version="any" order="208">
+								<Date>2021-07-08</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::209" version="any" order="209">
+								<Date>2021-07-09</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::210" version="any" order="210">
+								<Date>2021-07-10</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::211" version="any" order="211">
+								<Date>2021-07-11</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::212" version="any" order="212">
+								<Date>2021-07-12</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::213" version="any" order="213">
+								<Date>2021-07-13</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::214" version="any" order="214">
+								<Date>2021-07-14</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::215" version="any" order="215">
+								<Date>2021-07-15</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::216" version="any" order="216">
+								<Date>2021-07-16</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::217" version="any" order="217">
+								<Date>2021-07-17</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::218" version="any" order="218">
+								<Date>2021-07-18</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::219" version="any" order="219">
+								<Date>2021-07-19</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::220" version="any" order="220">
+								<Date>2021-07-20</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::221" version="any" order="221">
+								<Date>2021-07-21</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::222" version="any" order="222">
+								<Date>2021-07-22</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::223" version="any" order="223">
+								<Date>2021-07-23</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::224" version="any" order="224">
+								<Date>2021-07-24</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::225" version="any" order="225">
+								<Date>2021-07-25</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::226" version="any" order="226">
+								<Date>2021-07-26</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::227" version="any" order="227">
+								<Date>2021-07-27</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::228" version="any" order="228">
+								<Date>2021-07-28</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::229" version="any" order="229">
+								<Date>2021-07-29</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::230" version="any" order="230">
+								<Date>2021-07-30</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::231" version="any" order="231">
+								<Date>2021-07-31</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::232" version="any" order="232">
+								<Date>2021-08-01</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::233" version="any" order="233">
+								<Date>2021-08-02</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::234" version="any" order="234">
+								<Date>2021-08-03</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::235" version="any" order="235">
+								<Date>2021-08-04</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::236" version="any" order="236">
+								<Date>2021-08-05</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::237" version="any" order="237">
+								<Date>2021-08-06</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::238" version="any" order="238">
+								<Date>2021-08-07</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::239" version="any" order="239">
+								<Date>2021-08-08</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::240" version="any" order="240">
+								<Date>2021-08-09</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::241" version="any" order="241">
+								<Date>2021-08-10</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::242" version="any" order="242">
+								<Date>2021-08-11</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::243" version="any" order="243">
+								<Date>2021-08-12</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::244" version="any" order="244">
+								<Date>2021-08-13</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::245" version="any" order="245">
+								<Date>2021-08-14</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::246" version="any" order="246">
+								<Date>2021-08-15</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::247" version="any" order="247">
+								<Date>2021-08-16</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::248" version="any" order="248">
+								<Date>2021-08-17</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::249" version="any" order="249">
+								<Date>2021-08-18</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::250" version="any" order="250">
+								<Date>2021-08-19</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::251" version="any" order="251">
+								<Date>2021-08-20</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::252" version="any" order="252">
+								<Date>2021-08-21</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::253" version="any" order="253">
+								<Date>2021-08-22</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::254" version="any" order="254">
+								<Date>2021-08-23</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::255" version="any" order="255">
+								<Date>2021-08-24</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::256" version="any" order="256">
+								<Date>2021-08-25</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::257" version="any" order="257">
+								<Date>2021-08-26</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::258" version="any" order="258">
+								<Date>2021-08-27</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::259" version="any" order="259">
+								<Date>2021-08-28</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::260" version="any" order="260">
+								<Date>2021-08-29</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::261" version="any" order="261">
+								<Date>2021-08-30</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::262" version="any" order="262">
+								<Date>2021-08-31</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::263" version="any" order="263">
+								<Date>2021-09-01</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::264" version="any" order="264">
+								<Date>2021-09-02</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::265" version="any" order="265">
+								<Date>2021-09-03</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::266" version="any" order="266">
+								<Date>2021-09-04</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::267" version="any" order="267">
+								<Date>2021-09-05</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::268" version="any" order="268">
+								<Date>2021-09-06</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::269" version="any" order="269">
+								<Date>2021-09-07</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::270" version="any" order="270">
+								<Date>2021-09-08</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::271" version="any" order="271">
+								<Date>2021-09-09</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::272" version="any" order="272">
+								<Date>2021-09-10</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::273" version="any" order="273">
+								<Date>2021-09-11</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::274" version="any" order="274">
+								<Date>2021-09-12</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::275" version="any" order="275">
+								<Date>2021-09-13</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::276" version="any" order="276">
+								<Date>2021-09-14</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::277" version="any" order="277">
+								<Date>2021-09-15</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::278" version="any" order="278">
+								<Date>2021-09-16</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::279" version="any" order="279">
+								<Date>2021-09-17</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::280" version="any" order="280">
+								<Date>2021-09-18</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::281" version="any" order="281">
+								<Date>2021-09-19</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::282" version="any" order="282">
+								<Date>2021-09-20</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::283" version="any" order="283">
+								<Date>2021-09-21</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::284" version="any" order="284">
+								<Date>2021-09-22</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::285" version="any" order="285">
+								<Date>2021-09-23</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::286" version="any" order="286">
+								<Date>2021-09-24</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::287" version="any" order="287">
+								<Date>2021-09-25</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::288" version="any" order="288">
+								<Date>2021-09-26</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::289" version="any" order="289">
+								<Date>2021-09-27</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::290" version="any" order="290">
+								<Date>2021-09-28</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::291" version="any" order="291">
+								<Date>2021-09-29</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::292" version="any" order="292">
+								<Date>2021-09-30</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::293" version="any" order="293">
+								<Date>2021-10-01</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::294" version="any" order="294">
+								<Date>2021-10-02</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::295" version="any" order="295">
+								<Date>2021-10-03</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::296" version="any" order="296">
+								<Date>2021-10-04</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::297" version="any" order="297">
+								<Date>2021-10-05</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::298" version="any" order="298">
+								<Date>2021-10-06</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::299" version="any" order="299">
+								<Date>2021-10-07</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::300" version="any" order="300">
+								<Date>2021-10-08</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::301" version="any" order="301">
+								<Date>2021-10-09</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::302" version="any" order="302">
+								<Date>2021-10-10</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::303" version="any" order="303">
+								<Date>2021-10-11</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::304" version="any" order="304">
+								<Date>2021-10-12</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::305" version="any" order="305">
+								<Date>2021-10-13</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::306" version="any" order="306">
+								<Date>2021-10-14</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::307" version="any" order="307">
+								<Date>2021-10-15</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::308" version="any" order="308">
+								<Date>2021-10-16</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::309" version="any" order="309">
+								<Date>2021-10-17</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::310" version="any" order="310">
+								<Date>2021-10-18</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::311" version="any" order="311">
+								<Date>2021-10-19</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::312" version="any" order="312">
+								<Date>2021-10-20</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::313" version="any" order="313">
+								<Date>2021-10-21</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::314" version="any" order="314">
+								<Date>2021-10-22</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::315" version="any" order="315">
+								<Date>2021-10-23</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::316" version="any" order="316">
+								<Date>2021-10-24</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::317" version="any" order="317">
+								<Date>2021-10-25</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::318" version="any" order="318">
+								<Date>2021-10-26</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::319" version="any" order="319">
+								<Date>2021-10-27</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::320" version="any" order="320">
+								<Date>2021-10-28</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::321" version="any" order="321">
+								<Date>2021-10-29</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::322" version="any" order="322">
+								<Date>2021-10-30</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::323" version="any" order="323">
+								<Date>2021-10-31</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::324" version="any" order="324">
+								<Date>2021-11-01</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::325" version="any" order="325">
+								<Date>2021-11-02</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::326" version="any" order="326">
+								<Date>2021-11-03</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::327" version="any" order="327">
+								<Date>2021-11-04</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::328" version="any" order="328">
+								<Date>2021-11-05</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::329" version="any" order="329">
+								<Date>2021-11-06</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::330" version="any" order="330">
+								<Date>2021-11-07</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::331" version="any" order="331">
+								<Date>2021-11-08</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::332" version="any" order="332">
+								<Date>2021-11-09</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::333" version="any" order="333">
+								<Date>2021-11-10</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::334" version="any" order="334">
+								<Date>2021-11-11</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::335" version="any" order="335">
+								<Date>2021-11-12</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::336" version="any" order="336">
+								<Date>2021-11-13</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::337" version="any" order="337">
+								<Date>2021-11-14</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::338" version="any" order="338">
+								<Date>2021-11-15</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::339" version="any" order="339">
+								<Date>2021-11-16</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::340" version="any" order="340">
+								<Date>2021-11-17</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::341" version="any" order="341">
+								<Date>2021-11-18</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::342" version="any" order="342">
+								<Date>2021-11-19</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::343" version="any" order="343">
+								<Date>2021-11-20</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::344" version="any" order="344">
+								<Date>2021-11-21</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::345" version="any" order="345">
+								<Date>2021-11-22</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::346" version="any" order="346">
+								<Date>2021-11-23</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::347" version="any" order="347">
+								<Date>2021-11-24</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::348" version="any" order="348">
+								<Date>2021-11-25</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::349" version="any" order="349">
+								<Date>2021-11-26</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::350" version="any" order="350">
+								<Date>2021-11-27</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::351" version="any" order="351">
+								<Date>2021-11-28</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::352" version="any" order="352">
+								<Date>2021-11-29</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::353" version="any" order="353">
+								<Date>2021-11-30</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::354" version="any" order="354">
+								<Date>2021-12-01</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::355" version="any" order="355">
+								<Date>2021-12-02</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::356" version="any" order="356">
+								<Date>2021-12-03</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::357" version="any" order="357">
+								<Date>2021-12-04</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::358" version="any" order="358">
+								<Date>2021-12-05</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::359" version="any" order="359">
+								<Date>2021-12-06</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::360" version="any" order="360">
+								<Date>2021-12-07</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::361" version="any" order="361">
+								<Date>2021-12-08</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::362" version="any" order="362">
+								<Date>2021-12-09</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::363" version="any" order="363">
+								<Date>2021-12-10</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::364" version="any" order="364">
+								<Date>2021-12-11</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::365" version="any" order="365">
+								<Date>2021-12-12</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+							<DayTypeAssignment id="ch:1:DayType:TA_1::366" version="any" order="366">
+								<Date>2021-12-13</Date>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</DayTypeAssignment>
+						</dayTypeAssignments>
+					</ServiceCalendar>
+					<dayTypes>
+						<DayType id="ch:1:DayType:TA_1:" version="any">
+							<Name lang="de">täglich</Name>
+							<ShortName lang="de">TA</ShortName>
+						</DayType>
+					</dayTypes>
+				</ServiceCalendarFrame>
+				<TimetableFrame id="ch:1:TimetableFrame:1:91YYY_.j21" version="any">
+					<TypeOfFrameRef ref="epip:EU_PI_TIMETABLE"/>
+					<vehicleJourneys>
+						<ServiceJourney id="ch:1:ServiceJourney:91YYY-SBB-1-1-28800:TA:" version="1">
+							<privateCodes>
+								<PrivateCode>1</PrivateCode>
+							</privateCodes>
+							<TypeOfProductCategoryRef version="any" ref="ch:1:TypeOfProductCategory:B:"/>
+							<TypeOfServiceRef version="any" ref="ch:1:TypeOfService:1:"/>
+							<DepartureTime>08:00:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</dayTypes>
+							<ServiceJourneyPatternRef ref="ch:1:JourneyPattern:91YYY_.j21100201:" version="any"/>
+							<VehicleTypeRef ref="ch:1:VehicleType:C1:" version="any"/>
+							<LineRef ref="ch:1:Line:91YYY_.j21:" version="1"/>
+							<trainNumbers>
+								<TrainNumberRef ref="ch:1:TrainNumber:10:" version="any"/>
+							</trainNumbers>
+							<passingTimes>
+								<TimetabledPassingTime version="any" id="ch:1:TimetabledPassingTime:10:91YYY_.j21-1-0020101">
+									<PointInJourneyPatternRef ref="ch:1:StopPointInJourneyPattern:91YYY_.j21-1-0020101:" version="any"/>
+									<DepartureTime>08:00:00</DepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="ch:1:TimetabledPassingTime:10:91YYY_.j21-1-0020102">
+									<PointInJourneyPatternRef ref="ch:1:StopPointInJourneyPattern:91YYY_.j21-1-0020102:" version="any"/>
+									<ArrivalTime>08:15:00</ArrivalTime>
+									<DepartureTime>08:15:00</DepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="ch:1:TimetabledPassingTime:10:91YYY_.j21-1-0020103">
+									<PointInJourneyPatternRef ref="ch:1:StopPointInJourneyPattern:91YYY_.j21-1-0020103:" version="any"/>
+									<ArrivalTime>08:30:00</ArrivalTime>
+								</TimetabledPassingTime>
+							</passingTimes>
+						</ServiceJourney>
+						<ServiceJourney id="ch:1:ServiceJourney:91YYY-SBB-2-1-28800:TA:" version="1">
+							<privateCodes>
+								<PrivateCode>2</PrivateCode>
+							</privateCodes>
+							<TypeOfProductCategoryRef version="any" ref="ch:1:TypeOfProductCategory:B:"/>
+							<TypeOfServiceRef version="any" ref="ch:1:TypeOfService:1:"/>
+							<DepartureTime>08:00:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="ch:1:DayType:TA_1:" version="any"/>
+							</dayTypes>
+							<ServiceJourneyPatternRef ref="ch:1:JourneyPattern:91YYY_.j21100301:" version="any"/>
+							<VehicleTypeRef ref="ch:1:VehicleType:C1:" version="any"/>
+							<LineRef ref="ch:1:Line:91YYY_.j21:" version="1"/>
+							<trainNumbers>
+								<TrainNumberRef ref="ch:1:TrainNumber:20:" version="any"/>
+							</trainNumbers>
+							<passingTimes>
+								<TimetabledPassingTime version="any" id="ch:1:TimetabledPassingTime:91YYY-SBB-2-1-28800:TA:91YYY_.j21-1-0030101">
+									<PointInJourneyPatternRef ref="ch:1:StopPointInJourneyPattern:91YYY_.j21-1-0030101:" version="any"/>
+									<DepartureTime>08:00:00</DepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="ch:1:TimetabledPassingTime:91YYY-SBB-2-1-28800:TA:91YYY_.j21-1-0030102">
+									<PointInJourneyPatternRef ref="ch:1:StopPointInJourneyPattern:91YYY_.j21-1-0030102:" version="any"/>
+									<ArrivalTime>08:15:00</ArrivalTime>
+									<DepartureTime>08:15:00</DepartureTime>
+								</TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="ch:1:TimetabledPassingTime:91YYY-SBB-2-1-28800:TA:91YYY_.j21-1-0030103">
+									<PointInJourneyPatternRef ref="ch:1:StopPointInJourneyPattern:91YYY_.j21-1-0030103:" version="any"/>
+									<ArrivalTime>08:30:00</ArrivalTime>
+								</TimetabledPassingTime>
+							</passingTimes>
+						</ServiceJourney>
+					</vehicleJourneys>
+					<trainNumbers>
+						<TrainNumber id="ch:1:TrainNumber:10:" version="any">
+							<ForAdvertisement>10</ForAdvertisement>
+						</TrainNumber>
+						<TrainNumber id="ch:1:TrainNumber:20:" version="any">
+							<ForAdvertisement>20</ForAdvertisement>
+						</TrainNumber>
+					</trainNumbers>
+					<typesOfService>
+						<TypeOfService id="ch:1:TypeOfService:1:" version="any">
+							<privateCodes>
+								<PrivateCode>1</PrivateCode>
+							</privateCodes>
+							<Name lang="de">PublicJourney</Name>
+							<ShortName lang="de">N</ShortName>
+						</TypeOfService>
+						<TypeOfService id="ch:1:TypeOfService:2:" version="any">
+							<privateCodes>
+								<PrivateCode>2</PrivateCode>
+							</privateCodes>
+							<Name lang="de">GarageRunOut</Name>
+							<ShortName lang="de">GO</ShortName>
+						</TypeOfService>
+						<TypeOfService id="ch:1:TypeOfService:3:" version="any">
+							<privateCodes>
+								<PrivateCode>3</PrivateCode>
+							</privateCodes>
+							<Name lang="de">GarageRunIn</Name>
+							<ShortName lang="de">GI</ShortName>
+						</TypeOfService>
+					</typesOfService>
+					<notices>
+						<Notice id="notice1" version="any">
+							<Text>Test notice on a PASSINGTIME</Text>
+						</Notice>
+					</notices>
+					<noticeAssignments>
+						<NoticeAssignment id="notice1" version="any" order="1">
+							<NoticeRef ref="notice1" version="any"/>
+							<NoticedObjectRef ref="ch:1:TimetabledPassingTime:10:91YYY_.j21-1-0020101" version="any"/>
+						</NoticeAssignment>
+					</noticeAssignments>
+				</TimetableFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

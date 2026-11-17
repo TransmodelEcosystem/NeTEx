@@ -79,6 +79,22 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 				<DefaultCodespaceRef ref="op_cs"/>
 			</FrameDefaults>
 			<frames>
+				<ResourceFrame version="any" id="RF1">
+					<dataSources>
+						<DataSource id="uic:0060" version="any"/>
+					</dataSources>
+				</ResourceFrame>
+				<!--  Narrative:  The SERVICE CALENDAR FRAME provides a container to organise the operational dates -->
+				<ServiceCalendarFrame id="uic:SKDUPD_example_1_Classic_train" version="any">
+					<operatingPeriods>
+						<UicOperatingPeriod id="uic:SKDUPD_example_1_Classic_train" version="any">
+							<!-- POP+273:2022-03-28/2022-06-18::11111101111110111111011111101111110111111011111101111110111111011111101111110111111' -->
+							<FromDate>2022-03-28T00:00:00</FromDate>
+							<ToDate>2022-06-18T23:59:59</ToDate>
+							<ValidDayBits>11111101111110111111011111101111110111111011111101111110111111011111101111110111111</ValidDayBits>
+						</UicOperatingPeriod>
+					</operatingPeriods>
+				</ServiceCalendarFrame>
 				<ServiceFrame version="any" id="uic:SKDUPD_example_1_Classic_train">
 					<!--- comment: THESE STOP DECLARATIONS COULD BE EXTERNAL as in a TSDUPD location , they are here so as to be able to define names
 			  to make the example easier to follow  and to show how data can be cross validated for referential integrity -->
@@ -154,7 +170,7 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 					<Name>Uic Example of a very simple train timetable</Name>
 					<VehicleModes>rail</VehicleModes>
 					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="1" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						<ServiceJourney version="any" id="1" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<!-- PRD+1:13:2:9:::Classic train+0010' -->
 							<!-- SKPUPD_TRAIN
 ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	not_used	Reservation_system	First_day	Last_day	Operation_days	Second_service_number
@@ -169,15 +185,19 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="9">Intercity</TypeOfServiceRef>
 							<!-- TapTsi B.4.7009   	9 Intercity    -->
 							<DepartureTime>06:57:00</DepartureTime>
+							<!-- POP+273:2022-03-28/2022-06-18::11111101111110111111011111101111110111111011111101111110111111011111101111110111111' -->
+							<dayTypes>
+								<DayTypeRef ref="uic:SKDUPD_example_1_Classic_train"/>
+							</dayTypes>
 							<OperatorRef versionRef="EXTERNAL" ref="uic:0010">VR</OperatorRef>
 							<trainNumbers>
 								<TrainNumberRef version="any" ref="1"/>
 							</trainNumbers>
 							<parts>
-								<JourneyPart version="any" id="1@001002326+001000460" order="1">
+								<JourneyPart version="any" id="1@001002326+001000460-1">
 									<!-- ODI+001002326*001000460+1*13' -->
 									<ParentJourneyRef version="any" ref="1"/>
-									<MainPartRef version="any" ref="1@001002326+001000460"/>
+									<MainPartRef version="any" ref="1@001002326+001000460-1"/>
 									<FromStopPointRef version="any" ref="uic:001002326"/>
 									<ToStopPointRef version="any" ref="uic:001000460"/>
 									<StartTime>06:57:00</StartTime>
@@ -274,7 +294,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 1	11	001000966	1044		1045						
 1	12	001000453	1103		1104						
 1	13	001000460	1141			-->
-								<Call version="any" id="1" order="1">
+								<Call version="any" id="1-1">
 									<!-- POR+001002326+*0657+' -->
 									<ScheduledStopPointRef version="any" ref="uic:001002326">Helsinki</ScheduledStopPointRef>
 									<Arrival>
@@ -284,7 +304,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>06:57:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="2">
+								<Call version="any" id="1-2">
 									<!-- POR+001000010+0702*0703+' -->
 									<ScheduledStopPointRef version="any" ref="uic:001000010">Pasil</ScheduledStopPointRef>
 									<Arrival>
@@ -294,7 +314,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>07:03:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="3">
+								<Call version="any" id="1-3">
 									<!-- POR+001000018+0712*0714+' -->
 									<ScheduledStopPointRef version="any" ref="uic:001000018">Tikkurila</ScheduledStopPointRef>
 									<Arrival>
@@ -304,7 +324,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>07:14:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="4">
+								<Call version="any" id="1-4">
 									<!-- POR+001000100+0749*0751+' -->
 									<ScheduledStopPointRef version="any" ref="uic:001000100">Lahti</ScheduledStopPointRef>
 									<Arrival>
@@ -314,7 +334,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>07:51:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="5">
+								<Call version="any" id="1-5">
 									<!-- POR+001000480+0819*0823+' -->
 									<ScheduledStopPointRef version="any" ref="uic:001000480">Kouvola</ScheduledStopPointRef>
 									<Arrival>
@@ -324,7 +344,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>08:23:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="6">
+								<Call version="any" id="1-6">
 									<!-- POR+001000495+0907*0909+' -->
 									<ScheduledStopPointRef version="any" ref="uic:001000495">Lapeenranta</ScheduledStopPointRef>
 									<Arrival>
@@ -334,7 +354,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>09:09:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="7">
+								<Call version="any" id="1-7">
 									<!-- POR+001000499+0924*0925+' -->
 									<ScheduledStopPointRef version="any" ref="uic:001000499">Joutseno</ScheduledStopPointRef>
 									<Arrival>
@@ -344,7 +364,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>09:25:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="8">
+								<Call version="any" id="1-8">
 									<!-- POR+001000603+0937*0940+' -->
 									<ScheduledStopPointRef version="any" ref="uic:001000603">Imatra</ScheduledStopPointRef>
 									<Arrival>
@@ -354,7 +374,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>09:40:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="9">
+								<Call version="any" id="1-9">
 									<!-- POR+001000507+1006*1007+' -->
 									<ScheduledStopPointRef version="any" ref="uic:001000507">Simpele</ScheduledStopPointRef>
 									<Arrival>
@@ -364,7 +384,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>10:07:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="10">
+								<Call version="any" id="1-10">
 									<!-- POR+001000510+1020*1022+' -->
 									<ScheduledStopPointRef version="any" ref="uic:001000510">Parikkala</ScheduledStopPointRef>
 									<Arrival>
@@ -374,7 +394,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>10:22:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="11">
+								<Call version="any" id="1-11">
 									<!-- POR+001000966+1044*1045+' -->
 									<ScheduledStopPointRef version="any" ref="uic:001000966">Kehsalahti</ScheduledStopPointRef>
 									<Arrival>
@@ -384,7 +404,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>10:45:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="12">
+								<Call version="any" id="1-12">
 									<ScheduledStopPointRef version="any" ref="uic:001000453">Kitee</ScheduledStopPointRef>
 									<!-- POR+001000453+1103*1104+' -->
 									<Arrival>
@@ -394,7 +414,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>11:04:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="13">
+								<Call version="any" id="1-13">
 									<!-- POR+001000460+1141+' -->
 									<ScheduledStopPointRef version="any" ref="uic:001000460">Joensu</ScheduledStopPointRef>
 									<Arrival>
@@ -415,13 +435,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 									<!-- Tariff 2: Taf TSI B4.7139: 2	(Global price) All inclusive tariff -->
 								</ServiceFacilitySet>
 							</facilities>
-							<UicOperatingPeriod id="1" version="any">
-								<!-- POP+273:2022-03-28/2022-06-18::11111101111110111111011111101111110111111011111101111110111111011111101111110111111' -->
-								<FromDate>2022-03-28T00:00:00</FromDate>
-								<ToDate>2022-06-18T23:59:59</ToDate>
-								<ValidDayBits>11111101111110111111011111101111110111111011111101111110111111011111101111110111111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 					<trainNumbers>
 						<TrainNumber version="any" id="1">

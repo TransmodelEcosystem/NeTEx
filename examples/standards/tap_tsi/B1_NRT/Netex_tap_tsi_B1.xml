@@ -303,22 +303,23 @@ V1.1 Extensively revised with improved ids and use of tarifffs.
 					<!--  === TARIFFS  ===  -->
 					<tariffs>
 						<Tariff id="tap:NRT_Standard" version="1.0">
-							<ValidBetween id="tap:Tariff01" version="1.0">
+							<ValidBetween id="tap:Tariff02" version="1.0">
+								<!--ID changed from id="tap:Tariff01" to id="tap:Tariff02" since it has to be unique - v2.0-->
 								<FromDate>2011-01-01T00:00:00Z</FromDate>
 								<ToDate>2014-01-01T00:00:00Z</ToDate>
 							</ValidBetween>
 							<Name>B.1.1:01 Standard NRT Tarifff</Name>
 							<alternativeNames>
-								<AlternativeName order="1" id="tap:Tariff01@of" version="1.0">
+								<AlternativeName order="1" id="tap:NRT_Standard@of" version="1.0">
 									<Name lang="en">My Standard  Fare table    description in the Offical Language</Name>
 								</AlternativeName>
-								<AlternativeName order="2" id="tap:Tariff01@fr" version="1.0">
+								<AlternativeName order="2" id="tap:NRT_Standard@fr" version="1.0">
 									<Name lang="fr">My  Standard Fare tabledescription in the French</Name>
 								</AlternativeName>
-								<AlternativeName order="3" id="tap:Tariff01@de" version="1.0">
+								<AlternativeName order="3" id="tap:NRT_Standard@de" version="1.0">
 									<Name lang="de">My Standard Fare table description in German</Name>
 								</AlternativeName>
-								<AlternativeName order="4" id="tap:Tariff01@en" version="1.0">
+								<AlternativeName order="4" id="tap:NRT_Standard@en" version="1.0">
 									<Name lang="de">My Standard Fare table description in English</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -935,7 +936,7 @@ V1.1 Extensively revised with improved ids and use of tarifffs.
 					</groupsOfSalesOfferPackages>
 				</FareFrame>
 				<!--   === PRICES =====-->
-				<FareFrame id="tap:NRT_Example@prices" version="1.0" modification="revise">
+				<FarePriceFrame id="tap:NRT_Example@prices" version="1.0" modification="revise">
 					<prerequisites>
 						<FareFrameRef version="1.0" ref="tap:NRT_Example@products"/>
 						<FareFrameRef version="1.0" ref="tap:RailCard@products"/>
@@ -1428,7 +1429,7 @@ No_Railcard_50		|	series10141	|	adult		||		511.50		|	18.50 	||		37.00	|	 23.00 	
 							</includes>
 						</FareTable>
 					</fareTables>
-				</FareFrame>
+				</FarePriceFrame>
 				<!-- ====RESOURCE FRAME======== -->
 				<ResourceFrame version="1.0" id="tap:Common_resources">
 					<typesOfValue>

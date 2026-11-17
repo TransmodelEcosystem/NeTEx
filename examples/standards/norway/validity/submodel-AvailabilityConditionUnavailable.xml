@@ -3,12 +3,12 @@
 Example of AvailabilityCondition:
 - using dayTypes
 -->
-<AvailabilityCondition xmlns:siri="http://www.siri.org.uk/siri" xmlns="http://www.netex.org.uk/netex" xmlns:core="http://www.govtalk.gov.uk/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../../xsd/netex_framework/netex_reusableComponents/netex_availabilityCondition_version.xsd">
+<AvailabilityCondition xmlns:siri="http://www.siri.org.uk/siri" xmlns="http://www.netex.org.uk/netex" xmlns:core="http://www.govtalk.gov.uk/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="1" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../../xsd/netex_framework/netex_reusableComponents/netex_availabilityCondition_version.xsd">
 	<FromDate>2016-09-05T05:00:00Z</FromDate>
 	<ToDate>2016-12-08T01:00:00Z</ToDate>
 	<IsAvailable>true</IsAvailable>
 	<dayTypes>
-		<DayType>
+		<DayType id="1" version="any">
 			<Name>Weekdays</Name>
 			<Description>Mon, Tue, Wed, Thu, Fri</Description>
 			<timebands>
@@ -19,7 +19,7 @@ Example of AvailabilityCondition:
 				</Timeband>
 			</timebands>
 		</DayType>
-		<DayType>
+		<DayType id="2" version="any">
 			<Name>Weekend</Name>
 			<Description>Sat, Sun</Description>
 			<timebands>

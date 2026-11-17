@@ -1274,7 +1274,7 @@ Includes the following:
 								<ComplexFeatureMember version="any" id="gis:Road_RueDeParis1_P001">
 									<VersionOfObjectRef nameOfRefClass="RoadJunction" ref="gis:RdP_RueDeParis1_001"/>
 								</ComplexFeatureMember>
-								<ComplexFeatureMember id="gis:Road_RueDeParis1_P002">
+								<ComplexFeatureMember id="gis:Road_RueDeParis1_P002" version="any">
 									<VersionOfObjectRef nameOfRefClass="RoadJunction" ref="gis:RdP_RueDeParis1_002"/>
 								</ComplexFeatureMember>
 								<ComplexFeatureMember version="any" id="gis:Road_RueDeParis1_P003">

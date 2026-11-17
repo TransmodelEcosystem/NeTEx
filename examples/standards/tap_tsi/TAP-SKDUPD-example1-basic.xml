@@ -61,16 +61,28 @@ MES+200:KMT'         -->
 				<DefaultCodespaceRef ref="op_cs"/>
 			</FrameDefaults>
 			<frames>
+				<ServiceCalendarFrame id="ServiceCalendarFrame:1" version="any">
+					<operatingPeriods>
+						<UicOperatingPeriod id="3" version="any">
+							<FromDate>2006-11-04T12:00:00</FromDate>
+							<ToDate>2006-11-04T12:00:00</ToDate>
+							<ValidDayBits>1</ValidDayBits>
+						</UicOperatingPeriod>
+					</operatingPeriods>
+				</ServiceCalendarFrame>
 				<TimetableFrame version="any" id="SKDUPD_basic_example">
 					<Name>Uic Example of a very simple train timetable</Name>
 					<VehicleModes>rail</VehicleModes>
 					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="3">
+						<ServiceJourney version="any" id="3">
 							<!-- PRD+3:11:1:3:::ALPHA TANGO+0060**80' -->
 							<Name>ALPHA TANGO</Name>
 							<TypeOfProductCategoryRef versionRef="EXTERNAL" ref="84"/>
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="3"/>
 							<DepartureTime>05:03:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="3"/>
+							</dayTypes>
 							<!--  Narrative: Operator of service (ie TAPTSI  RU.)  This is an external reference -->
 							<!-- 	POR+006070001+*0503+*1+5'			-->
 							<OperatorRef versionRef="EXTERNAL" ref="uic:0060"/>
@@ -81,11 +93,11 @@ MES+200:KMT'         -->
 								<TrainNumberRef version="any" ref="3">Advertised as 33</TrainNumberRef>
 							</trainNumbers>
 							<parts>
-								<JourneyPart version="any" id="3@006070001+006070016" order="1">
+								<JourneyPart version="any" id="3@006070001+006070016-1">
 									<!--  Narrative:  The JOURNEY PART (sepcifies properties that apply for part of a journey -->
 									<!-- ODI+006070001*006070016+1*3'      -->
 									<ParentJourneyRef version="any" ref="3">Alpha Tango</ParentJourneyRef>
-									<MainPartRef version="any" ref="3@006070001+006070016"/>
+									<MainPartRef version="any" ref="3@006070001+006070016-1"/>
 									<!--  Narrative: span of journey part  -->
 									<FromStopPointRef versionRef="EXTERNAL" ref="006070001"/>
 									<ToStopPointRef versionRef="EXTERNAL" ref="006070016"/>
@@ -116,10 +128,10 @@ MES+200:KMT'         -->
 										</ServiceFacilitySet>
 									</facilities>
 								</JourneyPart>
-								<JourneyPart version="any" id="3@006070001+006070013" order="1">
+								<JourneyPart version="any" id="3@006070001+006070013-1">
 									<!-- ODI+006070001*006070016+1*3'      -->
 									<ParentJourneyRef version="any" ref="3">Alpha Tango</ParentJourneyRef>
-									<MainPartRef version="any" ref="3@006070001+006070013"/>
+									<MainPartRef version="any" ref="3@006070001+006070013-1"/>
 									<FromStopPointRef versionRef="EXTERNAL" ref="006070001"/>
 									<ToStopPointRef versionRef="EXTERNAL" ref="006070013"/>
 									<StartTime>05:03:00</StartTime>
@@ -129,7 +141,7 @@ MES+200:KMT'         -->
 PDT++:::84:::'     ( TAPTSI B.4.7009  84 regional train)	
 -->
 								</JourneyPart>
-								<JourneyPart version="any" id="3@006070013+006070016" order="1">
+								<JourneyPart version="any" id="3@006070013+006070016-1">
 									<!-- ODI+006070013*006070016+2*3'
 PDT++:::58:::'     (TAPTSI B.4.7009  58 TRN Intercités) -->
 									<!-- 	POR+006070013+0445:::1*0400:::1+3*3+17'    
@@ -137,7 +149,7 @@ PDT++:::58:::'     (TAPTSI B.4.7009  58 TRN Intercités) -->
 											ASD+44::0330'					44	Telephone, 
 											ASD+45:0505'			45	Power supply  -->
 									<ParentJourneyRef version="any" ref="3">Alpha Tango</ParentJourneyRef>
-									<MainPartRef version="any" ref="3@006070001+006070016"/>
+									<MainPartRef version="any" ref="3@006070001+006070016-1"/>
 									<FromStopPointRef versionRef="EXTERNAL" ref="006070013"/>
 									<ToStopPointRef versionRef="EXTERNAL" ref="006070016"/>
 									<StartTime>04:45:00</StartTime>
@@ -157,7 +169,7 @@ PDT++:::58:::'     (TAPTSI B.4.7009  58 TRN Intercités) -->
 							</parts>
 							<calls>
 								<!--  Narrative: Individual visits to stop-->
-								<Call version="any" id="3" order="1">
+								<Call version="any" id="3-1">
 									<!-- 	POR+006070001+*0503+*1+5'			-->
 									<!--  (POR+UIC+ARRIVAL::OFFSET_A*DEPARTURE::OFFSET_D+PLATFORM_A*PLATFORM_D+PROPERTY) -->
 									<ScheduledStopPointRef versionRef="EXTERNAL" ref="006070001"/>
@@ -179,7 +191,7 @@ PDT++:::58:::'     (TAPTSI B.4.7009  58 TRN Intercités) -->
 										</QuayAssignmentView>
 									</Departure>
 								</Call>
-								<Call version="any" id="3" order="2">
+								<Call version="any" id="3-2">
 									<ScheduledStopPointRef versionRef="EXTERNAL" ref="006070013"/>
 									<!-- POR+006070013+0445:::1*0400:::1+3*3+17' 
 										TRF+4'      	-->
@@ -207,7 +219,7 @@ PDT++:::58:::'     (TAPTSI B.4.7009  58 TRN Intercités) -->
 										</QuayAssignmentView>
 									</Departure>
 								</Call>
-								<Call version="any" id="3" order="3">
+								<Call version="any" id="3-3">
 									<!-- POR+006070016+0500+'		-->
 									<ScheduledStopPointRef versionRef="EXTERNAL" ref="006070016"/>
 									<Arrival>
@@ -272,12 +284,7 @@ PDT++:::58:::'     (TAPTSI B.4.7009  58 TRN Intercités) -->
 									</delays>
 								</CheckConstraint>
 							</checkConstraints>
-							<UicOperatingPeriod id="3" version="any">
-								<FromDate>2006-11-04T12:00:00</FromDate>
-								<ToDate>2006-11-04T12:00:00</ToDate>
-								<ValidDayBits>1</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 					<trainNumbers>
 						<TrainNumber version="any" id="3">

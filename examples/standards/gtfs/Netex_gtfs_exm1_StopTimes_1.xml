@@ -99,7 +99,7 @@ NeTEx (C) CEN Copyright 2010,2019
 			<vehicleJourneys>
 				<ServiceJourney version="any" id="mygtfsxm:STBA">
 					<calls>
-						<Call version="any" id="mygtfsxm:STBA" order="1">
+						<Call version="any" id="mygtfsxm:STBA-1">
 							<ScheduledStopPointRef ref="mygtfsxm:STAGECOACH"/>
 							<Arrival>
 								<Time>06:00:00</Time>
@@ -112,7 +112,7 @@ NeTEx (C) CEN Copyright 2010,2019
 								<Name>Nye CountyAirport</Name>
 							</DestinationDisplayView>
 						</Call>
-						<Call version="any" id="mygtfsxm:STBA" order="2">
+						<Call version="any" id="mygtfsxm:STBA-2">
 							<ScheduledStopPointRef ref="mygtfsxm:BEATTY_AIRPORT"/>
 							<OnwardServiceLinkView>
 								<Distance>5</Distance>
@@ -130,7 +130,7 @@ NeTEx (C) CEN Copyright 2010,2019
 				</ServiceJourney>
 				<ServiceJourney version="any" id="mygtfsxm:CITY1">
 					<calls>
-						<Call version="any" id="mygtfsxm:CITY1" order="1">
+						<Call version="any" id="mygtfsxm:CITY1-1">
 							<ScheduledStopPointRef ref="mygtfsxm:STAGECOACH"/>
 							<Arrival>
 								<Time>06:00:00</Time>
@@ -139,7 +139,7 @@ NeTEx (C) CEN Copyright 2010,2019
 								<Time>06:00:00</Time>
 							</Departure>
 						</Call>
-						<Call version="any" id="mygtfsxm:CITY1" order="2">
+						<Call version="any" id="mygtfsxm:CITY1-2">
 							<ScheduledStopPointRef ref="mygtfsxm:NANAA"/>
 							<Arrival>
 								<Time>06:05:00</Time>
@@ -148,7 +148,7 @@ NeTEx (C) CEN Copyright 2010,2019
 								<Time>06:07:00</Time>
 							</Departure>
 						</Call>
-						<Call version="any" id="mygtfsxm:CITY1" order="3">
+						<Call version="any" id="mygtfsxm:CITY1-3">
 							<ScheduledStopPointRef ref="mygtfsxm:NADAV"/>
 							<Arrival>
 								<Time>06:12:00</Time>
@@ -157,7 +157,7 @@ NeTEx (C) CEN Copyright 2010,2019
 								<Time>06:14:00</Time>
 							</Departure>
 						</Call>
-						<Call version="any" id="mygtfsxm:CITY1" order="4">
+						<Call version="any" id="mygtfsxm:CITY1-4">
 							<ScheduledStopPointRef ref="mygtfsxm:DADAN"/>
 							<Arrival>
 								<Time>06:19:00</Time>
@@ -166,7 +166,7 @@ NeTEx (C) CEN Copyright 2010,2019
 								<Time>06:21:00</Time>
 							</Departure>
 						</Call>
-						<Call version="any" id="mygtfsxm:CITY1" order="5">
+						<Call version="any" id="mygtfsxm:CITY1-5">
 							<ScheduledStopPointRef ref="mygtfsxm:EMSI"/>
 							<Arrival>
 								<Time>06:26:00</Time>
@@ -179,7 +179,7 @@ NeTEx (C) CEN Copyright 2010,2019
 				</ServiceJourney>
 				<ServiceJourney version="any" id="mygtfsxm:CITY2">
 					<calls>
-						<Call version="any" id="mygtfsxm:CITY2" order="1">
+						<Call version="any" id="mygtfsxm:CITY2-1">
 							<ScheduledStopPointRef ref="mygtfsxm:EMSI"/>
 							<Arrival>
 								<Time>06:28:00</Time>
@@ -188,7 +188,7 @@ NeTEx (C) CEN Copyright 2010,2019
 								<Time>06:30:00</Time>
 							</Departure>
 						</Call>
-						<Call version="any" id="mygtfsxm:CITY2" order="2">
+						<Call version="any" id="mygtfsxm:CITY2-2">
 							<ScheduledStopPointRef ref="mygtfsxm:DADAN"/>
 							<Arrival>
 								<Time>06:35:00</Time>
@@ -197,7 +197,7 @@ NeTEx (C) CEN Copyright 2010,2019
 								<Time>06:37:00</Time>
 							</Departure>
 						</Call>
-						<Call version="any" id="mygtfsxm:CITY2" order="3">
+						<Call version="any" id="mygtfsxm:CITY2-3">
 							<ScheduledStopPointRef ref="mygtfsxm:NADAV"/>
 							<Arrival>
 								<Time>06:42:00</Time>
@@ -206,7 +206,7 @@ NeTEx (C) CEN Copyright 2010,2019
 								<Time>06:44:00</Time>
 							</Departure>
 						</Call>
-						<Call version="any" id="mygtfsxm:CITY2" order="4">
+						<Call version="any" id="mygtfsxm:CITY2-4">
 							<ScheduledStopPointRef ref="mygtfsxm:NANAA"/>
 							<Arrival>
 								<Time>06:49:00</Time>
@@ -215,7 +215,7 @@ NeTEx (C) CEN Copyright 2010,2019
 								<Time>06:51:00</Time>
 							</Departure>
 						</Call>
-						<Call version="any" id="mygtfsxm:CITY2" order="5">
+						<Call version="any" id="mygtfsxm:CITY2-5">
 							<ScheduledStopPointRef ref="mygtfsxm:STAGECOACH"/>
 							<Arrival>
 								<Time>06:56:00</Time>
@@ -228,7 +228,7 @@ NeTEx (C) CEN Copyright 2010,2019
 				</ServiceJourney>
 				<ServiceJourney version="any" id="mygtfsxm:AB1">
 					<calls>
-						<Call version="any" id="mygtfsxm:AB1" order="1">
+						<Call version="any" id="mygtfsxm:AB1-1">
 							<ScheduledStopPointRef ref="mygtfsxm:BEATTY_AIRPORT"/>
 							<Arrival>
 								<Time>08:00:00</Time>
@@ -237,7 +237,7 @@ NeTEx (C) CEN Copyright 2010,2019
 								<Time>08:00:00</Time>
 							</Departure>
 						</Call>
-						<Call version="any" id="mygtfsxm:AB1" order="2">
+						<Call version="any" id="mygtfsxm:AB1-2">
 							<ScheduledStopPointRef ref="mygtfsxm:BULLFROG"/>
 							<Arrival>
 								<Time>08:10:00</Time>
@@ -250,7 +250,7 @@ NeTEx (C) CEN Copyright 2010,2019
 				</ServiceJourney>
 				<ServiceJourney version="any" id="mygtfsxm:AB2">
 					<calls>
-						<Call version="any" id="mygtfsxm:AB2" order="1">
+						<Call version="any" id="mygtfsxm:AB2-1">
 							<ScheduledStopPointRef ref="mygtfsxm:BULLFROG"/>
 							<Arrival>
 								<Time>12:05:00</Time>
@@ -259,7 +259,7 @@ NeTEx (C) CEN Copyright 2010,2019
 								<Time>12:05:00</Time>
 							</Departure>
 						</Call>
-						<Call version="any" id="mygtfsxm:AB2" order="2">
+						<Call version="any" id="mygtfsxm:AB2-2">
 							<ScheduledStopPointRef ref="mygtfsxm:BEATTY_AIRPORT"/>
 							<Arrival>
 								<Time>12:15:00</Time>
@@ -272,7 +272,7 @@ NeTEx (C) CEN Copyright 2010,2019
 				</ServiceJourney>
 				<ServiceJourney version="any" id="mygtfsxm:BFC1">
 					<calls>
-						<Call version="any" id="mygtfsxm:BFC1" order="1">
+						<Call version="any" id="mygtfsxm:BFC1-1">
 							<ScheduledStopPointRef ref="mygtfsxm:BULLFROG"/>
 							<Arrival>
 								<Time>08:20:00</Time>
@@ -281,7 +281,7 @@ NeTEx (C) CEN Copyright 2010,2019
 								<Time>08:20:00</Time>
 							</Departure>
 						</Call>
-						<Call version="any" id="mygtfsxm:BFC1" order="2">
+						<Call version="any" id="mygtfsxm:BFC1-2">
 							<ScheduledStopPointRef ref="mygtfsxm:FUR_CREEK_RES"/>
 							<Arrival>
 								<Time>09:20:00</Time>
@@ -294,7 +294,7 @@ NeTEx (C) CEN Copyright 2010,2019
 				</ServiceJourney>
 				<ServiceJourney version="any" id="mygtfsxm:BFC2">
 					<calls>
-						<Call version="any" id="mygtfsxm:BFC2" order="1">
+						<Call version="any" id="mygtfsxm:BFC2-1">
 							<ScheduledStopPointRef ref="mygtfsxm:FUR_CREEK_RES"/>
 							<Arrival>
 								<Time>11:00:00</Time>
@@ -303,7 +303,7 @@ NeTEx (C) CEN Copyright 2010,2019
 								<Time>11:00:00</Time>
 							</Departure>
 						</Call>
-						<Call version="any" id="mygtfsxm:BFC2" order="2">
+						<Call version="any" id="mygtfsxm:BFC2-2">
 							<ScheduledStopPointRef ref="mygtfsxm:BULLFROG"/>
 							<Arrival>
 								<Time>12:00:00</Time>
@@ -316,7 +316,7 @@ NeTEx (C) CEN Copyright 2010,2019
 				</ServiceJourney>
 				<ServiceJourney version="any" id="mygtfsxm:AAMV1">
 					<calls>
-						<Call version="any" id="mygtfsxm:AAMV1" order="1">
+						<Call version="any" id="mygtfsxm:AAMV1-1">
 							<ScheduledStopPointRef ref="mygtfsxm:BEATTY_AIRPORT"/>
 							<Arrival>
 								<Time>08:00:00</Time>
@@ -325,7 +325,7 @@ NeTEx (C) CEN Copyright 2010,2019
 								<Time>08:00:00</Time>
 							</Departure>
 						</Call>
-						<Call version="any" id="mygtfsxm:AAMV1" order="2">
+						<Call version="any" id="mygtfsxm:AAMV1-2">
 							<ScheduledStopPointRef ref="mygtfsxm:AMV"/>
 							<Arrival>
 								<Time>09:00:00</Time>
@@ -338,7 +338,7 @@ NeTEx (C) CEN Copyright 2010,2019
 				</ServiceJourney>
 				<ServiceJourney version="any" id="mygtfsxm:AAMV2">
 					<calls>
-						<Call version="any" id="mygtfsxm:AAMV2" order="1">
+						<Call version="any" id="mygtfsxm:AAMV2-1">
 							<ScheduledStopPointRef ref="mygtfsxm:AMV"/>
 							<Arrival>
 								<Time>10:00:00</Time>
@@ -347,7 +347,7 @@ NeTEx (C) CEN Copyright 2010,2019
 								<Time>10:00:00</Time>
 							</Departure>
 						</Call>
-						<Call version="any" id="mygtfsxm:AAMV2" order="2">
+						<Call version="any" id="mygtfsxm:AAMV2-2">
 							<ScheduledStopPointRef ref="mygtfsxm:BEATTY_AIRPORT"/>
 							<Arrival>
 								<Time>11:00:00</Time>
@@ -360,7 +360,7 @@ NeTEx (C) CEN Copyright 2010,2019
 				</ServiceJourney>
 				<ServiceJourney version="any" id="mygtfsxm:AAMV3">
 					<calls>
-						<Call version="any" id="mygtfsxm:AAMV3" order="1">
+						<Call version="any" id="mygtfsxm:AAMV3-1">
 							<ScheduledStopPointRef ref="mygtfsxm:BEATTY_AIRPORT"/>
 							<Arrival>
 								<Time>13:00:00</Time>
@@ -369,7 +369,7 @@ NeTEx (C) CEN Copyright 2010,2019
 								<Time>13:00:00</Time>
 							</Departure>
 						</Call>
-						<Call version="any" id="mygtfsxm:AAMV3" order="2">
+						<Call version="any" id="mygtfsxm:AAMV3-2">
 							<ScheduledStopPointRef ref="mygtfsxm:AMV"/>
 							<Arrival>
 								<Time>14:00:00</Time>
@@ -382,7 +382,7 @@ NeTEx (C) CEN Copyright 2010,2019
 				</ServiceJourney>
 				<ServiceJourney version="any" id="mygtfsxm:AAMV4">
 					<calls>
-						<Call version="any" id="mygtfsxm:AAMV4" order="1">
+						<Call version="any" id="mygtfsxm:AAMV4-1">
 							<ScheduledStopPointRef ref="mygtfsxm:AMV"/>
 							<Arrival>
 								<Time>15:00:00</Time>
@@ -391,7 +391,7 @@ NeTEx (C) CEN Copyright 2010,2019
 								<Time>15:00:00</Time>
 							</Departure>
 						</Call>
-						<Call version="any" id="mygtfsxm:AAMV4" order="2">
+						<Call version="any" id="mygtfsxm:AAMV4-2">
 							<ScheduledStopPointRef ref="mygtfsxm:BEATTY_AIRPORT"/>
 							<Arrival>
 								<Time>16:00:00</Time>

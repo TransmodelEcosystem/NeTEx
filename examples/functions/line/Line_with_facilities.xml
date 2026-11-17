@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2025-04-20T16:44:47.0Z</PublicationTimestamp>
+	<ParticipantRef>SYS001</ParticipantRef>
+	<!--- ======WHAT WAS REQUESTED ========== -->
+	<PublicationRequest version="1.0">
+		<RequestTimestamp>2025-04-20T16:44:47.0Z</RequestTimestamp>
+		<ParticipantRef>SYS002</ParticipantRef>
+		<topics>
+			<NetworkFrameTopic>
+				<selectionValidityConditions>
+					<AvailabilityCondition version="any" id="acs:CAL_02">
+						<FromDate>2025-05-01T00:00:00Z</FromDate>
+					</AvailabilityCondition>
+				</selectionValidityConditions>
+				<TimetableFrameRef ref="acs:TimetableFrameTIM_25_O">REQUEST</TimetableFrameRef>
+			</NetworkFrameTopic>
+		</topics>
+	</PublicationRequest>
+	<PublicationRefreshInterval>P1M</PublicationRefreshInterval>
+	<Description>Simple example of a line with facilities and a line without</Description>
+	<!--- =============== RESULTS =========== -->
+	<dataObjects>
+		<CompositeFrame version="1.0" id="acs:ACS@Line_24">
+			<!--- ======= CODESPACEs======== -->
+			<!--- =======FRAME DEFAULTS======== -->
+			<FrameDefaults>
+				<DefaultCodespaceRef ref="mybus"/>
+			</FrameDefaults>
+			<frames>
+				<ServiceFrame version="1.0" id="mybus:ACS@Line_24@Network">
+					<Name>List of stops fo the bus line 24</Name>
+					<codespaces>
+						<Codespace id="mybus">
+							<Xmlns>mybus</Xmlns>
+							<XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
+							<Description>My buses</Description>
+						</Codespace>
+					</codespaces>
+					<prerequisites>
+						<ResourceFrameRef version="1.0" ref="acs:ACS@Common_Resources"/>
+					</prerequisites>
+					<!--- =========LINEs=========== -->
+					<lines>
+						<Line version="any" id="mybus:LN_24">
+							<Name>Line 24 Alpha to Charley</Name>
+							<ShortName>Line 24</ShortName>
+							<TransportMode>bus</TransportMode>
+							<PublicCode>24</PublicCode>
+							<OperatorRef version="1.0" ref="acs:ACS"/>
+							<Presentation>
+								<Colour>00812c</Colour>
+								<ColourName>RGB:0 129 44</ColourName>
+								<TextColour>ffffff</TextColour>
+							</Presentation>
+							<AccessibilityAssessment id="acs:ACS@Accessibility:24" version="any">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation id="acs:ACS@Accessibility:24" version="any">
+										<WheelchairAccess>true</WheelchairAccess>
+										<AudibleSignalsAvailable>unknown</AudibleSignalsAvailable>
+										<VisualSignsAvailable>unknown</VisualSignsAvailable>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
+							<facilities>
+								<ServiceFacilitySet id="acs:ACS@Facilities" version="any">
+									<ClimateControlList>airConditioning</ClimateControlList>
+								</ServiceFacilitySet>
+							</facilities>
+							<noticeAssignments>
+								<NoticeAssignmentView id="acs:ACS@Notices" order="1">
+									<Mark>Timetables for the line 24</Mark>
+									<MarkUrl>https://mybuses.eu/timetables/line_24.pdf</MarkUrl>
+									<TypeOfNoticeRef ref="PDFTimetable"/>
+								</NoticeAssignmentView>
+							</noticeAssignments>
+						</Line>
+						<Line version="any" id="myski:LN_25">
+							<Name>Line 25 Delta to Gamma</Name>
+							<ShortName>Line 25</ShortName>
+							<TransportMode>bus</TransportMode>
+							<PublicCode>25</PublicCode>
+							<OperatorRef version="1.0" ref="acs:ACS"/>
+							<Presentation>
+								<Colour>290081</Colour>
+								<ColourName>RGB:41 0 129</ColourName>
+								<TextColour>ffffff</TextColour>
+							</Presentation>
+							<AccessibilityAssessment id="acs:ACS@Accessibility:25" version="any">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation id="acs:ACS@Accessibility:25" version="any">
+										<WheelchairAccess>true</WheelchairAccess>
+										<AudibleSignalsAvailable>unknown</AudibleSignalsAvailable>
+										<VisualSignsAvailable>unknown</VisualSignsAvailable>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
+							<noticeAssignments>
+								<NoticeAssignmentView id="acs:ACS@Notices" order="1">
+									<Mark>Timetables for the line 25</Mark>
+									<MarkUrl>https://mybuses.eu/timetables/line_25.pdf</MarkUrl>
+									<TypeOfNoticeRef ref="PDFTimetable"/>
+								</NoticeAssignmentView>
+							</noticeAssignments>
+						</Line>
+					</lines>
+				</ServiceFrame>
+				<ResourceFrame version="1.0" id="acs:ACS@Common_Resources">
+					<!--- ======= CODESPACEs======== -->
+					<codespaces>
+						<Codespace id="acs">
+							<Xmlns>acs</Xmlns>
+							<XmlnsUrl>http://autocarssuperbe.fr</XmlnsUrl>
+							<Description>Service data </Description>
+						</Codespace>
+					</codespaces>
+					<!--- =======FRAME DEFAULTS======== -->
+					<FrameDefaults>
+						<DefaultCodespaceRef ref="acs"/>
+					</FrameDefaults>
+					<organisations>
+						<Operator version="1.0" id="acs:ACS">
+							<Name>Autocars superbe</Name>
+							<Locale>
+								<DefaultLanguage>fr</DefaultLanguage>
+							</Locale>
+							<ContactDetails>
+								<Phone>+33-1-675-9876</Phone>
+								<Url>http://autocarssuperbe.fr</Url>
+							</ContactDetails>
+						</Operator>
+					</organisations>
+				</ResourceFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

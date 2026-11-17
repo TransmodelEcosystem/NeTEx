@@ -50,6 +50,9 @@ UIC_Code1	UIC_Code2	Duration	Duration_Unit	13	6_footPath_or_14_Hierarchy	Attribu
 			<FrameDefaults>
 				<DefaultCodespaceRef ref="uic_cs"/>
 			</FrameDefaults>
+			<dataSources>
+				<DataSource id="uic:1183" version="any"/>
+			</dataSources>
 			<organisations>
 				<Operator version="any" id="uic:0064">
 				</Operator>

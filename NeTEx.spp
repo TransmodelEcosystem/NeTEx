@@ -32,6 +32,7 @@
 				<File FilePath="xsd\netex_framework\netex_responsibility\netex_relationship_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_framework\netex_responsibility\netex_responsibility_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_framework\netex_responsibility\netex_responsibility_version.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_framework\netex_responsibility\netex_responsibilitySet_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_framework\netex_responsibility\netex_responsibilitySet_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_framework\netex_responsibility\netex_typeOfValue_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_framework\netex_responsibility\netex_validityCondition_support.xsd" HomeFolder="Yes"/>
@@ -60,6 +61,8 @@
 				<File FilePath="xsd\netex_framework\netex_genericFramework\netex_layer_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_framework\netex_genericFramework\netex_loggable_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_framework\netex_genericFramework\netex_loggable_version.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_framework\netex_genericFramework\netex_path_support.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_framework\netex_genericFramework\netex_path_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_framework\netex_genericFramework\netex_place_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_framework\netex_genericFramework\netex_place_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_framework\netex_genericFramework\netex_pointAndLink_support.xsd" HomeFolder="Yes"/>
@@ -78,55 +81,94 @@
 				<File FilePath="xsd\netex_framework\netex_genericFramework\netex_zoneProjection_version.xsd" HomeFolder="Yes"/>
 			</Folder>
 			<Folder FolderName="netex_reusableComponents_TM_RC">
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_access_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_address_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_address_version.xsd" HomeFolder="Yes"/>
+				<Folder FolderName="modes_RC">
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_mode_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_mode_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_modeOfOperation_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_modeOfOperation_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_submode_version.xsd" HomeFolder="Yes"/>
+				</Folder>
+				<Folder FolderName="time_related_RC">
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_availabilityCondition_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_availabilityCondition_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_dayType_propertiesOfDay.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_dayType_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_dayType_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_serviceCalendar_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_serviceCalendar_version.xsd" HomeFolder="Yes"/>
+				</Folder>
+				<Folder FolderName="organisations_RC">
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_otherOrganisation_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_otherOrganisation_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_transportOrganisation_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_transportOrganisation_version.xsd" HomeFolder="Yes"/>
+				</Folder>
+				<Folder FolderName="places_RC">
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_access_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_address_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_address_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_country_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_topographicPlace_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_topographicPlace_version.xsd" HomeFolder="Yes"/>
+				</Folder>
+				<Folder FolderName="vehicle_types_RC">
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_deckPath_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_deckPath_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_deckPlan_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_deckPlan_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_seatingPlan_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_seatingPlan_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_spotAffinity_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_spotAffinity_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_spotAffinity_version.xsd"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_trainElement_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_trainElement_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_trainElementType_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_trainElementType_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_vehicleSeating_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_vehicleType_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_vehicleType_version.xsd" HomeFolder="Yes"/>
+				</Folder>
+				<Folder FolderName="vehicles_RC">
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_nm_fleet_support.xsd"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_nm_fleet_version.xsd"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_vehicle_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_vehicle_version.xsd" HomeFolder="Yes"/>
+				</Folder>
+				<Folder FolderName="equipment_RC">
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_equipment_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_equipment_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_equipmentPlace_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_equipmentVehiclePassenger_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_equipmentVehiclePassenger_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_facility_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_facility_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_facilityUic_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_nm_chargingEquipmentProfile_support.xsd"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_nm_equipmentEnergy_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_nm_equipmentEnergy_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_nm_fleetEquipment_support.xsd"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_nm_fleetEquipment_version.xsd"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_sensorEquipment_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_sensorEquipment_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_spotEquipment_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_spotEquipment_version.xsd" HomeFolder="Yes"/>
+				</Folder>
+				<Folder FolderName="general_RC">
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_environment_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_environment_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_linkByValue_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_notice_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_notice_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_noticeAssignment_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_schematicMap_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_schematicMap_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_securityList_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_securityList_version.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_serviceRestrictions_support.xsd" HomeFolder="Yes"/>
+					<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_serviceRestrictions_version.xsd" HomeFolder="Yes"/>
+				</Folder>
 				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_all_objects_reusableComponents.xsd"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_availabilityCondition_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_availabilityCondition_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_country_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_dayType_propertiesOfDay.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_dayType_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_dayType_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_equipment_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_equipment_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_equipmentPlace_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_equipmentVehiclePassenger_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_equipmentVehiclePassenger_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_facility_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_facility_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_facilityUic_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_linkByValue_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_mode_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_mode_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_modeOfOperation_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_modeOfOperation_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_nm_chargingEquipmentProfile_support.xsd"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_nm_equipmentEnergy_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_nm_equipmentEnergy_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_notice_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_notice_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_noticeAssignment_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_otherOrganisation_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_otherOrganisation_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_schematicMap_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_schematicMap_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_securityList_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_securityList_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_serviceCalendar_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_serviceCalendar_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_serviceRestrictions_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_serviceRestrictions_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_submode_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_topographicPlace_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_topographicPlace_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_trainElement_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_trainElement_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_transportOrganisation_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_transportOrganisation_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_vehicleSeating_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_vehicleType_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_framework\netex_reusableComponents\netex_vehicleType_version.xsd" HomeFolder="Yes"/>
 			</Folder>
 			<Folder FolderName="netex_framework_frames">
 				<File FilePath="xsd\netex_framework\netex_frames\netex_all_frames_framework.xsd" HomeFolder="Yes"/>
@@ -243,6 +285,8 @@
 				<File FilePath="xsd\netex_part_1\part1_ifopt\netex_ifopt_stopPlace_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_1\part1_ifopt\netex_ifopt_stopPlace_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_1\part1_ifopt\netex_ifopt_vehicleStopping_support.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_part_1\part1_ifopt\netex_rechargingPointAssignment_support.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_part_1\part1_ifopt\netex_rechargingPointAssignment_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_1\part1_ifopt\netex_taxiPlace_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_1\part1_ifopt\netex_taxiPlace_version.xsd" HomeFolder="Yes"/>
 			</Folder>
@@ -277,9 +321,8 @@
 				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_interchange_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_interchange_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_interchangeRule_version.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_journey_facility_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_journey_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_journeyAccounting_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_journeyAccounting_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_journeyDesignator_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_passingTimes_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_passingTimes_version.xsd" HomeFolder="Yes"/>
@@ -296,13 +339,30 @@
 				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_vehicleJourneyTimes_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_vehicleService_support.xsd" HomeFolder="Yes"/>
 			</Folder>
+			<Folder FolderName="netex_part_2_JA">
+				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_all_objects_part2_journeyAssignments.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_deckEntranceAssignment_support.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_deckEntranceAssignment_version.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_deckPlanAssignment_support.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_deckPlanAssignment_version.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_journeyAccounting_support.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_journeyAccounting_version.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_vehicleJourneyStopAssignment_support.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_part_2\part2_journeyTimes\netex_vehicleJourneyStopAssignment_version.xsd" HomeFolder="Yes"/>
+			</Folder>
 			<Folder FolderName="netex_part_2_TI_VS">
 				<File FilePath="xsd\netex_part_2\part2_vehicleService\netex_all_objects_part2_vehicleService.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_part_2\part2_vehicleService\netex_vehicleRechargingPlan_support.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_part_2\part2_vehicleService\netex_vehicleRechargingPlan_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_2\part2_vehicleService\netex_vehicleService_version.xsd" HomeFolder="Yes"/>
 			</Folder>
 			<Folder FolderName="netex_part_2_DM_RO">
 				<File FilePath="xsd\netex_part_2\part2_vehicleService\netex_duty_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_2\part2_vehicleService\netex_duty_version.xsd" HomeFolder="Yes"/>
+			</Folder>
+			<Folder FolderName="netex_part_2_OC">
+				<File FilePath="xsd\netex_part_2\part2_occupancy\netex_oc_occupancy_support.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_part_2\part2_occupancy\netex_oc_occupancy_version.xsd" HomeFolder="Yes"/>
 			</Folder>
 		</Folder>
 		<Folder FolderName="netex_part_3 Fares">
@@ -382,6 +442,8 @@
 				<File FilePath="xsd\netex_part_3\part3_salesTransactions\netex_customerPaymentMeans_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_3\part3_salesTransactions\netex_customerPurchasePackage_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_3\part3_salesTransactions\netex_customerPurchasePackage_version.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_part_3\part3_salesTransactions\netex_fareDebit_support.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_part_3\part3_salesTransactions\netex_fareDebit_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_3\part3_salesTransactions\netex_mediumApplication_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_3\part3_salesTransactions\netex_mediumApplication_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_3\part3_salesTransactions\netex_retailConsortium_support.xsd" HomeFolder="Yes"/>
@@ -390,6 +452,8 @@
 				<File FilePath="xsd\netex_part_3\part3_salesTransactions\netex_salesContract_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_3\part3_salesTransactions\netex_salesTransaction_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_3\part3_salesTransactions\netex_salesTransaction_version.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_part_3\part3_salesTransactions\netex_spotAllocation_support.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\netex_part_3\part3_salesTransactions\netex_spotAllocation_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_3\part3_salesTransactions\netex_travelDocument_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_3\part3_salesTransactions\netex_travelDocument_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_3\part3_salesTransactions\netex_travelSpecificationSummary_version.xsd" HomeFolder="Yes"/>
@@ -411,7 +475,6 @@
 				<File FilePath="xsd\netex_part_3\part3_parkingTariff\netex_parkingTariff_version.xsd" HomeFolder="Yes"/>
 			</Folder>
 			<Folder FolderName="netex_part_3_PiQuery">
-				<File FilePath="xsd\netex_part_3\part3_PiQuery\netex_all_objects_part3_piQuery.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_3\part3_PiQuery\netex_piRequest_support.xsd" HomeFolder="Yes"/>
 			</Folder>
 		</Folder>
@@ -514,8 +577,6 @@
 			<Folder FolderName="netex_part_5_NM_ND">
 				<File FilePath="xsd\netex_part_5\part5_nd\netex_nm_mobilityServiceConstraintZone_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_5\part5_nd\netex_nm_mobilityServiceConstraintZone_version.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_part_5\part5_nd\netex_nm_ParkingCapacityAssignment_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\netex_part_5\part5_nd\netex_nm_ParkingCapacityAssignment_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_5\part5_nd\netex_nm_vehicleMeetingPlace_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_5\part5_nd\netex_nm_vehicleMeetingPlace_version.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\netex_part_5\part5_nd\netex_nm_vehicleMeetingPoint_support.xsd" HomeFolder="Yes"/>
@@ -574,7 +635,9 @@
 		</Folder>
 		<Folder FolderName="gml">
 			<File FilePath="xsd\gml\basicTypes.xsd" HomeFolder="Yes"/>
+			<File FilePath="xsd\gml\geometryAggregates-extract-v3_2_1.xsd" HomeFolder="Yes"/>
 			<File FilePath="xsd\gml\geometryBasic0d1d-extract-v3_2_1.xsd" HomeFolder="Yes"/>
+			<File FilePath="xsd\gml\geometryPrimitives-extract-v3_2_1.xsd" HomeFolder="Yes"/>
 			<File FilePath="xsd\gml\gml_extract_all_objects_v_3_2_1.xsd" HomeFolder="Yes"/>
 			<File FilePath="xsd\gml\gmlBase-extract-v3_2_1.xsd" HomeFolder="Yes"/>
 			<File FilePath="xsd\gml\gmlBasic2d-extract-v3_2_1-.xsd" HomeFolder="Yes"/>
@@ -615,6 +678,7 @@
 					<File FilePath="examples\functions\variant\Netex_VariantExample_Step_05.xml" HomeFolder="Yes"/>
 				</Folder>
 				<Folder FolderName="network">
+					<File FilePath="examples\functions\simpleNetwork\Netex_LineClassification_1.xml" HomeFolder="Yes"/>
 					<File FilePath="examples\functions\simpleNetwork\Netex_SimpleNetwork_1.xml" HomeFolder="Yes"/>
 					<File FilePath="examples\functions\simpleNetwork\Netex_uk_underground_1.xml" HomeFolder="Yes"/>
 				</Folder>
@@ -639,6 +703,7 @@
 					<File FilePath="examples\functions\patterns\Netex_KBIC_ParisNetwork_1.xml" HomeFolder="Yes"/>
 				</Folder>
 				<Folder FolderName="validityCondition">
+					<File FilePath="examples\functions\deckPlans\DeckPlans-Example_train.xml" HomeFolder="Yes"/>
 					<File FilePath="examples\functions\stopPlace\Netex_04_Stops_SimpleStation_1.xml" HomeFolder="Yes"/>
 					<File FilePath="examples\functions\validityCondition\NeTEx_trigger-01.xml" HomeFolder="Yes"/>
 				</Folder>
@@ -649,6 +714,7 @@
 					<File FilePath="examples\functions\timetable\Netex_01.4_Bus_SimpleTimetable_WithConnection.xml" HomeFolder="Yes"/>
 					<File FilePath="examples\functions\timetable\Netex_01.5_Bus_SimpleTimetable_StopAssignment.xml" HomeFolder="Yes"/>
 					<File FilePath="examples\functions\timetable\Netex_01.6_Bus_SimpleTimetable_RouteProjection.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\functions\timetable\Netex_01.7_Bus_SimpleTimetable_RoutingConstraints.xml" HomeFolder="Yes"/>
 					<File FilePath="examples\functions\timetable\Netex_02.1_Bus_CircularRoute_Timetable.xml" HomeFolder="Yes"/>
 					<File FilePath="examples\functions\timetable\Netex_03.1_Bus_BranchedRouteTimetable_SimplePatterns.xml" HomeFolder="Yes"/>
 					<File FilePath="examples\functions\timetable\Netex_03.2_Bus_BranchedRouteTimetable_SharedPatterns.xml" HomeFolder="Yes"/>
@@ -665,6 +731,9 @@
 					<File FilePath="examples\functions\timetable\Netex_11_Rail_CompoundTrain.xml" HomeFolder="Yes"/>
 					<File FilePath="examples\functions\timetable\Netex_21_Rail_NetworkTimetable_eurostar.xml" HomeFolder="Yes"/>
 					<File FilePath="examples\functions\timetable\Netex_32_Multimodal_PassengerInformationEquipment.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\functions\timetable\NeTEx_50_JourneyFrequencyGroup.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\functions\timetable\Netex_51.1_Occupancy.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\functions\timetable\Netex_52_planned_delay.xml" HomeFolder="Yes"/>
 				</Folder>
 				<Folder FolderName="calendar">
 					<File FilePath="examples\functions\calendar\NeTEx_Calendar_se_PA1.xml" HomeFolder="Yes"/>
@@ -675,7 +744,9 @@
 				<Folder FolderName="pointOfInterest">
 					<File FilePath="examples\functions\pointOfInterest\Netex_Sites_PoiClassification_1.xml" HomeFolder="Yes"/>
 				</Folder>
-				<Folder FolderName="vehicleSchedule"/>
+				<Folder FolderName="vehicleSchedule">
+					<File FilePath="examples\functions\vehicleSchedule\Netex_simpleVehicleSchedule_01.xml" HomeFolder="Yes"/>
+				</Folder>
 				<Folder FolderName="grouping">
 					<File FilePath="examples\functions\grouping\Netex_GroupingExample_General_01.xml" HomeFolder="Yes"/>
 				</Folder>
@@ -716,7 +787,6 @@
 						<Folder FolderName="uk">
 							<File FilePath="examples\standards\fxc\FX-PI-01_UK_AMSY_NETWORK_FARE_Arriva-pass_20200417.xml"/>
 							<File FilePath="examples\standards\fxc\FX-PI-01_UK_AMSY_NETWORK_FARE_Arriva-trip_20200417.xml"/>
-							<File FilePath="examples\standards\fxc\FX-PI-01_UK_FBRI_LINE-FARE_WOE-Bristol-Line-48-trip-(stage)_2017-01-01..xml" HomeFolder="Yes"/>
 							<File FilePath="examples\standards\fxc\FX-PI-01_UK_FBRI_LINE-FARE_WOE-Bristol-Line-48-trip-(stage)_2017-01-01.xml" HomeFolder="Yes"/>
 							<File FilePath="examples\standards\fxc\FX-PI-01_UK_FBRI_NETWORK-FARE_WOE-Bristol-(mixed)_2017-01-01 (5).xml" HomeFolder="Yes"/>
 							<File FilePath="examples\standards\fxc\FX-PI-01_UK_FBRI_NETWORK-FARE_WOE-Bristol-pass-(Z2Z)_2017-01-01.xml" HomeFolder="Yes"/>
@@ -744,6 +814,18 @@
 					<File FilePath="examples\functions\newModes\NewModes-ChauffeuredServiceExample.xml" HomeFolder="Yes"/>
 					<File FilePath="examples\functions\newModes\NewModes-CycleSharingExample.xml" HomeFolder="Yes"/>
 				</Folder>
+				<Folder FolderName="deckPlans">
+					<File FilePath="examples\functions\deckPlans\DeckPlans-Example.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\functions\deckPlans\DeckPlans-Example_bus.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\functions\deckPlans\DeckPlans-Example_train.xml"/>
+					<File FilePath="examples\functions\deckPlans\DeckPlans-Example_train_simple.xml" HomeFolder="Yes"/>
+				</Folder>
+				<Folder FolderName="bookingArrangements">
+					<File FilePath="examples\functions\bookingArrangements\generalframe.xml" HomeFolder="Yes"/>
+				</Folder>
+				<Folder FolderName="privateCodes">
+					<File FilePath="examples\functions\privateCodes\01-privateCodes.xml" HomeFolder="Yes"/>
+				</Folder>
 			</Folder>
 			<Folder FolderName="standards">
 				<Folder FolderName="noptis">
@@ -757,6 +839,15 @@
 					</Folder>
 					<File FilePath="examples\standards\vdv452\timetable\NeTEx VDV Example.xml" HomeFolder="Yes"/>
 					<File FilePath="examples\standards\vdv452\calendar\Netex_de_calendarExample_01_gd.xml" HomeFolder="Yes"/>
+				</Folder>
+				<Folder FolderName="efp">
+					<File FilePath="examples\standards\efp\FX-PI-01_ParisExample CD1-nk1.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\standards\efp\FX-PI-01_ParisExample CD1.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\standards\efp\FX-PI-01_ParisExample.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\standards\efp\NO_RailExample.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\standards\efp\VVS_Fares_V1-nk1.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\standards\efp\VVS_Fares_V1-nk2.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\standards\efp\VVS_Fares_V1.xml" HomeFolder="Yes"/>
 				</Folder>
 				<Folder FolderName="era_uic">
 					<File FilePath="examples\standards\era_uic\Netex_era_uic_calendar.xml" HomeFolder="Yes"/>
@@ -946,6 +1037,12 @@
 				</Folder>
 				<Folder FolderName="gbfs">
 					<File FilePath="examples\standards\gbfs\Netex_gbfs_exm1.xml" HomeFolder="Yes"/>
+				</Folder>
+				<Folder FolderName="epiap">
+					<File FilePath="examples\standards\epiap\Chur_Equipment_Pathlink_V1.0.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\standards\epiap\eiap_test1_ramp.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\standards\epiap\EPIAP_Accessibility_Chur_V08_vehicletypes.xml" HomeFolder="Yes"/>
+					<File FilePath="examples\standards\epiap\epiap_test_Crossing_Equipment.xml" HomeFolder="Yes"/>
 				</Folder>
 			</Folder>
 		</Folder>

@@ -121,7 +121,7 @@ Concessionary passes are valid throughout from 0930-2300 Mon-Fri, and anytime at
 					<prerequisites>
 						<ServiceFrameRef version="1.0" ref="epd:UK:METR:ServiceFrame_UK_PI_NETWORK:Line_1:mb"/>
 						<FareFrameRef version="1.0" ref="epd:UK:METR:FareFrame_UK_PI_FARE_NETWORK:Line_1:mb"/>
-						<SiteFrameRef version="1.0" ref="epd:UK:METR:SiteFrame_UK_PI_NETWORK:Crawley:nptg"/>
+						<SiteFrameRef version="nptg:v2.1" ref="epd:UK:METR:SiteFrame_UK_PI_NETWORK:Crawley:nptg"/>
 					</prerequisites>
 					<!--==== Fare Structure ==== -->
 					<tariffs>
@@ -419,7 +419,7 @@ Concessionary passes are valid throughout from 0930-2300 Mon-Fri, and anytime at
 											<EndTariffZoneRef version="1.0" ref="mb:fs@Pease_Pottage"/>
 										</DistanceMatrixElement>
 									</distanceMatrixElements>
-									<GenericParameterAssignment version="1.0" order="01" id="mb:Tariff@single@access">
+									<GenericParameterAssignment version="1.0" id="mb:Tariff@single@access-01">
 										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:can_access"/>
 										<ValidityParameterAssignmentType>EQ</ValidityParameterAssignmentType>
 										<validityParameters>
@@ -430,7 +430,7 @@ Concessionary passes are valid throughout from 0930-2300 Mon-Fri, and anytime at
 								<FareStructureElement id="mb:Tariff@single@eligibility" version="1.0">
 									<Name>eligible user types</Name>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:eligibility"/>
-									<GenericParameterAssignment order="1" id="mb:Tariff@single@eligibility" version="1.0">
+									<GenericParameterAssignment id="mb:Tariff@single@eligibility-1" version="1.0">
 										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:eligible"/>
 										<LimitationGroupingType>XOR</LimitationGroupingType>
 										<limitations>
@@ -470,7 +470,7 @@ Concessionary passes are valid throughout from 0930-2300 Mon-Fri, and anytime at
 								<FareStructureElement id="mb:Tariff@single@conditions_of_travel" version="1.0">
 									<Name>Conditions on travel</Name>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:travel_conditions"/>
-									<GenericParameterAssignment version="1.0" order="1" id="mb:Tariff@single@conditions_of_travel">
+									<GenericParameterAssignment version="1.0" id="mb:Tariff@single@conditions_of_travel-1">
 										<Name>Conditions of travel</Name>
 										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:condition_of_use"/>
 										<LimitationGroupingType>AND</LimitationGroupingType>
@@ -525,7 +525,7 @@ Concessionary passes are valid throughout from 0930-2300 Mon-Fri, and anytime at
 							</validableElements>
 							<!--==== ACCESS RIGHTs ===== -->
 							<accessRightsInProduct>
-								<AccessRightInProduct version="1.0" id="mb:Trip@single" order="1">
+								<AccessRightInProduct version="1.0" id="mb:Trip@single-1">
 									<ValidableElementRef version="1.0" ref="mb:Trip@single@travel"/>
 								</AccessRightInProduct>
 							</accessRightsInProduct>
@@ -540,7 +540,7 @@ Concessionary passes are valid throughout from 0930-2300 Mon-Fri, and anytime at
 							<Name>Metrobus Cash</Name>
 							<TypeOfSalesOfferPackageRef version="fxc:v1.0" ref="fxc:standard_product@operator"/>
 							<distributionAssignments>
-								<DistributionAssignment version="10" id="mb:Trip@single-SOP@p-ticket@atStop" order="1">
+								<DistributionAssignment version="10" id="mb:Trip@single-SOP@p-ticket@atStop-1">
 									<Name>Onboard</Name>
 									<Description>Pay for  ticket  onboard</Description>
 									<DistributionChannelRef version="fxc:v1.0" ref="fxc:on_board"/>
@@ -549,7 +549,7 @@ Concessionary passes are valid throughout from 0930-2300 Mon-Fri, and anytime at
 									<PaymentMethods>cashAndCard</PaymentMethods>
 									<FulfilmentMethodRef ref="fxc:collect_on_board" version="fxc:v1.0"/>
 								</DistributionAssignment>
-								<DistributionAssignment version="1.0" id="mb:Trip@single-SOP@p-ticket@onBoard" order="2">
+								<DistributionAssignment version="1.0" id="mb:Trip@single-SOP@p-ticket@onBoard-2">
 									<Name>Onboard</Name>
 									<Description>Pay for  ticket  onboard</Description>
 									<DistributionChannelRef version="fxc:v1.0" ref="fxc:on_board"/>
@@ -560,7 +560,7 @@ Concessionary passes are valid throughout from 0930-2300 Mon-Fri, and anytime at
 								</DistributionAssignment>
 							</distributionAssignments>
 							<salesOfferPackageElements>
-								<SalesOfferPackageElement version="1.0" id="mb:Trip@single-SOP@p-ticket" order="1">
+								<SalesOfferPackageElement version="1.0" id="mb:Trip@single-SOP@p-ticket-1">
 									<TypeOfTravelDocumentRef version="fxc:v1.0" ref="fxc:printed_ticket"/>
 									<PreassignedFareProductRef version="1.0" ref="mb:Trip@single"/>
 								</SalesOfferPackageElement>
@@ -568,7 +568,7 @@ Concessionary passes are valid throughout from 0930-2300 Mon-Fri, and anytime at
 						</SalesOfferPackage>
 					</salesOfferPackages>
 				</FareFrame>
-				<FareFrame version="1.0" id="epd:UK:METR:FareFrame_UK_PI_FARE_PRICE:Trip@Line_1:mb" dataSourceRef="mb:metrobus" responsibilitySetRef="mb:tariffs">
+				<FarePriceFrame version="1.0" id="epd:UK:METR:FareFrame_UK_PI_FARE_PRICE:Trip@Line_1:mb" dataSourceRef="mb:metrobus" responsibilitySetRef="mb:tariffs">
 					<TypeOfFrameRef ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_PRICE:FXCP" version="fxc:v1.0"/>
 					<FrameDefaults>
 						<!-- Fares are shown in pence. -->
@@ -598,13 +598,13 @@ Concessionary passes are valid throughout from 0930-2300 Mon-Fri, and anytime at
 					</PricingParameterSet>
 					<!--==== Notices ==== -->
 					<noticeAssignments>
-						<NoticeAssignment version="1.0" id="mb:Metrobus@Products@Trip@prices@Line_1@Footnote" order="1">
+						<NoticeAssignment version="1.0" id="mb:Metrobus@Products@Trip@prices@Line_1@Footnote-1">
 							<Notice version="1.0" id="mb:Metrobus@Products@Trip@prices@Footnote@1">
 								<Text>Fares are shown in pence. Eg. 170 = £1.70</Text>
 							</Notice>
 							<NoticedObjectRef xsi:type="FareTableRefStructure" version="1.0" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult"/>
 						</NoticeAssignment>
-						<NoticeAssignment version="1.0" id="mb:Metrobus@Products@Trip@prices@Line_1@Footnote" order="2">
+						<NoticeAssignment version="1.0" id="mb:Metrobus@Products@Trip@prices@Line_1@Footnote-2">
 							<Notice version="1.0" id="mb:Metrobus@Products@Trip@prices@Footnote@2">
 								<Text>To calculate your fare, find your location, and your destination, where the row and the column cross is your fare.</Text>
 							</Notice>
@@ -731,48 +731,48 @@ Bewbush West (loop)
 								<TypeOfTravelDocumentRef version="fxc:v1.0" ref="fxc:printed_ticket"/>
 							</specifics>
 							<columns>
-								<FareTableColumn version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@c1@Bewbush_West" order="1">
+								<FareTableColumn version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@c1@Bewbush_West-1">
 									<representing>
 										<FareZoneRef version="1.0" ref="mb:fs@Bewbush_West"/>
 									</representing>
 								</FareTableColumn>
-								<FareTableColumn version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@c2@Bewbush" order="2">
+								<FareTableColumn version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@c2@Bewbush-2">
 									<Name>Bewbush Neighbourhood Centre</Name>
 									<representing>
 										<FareZoneRef version="1.0" ref="mb:fs@Bewbush"/>
 									</representing>
 								</FareTableColumn>
-								<FareTableColumn version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@c3@Gossops_Green" order="3">
+								<FareTableColumn version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@c3@Gossops_Green-3">
 									<Name>Gossops Green Shops</Name>
 									<representing>
 										<FareZoneRef version="1.0" ref="mb:fs@Gossops_Green"/>
 									</representing>
 								</FareTableColumn>
-								<FareTableColumn version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@c4@West_Green" order="4">
+								<FareTableColumn version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@c4@West_Green-4">
 									<Name>West Green Crawley Hospital/Apple Tree</Name>
 									<representing>
 										<FareZoneRef version="1.0" ref="mb:fs@West_Green"/>
 									</representing>
 								</FareTableColumn>
-								<FareTableColumn version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@c5@Crawley" order="5">
+								<FareTableColumn version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@c5@Crawley-5">
 									<Name> Crawley Town Centre</Name>
 									<representing>
 										<FareZoneRef version="1.0" ref="mb:fs@Crawley"/>
 									</representing>
 								</FareTableColumn>
-								<FareTableColumn version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@c6@Southgate_Avenue" order="6">
+								<FareTableColumn version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@c6@Southgate_Avenue-6">
 									<Name>Southgate Avenue North</Name>
 									<representing>
 										<FareZoneRef version="1.0" ref="mb:fs@Southgate_Avenue"/>
 									</representing>
 								</FareTableColumn>
-								<FareTableColumn version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@c7@Southgate" order="7">
+								<FareTableColumn version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@c7@Southgate-7">
 									<Name>Southgate Avenue Wensleydale</Name>
 									<representing>
 										<FareZoneRef version="1.0" ref="mb:fs@Southgate"/>
 									</representing>
 								</FareTableColumn>
-								<FareTableColumn version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@c8@Broadfield" order="8">
+								<FareTableColumn version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@c8@Broadfield-8">
 									<Name>Broadfield (all stops)</Name>
 									<representing>
 										<FareZoneRef version="1.0" ref="mb:fs@Broadfield"/>
@@ -780,42 +780,42 @@ Bewbush West (loop)
 								</FareTableColumn>
 							</columns>
 							<rows>
-								<FareTableRow version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@r1@Pease_Pottage" order="1">
+								<FareTableRow version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@r1@Pease_Pottage-1">
 									<representing>
 										<FareZoneRef version="1.0" ref="mb:fs@Pease_Pottage"/>
 									</representing>
 								</FareTableRow>
-								<FareTableRow version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@r2@Broadfield" order="2">
+								<FareTableRow version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@r2@Broadfield-2">
 									<representing>
 										<FareZoneRef version="1.0" ref="mb:fs@Broadfield"/>
 									</representing>
 								</FareTableRow>
-								<FareTableRow version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@r3@Southgate" order="3">
+								<FareTableRow version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@r3@Southgate-3">
 									<representing>
 										<FareZoneRef version="1.0" ref="mb:fs@Southgate"/>
 									</representing>
 								</FareTableRow>
-								<FareTableRow version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@r4@Southgate_Avenue" order="4">
+								<FareTableRow version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@r4@Southgate_Avenue-4">
 									<representing>
 										<FareZoneRef version="1.0" ref="mb:fs@Southgate_Avenue"/>
 									</representing>
 								</FareTableRow>
-								<FareTableRow version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@r5@Crawley" order="5">
+								<FareTableRow version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@r5@Crawley-5">
 									<representing>
 										<FareZoneRef version="1.0" ref="mb:fs@Crawley"/>
 									</representing>
 								</FareTableRow>
-								<FareTableRow version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@r6@West_Green" order="6">
+								<FareTableRow version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@r6@West_Green-6">
 									<representing>
 										<FareZoneRef version="1.0" ref="mb:fs@West_Green"/>
 									</representing>
 								</FareTableRow>
-								<FareTableRow version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@r7@Gossops_Green" order="7">
+								<FareTableRow version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@r7@Gossops_Green-7">
 									<representing>
 										<FareZoneRef version="1.0" ref="mb:fs@Gossops_Green"/>
 									</representing>
 								</FareTableRow>
-								<FareTableRow version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@r8@Bewbush" order="8">
+								<FareTableRow version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@r8@Bewbush-8">
 									<representing>
 										<FareZoneRef version="1.0" ref="mb:fs@Bewbush"/>
 									</representing>
@@ -827,7 +827,7 @@ Bewbush West (loop)
 									<Description>Column 1</Description>
 									<cells>
 										<!-- == COLUMN 2: Bewbush  == -->
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West" order="1">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West-1">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West+Bewbush">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_A@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Bewbush_West+Bewbush"/>
@@ -835,7 +835,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c1@Bewbush_West"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r8@Bewbush"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West" order="2">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West-2">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West+Gossops_Green">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Bewbush_West+Gossops_Green"/>
@@ -843,7 +843,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c1@Bewbush_West"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r7@Gossops_Green"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West" order="3">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West-3">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West+West_Green">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Bewbush_West+West_Green"/>
@@ -851,7 +851,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c1@Bewbush_West"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r6@West_Green"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West" order="4">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West-4">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West+Crawley">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Bewbush_West+Crawley"/>
@@ -859,7 +859,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c1@Bewbush_West"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r5@Crawley"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West" order="5">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West-5">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West+Southgate_Avenue">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Bewbush_West+Southgate_Avenue"/>
@@ -867,7 +867,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c1@Bewbush_West"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r4@Southgate_Avenue"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West" order="6">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West-6">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West+Southgate">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Bewbush_West+Southgate"/>
@@ -875,7 +875,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c1@Bewbush_West"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r3@Southgate"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West" order="7">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West-7">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West+Broadfield">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Bewbush_West+Broadfield"/>
@@ -883,7 +883,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c1@Bewbush_West"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r2@Broadfield"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West" order="8">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West-8">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush_West+Pease_Pottage">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Bewbush_West+Pease_Pottage"/>
@@ -898,7 +898,7 @@ Bewbush West (loop)
 									<Description>Column 2</Description>
 									<cells>
 										<!-- == COLUMN 2: Bewbush  == -->
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush" order="1">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush-1">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush+Gossops_Green">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_A@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Bewbush+Gossops_Green"/>
@@ -906,7 +906,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c2@Bewbush"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r7@Gossops_Green"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush" order="2">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush-2">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush+West_Green">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Bewbush+West_Green"/>
@@ -914,7 +914,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c2@Bewbush"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r6@West_Green"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush" order="3">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush-3">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush+Crawley">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Bewbush+Crawley"/>
@@ -922,7 +922,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c2@Bewbush"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r5@Crawley"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush" order="4">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush-4">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush+Southgate_Avenue">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Bewbush+Southgate_Avenue"/>
@@ -930,7 +930,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c2@Bewbush"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r4@Southgate_Avenue"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush" order="5">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush-5">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush+Southgate">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Bewbush+Southgate"/>
@@ -938,7 +938,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c2@Bewbush"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r3@Southgate"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush" order="6">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush-6">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush+Broadfield">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Bewbush+Broadfield"/>
@@ -946,7 +946,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c2@Bewbush"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r2@Broadfield"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush" order="7">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush-7">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Bewbush+Pease_Pottage">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Bewbush+Pease_Pottage"/>
@@ -961,7 +961,7 @@ Bewbush West (loop)
 									<Description>Column 3</Description>
 									<cells>
 										<!-- == COLUMN 3 : Gossops_Green == -->
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Gossops_Green" order="1">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Gossops_Green-1">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Gossops_Green+West_Green">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_A@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Gossops_Green+West_Green"/>
@@ -969,7 +969,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c3@Gossops_Green"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r6@West_Green"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Gossops_Green" order="2">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Gossops_Green-2">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Gossops_Green+Crawley">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Gossops_Green+Crawley"/>
@@ -977,7 +977,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c3@Gossops_Green"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r5@Crawley"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Gossops_Green" order="3">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Gossops_Green-3">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Gossops_Green+Southgate_Avenue">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Gossops_Green+Southgate_Avenue"/>
@@ -985,7 +985,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c3@Gossops_Green"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r4@Southgate_Avenue"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Gossops_Green" order="4">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Gossops_Green-4">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Gossops_Green+Southgate">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Gossops_Green+Southgate"/>
@@ -993,7 +993,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c3@Gossops_Green"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r3@Southgate"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Gossops_Green" order="5">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Gossops_Green-5">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Gossops_Green+Broadfield">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Gossops_Green+Broadfield"/>
@@ -1001,7 +1001,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c3@Gossops_Green"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r2@Broadfield"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Gossops_Green" order="6">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Gossops_Green-6">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Gossops_Green+Pease_Pottage">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Gossops_Green+Pease_Pottage"/>
@@ -1016,7 +1016,7 @@ Bewbush West (loop)
 									<Description>Column 4</Description>
 									<cells>
 										<!-- == COLUMN 4 : West_Green== -->
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@West_Green" order="1">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@West_Green-1">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@West_Green+Crawley">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_A@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:West_Green+Crawley"/>
@@ -1024,7 +1024,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c4@West_Green"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r5@Crawley"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@West_Green" order="2">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@West_Green-2">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@West_Green+Southgate_Avenue">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:West_Green+Southgate_Avenue"/>
@@ -1032,7 +1032,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c4@West_Green"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r4@Southgate_Avenue"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@West_Green" order="3">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@West_Green-3">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@West_Green+Southgate">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:West_Green+Southgate"/>
@@ -1040,7 +1040,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c4@West_Green"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r3@Southgate"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@West_Green" order="4">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@West_Green-4">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@West_Green+Broadfield">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:West_Green+Broadfield"/>
@@ -1048,7 +1048,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c4@West_Green"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r2@Broadfield"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@West_Green" order="5">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@West_Green-5">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@West_Green+Pease_Pottage">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:West_Green+Pease_Pottage"/>
@@ -1063,7 +1063,7 @@ Bewbush West (loop)
 									<Description>Column 5</Description>
 									<cells>
 										<!-- == COLUMN 5  : Crawley== -->
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Crawley" order="1">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Crawley-1">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Crawley+Southgate_Avenue">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_A@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Crawley+Southgate_Avenue"/>
@@ -1071,7 +1071,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c5@Crawley"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r4@Southgate_Avenue"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Crawley" order="2">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Crawley-2">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Crawley+Southgate">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Crawley+Southgate"/>
@@ -1079,7 +1079,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c5@Crawley"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r3@Southgate"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Crawley" order="3">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Crawley-3">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Crawley+Broadfield">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Crawley+Broadfield"/>
@@ -1087,7 +1087,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c5@Crawley"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r2@Broadfield"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Crawley" order="4">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Crawley-4">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Crawley+Pease_Pottage">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Crawley+Pease_Pottage"/>
@@ -1102,7 +1102,7 @@ Bewbush West (loop)
 									<Description>Column 6</Description>
 									<cells>
 										<!-- == COLUMN 6 : == -->
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Southgate_Avenue" order="1">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Southgate_Avenue-1">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Southgate_Avenue+Southgate">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_A@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Southgate_Avenue+Southgate"/>
@@ -1110,7 +1110,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c6@Southgate_Avenue"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r3@Southgate"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Southgate_Avenue" order="2">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Southgate_Avenue-2">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Southgate_Avenue+Broadfield">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Southgate_Avenue+Broadfield"/>
@@ -1118,7 +1118,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c6@Southgate_Avenue"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r2@Broadfield"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Southgate_Avenue" order="3">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Southgate_Avenue-3">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Southgate_Avenue+Pease_Pottage">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Southgate_Avenue+Pease_Pottage"/>
@@ -1133,7 +1133,7 @@ Bewbush West (loop)
 									<Description>Column 7</Description>
 									<cells>
 										<!-- == COLUMN 7 : Southgate== -->
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Southgate" order="1">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Southgate-1">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Southgate+Broadfield">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_A@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Southgate+Broadfield"/>
@@ -1141,7 +1141,7 @@ Bewbush West (loop)
 											<ColumnRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@c7@Southgate"/>
 											<RowRef versionRef="1" ref="mb:Trip@single-SOP@p-ticket@Line_1@adult@r2@Broadfield"/>
 										</Cell>
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Southgate" order="2">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Southgate-2">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Southgate+Pease_Pottage">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_B@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Southgate+Pease_Pottage"/>
@@ -1156,7 +1156,7 @@ Bewbush West (loop)
 									<Description>Column 8</Description>
 									<cells>
 										<!-- == COLUMN 8 : Pease_Pottage== -->
-										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Broadfield" order="1">
+										<Cell version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Broadfield-1">
 											<DistanceMatrixElementPrice version="1.0" id="mb:Trip@single-SOP@p-ticket@Line_1@adult@Broadfield+Pease_Pottage">
 												<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_A@adult"/>
 												<DistanceMatrixElementRef version="1.0" ref="mb:Broadfield+Pease_Pottage"/>
@@ -1169,7 +1169,7 @@ Bewbush West (loop)
 							</includes>
 						</FareTable>
 					</fareTables>
-				</FareFrame>
+				</FarePriceFrame>
 				<!--- outline of pass products - see separate Metrorider example for full definition -->
 				<FareFrame version="1.0" id="epd:UK:METR:FareFrame_UK_PI_FARE_PRODUCT:Pass:mb" dataSourceRef="mb:metrobus" responsibilitySetRef="mb:tariffs">
 					<ValidBetween>
@@ -1292,7 +1292,7 @@ Bewbush West (loop)
 					<Name>Metrobus 1</Name>
 					<TypeOfFrameRef ref="fxc:UK:DFT:TypeOfFrame_UK_PI_NETWORK:FXCP" version="fxc:v1.0"/>
 					<prerequisites>
-						<SiteFrameRef version="1.0" ref="epd:UK:METR:SiteFrame_UK_PI_NETWORK:Crawley:nptg"/>
+						<SiteFrameRef version="nptg:v2.1" ref="epd:UK:METR:SiteFrame_UK_PI_NETWORK:Crawley:nptg"/>
 						<ServiceFrameRef version="1.0" ref="epd:UK:METR:ServiceFrame_UK_PI_NETWORK:Line_1:mb"/>
 						<ServiceFrameRef versionRef="EXTERNAL" ref="epd:UK:NaPTAN:ServiceFrame_UK_PI_NETWORK:AdminArea@440:napt"/>
 					</prerequisites>
@@ -1426,7 +1426,7 @@ Bewbush West (loop)
 						</FareZone>
 					</fareZones>
 				</FareFrame>
-				<SiteFrame version="1.0" id="epd:UK:METR:SiteFrame_UK_PI_NETWORK:Crawley:nptg" responsibilitySetRef="nptg:data" dataSourceRef="nptg:dft">
+				<SiteFrame version="nptg:v2.1" id="epd:UK:METR:SiteFrame_UK_PI_NETWORK:Crawley:nptg" responsibilitySetRef="nptg:data" dataSourceRef="nptg:dft">
 					<Name>NPTG localities used by Metrobus 1</Name>
 					<Description>This frame contains the NPTG locality definitions used by the stops  the service. It could also be exchanged separately.</Description>
 					<TypeOfFrameRef version="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_STOP:FXCP"/>
@@ -1461,8 +1461,10 @@ Bewbush West (loop)
 					<tariffZones>
 						<TariffZone created="2013-10-11T12:27:13" changed="2013-10-11T12:27:13" modification="new" version="0" id="nptgTariffZone:CRAWLEY">
 							<!-- Nptg PlusBusZone   -->
+							<privateCodes>
+								<PrivateCode>CRAWLEY</PrivateCode>
+							</privateCodes>
 							<Name lang="en">CRAWLEY</Name>
-							<PrivateCode>CRAWLEY</PrivateCode>
 							<!-- Nptg PlusBusZone.PlusBusZoneCode -->
 							<types>
 								<TypeOfZoneRef ref="nptg:PlusBusZone" versionRef="nptg:v2.1">PlusBus</TypeOfZoneRef>
@@ -1493,8 +1495,10 @@ Bewbush West (loop)
 						</TariffZone>
 						<TariffZone created="2013-10-11T12:27:13" changed="2013-10-11T12:27:13" modification="new" version="0" id="nptgTariffZone:HORSHAM">
 							<!-- Nptg PlusBusZone   -->
+							<privateCodes>
+								<PrivateCode>HORSHAM</PrivateCode>
+							</privateCodes>
 							<Name lang="en">HORSHAM</Name>
-							<PrivateCode>HORSHAM</PrivateCode>
 							<!-- Nptg PlusBusZone.PlusBusZoneCode -->
 							<types>
 								<TypeOfZoneRef ref="nptg:PlusBusZone" versionRef="nptg:v2.1">PlusBus</TypeOfZoneRef>
@@ -1527,8 +1531,10 @@ Bewbush West (loop)
 						</TariffZone>
 						<TariffZone created="2013-10-11T12:27:13" changed="2013-10-11T12:27:13" modification="new" version="0" id="nptgTariffZone:REDHILL">
 							<!-- Nptg PlusBusZone   -->
+							<privateCodes>
+								<PrivateCode>REDHILL</PrivateCode>
+							</privateCodes>
 							<Name lang="en">REDHILL</Name>
-							<PrivateCode>REDHILL</PrivateCode>
 							<!-- Nptg PlusBusZone.PlusBusZoneCode -->
 							<types>
 								<TypeOfZoneRef ref="nptg:PlusBusZone" versionRef="nptg:v2.1">PlusBus</TypeOfZoneRef>
@@ -1573,10 +1579,12 @@ Bewbush West (loop)
 					<!--==== LINEs ==== -->
 					<lines>
 						<Line version="1.0" id="mb:Line_1">
+							<privateCodes>
+								<PrivateCode type="noc_data">METR_1</PrivateCode>
+							</privateCodes>
 							<Name>Metrobus 1</Name>
 							<Description>Bewbush West - Crawley - Broadfield/Pease Pottage</Description>
 							<PublicCode>1</PublicCode>
-							<PrivateCode type="noc_data">METR_1</PrivateCode>
 							<OperatorRef version="1.0" ref="noc:METR">137122</OperatorRef>
 							<LineType>local</LineType>
 							<PaymentMethods>cash</PaymentMethods>
@@ -1634,7 +1642,7 @@ Bewbush West (loop)
 							<roles>
 								<ResponsibilityRoleAssignment version="1.0" id="mb:tariff_data@creates">
 									<DataRoleType>creates</DataRoleType>
-									<StakeholderRoleType>FareManagement</StakeholderRoleType>
+									<StakeholderRoleType>fareManagement</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="noc:METR" version="1.0">Metrobus</ResponsibleOrganisationRef>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -1644,7 +1652,7 @@ Bewbush West (loop)
 							<roles>
 								<ResponsibilityRoleAssignment version="1.0" id="mb:network_data@creates">
 									<DataRoleType>creates</DataRoleType>
-									<StakeholderRoleType>Planning</StakeholderRoleType>
+									<StakeholderRoleType>planning</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="noc:METR" version="1.0">Metrobus</ResponsibleOrganisationRef>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -1665,8 +1673,10 @@ Bewbush West (loop)
 					<organisations>
 						<!-- ==== ORGANISATIONS ==== -->
 						<Operator version="1.0" id="noc:METR">
+							<privateCodes>
+								<PrivateCode type="nocn">nocn:137122</PrivateCode>
+							</privateCodes>
 							<PublicCode>METR</PublicCode>
-							<PrivateCode type="nocn">nocn:137122</PrivateCode>
 							<Name>Metrobus</Name>
 							<ShortName>Metrobus</ShortName>
 							<TradingName>Metrobus Ltd</TradingName>
@@ -1742,7 +1752,7 @@ This Shows  sample Purchases
 												<UserProfileRef version="1.0" ref="mb:adult"/>
 											</TravelSpecificationSummaryView>
 											<specificParameterAssignments>
-												<SpecificParameterAssignment version="any" order="1" id="mbt:Anon001@trans001@purchase_single">
+												<SpecificParameterAssignment version="any" id="mbt:Anon001@trans001@purchase_single-1">
 													<Name>Cash Adult single from Bewbush to Pease Pottage</Name>
 													<ValidableElementRef version="1.0" ref="mb:Trip@single@travel"/>
 													<PreassignedFareProductRef version="1.0" ref="mb:Trip@single"/>
@@ -1786,7 +1796,7 @@ This Shows  sample Purchases
 											<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_A@child"/>
 											<Amount>0.80</Amount>
 											<ruleStepResults>
-												<RuleStepResult id="mbt:Anon001@trans002@purchase_single" order="1">
+												<RuleStepResult id="mbt:Anon001@trans002@purchase_single-1">
 													<GeographicalIntervalPriceRef version="1.0" ref="mb:price_band_A@adult"/>
 													<Amount>0.80</Amount>
 													<AdjustmentAmount>0.80</AdjustmentAmount>
@@ -1812,7 +1822,7 @@ This Shows  sample Purchases
 												<UserProfileRef version="1.0" ref="mb:child_with_adult"/>
 											</TravelSpecificationSummaryView>
 											<specificParameterAssignments>
-												<SpecificParameterAssignment version="any" order="1" id="mbt:Anon001@trans002@purchase_single">
+												<SpecificParameterAssignment version="any" id="mbt:Anon001@trans002@purchase_single-1">
 													<Name>Cash child single from Gossops_Green to West_Green</Name>
 													<ValidableElementRef version="1.0" ref="mb:Trip@single@travel"/>
 													<PreassignedFareProductRef version="1.0" ref="mb:Trip@single"/>
@@ -1903,7 +1913,7 @@ This Shows  sample Purchases
 							<roles>
 								<ResponsibilityRoleAssignment version="fxc:v1.0" id="fxc:FXC_metadata:DfT">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" versionRef="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" versionRef="nptg:v2.1"/>
 								</ResponsibilityRoleAssignment>
@@ -2029,13 +2039,17 @@ This Shows  sample Purchases
 					<PricingParameterSet id="fxc:Common_Resources" version="fxc:v1.0">
 						<priceUnits>
 							<PriceUnit id="fxc:GBP" version="fxc:v1.0">
+								<privateCodes>
+									<PrivateCode>£</PrivateCode>
+								</privateCodes>
 								<Name>Pound Sterling</Name>
-								<PrivateCode>£</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 							<PriceUnit id="fxc:EUR" version="fxc:v1.0">
+								<privateCodes>
+									<PrivateCode>€</PrivateCode>
+								</privateCodes>
 								<Name>Euro</Name>
-								<PrivateCode>€</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 						</priceUnits>
@@ -2114,10 +2128,10 @@ This Shows  sample Purchases
 						<DistributionChannel id="fxc:online" version="fxc:v1.0">
 							<ShortName>Internet sales</ShortName>
 							<alternativeNames>
-								<AlternativeName order="1" id="fxc:online_de" version="fxc:v1.0">
+								<AlternativeName id="fxc:online_de-1" version="fxc:v1.0">
 									<Name lang="de">Internetverkauf</Name>
 								</AlternativeName>
-								<AlternativeName order="1" id="fxc:online_fr" version="fxc:v1.0">
+								<AlternativeName id="fxc:online_fr-1" version="fxc:v1.0">
 									<Name lang="fr">A vendre par l'internet</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -2145,10 +2159,10 @@ This Shows  sample Purchases
 						<DistributionChannel id="fxc:at_counter" version="fxc:v1.0">
 							<ShortName>Ticket counter sale</ShortName>
 							<alternativeNames>
-								<AlternativeName order="1" id="fxc:at_counter_de" version="fxc:v1.0">
+								<AlternativeName id="fxc:at_counter_de-1" version="fxc:v1.0">
 									<Name lang="de">Schalter</Name>
 								</AlternativeName>
-								<AlternativeName order="1" id="fxc:at_counter_fr" version="fxc:v1.0">
+								<AlternativeName id="fxc:at_counter_fr-1" version="fxc:v1.0">
 									<Name lang="fr">A vendre par le guichet</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -2337,15 +2351,6 @@ This Shows  sample Purchases
 						<DefaultSystemOfUnits>SiKilometresAndMetres</DefaultSystemOfUnits>
 						<DefaultCurrency>GBP</DefaultCurrency>
 					</FrameDefaults>
-					<versions>
-						<Version id="fxc:v1.0" version="any">
-							<ValidBetween>
-								<FromDate>2019-01-01T01:01:01Z</FromDate>
-							</ValidBetween>
-							<Description>FXC version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<typesOfValue>
 						<!-- ======== Code sets ========= -->
 						<ValueSet version="fxc:v1.0" id="fxc:PointsOfInterest_Classifications" classOfValues="PointOfInterestClassification">
@@ -2827,12 +2832,6 @@ This Shows  sample Purchases
 						<DefaultDataSourceRef ref="nptg:dft" version="nptg:v2.1"/>
 						<DefaultResponsibilitySetRef ref="nptg:NPTG_metadata" version="nptg:v2.1"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="nptg:v2.1" version="any">
-							<Description>NPTG version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="nptg:dft" version="nptg:v2.1">
 							<Email>standards@nptg.org.uk</Email>
@@ -2958,7 +2957,7 @@ This Shows  sample Purchases
 											<roles>
 												<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:NPTG_metadata">
 													<DataRoleType>creates distributes</DataRoleType>
-													<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+													<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 													<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 													<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 												</ResponsibilityRoleAssignment>
@@ -2969,7 +2968,7 @@ This Shows  sample Purchases
 											<roles>
 												<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:NPTG_data">
 													<DataRoleType>creates distributes</DataRoleType>
-													<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+													<StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
 													<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 													<ResponsibleAreaRef ref="nptg:UK">TODO</ResponsibleAreaRef>
 												</ResponsibilityRoleAssignment>

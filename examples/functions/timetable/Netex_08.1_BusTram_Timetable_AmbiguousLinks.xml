@@ -588,39 +588,39 @@ The Calendar is shown coded as
 								<ServiceJourneyPatternRef version="any" ref="hde:sjp_24o"/>
 							</journeyPatterns>
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="any" order="1" id="hde:spijp_24o_01">
+								<StopPointInJourneyPattern version="any" id="hde:spijp_24o_01-1">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
 									<OnwardServiceLinkRef version="any" ref="mybus:SL@SSP_001+SSP_002_bus"/>
 									<ForAlighting>false</ForAlighting>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" order="2" id="hde:spijp_24o_02">
+								<StopPointInJourneyPattern version="any" id="hde:spijp_24o_02-2">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
 									<OnwardServiceLinkRef version="any" ref="mybus:SL@SSP_002+SSP_077_bus"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" order="3" id="hde:spijp_24o_03">
+								<StopPointInJourneyPattern version="any" id="hde:spijp_24o_03-3">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
 									<OnwardServiceLinkRef version="any" ref="mybus:SL@SSP_077+SSP_021_bus"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" order="4" id="hde:spijp_24o_04">
+								<StopPointInJourneyPattern version="any" id="hde:spijp_24o_04-4">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_021"/>
 									<OnwardServiceLinkRef version="any" ref="mybus:SL@SSP_021+SSP_022_bus"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" order="5" id="hde:spijp_24o_05">
+								<StopPointInJourneyPattern version="any" id="hde:spijp_24o_05-5">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_022"/>
 									<ForBoarding>false</ForBoarding>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
 							<linksInSequence>
-								<ServiceLinkInJourneyPattern version="any" order="1" id="hde:slijp_24o_01">
+								<ServiceLinkInJourneyPattern version="any" id="hde:slijp_24o_01-1">
 									<ServiceLinkRef version="any" ref="mybus:SL@SSP_001+SSP_002_bus"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="any" order="2" id="hde:slijp_24o_02">
+								<ServiceLinkInJourneyPattern version="any" id="hde:slijp_24o_02-2">
 									<ServiceLinkRef version="any" ref="mybus:SL@SSP_002+SSP_077_bus"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="any" order="3" id="hde:slijp_24o_03">
+								<ServiceLinkInJourneyPattern version="any" id="hde:slijp_24o_03-3">
 									<ServiceLinkRef version="any" ref="mybus:SL@SSP_077+SSP_021_bus"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="any" order="4" id="hde:slijp_24o_04">
+								<ServiceLinkInJourneyPattern version="any" id="hde:slijp_24o_04-4">
 									<ServiceLinkRef version="any" ref="mybus:SL@SSP_021+SSP_022_bus"/>
 								</ServiceLinkInJourneyPattern>
 							</linksInSequence>
@@ -633,32 +633,32 @@ The Calendar is shown coded as
 								<ServiceJourneyPatternRef version="any" ref="hde:sjp_46o"/>
 							</journeyPatterns>
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="any" order="1" id="hde:spijp_46o_01">
+								<StopPointInJourneyPattern version="any" id="hde:spijp_46o_01-1">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
 									<OnwardServiceLinkRef version="any" ref="mybus:SL@SSP_002+SSP_077_tram"/>
 									<ForAlighting>false</ForAlighting>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" order="2" id="hde:spijp_46o_02">
+								<StopPointInJourneyPattern version="any" id="hde:spijp_46o_02-2">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
 									<OnwardServiceLinkRef version="any" ref="mybus:SL@SSP_077+SSP_021_tram"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" order="3" id="hde:spijp_46o_03">
+								<StopPointInJourneyPattern version="any" id="hde:spijp_46o_03-3">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_021"/>
 									<OnwardServiceLinkRef version="any" ref="mybus:SL@SSP_021+SSP_022_tram"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" order="4" id="hde:spijp_46o_04">
+								<StopPointInJourneyPattern version="any" id="hde:spijp_46o_04-4">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_022"/>
 									<ForBoarding>false</ForBoarding>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
 							<linksInSequence>
-								<ServiceLinkInJourneyPattern version="any" order="1" id="hde:slijp_46o_01">
+								<ServiceLinkInJourneyPattern version="any" id="hde:slijp_46o_01-1">
 									<ServiceLinkRef version="any" ref="mybus:SL@SSP_002+SSP_077_tram"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="any" order="2" id="hde:slijp_46o_02">
+								<ServiceLinkInJourneyPattern version="any" id="hde:slijp_46o_02-2">
 									<ServiceLinkRef version="any" ref="mybus:SL@SSP_077+SSP_021_tram"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="any" order="3" id="hde:slijp_46o_03">
+								<ServiceLinkInJourneyPattern version="any" id="hde:slijp_46o_03-3">
 									<ServiceLinkRef version="any" ref="mybus:SL@SSP_021+SSP_022_tram"/>
 								</ServiceLinkInJourneyPattern>
 							</linksInSequence>
@@ -811,35 +811,35 @@ The Calendar is shown coded as
 							<RouteRef version="any" ref="mybus:RT_24o"/>
 							<DirectionType>outbound</DirectionType>
 							<pointsInSequence>
-								<TimingPointInJourneyPattern version="any" order="1" id="hde:tpip_24o_01">
+								<TimingPointInJourneyPattern version="any" id="hde:tpip_24o_01-1">
 									<TimingPointRef version="any" xsi:type="ScheduledStopPointRefStructure" ref="mybus:SSP_001"/>
 									<OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_001+SSP_001_t1"/>
 								</TimingPointInJourneyPattern>
-								<TimingPointInJourneyPattern version="any" order="2" id="hde:tpip_24o_02">
+								<TimingPointInJourneyPattern version="any" id="hde:tpip_24o_02-2">
 									<TimingPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_001_t1"/>
 									<OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_001_t1+SSP_001_t2"/>
 								</TimingPointInJourneyPattern>
-								<TimingPointInJourneyPattern version="any" order="3" id="hde:tpip_24o_03">
+								<TimingPointInJourneyPattern version="any" id="hde:tpip_24o_03-3">
 									<TimingPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_001_t2"/>
 									<OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_001_t2+SSP_002"/>
 								</TimingPointInJourneyPattern>
-								<TimingPointInJourneyPattern version="any" order="4" id="hde:tpip_24o_04">
+								<TimingPointInJourneyPattern version="any" id="hde:tpip_24o_04-4">
 									<TimingPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_002"/>
 									<OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_002_t1"/>
 								</TimingPointInJourneyPattern>
-								<TimingPointInJourneyPattern version="any" order="5" id="hde:tpip_24o_05">
+								<TimingPointInJourneyPattern version="any" id="hde:tpip_24o_05-5">
 									<TimingPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_002_t1"/>
 									<OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_002_t1+SSP_077"/>
 								</TimingPointInJourneyPattern>
-								<TimingPointInJourneyPattern version="any" order="6" id="hde:tpip_24o_06">
+								<TimingPointInJourneyPattern version="any" id="hde:tpip_24o_06-6">
 									<TimingPointRef version="any" ref="mybus:SSP_077"/>
 									<OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_077+SSP_021_bus"/>
 								</TimingPointInJourneyPattern>
-								<TimingPointInJourneyPattern version="any" order="7" id="hde:tpip_24o_07">
+								<TimingPointInJourneyPattern version="any" id="hde:tpip_24o_07-7">
 									<TimingPointRef version="any" ref="mybus:SSP_021"/>
 									<OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_021+SSP_022_bus"/>
 								</TimingPointInJourneyPattern>
-								<TimingPointInJourneyPattern version="any" order="8" id="hde:tpip_24o_08">
+								<TimingPointInJourneyPattern version="any" id="hde:tpip_24o_08-8">
 									<TimingPointRef version="any" ref="mybus:SSP_022"/>
 								</TimingPointInJourneyPattern>
 							</pointsInSequence>
@@ -849,23 +849,23 @@ The Calendar is shown coded as
 							<RouteRef version="any" ref="mybus:RT_46o"/>
 							<DirectionType>outbound</DirectionType>
 							<pointsInSequence>
-								<TimingPointInJourneyPattern version="any" order="1" id="hde:tpip_46o_01">
+								<TimingPointInJourneyPattern version="any" id="hde:tpip_46o_01-1">
 									<TimingPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_002"/>
 									<OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_002_t1"/>
 								</TimingPointInJourneyPattern>
-								<TimingPointInJourneyPattern version="any" order="2" id="hde:tpip_46o_02">
+								<TimingPointInJourneyPattern version="any" id="hde:tpip_46o_02-2">
 									<TimingPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_002_t1"/>
 									<OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_002_t1+SSP_077"/>
 								</TimingPointInJourneyPattern>
-								<TimingPointInJourneyPattern version="any" order="3" id="hde:tpip_46o_03">
+								<TimingPointInJourneyPattern version="any" id="hde:tpip_46o_03-3">
 									<TimingPointRef version="any" ref="mybus:SSP_077"/>
 									<OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_077+SSP_021_tram"/>
 								</TimingPointInJourneyPattern>
-								<TimingPointInJourneyPattern version="any" order="4" id="hde:tpip_46o_04">
+								<TimingPointInJourneyPattern version="any" id="hde:tpip_46o_04-4">
 									<TimingPointRef version="any" ref="mybus:SSP_021"/>
 									<OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_021+SSP_022_tram"/>
 								</TimingPointInJourneyPattern>
-								<TimingPointInJourneyPattern version="any" order="5" id="hde:tpip_46o_05">
+								<TimingPointInJourneyPattern version="any" id="hde:tpip_46o_05-5">
 									<TimingPointRef version="any" ref="mybus:SSP_022"/>
 								</TimingPointInJourneyPattern>
 							</pointsInSequence>
@@ -901,28 +901,28 @@ The Calendar is shown coded as
 								</JourneyPatternRunTime>
 							</runTimes>
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="any" order="1" id="hde:spip_24o_01">
+								<StopPointInJourneyPattern version="any" id="hde:spip_24o_01-1">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
 								</StopPointInJourneyPattern>
-								<TimingPointInJourneyPattern version="any" order="2" id="hde:spip_24o_02">
+								<TimingPointInJourneyPattern version="any" id="hde:spip_24o_02-2">
 									<TimingPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_001_t1"/>
 								</TimingPointInJourneyPattern>
-								<TimingPointInJourneyPattern version="any" order="3" id="hde:spip_24o_03">
+								<TimingPointInJourneyPattern version="any" id="hde:spip_24o_03-3">
 									<TimingPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_001_t2"/>
 								</TimingPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" order="4" id="hde:spip_24o_04">
+								<StopPointInJourneyPattern version="any" id="hde:spip_24o_04-4">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
 								</StopPointInJourneyPattern>
-								<TimingPointInJourneyPattern version="any" order="5" id="hde:spip_24o_05">
+								<TimingPointInJourneyPattern version="any" id="hde:spip_24o_05-5">
 									<TimingPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_002_t1"/>
 								</TimingPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" order="6" id="hde:spip_24o_06">
+								<StopPointInJourneyPattern version="any" id="hde:spip_24o_06-6">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" order="7" id="hde:spip_24o_07">
+								<StopPointInJourneyPattern version="any" id="hde:spip_24o_07-7">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_021"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" order="8" id="hde:spip_24o_08">
+								<StopPointInJourneyPattern version="any" id="hde:spip_24o_08-8">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_022"/>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
@@ -946,30 +946,30 @@ The Calendar is shown coded as
 								</JourneyPatternRunTime>
 							</runTimes>
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="any" order="1" id="hde:spip_46o_01">
+								<StopPointInJourneyPattern version="any" id="hde:spip_46o_01-1">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
 								</StopPointInJourneyPattern>
-								<TimingPointInJourneyPattern version="any" order="2" id="hde:spip_46o_02">
+								<TimingPointInJourneyPattern version="any" id="hde:spip_46o_02-2">
 									<TimingPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_002_t1"/>
 								</TimingPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" order="3" id="hde:spip_46o_03">
+								<StopPointInJourneyPattern version="any" id="hde:spip_46o_03-3">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" order="4" id="hde:spip_46o_04">
+								<StopPointInJourneyPattern version="any" id="hde:spip_46o_04-4">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_021"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" order="5" id="hde:spip_46o_05">
+								<StopPointInJourneyPattern version="any" id="hde:spip_46o_05-5">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_022"/>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
 							<linksInSequence>
-								<ServiceLinkInJourneyPattern version="any" order="1" id="hde:lijp_46o_01">
+								<ServiceLinkInJourneyPattern version="any" id="hde:lijp_46o_01-1">
 									<ServiceLinkRef version="any" ref="mybus:SL@SSP_002+SSP_077_tram"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="any" order="2" id="hde:lijp_46o_02">
+								<ServiceLinkInJourneyPattern version="any" id="hde:lijp_46o_02-2">
 									<ServiceLinkRef version="any" ref="mybus:SL@SSP_077+SSP_021_tram"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="any" order="3" id="hde:lijp_46o_03">
+								<ServiceLinkInJourneyPattern version="any" id="hde:lijp_46o_03-3">
 									<ServiceLinkRef version="any" ref="mybus:SL@SSP_021+SSP_022_tram"/>
 								</ServiceLinkInJourneyPattern>
 							</linksInSequence>
@@ -1171,7 +1171,7 @@ The Calendar is shown coded as
 								<DestinationDisplayRef version="any" ref="mybus:DST_Quebec"/>
 							</JourneyPatternView>
 							<calls>
-								<Call version="any" id="hde:sj_24o_01_001" order="1">
+								<Call version="any" id="hde:sj_24o_01_001-1">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
 									<OnwardTimingLinkView>
 										<TimingLinkRef version="any" ref="mybus:TL@SSP_001+SSP_001_t1"/>
@@ -1184,7 +1184,7 @@ The Calendar is shown coded as
 										<Time>14:20:00.0Z</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="hde:sj_24o_01_002" order="2">
+								<Call version="any" id="hde:sj_24o_01_002-2">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
 									<OnwardTimingLinkView>
 										<TimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_002_t1"/>
@@ -1199,7 +1199,7 @@ The Calendar is shown coded as
 									</Departure>
 									<Note>Arrival at Terminus</Note>
 								</Call>
-								<Call version="any" id="hde:sj_24o_01_003" order="3">
+								<Call version="any" id="hde:sj_24o_01_003-3">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
 									<OnwardTimingLinkView>
 										<TimingLinkRef version="any" ref="mybus:TL@SSP_001+SSP_001_t1"/>
@@ -1209,7 +1209,7 @@ The Calendar is shown coded as
 										<Time>14:45:00.0Z</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="hde:sj_24o_01_004" order="4">
+								<Call version="any" id="hde:sj_24o_01_004-4">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_021"/>
 									<OnwardTimingLinkView>
 										<TimingLinkRef version="any" ref="mybus:TL@SSP_021+SSP_022_bus"/>
@@ -1219,7 +1219,7 @@ The Calendar is shown coded as
 										<Time>15:00:00.0Z</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="hde:sj_24o_01_003" order="5">
+								<Call version="any" id="hde:sj_24o_01_003-5">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_022"/>
 									<Arrival>
 										<Time>15:15:00.0Z</Time>
@@ -1248,7 +1248,7 @@ The Calendar is shown coded as
 								<DestinationDisplayRef version="any" ref="mybus:DST_Quebec"/>
 							</JourneyPatternView>
 							<calls>
-								<Call version="any" id="hde:sj_24o_02_001" order="1">
+								<Call version="any" id="hde:sj_24o_02_001-1">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
 									<OnwardTimingLinkView>
 										<TimingLinkRef version="any" ref="mybus:TL@SSP_001+SSP_001_t1"/>
@@ -1261,7 +1261,7 @@ The Calendar is shown coded as
 										<Time>18:00:00.0Z</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="hde:sj_24o_02_002" order="2">
+								<Call version="any" id="hde:sj_24o_02_002-2">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
 									<OnwardTimingLinkView>
 										<TimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_002_t1"/>
@@ -1276,7 +1276,7 @@ The Calendar is shown coded as
 									</Departure>
 									<Note>Arrival at Terminus</Note>
 								</Call>
-								<Call version="any" id="hde:sj_24o_02_003" order="3">
+								<Call version="any" id="hde:sj_24o_02_003-3">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
 									<OnwardTimingLinkView>
 										<TimingLinkRef version="any" ref="mybus:TL@SSP_077+SSP_021_bus"/>
@@ -1286,7 +1286,7 @@ The Calendar is shown coded as
 										<Time>18:35:00.0Z</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="hde:sj_24o_02_004" order="4">
+								<Call version="any" id="hde:sj_24o_02_004-4">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_021"/>
 									<OnwardTimingLinkView>
 										<TimingLinkRef version="any" ref="mybus:TL@SSP_021+SSP_022_bus"/>
@@ -1296,7 +1296,7 @@ The Calendar is shown coded as
 										<Time>18:55:00.0Z</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="hde:sj_24o_02_003" order="5">
+								<Call version="any" id="hde:sj_24o_02_003-5">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_022"/>
 									<Arrival>
 										<Time>19:15:00.0Z</Time>
@@ -1325,7 +1325,7 @@ The Calendar is shown coded as
 								<DestinationDisplayRef version="any" ref="mybus:DST_Quebec"/>
 							</JourneyPatternView>
 							<calls>
-								<Call version="any" id="hde:sj_46o_01_001" order="1">
+								<Call version="any" id="hde:sj_46o_01_001-1">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
 									<OnwardTimingLinkView>
 										<TimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_002_t1"/>
@@ -1335,7 +1335,7 @@ The Calendar is shown coded as
 										<Time>14:40:00.0Z</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="hde:sj_46o_01_002" order="2">
+								<Call version="any" id="hde:sj_46o_01_002-2">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
 									<OnwardTimingLinkView>
 										<TimingLinkRef version="any" ref="mybus:TL@SSP_077+SSP_021_tram"/>
@@ -1345,7 +1345,7 @@ The Calendar is shown coded as
 										<Time>14:50:00.0Z</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="hde:sj_46o_01_003" order="3">
+								<Call version="any" id="hde:sj_46o_01_003-3">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_021"/>
 									<OnwardTimingLinkView>
 										<TimingLinkRef version="any" ref="mybus:TL@SSP_021+SSP_022_tram"/>
@@ -1355,7 +1355,7 @@ The Calendar is shown coded as
 										<Time>15:00:00.0Z</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="hde:sj_46o_01_004" order="4">
+								<Call version="any" id="hde:sj_46o_01_004-4">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_022"/>
 									<Arrival>
 										<Time>15:10:00.0Z</Time>
@@ -1384,7 +1384,7 @@ The Calendar is shown coded as
 								<DestinationDisplayRef version="any" ref="mybus:DST_Quebec"/>
 							</JourneyPatternView>
 							<calls>
-								<Call version="any" id="hde:sj_46o_02_001" order="1">
+								<Call version="any" id="hde:sj_46o_02_001-1">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
 									<OnwardTimingLinkView>
 										<TimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_002_t1"/>
@@ -1394,7 +1394,7 @@ The Calendar is shown coded as
 										<Time>18:00:00.0Z</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="hde:sj_46o_02_002" order="2">
+								<Call version="any" id="hde:sj_46o_02_002-2">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
 									<OnwardTimingLinkView>
 										<TimingLinkRef version="any" ref="mybus:TL@SSP_077+SSP_021_tram"/>
@@ -1404,7 +1404,7 @@ The Calendar is shown coded as
 										<Time>18:10:00.0Z</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="hde:sj_46o_02_003" order="3">
+								<Call version="any" id="hde:sj_46o_02_003-3">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_021"/>
 									<OnwardTimingLinkView>
 										<TimingLinkRef version="any" ref="mybus:TL@SSP_021+SSP_022_tram"/>
@@ -1414,7 +1414,7 @@ The Calendar is shown coded as
 										<Time>18:20:00.0Z</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="hde:sj_46o_02_004" order="4">
+								<Call version="any" id="hde:sj_46o_02_004-4">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_022"/>
 									<Arrival>
 										<Time>18:30:00.0Z</Time>
@@ -1485,73 +1485,73 @@ The Calendar is shown coded as
 						</DayType>
 					</dayTypes>
 					<dayTypeAssignments>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-01">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-01-1">
 							<Description>Monday 2010-11-01</Description>
 							<Date>2010-11-01</Date>
 							<DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-02">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-02-1">
 							<Description>Tuesday 2010-11-02</Description>
 							<Date>2010-11-02</Date>
 							<DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-03">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-03-1">
 							<Description>Wednesday 2010-11-03</Description>
 							<Date>2010-11-03</Date>
 							<DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-04">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-04-1">
 							<Description>Thusday 2010-11-04</Description>
 							<Date>2010-11-04</Date>
 							<DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-05">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-05-1">
 							<Description>MFriday 2010-11-05</Description>
 							<Date>2010-11-05</Date>
 							<DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-06">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-06-1">
 							<Description>Saturday 2010-11-06</Description>
 							<Date>2010-11-06</Date>
 							<DayTypeRef version="any" ref="hde:DT_03-WE-NH"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-07">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-07-1">
 							<Description>Sunday 2010-11-07</Description>
 							<Date>2010-11-07</Date>
 							<DayTypeRef version="any" ref="hde:DT_03-WE-NH"/>
 						</DayTypeAssignment>
 						<!-- Week 2 -->
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-08">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-08-1">
 							<Description>Monday 2010-11-08</Description>
 							<Date>2010-11-08</Date>
 							<DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-09">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-09-1">
 							<Description>Tuesday 2010-11-09</Description>
 							<Date>2010-11-09</Date>
 							<DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-10">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-10-1">
 							<Description>Wednesday 2010-11-10</Description>
 							<Date>2010-11-10</Date>
 							<DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-11">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-11-1">
 							<Description>Thusday 2010-11-11</Description>
 							<Date>2010-11-11</Date>
 							<DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-12">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-12-1">
 							<Description>MFriday 2010-11-12</Description>
 							<Date>2010-11-12</Date>
 							<DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-113">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-113-1">
 							<Description>Saturday 2010-11-13</Description>
 							<Date>2010-11-13</Date>
 							<DayTypeRef version="any" ref="hde:DT_03-WE-NH"/>
 						</DayTypeAssignment>
-						<DayTypeAssignment version="any" order="1" id="hde:DayAsgn_2010-11-14">
+						<DayTypeAssignment version="any" id="hde:DayAsgn_2010-11-14-1">
 							<Description>Sunday 2010-11-14</Description>
 							<Date>2010-11-14</Date>
 							<DayTypeRef version="any" ref="hde:DT_03-WE-NH"/>

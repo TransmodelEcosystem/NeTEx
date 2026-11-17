@@ -8,7 +8,7 @@
 				<Aggregation>main schema</Aggregation>
 				<Audience>e-service developers</Audience>
 				<Coverage>Europe</Coverage>
-				<Creator>First Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles.  mailto:schemer@netex.org.uk</Creator>
+				<Creator>First Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles.</Creator>
 				<Date>
 					<Created>2010-09-04</Created>
 				</Date>
@@ -57,7 +57,7 @@ Rail transport, Roads and Road transport
 	<!--======Needs================================================================================-->
 	<xsd:element name="PassengerAccessibilityNeeds" type="PassengerAccessibilityNeedsStructure">
 		<xsd:annotation>
-			<xsd:documentation>A  passenger's requirement for accessibility, comprising one or more USER NEEDs. For example, that he is unable to navigate stairs, or lifts, or has visual or auditory impairments. PASSENGER ACCESSIBILITY NEEDS can be used to derive an accessibility constraint for the passenger, allowing the computation of paths for passengers with specifically constrained mobility. Example: Wheelchair, No Lifts, No Stairs.</xsd:documentation>
+			<xsd:documentation>A passenger's requirement for accessibility, comprising one or more USER NEEDs. For example, that he is unable to navigate stairs, or lifts, or has visual or auditory impairments. PASSENGER ACCESSIBILITY NEEDS can be used to derive an accessibility constraint for the passenger, allowing the computation of paths for passengers with specifically constrained mobility. Example: Wheelchair, No Lifts, No Stairs.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="PassengerAccessibilityNeedsStructure">
@@ -122,7 +122,7 @@ Rail transport, Roads and Road transport
 							</xsd:element>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="UserNeedIdType"/>
+					<xsd:attribute name="id" type="UserNeedIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -163,9 +163,9 @@ Rail transport, Roads and Road transport
 					<xsd:documentation>A specific USER NEED, i.e. a constraint of a passenger as regards his mobility, e.g. wheelchair, assisted wheelchair, etc.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="PsychosensoryNeed" type="PyschosensoryNeedEnumeration">
+			<xsd:element name="PsychosensoryNeed" type="PsychosensoryNeedEnumeration">
 				<xsd:annotation>
-					<xsd:documentation>Passenger pyschosensory need for which a  suitability specified.</xsd:documentation>
+					<xsd:documentation>Passenger psychosensory need for which a suitability specified.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MedicalNeed">
@@ -206,7 +206,7 @@ Rail transport, Roads and Road transport
 			<xsd:enumeration value="normal"/>
 		</xsd:restriction>
 	</xsd:simpleType>
-	<xsd:simpleType name="PyschosensoryNeedEnumeration">
+	<xsd:simpleType name="PsychosensoryNeedEnumeration">
 		<xsd:annotation>
 			<xsd:documentation>Allowed values for specific psychosensory needs.</xsd:documentation>
 		</xsd:annotation>
@@ -294,7 +294,7 @@ Rail transport, Roads and Road transport
 							</xsd:element>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="SuitabilityIdType"/>
+					<xsd:attribute name="id" type="SuitabilityIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>

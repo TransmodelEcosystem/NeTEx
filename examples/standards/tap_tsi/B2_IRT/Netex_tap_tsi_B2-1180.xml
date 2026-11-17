@@ -4040,16 +4040,16 @@ PCGO1080XXX0003
 							<Name>FIP OCIO</Name>
 							<TypeOfNoticeRef version="any" ref="C"/>
 							<variants>
-								<DeliveryVariant>
+								<DeliveryVariant id="1">
 									<VariantText lang="fr">bla</VariantText>
 								</DeliveryVariant>
-								<DeliveryVariant>
+								<DeliveryVariant id="2">
 									<VariantText lang="de">bla </VariantText>
 								</DeliveryVariant>
-								<DeliveryVariant>
+								<DeliveryVariant id="3">
 									<VariantText lang="en">bla</VariantText>
 								</DeliveryVariant>
-								<DeliveryVariant>
+								<DeliveryVariant id="4">
 									<VariantText lang="ru">bla</VariantText>
 								</DeliveryVariant>
 							</variants>
@@ -19779,8 +19779,8 @@ PCGO1080XXX0003
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="1080">
 									<DataRoleType>collects distributes</DataRoleType>
-									<StakeholderRoleType>Operation Reservation</StakeholderRoleType>
-									<ResponsibleOrganisationRef version="any" ref="1080" nameOfRefClass="OperatorRef" xsi:type="OperatorRefStructure"/>
+									<StakeholderRoleType>operation reservation</StakeholderRoleType>
+									<ResponsibleOrganisationRef version="any" ref="1080" nameOfRefClass="Operator"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
 						</ResponsibilitySet>

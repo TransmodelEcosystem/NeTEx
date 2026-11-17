@@ -114,10 +114,10 @@ A COMPOSITE FRAME Is used to group the above frames as a cohernet version.
 						<ValueSet version="any" id="napt:Stop_types">
 							<Name>UK NaPTAN Stop Types</Name>
 							<values>
-								<TypeOfPoint version="any" id="napt:Type_of_point@TMU">
-									<Name>Tram or Metro  stop</Name>
+								<TypeOfPoint version="any" id="napt:Type_of_point@TMU" nameOfClassifiedEntityClass="ScheduledStopPoint">
+									<Name>Tram or Metro stop</Name>
 								</TypeOfPoint>
-								<TypeOfPoint version="any" id="napt:Type_of_point@RSE">
+								<TypeOfPoint version="any" id="napt:Type_of_point@RSE" nameOfClassifiedEntityClass="ScheduledStopPoint">
 									<Name>Rail Station Entrance</Name>
 								</TypeOfPoint>
 							</values>
@@ -230,11 +230,13 @@ A COMPOSITE FRAME Is used to group the above frames as a cohernet version.
 					<!--- ====LINES===== -->
 					<lines>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:BAK">
+							<privateCodes>
+								<PrivateCode>B</PrivateCode>
+							</privateCodes>
 							<Name>Bakerloo Line</Name>
 							<ShortName>BaKerloo</ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>BAK</PublicCode>
-							<PrivateCode>B</PrivateCode>
 							<Presentation>
 								<ColourName>brown</ColourName>
 							</Presentation>
@@ -254,11 +256,13 @@ A COMPOSITE FRAME Is used to group the above frames as a cohernet version.
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:CEN">
+							<privateCodes>
+								<PrivateCode>C</PrivateCode>
+							</privateCodes>
 							<Name>CEN tral Line</Name>
 							<ShortName>CEN tral </ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>CEN</PublicCode>
-							<PrivateCode>C</PrivateCode>
 							<Presentation>
 								<ColourName>red</ColourName>
 							</Presentation>
@@ -272,11 +276,13 @@ A COMPOSITE FRAME Is used to group the above frames as a cohernet version.
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:CIR">
+							<privateCodes>
+								<PrivateCode>R</PrivateCode>
+							</privateCodes>
 							<Name>Circle Line</Name>
 							<ShortName>Circle</ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>CIR</PublicCode>
-							<PrivateCode>R</PrivateCode>
 							<Presentation>
 								<ColourName>yellow</ColourName>
 							</Presentation>
@@ -290,11 +296,13 @@ A COMPOSITE FRAME Is used to group the above frames as a cohernet version.
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:TRM">
+							<privateCodes>
+								<PrivateCode>T</PrivateCode>
+							</privateCodes>
 							<Name>Croydon DLR</Name>
 							<ShortName>DLR </ShortName>
 							<TransportMode>tram</TransportMode>
 							<PublicCode>TRM</PublicCode>
-							<PrivateCode>T</PrivateCode>
 							<Presentation>
 								<ColourName>green</ColourName>
 							</Presentation>
@@ -314,11 +322,13 @@ A COMPOSITE FRAME Is used to group the above frames as a cohernet version.
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:DIS">
+							<privateCodes>
+								<PrivateCode>D</PrivateCode>
+							</privateCodes>
 							<Name>District Line</Name>
 							<ShortName>District </ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>DIS</PublicCode>
-							<PrivateCode>D</PrivateCode>
 							<Presentation>
 								<ColourName>green</ColourName>
 							</Presentation>
@@ -332,11 +342,13 @@ A COMPOSITE FRAME Is used to group the above frames as a cohernet version.
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:JUB">
+							<privateCodes>
+								<PrivateCode>J</PrivateCode>
+							</privateCodes>
 							<Name>Jubilee Line</Name>
 							<ShortName>Jubilee </ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>JUB</PublicCode>
-							<PrivateCode>J</PrivateCode>
 							<Presentation>
 								<ColourName>silver</ColourName>
 							</Presentation>
@@ -356,11 +368,13 @@ A COMPOSITE FRAME Is used to group the above frames as a cohernet version.
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:DLR">
+							<privateCodes>
+								<PrivateCode>L</PrivateCode>
+							</privateCodes>
 							<Name>Docklands light railway</Name>
 							<ShortName>DLR</ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>DLR</PublicCode>
-							<PrivateCode>L</PrivateCode>
 							<Presentation>
 								<ColourName>lightGreen</ColourName>
 							</Presentation>
@@ -380,11 +394,13 @@ A COMPOSITE FRAME Is used to group the above frames as a cohernet version.
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:HAM">
+							<privateCodes>
+								<PrivateCode>H</PrivateCode>
+							</privateCodes>
 							<Name>Hammersmith  &amp;  City Line</Name>
 							<ShortName>Hammersmith  &amp; City</ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>HAM</PublicCode>
-							<PrivateCode>H</PrivateCode>
 							<Presentation>
 								<ColourName>pink</ColourName>
 							</Presentation>
@@ -398,11 +414,13 @@ A COMPOSITE FRAME Is used to group the above frames as a cohernet version.
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:MET">
+							<privateCodes>
+								<PrivateCode>M</PrivateCode>
+							</privateCodes>
 							<Name>Metropolitan Line</Name>
 							<ShortName>Metropolitan </ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>MET</PublicCode>
-							<PrivateCode>M</PrivateCode>
 							<Presentation>
 								<ColourName>maroon</ColourName>
 							</Presentation>
@@ -422,11 +440,13 @@ A COMPOSITE FRAME Is used to group the above frames as a cohernet version.
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:NTN">
+							<privateCodes>
+								<PrivateCode>N</PrivateCode>
+							</privateCodes>
 							<Name>Northern Line</Name>
 							<ShortName>Northern</ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>NTN</PublicCode>
-							<PrivateCode>N</PrivateCode>
 							<Presentation>
 								<ColourName>black</ColourName>
 							</Presentation>
@@ -440,11 +460,13 @@ A COMPOSITE FRAME Is used to group the above frames as a cohernet version.
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:OVR">
+							<privateCodes>
+								<PrivateCode>O</PrivateCode>
+							</privateCodes>
 							<Name>London Overground</Name>
 							<ShortName>Overground </ShortName>
 							<TransportMode>rail</TransportMode>
 							<PublicCode>OVR</PublicCode>
-							<PrivateCode>O</PrivateCode>
 							<Presentation>
 								<ColourName>orange</ColourName>
 							</Presentation>
@@ -458,11 +480,13 @@ A COMPOSITE FRAME Is used to group the above frames as a cohernet version.
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:PIC">
+							<privateCodes>
+								<PrivateCode>P</PrivateCode>
+							</privateCodes>
 							<Name>Piccadilly Line</Name>
 							<ShortName>Piccadilly</ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>PIC</PublicCode>
-							<PrivateCode>P</PrivateCode>
 							<Presentation>
 								<ColourName>darkblue</ColourName>
 							</Presentation>
@@ -476,11 +500,13 @@ A COMPOSITE FRAME Is used to group the above frames as a cohernet version.
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:VIC">
+							<privateCodes>
+								<PrivateCode>V</PrivateCode>
+							</privateCodes>
 							<Name>VictoriaLine</Name>
 							<ShortName>Victoria</ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>VIC</PublicCode>
-							<PrivateCode>V</PrivateCode>
 							<Presentation>
 								<ColourName>lightblue</ColourName>
 							</Presentation>
@@ -494,11 +520,13 @@ A COMPOSITE FRAME Is used to group the above frames as a cohernet version.
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:WAC">
+							<privateCodes>
+								<PrivateCode>W</PrivateCode>
+							</privateCodes>
 							<Name>Waterloo &amp; City Line</Name>
 							<ShortName>Waterloo &amp; City </ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>WAC</PublicCode>
-							<PrivateCode>W</PrivateCode>
 							<Presentation>
 								<ColourName>turquoise</ColourName>
 							</Presentation>
@@ -13370,100 +13398,100 @@ A COMPOSITE FRAME Is used to group the above frames as a cohernet version.
 							<sections>
 								<LineSection version="any" id="lul:RS_01NTN_H_1">
 									<pointsOnSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_0">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_0">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_1">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_1">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_2">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_2">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_3">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_3">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_4">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_4">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_5">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_5">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_6">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_6">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_7">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_7">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_8">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_8">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_9">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_9">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUSKW1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_10">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_10">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUOVL1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_11">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_11">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUKNG1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_12">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_12">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUWLO3"/>
 										</PointOnLineSection>
 										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_13">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUEMB5"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_14">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_14">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUCHX4"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_15">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_15">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLULSQ1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_16">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_16">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUTCR2"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_17">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_17">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUGDG1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_18">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_18">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUWRR1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_19">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_19">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUEUS4"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_20">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_20">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUMTC1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_21">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_21">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUCTN1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_22">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_22">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUKSH1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_23">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_23">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUTFP1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_24">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_24">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUACY1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_25">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_25">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUHGT1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_26">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_26">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUEFY1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_27">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_27">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUFYC1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_28">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_28">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUWFN1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_29">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_29">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUWOP1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_30">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_30">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUTAW1"/>
 										</PointOnLineSection>
-										<PointOnLineSection id="lul:RL_RS_01NTN_H_1_31">
+										<PointOnLineSection version="any" id="lul:RL_RS_01NTN_H_1_31">
 											<ScheduledStopPointRef ref="naptStop:9400ZZLUHBT1"/>
 										</PointOnLineSection>
 									</pointsOnSection>

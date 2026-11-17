@@ -91,6 +91,7 @@ Pour NETEX_COMMUN les classes présentes sont
 								<ClassInFrameRef nameOfClass="Notice"/>
 								<ClassInFrameRef nameOfClass="NoticeAssignment"/>
 								<ClassInFrameRef nameOfClass="ResponsibilityRoleAssignment"/>
+								<ClassInFrameRef nameOfClass="DataSource"/>
 								<ClassInFrameRef nameOfClass="Organisation"/>
 								<ClassInFrameRef nameOfClass="PointProjection"/>
 								<ClassInFrameRef nameOfClass="ZoneProjection"/>
@@ -110,6 +111,7 @@ Pour NETEX_COMMUN les classes présentes sont
 								<ClassInFrameRef nameOfClass="GeneralGroupOfEntities"/>
 							</classes>
 						</TypeOfFrame>
+						<DataSource id="AURIGE:Datasource:Aurige:LOC" version="001"/>
 						<!-- Organisations: Exploitants -->
 						<Operator version="001" id="AURIGE:Operator:768:LOC">
 							<CompanyNumber>768</CompanyNumber>
@@ -176,7 +178,7 @@ Pour NETEX_COMMUN les classes présentes sont
 							</RoadAddress>
 							<Landmark>Face à l'école maternelle Jeanne Moreau</Landmark>
 							<TopographicPlaceRef ref="INSEE:TopographicPlace:78297"/>
-							<OrganisationRef version="001" ref="AURIGE:Operator:768:LOC"/>
+							<OperatorRef version="001" ref="AURIGE:Operator:768:LOC"/>
 							<!-- Fait partie du Pôle Monomodal Le Corbusier -->
 							<ParentSiteRef version="001" ref="FR:78197:StopPlace:00001:LOC"/>
 							<TransportMode>bus</TransportMode>

@@ -3546,10 +3546,12 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 							</accessRightsInProduct>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="thx:Adulte" version="01">
+							<privateCodes>
+								<PrivateCode>PT00AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Adulte</Name>
 							<Description lang="fr">Sans condition</Description>
-							<PrivateCode>PT00AD</PrivateCode>
-							<TypeOfFareProductRef ref="thx:TypeOfFareProduct:TS" version="any"/>
+							<TypeOfFareProductRef version="any" ref="thx:TypeOfFareProduct:TS"/>
 							<ConditionSummary>
 								<CanBreakJourney>false</CanBreakJourney>
 								<IsRefundable>true</IsRefundable>
@@ -3572,10 +3574,12 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 							</validityParameterAssignments>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="thx:Enfant" version="01">
+							<privateCodes>
+								<PrivateCode>PT0012</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Enfant</Name>
 							<Description lang="fr">Enfants de 4 à moins de 12 ans le jour du voyage</Description>
-							<PrivateCode>PT0012</PrivateCode>
-							<TypeOfFareProductRef ref="thx:TypeOfFareProduct:TS" version="any"/>
+							<TypeOfFareProductRef version="any" ref="thx:TypeOfFareProduct:TS"/>
 							<ConditionSummary>
 								<CanBreakJourney>false</CanBreakJourney>
 								<IsRefundable>true</IsRefundable>
@@ -3598,10 +3602,12 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 							</validityParameterAssignments>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="thx:Loisir" version="01">
+							<privateCodes>
+								<PrivateCode>ND00AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Loisir</Name>
 							<Description lang="fr">Aller/Retour obligatoire</Description>
-							<PrivateCode>ND00AD</PrivateCode>
-							<TypeOfFareProductRef ref="thx:TypeOfFareProduct:AR" version="any"/>
+							<TypeOfFareProductRef version="any" ref="thx:TypeOfFareProduct:AR"/>
 							<ConditionSummary>
 								<CanBreakJourney>false</CanBreakJourney>
 								<IsRefundable>true</IsRefundable>
@@ -3631,10 +3637,12 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 							</validityParameterAssignments>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="thx:Prems" version="01">
+							<privateCodes>
+								<PrivateCode>PP05AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Prems</Name>
 							<Description lang="fr">Achat jusqu_à J-14. Places limitées.</Description>
-							<PrivateCode>PP05AD</PrivateCode>
-							<TypeOfFareProductRef ref="thx:TypeOfFareProduct:TS" version="any"/>
+							<TypeOfFareProductRef version="any" ref="thx:TypeOfFareProduct:TS"/>
 							<ConditionSummary>
 								<CanBreakJourney>false</CanBreakJourney>
 								<IsRefundable>false</IsRefundable>
@@ -3670,10 +3678,12 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 							</validityParameterAssignments>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="thx:MiniADeux" version="01">
+							<privateCodes>
+								<PrivateCode>PP05AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">MiniADeux</Name>
 							<Description lang="fr">SAchat jusqu_à J-14. Places limitées. 2 personnes voyageant ensemble</Description>
-							<PrivateCode>PP05AD</PrivateCode>
-							<TypeOfFareProductRef ref="thx:TypeOfFareProduct:TS" version="any"/>
+							<TypeOfFareProductRef version="any" ref="thx:TypeOfFareProduct:TS"/>
 							<ConditionSummary>
 								<CanBreakJourney>false</CanBreakJourney>
 								<IsRefundable>false</IsRefundable>
@@ -3710,6 +3720,9 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 							</validityParameterAssignments>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="thx:Duo" version="01">
+							<privateCodes>
+								<PrivateCode>PE07AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Duo</Name>
 							<Description lang="fr">2 personnes voyageant ensemble (3). Places limitées. Compartiment "Famille" sauf en classe A</Description>
 							<noticeAssignments>
@@ -3718,8 +3731,7 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 									<Mark>(3)</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>PE07AD</PrivateCode>
-							<TypeOfFareProductRef ref="thx:TypeOfFareProduct:TS" version="any"/>
+							<TypeOfFareProductRef version="any" ref="thx:TypeOfFareProduct:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>
@@ -3760,6 +3772,9 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 							</validityParameterAssignments>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="thx:espace_plus" version="01">
+							<privateCodes>
+								<PrivateCode>PE08AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">espace_plus</Name>
 							<Description lang="fr">3 ou 4 personnes voyageant ensemble. Compartiment "Famille"</Description>
 							<noticeAssignments>
@@ -3768,8 +3783,7 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 									<Mark>(4)</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>PE08AD</PrivateCode>
-							<TypeOfFareProductRef ref="thx:TypeOfFareProduct:TS" version="any"/>
+							<TypeOfFareProductRef version="any" ref="thx:TypeOfFareProduct:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>
@@ -3806,6 +3820,9 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 							</validityParameterAssignments>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="thx:Jeune" version="01">
+							<privateCodes>
+								<PrivateCode>PT0026</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Jeune</Name>
 							<Description lang="fr">De 12 à moins de 26 ans le jour du voyage</Description>
 							<noticeAssignments>
@@ -3814,8 +3831,7 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 									<Mark>(5)</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>PT0026</PrivateCode>
-							<TypeOfFareProductRef ref="thx:TypeOfFareProduct:TS" version="any"/>
+							<TypeOfFareProductRef version="any" ref="thx:TypeOfFareProduct:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>
@@ -3839,6 +3855,9 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 							</validityParameterAssignments>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="thx:Senior" version="01">
+							<privateCodes>
+								<PrivateCode>PT0060</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Senior</Name>
 							<Description lang="fr">Avoir au moins 60 ans le jour du voyage</Description>
 							<noticeAssignments>
@@ -3847,8 +3866,7 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 									<Mark>@</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>PT0060</PrivateCode>
-							<TypeOfFareProductRef ref="thx:TypeOfFareProduct:TS" version="any"/>
+							<TypeOfFareProductRef version="any" ref="thx:TypeOfFareProduct:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>
@@ -3871,10 +3889,12 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 							</validityParameterAssignments>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="thx:Congress_Salons" version="01">
+							<privateCodes>
+								<PrivateCode>CN20AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Congrès _ Salons</Name>
 							<Description lang="fr">Sur présentation d_un justificatif à dates spécifiques (mail de confirmation ou billet d_entrée)</Description>
-							<PrivateCode>CN20AD</PrivateCode>
-							<TypeOfFareProductRef ref="thx:TypeOfFareProduct:AR" version="any"/>
+							<TypeOfFareProductRef version="any" ref="thx:TypeOfFareProduct:AR"/>
 							<ConditionSummary>
 								<CanBreakJourney>false</CanBreakJourney>
 								<IsRefundable>true</IsRefundable>
@@ -3896,6 +3916,9 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 							</validityParameterAssignments>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="thx:Pass" version="01">
+							<privateCodes>
+								<PrivateCode>EP00AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Pass</Name>
 							<Description lang="fr">Titulaire d_un Pass couvrant au moins un des pays du parcours</Description>
 							<noticeAssignments>
@@ -3908,8 +3931,7 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 									<Mark>(7)</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>EP00AD</PrivateCode>
-							<TypeOfFareProductRef ref="thx:TypeOfFareProduct:TS" version="any"/>
+							<TypeOfFareProductRef version="any" ref="thx:TypeOfFareProduct:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>
@@ -3932,10 +3954,12 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 							</validityParameterAssignments>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="thx:Groupe_Adulte_s" version="01">
+							<privateCodes>
+								<PrivateCode>GR00AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Groupe Adulte (TS)</Name>
 							<Description lang="fr">Minimum 12 adultes. Demande effectuée par le client au 0810 879 479 (Agence Commerciale Voyageurs)</Description>
-							<PrivateCode>GR00AD</PrivateCode>
-							<TypeOfFareProductRef ref="thx:TypeOfFareProduct:TS" version="any"/>
+							<TypeOfFareProductRef version="any" ref="thx:TypeOfFareProduct:TS"/>
 							<ConditionSummary>
 								<CanBreakJourney>false</CanBreakJourney>
 								<IsRefundable>true</IsRefundable>
@@ -3972,10 +3996,12 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 							</validityParameterAssignments>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="thx:Groupe_Adulte_Ar" version="01">
+							<privateCodes>
+								<PrivateCode>GR02AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Groupe Adulte (TS)</Name>
 							<Description lang="fr">Minimum 12 adultes. Demande effectuée par le client au 0810 879 479 (Agence Commerciale Voyageurs)</Description>
-							<PrivateCode>GR02AD</PrivateCode>
-							<TypeOfFareProductRef ref="thx:TypeOfFareProduct:AR" version="any"/>
+							<TypeOfFareProductRef version="any" ref="thx:TypeOfFareProduct:AR"/>
 							<ConditionSummary>
 								<CanBreakJourney>false</CanBreakJourney>
 								<IsRefundable>true</IsRefundable>
@@ -3992,6 +4018,9 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 							</validityParameterAssignments>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="thx:Guide_Handicape" version="01">
+							<privateCodes>
+								<PrivateCode>GG99AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Guide d_handicapé ou d_aveugle</Name>
 							<Description lang="fr">L_handicapé ou l_aveugle doivent être titulaire d_une carte d_invalidité. Pour un handicapé en fauteuil roulant, celui-ci doit être pliable.</Description>
 							<noticeAssignments>
@@ -4000,8 +4029,7 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 									<Mark>@</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>GG99AD</PrivateCode>
-							<TypeOfFareProductRef ref="thx:TypeOfFareProduct:TS" version="any"/>
+							<TypeOfFareProductRef version="any" ref="thx:TypeOfFareProduct:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>
@@ -4024,6 +4052,9 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 							</validityParameterAssignments>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="thx:Fip_Loisir" version="01">
+							<privateCodes>
+								<PrivateCode>EM01AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Fip_Loisir</Name>
 							<Description lang="fr">Carte FIP</Description>
 							<noticeAssignments>
@@ -4032,8 +4063,7 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 									<Mark>(7)</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>EM01AD</PrivateCode>
-							<TypeOfFareProductRef ref="thx:TypeOfFareProduct:TS" version="any"/>
+							<TypeOfFareProductRef version="any" ref="thx:TypeOfFareProduct:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>
@@ -4057,6 +4087,9 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 							</validityParameterAssignments>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="thx:FipService" version="01">
+							<privateCodes>
+								<PrivateCode>CT02AD</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">FIP Service</Name>
 							<Description lang="fr">Sur présentation de la Carte FIP</Description>
 							<noticeAssignments>
@@ -4065,8 +4098,7 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 									<Mark>(7)</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>CT02AD</PrivateCode>
-							<TypeOfFareProductRef ref="thx:TypeOfFareProduct:TS" version="any"/>
+							<TypeOfFareProductRef version="any" ref="thx:TypeOfFareProduct:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>
@@ -4100,6 +4132,9 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 							</validityParameterAssignments>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="thx:Enfant_Partegean_un_Lit" version="01">
+							<privateCodes>
+								<PrivateCode>PE0112</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Enfant Partegeant Un Lit</Name>
 							<Description lang="fr">Cabine entièrement réservée. Compartiment " Famille "</Description>
 							<noticeAssignments>
@@ -4108,8 +4143,7 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 									<Mark>(8)</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>PE0112</PrivateCode>
-							<TypeOfFareProductRef ref="thx:TypeOfFareProduct:TS" version="any"/>
+							<TypeOfFareProductRef version="any" ref="thx:TypeOfFareProduct:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>
@@ -4140,6 +4174,9 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 							</validityParameterAssignments>
 						</PreassignedFareProduct>
 						<PreassignedFareProduct id="thx:Animaux_Domestiques" version="01">
+							<privateCodes>
+								<PrivateCode>CH50CH</PrivateCode>
+							</privateCodes>
 							<Name lang="fr">Animaux domestiques</Name>
 							<Description lang="fr">Cabine entièrement réservée (10). Compartiment "famille"</Description>
 							<noticeAssignments>
@@ -4152,8 +4189,7 @@ This variation uses multiple   FARE PRODUCT  products and a single  SALES PACKAG
 									<Mark>(10)</Mark>
 								</NoticeAssignment>
 							</noticeAssignments>
-							<PrivateCode>CH50CH</PrivateCode>
-							<TypeOfFareProductRef ref="thx:TypeOfFareProduct:TS" version="any"/>
+							<TypeOfFareProductRef version="any" ref="thx:TypeOfFareProduct:TS"/>
 							<ConditionSummary>
 								<HasNotices>true</HasNotices>
 								<CanBreakJourney>false</CanBreakJourney>

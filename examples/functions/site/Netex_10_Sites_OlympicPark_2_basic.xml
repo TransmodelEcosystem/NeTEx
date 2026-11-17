@@ -2163,64 +2163,64 @@ that defines a number of
 									</TransferDuration>
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="naptPoi:8100OPK_N1_l01">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="naptPoi:8100OPK_E1_to_pj1"/>
 											<Description>Entrance to aquatics vicinity</Description>
+											<SitePathLinkRef version="any" ref="naptPoi:8100OPK_E1_to_pj1"/>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="naptPoi:8100OPK_N1_l02">
-											<PathLinkRef xsi:type="SitePathLinkRefStructure" ref="naptPoi:8100OPK_pj11_to_SPC_4"/>
 											<Description>quatics vicinity to bridge 4</Description>
+											<SitePathLinkRef version="any" ref="naptPoi:8100OPK_pj11_to_SPC_4"/>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="naptPoi:8100OPK_N1_l03">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="naptPoi:8100OPK_SPC_4_to_pj3"/>
 											<Description>from bridge 4 to Stadium vicinity </Description>
+											<SitePathLinkRef version="any" ref="naptPoi:8100OPK_SPC_4_to_pj3"/>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="naptPoi:8100OPK_N1_l04">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="naptPoi:8100OPK_pj3_to_pj5"/>
 											<Description>Stadium vicinity to Stadium vicinity </Description>
+											<SitePathLinkRef version="any" ref="naptPoi:8100OPK_pj3_to_pj5"/>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="naptPoi:8100OPK_N1_l05">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="naptPoi:8100OPK_pj5_to_pj8"/>
 											<Description>Stadium vicinity to handball  area  vicinity ea</Description>
+											<SitePathLinkRef version="any" ref="naptPoi:8100OPK_pj5_to_pj8"/>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="6" id="naptPoi:8100OPK_N1_l06">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="naptPoi:8100OPK_pj10_to_pj8"/>
 											<Description>Handball vicinity to haHockey  arvicinity ea</Description>
+											<SitePathLinkRef version="any" ref="naptPoi:8100OPK_pj10_to_pj8"/>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="7" id="naptPoi:8100OPK_N1_l07">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="naptPoi:8100OPK_pj10_to_SPC_4"/>
 											<Description>hockey vicinity to bridge 2</Description>
+											<SitePathLinkRef version="any" ref="naptPoi:8100OPK_pj10_to_SPC_4"/>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="8" id="naptPoi:8100OPK_N1_l08">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="naptPoi:8100OPK_pj11_to_SPC_4"/>
 											<Description>bridge2  to velo vicinity </Description>
+											<SitePathLinkRef version="any" ref="naptPoi:8100OPK_pj11_to_SPC_4"/>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="9" id="naptPoi:8100OPK_N1_l09">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="naptPoi:8100OPK_pj11_to_V8-E1"/>
 											<Description>to BMX</Description>
+											<SitePathLinkRef version="any" ref="naptPoi:8100OPK_pj11_to_V8-E1"/>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -2414,64 +2414,64 @@ that defines a number of
 									</TransferDuration>
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="naptPoi:8100OPK_N2_l01">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="naptPoi:8100OPK_pj11_to_V8-E1"/>
 											<Description>to BMX</Description>
+											<SitePathLinkRef version="any" ref="naptPoi:8100OPK_pj11_to_V8-E1"/>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="naptPoi:8100OPK_N2_l02">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="naptPoi:8100OPK_pj11_to_SPC_4"/>
 											<Description>bridge2  to velo vicinity </Description>
+											<SitePathLinkRef version="any" ref="naptPoi:8100OPK_pj11_to_SPC_4"/>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="naptPoi:8100OPK_N2_l03">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="naptPoi:8100OPK_pj10_to_SPC_4"/>
 											<Description>hockey vicinity to bridge 2</Description>
+											<SitePathLinkRef version="any" ref="naptPoi:8100OPK_pj10_to_SPC_4"/>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="naptPoi:8100OPK_N2_l04">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="naptPoi:8100OPK_pj10_to_pj8"/>
 											<Description>Handball vicinity to haHockey  arvicinity ea</Description>
+											<SitePathLinkRef version="any" ref="naptPoi:8100OPK_pj10_to_pj8"/>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="naptPoi:8100OPK_N2_l05">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="naptPoi:8100OPK_pj5_to_pj8"/>
 											<Description>Stadium vicinity to handball arvicinity ea</Description>
+											<SitePathLinkRef version="any" ref="naptPoi:8100OPK_pj5_to_pj8"/>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="6" id="naptPoi:8100OPK_N2_l06">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="naptPoi:8100OPK_pj3_to_pj5"/>
 											<Description>Stadium vicinity to Stadium vicinity </Description>
+											<SitePathLinkRef version="any" ref="naptPoi:8100OPK_pj3_to_pj5"/>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="7" id="naptPoi:8100OPK_N2_l07">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="naptPoi:8100OPK_SPC_4_to_pj3"/>
 											<Description>from bridge 4 to Stadium vicinity </Description>
+											<SitePathLinkRef version="any" ref="naptPoi:8100OPK_SPC_4_to_pj3"/>
 											<Reverse>false</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="8" id="naptPoi:8100OPK_N2_l08">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="naptPoi:8100OPK_pj11_to_SPC_4"/>
 											<Description>quatics vicinity to bridge 4</Description>
+											<SitePathLinkRef version="any" ref="naptPoi:8100OPK_pj11_to_SPC_4"/>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="9" id="naptPoi:8100OPK_N2_l09">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="naptPoi:8100OPK_E1_to_pj1"/>
 											<Description>Entrance to aquatics vicinity</Description>
+											<SitePathLinkRef version="any" ref="naptPoi:8100OPK_E1_to_pj1"/>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>

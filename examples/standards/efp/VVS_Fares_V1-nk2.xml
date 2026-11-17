@@ -71,6 +71,9 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 								<FromDate>2022-12-11T00:00:00</FromDate>
 								<ToDate>2023-09-08T23:59:59</ToDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode>102</PrivateCode>
+							</privateCodes>
 							<Name lang="de">102</Name>
 							<ShortName lang="de">102</ShortName>
 							<Description>Zell - Esslingen (N) ZOB - Weil - Mettingen Mettingen - Weil - Esslingen (N) ZOB - Zell</Description>
@@ -79,9 +82,8 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 								<BusSubmode>unknown</BusSubmode>
 							</TransportSubmode>
 							<PublicCode>102</PublicCode>
-							<PrivateCode>102</PrivateCode>
-							<OperatorRef ref="de:vvs:Operator:69" version="any"/>
-							<OperationalContextRef ref="de:vvs:OperationalContext:31" version="any"/>
+							<OperatorRef version="any" ref="de:vvs:Operator:69"/>
+							<OperationalContextRef version="any" ref="de:vvs:OperationalContext:31"/>
 						</Line>
 						<Line id="de:vvs:Line:Stuttgart-Bondorf" version="any" responsibilitySetRef="de:vvs:ResponsibilitySet:SVE_SVE">
 							<Name lang="de">Stuttgart-Bondorf</Name>
@@ -108,8 +110,10 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 					<tariffZones>
 						<!-- NK Possibly add an overall zone  for Stuttgart ? -->
 						<FareZone id="de:vvs:FareZone:0" version="any">
+							<privateCodes>
+								<PrivateCode>Stuttgart</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">Stuttgart</ShortName>
-							<PrivateCode>Stuttgart</PrivateCode>
 							<ZoneTopology>tiled</ZoneTopology>
 							<contains>
 								<FareZoneRef version="any" ref="de:vvs:FareZone:1"/>
@@ -127,9 +131,11 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 						<!-- NK Use FareZoen rather tha TariffZone so can specify topology etc ? -->
 						<FareZone id="de:vvs:FareZone:1" version="any">
 							<!-- NK Fare Zone rather than Tariffzone so that specify additional proerties ? -->
+							<privateCodes>
+								<PrivateCode>1</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">1</ShortName>
 							<!-- NK  <PrivateCode>1</PrivateCode>Public code rather than Private code? -->
-							<PrivateCode>1</PrivateCode>
 							<members>
 								<!-- NK Stops that are in  zone - in his example,  for zone 1 only,  use boundary stops  -->
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:0101">Muehlhausen</ScheduledStopPointRef>
@@ -159,8 +165,10 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 							</neighbours>
 						</FareZone>
 						<FareZone id="de:vvs:FareZone:2" version="any">
+							<privateCodes>
+								<PrivateCode>2</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">2</ShortName>
-							<PrivateCode>2</PrivateCode>
 							<members>
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:0101">Muehlhausen</ScheduledStopPointRef>
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:0102">Oeffingen Schmiden</ScheduledStopPointRef>
@@ -187,8 +195,10 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 							</neighbours>
 						</FareZone>
 						<FareZone id="de:vvs:FareZone:3" version="any">
+							<privateCodes>
+								<PrivateCode>3</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">3</ShortName>
-							<PrivateCode>3</PrivateCode>
 							<ZoneTopology>ring</ZoneTopology>
 							<ScopingMethod>explicitStops</ScopingMethod>
 							<neighbours>
@@ -197,8 +207,10 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 							</neighbours>
 						</FareZone>
 						<FareZone id="de:vvs:FareZone:4" version="any">
+							<privateCodes>
+								<PrivateCode>4</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">4</ShortName>
-							<PrivateCode>4</PrivateCode>
 							<ZoneTopology>ring</ZoneTopology>
 							<ScopingMethod>explicitStops</ScopingMethod>
 							<neighbours>
@@ -207,8 +219,10 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 							</neighbours>
 						</FareZone>
 						<FareZone id="de:vvs:FareZone:5" version="any">
+							<privateCodes>
+								<PrivateCode>5</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">5</ShortName>
-							<PrivateCode>5</PrivateCode>
 							<ZoneTopology>ring</ZoneTopology>
 							<ScopingMethod>explicitStops</ScopingMethod>
 							<neighbours>
@@ -218,8 +232,10 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 							</neighbours>
 						</FareZone>
 						<FareZone id="de:vvs:FareZone:6o" version="any">
+							<privateCodes>
+								<PrivateCode>6</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">6 (orange)</ShortName>
-							<PrivateCode>6</PrivateCode>
 							<members>
 								<!-- STops bordering with 5o -->
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:1511">Goeppingen</ScheduledStopPointRef>
@@ -239,8 +255,10 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 							</neighbours>
 						</FareZone>
 						<FareZone id="de:vvs:FareZone:6g" version="any">
+							<privateCodes>
+								<PrivateCode>6</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">6 (gray)</ShortName>
-							<PrivateCode>6</PrivateCode>
 							<ZoneTopology>tiled</ZoneTopology>
 							<ScopingMethod>explicitStops</ScopingMethod>
 							<contains>
@@ -257,8 +275,10 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 							</neighbours>
 						</FareZone>
 						<FareZone id="de:vvs:FareZone:7o" version="any">
+							<privateCodes>
+								<PrivateCode>7</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">7 (orange)</ShortName>
-							<PrivateCode>7</PrivateCode>
 							<members>
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:1501">Donzdorf</ScheduledStopPointRef>
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:1502">Suessen</ScheduledStopPointRef>
@@ -277,8 +297,10 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 							</neighbours>
 						</FareZone>
 						<FareZone id="de:vvs:FareZone:7g" version="any">
+							<privateCodes>
+								<PrivateCode>7</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">7 (gray)</ShortName>
-							<PrivateCode>7</PrivateCode>
 							<members>
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:2004">Rohrdorf</ScheduledStopPointRef>
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:2005">Ebhausen</ScheduledStopPointRef>
@@ -292,8 +314,10 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 							</neighbours>
 						</FareZone>
 						<FareZone id="de:vvs:FareZone:8g" version="any">
+							<privateCodes>
+								<PrivateCode>8</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">8 (gray)</ShortName>
-							<PrivateCode>8</PrivateCode>
 							<members>
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:2006">Walddorf</ScheduledStopPointRef>
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:2007">Wart/Berneck</ScheduledStopPointRef>
@@ -308,8 +332,10 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 						</FareZone>
 						<!--- aDDITIONAL fARE ZONES FOR SPECIFYING COMPLEX CONSTRAINTS -->
 						<FareZone id="de:vvs:FareZone:6g-Beilstein" version="any">
+							<privateCodes>
+								<PrivateCode>6G-6g-Beilstein</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">6g-Beilstein</ShortName>
-							<PrivateCode>6G-6g-Beilstein</PrivateCode>
 							<members>
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:1001">Beilstein</ScheduledStopPointRef>
 								<!-- etc add other stops -->
@@ -321,8 +347,10 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 							</neighbours>
 						</FareZone>
 						<FareZone id="de:vvs:FareZone:6g-Wuestenrot" version="any">
+							<privateCodes>
+								<PrivateCode>6g-Wuestenrot</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">6g-Wuestenrot</ShortName>
-							<PrivateCode>6g-Wuestenrot</PrivateCode>
 							<members>
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:1002">Wuestenrot</ScheduledStopPointRef>
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:1003">Mainhardt</ScheduledStopPointRef>
@@ -335,8 +363,10 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 							</neighbours>
 						</FareZone>
 						<FareZone id="de:vvs:FareZone:6g-Gschwend" version="any">
+							<privateCodes>
+								<PrivateCode>Gschwend</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">6g-Gschwend</ShortName>
-							<PrivateCode>Gschwend</PrivateCode>
 							<members>
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:1004">Hundsberg</ScheduledStopPointRef>
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:1005">Gschwend</ScheduledStopPointRef>
@@ -349,8 +379,10 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 							</neighbours>
 						</FareZone>
 						<FareZone id="de:vvs:FareZone:6g-Donstetten" version="any">
+							<privateCodes>
+								<PrivateCode>6G-6g-Donstetten</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">6g-Donstetten</ShortName>
-							<PrivateCode>6G-6g-Donstetten</PrivateCode>
 							<members>
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:1006">Dettingen T</ScheduledStopPointRef>
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:1007">Owen</ScheduledStopPointRef>
@@ -365,8 +397,10 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 							</neighbours>
 						</FareZone>
 						<FareZone id="de:vvs:FareZone:6g-Grafenberg" version="any">
+							<privateCodes>
+								<PrivateCode>6g-Grafenberg</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">6g-Grafenberg</ShortName>
-							<PrivateCode>6g-Grafenberg</PrivateCode>
 							<members>
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:1010">Grafenberg</ScheduledStopPointRef>
 								<!-- etc add other stops -->
@@ -378,8 +412,10 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 							</neighbours>
 						</FareZone>
 						<FareZone id="de:vvs:FareZone:6g-Nagold" version="any">
+							<privateCodes>
+								<PrivateCode>6g-Nagold</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">6g-Nagold</ShortName>
-							<PrivateCode>6g-Nagold</PrivateCode>
 							<members>
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:1011">Nagold</ScheduledStopPointRef>
 								<ScheduledStopPointRef versionRef="EXTERNAL" ref="de:vvs:ScheduledStopPoint:1012">Ergenzingen</ScheduledStopPointRef>
@@ -530,15 +566,17 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 				<ResourceFrame id="de:vvs:ResourceFrame:vvs" version="any">
 					<responsibilitySets>
 						<ResponsibilitySet id="de:vvs:ResponsibilitySet:SVE_SVE" version="any">
+							<privateCodes>
+								<PrivateCode>SVE</PrivateCode>
+							</privateCodes>
 							<Name lang="de">Städtischer Verkehrsbetrieb Esslingen (SVE)</Name>
-							<PrivateCode>SVE</PrivateCode>
 							<roles>
 								<ResponsibilityRoleAssignment id="de:vvs:ResponsibilityRoleAssignment:SVE_SVE:1" version="any">
-									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+									<StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="de:vvs:Operator:69" version="any"/>
 								</ResponsibilityRoleAssignment>
 								<ResponsibilityRoleAssignment id="de:vvs:ResponsibilityRoleAssignment:SVE_SVE:2" version="any">
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="de:vvs:Operator:69" version="any"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -563,22 +601,28 @@ tariff zone plan). The VVS conditions of carriage and tariff regulations apply. 
 					</typesOfValue>
 					<organisations>
 						<Operator id="de:vvs:Operator:69" version="any">
-							<PrivateCode>69</PrivateCode>
+							<privateCodes>
+								<PrivateCode>69</PrivateCode>
+							</privateCodes>
 							<Name lang="de">Städtischer Verkehrsbetrieb Esslingen (SVE)</Name>
 							<ShortName lang="de">SVE</ShortName>
 							<Description>Städtischer Verkehrsbetrieb Esslingen (SVE)</Description>
 						</Operator>
 						<Operator id="de:vvs:Operator:01" version="any">
-							<PrivateCode>01</PrivateCode>
+							<privateCodes>
+								<PrivateCode>01</PrivateCode>
+							</privateCodes>
 							<Name lang="de">Deutsche Bahn</Name>
 							<ShortName lang="de">DB</ShortName>
 						</Operator>
 					</organisations>
 					<operationalContexts>
 						<OperationalContext id="de:vvs:OperationalContext:31" version="any">
+							<privateCodes>
+								<PrivateCode>31</PrivateCode>
+							</privateCodes>
 							<Name lang="de">Bus (Region)</Name>
 							<ShortName lang="de">BusP</ShortName>
-							<PrivateCode>31</PrivateCode>
 						</OperationalContext>
 					</operationalContexts>
 				</ResourceFrame>
@@ -860,7 +904,7 @@ The VVS tariff applies to Merklingen Bf.</Description>
 						<SalesOfferPackage id="de:vvs:SalesOfferPackage:1" version="any">
 							<Name>Single Trip  Adult paper ticket</Name>
 							<distributionAssignments>
-								<DistributionAssignment id="de:vvs:DistributionAssignment:1" version="any" order="1">
+								<DistributionAssignment id="de:vvs:DistributionAssignment:1@1" version="any" order="1">
 									<Name>Onboard</Name>
 									<Description>Pay for ticket onboard</Description>
 									<DistributionChannelRef versionRef="EFP" ref="efp:on_board"/>
@@ -868,7 +912,7 @@ The VVS tariff applies to Merklingen Bf.</Description>
 									<TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
 									<PaymentMethods>cashAndCard</PaymentMethods>
 								</DistributionAssignment>
-								<DistributionAssignment id="de:vvs:DistributionAssignment:1" version="any" order="2">
+								<DistributionAssignment id="de:vvs:DistributionAssignment:1@2" version="any" order="2">
 									<Name>Ticket Machine</Name>
 									<Description>buy ticket at vending machine at stop</Description>
 									<DistributionChannelType>atStop</DistributionChannelType>
@@ -886,7 +930,7 @@ The VVS tariff applies to Merklingen Bf.</Description>
 						<SalesOfferPackage id="de:vvs:SalesOfferPackage:2" version="any">
 							<Name>Single Trip  Child paper ticket</Name>
 							<distributionAssignments>
-								<DistributionAssignment id="de:vvs:DistributionAssignment:2" version="any" order="1">
+								<DistributionAssignment id="de:vvs:DistributionAssignment:2@1" version="any" order="1">
 									<Name>Onboard</Name>
 									<Description>Pay for ticket onboard</Description>
 									<DistributionChannelRef versionRef="ntx:v1.0" ref="ntx:on_board"/>
@@ -894,7 +938,7 @@ The VVS tariff applies to Merklingen Bf.</Description>
 									<TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
 									<PaymentMethods>cashAndCard</PaymentMethods>
 								</DistributionAssignment>
-								<DistributionAssignment id="de:vvs:DistributionAssignment:2" version="any" order="2">
+								<DistributionAssignment id="de:vvs:DistributionAssignment:2@2" version="any" order="2">
 									<Name>Ticket Machine</Name>
 									<Description>buy ticket at vending machine at stop</Description>
 									<DistributionChannelType>atStop</DistributionChannelType>
@@ -913,7 +957,7 @@ The VVS tariff applies to Merklingen Bf.</Description>
 						<SalesOfferPackage id="de:vvs:SalesOfferPackage:3" version="any">
 							<Name>Single Trip  Adult Handy ticket</Name>
 							<distributionAssignments>
-								<DistributionAssignment id="de:vvs:DistributionAssignment:3" version="any" order="1">
+								<DistributionAssignment id="de:vvs:DistributionAssignment:3@1" version="any" order="1">
 									<Name>Handy</Name>
 									<Description>Pay for ticket with app</Description>
 									<DistributionChannelRef versionRef="EFP" ref="efp:app"/>
@@ -932,7 +976,7 @@ The VVS tariff applies to Merklingen Bf.</Description>
 						<SalesOfferPackage id="de:vvs:SalesOfferPackage:4" version="any">
 							<Name>Single Trip  Child Mobile app ticket</Name>
 							<distributionAssignments>
-								<DistributionAssignment id="de:vvs:DistributionAssignment:4" version="any" order="1">
+								<DistributionAssignment id="de:vvs:DistributionAssignment:4@1" version="any" order="1">
 									<Name>Handy</Name>
 									<Description>Pay for ticket with app</Description>
 									<DistributionChannelRef versionRef="EFP" ref="efp:app"/>
@@ -1356,7 +1400,7 @@ Zones		Price	HandyTicket	Price	HandyTicket
 						<SalesOfferPackage id="de:vvs:SalesOfferPackage:5" version="any">
 							<Name>Short  Trip    paper ticket</Name>
 							<distributionAssignments>
-								<DistributionAssignment id="de:vvs:DistributionAssignment:5" version="any" order="1">
+								<DistributionAssignment id="de:vvs:DistributionAssignment:5@1" version="any" order="1">
 									<Name>Onboard</Name>
 									<Description>Pay for ticket onboard</Description>
 									<DistributionChannelRef versionRef="EFP" ref="efp:on_board"/>
@@ -1364,7 +1408,7 @@ Zones		Price	HandyTicket	Price	HandyTicket
 									<TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
 									<PaymentMethods>cashAndCard</PaymentMethods>
 								</DistributionAssignment>
-								<DistributionAssignment id="de:vvs:DistributionAssignment:5" version="any" order="2">
+								<DistributionAssignment id="de:vvs:DistributionAssignment:5@2" version="any" order="2">
 									<Name>Ticket Machine</Name>
 									<Description>buy ticket at vending machine at stop</Description>
 									<DistributionChannelType>atStop</DistributionChannelType>
@@ -1373,7 +1417,7 @@ Zones		Price	HandyTicket	Price	HandyTicket
 								</DistributionAssignment>
 							</distributionAssignments>
 							<salesOfferPackageElements>
-								<SalesOfferPackageElement id="de:vvs:SalesOfferPackageElement:5" version="any" order="1">
+								<SalesOfferPackageElement id="de:vvs:SalesOfferPackageElement:5@3" version="any" order="1">
 									<TypeOfTravelDocumentRef ref="de:vvs:paper_ticket" version="any"/>
 									<PreassignedFareProductRef ref="de:vvs:PreassignedFareProduct:02031" version="any"/>
 								</SalesOfferPackageElement>
@@ -1383,7 +1427,7 @@ Zones		Price	HandyTicket	Price	HandyTicket
 						<SalesOfferPackage id="de:vvs:SalesOfferPackage:6" version="any">
 							<Name>Short Trip    Handy ticket</Name>
 							<distributionAssignments>
-								<DistributionAssignment id="de:vvs:DistributionAssignment:6" version="any" order="1">
+								<DistributionAssignment id="de:vvs:DistributionAssignment:6@1" version="any" order="1">
 									<Name>Handy</Name>
 									<Description>Pay for ticket with app</Description>
 									<DistributionChannelRef versionRef="EFP" ref="efp:app"/>
@@ -1562,7 +1606,7 @@ Zones		Price	HandyTicket	Price	HandyTicket
 						<SalesOfferPackage id="de:vvs:SalesOfferPackage:7" version="any">
 							<Name>Carnet   paper ticket</Name>
 							<distributionAssignments>
-								<DistributionAssignment id="de:vvs:DistributionAssignment:7" version="any" order="1">
+								<DistributionAssignment id="de:vvs:DistributionAssignment:7@1" version="any" order="1">
 									<Name>Onboard</Name>
 									<Description>Pay for ticket onboard</Description>
 									<DistributionChannelRef versionRef="EFP" ref="efp:on_board"/>
@@ -1570,7 +1614,7 @@ Zones		Price	HandyTicket	Price	HandyTicket
 									<TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
 									<PaymentMethods>cashAndCard</PaymentMethods>
 								</DistributionAssignment>
-								<DistributionAssignment id="de:vvs:DistributionAssignment:7" version="any" order="2">
+								<DistributionAssignment id="de:vvs:DistributionAssignment:7@3" version="any" order="2">
 									<Name>Ticket Machine</Name>
 									<Description>buy ticket at vending machine at stop</Description>
 									<DistributionChannelType>atStop</DistributionChannelType>
@@ -1588,7 +1632,7 @@ Zones		Price	HandyTicket	Price	HandyTicket
 						<SalesOfferPackage id="de:vvs:SalesOfferPackage:8" version="any">
 							<Name>Carnet   mobile app  ticket - Child</Name>
 							<distributionAssignments>
-								<DistributionAssignment id="de:vvs:DistributionAssignment:8" version="any" order="1">
+								<DistributionAssignment id="de:vvs:DistributionAssignment:8@1" version="any" order="1">
 									<Name>Handy</Name>
 									<Description>Pay for ticket with app</Description>
 									<DistributionChannelRef versionRef="EFP" ref="efp:app"/>
@@ -1797,7 +1841,7 @@ Zones	Price	Price
 													<VehicleModes>rail metro bus tram funicular</VehicleModes>
 												</validityParameters>
 											</GenericParameterAssignment>
-											<GenericParameterAssignment id="de:vvs:FareStructureElement:4@access@local" version="any" order="2">
+											<GenericParameterAssignment id="de:vvs:FareStructureElement:4@access@ICE" version="any" order="2">
 												<Name>VVS tickets are also valid on IC trains between Stuttgart and Bondorf.</Name>
 												<validityParameters>
 													<VehicleModes>rail  </VehicleModes>
@@ -1989,7 +2033,7 @@ Children (6 – 17 years)   </Description>
 						<SalesOfferPackage id="de:vvs:SalesOfferPackage:9" version="any">
 							<Name>Day Pass   paper ticket</Name>
 							<distributionAssignments>
-								<DistributionAssignment id="de:vvs:DistributionAssignment:9" version="any" order="1">
+								<DistributionAssignment id="de:vvs:DistributionAssignment:9@1" version="any" order="1">
 									<Name>Onboard</Name>
 									<Description>Pay for ticket onboard</Description>
 									<DistributionChannelRef versionRef="EFP" ref="efp:on_board"/>
@@ -1997,7 +2041,7 @@ Children (6 – 17 years)   </Description>
 									<TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
 									<PaymentMethods>cashAndCard</PaymentMethods>
 								</DistributionAssignment>
-								<DistributionAssignment id="de:vvs:DistributionAssignment:9" version="any" order="2">
+								<DistributionAssignment id="de:vvs:DistributionAssignment:9@2" version="any" order="2">
 									<Name>Ticket Machine</Name>
 									<Description>buy ticket at vending machine at stop</Description>
 									<DistributionChannelType>atStop</DistributionChannelType>
@@ -2015,7 +2059,7 @@ Children (6 – 17 years)   </Description>
 						<SalesOfferPackage id="de:vvs:SalesOfferPackage:10" version="any">
 							<Name>&gt;Day Pass   mobile app  ticket -  </Name>
 							<distributionAssignments>
-								<DistributionAssignment id="de:vvs:DistributionAssignment:10" version="any" order="1">
+								<DistributionAssignment id="de:vvs:DistributionAssignment:10@1" version="any" order="1">
 									<Name>Handy</Name>
 									<Description>Pay for ticket with app</Description>
 									<DistributionChannelRef versionRef="EFP" ref="efp:app"/>
@@ -2035,7 +2079,7 @@ Children (6 – 17 years)   </Description>
 						<SalesOfferPackage id="de:vvs:SalesOfferPackage:11" version="any">
 							<Name>Day Pass Group   paper ticket</Name>
 							<distributionAssignments>
-								<DistributionAssignment id="de:vvs:DistributionAssignment:11" version="any" order="1">
+								<DistributionAssignment id="de:vvs:DistributionAssignment:11@1" version="any" order="1">
 									<Name>Onboard</Name>
 									<Description>Pay for ticket onboard</Description>
 									<DistributionChannelRef versionRef="EFP" ref="efp:on_board"/>
@@ -2043,7 +2087,7 @@ Children (6 – 17 years)   </Description>
 									<TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
 									<PaymentMethods>cashAndCard</PaymentMethods>
 								</DistributionAssignment>
-								<DistributionAssignment id="de:vvs:DistributionAssignment:11" version="any" order="2">
+								<DistributionAssignment id="de:vvs:DistributionAssignment:11@2" version="any" order="2">
 									<Name>Ticket Machine</Name>
 									<Description>buy ticket at vending machine at stop</Description>
 									<DistributionChannelType>atStop</DistributionChannelType>
@@ -2061,8 +2105,7 @@ Children (6 – 17 years)   </Description>
 						<SalesOfferPackage id="de:vvs:SalesOfferPackage:12" version="any">
 							<Name>&gt;Day Pass Group   mobile app  ticket -  </Name>
 							<distributionAssignments>
-								<DistributionAssignment id="de:vvs:DistributionAssignment:12" version="any" order="1">
-									<Name>Handy</Name>
+								<DistributionAssignment id="de:vvs:DistributionAssignment:12@1" version="any" order="1">
 									<Description>Pay for ticket with app</Description>
 									<DistributionChannelRef versionRef="EFP" ref="efp:app"/>
 									<DistributionChannelType>mobileDevice</DistributionChannelType>

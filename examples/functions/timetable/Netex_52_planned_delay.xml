@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==== Planned delays. We assume that in July the trip has some minutes delay ====== 
+
+-->
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2010-12-17T09:30:47.0</PublicationTimestamp>
+	<ParticipantRef>SYS001</ParticipantRef>
+	<PublicationRefreshInterval>P1M</PublicationRefreshInterval>
+	<Description> An example that contains a service journey, that is delayed during some days.</Description>
+	<!--- =============== RESULTS =========== -->
+	<dataObjects>
+		<CompositeFrame version="1.0" id="ch:cf">
+			<!--- ======= CODESPACEs======== -->
+			<codespaces>
+				<Codespace id="mybus">
+					<Xmlns>mybus</Xmlns>
+					<XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
+					<Description>My buses</Description>
+				</Codespace>
+			</codespaces>
+			<!--- =======FRAME DEFAULTS======== -->
+			<FrameDefaults>
+				<DefaultCodespaceRef ref="mybus"/>
+			</FrameDefaults>
+			<frames>
+				<ServiceFrame version="1.0" id="ch:serviceframe">
+					<Name>Stops for Winter timetable for route 24 </Name>
+					<!--- =========LINEs=========== -->
+					<lines>
+						<Line version="any" id="mybus:LN_24">
+							<Name>Line 24 Alpha to Charley</Name>
+							<ShortName>Line 24</ShortName>
+							<TransportMode>bus</TransportMode>
+							<PublicCode>24</PublicCode>
+							<OperatorRef version="1.0" ref="ch:1:Operator:1"/>
+						</Line>
+					</lines>
+					<!--- =========STOP POINTs============ -->
+					<scheduledStopPoints>
+						<ScheduledStopPoint version="any" id="mybus:SSP_001">
+							<Name>Alpha &amp; Castle</Name>
+							<Location>
+								<Longitude>53.0000</Longitude>
+								<Latitude>0.1000</Latitude>
+							</Location>
+							<TimingPointStatus>timingPoint</TimingPointStatus>
+							<ShortName>Alpha</ShortName>
+							<PublicCode>ALPH</PublicCode>
+							<StopType>onstreetBus</StopType>
+							<VehicleModes>bus</VehicleModes>
+						</ScheduledStopPoint>
+						<ScheduledStopPoint version="any" id="mybus:SSP_077">
+							<Name>Charley Crescent</Name>
+							<Location>
+								<Longitude>53.3000</Longitude>
+								<Latitude>0.3000</Latitude>
+							</Location>
+							<TimingPointStatus>timingPoint</TimingPointStatus>
+							<ShortName>Charley</ShortName>
+							<PublicCode>CHAS</PublicCode>
+							<StopType>onstreetBus</StopType>
+							<VehicleModes>bus</VehicleModes>
+						</ScheduledStopPoint>
+					</scheduledStopPoints>
+					<notices>
+						<Notice id="delay_notice" version="any">
+							<Text>During July the bus is delayed by 5 minutes due to construction work.</Text>
+						</Notice>
+					</notices>
+				</ServiceFrame>
+				<!-- ======TIMETABLE ======= -->
+				<TimetableFrame version="1.0" id="ch:tf">
+					<validityConditions>
+						<AvailabilityCondition version="any" id="all_year_no_longer_available">
+							<Description>regular run</Description>
+							<FromDate>2025-01-01T00:00:00</FromDate>
+							<ToDate>2025-12-31T23:59:59</ToDate>
+							<IsAvailable>false</IsAvailable>
+							<!--making clear that it is no longer available -->
+						</AvailabilityCondition>
+						<AvailabilityCondition version="any" id="only_july">
+							<Description>regular run</Description>
+							<FromDate>2025-07-01T00:00:00</FromDate>
+							<ToDate>2025-07-31T23:59:59</ToDate>
+						</AvailabilityCondition>
+						<AvailabilityCondition version="any" id="after_july">
+							<Description>regular run</Description>
+							<FromDate>2025-08-01T00:00:00</FromDate>
+							<ToDate>2025-12-31T23:59:59</ToDate>
+						</AvailabilityCondition>
+						<AvailabilityCondition version="any" id="before_july">
+							<Description>regular run</Description>
+							<FromDate>2025-01-01T00:00:00</FromDate>
+							<ToDate>2025-06-30T23:59:59</ToDate>
+						</AvailabilityCondition>
+					</validityConditions>
+					<vehicleJourneys>
+						<ServiceJourney version="any" id="444">
+							<validityConditions>
+								<AvailabilityConditionRef ref="all_year_no_longer_available" version="any"/>
+							</validityConditions>
+							<Description>The original journey replaced by 444-1 and 444-2</Description>
+							<ServiceAlteration>replaced</ServiceAlteration>
+							<DepartureTime>14:20:00</DepartureTime>
+							<LineRef version="any" ref="mybus:LN_24"/>
+							<calls>
+								<Call version="any" id="hde:sj_24o_01_001" order="1">
+									<ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
+									<Arrival>
+										<ForAlighting>false</ForAlighting>
+									</Arrival>
+									<Departure>
+										<Time>14:20:00</Time>
+									</Departure>
+								</Call>
+								<Call version="any" id="hde:sj_24o_01_003" order="2">
+									<ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
+									<Arrival>
+										<Time>15:10:00</Time>
+									</Arrival>
+									<Departure>
+										<ForBoarding>false</ForBoarding>
+									</Departure>
+								</Call>
+							</calls>
+						</ServiceJourney>
+						<ServiceJourney version="any" id="444-1" derivedFromObjectRef="444" derivedFromVersionRef="any">
+							<validityConditions>
+								<AvailabilityConditionRef ref="before_july" version="any"/>
+								<AvailabilityConditionRef ref="after_july" version="any"/>
+							</validityConditions>
+							<Description>The replacement that is still the same</Description>
+							<ServiceAlteration>planned</ServiceAlteration>
+							<DepartureTime>14:20:00</DepartureTime>
+							<LineRef version="any" ref="mybus:LN_24"/>
+							<calls>
+								<Call version="any" id="hde:sj_24o_01_001-1" order="1">
+									<ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
+									<Arrival>
+										<ForAlighting>false</ForAlighting>
+									</Arrival>
+									<Departure>
+										<Time>14:20:00</Time>
+									</Departure>
+								</Call>
+								<Call version="any" id="hde:sj_24o_01_003-1" order="2">
+									<ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
+									<Arrival>
+										<Time>15:10:00</Time>
+									</Arrival>
+									<Departure>
+										<ForBoarding>false</ForBoarding>
+									</Departure>
+								</Call>
+							</calls>
+						</ServiceJourney>
+						<ServiceJourney version="any" id="444-2" derivedFromObjectRef="444" derivedFromVersionRef="any">
+							<validityConditions>
+								<AvailabilityConditionRef ref="only_july" version="any"/>
+							</validityConditions>
+							<Description>The delayed part in July</Description>
+							<noticeAssignments>
+								<NoticeAssignment id="na:1" version="any" order="1">
+									<NoticeRef ref="delay_notice" version="any"/>
+								</NoticeAssignment>
+							</noticeAssignments>
+							<ServiceAlteration>planned</ServiceAlteration>
+							<DepartureTime>14:25:00</DepartureTime>
+							<LineRef version="any" ref="mybus:LN_24"/>
+							<calls>
+								<Call version="any" id="hde:sj_24o_01_001-2" order="1">
+									<ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
+									<Arrival>
+										<ForAlighting>false</ForAlighting>
+									</Arrival>
+									<Departure>
+										<Time>14:25:00</Time>
+										<!-- 5 minutes later -->
+									</Departure>
+								</Call>
+								<Call version="any" id="hde:sj_24o_01_003-2" order="2">
+									<ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
+									<Arrival>
+										<Time>15:15:00</Time>
+									</Arrival>
+									<Departure>
+										<ForBoarding>false</ForBoarding>
+									</Departure>
+								</Call>
+							</calls>
+						</ServiceJourney>
+					</vehicleJourneys>
+				</TimetableFrame>
+				<ServiceCalendarFrame version="1.0" id="ch:scf">
+					<ServiceCalendar version="any" id="hde:Calendar@2010">
+						<FromDate>2025-01-01</FromDate>
+						<ToDate>2025-12-31</ToDate>
+					</ServiceCalendar>
+				</ServiceCalendarFrame>
+				<ResourceFrame version="1.0" id="ch:rf">
+					<organisations>
+						<Operator version="1.0" id="ch:1:Operator:1">
+							<Name>The operator</Name>
+							<Locale>
+								<DefaultLanguage>fr</DefaultLanguage>
+							</Locale>
+							<OrganisationType>operator</OrganisationType>
+						</Operator>
+					</organisations>
+				</ResourceFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

@@ -72,9 +72,11 @@
 						</StopPlace>
 						<!-- ========== Metro========= -->
 						<StopPlace version="any" responsibilitySetRef="noptis:9010001000000000" id="noptis:9021001002221000">
+							<privateCodes>
+								<PrivateCode>22210</PrivateCode>
+							</privateCodes>
 							<Name>Tekniska högskolan</Name>
 							<ShortName>TEH</ShortName>
-							<PrivateCode>22210</PrivateCode>
 							<Centroid>
 								<Location srsName="WGS84">
 									<Longitude>18.0717945909683</Longitude>
@@ -193,7 +195,7 @@
 										<PlaceRef version="any" xsi:type="QuayRefStructure" ref="noptis:9025001000002222"/>
 									</From>
 									<To>
-										<PlaceRef version="any" xsi:type="StopPlaceEntranceRefStructure" ref="noptis:9023001002221001"/>
+										<PlaceRef versionRef="any" xsi:type="StopPlaceEntranceRefStructure" ref="noptis:9023001002221001"/>
 									</To>
 									<AllowedUse>oneWay</AllowedUse>
 									<TransferDuration>
@@ -243,9 +245,11 @@
 						</StopPlace>
 						<!-- ========== BUS ========= -->
 						<StopPlace version="any" responsibilitySetRef="noptis:9010001000000000" id="noptis:9021001060080000">
+							<privateCodes>
+								<PrivateCode>22210-2</PrivateCode>
+							</privateCodes>
 							<Name>Tekniska högskolan</Name>
 							<ShortName>TEH</ShortName>
-							<PrivateCode>22210-2</PrivateCode>
 							<Centroid>
 								<Location srsName="WGS84">
 									<Longitude>18.0693156587631</Longitude>

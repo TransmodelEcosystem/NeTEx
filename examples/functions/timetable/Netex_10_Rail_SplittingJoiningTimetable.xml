@@ -364,6 +364,14 @@ The TIMETABLE FRAME groups the servicee  elements
 					<vehicleJourneys>
 						<ServiceJourney version="any" id="bbd:sj_447">
 							<Description>447 Amsterdam to Warsaw</Description>
+							<occupancies>
+								<OccupancyView version="any" id="occ22">
+									<TrainRef version="any" ref="bbd:trn_447"/>
+									<TrailingElementTypeRef version="any" ref="bbd:trne_447_02"/>
+									<FareClass>businessClass</FareClass>
+									<OccupancyPercentage>20</OccupancyPercentage>
+								</OccupancyView>
+							</occupancies>
 							<DepartureTime>09:00:00Z</DepartureTime>
 							<ServiceJourneyPatternRef version="any" ref="bbd:JP_447_amsterdam_warsaw"/>
 							<TrainRef version="any" ref="bbd:trn_447"/>
@@ -391,6 +399,11 @@ The TIMETABLE FRAME groups the servicee  elements
 									<StartTime>09:00:00Z</StartTime>
 									<EndTime>12:00:00Z</EndTime>
 									<PurposeOfJourneyPartitionRef ref="bbd:coupling">coupling</PurposeOfJourneyPartitionRef>
+									<occupancies>
+										<OccupancyView version="any" id="bbd:occ:1">
+											<OccupancyLevel>fewSeatsAvailable</OccupancyLevel>
+										</OccupancyView>
+									</occupancies>
 								</JourneyPart>
 								<JourneyPart version="any" id="bbd:jpt_447_02">
 									<Description>Hannover to Berlin</Description>

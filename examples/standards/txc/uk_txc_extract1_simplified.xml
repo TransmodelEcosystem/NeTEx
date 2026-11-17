@@ -74,7 +74,7 @@ This example  maps
 	<PublicationRefreshInterval>P3M</PublicationRefreshInterval>
 	<!--- =============== RESULTS =========== -->
 	<dataObjects>
-		<CompositeFrame version="1" id="sta:SampleTimetable@894416" responsibilitySetRef="sta:Stagecoach_timetable_data" dataSourceRef="sta:Stagecoach">
+		<CompositeFrame version="sta:1.0" id="sta:SampleTimetable@894416" responsibilitySetRef="sta:Stagecoach_timetable_data" dataSourceRef="sta:Stagecoach">
 			<Name>Sample extract of a TransXchnage timetable data encoded  in NeTEx</Name>
 			<TypeOfFrameRef ref="txc:transxchange_data" version="txc:v2.1"/>
 			<!-- ==== CODESPACES == -->
@@ -1959,6 +1959,9 @@ This example  maps
 					<servicePatterns>
 						<!--					<Routes>  -->
 						<ServicePattern version="1" id="sta:Route@11551">
+							<privateCodes>
+								<PrivateCode type="txc:Route.PrivateCode">1</PrivateCode>
+							</privateCodes>
 							<!--		<Route id="sta:Route@11551">
 							<PrivateCode>1</PrivateCode>
 							<Description>Rugby - Coventry</Description>
@@ -1976,169 +1979,171 @@ This example  maps
 							<RouteSectionRef>11550</RouteSectionRef>
 						</Route>  -->
 							<Name>Rugby - Coventry</Name>
-							<PrivateCode type="txc:Route.PrivateCode">1</PrivateCode>
 							<DirectionType>outbound</DirectionType>
 							<TypeOfJourneyPatternRef version="txc:v2.1" ref="txc:TypeOfJourneyPattern@Route"/>
 							<!--  Alternatively spell out all the links -->
 							<linksInSequence>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="1">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_1"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="2">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-2">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_2"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="3">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-3">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_3"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="4">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-4">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_4"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="5">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-5">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_5"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="6">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-6">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_6"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="7">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-7">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_7"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="8">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-8">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_8"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="9">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-9">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_9"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="10">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-10">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_10"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="11">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-11">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_11"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="12">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-12">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11509_1"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="13">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-13">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11516_1"/>
 								</ServiceLinkInJourneyPattern>
 								<!--  etc etc -->
 								<!--  etc etc -->
-								<ServiceLinkInJourneyPattern order="14" version="1" id="sta:Route@11551">
+								<ServiceLinkInJourneyPattern id="sta:Route@11551-14" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11522_1"> 
 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="15" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-15" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11522_2">
 					 
 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="16" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-16" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11522_3">
 					 
 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="17" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-17" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11522_4">
 					 
 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="18" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-18" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11522_5">
 					 
 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="19" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-19" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11524_1">
 					 
 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="20" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-20" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11528_1">
 				 
 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="21" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-21" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11528_2">
 	 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="22" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-22" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11528_3">
 	 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="23" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-23" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11534_1">
 		 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="24" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-24" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11534_2">
 	 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="25" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-25" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11534_3">
 		 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="26" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-26" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11534_4">
 	 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="27" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-27" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11534_5">
 			 		</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="28" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-28" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11536_1">
 			 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="29" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-29" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_1">
 			 			</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="30" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-30" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_2">
 		 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="31" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-31" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_3">
 		 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="32" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-32" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_4">
 			 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="33" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-33" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_5">
 			 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="34" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-34" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_6">
 		 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="35" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-35" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_7">
 	 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="36" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-36" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_8">
 		 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="37" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-37" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11550_1">
 			 			</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="38" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-38" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11550_2">
 				 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="39" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-39" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11550_3">
 			 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="40" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-40" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11550_4">
 	 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
 							</linksInSequence>
 						</ServicePattern>
 						<ServicePattern version="1" id="sta:Route@11556">
+							<privateCodes>
+								<PrivateCode type="txc:Route.PrivateCode">2</PrivateCode>
+							</privateCodes>
 							<!--	<Route id="sta:Route@11556">
 							<PrivateCode>2</PrivateCode>
 							<Description>Rugby - Coventry</Description>
@@ -2156,152 +2161,151 @@ This example  maps
 
 					</Routes>  -->
 							<Name>Rugby - Coventry</Name>
-							<PrivateCode type="txc:Route.PrivateCode">2</PrivateCode>
 							<DirectionType>outbound</DirectionType>
 							<TypeOfJourneyPatternRef version="txc:v2.1" ref="txc:TypeOfJourneyPattern@Route"/>
 							<linksInSequence>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556" order="1">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556-1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_1"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556" order="2">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556-2">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_2"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556" order="3">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556-3">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_3"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556" order="4">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556-4">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_4"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556" order="5">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556-5">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_5"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556" order="6">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556-6">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_6"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556" order="7">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556-7">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_7"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556" order="8">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556-8">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_8"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556" order="9">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556-9">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_6"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556" order="10">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556-10">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_10"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556" order="11">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556-11">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_11"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556" order="12">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556-12">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11509_1"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556" order="13">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11556-13">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11516_1"/>
 								</ServiceLinkInJourneyPattern>
 								<!--  etc etc -->
 								<!--  etc etc -->
-								<ServiceLinkInJourneyPattern order="14" version="1" id="sta:Route@11556">
+								<ServiceLinkInJourneyPattern id="sta:Route@11556-14" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11522_1"> 
 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="15" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-15" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11522_2">
 					 
 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="16" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-16" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11522_3">
 					 
 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="17" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-17" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11522_4">
 					 
 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="18" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-18" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11522_5">
 					 
 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="41" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-41" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11553_1">
 				 			</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="23" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-23" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11534_1">
 		 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="24" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-24" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11534_2">
 	 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="25" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-25" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11534_3">
 		 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="26" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-26" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11534_4">
 	 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="27" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-27" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11534_5">
 			 		</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="28" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-28" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11536_1">
 			 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="29" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-29" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_1">
 			 			</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="30" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-30" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_2">
 		 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="31" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-31" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_3">
 		 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="32" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-32" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_4">
 			 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="33" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-33" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_5">
 			 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="34" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-34" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_6">
 		 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="35" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-35" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_7">
 	 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="36" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-36" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_8">
 		 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="37" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-37" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11550_1">
 			 			</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="38" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-38" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11550_2">
 				 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="39" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-39" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11550_3">
 			 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="40" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-40" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11550_4">
 	 				</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="42" version="1" id="Route@11556">
+								<ServiceLinkInJourneyPattern id="Route@11556-42" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11555_1">
 				 			</ServiceLinkRef>
 								</ServiceLinkInJourneyPattern>
@@ -2313,8 +2317,10 @@ This example  maps
 					<Name>TXC JPTL ==&gt; NeTEX Timing Pattern </Name>
 					<timingPatterns>
 						<TimingPattern version="any" id="sta89441:ServiceJourneyPattern@1@TP">
+							<privateCodes>
+								<PrivateCode>119993</PrivateCode>
+							</privateCodes>
 							<Name>Timing pattern part of TXC JourneyPattern</Name>
-							<PrivateCode>119993</PrivateCode>
 							<!--
 <JourneyPattern id="1">
 									<PrivateCode>119993</PrivateCode>
@@ -2333,11 +2339,11 @@ This example  maps
 	<DirectionType>outbound</DirectionType>
 								</JourneyPattern> -->
 							<pointsInSequence>
-								<TimingPointInJourneyPattern version="1" id="sta89441:JourneyPatternSection@3" order="1">
+								<TimingPointInJourneyPattern version="1" id="sta89441:JourneyPatternSection@3-1">
 									<TimingPointRef version="1" ref="sta89441:JPS@3@StopPoint@43000001304@TP">
 	 				</TimingPointRef>
 								</TimingPointInJourneyPattern>
-								<TimingPointInJourneyPattern version="1" id="sta89441:JourneyPatternSection@3" order="2">
+								<TimingPointInJourneyPattern version="1" id="sta89441:JourneyPatternSection@3-2">
 									<TimingPointRef version="1" ref="sta89441:JPS@3@StopPoint@43000007102@TP">
 	
 
@@ -3453,7 +3459,9 @@ This example  maps
 					<Name>TXC JPTL ==&gt; NeTEX JourneyPattern Pattern </Name>
 					<journeyPatterns>
 						<ServiceJourneyPattern version="any" id="sta89441:ServiceJourneyPattern@1@JP">
-							<PrivateCode>119993</PrivateCode>
+							<privateCodes>
+								<PrivateCode>119993</PrivateCode>
+							</privateCodes>
 							<!--
 
 <JourneyPattern id="1">
@@ -3734,14 +3742,14 @@ TXC									NETEX
 							</runTimes>
 							<!--  Alternatively  list the points -->
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="1" id="sta89441:ServiceJourneyPattern@1" order="1">
+								<StopPointInJourneyPattern version="1" id="sta89441:ServiceJourneyPattern@1-1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000001304"/>
 									<OnwardTimingLinkRef versionRef="1" ref="sta:ServiceLink@111507_1"/>
 									<!--- NB LINK MISSING -->
 									<ForAlighting>false</ForAlighting>
 									<RequestStop>false</RequestStop>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1" id="sta89441:ServiceJourneyPattern@1" order="2">
+								<StopPointInJourneyPattern version="1" id="sta89441:ServiceJourneyPattern@1-2">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000007102"/>
 									<OnwardTimingLinkRef versionRef="1" ref="sta:ServiceLink@111507_2"/>
 									<!--- NB LINK MISSING -->
@@ -5834,7 +5842,9 @@ TXC									NETEX
 								<Destination>Rugby Clifton Road</Destination>
 								<UseAllStopPoints>true</UseAllStopPoints>
 								<JourneyPattern id="1">
-									<PrivateCode>119993</PrivateCode>
+									<privateCodes>
+										<PrivateCode>119993</PrivateCode>
+									</privateCodes>
 									<DestinationDisplay>Rugby Town Centre</DestinationDisplay>
 									<Direction>outbound</Direction>
 									<RouteRef>11551</RouteRef>
@@ -5850,7 +5860,9 @@ TXC									NETEX
 									<JourneyPatternSectionRefs>222</JourneyPatternSectionRefs>
 								</JourneyPattern>
 								<JourneyPattern id="95">
-									<PrivateCode>119995</PrivateCode>
+									<privateCodes>
+										<PrivateCode>119995</PrivateCode>
+									</privateCodes>
 									<DestinationDisplay>Rugby Town Centre</DestinationDisplay>
 									<Direction>outbound</Direction>
 									<RouteRef>11556</RouteRef>
@@ -5878,6 +5890,9 @@ TXC									NETEX
 					<DefaultMode>bus</DefaultMode>
 					<vehicleJourneys>
 						<ServiceJourney version="1" id="sta:VehicleJourney@894416">
+							<privateCodes>
+								<PrivateCode type="txc:TicketMachineJourneyCode">894416</PrivateCode>
+							</privateCodes>
 							<!-- 		<VehicleJourneys>
 						<VehicleJourney>
 							<PrivateCode>894416</PrivateCode>  
@@ -5889,7 +5904,6 @@ TXC									NETEX
 							<DepartureTime>07:32:00</DepartureTime>
 
 -->
-							<PrivateCode type="txc:TicketMachineJourneyCode">894416</PrivateCode>
 							<DepartureTime>07:32:00</DepartureTime>
 							<ServiceJourneyPatternRef ref="sta89441:JourneyPattern@1"/>
 							<!--
@@ -5914,7 +5928,7 @@ TXC									NETEX
 								<GroupOfServicesRef version="1" ref="sta:Service@R86@out@monday-to-friday"/>
 							</groupsOfServices>
 							<calls>
-								<Call id="sta:VehicleJourney@894416" version="1" order="1">
+								<Call id="sta:VehicleJourney@894416-1" version="1">
 									<!-- act ual
 								<JourneyPatternTimingLinkRef>4</JourneyPatternTimingLinkRef>  -->
 									<ScheduledStopPointRef version="1" ref="naptStop:43000001304"/>
@@ -5932,7 +5946,7 @@ TXC									NETEX
 										<ForAlighting>false</ForAlighting>
 									</Arrival>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="2">
+								<Call id="sta:VehicleJourney@894416-2" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000007102"/>
 									<OnwardTimingLinkView>
 										<!-- 	<VehicleJourneyTimingLink id="51">
@@ -5946,7 +5960,7 @@ TXC									NETEX
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 									<!-- 	<PointInJourneyPatternRef version="any" ref="mytim:StopPointInJourneyPattern:jp_r1-01"/>  -->
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="3">
+								<Call id="sta:VehicleJourney@894416-3" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000006101"/>
 									<OnwardTimingLinkView>
 										<!-- 	<VehicleJourneyTimingLink id="52">
@@ -5959,7 +5973,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="4">
+								<Call id="sta:VehicleJourney@894416-4" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000116807"/>
 									<OnwardTimingLinkView>
 										<!-- 		<VehicleJourneyTimingLink id="53">
@@ -5973,7 +5987,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="5">
+								<Call id="sta:VehicleJourney@894416-5" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000041701"/>
 									<OnwardTimingLinkView>
 										<!-- 	 				<VehicleJourneyTimingLink id="54">
@@ -5987,7 +6001,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="6">
+								<Call id="sta:VehicleJourney@894416-6" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000041801"/>
 									<OnwardTimingLinkView>
 										<!-- 		<VehicleJourneyTimingLink id="55">
@@ -6001,7 +6015,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="7">
+								<Call id="sta:VehicleJourney@894416-7" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000043001"/>
 									<OnwardTimingLinkView>
 										<!-- 						<VehicleJourneyTimingLink id="56">
@@ -6015,7 +6029,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="8">
+								<Call id="sta:VehicleJourney@894416-8" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000043101"/>
 									<OnwardTimingLinkView>
 										<!-- 				<VehicleJourneyTimingLink id="57">
@@ -6028,7 +6042,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="9">
+								<Call id="sta:VehicleJourney@894416-9" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000043201"/>
 									<OnwardTimingLinkView>
 										<!-- 			<VehicleJourneyTimingLink id="58">
@@ -6041,7 +6055,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="10">
+								<Call id="sta:VehicleJourney@894416-10" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000043301"/>
 									<OnwardTimingLinkView>
 										<!-- 			<VehicleJourneyTimingLink id="59">
@@ -6054,7 +6068,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="11">
+								<Call id="sta:VehicleJourney@894416-11" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000044001"/>
 									<OnwardTimingLinkView>
 										<!-- 						<VehicleJourneyTimingLink id="60">
@@ -6067,7 +6081,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="12">
+								<Call id="sta:VehicleJourney@894416-12" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000044001"/>
 									<OnwardTimingLinkView>
 										<!-- 			<VehicleJourneyTimingLink id="61">
@@ -6079,7 +6093,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="13">
+								<Call id="sta:VehicleJourney@894416-13" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000046002"/>
 									<OnwardTimingLinkView>
 										<!-- 			
@@ -6095,7 +6109,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="14">
+								<Call id="sta:VehicleJourney@894416-14" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000046102"/>
 									<OnwardTimingLinkView>
 										<!-- 			 
@@ -6109,7 +6123,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="15">
+								<Call id="sta:VehicleJourney@894416-15" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000028101"/>
 									<OnwardTimingLinkView>
 										<!-- 		 
@@ -6124,7 +6138,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="16">
+								<Call id="sta:VehicleJourney@894416-16" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000046801"/>
 									<OnwardTimingLinkView>
 										<!-- 		
@@ -6138,7 +6152,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="17">
+								<Call id="sta:VehicleJourney@894416-17" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F009301"/>
 									<OnwardTimingLinkView>
 										<!-- 		<VehicleJourneyTimingLink id="66">
@@ -6152,7 +6166,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="18">
+								<Call id="sta:VehicleJourney@894416-18" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F009400"/>
 									<OnwardTimingLinkView>
 										<!-- <VehicleJourneyTimingLink id="67">
@@ -6165,7 +6179,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="19">
+								<Call id="sta:VehicleJourney@894416-19" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F009400"/>
 									<OnwardTimingLinkView>
 										<!-- 	 <VehicleJourneyTimingLink id="68">
@@ -6179,7 +6193,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="20">
+								<Call id="sta:VehicleJourney@894416-20" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F167501"/>
 									<OnwardTimingLinkView>
 										<!-- 	 		<VehicleJourneyTimingLink id="69">
@@ -6192,7 +6206,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="21">
+								<Call id="sta:VehicleJourney@894416-21" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F167601"/>
 									<OnwardTimingLinkView>
 										<!-- 	 		 	<VehicleJourneyTimingLink id="70">
@@ -6205,7 +6219,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="22">
+								<Call id="sta:VehicleJourney@894416-22" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F167701"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	 	<VehicleJourneyTimingLink id="71">
@@ -6220,7 +6234,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="23">
+								<Call id="sta:VehicleJourney@894416-23" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F167801"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	 	<VehicleJourneyTimingLink id="72">
@@ -6233,7 +6247,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="24">
+								<Call id="sta:VehicleJourney@894416-24" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F011000"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	 							<VehicleJourneyTimingLink id="73">
@@ -6246,7 +6260,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="25">
+								<Call id="sta:VehicleJourney@894416-25" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F168001"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	 	<VehicleJourneyTimingLink id="74">
@@ -6260,7 +6274,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="26">
+								<Call id="sta:VehicleJourney@894416-26" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F153310"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	 	 
@@ -6274,7 +6288,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="27">
+								<Call id="sta:VehicleJourney@894416-27" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F080600"/>
 									<OnwardTimingLinkView>
 										<!-- 	  
@@ -6289,7 +6303,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="28">
+								<Call id="sta:VehicleJourney@894416-28" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F153290"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	 	
@@ -6303,7 +6317,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="29">
+								<Call id="sta:VehicleJourney@894416-29" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F080500"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	 	
@@ -6317,7 +6331,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="30">
+								<Call id="sta:VehicleJourney@894416-30" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F080501"/>
 									<OnwardTimingLinkView>
 										<!-- 	<VehicleJourneyTimingLink id="79">
@@ -6329,7 +6343,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="31">
+								<Call id="sta:VehicleJourney@894416-31" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F011200"/>
 									<OnwardTimingLinkView>
 										<!--  
@@ -6344,7 +6358,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="32">
+								<Call id="sta:VehicleJourney@894416-32" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F015601"/>
 									<OnwardTimingLinkView>
 										<!-- 	<
@@ -6358,7 +6372,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="33">
+								<Call id="sta:VehicleJourney@894416-33" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F153331"/>
 									<OnwardTimingLinkView>
 										<!-- 		<VehicleJourneyTimingLink id="82">
@@ -6370,7 +6384,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="34">
+								<Call id="sta:VehicleJourney@894416-34" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F034300"/>
 									<OnwardTimingLinkView>
 										<!-- 
@@ -6385,7 +6399,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="35">
+								<Call id="sta:VehicleJourney@894416-35" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F150341"/>
 									<OnwardTimingLinkView>
 										<!-- 					<VehicleJourneyTimingLink id="84">
@@ -6398,7 +6412,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="36">
+								<Call id="sta:VehicleJourney@894416-36" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F151991"/>
 									<OnwardTimingLinkView>
 										<!-- 	<VehicleJourneyTimingLink id="85">
@@ -6411,7 +6425,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="37">
+								<Call id="sta:VehicleJourney@894416-37" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F117501"/>
 									<OnwardTimingLinkView>
 										<!-- 			<VehicleJourneyTimingLink id="86">
@@ -6425,7 +6439,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="38">
+								<Call id="sta:VehicleJourney@894416-38" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F117401"/>
 									<OnwardTimingLinkView>
 										<!-- 	
@@ -6440,7 +6454,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="39">
+								<Call id="sta:VehicleJourney@894416-39" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F118301"/>
 									<OnwardTimingLinkView>
 										<!-- 	<
@@ -6454,7 +6468,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="40">
+								<Call id="sta:VehicleJourney@894416-40" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F118401"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	<VehicleJourneyTimingLink id="89">
@@ -6468,7 +6482,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="41">
+								<Call id="sta:VehicleJourney@894416-41" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F057900"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	 							<VehicleJourneyTimingLink id="90">
@@ -6482,7 +6496,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="42">
+								<Call id="sta:VehicleJourney@894416-42" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F118702"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	 
@@ -6497,7 +6511,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="43">
+								<Call id="sta:VehicleJourney@894416-43" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F118901"/>
 									<OnwardTimingLinkView>
 										<!-- 	 							<VehicleJourneyTimingLink id="92">
@@ -6511,7 +6525,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="44">
+								<Call id="sta:VehicleJourney@894416-44" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F119001"/>
 									<OnwardTimingLinkView>
 										<!-- 	 							<VehicleJourneyTimingLink id="93">
@@ -6525,7 +6539,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="45">
+								<Call id="sta:VehicleJourney@894416-45" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F119101"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	
@@ -6754,6 +6768,9 @@ TXC									NETEX
 							</calls>
 						</ServiceJourney>
 						<ServiceJourney version="1" id="sta:VehicleJourney@894417">
+							<privateCodes>
+								<PrivateCode type="txc:TicketMachineJourneyCode">894417</PrivateCode>
+							</privateCodes>
 							<!--
 						<VehicleJourney>
 							<PrivateCode>894417</PrivateCode> 
@@ -6764,7 +6781,6 @@ TXC									NETEX
 							<JourneyPatternRef>95</JourneyPatternRef>
 							<DepartureTime>08:07:00</DepartureTime>
 -->
-							<PrivateCode type="txc:TicketMachineJourneyCode">894417</PrivateCode>
 							<DepartureTime>08:07:00</DepartureTime>
 							<ServiceJourneyPatternRef ref="sta89441:JourneyPattern@95"/>
 							<!--
@@ -6797,7 +6813,7 @@ TXC									NETEX
 							 
 
 -->
-								<Call id="sta:VehicleJourney@894417" version="1" order="1">
+								<Call id="sta:VehicleJourney@894417-1" version="1">
 									<!-- act ual
 								<JourneyPatternTimingLinkRef>4</JourneyPatternTimingLinkRef>  -->
 									<ScheduledStopPointRef version="1" ref="naptStop:43000001304"/>
@@ -6818,7 +6834,7 @@ TXC									NETEX
 							</VehicleJourneyTimingLink>
 				
 -->
-								<Call id="sta:VehicleJourney@894417" version="1" order="2">
+								<Call id="sta:VehicleJourney@894417-2" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000007102"/>
 									<OnwardTimingLinkView>
 										<TimingLinkRef ref="sta:VehicleJourneyTimingLink@109"/>
@@ -7062,12 +7078,12 @@ TXC									NETEX
 							</dayTypes>
 							<DirectionType>outbound</DirectionType>
 							<members>
-								<GroupOfServicesMember id="sta:Service@R86@out@monday-to-friday" version="1" order="1">
+								<GroupOfServicesMember id="sta:Service@R86@out@monday-to-friday-1" version="1">
 									<ServiceJourneyRef version="1" ref="sta:VehicleJourney@894416"/>
 								</GroupOfServicesMember>
 							</members>
 							<noticeAssignments>
-								<NoticeAssignment id="sta:Service@Note@R86@out@monday-to-friday" version="1" order="1">
+								<NoticeAssignment id="sta:Service@Note@R86@out@monday-to-friday-1" version="1">
 									<Notice id="sta:Service@Note@R86@out@monday-to-friday" version="1">
 										<Text>Sample notice</Text>
 									</Notice>
@@ -7083,7 +7099,7 @@ TXC									NETEX
 							</dayTypes>
 							<DirectionType>outbound</DirectionType>
 							<members>
-								<GroupOfServicesMember id="sta:Service@R86@out@saturday" version="1" order="1">
+								<GroupOfServicesMember id="sta:Service@R86@out@saturday-1" version="1">
 									<ServiceJourneyRef version="1" ref="sta:VehicleJourney@894417"/>
 								</GroupOfServicesMember>
 							</members>
@@ -7150,12 +7166,6 @@ TXC									NETEX
 							<Description>Unique within Stage coach Service 89441 </Description>
 						</Codespace>
 					</codespaces>
-					<versions>
-						<Version id="sta:1,0" version="any">
-							<Description>Version 1 of timetable</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="sta:Stagecoach" version="sta:1.0">
 							<Email>data@stagecoach.co.uk</Email>
@@ -7168,7 +7178,7 @@ TXC									NETEX
 							<roles>
 								<ResponsibilityRoleAssignment version="sta:1.04" id="sta:Stagecoach_stop_data">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>Other</StakeholderRoleType>
+									<StakeholderRoleType>other</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="txcOperator:STA" version="2"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -7176,10 +7186,12 @@ TXC									NETEX
 					</responsibilitySets>
 					<organisations>
 						<Operator created="2003-06-09T14:20:00-05:00" changed="2004-05-09T14:20:00-05:00" modification="revise" version="2" id="txcOperator:STA">
-							<!-- NationalOperatorCode: PublicCOde -->
+							<privateCodes>
+								<PrivateCode>12345</PrivateCode>
+								<PrivateCode type="LicenceNumber">vosa:PD0000479</PrivateCode>
+							</privateCodes>
+							<!-- NationalOperatorCode: PublicCode -->
 							<PublicCode>STA</PublicCode>
-							<PrivateCode>12345</PrivateCode>
-							<ExternalOperatorRef type="LicenceNumber" ref="vosa:PD0000479"/>
 							<!-- Name: TradingName  -->
 							<Name>Stagecoach</Name>
 							<ShortName>Stagecoach</ShortName>
@@ -7240,12 +7252,6 @@ TXC									NETEX
 						<DefaultDataSourceRef ref="txc:dft" version="txc:v2.1"/>
 						<DefaultResponsibilitySetRef ref="txc:TransXChange_metadata" version="txc:v2.1"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="txc:v2.1" version="any">
-							<Description>TransXChange  version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="txc:dft" version="txc:v2.1">
 							<Email>standards@transxchange.org.uk</Email>
@@ -7258,7 +7264,7 @@ TXC									NETEX
 							<roles>
 								<ResponsibilityRoleAssignment version="txc:v2.1" id="txc:TransXChange_metadata">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -7563,12 +7569,6 @@ TXC									NETEX
 						<DefaultDataSourceRef ref="napt:dft" version="napt:v2.4"/>
 						<DefaultResponsibilitySetRef ref="napt:NaPTAN_metadata" version="napt:v2.4"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="napt:v2.4" version="any">
-							<Description>NaPTAN  version 2.4</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="napt:dft" version="napt:v2.4">
 							<Email>standards@naptan.org.uk</Email>
@@ -7581,7 +7581,7 @@ TXC									NETEX
 							<roles>
 								<ResponsibilityRoleAssignment version="napt:v2.4" id="napt:NaPTAN_metadata">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -7592,7 +7592,7 @@ TXC									NETEX
 							<roles>
 								<ResponsibilityRoleAssignment version="napt:v2.4" id="napt:naptan_data">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>Other</StakeholderRoleType>
+									<StakeholderRoleType>other</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -7747,12 +7747,6 @@ TXC									NETEX
 						<DefaultDataSourceRef ref="nptg:dft" version="nptg:v2.1"/>
 						<DefaultResponsibilitySetRef ref="nptg:NPTG_metadata" version="nptg:v2.1"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="nptg:v2.1" version="any">
-							<Description>NPTG version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="nptg:dft" version="nptg:v2.1">
 							<Email>standards@nptg.org.uk</Email>
@@ -7765,7 +7759,7 @@ TXC									NETEX
 							<roles>
 								<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:NPTG_metadata">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -7776,7 +7770,7 @@ TXC									NETEX
 							<roles>
 								<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:data">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+									<StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptg:UK">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>

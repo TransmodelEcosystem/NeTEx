@@ -49,9 +49,9 @@
 							<PublicCode>24</PublicCode>
 							<OperatorRef version="1.0" ref="acs:ACS"/>
 							<ExternalProductCategoryRef ref="elderlyTaxi"/>
-							<UserTypes>child adult animal</UserTypes>
 							<AccessModes>foot bicycle scooter</AccessModes>
 							<RestrictedLine>true</RestrictedLine>
+							<UserTypes>child adult animal</UserTypes>
 						</Line>
 						<Line version="any" id="myski:LN_1">
 							<Name>Ski la Haute</Name>

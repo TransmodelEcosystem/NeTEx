@@ -158,7 +158,7 @@ GBFS file: vehicle_types.json:
 							<!-- GBFS vehicle_type_id -->
 							<Name>Example Basic Bike</Name>
 							<!-- GBFS name -->
-							<PropulsionType>human</PropulsionType>
+							<PropulsionTypes>human</PropulsionTypes>
 							<!-- GBFS propulsion_type -->
 							<VehicleCategory>cycle</VehicleCategory>
 							<!-- GBFS form_factor -->
@@ -167,18 +167,35 @@ GBFS file: vehicle_types.json:
 							<!-- GBFS vehicle_type_id -->
 							<Name>E-scooter</Name>
 							<!-- GBFS name -->
-							<PropulsionType>electric</PropulsionType>
+							<PropulsionTypes>electric</PropulsionTypes>
 							<!-- GBFS propulsion_type -->
 							<MaximumRange>12345</MaximumRange>
 							<!-- GBFS max_range_meters -->
+							<MaximumVelocity>14</MaximumVelocity>
+							<!-- NeTEX maximum velocity in m/s. -->
 							<VehicleCategory>scooter</VehicleCategory>
 							<!-- GBFS form_factor -->
+							<NumberOfWheels>2</NumberOfWheels>
+						</SimpleVehicleType>
+						<SimpleVehicleType version="any" id="cargo2">
+							<!-- GBFS vehicle_type_id -->
+							<Name>Cargo bike</Name>
+							<!-- GBFS name -->
+							<PropulsionTypes>electric</PropulsionTypes>
+							<!-- GBFS propulsion_type -->
+							<MaximumRange>12345</MaximumRange>
+							<!-- GBFS max_range_meters -->
+							<MaximumVelocity>30</MaximumVelocity>
+							<!-- NeTEX maximum velocity in m/s. -->
+							<VehicleCategory>cargoCycle</VehicleCategory>
+							<!-- GBFS form_factor -->
+							<NumberOfWheels>2</NumberOfWheels>
 						</SimpleVehicleType>
 						<SimpleVehicleType version="any" id="car1">
 							<!-- GBFS vehicle_type_id -->
 							<Name>Foor-door Sedan</Name>
 							<!-- GBFS name -->
-							<PropulsionType>combustion</PropulsionType>
+							<PropulsionTypes>combustion</PropulsionTypes>
 							<!-- GBFS propulsion_type -->
 							<MaximumRange>523992</MaximumRange>
 							<!-- GBFS max_range_meters -->
@@ -343,25 +360,29 @@ GBFS file: geofencing_zones.json.
 								</gml:interior>
 							</gml:Polygon>
 							<vehicleRestrictions>
-								<VehicleTypeZoneRestriction>
+								<VehicleTypeZoneRestriction id="1">
 									<ZoneUse>forbiddenZone</ZoneUse>
 									<!-- GBFS ride_allowed -->
 								</VehicleTypeZoneRestriction>
-								<VehicleTypeZoneRestriction>
+								<VehicleTypeZoneRestriction id="2">
 									<ZoneUse>allUsesAllowed</ZoneUse>
 									<!-- GBFS ride_through_allowed -->
 								</VehicleTypeZoneRestriction>
-								<VehicleTypeZoneRestriction>
+								<VehicleTypeZoneRestriction id="3">
 									<MaximumSpeed>10</MaximumSpeed>
 									<!-- GBFS maximum_speed_kph -->
 								</VehicleTypeZoneRestriction>
-								<VehicleTypeZoneRestriction>
+								<VehicleTypeZoneRestriction id="4">
 									<SimpleVehicleTypeRef ref="moped1"/>
 									<!-- GBFS vehicle_type_id -->
 								</VehicleTypeZoneRestriction>
-								<VehicleTypeZoneRestriction>
+								<VehicleTypeZoneRestriction id="5">
 									<SimpleVehicleTypeRef ref="car1"/>
 									<!-- GBFS vehicle_type_id -->
+								</VehicleTypeZoneRestriction>
+								<VehicleTypeZoneRestriction id="6">
+									<ZoneUse>mustPickUpAndDropOffAtSameStop</ZoneUse>
+									<FloatingVehicles>true</FloatingVehicles>
 								</VehicleTypeZoneRestriction>
 							</vehicleRestrictions>
 						</MobilityServiceConstraintZone>

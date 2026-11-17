@@ -1,0 +1,1970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2.2" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<!-- Example  DECK PLAN of a double decker bus
+
+   A DECK PLAN is provided for a double decker bus with spiral staircase.
+     All the seats are individually identified and have seat equipment.
+
+Lower deck
+    The Entrances have sensors.
+    The lower deck has a compartment for the driver by the entrance door  at the front and an exit door towards the rear.
+
+    The lower deck has fold 3 up seats facing inwards either side at the front, and 4 rows of  bench seats at the back, as 2 either side of the aisle) and with an extra seat in the back middle.
+    The front area seats can be labelled a Columns A and D and rows 1 to 4
+    The back area seats can be labelled as Columns A, B, C, D and rows 5 to 8.
+    There is a wheelchair space at 4D.
+    There is a button  to request a stop by the exit door and at the top of the staircase.
+    The Stair case has Stair equipment describing th step height and handrail.
+    There is a luggage storage area under the stairs with 2 shelves for suitcases, pushchairs, etc.
+
+    Passengers may stand on the lower deck but not on the stairs.
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@ Lower Front   @@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@ Front          @        @
+/ Entrance       @ Driver @
+\ [Door]         @[Ticket]@
+@ [Door]       [Validator]@
+@@@@@@@@@@@      @@@@@@@@@@
+@ 01A :::             01D @
+@                [Foldup] @
+@ 02A :::             02D @
+@                [Foldup] @
+@ 03A :::             03D @
+@                [Foldup] @
+@ 04A:::             (04D)@
+@            [Wheelchair] @
+@@@@@@@@@@@     @@@@@@@@@@@
+@                [Luggage]@
+/ Exit          @:::::::::@
+\ Entrance      |[Stairs] @
+@  [Door]       | to Upper@
+@@@@@@@@@@@     @@@@@@@@@@@
+@ 05A 05B +     @ 05C 05D @
+<:::::::::+     +:::::::::
+@ 06A 06B +     + 06C 06D @
+@:::::::::+     +:::::::::@
+@ 07A 07B +     + 07C 07D @
+@:::::::::+     +:::::::::@
+@ 08A 08B   8E    08C 08D @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@ lower Back   @@@@@@@
+
+
+
+    The upper deck has 10 rows of  bench seats 2 x  2 , wit@:::::::::@     @:::::::::@o that can show upstairs seating available)
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@ Upper Front  @@@@@@@
+@@+++++++++++++++++++++++@@
+@ 01A 01B +     + 01A 01D @
+@:::::::::+     +:::::::::@
+@ 02A 02B + 	+ 02C 02D @
+@:::::::::+     +:::::::::@
+@ 03A 03B +     + 03C 03D @
+@:::::::::+     @@@@@@@@@@@
+@ 04A 04B +     | [Stairs]@
+@:::::::::@     | to lower@
+@ 05A 05B +     @         @
+@:::::::::@     @@@@@@@@@@@
+@ 06A 06B +     + 06C 06D @
+@:::::::::+     +:::::::::@
+@ 07A 07B +     + 07C 07D @
+@:::::::::+     +:::::::::@
+@ 08A 08B +     + 08C 08D @
+@:::::::::+     +:::::::::@
+@ 09A 09B +     + 09C 09D @
+@:::::::::+     +:::::::::@
+@ 10A 10B   10E   10C 10D @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@  Upper Back   @@@@@@
+
+     DECK PLAN (Doouble decker bus)
+         DECK (lower)
+            OTHERSPACE (Driver)
+            PASSENGER SPACE Upper Seating
+              DECK ENTRANCEs (Front, Rear, Stairwell)
+                ENTRANCE EQUIPMENT
+                ENTRANCE SENSOR
+              PASSENGER SPOTs (x25)
+
+			  SPOT ROWs (x8)
+			  SPOT COLUMNs (x5)
+            OTHER SPACE (Stairwell)
+        DECK (upper)
+            PASSENGER SPACE
+               DECK ENTRANCE ( Stairwell)
+               PASSENGER SPOTs (x41)
+                 SEAT EQUIPMENT Bench
+                 SPOT SENSOR
+			  SPOT ROWs (x10)
+			  SPOT COLUMNs (x5)
+-->
+	<!-- Deck plan assignment to a service
+  The Deck plan is shown assigned to a specific vehicle on a specifc journey
+   The journey is split into three parts . The bus runs with its doors open in the central part in the city
+    and with its door s shut  in the
+
+-->
+	<PublicationTimestamp>2020-12-17T09:30:47.0Z</PublicationTimestamp>
+	<ParticipantRef>SYS001</ParticipantRef>
+	<!-- ======WHAT WAS REQUESTED ========== -->
+	<PublicationRequest version="1.0">
+		<RequestTimestamp>2020-12-17T09:30:46.0Z</RequestTimestamp>
+		<ParticipantRef>SYS002</ParticipantRef>
+		<Description>Request for Erebus 1 tariff</Description>
+		<topics>
+			<NetworkFrameTopic>
+				<selectionValidityConditions>
+					<AvailabilityCondition version="any" id="r1">
+						<FromDate>2020-01-01T00:00:00Z</FromDate>
+					</AvailabilityCondition>
+				</selectionValidityConditions>
+				<NetworkFilterByValue>
+					<objectReferences>
+						<OperatorRef version="any" ref="noc:OP-erebus"/>
+					</objectReferences>
+				</NetworkFilterByValue>
+			</NetworkFrameTopic>
+		</topics>
+	</PublicationRequest>
+	<PublicationRefreshInterval>P1M</PublicationRefreshInterval>
+	<Description>Example of DeckPlans</Description>
+	<!-- =============== RESULTS =========== -->
+	<dataObjects>
+		<CompositeFrame version="1.0" id="mb:CF-deck_plan_example_bus" dataSourceRef="mb:DS-erebus" responsibilitySetRef="mb:RS-infra">
+			<ValidBetween>
+				<FromDate>2023-01-01T00:00:00</FromDate>
+				<ToDate>2023-12-31T12:00:00</ToDate>
+			</ValidBetween>
+			<Name>Deck Plan  Example for Double Decker Bus </Name>
+			<Description>This is an example showing how one might encode a Deck plan for a double decker bus in NeTEx. It includes seat,  an entrance and sensor equipment.</Description>
+			<!--==== CODESPACEs ==== -->
+			<codespaces>
+				<Codespace id="CS-mb_data">
+					<Xmlns>mb</Xmlns>
+					<XmlnsUrl>http://www.erebus.eu/</XmlnsUrl>
+					<Description>erebus data</Description>
+				</Codespace>
+			</codespaces>
+			<!--==== FRAME DEFAULTS ==== -->
+			<FrameDefaults>
+				<!---  The default means that actually we could leave off all id s that belong to the mb: namespace. -->
+				<DefaultCodespaceRef ref="CS-mb_data"/>
+				<DefaultDataSourceRef version="any" ref="mb:DS-erebus"/>
+			</FrameDefaults>
+			<frames>
+				<!--==== OPERATOR COMMON RESOURCES==== -->
+				<ResourceFrame version="1.0" id="mb:RF-deck_plan_example_bus" responsibilitySetRef="mb:RS-vehicle_data">
+					<Name>erebus Operator specific common resources</Name>
+					<FrameDefaults>
+						<!---  The default means that actually we could leave off all id s that belong to the mb: namespace. -->
+						<DefaultCodespaceRef ref="CS-mb_data"/>
+					</FrameDefaults>
+					<dataSources>
+						<DataSource id="mb:DS-erebus" version="any">
+							<Email>feedback@erebus.eu</Email>
+						</DataSource>
+					</dataSources>
+					<!-- ========Responsibility Sets========== -->
+					<responsibilitySets>
+						<ResponsibilitySet version="any" id="mb:RS-vehicle_data">
+							<Name>Operator data</Name>
+							<roles>
+								<ResponsibilityRoleAssignment version="any" id="mb:RRA-vehicle_data@creates">
+									<DataRoleType>creates</DataRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
+									<ResponsibleOrganisationRef ref="noc:OP-erebus" version="any">erebus</ResponsibleOrganisationRef>
+								</ResponsibilityRoleAssignment>
+							</roles>
+						</ResponsibilitySet>
+						<ResponsibilitySet version="any" id="mb:RS-timetable_data">
+							<Name>Operator  timetable data</Name>
+							<roles>
+								<ResponsibilityRoleAssignment version="any" id="mb:RRA-timetable_data@creates">
+									<DataRoleType>creates</DataRoleType>
+									<StakeholderRoleType>planning</StakeholderRoleType>
+									<ResponsibleOrganisationRef ref="noc:OP-erebus" version="any">erebus</ResponsibleOrganisationRef>
+								</ResponsibilityRoleAssignment>
+							</roles>
+						</ResponsibilitySet>
+					</responsibilitySets>
+					<organisations>
+						<!-- ==== ORGANISATIONS ==== -->
+						<Operator version="any" id="noc:OP-erebus">
+							<PublicCode>MBK</PublicCode>
+							<Name>erebus</Name>
+							<ShortName>erebus</ShortName>
+							<TradingName>erebus SA</TradingName>
+							<OrganisationType>operator</OrganisationType>
+							<Address>
+								<Street>Alpha1</Street>
+								<Town>Metropolis</Town>
+								<PostCode>RH10 9UA</PostCode>
+								<PostalRegion>Metroland</PostalRegion>
+							</Address>
+							<PrimaryMode>bus</PrimaryMode>
+						</Operator>
+					</organisations>
+					<!-- ==== EQUIPMENT ==== -->
+					<equipments>
+						<!-- === Seating Related === -->
+						<SeatEquipment version="any" id="mb:SEq-ddb_bench_seat">
+							<Name>Bench seat</Name>
+							<Description>Bench Seat contiguous with neighbour</Description>
+							<HeightFromFloor>0.48</HeightFromFloor>
+							<SeatBackHeight>0.50</SeatBackHeight>
+							<SeatDepth>0.50</SeatDepth>
+							<IsFoldup>false</IsFoldup>
+						</SeatEquipment>
+						<SeatEquipment version="any" id="mb:SEq-ddb_pulldown_seat">
+							<Name>Pulldown seat</Name>
+							<HeightFromFloor>0.48</HeightFromFloor>
+							<SeatBackHeight>0.40</SeatBackHeight>
+							<SeatDepth>0.40</SeatDepth>
+							<IsFoldup>true</IsFoldup>
+						</SeatEquipment>
+						<SeatEquipment version="any" id="mb:SEq-ddb_single_seat">
+							<Name>Single seat</Name>
+							<HeightFromFloor>0.48</HeightFromFloor>
+							<SeatBackHeight>0.50</SeatBackHeight>
+							<SeatDepth>0.45</SeatDepth>
+							<IsFoldup>false</IsFoldup>
+						</SeatEquipment>
+						<SpotSensor version="any" id="mb:SS-ddb_seat_sensor">
+							<Name>Seat sensor</Name>
+							<CommunicationMethod>cable</CommunicationMethod>
+						</SpotSensor>
+						<WheelchairVehicleEquipment version="any" id="mb:WVE-ddb_wheelchair_space">
+							<HasWheelchairSpaces>true</HasWheelchairSpaces>
+							<NumberOfWheelchairAreas>1</NumberOfWheelchairAreas>
+							<WidthOfAccessArea>2.00</WidthOfAccessArea>
+							<HeightOfAccessArea>1.80</HeightOfAccessArea>
+							<WheelchairTurningCircle>2.00</WheelchairTurningCircle>
+							<CompanionSeat>true</CompanionSeat>
+						</WheelchairVehicleEquipment>
+						<!-- === Luggage Related === -->
+						<LuggageSpotEquipment version="any" id="mb:LSE-ddb_luggage_space@bottom_rack">
+							<Width>0.90</Width>
+							<Length>1.00</Length>
+							<Height>0.45</Height>
+							<HeightFromFloor>0</HeightFromFloor>
+						</LuggageSpotEquipment>
+						<LuggageSpotEquipment version="any" id="mb:LSE-ddb_luggage_space@top_rack">
+							<Width>0.90</Width>
+							<Length>1.00</Length>
+							<Height>0.80</Height>
+							<HeightFromFloor>1.0</HeightFromFloor>
+						</LuggageSpotEquipment>
+						<!-- === Door  Related === -->
+						<HelpPointEquipment version="any" id="mb:HPE-ddb_stop_request_button">
+							<HeightFromGround>1.20</HeightFromGround>
+							<StopRequestButton>true</StopRequestButton>
+							<StopRequestTimeout>PT90S</StopRequestTimeout>
+						</HelpPointEquipment>
+						<EntranceEquipment version="any" id="mb:EE-ddb_external_automatic_door">
+							<SafeForGuideDog>true</SafeForGuideDog>
+							<DoorType>foldingPair</DoorType>
+							<AutomaticDoor>true</AutomaticDoor>
+							<WheelchairPassable>true</WheelchairPassable>
+							<WheelchairUnaided>false</WheelchairUnaided>
+						</EntranceEquipment>
+						<EntranceSensor version="any" id="mb:ES-ddb_door_sensor">
+							<Name>External Door sensor</Name>
+							<CommunicationMethod>cable</CommunicationMethod>
+						</EntranceSensor>
+						<!-- === Stair  Related === -->
+						<StaircaseEquipment version="any" id="mb:SE-ddb_staircase">
+							<Name>Spiral staircase from deck1 to deck2</Name>
+							<Width>2.0</Width>
+							<DirectionOfUse>both</DirectionOfUse>
+							<PassengersPerMinute>6</PassengersPerMinute>
+							<SafeForGuideDog>false</SafeForGuideDog>
+							<Depth>8.00</Depth>
+							<NumberOfSteps>12</NumberOfSteps>
+							<StepHeight>0.10</StepHeight>
+							<StepColourContrast>true</StepColourContrast>
+							<HandrailType>oneSide</HandrailType>
+							<HandrailHeight>1.00</HandrailHeight>
+							<TopEnd>
+								<ContinuingHandrail>false</ContinuingHandrail>
+							</TopEnd>
+							<BottomEnd>
+								<ContinuingHandrail>false</ContinuingHandrail>
+							</BottomEnd>
+							<ContinuousHandrail>true</ContinuousHandrail>
+							<SpiralStair>true</SpiralStair>
+							<NumberOfFlights>1</NumberOfFlights>
+						</StaircaseEquipment>
+						<EntranceSensor version="any" id="mb:ES-ddb_step_sensor">
+							<Name>Internal sensor on   step</Name>
+							<CommunicationMethod>cable</CommunicationMethod>
+						</EntranceSensor>
+						<!-- === Other === -->
+						<TicketingEquipment version="any" id="mb:TE-ddb_onboard_ticket_machine">
+							<TicketMachines>true</TicketMachines>
+							<PaymentMethods>cashAndCard contactlessPaymentCard  travelCard</PaymentMethods>
+						</TicketingEquipment>
+						<TicketValidatorEquipment version="any" id="mb:TVE-ddb_onboard_ticket_validator">
+							<TicketValidatorType>paperStamp</TicketValidatorType>
+							<AudioValidationFeedback>true</AudioValidationFeedback>
+							<VisualValidationFeedback>true</VisualValidationFeedback>
+							<ValidationGuidance>Insert ticket into machine to obtain validation stamp</ValidationGuidance>
+						</TicketValidatorEquipment>
+					</equipments>
+					<serviceFacilitySets>
+						<ServiceFacilitySet version="any" id="mb:SFS-ddb_facilities">
+							<PassengerCommsFacilityList>freeWifi</PassengerCommsFacilityList>
+							<TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
+							<VehicleAccessFacilityList>steps</VehicleAccessFacilityList>
+							<AccommodationAccessList>freeSeating standing</AccommodationAccessList>
+							<AccommodationFacilityList>seating pushchair wheelchair</AccommodationFacilityList>
+							<LuggageCarriageFacilityList>noCycles  baggageStorage pushchairsAllowed</LuggageCarriageFacilityList>
+							<ServiceReservationFacilityList>noReservationsPossible</ServiceReservationFacilityList>
+						</ServiceFacilitySet>
+					</serviceFacilitySets>
+					<vehicleTypes>
+						<VehicleType version="any" id="mb:VT-double_decker">
+							<Name>Double Decker Bus</Name>
+							<Description>Double decker bus with staircase. Wheelchair and luggage spaces on lower deck.</Description>
+							<ReversingDirection>false</ReversingDirection>
+							<SelfPropelled>true</SelfPropelled>
+							<PropulsionTypes>human</PropulsionTypes>
+							<FuelTypes>diesel</FuelTypes>
+							<TransportMode>bus</TransportMode>
+							<PassengerCapacity version="any" id="mb:PC-double_decker">
+								<SeatingCapacity>60</SeatingCapacity>
+								<StandingCapacity>20</StandingCapacity>
+								<PushchairCapacity>2</PushchairCapacity>
+								<WheelchairPlaceCapacity>1</WheelchairPlaceCapacity>
+							</PassengerCapacity>
+							<DeckPlanRef version="any" ref="mb:DP-double_decker_bus">Default to use.</DeckPlanRef>
+							<LowFloor>false</LowFloor>
+							<BoardingHeight>0.15</BoardingHeight>
+							<Length>10.00</Length>
+							<Height>4</Height>
+							<Weight>2000</Weight>
+						</VehicleType>
+					</vehicleTypes>
+					<deckPlans>
+						<DeckPlan version="any" id="mb:DP-double_decker_bus">
+							<Name>Double decker bus</Name>
+							<configurationConditions>
+								<ValidityCondition version="any" id="mb:VC-ddb_doors_open">
+									<Name>Doors open Configuration</Name>
+								</ValidityCondition>
+								<ValidityCondition version="any" id="mb:VC-ddb_doors_shut">
+									<Name>Doors shut Configuration</Name>
+								</ValidityCondition>
+							</configurationConditions>
+							<deckLevels>
+								<DeckLevel version="any" id="mb:DL-ddb_level_1">
+									<Label>Lower</Label>
+								</DeckLevel>
+								<DeckLevel version="any" id="mb:DL-ddb_level_2">
+									<Label>Upper</Label>
+								</DeckLevel>
+							</deckLevels>
+							<decks>
+								<Deck version="any" id="mb:Dk-ddb_deck_1">
+									<Name>Lower Deck</Name>
+									<Label>1</Label>
+									<DeckLevelRef version="any" ref="mb:DL-ddb_level_1"/>
+									<deckSpaces>
+										<OtherDeckSpace version="any" id="mb:ODS-ddb_deck_1@driver_area">
+											<Name>Driver seat</Name>
+											<actualVehicleEquipments>
+												<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@driver_area@ddb_onboard_ticket_machine">
+													<Units>1</Units>
+													<TicketingEquipmentRef version="any" ref="mb:TE-ddb_onboard_ticket_machine"/>
+												</ActualVehicleEquipment>
+												<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@driver_area@ddb_onboard_ticket_validator">
+													<Units>1</Units>
+													<TicketValidatorEquipmentRef version="any" ref="mb:TVE-ddb_onboard_ticket_validator"/>
+												</ActualVehicleEquipment>
+											</actualVehicleEquipments>
+											<PublicUse>false</PublicUse>
+											<TotalCapacity>1</TotalCapacity>
+										</OtherDeckSpace>
+										<PassengerSpace version="any" id="mb:PS-ddb_deck_1@seating">
+											<Name>Lower Deck seating area</Name>
+											<ServiceFacilitySetRef version="any" ref="mb:SFS-ddb_facilities"/>
+											<PublicUse>true</PublicUse>
+											<FareClass>standardClass</FareClass>
+											<AccessibilityAssessment version="any" id="mb:AA-ddb_deck_1@seating">
+												<MobilityImpairedAccess>true</MobilityImpairedAccess>
+												<limitations>
+													<AccessibilityLimitation id="mb:AA-ddb_deck_1@seating" version="any">
+														<WheelchairAccess>true</WheelchairAccess>
+														<StepFreeAccess>true</StepFreeAccess>
+														<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+													</AccessibilityLimitation>
+												</limitations>
+											</AccessibilityAssessment>
+											<AirConditioned>true</AirConditioned>
+											<SmokingAllowed>false</SmokingAllowed>
+											<deckEntrances>
+												<PassengerEntrance version="any" id="mb:PE-ddb_deck_1@seating_area@forward_left_entrance">
+													<Name>Front Door</Name>
+													<Label>D1</Label>
+													<Width>1.00</Width>
+													<Height>1.90</Height>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@forward_left_entrance@door">
+															<Units>1</Units>
+															<EntranceEquipmentRef version="any" ref="mb:EE-ddb_external_automatic_door"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<PublicUse>true</PublicUse>
+													<VehicleSide>leftSide</VehicleSide>
+													<SequenceFromFront>1</SequenceFromFront>
+													<HeightFromGround>0.20</HeightFromGround>
+													<DeckEntranceType>external</DeckEntranceType>
+													<IsEmergencyExit>true</IsEmergencyExit>
+													<HasDoor>true</HasDoor>
+													<IsAutomatic>true</IsAutomatic>
+													<sensorsInEntrance>
+														<SensorInEntrance version="any" id="mb:SIE-ddb_deck_1@seating_area@forward_left_entrance">
+															<EntranceSensorRef version="any" ref="mb:ES-ddb_door_sensor"/>
+														</SensorInEntrance>
+													</sensorsInEntrance>
+												</PassengerEntrance>
+												<PassengerEntrance version="any" id="mb:PE-ddb_deck_1@seating_area@rear_entrance">
+													<Name>Rear Door</Name>
+													<Label>D2</Label>
+													<Width>0.95</Width>
+													<Height>1.90</Height>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@rear_left_entrance@door">
+															<Units>1</Units>
+															<EntranceEquipmentRef versionRef="any" ref="mb:EE-automatic_door"/>
+														</ActualVehicleEquipment>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@rear_left_entrance@ddb_stop_request_button">
+															<HelpPointEquipmentRef version="any" ref="mb:HPE-ddb_stop_request_button"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<PublicUse>true</PublicUse>
+													<VehicleSide>leftSide</VehicleSide>
+													<SequenceFromFront>2</SequenceFromFront>
+													<HeightFromGround>0.20</HeightFromGround>
+													<DeckEntranceType>external</DeckEntranceType>
+													<IsEmergencyExit>true</IsEmergencyExit>
+													<HasDoor>true</HasDoor>
+													<IsAutomatic>true</IsAutomatic>
+													<sensorsInEntrance>
+														<SensorInEntrance version="any" id="mb:SIE-ddb_deck_1@seating_area@rear_left_entrance">
+															<EntranceSensorRef versionRef="any" ref="mb:ES-door_sensor"/>
+														</SensorInEntrance>
+													</sensorsInEntrance>
+												</PassengerEntrance>
+												<PassengerEntrance version="any" id="mb:PE-ddb_deck_1@seating_area@stairs_bottom_entrance">
+													<Name>Downstairs Entrance to stairs</Name>
+													<Label>Ii</Label>
+													<Width>0.80</Width>
+													<Height>1.90</Height>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@stairs_bottom_entrance@sensor">
+															<EntranceSensorRef version="any" ref="mb:ES-ddb_step_sensor"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<VehicleSide>internal</VehicleSide>
+													<DeckEntranceType>internal</DeckEntranceType>
+													<HasDoor>false</HasDoor>
+													<sensorsInEntrance>
+														<SensorInEntrance version="any" id="mb:SIE-ddb_deck_1@seating_area@stairs_bottom_entrance">
+															<EntranceSensorRef version="any" ref="mb:ES-ddb_step_sensor"/>
+														</SensorInEntrance>
+													</sensorsInEntrance>
+												</PassengerEntrance>
+											</deckEntrances>
+											<deckEntranceUsages>
+												<DeckEntranceUsage version="any" id="mb:DEU-ddb_deck_1@front">
+													<EntranceUsageType>entry</EntranceUsageType>
+												</DeckEntranceUsage>
+												<DeckEntranceUsage version="any" id="mb:DEU-ddb_deck_1@rear@doors_open">
+													<validityConditions>
+														<ValidityConditionRef version="any" ref="mb:VC-ddb_doors_open"/>
+													</validityConditions>
+													<Name>With rear door set open so passengers can alight when stopped  in town</Name>
+													<EntranceUsageType>exit</EntranceUsageType>
+													<EntranceSetting>open</EntranceSetting>
+												</DeckEntranceUsage>
+												<DeckEntranceUsage version="any" id="mb:DEU-ddb_deck_1@rear@doors_shut">
+													<validityConditions>
+														<ValidityConditionRef version="any" ref="mb:VC-ddb_doors_shut"/>
+													</validityConditions>
+													<Name>With rear door set shut</Name>
+													<EntranceUsageType>exit</EntranceUsageType>
+													<EntranceSetting>shut</EntranceSetting>
+													<ControlledLocking>true</ControlledLocking>
+												</DeckEntranceUsage>
+											</deckEntranceUsages>
+											<deckWindows>
+												<DeckWindow version="any" id="mb:DW-ddb_deck_2@window_left">
+													<HeightFromFloor>1.50</HeightFromFloor>
+													<HasBlind>false</HasBlind>
+													<CanBeOpened>false</CanBeOpened>
+												</DeckWindow>
+											</deckWindows>
+											<TotalCapacity>43</TotalCapacity>
+											<deckSpaceCapacities>
+												<DeckSpaceCapacity version="any" id="mb:DSC-ddb_deck_1@seat">
+													<LocatableSpotType>seat</LocatableSpotType>
+													<Capacity>22</Capacity>
+												</DeckSpaceCapacity>
+												<DeckSpaceCapacity version="any" id="mb:DSC-ddb_deck_1@standingSpace">
+													<LocatableSpotType>standingSpace</LocatableSpotType>
+													<Capacity>20</Capacity>
+												</DeckSpaceCapacity>
+												<DeckSpaceCapacity version="any" id="mb:DSC-ddb_deck_1@wheelchair">
+													<LocatableSpotType>wheelchairSpace</LocatableSpotType>
+													<Capacity>1</Capacity>
+												</DeckSpaceCapacity>
+												<DeckSpaceCapacity version="any" id="mb:DSC-ddb_deck_1@pushchair">
+													<LocatableSpotType>pushchairSpace</LocatableSpotType>
+													<Capacity>2</Capacity>
+												</DeckSpaceCapacity>
+											</deckSpaceCapacities>
+											<passengerSpots>
+												<!--  ==Row 1 -->
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@1A">
+													<Label>1A</Label>
+													<Orientation>leftwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@1A">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_single_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r01"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c1"/>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@1D">
+													<Label>1D</Label>
+													<Orientation>rightwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@1D">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_pulldown_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r01"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c4"/>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<!--  ==Row 2 -->
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@2A">
+													<Label>2A</Label>
+													<Orientation>leftwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@2A">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_single_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r02"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c1"/>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@2D">
+													<Label>2D</Label>
+													<Orientation>rightwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@2D">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_pulldown_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r02"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c4"/>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<!--  ==Row 3 -->
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@3A">
+													<Label>3A</Label>
+													<Orientation>leftwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@3A">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_single_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r03"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c1"/>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@3D">
+													<Label>Wheelchair space</Label>
+													<Orientation>rightwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@3D">
+															<Units>1</Units>
+															<WheelchairVehicleEquipmentRef version="any" ref="mb:WVE-ddb_wheelchair_space"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r03"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c4"/>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<!--  ==Row 4 -->
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@4A">
+													<Label>4A</Label>
+													<Orientation>leftwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@4A">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_single_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r04"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c1"/>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@4D">
+													<Label>Wheelchair space</Label>
+													<Orientation>rightwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@34">
+															<Units>1</Units>
+															<WheelchairVehicleEquipmentRef version="any" ref="mb:WVE-ddb_wheelchair_space"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r03"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c4"/>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<!--  ==Row 5 -->
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@5A">
+													<Label>5A</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@5A">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r05"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c1"/>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@5B">
+													<Label>5A</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@5B">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r05"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c2"/>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@5C">
+													<Label>5C</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@5C">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_single_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r05"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c3"/>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@5D">
+													<Label>5D</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@5D">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r05"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c4"/>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!--  ==Row 6 -->
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@6A">
+													<Label>6A</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@6A">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r06"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c1"/>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@6B">
+													<Label>6B</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@6B">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r06"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c2"/>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@6C">
+													<Label>6C</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@6C">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r06"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c3"/>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@6D">
+													<Label>6D</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@6D">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r06"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c4"/>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!--  ==Row 7 -->
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@7A">
+													<Label>7A</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@7A">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r07"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c1"/>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@7B">
+													<Label>7B</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@7B">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r07"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c2"/>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@7C">
+													<Label>7C</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@7C">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r07"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c3"/>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@7D">
+													<Label>7D</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@7D">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r07"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c4"/>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!--  ==Row 8 -->
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@8A">
+													<Label>8A</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@8A">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r08"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c1"/>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@8B">
+													<Label>8B</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@8B">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r08"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c2"/>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+													<IsBetweenSeats>true</IsBetweenSeats>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@8E">
+													<Label>8E</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@8E">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r08"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c5"/>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+													<IsBetweenSeats>true</IsBetweenSeats>
+													<IsFacingAisle>true</IsFacingAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@8C">
+													<Label>8C</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@8C">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r08"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c3"/>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+													<IsBetweenSeats>true</IsBetweenSeats>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_1@seating_area@8D">
+													<Label>8D</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@8D">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r08"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c4"/>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+											</passengerSpots>
+											<luggageSpots>
+												<!--  ==Row 4 -->
+												<LuggageSpot version="any" id="mb:ddb_deck_1@seating_area@4B">
+													<Label>4B</Label>
+													<Orientation>leftwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@4B@luggage">
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_1@r04"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_1@c4"/>
+												</LuggageSpot>
+											</luggageSpots>
+										</PassengerSpace>
+										<PassengerSpace version="any" id="mb:PS-ddb_deck_1@stairwell">
+											<Name>Stairwell to upper deck</Name>
+											<!-- Define exact position of the stair case relative to the DECK -->
+											<Centroid>
+												<Location>
+													<gml:pos srsName="urn:ietf:params:geopriv:relative:2d" srsDimension="2">3 10</gml:pos>
+												</Location>
+											</Centroid>
+											<ServiceFacilitySetRef version="any" ref="mb:SFS-ddb_facilities"/>
+											<actualVehicleEquipments>
+												<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@stairwell@staircase">
+													<Units>1</Units>
+													<StaircaseEquipmentRef version="any" ref="mb:SE-ddb_staircase"/>
+												</ActualVehicleEquipment>
+												<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@stairwell@stop_button">
+													<Name>Stop button at top of stairs</Name>
+													<HelpPointEquipmentRef version="any" ref="mb:HPE-ddb_stop_request_button"/>
+												</ActualVehicleEquipment>
+											</actualVehicleEquipments>
+											<SmokingAllowed>false</SmokingAllowed>
+											<deckEntrances>
+												<PassengerEntrance version="any" id="mb:PE-ddb_deck_1@stairwell@base">
+													<Name>Bottom of stairwell</Name>
+													<Label>Up</Label>
+													<Width>1.00</Width>
+													<Height>1.90</Height>
+													<DeckEntranceType>internal</DeckEntranceType>
+													<IsAutomatic>true</IsAutomatic>
+												</PassengerEntrance>
+												<PassengerEntrance version="any" id="mb:PE-ddb_deck_1@stairwell@top">
+													<Name>Top of Stairwell</Name>
+													<Label>Down</Label>
+													<Width>1.00</Width>
+													<Height>1.90</Height>
+													<DeckEntranceType>internal</DeckEntranceType>
+													<IsAutomatic>true</IsAutomatic>
+												</PassengerEntrance>
+											</deckEntrances>
+											<deckEntranceCouples>
+												<DeckEntranceCouple version="any" id="mb:DEC-ddb_deck_1@stairwell@base">
+													<FromDeckEntranceRef version="any" ref="mb:PE-ddb_deck_1@seating_area@stairs_bottom_entrance"/>
+													<ToDeckEntranceRef version="any" ref="mb:PE-ddb_deck_1@stairwell@base"/>
+												</DeckEntranceCouple>
+												<DeckEntranceCouple version="any" id="mb:DEC-ddb_deck_1@stairwell@top">
+													<FromDeckEntranceRef version="any" ref="mb:PE-ddb_deck_1@stairwell@top"/>
+													<ToDeckEntranceRef version="any" ref="mb:PE-ddb_deck_2@seating_area@stairs_top_entrance"/>
+												</DeckEntranceCouple>
+											</deckEntranceCouples>
+											<deckEntranceUsages>
+												<DeckEntranceUsage version="any" id="mb:DEU-ddb_deck_1@stairwell@top">
+													<EntranceUsageType>entryAndExit</EntranceUsageType>
+												</DeckEntranceUsage>
+												<DeckEntranceUsage version="any" id="mb:DEU-ddb_deck_1@stairwell@base">
+													<EntranceUsageType>entryAndExit</EntranceUsageType>
+												</DeckEntranceUsage>
+											</deckEntranceUsages>
+										</PassengerSpace>
+									</deckSpaces>
+									<spotRows>
+										<SpotRow version="any" id="mb:SR-ddb_deck_1@r01">
+											<Label>Row 1</Label>
+										</SpotRow>
+										<SpotRow version="any" id="mb:SR-ddb_deck_1@r02">
+											<Label>Row 2</Label>
+										</SpotRow>
+										<SpotRow version="any" id="mb:SR-ddb_deck_1@r03">
+											<Label>Row 3</Label>
+										</SpotRow>
+										<SpotRow version="any" id="mb:SR-ddb_deck_1@r04">
+											<Label>Row 4</Label>
+										</SpotRow>
+										<SpotRow version="any" id="mb:SR-ddb_deck_1@r05">
+											<Label>Row 5</Label>
+										</SpotRow>
+										<SpotRow version="any" id="mb:SR-ddb_deck_1@r06">
+											<Label>Row 6</Label>
+										</SpotRow>
+										<SpotRow version="any" id="mb:SR-ddb_deck_1@r07">
+											<Label>Row </Label>
+										</SpotRow>
+										<SpotRow version="any" id="mb:SR-ddb_deck_1@r08">
+											<Label>Row 8</Label>
+										</SpotRow>
+									</spotRows>
+									<spotColumns>
+										<SpotColumn version="any" id="mb:SC-ddb_deck_1@c1">
+											<Label>Column A</Label>
+										</SpotColumn>
+										<SpotColumn version="any" id="mb:SC-ddb_deck_1@c2">
+											<Label>Column B</Label>
+										</SpotColumn>
+										<SpotColumn version="any" id="mb:SC-ddb_deck_1@c3">
+											<Label>Column C</Label>
+										</SpotColumn>
+										<SpotColumn version="any" id="mb:SC-ddb_deck_1@c4">
+											<Label>Column D</Label>
+										</SpotColumn>
+										<SpotColumn version="any" id="mb:SC-ddb_deck_1@c5">
+											<Label>Column E</Label>
+										</SpotColumn>
+									</spotColumns>
+								</Deck>
+								<Deck version="any" id="mb:Dk-ddb_deck_2">
+									<Name>Upper Deck</Name>
+									<Label>2</Label>
+									<DeckLevelRef version="any" ref="mb:DL-ddb_level_2"/>
+									<deckSpaces>
+										<PassengerSpace version="any" id="mb:PS-ddb_deck_2@seating">
+											<Name>Upper Deck seating area</Name>
+											<AccessibilityAssessment version="any" id="mb:AA-ddb_deck_2@seating">
+												<MobilityImpairedAccess>false</MobilityImpairedAccess>
+												<limitations>
+													<AccessibilityLimitation id="mb:AA-ddb_deck_2@seating" version="any">
+														<WheelchairAccess>false</WheelchairAccess>
+														<StepFreeAccess>false</StepFreeAccess>
+														<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
+													</AccessibilityLimitation>
+												</limitations>
+											</AccessibilityAssessment>
+											<AirConditioned>true</AirConditioned>
+											<SmokingAllowed>false</SmokingAllowed>
+											<deckEntrances>
+												<PassengerEntrance version="any" id="mb:PE-ddb_deck_2@seating_area@stairs_top_entrance">
+													<Name>Entrance to top of  stairs</Name>
+													<Width>0.80</Width>
+													<Height>2.00</Height>
+													<DeckEntranceType>internal</DeckEntranceType>
+												</PassengerEntrance>
+											</deckEntrances>
+											<deckWindows>
+												<DeckWindow version="any" id="mb:DW-ddb_deck_2@window_left">
+													<Description>Side windows continuous with thin strios</Description>
+													<Orientation>leftwards</Orientation>
+													<Length>9.50</Length>
+													<Height>0.90</Height>
+													<HeightFromFloor>1.50</HeightFromFloor>
+													<DeckWindowType>continuous</DeckWindowType>
+													<HasBlind>false</HasBlind>
+													<CanBeOpened>false</CanBeOpened>
+												</DeckWindow>
+												<DeckWindow version="any" id="mb:DW-ddb_deck_2@window_left">
+													<Description>LeftSide windows continuous with thin strips</Description>
+													<Orientation>leftwards</Orientation>
+													<Length>9.50</Length>
+													<Height>0.90</Height>
+													<HeightFromFloor>1.50</HeightFromFloor>
+													<DeckWindowType>continuous</DeckWindowType>
+													<HasBlind>false</HasBlind>
+													<CanBeOpened>false</CanBeOpened>
+												</DeckWindow>
+												<DeckWindow version="any" id="mb:DW-ddb_deck_2@window_right_forward">
+													<Description>Right Side window in front of starirwells continuous with thin strios</Description>
+													<Orientation>rightwards</Orientation>
+													<Length>4.0</Length>
+													<Height>0.90</Height>
+													<SequenceFromFront>1</SequenceFromFront>
+													<HeightFromFloor>1.50</HeightFromFloor>
+													<DeckWindowType>continuous</DeckWindowType>
+													<HasBlind>false</HasBlind>
+													<CanBeOpened>false</CanBeOpened>
+												</DeckWindow>
+												<DeckWindow version="any" id="mb:DW-ddb_deck_2@window_right_rear">
+													<Description>Right Side window in front of starirwells continuous with thin strips</Description>
+													<Orientation>rightwards</Orientation>
+													<Length>4.0</Length>
+													<Height>0.90</Height>
+													<SequenceFromFront>2</SequenceFromFront>
+													<HeightFromFloor>1.50</HeightFromFloor>
+													<DeckWindowType>continuous</DeckWindowType>
+													<HasBlind>false</HasBlind>
+													<CanBeOpened>false</CanBeOpened>
+												</DeckWindow>
+												<DeckWindow version="any" id="mb:DW-ddb_deck_2@window_front">
+													<Description>Front window window  </Description>
+													<Orientation>forwards</Orientation>
+													<Length>3.0</Length>
+													<Height>0.90</Height>
+													<HeightFromFloor>1.50</HeightFromFloor>
+													<DeckWindowType>continuous</DeckWindowType>
+													<HasBlind>false</HasBlind>
+													<CanBeOpened>false</CanBeOpened>
+												</DeckWindow>
+												<DeckWindow version="any" id="mb:DW-ddb_deck_2@window_back">
+													<Description>Back window  </Description>
+													<Orientation>forwards</Orientation>
+													<Length>2.0</Length>
+													<Height>0.30</Height>
+													<HeightFromFloor>1.70</HeightFromFloor>
+													<DeckWindowType>continuous</DeckWindowType>
+													<HasBlind>false</HasBlind>
+													<CanBeOpened>false</CanBeOpened>
+												</DeckWindow>
+											</deckWindows>
+											<deckSpaceCapacities>
+												<DeckSpaceCapacity version="any" id="mb:DSC-ddb_deck_2@seat">
+													<LocatableSpotType>seat</LocatableSpotType>
+													<Capacity>37</Capacity>
+												</DeckSpaceCapacity>
+												<DeckSpaceCapacity version="any" id="mb:DSC-ddb_deck_2@standingSpace">
+													<LocatableSpotType>standingSpace</LocatableSpotType>
+													<Capacity>12</Capacity>
+												</DeckSpaceCapacity>
+											</deckSpaceCapacities>
+											<passengerSpots>
+												<!--  == Row 1 === -->
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@01A">
+													<Label>01A</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@01A">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r01"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c1"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@01A">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@01B">
+													<Label>01B</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@01B">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r01"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c2"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@01B">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@01C">
+													<Label>01C</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_12seating_area@01C">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r01"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c3"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@01C">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@01D">
+													<Label>01D</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@01D">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r01"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c4"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@01D">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!--  == Row 2 === -->
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@02A">
+													<Label>02A</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@02A">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r02"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c1"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@02A">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@02B">
+													<Label>02B</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@02B">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r02"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c2"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@02">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@02C">
+													<Label>02C</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@02C">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r02"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c3"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@02C">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@02D">
+													<Label>02D</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@02D">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r02"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c4"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@02D">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!--  == Row 3 === -->
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@03A">
+													<Label>03A</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@03A">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r03"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c1"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@03A">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@03B">
+													<Label>03B</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@03B">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r03"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c2"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@03B">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@03C">
+													<Label>03C</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@03C">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r03"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c3"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@03C">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@03D">
+													<Label>03D</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_1@seating_area@003D">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r03"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c4"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@03D">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!--  == Row 4 === -->
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@04A">
+													<Label>04A</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@04A">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r04"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c1"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@04A">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@04B">
+													<Label>04B</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@04B">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r04"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c2"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@04B">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<!--  == Row 5 === -->
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@05A">
+													<Label>05A</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@05A">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r05"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c1"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@05A">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@05B">
+													<Label>05B</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@05B">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r05"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c2"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@05B">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<!--  == Row 6 === -->
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@06A">
+													<Label>06A</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@06A">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r06"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c1"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@06A">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@06B">
+													<Label>06B</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@06B">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r06"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c2"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@06B">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@06C">
+													<Label>06C</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@06C">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r06"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c3"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@06C">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@06D">
+													<Label>06D</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@06D">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r06"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c4"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@06D">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!--  == Row 7 === -->
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@07A">
+													<Label>07A</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@07A">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r07"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c1"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@07A">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@07B">
+													<Label>07B</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@07B">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r07"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c2"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@07B">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@07C">
+													<Label>07C</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@07C">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r07"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c3"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@07C">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@07D">
+													<Label>07D</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@07D">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r07"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c4"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@07D">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!--  == Row 8 === -->
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@08A">
+													<Label>08A</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@08A">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r08"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c1"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@08A">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@08B">
+													<Label>08B</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@08B">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r08"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c2"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@08B">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@08C">
+													<Label>08C</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@08C">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r08"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c3"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@08C">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@08D">
+													<Label>08D</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@08D">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r08"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c4"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@08D">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!--  == Row 9 === -->
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@09A">
+													<Label>09A</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@09A">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r09"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c1"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@09A">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@09B">
+													<Label>09B</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@09B">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r09"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c2"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@09B">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@09C">
+													<Label>09C</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@09C">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r09"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c3"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@09C">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>true</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@09D">
+													<Label>09D</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@09D">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r09"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c4"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@09D">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<!--  == Row 10 === -->
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@10A">
+													<Label>10A</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@10A">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r10"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c1"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@10A">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@10B">
+													<Label>10B</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@10B">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r10"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c2"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@10B">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+													<IsBetweenSeats>true</IsBetweenSeats>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@10E">
+													<Label>10E</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@10E">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r10"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c5"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@10E">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+													<IsBetweenSeats>true</IsBetweenSeats>
+													<IsFacingAisle>true</IsFacingAisle>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@10C">
+													<Label>10C</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@10C">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r10"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c3"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@10C">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>false</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+													<IsBetweenSeats>true</IsBetweenSeats>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="mb:PS-ddb_deck_2@10D">
+													<Label>10D</Label>
+													<Orientation>forwards</Orientation>
+													<actualVehicleEquipments>
+														<ActualVehicleEquipment version="any" id="mb:AVE-ddb_deck_2@seating_area@10D">
+															<SeatEquipmentRef version="any" ref="mb:SEq-ddb_bench_seat"/>
+														</ActualVehicleEquipment>
+													</actualVehicleEquipments>
+													<SpotRowRef version="any" ref="mb:SR-ddb_deck_2@r10"/>
+													<SpotColumnRef version="any" ref="mb:SC-ddb_deck_2@c4"/>
+													<sensorsInSpot>
+														<SensorInSpot version="any" id="mb:ddb_deck_2@10D">
+															<SpotSensorRef version="any" ref="mb:SS-ddb_seat_sensor"/>
+														</SensorInSpot>
+													</sensorsInSpot>
+													<IsByWindow>true</IsByWindow>
+													<IsByAisle>false</IsByAisle>
+												</PassengerSpot>
+											</passengerSpots>
+										</PassengerSpace>
+									</deckSpaces>
+									<spotRows>
+										<SpotRow version="any" id="mb:SR-ddb_deck_2@r01">
+											<Label>Row 1</Label>
+										</SpotRow>
+										<SpotRow version="any" id="mb:SR-ddb_deck_2@r02">
+											<Label>Row 2</Label>
+										</SpotRow>
+										<SpotRow version="any" id="mb:SR-ddb_deck_2@r03">
+											<Label>Row 3</Label>
+										</SpotRow>
+										<SpotRow version="any" id="mb:SR-ddb_deck_2@r04">
+											<Label>Row 4</Label>
+										</SpotRow>
+										<SpotRow version="any" id="mb:SR-ddb_deck_2@r05">
+											<Label>Row 5</Label>
+										</SpotRow>
+										<SpotRow version="any" id="mb:SR-ddb_deck_2@r06">
+											<Label>Row 6</Label>
+										</SpotRow>
+										<SpotRow version="any" id="mb:SR-ddb_deck_2@r07">
+											<Label>Row </Label>
+										</SpotRow>
+										<SpotRow version="any" id="mb:SR-ddb_deck_2@r08">
+											<Label>Row 8</Label>
+										</SpotRow>
+										<SpotRow version="any" id="mb:SR-ddb_deck_2@r09">
+											<Label>Row 9</Label>
+										</SpotRow>
+										<SpotRow version="any" id="mb:SR-ddb_deck_2@r10">
+											<Label>Row 10</Label>
+										</SpotRow>
+									</spotRows>
+									<spotColumns>
+										<SpotColumn version="any" id="mb:SC-ddb_deck_2@c1">
+											<Label>Column A</Label>
+										</SpotColumn>
+										<SpotColumn version="any" id="mb:SC-ddb_deck_2@c2">
+											<Label>Column B</Label>
+										</SpotColumn>
+										<SpotColumn version="any" id="mb:SC-ddb_deck_2@c3">
+											<Label>Column C</Label>
+										</SpotColumn>
+										<SpotColumn version="any" id="mb:SC-ddb_deck_2@c4">
+											<Label>Column D</Label>
+										</SpotColumn>
+										<SpotColumn version="any" id="mb:SC-ddb_deck_2@c5">
+											<Label>Column E</Label>
+										</SpotColumn>
+									</spotColumns>
+								</Deck>
+							</decks>
+						</DeckPlan>
+					</deckPlans>
+					<schematicMaps>
+						<SchematicMap version="any" id="mb:SM-ddb_deck_1">
+							<Name>Basic Elements for  map of bus</Name>
+							<ImageUri>http:erebus.eu/plans/double_decker_floor_plan</ImageUri>
+							<members>
+								<SchematicMapMember version="any" id="mb:SME-ddb_deck_1">
+									<Name>Bottom Deck</Name>
+									<DeckRef version="any" ref="mb:Dk-ddb_deck_1"/>
+								</SchematicMapMember>
+								<!-- entrances -->
+								<SchematicMapMember version="any" id="mb:SME-ddb_deck_1@front">
+									<Name>Forward Entrance</Name>
+									<PassengerEntranceRef version="any" ref="mb:PE-ddb_deck_1@seating_area@forward_left_entrance"/>
+									<DisplayAsIcon>true</DisplayAsIcon>
+								</SchematicMapMember>
+								<SchematicMapMember version="any" id="mb:SME-ddb_deck_1@rear">
+									<Name>Rear Entrance</Name>
+									<PassengerEntranceRef version="any" ref="mb:PE-ddb_deck_1@seating_area@rear_entrance"/>
+									<DisplayAsIcon>true</DisplayAsIcon>
+								</SchematicMapMember>
+								<SchematicMapMember version="any" id="mb:SME-ddb_deck_1@stairs">
+									<Name>Stairs </Name>
+									<PassengerSpaceRef version="any" ref="mb:PS-ddb_deck_1@stairwell"/>
+									<DisplayAsIcon>true</DisplayAsIcon>
+								</SchematicMapMember>
+								<!-- dec2 -->
+								<SchematicMapMember version="any" id="mb:SME-ddb_deck_2">
+									<Name>Top Deck</Name>
+									<DeckRef version="any" ref="mb:Dk-ddb_deck_2"/>
+								</SchematicMapMember>
+							</members>
+						</SchematicMap>
+					</schematicMaps>
+				</ResourceFrame>
+				<ServiceFrame version="1.0" id="mb:SF-deck_plan_example" responsibilitySetRef="mb:RS-vehicle_data">
+					<Name>Deck Plan  Assignment   Example</Name>
+					<Description>This is an example showing how one might assign a Deck Entrance to a journey so as to state which entrance will be at which point on the platform .  More sense for a train of ferry .</Description>
+					<stopAssignments>
+						<PassengerStopAssignment version="any" id="mb:PSA-sj001a" order="1">
+							<Name>To a particular stopt</Name>
+							<ScheduledStopPointRef versionRef="EXTERNAL" ref="mb:SPP-Gotham_bus_station"/>
+							<StopPlaceRef versionRef="EXTERNAL" ref="mb:SP-Gotham_bus_interchange"/>
+							<QuayRef versionRef="EXTERNAL" ref="mb:Qy-Gotham_bus_interchange@P1"/>
+							<BoardingPositionRef versionRef="EXTERNAL" ref="mb:BP-Gotham_bus_interchange@P1@A"/>
+							<passengerBoardingPositionAssignments>
+								<DeckEntranceAssignment version="any" id="mb:DEA-sj001a@front" order="1">
+									<Name>Board at front from position A</Name>
+									<BoardingUse>true</BoardingUse>
+									<AlightingUse>false</AlightingUse>
+									<PositionOfTrainElement>1</PositionOfTrainElement>
+									<BoardingPositionRef versionRef="EXTERNAL" ref="mb:BP-Gotham_bus_interchange@P1@A"/>
+									<EntranceToVehicle>Board at front</EntranceToVehicle>
+									<PassengerEntranceRef version="any" ref="mb:PE-ddb_deck_1@seating_area@forward_left_entrance"/>
+								</DeckEntranceAssignment>
+								<DeckEntranceAssignment version="any" id="mb:DEA-sj001a@rear" order="2">
+									<Name>Exit at rear from position A</Name>
+									<!-- NB to do which side -->
+									<BoardingUse>false</BoardingUse>
+									<AlightingUse>true</AlightingUse>
+									<PositionOfTrainElement>1</PositionOfTrainElement>
+									<BoardingPositionRef versionRef="EXTERNAL" ref="mb:BP-Gotham_bus_interchange@P1@B"/>
+									<EntranceToVehicle>exit  at rear</EntranceToVehicle>
+									<PassengerEntranceRef version="any" ref="mb:PE-ddb_deck_1@seating_area@rear_entrance"/>
+								</DeckEntranceAssignment>
+							</passengerBoardingPositionAssignments>
+						</PassengerStopAssignment>
+					</stopAssignments>
+				</ServiceFrame>
+				<!--==== TIMEABLE ==== -->
+				<TimetableFrame version="1.0" id="mb:TF-deck_plan_example" responsibilitySetRef="mb:RS-journey_data">
+					<Name>Deck Plan    Example</Name>
+					<Description>This is an example showing how one might assign a deck plan to a journey and also apply conditions.</Description>
+					<!-- =======Journeys========== -->
+					<vehicleJourneys>
+						<ServiceJourney version="any" id="mb:SJ-sj001">
+							<DepartureTime>10:10:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef versionRef="EXTERNAL" ref="weekday"/>
+							</dayTypes>
+							<ServicePatternRef versionRef="EXTERNAL" ref="r123"/>
+							<VehicleTypeRef version="any" ref="mb:VT-double_decker"/>
+							<OperatorRef version="any" ref="noc:OP-erebus"/>
+							<parts>
+								<JourneyPart version="any" id="mb:JP-sj001@a">
+									<Description>In to centre </Description>
+									<MainPartRef version="any" ref="mb:JP-sj001@a"/>
+									<FromStopPointRef versionRef="EXTERNAL" ref="mb:SSP-stop001"/>
+									<ToStopPointRef versionRef="EXTERNAL" ref="mb:SSP-stop015"/>
+									<StartTime>10:10:00</StartTime>
+									<EndTime>10:30:00</EndTime>
+								</JourneyPart>
+								<JourneyPart version="any" id="mb:JP-sj001@b">
+									<Description>Across centre - doors open </Description>
+									<MainPartRef version="any" ref="mb:JP-sj001@a"/>
+									<FromStopPointRef versionRef="EXTERNAL" ref="mb:SSP-stop015"/>
+									<ToStopPointRef versionRef="EXTERNAL" ref="mb:SSP-stop021"/>
+									<StartTime>10:31:00</StartTime>
+									<EndTime>10:50:00</EndTime>
+								</JourneyPart>
+								<JourneyPart version="any" id="mb:JP-sj001@c">
+									<Description>Out of to centre doors open </Description>
+									<MainPartRef version="any" ref="mb:JP-sj001@a"/>
+									<FromStopPointRef versionRef="EXTERNAL" ref="mb:SSP-stop015"/>
+									<ToStopPointRef versionRef="EXTERNAL" ref="mb:SSP-stop030"/>
+									<StartTime>10:50:00</StartTime>
+									<EndTime>11:20:00</EndTime>
+								</JourneyPart>
+							</parts>
+						</ServiceJourney>
+					</vehicleJourneys>
+					<deckPlanAssignments>
+						<!-- This is an somewhat  artificial example to show a different deck plan assignment on  different journey parts -->
+						<DeckPlanAssignment version="any" id="mb:DPA-sj001a" order="1">
+							<Name>Assign double decker bus to Journey - doors shut</Name>
+							<DeckPlanRef version="any" ref="mb:DP-double_decker_bus"/>
+							<VehicleTypeRef version="any" ref="mb:VT-double_decker"/>
+							<ServiceJourneyRef version="any" ref="mb:SJ-sj001"/>
+							<JourneyPartRef version="any" ref="mb:JP-sj001@a"/>
+						</DeckPlanAssignment>
+						<DeckPlanAssignment version="any" id="mb:DPA-sj001b" order="2">
+							<Name>Assign double decker bus to Journey - doors open</Name>
+							<DeckPlanRef versionRef="EXTERNAL" ref="double_decker_bus@doors_open"/>
+							<VehicleTypeRef version="any" ref="mb:VT-double_decker"/>
+							<ServiceJourneyRef version="any" ref="mb:SJ-sj001"/>
+							<JourneyPartRef version="any" ref="mb:JP-sj001@b"/>
+						</DeckPlanAssignment>
+						<DeckPlanAssignment version="any" id="mb:DPA-sj001c" order="1">
+							<Name>Assign double decker bus to Journey - doors shut</Name>
+							<DeckPlanRef version="any" ref="mb:DP-double_decker_bus"/>
+							<VehicleTypeRef version="any" ref="mb:VT-double_decker"/>
+							<ServiceJourneyRef version="any" ref="mb:SJ-sj001"/>
+							<JourneyPartRef version="any" ref="mb:JP-sj001@c"/>
+						</DeckPlanAssignment>
+					</deckPlanAssignments>
+					<vehicleJourneyStopAssignments>
+						<VehicleJourneyStopAssignment version="any" id="mb:VJSA-sj001a" order="1">
+							<Name>Ties a STOP ASSIGNMENT to a specific  VEHICLE JOURNEY  </Name>
+							<Description>Will use a specific assignment at a specifc stiop just for this journey</Description>
+							<VehicleJourneyRef version="any" ref="mb:SJ-sj001"/>
+							<PassengerStopAssignmentRef version="any" ref="mb:PSA-sj001a"/>
+						</VehicleJourneyStopAssignment>
+					</vehicleJourneyStopAssignments>
+				</TimetableFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

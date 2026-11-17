@@ -61,7 +61,7 @@
 			<FrameDefaults>
 				<!---  The default means that actually we could leave off all id s that belong to the mc: namespace. -->
 				<DefaultCodespaceRef ref="mc_data"/>
-				<DefaultDataSourceRef ref="mc:my_car" version="any"/>
+				<DefaultDataSourceRef ref="mc:my_car" version="1.0"/>
 				<DefaultCurrency>EUR</DefaultCurrency>
 			</FrameDefaults>
 			<frames>
@@ -76,7 +76,7 @@
 						</Codespace>
 					</codespaces>
 					<dataSources>
-						<DataSource id="mc:my_car" version="any">
+						<DataSource id="mc:my_car" version="1.0">
 							<Email>feedback@mycar.com</Email>
 						</DataSource>
 					</dataSources>
@@ -87,7 +87,7 @@
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="mc:tariff_data@creates">
 									<DataRoleType>creates</DataRoleType>
-									<StakeholderRoleType>FareManagement</StakeholderRoleType>
+									<StakeholderRoleType>fareManagement</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="coc:MCR" version="any">My Car</ResponsibleOrganisationRef>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -97,7 +97,7 @@
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="mc:network_data@creates">
 									<DataRoleType>creates</DataRoleType>
-									<StakeholderRoleType>Planning</StakeholderRoleType>
+									<StakeholderRoleType>planning</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="coc:MCR" version="any">My Car</ResponsibleOrganisationRef>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -122,6 +122,11 @@
 								<Phone>+32 1293 449191</Phone>
 							</ContactDetails>
 							<ContactType>information</ContactType>
+						</Contact>
+						<Contact id="contact1" version="any">
+							<ContactDetails>
+								<Phone>+41 1 800 80 80</Phone>
+							</ContactDetails>
 						</Contact>
 					</contacts>
 					<organisations>
@@ -183,8 +188,8 @@
 							<Name>Small car</Name>
 							<ReversingDirection>false</ReversingDirection>
 							<SelfPropelled>true</SelfPropelled>
-							<PropulsionType>electric</PropulsionType>
-							<FuelType>battery</FuelType>
+							<PropulsionTypes>electric</PropulsionTypes>
+							<FuelTypes>battery</FuelTypes>
 							<TransportMode>selfDrive</TransportMode>
 							<PassengerCapacity version="any" id="car_club">
 								<SeatingCapacity>4</SeatingCapacity>
@@ -374,6 +379,7 @@
 							<members>
 								<Vehicle version="any" id="car_01">
 									<OperatorRef version="any" ref="coc:MCR"/>
+									<ContactRef ref="contact1" version="any"/>
 									<SimpleVehicleTypeRef version="any" ref="small_car"/>
 									<VehicleModelRef version="any" ref="mini_whiz"/>
 									<CarModelProfileRef version="any" ref="model_a"/>
@@ -439,11 +445,11 @@
 						</OnlineService>
 					</onlineServices>
 					<vehicleMeetingPlaceAssignments>
-						<VehicleSharingPlaceAssignment version="any" id="metrobik@car_station_alpha_A1" order="1">
+						<VehicleSharingPlaceAssignment version="any" id="metrobik@car_station_alpha_A1-1">
 							<VehicleSharingServiceRef version="any" ref="my_car_club"/>
 							<VehicleSharingParkingAreaRef version="any" ref="car_station_alpha_A1"/>
 						</VehicleSharingPlaceAssignment>
-						<VehicleSharingPlaceAssignment version="any" id="car_station_beta" order="1">
+						<VehicleSharingPlaceAssignment version="any" id="car_station_beta-1">
 							<VehicleSharingServiceRef version="any" ref="my_car_club"/>
 							<VehicleSharingParkingAreaRef version="any" ref="car_station_beta_B1"/>
 						</VehicleSharingPlaceAssignment>
@@ -475,7 +481,7 @@
 								<FareStructureElement version="any" id="my_car@membership@access">
 									<Name>Access rights</Name>
 									<TypeOfFareStructureElementRef versionRef="EXTERNAL" ref="fxc:can_access"/>
-									<GenericParameterAssignment version="any" order="1" id="my_car@membership@access">
+									<GenericParameterAssignment version="any" id="my_car@membership@access-1">
 										<TypeOfAccessRightAssignmentRef versionRef="EXTERNAL" ref="fxc:condition_of_use"/>
 										<LimitationGroupingType>AND</LimitationGroupingType>
 										<limitations>
@@ -499,7 +505,7 @@
 								<FareStructureElement version="any" id="my_car@membership@eligibility">
 									<Name>Eligible user types</Name>
 									<TypeOfFareStructureElementRef versionRef="EXTERNAL" ref="fxc:eligibility"/>
-									<GenericParameterAssignment order="1" id="my_car@membership@eligibility" version="any">
+									<GenericParameterAssignment id="my_car@membership@eligibility-1" version="any">
 										<TypeOfAccessRightAssignmentRef versionRef="EXTERNAL" ref="fxc:eligible"/>
 										<limitations>
 											<!---  ===ELIGIBILITY USAGE PARAMETERS =========    -->
@@ -507,9 +513,9 @@
 												<Name>Qualified driver</Name>
 												<UserType>adult</UserType>
 												<MinimumAge>18</MinimumAge>
-												<typesOfProofRequiredRef>
+												<typesOfProofAcceptedRef>
 													<TypeOfProofRef versionRef="external" ref="driving_licence"/>
-												</typesOfProofRequiredRef>
+												</typesOfProofAcceptedRef>
 											</UserProfile>
 										</limitations>
 									</GenericParameterAssignment>
@@ -517,7 +523,7 @@
 								<FareStructureElement version="any" id="my_car@membership@conditions_of_travel">
 									<Name>Conditions on travel</Name>
 									<TypeOfFareStructureElementRef versionRef="EXTERNAL" ref="fxc:travel_conditions"/>
-									<GenericParameterAssignment version="any" order="1" id="my_car@membership@conditions_of_travel">
+									<GenericParameterAssignment version="any" id="my_car@membership@conditions_of_travel-1">
 										<Name>Conditions of travel</Name>
 										<TypeOfAccessRightAssignmentRef versionRef="EXTERNAL" ref="fxc:condition_of_use"/>
 										<LimitationGroupingType>AND</LimitationGroupingType>
@@ -532,7 +538,7 @@
 								<FareStructureElement version="any" id="my_car@membership@conditions_of_sale">
 									<Name>Conditions of sale</Name>
 									<TypeOfFareStructureElementRef versionRef="EXTERNAL" ref="fxc:sale_conditions"/>
-									<GenericParameterAssignment version="any" order="1" id="my_car@membership@conditions_of_sale">
+									<GenericParameterAssignment version="any" id="my_car@membership@conditions_of_sale-1">
 										<Name>Conditions of sale</Name>
 										<TypeOfAccessRightAssignmentRef versionRef="EXTERNAL" ref="fxc:condition_of_sale"/>
 										<LimitationGroupingType>AND</LimitationGroupingType>
@@ -571,7 +577,7 @@
 								<FareStructureElement version="any" id="my_car@single_session@access">
 									<Name>Anywhere in Zone</Name>
 									<TypeOfFareStructureElementRef ref="fxc:access"/>
-									<GenericParameterAssignment version="any" order="01" id="my_car@single_session@access">
+									<GenericParameterAssignment version="any" id="my_car@single_session@access-01">
 										<TypeOfAccessRightAssignmentRef versionRef="EXTERNAL" ref="fxc:can_access"/>
 										<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
 										<validityParameters>
@@ -592,7 +598,7 @@
 								<FareStructureElement version="any" id="my_car@single_session@eligibility">
 									<Name>Eligible user types</Name>
 									<TypeOfFareStructureElementRef versionRef="EXTERNAL" ref="fxc:eligibility"/>
-									<GenericParameterAssignment order="1" id="my_car@single_session@eligibility" version="any">
+									<GenericParameterAssignment id="my_car@single_session@eligibility-1" version="any">
 										<TypeOfAccessRightAssignmentRef versionRef="EXTERNAL" ref="fxc:eligible"/>
 										<limitations>
 											<!---  ===ELIGIBILITY USAGE PARAMETERS =========    -->
@@ -603,7 +609,7 @@
 								<FareStructureElement version="any" id="my_car@single_session@conditions_of_travel">
 									<Name>Conditions on travel</Name>
 									<TypeOfFareStructureElementRef versionRef="EXTERNAL" ref="fxc:travel_conditions"/>
-									<GenericParameterAssignment version="any" order="1" id="my_car@single_session@conditions_of_travel">
+									<GenericParameterAssignment version="any" id="my_car@single_session@conditions_of_travel-1">
 										<Name>Conditions of travel</Name>
 										<TypeOfAccessRightAssignmentRef versionRef="EXTERNAL" ref="fxc:condition_of_use"/>
 										<LimitationGroupingType>AND</LimitationGroupingType>
@@ -630,7 +636,7 @@
 								<FareStructureElement version="any" id="my_car@single_session@conditions_of_sale">
 									<Name>Conditions of sale</Name>
 									<TypeOfFareStructureElementRef versionRef="EXTERNAL" ref="fxc:sale_conditions"/>
-									<GenericParameterAssignment version="any" order="1" id="my_car@single_session@conditions_of_sale">
+									<GenericParameterAssignment version="any" id="my_car@single_session@conditions_of_sale-1">
 										<Name>Conditions of sale</Name>
 										<TypeOfAccessRightAssignmentRef versionRef="EXTERNAL" ref="fxc:condition_of_sale"/>
 										<LimitationGroupingType>AND</LimitationGroupingType>
@@ -705,7 +711,7 @@
 							</validableElements>
 							<!--==== ACCESS RIGHTs ===== -->
 							<accessRightsInProduct>
-								<AccessRightInProduct version="any" id="my_car@single_session" order="1">
+								<AccessRightInProduct version="any" id="my_car@single_session-1">
 									<ValidableElementRef version="any" ref="my_car@single_session@travel"/>
 								</AccessRightInProduct>
 							</accessRightsInProduct>
@@ -752,7 +758,7 @@
 							<BrandingRef version="any" ref="myBrand"/>
 							<Name>My Car club membership</Name>
 							<salesOfferPackageElements>
-								<SalesOfferPackageElement version="any" id="mycar_online@membership-SOP@mobile_app" order="1">
+								<SalesOfferPackageElement version="any" id="mycar_online@membership-SOP@mobile_app">
 									<TypeOfTravelDocumentRef version="any" ref="mobile_application_data"/>
 									<SaleDiscountRightRef version="any" ref="mycar_online@membership"/>
 								</SalesOfferPackageElement>
@@ -765,7 +771,7 @@
 								<RequiresAccount>true</RequiresAccount>
 							</ConditionSummary>
 							<validityParameterAssignments>
-								<GenericParameterAssignment version="any" id="my_car@single_session-SOP@mobileApp" order="1">
+								<GenericParameterAssignment version="any" id="my_car@single_session-SOP@mobileApp-1">
 									<Name>Must be Registered member of floggit</Name>
 									<limitations>
 										<EntitlementRequired version="any" id="my_car@single_session-SOP@mobileApp@registered">
@@ -781,7 +787,7 @@
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
 							<distributionAssignments>
-								<DistributionAssignment version="any" id="my_car@single_session-SOP@mobileApp" order="1">
+								<DistributionAssignment version="any" id="my_car@single_session-SOP@mobileApp-1">
 									<Name>By Mobile app</Name>
 									<DistributionChannelRef version="any" ref="mobile_application"/>
 									<DistributionChannelType>mobileDevice</DistributionChannelType>
@@ -790,7 +796,7 @@
 								</DistributionAssignment>
 							</distributionAssignments>
 							<salesOfferPackageElements>
-								<SalesOfferPackageElement version="any" id="my_car@single_session-SOP@mobileApp" order="1">
+								<SalesOfferPackageElement version="any" id="my_car@single_session-SOP@mobileApp">
 									<TypeOfTravelDocumentRef version="any" ref="mobile_application_data"/>
 									<PreassignedFareProductRef version="any" ref="my_car@single_session"/>
 								</SalesOfferPackageElement>
@@ -903,7 +909,7 @@ This Shows  sample Purchases
 			<frames>
 				<MobilityJourneyFrame version="1.2" id="mct:sample_transactions">
 					<vehicleAccessCredentials>
-						<VehicleAccessCredentialsAssignment version="any" id="mct:Cust444@trans005@purchase_single_session" order="1">
+						<VehicleAccessCredentialsAssignment version="any" id="mct:Cust444@trans005@purchase_single_session">
 							<VehicleSharingServiceRef version="any" ref="my_car_club"/>
 							<MobileDeviceRef versionRef="External" ref="mct:317867122222"/>
 							<ServiceAccessCodeRef version="any" ref="mct:Good@Cust444@005@purchase_single_session"/>
@@ -1034,7 +1040,7 @@ This Shows  sample Purchases
 													<SalesOfferPackagePriceRef version="any" ref="mycar_online@membership-SOP@mobile_app"/>
 													<Amount>34.50</Amount>
 													<ruleStepResults>
-														<RuleStepResult id="mct:Cust444@contract001@t001@join_as_member@tax" order="1">
+														<RuleStepResult id="mct:Cust444@contract001@t001@join_as_member@tax-1">
 															<SalesOfferPackagePriceRef version="any" ref="mycar_online@membership-SOP@mobile_app"/>
 															<Amount>30.00</Amount>
 															<AdjustmentAmount>4.50</AdjustmentAmount>
@@ -1047,12 +1053,14 @@ This Shows  sample Purchases
 													<TravelSpecificationSummaryView>
 														<Start>2021-02-28T13:00:00</Start>
 														<OperatorRef version="any" ref="coc:MCR"/>
-														<VehicleSharingServiceRef version="any" ref="my_car_club"/>
 													</TravelSpecificationSummaryView>
 													<specificParameterAssignments>
-														<SpecificParameterAssignment version="any" order="1" id="mct:Cust444@contract001@t001@purchase_member">
+														<SpecificParameterAssignment version="any" id="mct:Cust444@contract001@t001@purchase_member-1">
 															<Name>Join as member</Name>
 															<SalesOfferPackageRef version="any" ref="mycar_online@membership-SOP@mobile_app"/>
+															<validityParameters>
+																<VehicleSharingServiceRef version="any" ref="my_car_club"/>
+															</validityParameters>
 															<TimeIntervalRef version="any" ref="my_car@1-day"/>
 														</SpecificParameterAssignment>
 													</specificParameterAssignments>
@@ -1074,10 +1082,11 @@ This Shows  sample Purchases
 										<SalesTransaction version="any" id="mct:Cust444@trans005@purchase_single_session">
 											<Name>Book and pay for  1-day use of a car</Name>
 											<Date>2021-10-01T10:10:00</Date>
+											<IsValid>true</IsValid>
 											<TypeOfFareContractEntryRef versionRef="EXTERNAL" ref="fxc:product_purchase"/>
 											<Amount>103.50</Amount>
 											<ruleStepResults>
-												<RuleStepResult id="mct:Cust444@trans005@purchase_single_session@tax" order="1">
+												<RuleStepResult id="mct:Cust444@trans005@purchase_single_session@tax-1">
 													<TimeIntervalPriceRef version="any" ref="my_car@1-day"/>
 													<Amount>90.00</Amount>
 													<AdjustmentAmount>13.50</AdjustmentAmount>
@@ -1086,6 +1095,7 @@ This Shows  sample Purchases
 												</RuleStepResult>
 											</ruleStepResults>
 											<PaymentMethod>creditCard</PaymentMethod>
+											<CardNumber>1231 0000 0000 0000 0000</CardNumber>
 											<travelSpecifications>
 												<OfferedTravelSpecification version="any" id="mct:Cust444@trans005@purchase_single_session">
 													<Date>2021-10-08T11:15:00</Date>
@@ -1098,10 +1108,9 @@ This Shows  sample Purchases
 														<Start>2021-10-08T11:15:00</Start>
 														<End>2021-10-09T11:14:59</End>
 														<Duration>P1D</Duration>
-														<VehicleSharingServiceRef version="any" ref="my_car_club"/>
 													</TravelSpecificationSummaryView>
 													<specificParameterAssignments>
-														<SpecificParameterAssignment version="any" order="1" id="mct:Cust444@trans005@purchase_single_session">
+														<SpecificParameterAssignment version="any" id="mct:Cust444@trans005@purchase_single_session-1">
 															<Name>Single session</Name>
 															<ValidableElementRef version="any" ref="my_car@single_session@travel"/>
 															<PreassignedFareProductRef version="any" ref="my_car@single_session"/>
@@ -1148,7 +1157,7 @@ This Shows  sample Purchases
 							<CustomerRef version="any" ref="mct:Cust444"/>
 							<CustomerAccountRef version="any" ref="mct:Cust444@AC7651"/>
 							<customerPurchasePackageElements>
-								<CustomerPurchasePackageElement version="any" id="mct:Good@Cust444@001" order="1" created="2021-02-28T13:00:00">
+								<CustomerPurchasePackageElement version="any" id="mct:Good@Cust444@001-1" created="2021-02-28T13:00:00">
 									<SalesOfferPackageElementRef version="any" ref="mycar_online@membership-SOP@mobile_app"/>
 								</CustomerPurchasePackageElement>
 							</customerPurchasePackageElements>
@@ -1157,7 +1166,7 @@ This Shows  sample Purchases
 								<CustomerPurchasePackagePrice version="any" id="mct:Good@Cust444@001" created="2021-02-28T13:00:00">
 									<Amount>34.50</Amount>
 									<ruleStepResults>
-										<RuleStepResult id="mct:Good@Cust444@001@tax" order="1">
+										<RuleStepResult id="mct:Good@Cust444@001@tax-1">
 											<SalesOfferPackagePriceRef version="any" ref="mycar_online@membership-SOP@mobile_app"/>
 											<Amount>30.00</Amount>
 											<AdjustmentAmount>4.50</AdjustmentAmount>
@@ -1180,7 +1189,7 @@ This Shows  sample Purchases
 							<CustomerRef version="any" ref="mct:Cust444"/>
 							<CustomerAccountRef version="any" ref="mct:Cust444@AC7651"/>
 							<customerPurchasePackageElements>
-								<CustomerPurchasePackageElement version="any" id="mct:Good@Cust444@005" order="1" created="2021-10-01T10:10:00">
+								<CustomerPurchasePackageElement version="any" id="mct:Good@Cust444@005-1" created="2021-10-01T10:10:00">
 									<SalesOfferPackageElementRef version="any" ref="my_car@single_session-SOP@mobileApp"/>
 									<elementAccesses>
 										<CustomerPurchasePackageElementAccess version="any" id="mct:Good@Cust444@005@02" created="2021-10-01T10:10:00">
@@ -1197,7 +1206,7 @@ This Shows  sample Purchases
 										</CustomerPurchasePackageElementAccess>
 									</elementAccesses>
 									<validityParameterAssignments>
-										<CustomerPurchaseParameterAssignment version="any" id="mct:Good@Cust444@005" order="1">
+										<CustomerPurchaseParameterAssignment version="any" id="mct:Good@Cust444@005-1">
 											<validityParameters>
 												<OperatorRef version="any" ref="coc:MCR"/>
 												<DistributionChannelRef version="any" ref="mobile_application"/>
@@ -1216,7 +1225,7 @@ This Shows  sample Purchases
 								<CustomerPurchasePackagePrice version="any" id="mct:Good@Cust444@005" created="2021-10-01T10:10:00">
 									<Amount>103.50</Amount>
 									<ruleStepResults>
-										<RuleStepResult id="mct:Good@Cust444@005@tax" order="1">
+										<RuleStepResult id="mct:Good@Cust444@005@tax-1">
 											<TimeIntervalPriceRef version="any" ref="my_car@1-day"/>
 											<Amount>90.00</Amount>
 											<AdjustmentAmount>13.50</AdjustmentAmount>
@@ -1236,7 +1245,7 @@ This Shows  sample Purchases
 									<TypeOfTravelDocumentRef version="any" ref="mobile_application_data"/>
 									<CustomerPurchasePackageRef version="any" ref="mct:Good@Cust444@005"/>
 									<AccessCode>9876</AccessCode>
-									<VehicleAccessCredentialsAssignmentRef version="any" ref="mct:Cust444@trans005@purchase_day_pase"/>
+									<VehicleAccessCredentialsAssignmentRef version="any" ref="mct:Cust444@trans005@purchase_single_session"/>
 								</ServiceAccessCode>
 							</travelDocuments>
 							<MobileDeviceRef versionRef="external" ref="mct:317867122222"/>

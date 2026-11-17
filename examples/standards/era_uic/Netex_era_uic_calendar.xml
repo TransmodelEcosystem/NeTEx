@@ -51,7 +51,7 @@ This example shows the usage of Operating calendars with reference to it from th
 						<ResponsibilitySet id="tap:operates@0019" version="any">
 							<roles>
 								<ResponsibilityRoleAssignment id="tap:operates@0019" version="any">
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 								</ResponsibilityRoleAssignment>
 							</roles>
 						</ResponsibilitySet>
@@ -80,14 +80,17 @@ This example shows the usage of Operating calendars with reference to it from th
 					<VehicleModes>rail</VehicleModes>
 					<vehicleJourneys>
 						<!-- =====     == -->
-						<DatedServiceJourney id="tap:00199121_2011-02-07/2011-08-26" version="any">
+						<ServiceJourney id="tap:00199121_2011-02-07/2011-08-26" version="any">
 							<ShortName>EUROSTAR</ShortName>
+							<dayTypes>
+								<DayTypeRef ref="tap:UicOperatingPeriod:2011-02-07/2011-08-26_111110011111001111100111110011111001111100111110011111001111100111110011111000111100011110011111001111100111110001111001111100111110011111001111100111110011111001111100111110011111001111100111110011111"/>
+							</dayTypes>
 							<LineView>
 								<PublicCode>9121</PublicCode>
 								<TransportMode>rail</TransportMode>
 							</LineView>
 							<calls>
-								<Call id="tap:00199121_2011-02-07/2011-08-26" version="any" order="1">
+								<Call id="tap:00199121_2011-02-07/2011-08-26-1" version="any">
 									<ScheduledStopPointView>
 										<ScheduledStopPointRef ref="tap:008814002"/>
 										<Name>BRUXELLES MIDI EUROSTAR</Name>
@@ -97,7 +100,7 @@ This example shows the usage of Operating calendars with reference to it from th
 										<Time>09:59:00</Time>
 									</Departure>
 								</Call>
-								<Call id="tap:00199121_2011-02-07/2011-08-26" version="any" order="2">
+								<Call id="tap:00199121_2011-02-07/2011-08-26-2" version="any">
 									<ScheduledStopPointView>
 										<ScheduledStopPointRef ref="tap:008722326"/>
 										<Name>LILLE EUROPE</Name>
@@ -109,7 +112,7 @@ This example shows the usage of Operating calendars with reference to it from th
 										<Time>10:35:00</Time>
 									</Departure>
 								</Call>
-								<Call id="tap:00199121_2011-02-07/2011-08-26" version="any" order="3">
+								<Call id="tap:00199121_2011-02-07/2011-08-26-3" version="any">
 									<ScheduledStopPointView>
 										<ScheduledStopPointRef ref="tap:007015400"/>
 										<Name>ST PANCRAS</Name>
@@ -125,8 +128,7 @@ This example shows the usage of Operating calendars with reference to it from th
 									<ProvidedByRef ref="tap:operates@0019"/>
 								</ServiceFacilitySet>
 							</facilities>
-							<OperatingDayRef ref="tap:UicOperatingPeriod:2011-02-07/2011-08-26_111110011111001111100111110011111001111100111110011111001111100111110011111000111100011110011111001111100111110001111001111100111110011111001111100111110011111001111100111110011111001111100111110011111"/>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
 			</frames>

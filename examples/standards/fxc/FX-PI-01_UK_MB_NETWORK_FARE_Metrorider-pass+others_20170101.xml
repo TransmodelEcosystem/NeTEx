@@ -3207,7 +3207,7 @@ ______	______	______	_	|	______	______	______	______	______	______	________	|	__
 						</SalesOfferPackage>
 					</salesOfferPackages>
 				</FareFrame>
-				<FareFrame version="1.0" id="epd:UK:Metrobus:FareFrame_UK_PI_FARE_PRICE:Multitrip@trip:mb" responsibilitySetRef="mb:tariffs">
+				<FarePriceFrame version="1.0" id="epd:UK:Metrobus:FareFrame_UK_PI_FARE_PRICE:Multitrip@trip:mb" responsibilitySetRef="mb:tariffs">
 					<Name>Multitrip product prices</Name>
 					<TypeOfFrameRef version="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_PRICE:FXCP"/>
 					<FrameDefaults>
@@ -3341,7 +3341,7 @@ ______	______	______	_	|
 							</includes>
 						</FareTable>
 					</fareTables>
-				</FareFrame>
+				</FarePriceFrame>
 				<!-- Metrobus Gatrwickarea  Pass -->
 				<FareFrame version="1.0" id="epd:UK:Metrobus:FareFrame_UK_PI_FARE_PRODUCT:Gatwick_travelcard@Pass:mb" responsibilitySetRef="mb:tariffs">
 					<Name>Gatwick Travelcard</Name>
@@ -3774,7 +3774,7 @@ Metrobus Travel Shop, Crawley Bus Station, Marlborough Street, Crawley, BS1 3NU
 							<roles>
 								<ResponsibilityRoleAssignment version="1.0" id="mb:tariff_data@creates">
 									<DataRoleType>creates</DataRoleType>
-									<StakeholderRoleType>FareManagement</StakeholderRoleType>
+									<StakeholderRoleType>fareManagement</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="noc:METR" version="1.0">METR</ResponsibleOrganisationRef>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -3784,7 +3784,7 @@ Metrobus Travel Shop, Crawley Bus Station, Marlborough Street, Crawley, BS1 3NU
 							<roles>
 								<ResponsibilityRoleAssignment version="1.0" id="mb:network_data@creates">
 									<DataRoleType>creates</DataRoleType>
-									<StakeholderRoleType>Planning</StakeholderRoleType>
+									<StakeholderRoleType>planning</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="noc:METR" version="1.0">METR</ResponsibleOrganisationRef>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -3826,10 +3826,10 @@ Metrobus Travel Shop, Crawley Bus Station, Marlborough Street, Crawley, BS1 3NU
 						</ValueSet>
 						<ValueSet version="1.0" id="mb:accountTypes" classOfValues="TypeOfCustomerAccount">
 							<values>
-								<TypeOfCustomerAccount version="1.0" id="mb:m-ticket">
+								<TypeOfCustomerAccount version="1.0" id="mb:m-ticket-1">
 									<Name>m-ticket</Name>
 								</TypeOfCustomerAccount>
-								<TypeOfCustomerAccount version="1.0" id="mb:the-key">
+								<TypeOfCustomerAccount version="1.0" id="mb:the-key-1">
 									<Name>the Key</Name>
 								</TypeOfCustomerAccount>
 							</values>
@@ -3838,8 +3838,10 @@ Metrobus Travel Shop, Crawley Bus Station, Marlborough Street, Crawley, BS1 3NU
 					<organisations>
 						<!--==== Operators ==== -->
 						<Operator version="1.0" id="noc:METR">
+							<privateCodes>
+								<PrivateCode type="nocn">nocn:137122</PrivateCode>
+							</privateCodes>
 							<PublicCode>METR</PublicCode>
-							<PrivateCode type="nocn">nocn:137122</PrivateCode>
 							<Name>Metrobus</Name>
 							<ShortName>Metrobus</ShortName>
 							<TradingName>Metrobus Ltd</TradingName>
@@ -4248,7 +4250,7 @@ Unfortunately not. As our discounts are genuine discounts off of the cost of the
 							<roles>
 								<ResponsibilityRoleAssignment version="1.0" id="ezt:tariff_data@creates">
 									<DataRoleType>creates</DataRoleType>
-									<StakeholderRoleType>FareManagement</StakeholderRoleType>
+									<StakeholderRoleType>fareManagement</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="ezt:EASIT" version="1.0">METR</ResponsibleOrganisationRef>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -4509,7 +4511,7 @@ Excluded services: Services operated on behalf of Transport for London, City Sig
 						</SalesOfferPackage>
 					</salesOfferPackages>
 				</FareFrame>
-				<FareFrame version="1.0" id="epd:UK:Discovery:FareFrame_UK_PI_FARE_PRICE:DiscoveryNetwork@pass:dsc" responsibilitySetRef="dsc:products">
+				<FarePriceFrame version="1.0" id="epd:UK:Discovery:FareFrame_UK_PI_FARE_PRICE:DiscoveryNetwork@pass:dsc" responsibilitySetRef="dsc:products">
 					<Name>Discovery Pass Prices</Name>
 					<TypeOfFrameRef version="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_PRICE:FXCP"/>
 					<prerequisites>
@@ -4591,7 +4593,7 @@ Family (up to 5 people with a minimum of 1 adult and a maximum of 2 adults).
 							</cells>
 						</FareTable>
 					</fareTables>
-				</FareFrame>
+				</FarePriceFrame>
 				<ResourceFrame version="1.0" id="epd:UK:Discovery:ResourceFrame_UK_PI_COMMON:DiscoveryNetwork:dsc" responsibilitySetRef="dsc:products">
 					<Name>Discovery Pass Specific code values</Name>
 					<TypeOfFrameRef version="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_COMMON:FXCP"/>
@@ -4618,7 +4620,7 @@ Family (up to 5 people with a minimum of 1 adult and a maximum of 2 adults).
 							<Name>Discovery PassProducts</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="1.0" id="dsc:products">
-									<StakeholderRoleType>FareManagement</StakeholderRoleType>
+									<StakeholderRoleType>fareManagement</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="dsc:DSC" version="1.0"/>
 									<ResponsibleAreaRef ref="dsc:uk">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -4902,7 +4904,7 @@ You must buy 2 tickets at the same time.					</Description>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:prerequisites"/>
 									<GenericParameterAssignment version="01" id="jsp:Tariff@PlusBus@Day@prerequisites" order="1">
 										<Name>Only available as Add on to rail ticket</Name>
-										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:prerequisites"/>
+										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:otherprerequisites"/>
 										<LimitationGroupingType>AND</LimitationGroupingType>
 										<limitations>
 											<EntitlementRequired id="jsp:Tariff@PlusBus@Day@prequisites@single_trip" version="01">
@@ -4990,7 +4992,7 @@ You must buy 2 tickets at the same time.					</Description>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:prerequisites"/>
 									<GenericParameterAssignment version="01" id="jsp:Tariff@PlusBus@Season@prerequisites" order="1">
 										<Name>Only available as Add on to rail season pass</Name>
-										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:prerequisites"/>
+										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:otherprerequisites"/>
 										<LimitationGroupingType>AND</LimitationGroupingType>
 										<limitations>
 											<EntitlementRequired id="jsp:Tariff@PlusBus@Season@prequisites" version="01">
@@ -5675,7 +5677,7 @@ Metrobus (including Fastway services), Southdown PSV, Compass Travel
 					<dayTypes>
 						<FareDayType version="any" id="jsp:everyday">
 							<Name>Every day</Name>
-							<Description>ANy time</Description>
+							<Description>Any time</Description>
 							<EarliestTime>00:00:00</EarliestTime>
 							<properties>
 								<PropertyOfDay>
@@ -5759,7 +5761,7 @@ Metrobus (including Fastway services), Southdown PSV, Compass Travel
 							<Name>Plus Bus Products</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="1.0" id="jsp:products">
-									<StakeholderRoleType>FareManagement</StakeholderRoleType>
+									<StakeholderRoleType>fareManagement</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="jsp:JSP" version="1.0"/>
 									<ResponsibleAreaRef ref="jsp:uk">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -5769,7 +5771,7 @@ Metrobus (including Fastway services), Southdown PSV, Compass Travel
 							<Name>Plus Bus Tarff Zones</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="nptg:tariff_zones">
-									<StakeholderRoleType>FareManagement</StakeholderRoleType>
+									<StakeholderRoleType>fareManagement</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="fxc:DfT" version="fxc:v1.0"/>
 									<ResponsibleAreaRef ref="nptg:uk">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -6326,7 +6328,7 @@ E-mail: student.farecards@surreycc.gov.uk
 							<Name>ConcessionaryProducts</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="1.0" id="ncs:products">
-									<StakeholderRoleType>FareManagement</StakeholderRoleType>
+									<StakeholderRoleType>fareManagement</StakeholderRoleType>
 								</ResponsibilityRoleAssignment>
 							</roles>
 						</ResponsibilitySet>
@@ -6687,7 +6689,7 @@ This Shows sample Purchases
 							<roles>
 								<ResponsibilityRoleAssignment version="fxc:v1.0" id="fxc:FXC_metadata:DfT">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" versionRef="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" versionRef="nptg:v2.1"/>
 								</ResponsibilityRoleAssignment>
@@ -6814,13 +6816,17 @@ This Shows sample Purchases
 					<PricingParameterSet id="fxc:Common_Resources" version="fxc:v1.0">
 						<priceUnits>
 							<PriceUnit id="fxc:GBP" version="fxc:v1.0">
+								<privateCodes>
+									<PrivateCode>£</PrivateCode>
+								</privateCodes>
 								<Name>Pound Sterling</Name>
-								<PrivateCode>£</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 							<PriceUnit id="fxc:EUR" version="fxc:v1.0">
+								<privateCodes>
+									<PrivateCode>€</PrivateCode>
+								</privateCodes>
 								<Name>Euro</Name>
-								<PrivateCode>€</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 						</priceUnits>
@@ -7122,15 +7128,6 @@ This Shows sample Purchases
 						<DefaultSystemOfUnits>SiKilometresAndMetres</DefaultSystemOfUnits>
 						<DefaultCurrency>GBP</DefaultCurrency>
 					</FrameDefaults>
-					<versions>
-						<Version id="fxc:v1.0" version="any">
-							<ValidBetween>
-								<FromDate>2019-01-01T01:01:01Z</FromDate>
-							</ValidBetween>
-							<Description>FXC version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<typesOfValue>
 						<!-- ======== Code sets ========= -->
 						<ValueSet version="fxc:v1.0" id="fxc:PointsOfInterest_Classifications" classOfValues="PointOfInterestClassification">
@@ -7496,7 +7493,7 @@ This Shows sample Purchases
 								<TypeOfAccessRightAssignment version="fxc:v1.0" id="fxc:gives_entitlement">
 									<Name>Gives right to other products</Name>
 								</TypeOfAccessRightAssignment>
-								<TypeOfAccessRightAssignment version="fxc:v1.0" id="fxc:prerequisites">
+								<TypeOfAccessRightAssignment version="fxc:v1.0" id="fxc:otherprerequisites">
 									<Name>Requires right to other products</Name>
 								</TypeOfAccessRightAssignment>
 								<TypeOfAccessRightAssignment version="fxc:v1.0" id="fxc:penalties">
@@ -7608,12 +7605,6 @@ This Shows sample Purchases
 						<DefaultDataSourceRef ref="nptg:dft" version="nptg:v2.1"/>
 						<DefaultResponsibilitySetRef ref="nptg:NPTG_metadata" version="nptg:v2.1"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="nptg:v2.1" version="any">
-							<Description>NPTG version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="nptg:dft" version="nptg:v2.1">
 							<Email>standards@nptg.org.uk</Email>
@@ -7626,7 +7617,7 @@ This Shows sample Purchases
 							<roles>
 								<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:NPTG_metadata">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -7637,7 +7628,7 @@ This Shows sample Purchases
 							<roles>
 								<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:NPTG_data">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+									<StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptg:UK">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -7652,7 +7643,7 @@ This Shows sample Purchases
 							<values>
 								<TypeOfFrame version="nptg:v2.1" id="nptg:UK_NPTG_profile_payload">
 									<Name>NPTG Locations and  Tariff Zones Frame</Name>
-									<FrameClassRef nameOfClass="SiteeFrame"/>
+									<FrameClassRef nameOfClass="SiteFrame"/>
 									<classes>
 										<ClassInFrame nameOfClass="TopographicPlace">
 											<!-- 	 TopographicPlace maps to  a NPTG Locality 
@@ -7791,7 +7782,7 @@ This Shows sample Purchases
 												</ClassRelationshipInFrame>
 												<ClassRelationshipInFrame name="alternativeDescriptors">
 													<!--  NB Only coccasionally  actually populated in current data set -->
-													<RelationshipRef nameOfClass="TopographicPlaceDescriptior"/>
+													<RelationshipRef nameOfClass="TopographicPlaceDescriptor"/>
 													<!--   NptgLocality.alternativeDeiscriptors.Descriptor -->
 													<Mandatory>optional</Mandatory>
 													<Containment>byVersionedReference</Containment>
@@ -7812,7 +7803,7 @@ This Shows sample Purchases
 												</ClassRelationshipInFrame>
 											</relationships>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="TopographicDescriptor">
+										<ClassInFrame nameOfClass="TopographicPlaceDescriptor">
 											<!-- 	 TopographicPlace maps to  a NPTG Locality. 		lternativeDescriptors.Descrip  -->
 											<Mandatory>required</Mandatory>
 											<attributes>
@@ -7918,13 +7909,13 @@ This Shows sample Purchases
 												</ClassRelationshipInFrame>
 												<ClassRelationshipInFrame name="projection">
 													<!--  NptgPlusBusZone.Mapping  ..  <Location><Easting>  .. <Northing>  -->
-													<RelationshipRef nameOfClass="Polygon"/>
+													<RelationshipRef nameOfClass="gml:Polygon"/>
 													<Mandatory>required</Mandatory>
 													<Containment>inline</Containment>
 												</ClassRelationshipInFrame>
 											</relationships>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="Polygon">
+										<ClassInFrame nameOfClass="gml:Polygon">
 											<!-- 	 gml:Polygon  maps to  a NPTG PlusBusZone.Mapping  -->
 											<Mandatory>required</Mandatory>
 											<attributes>

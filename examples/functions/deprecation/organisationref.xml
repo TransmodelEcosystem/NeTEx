@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Deprecated OrganisationRef -->
+<PublicationDelivery xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns="http://www.netex.org.uk/netex" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.01" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2015-04-17T09:30:47.0Z</PublicationTimestamp>
+	<ParticipantRef>AURIGE001</ParticipantRef>
+	<PublicationRefreshInterval>P1Y</PublicationRefreshInterval>
+	<Description>Keeps OrganisationRef</Description>
+	<dataObjects>
+		<GeneralFrame version="001" id="AURIGE:TypeOfFrame:NETEX_ARRET-Le-Corbusier:LOC">
+			<Name>Frame NETEX_ARRET Le Corbusier</Name>
+			<Description>Frame NETEX_ARRET pour l'exemple d'arrêt Le Corbusier</Description>
+			<members modificationSet="all">
+				<!-- =========================================== -->
+				<!-- POLE MONOMODAL Le Corbusier -->
+				<StopPlace version="001" id="FR:78197:StopPlace:00001:LOC">
+					<Name>Le Corbusier</Name>
+					<Description>Pôle monomodal regroupant les arrêts monomodaux Le Corbusier, Lycée de Villaroy et Jules Michelet</Description>
+					<Centroid>
+						<Location id="AURIGE:Location:00001:LOC">
+							<Longitude>2.068554</Longitude>
+							<Latitude>48.764788</Latitude>
+						</Location>
+					</Centroid>
+					<CrossRoad>Intersection Avenue de l'Europe, Rue Eugène Violet Le Duc et Rue Le Corbusier</CrossRoad>
+					<Landmark>Lycée Villaroy et Gymnase de l'Aviation</Landmark>
+					<OrganisationRef version="001" ref="AURIGE:Operator:768:LOC"/>
+					<TransportMode>bus</TransportMode>
+					<StopPlaceType>onstreetBus</StopPlaceType>
+				</StopPlace>
+				<Operator version="001" id="AURIGE:Operator:768:LOC">
+					<CompanyNumber>768</CompanyNumber>
+					<Name>SQYBUS</Name>
+					<OrganisationType>operator</OrganisationType>
+				</Operator>
+			</members>
+		</GeneralFrame>
+	</dataObjects>
+</PublicationDelivery>

@@ -9,7 +9,7 @@
 				<Contributor>V1.0 Christophe Duquesne</Contributor>
 				<Contributor>Nicholas Knowles</Contributor>
 				<Coverage>Europe</Coverage>
-				<Creator>First drafted for version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.  mailto:schemer@netex.org.uk</Creator>
+				<Creator>First drafted for version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.</Creator>
 				<Date>
 					<Created>2010-09-04</Created>
 				</Date>
@@ -100,6 +100,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a TEMPLATE VEHICLE JOURNEY.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassTemplateServiceJourneyRefStructureType" default="TemplateServiceJourney">
+					<xsd:annotation>
+						<xsd:documentation>Automatic reference class for TemplateServiceJourneyRefStructure</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -110,7 +131,7 @@ Rail transport, Roads and Road transport
 		</xsd:annotation>
 		<xsd:restriction base="GroupOfEntitiesIdType"/>
 	</xsd:simpleType>
-	<xsd:element name="JourneyFrequencyGroupRef" type="JourneyFrequencyGroupRefStructure" abstract="false" substitutionGroup="GroupOfEntitiesRef_">
+	<xsd:element name="JourneyFrequencyGroupRef" type="JourneyFrequencyGroupRefStructure" substitutionGroup="GroupOfEntitiesRef_Dummy">
 		<xsd:annotation>
 			<xsd:documentation>Reference to a JOURNEY FREQUENCY GROUP.</xsd:documentation>
 		</xsd:annotation>
@@ -126,6 +147,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Reference to a JOURNEY FREQUENCY GROUP.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassJourneyFrequencyGroupRefStructureType">
+					<xsd:annotation>
+						<xsd:documentation>Automatic reference class for JourneyFrequencyGroupRefStructure</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -158,7 +200,7 @@ Rail transport, Roads and Road transport
 		</xsd:annotation>
 		<xsd:restriction base="JourneyFrequencyGroupIdType"/>
 	</xsd:simpleType>
-	<xsd:element name="HeadwayJourneyGroupRef" type="HeadwayJourneyGroupRefStructure" abstract="false" substitutionGroup="JourneyFrequencyGroupRef">
+	<xsd:element name="HeadwayJourneyGroupRef" type="HeadwayJourneyGroupRefStructure" substitutionGroup="JourneyFrequencyGroupRef">
 		<xsd:annotation>
 			<xsd:documentation>Reference to a HEADWAY JOURNEY GROUP.</xsd:documentation>
 		</xsd:annotation>
@@ -174,6 +216,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Reference to a HEADWAY JOURNEY GROUP.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassHeadwayJourneyGroupRefStructureType" default="HeadwayJourneyGroup">
+					<xsd:annotation>
+						<xsd:documentation>Automatic reference class for HeadwayJourneyGroupRefStructure</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -184,7 +247,7 @@ Rail transport, Roads and Road transport
 		</xsd:annotation>
 		<xsd:restriction base="JourneyFrequencyGroupIdType"/>
 	</xsd:simpleType>
-	<xsd:element name="RhythmicalJourneyGroupRef" type="RhythmicalJourneyGroupRefStructure" abstract="false" substitutionGroup="JourneyFrequencyGroupRef">
+	<xsd:element name="RhythmicalJourneyGroupRef" type="RhythmicalJourneyGroupRefStructure" substitutionGroup="JourneyFrequencyGroupRef">
 		<xsd:annotation>
 			<xsd:documentation>Reference to a RHYTHMICAL JOURNEY GROUP.</xsd:documentation>
 		</xsd:annotation>
@@ -200,6 +263,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Reference to a RHYTHMICAL JOURNEY GROUP.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassRhythmicalJourneyGroupRefStructureType" default="RhythmicalJourneyGroup">
+					<xsd:annotation>
+						<xsd:documentation>Automatic reference class for RhythmicalJourneyGroupRefStructure</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>

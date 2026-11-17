@@ -133,16 +133,16 @@ Use separate Composite frames to group
 								<FareSection version="01" id="tlx:Trilex@Rybniste-to-Liberec">
 									<Name>Rybniste to Liberec</Name>
 									<pointsOnSection>
-										<PointOnSection version="01" id="tlx:Rybniste-to-Liberec" order="1">
+										<PointOnSection version="01" id="tlx:Rybniste-to-Liberec_01" order="1">
 											<FareScheduledStopPointRef ref="uic:56719" version="01">Rybniste</FareScheduledStopPointRef>
 										</PointOnSection>
-										<PointOnSection version="01" id="tlx:Rybniste-to-Liberec" order="2">
+										<PointOnSection version="01" id="tlx:Rybniste-to-Liberec_02" order="2">
 											<FareScheduledStopPointRef ref="uic:96045" version="01">Varnsdorf</FareScheduledStopPointRef>
 										</PointOnSection>
-										<PointOnSection version="01" id="tlx:Rybniste-to-Liberec" order="5">
+										<PointOnSection version="01" id="tlx:Rybniste-to-Liberec_05" order="5">
 											<FareScheduledStopPointRef ref="uic:6113" version="01">Zittau</FareScheduledStopPointRef>
 										</PointOnSection>
-										<PointOnSection version="01" id="tlx:Rybniste-to-Liberec" order="6">
+										<PointOnSection version="01" id="tlx:Rybniste-to-Liberec_06" order="6">
 											<FareScheduledStopPointRef ref="uic:54212" version="01">Liberec</FareScheduledStopPointRef>
 										</PointOnSection>
 									</pointsOnSection>
@@ -150,16 +150,16 @@ Use separate Composite frames to group
 								<FareSection version="01" id="tlx:Trilex@Seifhennersdorf-to-Liberec">
 									<Name>Seifhennersdorf to Liberec</Name>
 									<pointsOnSection>
-										<PointOnSection version="01" id="tlx:Seifhennersdorf-to-Liberec" order="1">
+										<PointOnSection version="01" id="tlx:Seifhennersdorf-to-Liberec_01" order="1">
 											<FareScheduledStopPointRef ref="uic:6121" version="01">Seifhennersdorf</FareScheduledStopPointRef>
 										</PointOnSection>
-										<PointOnSection version="01" id="tlx:Seifhennersdorf-to-Liberec" order="2">
+										<PointOnSection version="01" id="tlx:Seifhennersdorf-to-Liberec_02" order="2">
 											<FareScheduledStopPointRef ref="uic:96045" version="01">Varnsdorf</FareScheduledStopPointRef>
 										</PointOnSection>
-										<PointOnSection version="01" id="tlx:Seifhennersdorf-to-Liberec" order="5">
+										<PointOnSection version="01" id="tlx:Seifhennersdorf-to-Liberec_03" order="5">
 											<FareScheduledStopPointRef ref="uic:6113" version="01">Zittau</FareScheduledStopPointRef>
 										</PointOnSection>
-										<PointOnSection version="01" id="tlx:Seifhennersdorf-to-Liberec" order="6">
+										<PointOnSection version="01" id="tlx:Seifhennersdorf-to-Liberec_04" order="6">
 											<FareScheduledStopPointRef ref="uic:54212" version="01">Liberec</FareScheduledStopPointRef>
 										</PointOnSection>
 									</pointsOnSection>
@@ -187,6 +187,11 @@ Use separate Composite frames to group
 									<GenericParameterAssignment id="tlx:Trilex@Tariff@Tagesticket@sections" version="01" order="1">
 										<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
 										<validityParameters>
+											<VehicleModes>rail</VehicleModes>
+											<!-- check PR #145 -->
+											<TransportSubmode>
+												<RailSubmode>longDistance</RailSubmode>
+											</TransportSubmode>
 											<FareSectionRef ref="tlx:Trilex@Dresden-to-Goerlitz" version="01"/>
 											<FareSectionRef ref="tlx:Trilex@Dresden-to-Liberec" version="01"/>
 											<FareSectionRef ref="tlx:Trilex@Seifhennersdorf-to-Liberec" version="01"/>
@@ -455,6 +460,11 @@ Saturdays / Sundays / public holidays: 00:00 to 03:00 the following day</Descrip
 									<Name>Dresden to Wroclaw section</Name>
 									<GenericParameterAssignment id="tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@de_pl" version="01" order="1">
 										<validityParameters>
+											<TransportModes>rail</TransportModes>
+											<!-- check PR #145 -->
+											<TransportSubmode>
+												<RailSubmode>highSpeedRail</RailSubmode>
+											</TransportSubmode>
 											<FareSectionRef ref="tlx:Trilex@Dresden-to-Wroclaw" version="01"/>
 										</validityParameters>
 									</GenericParameterAssignment>
@@ -1479,7 +1489,7 @@ issued to DB ticket vending machines.</Description>
 					<dayTypes>
 						<FareDayType version="any" id="tlx::everyday">
 							<Name>Every day</Name>
-							<Description>ANy time</Description>
+							<Description>Any time</Description>
 							<EarliestTime>00:00:00</EarliestTime>
 							<DayLength>P1DT3H</DayLength>
 							<properties>
@@ -1563,7 +1573,7 @@ issued to DB ticket vending machines.</Description>
 							<Name>Trilex Rail Products</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="tlx:products@TLX">
-									<StakeholderRoleType>Other</StakeholderRoleType>
+									<StakeholderRoleType>other</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="db:TLX" version="any"/>
 									<ResponsibleAreaRef ref="tlx:de" versionRef="TODO"/>
 								</ResponsibilityRoleAssignment>
@@ -1573,7 +1583,7 @@ issued to DB ticket vending machines.</Description>
 							<Name>Trilex Rail Products</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="tlx-t:sales@TLX">
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="db:TLX" version="any"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -1786,7 +1796,7 @@ The ZVON bicycle day pass and monthly pass is valid in conjunction with the ZVON
 							<Name>Trilex Rail Products</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="vvo:products@VVO">
-									<StakeholderRoleType>Other</StakeholderRoleType>
+									<StakeholderRoleType>other</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="db:VVO" version="any"/>
 									<ResponsibleAreaRef ref="vvo:de" versionRef="TODO"/>
 								</ResponsibilityRoleAssignment>
@@ -1940,7 +1950,7 @@ Example: If you are traveling with the trilex from Hainewalde to Zittau and tran
 							<Name>Trilex Rail Products</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="zvo:products@ZVON">
-									<StakeholderRoleType>Other</StakeholderRoleType>
+									<StakeholderRoleType>other</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="db:ZVON" version="any"/>
 									<ResponsibleAreaRef ref="zvo:de" versionRef="TODO"/>
 								</ResponsibilityRoleAssignment>
@@ -3094,7 +3104,7 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
 							<Name>National Rail Products</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="db:products@DB">
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="uic:0080" version="any"/>
 									<ResponsibleAreaRef ref="dbn:de" versionRef="TODO"/>
 								</ResponsibilityRoleAssignment>
@@ -3104,7 +3114,7 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
 							<Name>National Rail Products</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="dbn:network@DB">
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="uic:0080" version="any"/>
 									<ResponsibleAreaRef ref="dbn:de" versionRef="TODO"/>
 								</ResponsibilityRoleAssignment>
@@ -3261,7 +3271,7 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
 							<Name>National Rail Stations</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="uic:Station_Management@0080">
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="uic:Station_Management@0080" version="any"/>
 									<ResponsibleAreaRef ref="dbn:uk">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -3272,7 +3282,7 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="eura:code_sets@EURA">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="eura:EURA" version="any"/>
 									<ResponsibleAreaRef ref="eura:Europe">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -3597,13 +3607,17 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
 					<PricingParameterSet id="eura:Common_Resources" version="any">
 						<priceUnits>
 							<PriceUnit id="eura:EUR" version="any">
+								<privateCodes>
+									<PrivateCode>€</PrivateCode>
+								</privateCodes>
 								<Name>Euro</Name>
-								<PrivateCode>€</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 							<PriceUnit id="eura:GBP" version="any">
+								<privateCodes>
+									<PrivateCode>£</PrivateCode>
+								</privateCodes>
 								<Name>Pound Sterling</Name>
-								<PrivateCode>£</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 							<PriceUnit id="eura:SFR" version="any">

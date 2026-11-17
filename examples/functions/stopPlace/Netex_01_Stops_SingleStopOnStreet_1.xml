@@ -150,7 +150,7 @@ B. Frames and grouping
 							<AccessibilityAssessment version="any" id="mybus:SSP_02456A">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
-									<AccessibilityLimitation>
+									<AccessibilityLimitation id="mybus:SSP_02456A" version="any">
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>true</StepFreeAccess>
 									</AccessibilityLimitation>
@@ -213,8 +213,10 @@ B. Frames and grouping
 					<scheduledStopPoints>
 						<!--- =====SCHEDULED STOP POINT ====== -->
 						<ScheduledStopPoint version="032" created="2000-12-17T09:30:47.0Z" changed="2002-12-17T09:30:47.0Z" id="frtop:SSP0042A">
+							<privateCodes>
+								<PrivateCode>legacy3452</PrivateCode>
+							</privateCodes>
 							<Name>Poste, St Jean</Name>
-							<PrivateCode>legacy3452</PrivateCode>
 							<VehicleModes>bus</VehicleModes>
 							<ForAlighting>true</ForAlighting>
 							<ForBoarding>true</ForBoarding>

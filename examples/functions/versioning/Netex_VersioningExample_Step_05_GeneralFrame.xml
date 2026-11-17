@@ -55,7 +55,6 @@ This is part 4 of a multistep example on versioning.
 				</AvailabilityCondition>
 			</validityConditions>
 			<Name>My Network  Version 4 One link has been removed. Baseline is version 3 as Links  needs exist</Name>
-			<BaselineVersionFrameRef ref="mybus:GeneralFrame:003">EXTERNAL</BaselineVersionFrameRef>
 			<!--- ======= CODESPACEs======== -->
 			<codespaces>
 				<Codespace id="mybus">
@@ -72,14 +71,18 @@ This is part 4 of a multistep example on versioning.
 			<members modificationSet="all">
 				<!--- =====Data objects ========= -->
 				<ScheduledStopPoint version="002" created="2010-05-17T09:30:47.0Z" changed="2010-05-18T09:30:47.0Z" modification="revise" id="mybus:SSP0001A">
+					<privateCodes>
+						<PrivateCode>mycodeA</PrivateCode>
+					</privateCodes>
 					<Name>Haltstelle A - Museum</Name>
 					<Description>Version two of stop A. Name is Changed</Description>
-					<PrivateCode>mycodeA</PrivateCode>
 				</ScheduledStopPoint>
 				<ScheduledStopPoint version="002" created="2010-05-18T09:30:47.0Z" changed="2010-06-18T09:30:47.0Z" modification="revise" id="mybus:SSP0002B">
+					<privateCodes>
+						<PrivateCode>mycodeB</PrivateCode>
+					</privateCodes>
 					<Name>Haltstelle B</Name>
 					<Description>Version two of stop B</Description>
-					<PrivateCode>mycodeB</PrivateCode>
 				</ScheduledStopPoint>
 				<ScheduledStopPoint version="001" created="2010-05-21T10:30:51.0Z" id="mybus:SSP0003C">
 					<Name>Haltstelle C</Name>

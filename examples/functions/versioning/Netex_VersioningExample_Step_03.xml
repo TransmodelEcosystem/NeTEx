@@ -55,36 +55,9 @@ This is part 3 of a multistep example on versioning
 				<DefaultCodespaceRef ref="mybus"/>
 				<DefaultResponsibilitySetRef ref="mybus:RS_10">EXTERNAL</DefaultResponsibilitySetRef>
 			</FrameDefaults>
-			<versions>
-				<Version created="2010-05-17T09:30:47.0Z" id="mybus:ntwkf001" version="003">
-					<Status>versioned</Status>
-					<Description>Version 3 of Composite Frame </Description>
-					<VersionType>baseline</VersionType>
-					<DerivedFromVersionRef ref="mybus:ntwkf001" version="002"/>
-				</Version>
-			</versions>
 			<frames>
 				<!--- ===Calendar======== -->
 				<ServiceCalendarFrame version="002" id="mybus:ntwkf001@calendar">
-					<versions>
-						<Version created="2010-05-17T09:30:47.0Z" id="mybus:ntwkf001@calendar" version="002">
-							<Status>versioned</Status>
-							<Description>Version 2 of Service Calendar Frame: ntwkf001</Description>
-							<DerivedFromVersionRef ref="mybus:ntwkf001" version="001"/>
-						</Version>
-						<Version created="2010-05-17T09:30:47.0Z" id="mybus:DT001_MF" version="001">
-							<Status>versioned</Status>
-							<Description>Version 1 of Day Type  DT001_MF</Description>
-						</Version>
-						<Version created="2010-05-17T09:30:47.0Z" id="mybus:DT002_MFHols" version="001">
-							<Status>versioned</Status>
-							<Description>Version 1 of Day Type DT002_MFHols</Description>
-						</Version>
-						<Version created="2010-05-17T09:30:47.0Z" id="mybus:DT002_WE" version="001">
-							<Status>versioned</Status>
-							<Description>Version 1 of Day Type DT002_WE</Description>
-						</Version>
-					</versions>
 					<dayTypes>
 						<DayType version="001" created="2010-05-18T10:30:47.0Z" responsibilitySetRef="mybus:RS_10" id="mybus:DT001_MF">
 							<Name>Monday to Friday</Name>
@@ -128,44 +101,21 @@ This is part 3 of a multistep example on versioning
 						</AvailabilityCondition>
 					</validityConditions>
 					<Name>My Network  Version 3 with two stops in it and a VALIDITY CONDITIONa added  in it. Baseline is version 2 as stops A and B must exist</Name>
-					<BaselineVersionFrameRef ref="mybus:002">EXTERNAL</BaselineVersionFrameRef>
-					<versions>
-						<Version created="2010-05-17T09:30:47.0Z" id="mybus:ntwkf001@service" version="003">
-							<Status>versioned</Status>
-							<Description>Version 2 of Service Frame ntwkf001 </Description>
-							<VersionType>baseline</VersionType>
-							<DerivedFromVersionRef ref="mybus:ntwkf001" version="002"/>
-						</Version>
-						<Version created="2010-05-18T10:30:47.0Z" id="mybus:SSP0001A" version="002">
-							<Status>versioned</Status>
-							<Description>Version 2 of StopPoint SSP001A </Description>
-							<DerivedFromVersionRef ref="mybus:SSP0001A" version="001"/>
-						</Version>
-						<Version created="2010-05-19T10:30:47.0Z" id="mybus:SSP0002B" version="002">
-							<Status>versioned</Status>
-							<Description>Version 2 of StopPoint SSP001B </Description>
-							<DerivedFromVersionRef ref="mybus:SSP0002B" version="001"/>
-						</Version>
-						<Version created="2010-05-17T09:30:47.0Z" id="mybu:SL_AtoB01" version="001">
-							<Status>versioned</Status>
-							<Description>Version 1 of ServiceLink SL_AtoB01 </Description>
-						</Version>
-						<Version created="2010-05-17T09:30:47.0Z" id="mybu:SL_BtoA01" version="001">
-							<Status>versioned</Status>
-							<Description>Version 1 of ServiceLink  SL_BtoA01 </Description>
-						</Version>
-					</versions>
 					<scheduledStopPoints>
 						<!-- == Frame contents == -->
 						<ScheduledStopPoint version="002" created="2010-05-17T09:30:47.0Z" changed="2010-05-18T10:30:47.0Z" modification="revise" derivedFromVersionRef="001" id="mybus:SSP0001A">
+							<privateCodes>
+								<PrivateCode>mycodeA</PrivateCode>
+							</privateCodes>
 							<Name>Haltstelle A - Museum</Name>
 							<Description>Version two of stop A. Name is Changed</Description>
-							<PrivateCode>mycodeA</PrivateCode>
 						</ScheduledStopPoint>
 						<ScheduledStopPoint version="002" created="2010-05-18T09:30:47.0Z" changed="2010-05-19T10:30:47.0Z" modification="revise" derivedFromVersionRef="001" id="mybus:SSP0002B">
+							<privateCodes>
+								<PrivateCode>mycodeB</PrivateCode>
+							</privateCodes>
 							<Name>Haltstelle B</Name>
 							<Description>Version two of stop B</Description>
-							<PrivateCode>mycodeB</PrivateCode>
 						</ScheduledStopPoint>
 					</scheduledStopPoints>
 					<serviceLinks>

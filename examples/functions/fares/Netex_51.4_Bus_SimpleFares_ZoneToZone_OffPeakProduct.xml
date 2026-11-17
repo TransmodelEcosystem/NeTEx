@@ -197,7 +197,7 @@ The Calendar is shown coded as
 				</Codespace>
 				<Codespace id="myfares">
 					<Xmlns>myfares</Xmlns>
-					<XmlnsUrl>http://www.myfares,com/fares</XmlnsUrl>
+					<XmlnsUrl>http://www.myfares.com/fares</XmlnsUrl>
 					<Description>Fare data</Description>
 				</Codespace>
 			</codespaces>
@@ -588,7 +588,7 @@ The Calendar is shown coded as
 						</SalesOfferPackage>
 					</salesOfferPackages>
 				</FareFrame>
-				<FareFrame version="1.0" id="myfares:DTA@z2z_time_banded@prices">
+				<FarePriceFrame version="1.0" id="myfares:DTA@z2z_time_banded@prices">
 					<prerequisites>
 						<FareFrameRef version="1.0" ref="myfares:DTA@z2z_time_banded@products"/>
 					</prerequisites>
@@ -686,7 +686,7 @@ The Calendar is shown coded as
 							</includes>
 						</FareTable>
 					</fareTables>
-				</FareFrame>
+				</FarePriceFrame>
 				<!-- Service Calendar Nov 2010 COMPACT Coding === -->
 				<ServiceCalendarFrame version="1.0" id="myfares:DTA@z2z_time_banded@calendar">
 					<Name>Service Calendar Coding</Name>

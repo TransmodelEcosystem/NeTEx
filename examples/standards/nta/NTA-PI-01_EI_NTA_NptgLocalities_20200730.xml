@@ -76,7 +76,7 @@ NeTEx separates  organisational structure (ORGANISATION, ORGANISATION PART)  fro
 				<CodespaceRef ref="nptg_metadata"/>
 			</codespaces>
 			<frames>
-				<SiteFrame id="epd:EI:NTA:CompositeFrame_EI_PI_STOP:NPTG-sample:nptg" version="nptg:NPTG_data_1.0" responsibilitySetRef="nptg:NPTG_data" dataSourceRef="nptg:nta">
+				<SiteFrame id="epd:EI:NTA:CompositeFrame_EI_PI_STOP:NPTG-sample:nptg" version="nptg:NPTG_data_1.0" responsibilitySetRef="nptg:NPTG_data">
 					<Name>NPTG content data - Localities and Plusbus zones </Name>
 					<Description>This is an example showing an encoding  in NeTEx of  actual NPTG  data for NPTG localities and PlusBus tariff zones  </Description>
 					<TypeOfFrameRef ref="eix:EI:NTA:TypeOfFrame_EI_PI_NPTG" versionRef="eix:v1.0"/>
@@ -3135,11 +3135,6 @@ NeTEx separates  organisational structure (ORGANISATION, ORGANISATION PART)  fro
 						<DefaultDataSourceRef ref="nptg:NTA" version="nptg:v2.1"/>
 						<DefaultResponsibilitySetRef ref="nptg:NPTG_metadata" version="nptg:v2.1"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="nptg:NPTG_data_1.0" version="any">
-							<Description>NPTG data version </Description>
-						</Version>
-					</versions>
 					<!--   === ADMIN AREAS ===== -->
 					<organisations>
 						<!---  EIRE  REGIONs -->
@@ -4275,12 +4270,6 @@ NeTEx separates  organisational structure (ORGANISATION, ORGANISATION PART)  fro
 						<DefaultDataSourceRef ref="nptg:NTA" version="nptg:v2.1"/>
 						<DefaultResponsibilitySetRef ref="nptg:NPTG_metadata" version="nptg:v2.1"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="nptg:v2.1" version="any">
-							<Description>NPTG version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="nptg:NTA" version="nptg:v2.1">
 							<Email>standards@nationaltransportauthority.ei</Email>
@@ -4293,7 +4282,7 @@ NeTEx separates  organisational structure (ORGANISATION, ORGANISATION PART)  fro
 							<roles>
 								<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:NPTG_metadata">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:NTA" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgRegion:ie" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">Eire</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -4304,7 +4293,7 @@ NeTEx separates  organisational structure (ORGANISATION, ORGANISATION PART)  fro
 							<roles>
 								<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:NPTG_data">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+									<StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:NTA" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptg:EI">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>

@@ -90,6 +90,18 @@ Assumes there is not a common calendar but rather specific days
 							</properties>
 						</DayType>
 					</dayTypes>
+					<operatingPeriods>
+						<UicOperatingPeriod id="X01" version="any">
+							<FromDate>2006-11-04T12:00:00</FromDate>
+							<ToDate>2006-07-30T12:00:00</ToDate>
+							<ValidDayBits>11111001111101</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X02" version="any">
+							<FromDate>2006-11-04T12:00:00</FromDate>
+							<ToDate>2006-11-04T12:00:00</ToDate>
+							<ValidDayBits>1</ValidDayBits>
+						</UicOperatingPeriod>
+					</operatingPeriods>
 				</ServiceCalendarFrame>
 				<TimetableFrame version="any" id="uic:TIM_001">
 					<validityConditions>
@@ -105,8 +117,11 @@ Assumes there is not a common calendar but rather specific days
 					<VehicleModes>rail</VehicleModes>
 					<vehicleJourneys>
 						<!-- =====     == -->
-						<DatedServiceJourney version="any" id="uicvj:393">
+						<ServiceJourney version="any" id="uicvj:393">
 							<DepartureTime>11:45:00Z</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X02"/>
+							</dayTypes>
 							<OperatorView>
 								<OperatorRef ref="uicop:1174"/>
 								<Name>Swedish Railways</Name>
@@ -115,7 +130,7 @@ Assumes there is not a common calendar but rather specific days
 								<TransportMode>rail</TransportMode>
 							</LineView>
 							<calls>
-								<Call version="any" id="uicvj:393" order="1">
+								<Call version="any" id="uicvj:393-1">
 									<ScheduledStopPointRef ref="uicloc:7400731"/>
 									<Arrival>
 										<Time>11:45:00Z</Time>
@@ -126,7 +141,7 @@ Assumes there is not a common calendar but rather specific days
 										<ForBoarding>true</ForBoarding>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:393" order="2">
+								<Call version="any" id="uicvj:393-2">
 									<ScheduledStopPointRef ref="uicloc:7404994"/>
 									<Arrival>
 										<Time>12:50:00Z</Time>
@@ -139,12 +154,12 @@ Assumes there is not a common calendar but rather specific days
 									<noticeAssignments>
 										<NoticeAssignmentView>
 											<NoticeRef ref="ft001">
-								</NoticeRef>
+											</NoticeRef>
 											<Text>text for stop </Text>
 										</NoticeAssignmentView>
 									</noticeAssignments>
 								</Call>
-								<Call version="any" id="uicvj:393" order="3">
+								<Call version="any" id="uicvj:393-3">
 									<ScheduledStopPointRef ref="uicloc:7404212"/>
 									<Arrival>
 										<Time>13:10:00Z</Time>
@@ -159,18 +174,16 @@ Assumes there is not a common calendar but rather specific days
 								<ServiceFacilitySet version="any" id="uicvj:393">
 									<otherFacilities>
 										<TypeOfEquipment version="any" id="uicvj:5">
-									</TypeOfEquipment>
+										</TypeOfEquipment>
 									</otherFacilities>
 								</ServiceFacilitySet>
 							</facilities>
-							<UicOperatingPeriod id="X02" version="any">
-								<FromDate>2006-11-04T12:00:00</FromDate>
-								<ToDate>2006-11-04T12:00:00</ToDate>
-								<ValidDayBits>1</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:395">
+						</ServiceJourney>
+						<ServiceJourney version="any" id="uicvj:395">
 							<DepartureTime>15:26:00Z</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X01"/>
+							</dayTypes>
 							<OperatorView>
 								<OperatorRef ref="uicop:1174"/>
 							</OperatorView>
@@ -178,7 +191,7 @@ Assumes there is not a common calendar but rather specific days
 								<TransportMode>rail</TransportMode>
 							</LineView>
 							<calls>
-								<Call version="any" id="uicvj:395" order="1">
+								<Call version="any" id="uicvj:395-1">
 									<ScheduledStopPointRef ref="uicloc:7400731"/>
 									<Arrival>
 										<Time>15:26:00Z</Time>
@@ -188,7 +201,7 @@ Assumes there is not a common calendar but rather specific days
 										<Time>15:27:00Z</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:395" order="2">
+								<Call version="any" id="uicvj:395-2">
 									<ScheduledStopPointRef ref="uicloc:7404994"/>
 									<Arrival>
 										<Time>16:05:00Z</Time>
@@ -197,7 +210,7 @@ Assumes there is not a common calendar but rather specific days
 										<Time>16:10:00Z</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:395" order="3">
+								<Call version="any" id="uicvj:395-3">
 									<ScheduledStopPointRef ref="uicloc:7404212"/>
 									<Arrival>
 										<Time>16:18:00Z</Time>
@@ -208,18 +221,13 @@ Assumes there is not a common calendar but rather specific days
 								<ServiceFacilitySet version="any" id="uicvj:395">
 									<otherFacilities>
 										<TypeOfEquipment version="any" id="uicvj:28">
-									</TypeOfEquipment>
+										</TypeOfEquipment>
 										<TypeOfEquipment version="any" id="uicvj:50">	</TypeOfEquipment>
 										<TypeOfEquipmentRef version="any" ref="uicvj:5"/>
 									</otherFacilities>
 								</ServiceFacilitySet>
 							</facilities>
-							<UicOperatingPeriod id="X01" version="any">
-								<FromDate>2006-11-04T12:00:00</FromDate>
-								<ToDate>2006-07-30T12:00:00</ToDate>
-								<ValidDayBits>11111001111101</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
 			</frames>

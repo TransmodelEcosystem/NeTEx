@@ -71,31 +71,31 @@ stop_id,stop_name,stop_lat,stop_lon
 
 trips.tzt
 route_id,service_id,trip_id,shape_id,trip_headsign,direction_id
-"93-RED-y11-1","MF-BH","10.MF-BH.93-RED-y11-1.104.I","93-RED-y11-1.104.I","","1"
+"93-RED-y11-1","MF-BH","10.MF-BH.93-RED@y11-1.104.I","93-RED-y11-1.104.I","","1"
 
 Stop_times.tzt
 trip_id,arrival_time,departure_time,stop_id,stop_sequence,stop_headsign,pickup_type,drop_off_type,shape_dist_traveled
-"10.MF-BH.93-RED-y11-1.104.I","06:30:00","06:30:00","823GA00354","1","","0","0","0"
-"10.MF-BH.93-RED-y11-1.104.I","06:35:28","06:35:28","822GA00357","2","","0","0","2160.30410146446"
-"10.MF-BH.93-RED-y11-1.104.I","06:37:23","06:37:23","822GA00361","3","","0","0","2888.3851156893"
-"10.MF-BH.93-RED-y11-1.104.I","06:39:14","06:39:14","822GA00364","4","","0","0","3611.1797664877"
-"10.MF-BH.93-RED-y11-1.104.I","06:40:55","06:40:55","822GA00367","5","","0","0","4241.48875744548"
-"10.MF-BH.93-RED-y11-1.104.I","06:41:49","06:41:49","822GA00370","6","","0","0","4577.14328082257"
-"10.MF-BH.93-RED-y11-1.104.I","06:42:54","06:42:54","822GA00373","7","","0","0","4989.48183355875"
-"10.MF-BH.93-RED-y11-1.104.I","06:44:42","06:44:42","822GA00376","8","","0","0","5663.18095832231"
-"10.MF-BH.93-RED-y11-1.104.I","06:45:32","06:45:32","822GA00379","9","","0","0","5977.20821470682"
-"10.MF-BH.93-RED-y11-1.104.I","06:46:31","06:46:31","822GA00382","10","","0","0","6526.98368110836"
-"10.MF-BH.93-RED-y11-1.104.I","06:48:00","06:48:00","822GA00387","11","","0","0","7196.37917568135"
-"10.MF-BH.93-RED-y11-1.104.I","06:49:42","06:49:42","822GA00390","12","","0","0","7657.60307603659"
-"10.MF-BH.93-RED-y11-1.104.I","06:52:35","06:52:35","822GA00399","13","","0","0","8256.68935779202"
-"10.MF-BH.93-RED-y11-1.104.I","06:54:02","06:54:02","822GA00402","14","","0","0","8555.61251467961"
-"10.MF-BH.93-RED-y11-1.104.I","06:56:45","06:56:45","822GA00405","15","","0","0","9123.00328940032"
-"10.MF-BH.93-RED-y11-1.104.I","06:59:00","06:59:00","822GA00409","16","","0","0","9584.85770156162"
-"10.MF-BH.93-RED-y11-1.104.I","07:01:28","07:01:28","822GA00421","17","","0","0","10109.1333350849"
-"10.MF-BH.93-RED-y11-1.104.I","07:02:50","07:02:50","822GA00428","18","","0","0","10394.6746500994"
-"10.MF-BH.93-RED-y11-1.104.I","07:04:17","07:04:17","822GA00431","19","","0","0","10683.2936864365"
-"10.MF-BH.93-RED-y11-1.104.I","07:06:20","07:06:20","822GA00434","20","","0","0","11094.5606944589"
-"10.MF-BH.93-RED-y11-1.104.I","07:09:00","07:09:00","822GA00437","21","","0","0","11626.0679850957"
+"10.MF-BH.93-RED@y11-1.104.I","06:30:00","06:30:00","823GA00354","1","","0","0","0"
+"10.MF-BH.93-RED@y11-1.104.I","06:35:28","06:35:28","822GA00357","2","","0","0","2160.30410146446"
+"10.MF-BH.93-RED@y11-1.104.I","06:37:23","06:37:23","822GA00361","3","","0","0","2888.3851156893"
+"10.MF-BH.93-RED@y11-1.104.I","06:39:14","06:39:14","822GA00364","4","","0","0","3611.1797664877"
+"10.MF-BH.93-RED@y11-1.104.I","06:40:55","06:40:55","822GA00367","5","","0","0","4241.48875744548"
+"10.MF-BH.93-RED@y11-1.104.I","06:41:49","06:41:49","822GA00370","6","","0","0","4577.14328082257"
+"10.MF-BH.93-RED@y11-1.104.I","06:42:54","06:42:54","822GA00373","7","","0","0","4989.48183355875"
+"10.MF-BH.93-RED@y11-1.104.I","06:44:42","06:44:42","822GA00376","8","","0","0","5663.18095832231"
+"10.MF-BH.93-RED@y11-1.104.I","06:45:32","06:45:32","822GA00379","9","","0","0","5977.20821470682"
+"10.MF-BH.93-RED@y11-1.104.I","06:46:31","06:46:31","822GA00382","10","","0","0","6526.98368110836"
+"10.MF-BH.93-RED@y11-1.104.I","06:48:00","06:48:00","822GA00387","11","","0","0","7196.37917568135"
+"10.MF-BH.93-RED@y11-1.104.I","06:49:42","06:49:42","822GA00390","12","","0","0","7657.60307603659"
+"10.MF-BH.93-RED@y11-1.104.I","06:52:35","06:52:35","822GA00399","13","","0","0","8256.68935779202"
+"10.MF-BH.93-RED@y11-1.104.I","06:54:02","06:54:02","822GA00402","14","","0","0","8555.61251467961"
+"10.MF-BH.93-RED@y11-1.104.I","06:56:45","06:56:45","822GA00405","15","","0","0","9123.00328940032"
+"10.MF-BH.93-RED@y11-1.104.I","06:59:00","06:59:00","822GA00409","16","","0","0","9584.85770156162"
+"10.MF-BH.93-RED@y11-1.104.I","07:01:28","07:01:28","822GA00421","17","","0","0","10109.1333350849"
+"10.MF-BH.93-RED@y11-1.104.I","07:02:50","07:02:50","822GA00428","18","","0","0","10394.6746500994"
+"10.MF-BH.93-RED@y11-1.104.I","07:04:17","07:04:17","822GA00431","19","","0","0","10683.2936864365"
+"10.MF-BH.93-RED@y11-1.104.I","07:06:20","07:06:20","822GA00434","20","","0","0","11094.5606944589"
+"10.MF-BH.93-RED@y11-1.104.I","07:09:00","07:09:00","822GA00437","21","","0","0","11626.0679850957"
 
 "19.MF-BH.93-RED-y11-1.104.I","07:01:00","07:01:00","823GA00354","1","","0","0","0"
 "19.MF-BH.93-RED-y11-1.104.I","07:06:28","07:06:28","822GA00357","2","","0","0","2160.30410146446"
@@ -312,7 +312,7 @@ attribution002,0,1,Transdev,12345
 
 (C) NTA 2020
   -->
-	<PublicationTimestamp>20209-12-17T09:30:46.0Z</PublicationTimestamp>
+	<PublicationTimestamp>2019-12-17T09:30:46.0Z</PublicationTimestamp>
 	<ParticipantRef>SYS001</ParticipantRef>
 	<!-- ======WHAT WAS REQUESTED ========== -->
 	<PublicationRequest version="1.0">
@@ -369,7 +369,7 @@ attribution002,0,1,Transdev,12345
 							<Name>Transport For Ireland</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="attribution001">
-									<StakeholderRoleType>Planning</StakeholderRoleType>
+									<StakeholderRoleType>planning</StakeholderRoleType>
 									<ResponsibleOrganisationRef version="any" ref="noc:10000"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -378,7 +378,7 @@ attribution002,0,1,Transdev,12345
 							<Name>Transdev</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="attribution002">
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 									<ResponsibleOrganisationRef version="any" ref="noc:12345"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -412,11 +412,11 @@ attribution002,0,1,Transdev,12345
 					<TypeOfFrameRef ref="eix:EI:NTA:TypeOfFrame_EI_PI_NETWORK:EIRE_NP"/>
 					<!-- === Gtfs Shapes === -->
 					<routeLinks>
-						<RouteLink version="any" id="10.MF-BH.93-RED-y11-1.104.I">
+						<RouteLink version="any" id="10.MF-BH.93-RED@y11-1.104.I">
 							<Name>Shape for Link</Name>
 							<projections>
-								<LinkSequenceProjection version="any" id="10.MF-BH.93-RED-y11-1.104.I">
-									<ProjectedLinkSequenceRef xsi:type="ServicePatternRefStructure" version="any" ref="10.MF-BH.93-RED-y11-1.104.I"/>
+								<LinkSequenceProjection version="any" id="10.MF-BH.93-RED@y11-1.104.I@0">
+									<ProjectedLinkSequenceRef xsi:type="ServicePatternRefStructure" version="any" ref="10.MF-BH.93-RED@y11-1.104.I"/>
 								</LinkSequenceProjection>
 							</projections>
 							<passingThrough>
@@ -2230,89 +2230,89 @@ attribution002,0,1,Transdev,12345
 						</ServiceLink>
 					</serviceLinks>
 					<servicePatterns>
-						<ServicePattern version="any" id="10.MF-BH.93-RED-y11-1.104.I">
+						<ServicePattern version="any" id="10.MF-BH.93-RED@y11-1.104.I">
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="1">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@01" order="1">
 									<ScheduledStopPointRef version="any" ref="naptStop:823GA00354"/>
 									<OnwardServiceLinkRef version="any" ref="823GA00354+822GA00357"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="2">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@02" order="2">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00357"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00357+822GA00361"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="3">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@03" order="3">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00361"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00361+822GA00364"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="4">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@04" order="4">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00364"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00364+822GA00367"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="5">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@05" order="5">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00367"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00367+822GA00370"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="6">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@06" order="6">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00370"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00370+822GA00373"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="7">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@07" order="7">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00373"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00373+822GA00376"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="8">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@08" order="8">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00376"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00376+822GA00379"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="9">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@09" order="9">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00379"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00379+822GA00382"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="10">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@10" order="10">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00382"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00382+822GA00387"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="11">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@11" order="11">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00387"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00387+822GA00390"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="12">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@12" order="12">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00390"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00390+822GA00399"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="13">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@13" order="13">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00399"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00399+822GA00402"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="14">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@14" order="14">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00402"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00402+822GA00405"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="15">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@15" order="15">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00405"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00405+822GA00409"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="16">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@16" order="16">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00409"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00409+822GA00421"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="17">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@17" order="17">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00421"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00421+822GA00428"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="18">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@18" order="18">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00428"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00428+822GA00431"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="19">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@19" order="19">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00431"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00431+822GA00434"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="20">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@20" order="20">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00434"/>
 									<OnwardServiceLinkRef version="any" ref="822GA00434+822GA00437"/>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="21">
+								<StopPointInJourneyPattern version="any" id="10.MF-BH.93-RED@21" order="21">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00437"/>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
@@ -3600,7 +3600,7 @@ attribution002,0,1,Transdev,12345
 					</prerequisites>
 					<!-- === Gtfs trips.txt === -->
 					<vehicleJourneys>
-						<ServiceJourney version="any" id="10.MF-BH.93-RED-y11-1.104.I">
+						<ServiceJourney version="any" id="10.MF-BH.93-RED@y11-1.104.I">
 							<dayTypes>
 								<DayTypeRef version="any" ref="MF-BH">Default day type for MF-BH</DayTypeRef>
 							</dayTypes>
@@ -3612,127 +3612,127 @@ attribution002,0,1,Transdev,12345
 							</Destination>
 							<!-- === Gtfs stop_times.txt === -->
 							<calls>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="1">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@01" order="1">
 									<ScheduledStopPointRef version="any" ref="naptStop:823GA00354"/>
 									<Departure>
 										<Time>06:30:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="2">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@02" order="2">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00357"/>
 									<Departure>
 										<Time>06:35:28</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="3">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@03" order="3">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00361"/>
 									<Departure>
 										<Time>06:37:23</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="4">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@04" order="4">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00364"/>
 									<Departure>
 										<Time>06:39:14</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="5">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@05" order="5">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00367"/>
 									<Departure>
 										<Time>06:40:55</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="6">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@06" order="6">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00370"/>
 									<Departure>
 										<Time>06:41:49</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="7">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@07" order="7">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00373"/>
 									<Departure>
 										<Time>06:42:54</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="8">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@08" order="8">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00376"/>
 									<Departure>
 										<Time>06:44:42</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="9">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@09" order="9">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00379"/>
 									<Departure>
 										<Time>06:45:32</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="10">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@10" order="10">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00382"/>
 									<Departure>
 										<Time>06:46:31</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="11">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@11" order="11">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00387"/>
 									<Departure>
 										<Time>06:48:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="12">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@12" order="12">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00390"/>
 									<Departure>
 										<Time>06:49:42</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="13">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@13" order="13">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00399"/>
 									<Departure>
 										<Time>06:52:35</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="14">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@14" order="14">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00402"/>
 									<Departure>
 										<Time>06:54:02</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="15">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@15" order="15">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00405"/>
 									<Departure>
 										<Time>06:56:45</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="16">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@16" order="16">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00409"/>
 									<Departure>
 										<Time>06:59:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="17">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@17" order="17">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00421"/>
 									<Departure>
 										<Time>07:01:28</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="18">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@18" order="18">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00428"/>
 									<Departure>
 										<Time>07:02:50</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="19">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@19" order="19">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00431"/>
 									<Departure>
 										<Time>07:04:17</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="20">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@20" order="20">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00434"/>
 									<Departure>
 										<Time>07:06:20</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="21">
+								<Call version="any" id="10.MF-BH.93-RED@y11-1.104.I@21" order="21">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00437"/>
 									<Arrival>
 										<Time>07:09:00</Time>
@@ -3741,92 +3741,92 @@ attribution002,0,1,Transdev,12345
 							</calls>
 						</ServiceJourney>
 						<ServiceJourney version="any" id="178.Sat.93-RED-y11-1.45.I">
-							<ServicePatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I"/>
+							<ServicePatternRef version="any" ref="10.MF-BH.93-RED@y11-1.104.I"/>
 							<LineRef version="any" ref="93-RED-y11-1"/>
 							<DirectionType>outbound</DirectionType>
 							<passingTimes>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@1">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="1"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@1">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@01" order="1"/>
 									<DepartureTime>06:30:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@2">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="2"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@2">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@02" order="2"/>
 									<DepartureTime>06:35:28</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@3">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="3"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@3">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@03" order="3"/>
 									<DepartureTime>06:37:23</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@4">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="4"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@4">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@04" order="4"/>
 									<DepartureTime>06:39:14</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@5">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="5"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@5">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@05" order="5"/>
 									<DepartureTime>06:40:55</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@6">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="6"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@6">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@06" order="6"/>
 									<DepartureTime>06:41:49</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@7">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="7"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@7">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@07" order="7"/>
 									<DepartureTime>06:42:54</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@8">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="8"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@8">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@08" order="8"/>
 									<DepartureTime>06:44:42</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@9">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="9"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@9">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@09" order="9"/>
 									<DepartureTime>06:45:32</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@10">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="10"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@10">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@10" order="10"/>
 									<DepartureTime>06:46:31</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@11">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="11"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@11">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@11" order="11"/>
 									<DepartureTime>06:48:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@12">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="12"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@12">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@12" order="12"/>
 									<DepartureTime>06:49:42</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@13">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="13"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@13">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@13" order="13"/>
 									<DepartureTime>06:52:35</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@14">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="14"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@14">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@14" order="14"/>
 									<DepartureTime>06:54:02</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@15">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="15"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@15">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@15" order="15"/>
 									<DepartureTime>06:56:45</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@16">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="16"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@16">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@16" order="16"/>
 									<DepartureTime>06:59:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@17">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="17"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@17">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@17" order="17"/>
 									<DepartureTime>07:01:28</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@18">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="18"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@18">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@18" order="18"/>
 									<DepartureTime>07:02:50</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@19">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="19"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@19">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@19" order="19"/>
 									<DepartureTime>07:04:17</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@20">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="20"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@20">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@20" order="20"/>
 									<DepartureTime>07:06:20</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED-y11-1.104.I@21">
-									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED-y11-1.104.I" order="21"/>
+								<TimetabledPassingTime version="any" id="10.MF-BH.93-RED@y11-1.104.I@21">
+									<PointInJourneyPatternRef version="any" ref="10.MF-BH.93-RED@21" order="21"/>
 									<ArrivalTime>07:09:00</ArrivalTime>
 								</TimetabledPassingTime>
 							</passingTimes>

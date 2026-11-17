@@ -290,7 +290,7 @@ TapTsi B.4.7009
 								<!-- SER+21’,  SER+28’ -->
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
-									<AccessibilityLimitation>
+									<AccessibilityLimitation id="uic:007300101" version="any">
 										<WheelchairAccess>true</WheelchairAccess>
 									</AccessibilityLimitation>
 								</limitations>
@@ -331,6 +331,11 @@ TapTsi B.4.7009
 				</SiteFrame>
 				<ServiceFrame version="any" id="TSDUPD-example">
 					<Name>Location / STation TSDUPD example </Name>
+					<directions>
+						<Direction version="uic" id="54"/>
+						<Direction version="uic" id="68"/>
+						<Direction version="uic" id="84"/>
+					</directions>
 					<scheduledStopPoints>
 						<ScheduledStopPoint version="any" id="uic:007300101">
 							<!--  Narrative:  Declares the timetable stop -->
@@ -473,11 +478,13 @@ TapTsi B.4.7009
 							<MinimumTransferTime>PT8M</MinimumTransferTime>
 							<DistributorFilter>
 								<OperatorRef versionRef="EXTERNAL" ref="uic:54"/>
-								<LineInDirectionRef>
-									<ExternalDirectionRef type="uicType" ref="54"/>
-									<!-- TapTsi B.4.7009 54 Talgo ! -->
-									<!-- NB Work around to handle this case NeTEX needs to add additional filter -->
-								</LineInDirectionRef>
+								<linesInDirectionRefs>
+									<LineInDirectionRef>
+										<DirectionRef ref="54" version="uic"/>
+										<!-- TapTsi B.4.7009 54 Talgo ! -->
+										<!-- NB Work around to handle this case NeTEX needs to add additional filter -->
+									</LineInDirectionRef>
+								</linesInDirectionRefs>
 								<ScheduledStopPointRef version="any" ref="uic:007300101"/>
 							</DistributorFilter>
 						</InterchangeRule>
@@ -512,7 +519,7 @@ TapTsi B.4.7009
 								<TransportMode>rail</TransportMode>
 								<OperatorRef versionRef="EXTERNAL" ref="uic:1073"/>
 								<LineInDirectionRef>
-									<ExternalDirectionRef type="uicType" ref="68"/>
+									<DirectionRef version="uic" ref="68"/>
 									<!-- TapTsi B.4.7009    68  Internationa; -->
 									<!-- NB Work around to handle this case GAP NeTEX needs to add additional filter  for Product /service type-->
 								</LineInDirectionRef>
@@ -522,7 +529,7 @@ TapTsi B.4.7009
 								<TransportMode>rail</TransportMode>
 								<OperatorRef versionRef="EXTERNAL" ref="uic:1180"/>
 								<LineInDirectionRef>
-									<ExternalDirectionRef type="uicType" ref="84"/>
+									<DirectionRef version="uic" ref="84"/>
 									<!-- TapTsi B.4.7009 84  Regional Train; -->
 									<!-- NB  Work around to handle this case GAP NeTEX needs to add additional filter for Product /service type-->
 								</LineInDirectionRef>

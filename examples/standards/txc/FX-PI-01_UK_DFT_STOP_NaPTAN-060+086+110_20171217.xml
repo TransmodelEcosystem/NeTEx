@@ -101,7 +101,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 	</PublicationRequest>
 	<!--- =============== RESULTS =========== -->
 	<dataObjects>
-		<CompositeFrame version="1" id="epd:UK:DFT:CompositeFrame_UK_PI_STOP_OFFER:NAPTAN-060+086+110:napt" responsibilitySetRef="napt:stop_data" dataSourceRef="napt:dft">
+		<CompositeFrame version="napt:v2.4" id="epd:UK:DFT:CompositeFrame_UK_PI_STOP_OFFER:NAPTAN-060+086+110:napt" responsibilitySetRef="napt:stop_data" dataSourceRef="napt:dft">
 			<Name>Sample extract of NaPTAn data encoded a in NeTEx</Name>
 			<TypeOfFrameRef ref="fxc:UK:DFT:TypeOfFrame_UK_PI_STOP_OFFER:FXCP" version="fxc:v1.0"/>
 			<!-- ==== CODESPACES == -->
@@ -115,7 +115,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 			<frames>
 				<!---   ONE FRAME OER ADMIN   AREAS   -->
 				<!--   ======= PAYLOAD= ========================================================= -->
-				<SiteFrame id="epd:UK:DFT:SiteFrame_UK_PI_STOP:NAPTAN-060:napt" version="9.6" responsibilitySetRef="nptgAdminArea:060" dataSourceRef="napt:dft">
+				<SiteFrame id="epd:UK:DFT:SiteFrame_UK_PI_STOP:NAPTAN-060:napt" version="napt:v2.4" responsibilitySetRef="nptgAdminArea:060" dataSourceRef="napt:dft">
 					<Name>Stample STop and Stop Area data encoded NeTEx - Area 60</Name>
 					<TypeOfFrameRef ref="fxc:UK:DFT:TypeOfFrame_UK_PI_STOP:FXCP" version="fxc:v1.0"/>
 					<FrameDefaults>
@@ -160,7 +160,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 						<!--  ADD MORE STOPS etc etc  -->
 					</stopPlaces>
 				</SiteFrame>
-				<SiteFrame id="epd:UK:DFT:SiteFrame_UK_PI_STOP:NAPTAN-086:napt" version="5.4" responsibilitySetRef="nptgAdminArea:086" dataSourceRef="napt:dft">
+				<SiteFrame id="epd:UK:DFT:SiteFrame_UK_PI_STOP:NAPTAN-086:napt" version="napt:v2.4" responsibilitySetRef="nptgAdminArea:086" dataSourceRef="napt:dft">
 					<Name>Sample Stop and Stop Area data encoded in NeTEx  - Area 86</Name>
 					<TypeOfFrameRef ref="fxc:UK:DFT:TypeOfFrame_UK_PI_STOP:FXCP" version="fxc:v1.0"/>
 					<FrameDefaults>
@@ -217,7 +217,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 						<!--  ADD MORE STOPS etc etc  -->
 					</stopPlaces>
 				</SiteFrame>
-				<SiteFrame id="epd:UK:DFT:SiteFrame_UK_PI_STOP:NaPTAN-110:napt" version="2.0" responsibilitySetRef="nptgAdminArea:110" dataSourceRef="napt:dft">
+				<SiteFrame id="epd:UK:DFT:SiteFrame_UK_PI_STOP:NaPTAN-110:napt" version="napt:v2.4" responsibilitySetRef="nptgAdminArea:110" dataSourceRef="napt:dft">
 					<Name>Sample Stop and Stop Area data encoded in NeTEx - Area 110</Name>
 					<TypeOfFrameRef ref="fxc:UK:DFT:TypeOfFrame_UK_PI_STOP:FXCP" version="fxc:v1.0"/>
 					<FrameDefaults>
@@ -541,7 +541,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 							<roles>
 								<ResponsibilityRoleAssignment version="fxc:v1.0" id="fxc:FXC_metadata:DfT">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" versionRef="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" versionRef="nptg:v2.1"/>
 								</ResponsibilityRoleAssignment>
@@ -682,12 +682,6 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 						<DefaultDataSourceRef ref="napt:dft" version="napt:v2.4"/>
 						<DefaultResponsibilitySetRef ref="napt:NaPTAN_metadata" version="napt:v2.4"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="napt:v2.4" version="any">
-							<Description>NaPTAN  version 2.4</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="napt:dft" version="napt:v2.4">
 							<Email>standards@naptan.org.uk</Email>
@@ -700,7 +694,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 							<roles>
 								<ResponsibilityRoleAssignment version="napt:v2.4" id="napt:NaPTAN_metadata">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -711,7 +705,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 							<roles>
 								<ResponsibilityRoleAssignment version="napt:v2.4" id="napt:naptan_data">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>Other</StakeholderRoleType>
+									<StakeholderRoleType>other</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -893,12 +887,6 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 						<DefaultDataSourceRef ref="nptg:dft" version="nptg:v2.1"/>
 						<DefaultResponsibilitySetRef ref="nptg:NPTG_metadata" version="nptg:v2.1"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="nptg:v2.1" version="any">
-							<Description>NPTG version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="nptg:dft" version="nptg:v2.1">
 							<Email>standards@nptg.org.uk</Email>
@@ -911,7 +899,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 							<roles>
 								<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:NPTG_metadata">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -922,7 +910,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 							<roles>
 								<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:NPTG_data">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+									<StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptg:UK">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -937,7 +925,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 							<values>
 								<TypeOfFrame version="nptg:v2.1" id="nptg:UK_NPTG_profile_payload">
 									<Name>NPTG Locations and  Tariff Zones Frame</Name>
-									<FrameClassRef nameOfClass="SiteeFrame"/>
+									<FrameClassRef nameOfClass="SiteFrame"/>
 									<classes>
 										<ClassInFrame nameOfClass="TopographicPlace">
 											<!-- 	 TopographicPlace maps to  a NPTG Locality 
@@ -1076,7 +1064,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 												</ClassRelationshipInFrame>
 												<ClassRelationshipInFrame name="alternativeDescriptors">
 													<!--  NB Only coccasionally  actually populated in current data set -->
-													<RelationshipRef nameOfClass="TopographicPlaceDescriptior"/>
+													<RelationshipRef nameOfClass="TopographicPlaceDescriptor"/>
 													<!--   NptgLocality.alternativeDeiscriptors.Descriptor -->
 													<Mandatory>optional</Mandatory>
 													<Containment>byVersionedReference</Containment>
@@ -1097,7 +1085,7 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 												</ClassRelationshipInFrame>
 											</relationships>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="TopographicDescriptor">
+										<ClassInFrame nameOfClass="TopographicPlaceDescriptor">
 											<!-- 	 TopographicPlace maps to  a NPTG Locality. 		lternativeDescriptors.Descrip  -->
 											<Mandatory>required</Mandatory>
 											<attributes>
@@ -1203,13 +1191,13 @@ The NaPTAN StopClassification and StopType can be used to determine how each typ
 												</ClassRelationshipInFrame>
 												<ClassRelationshipInFrame name="projection">
 													<!--  NptgPlusBusZone.Mapping  ..  <Location><Easting>  .. <Northing>  -->
-													<RelationshipRef nameOfClass="Polygon"/>
+													<RelationshipRef nameOfClass="gml:Polygon"/>
 													<Mandatory>required</Mandatory>
 													<Containment>inline</Containment>
 												</ClassRelationshipInFrame>
 											</relationships>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="Polygon">
+										<ClassInFrame nameOfClass="gml:Polygon">
 											<!-- 	 gml:Polygon  maps to  a NPTG PlusBusZone.Mapping  -->
 											<Mandatory>required</Mandatory>
 											<attributes>

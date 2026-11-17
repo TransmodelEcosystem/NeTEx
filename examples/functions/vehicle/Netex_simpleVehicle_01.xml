@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2010-12-17T09:30:47.0Z</PublicationTimestamp>
+	<ParticipantRef>SYS001</ParticipantRef>
+	<!--- ======WHAT WAS REQUESTED ========== -->
+	<PublicationRequest version="1.0">
+		<RequestTimestamp>2010-12-17T09:30:47.0Z</RequestTimestamp>
+		<ParticipantRef>SYS002</ParticipantRef>
+		<topics>
+			<NetworkFrameTopic>
+				<selectionValidityConditions>
+					<AvailabilityCondition version="any" id="xj:cf_12">
+						<FromDate>2010-11-01T00:00:00Z</FromDate>
+					</AvailabilityCondition>
+				</selectionValidityConditions>
+				<TypeOfFrameRef ref="xj:MyVsFrame">REQUEST</TypeOfFrameRef>
+			</NetworkFrameTopic>
+		</topics>
+	</PublicationRequest>
+	<PublicationRefreshInterval>P1M</PublicationRefreshInterval>
+	<Description>Example  of simple vehicle schedule  frame with tblocks</Description>
+	<!--- =============== RESULTS =========== -->
+	<dataObjects>
+		<CompositeFrame version="1" id="xj:cf_12">
+			<validityConditions>
+				<AvailabilityCondition version="any" id="xj:Cnd001">
+					<Description>Sept  to March</Description>
+					<FromDate>2010-11-01T00:00:00Z</FromDate>
+					<ToDate>2011-03-31T00:00:00Z</ToDate>
+				</AvailabilityCondition>
+			</validityConditions>
+			<TypeOfFrameRef ref="xj:TypeOfFrame:MyVsFrame"/>
+			<!--- ======= CODESPACEs======== -->
+			<codespaces>
+				<Codespace id="mybus">
+					<Xmlns>mybus</Xmlns>
+					<XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
+					<Description>My buses</Description>
+				</Codespace>
+				<Codespace id="xj">
+					<Xmlns>xj</Xmlns>
+					<XmlnsUrl>http://www.borninabahn.de</XmlnsUrl>
+					<Description> OtherStop data  data</Description>
+				</Codespace>
+				<Codespace id="kx">
+					<Xmlns>kx</Xmlns>
+					<XmlnsUrl>http://www.ksx.com</XmlnsUrl>
+				</Codespace>
+			</codespaces>
+			<!--- =======FRAME DEFAULTS======== -->
+			<FrameDefaults>
+				<DefaultCodespaceRef ref="kx"/>
+			</FrameDefaults>
+			<frames>
+				<ResourceFrame id="HAV:ResourceFrame:1" version="1">
+					<organisations>
+						<Operator id="HAV:Operator:999523587" version="1"/>
+					</organisations>
+					<vehicles>
+						<Vehicle id="HAV:Vehicle:1" version="1">
+							<Name>MS Havila Capella</Name>
+							<OperationalNumber>9865570</OperationalNumber>
+							<OperatorRef ref="HAV:Operator:999523587" version="1"/>
+							<VehicleTypeRef ref="HAV:VehicleType:1" version="1"/>
+						</Vehicle>
+						<Vehicle id="HAV:Vehicle:2" version="1">
+							<Name>MS Havila Castor</Name>
+							<OperationalNumber>9865582</OperationalNumber>
+							<OperatorRef ref="HAV:Operator:999523587" version="1"/>
+							<VehicleTypeRef ref="HAV:VehicleType:1" version="1"/>
+						</Vehicle>
+						<Vehicle id="HAV:Vehicle:3" version="1">
+							<Name>MS Havila Polaris</Name>
+							<OperationalNumber>9873759</OperationalNumber>
+							<OperatorRef ref="HAV:Operator:999523587" version="1"/>
+							<VehicleTypeRef ref="HAV:VehicleType:1" version="1"/>
+						</Vehicle>
+						<Vehicle id="HAV:Vehicle:4" version="1">
+							<Name>MS Havila Pollux</Name>
+							<OperationalNumber>9873761</OperationalNumber>
+							<OperatorRef ref="HAV:Operator:999523587" version="1"/>
+							<VehicleTypeRef ref="HAV:VehicleType:1" version="1"/>
+						</Vehicle>
+					</vehicles>
+				</ResourceFrame>
+				<InfrastructureFrame id="HAV:InfrastructureFrame:1" version="1">
+					<vehicleTypes>
+						<VehicleType created="2022-09-21T11:41:00.900" id="HAV:VehicleType:1" version="1">
+							<Name>Model</Name>
+							<Description>Hybrid cruise vessel</Description>
+							<SelfPropelled>true</SelfPropelled>
+							<PassengerCapacity id="HAV:PassengerCapacity:1" version="1">
+								<TotalCapacity>640</TotalCapacity>
+							</PassengerCapacity>
+							<LowFloor>true</LowFloor>
+							<HasLiftOrRamp>true</HasLiftOrRamp>
+							<Length>124</Length>
+							<Width>22</Width>
+						</VehicleType>
+					</vehicleTypes>
+				</InfrastructureFrame>
+				<TimetableFrame id="HAV:TimetableFrame:1" version="1">
+					<vehicleJourneys>
+						<ServiceJourney id="SJ1" version="1">
+							<VehicleRef ref="HAV:Vehicle:4"/>
+						</ServiceJourney>
+					</vehicleJourneys>
+				</TimetableFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

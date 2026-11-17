@@ -131,9 +131,6 @@
 							</dayTypes>
 							<JourneyPatternRef ref="NRH:JourneyPattern:NUMBER"/>
 							<!-- turens stopp (minimum to) -->
-							<passingTimes>
-								<TimetabledPassingTime version="any" id="NSR:TimetabledPassingTime:NUMBER"/>
-							</passingTimes>
 						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>

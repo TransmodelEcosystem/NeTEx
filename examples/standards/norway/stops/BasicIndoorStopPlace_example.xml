@@ -23,7 +23,7 @@ Eksempelet tar utgangspunkt i offisielle NeTEx-XML eksempler og viser et enklest
 						<MobilityImpairedAccess>true</MobilityImpairedAccess>
 						<limitations>
 							<!-- Minimumskrav til UU-informasjon -->
-							<AccessibilityLimitation>
+							<AccessibilityLimitation id="NSR:AccessibilityAssessment:1" version="any">
 								<WheelchairAccess>true</WheelchairAccess>
 								<StepFreeAccess>true</StepFreeAccess>
 							</AccessibilityLimitation>
@@ -44,7 +44,9 @@ Eksempelet tar utgangspunkt i offisielle NeTEx-XML eksempler og viser et enklest
 							<SanitaryFacilityList>none</SanitaryFacilityList>
 						</SanitaryEquipment>
 						<GeneralSign id="NSR:GeneralSign:1" version="any">
-							<PrivateCode>512</PrivateCode>
+							<privateCodes>
+								<PrivateCode>512</PrivateCode>
+							</privateCodes>
 							<SignContentType>transportMode</SignContentType>
 						</GeneralSign>
 					</placeEquipments>

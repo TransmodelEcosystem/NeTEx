@@ -56,6 +56,9 @@ There are some other exceptions:
 								<FromDate>2022-12-11T00:00:00</FromDate>
 								<ToDate>2023-09-08T23:59:59</ToDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode>102</PrivateCode>
+							</privateCodes>
 							<Name lang="de">102</Name>
 							<ShortName lang="de">102</ShortName>
 							<Description>Zell - Esslingen (N) ZOB - Weil - Mettingen Mettingen - Weil - Esslingen (N) ZOB - Zell</Description>
@@ -64,51 +67,70 @@ There are some other exceptions:
 								<BusSubmode>unknown</BusSubmode>
 							</TransportSubmode>
 							<PublicCode>102</PublicCode>
-							<PrivateCode>102</PrivateCode>
-							<OperatorRef ref="de:vvs:Operator:69" version="any"/>
-							<OperationalContextRef ref="de:vvs:OperationalContext:31" version="any"/>
+							<OperatorRef version="any" ref="de:vvs:Operator:69"/>
+							<OperationalContextRef version="any" ref="de:vvs:OperationalContext:31"/>
 						</Line>
 					</lines>
 					<tariffZones>
 						<TariffZone id="de:vvs:TariffZone:1" version="any">
+							<privateCodes>
+								<PrivateCode>1</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">1</ShortName>
-							<PrivateCode>1</PrivateCode>
 						</TariffZone>
 						<TariffZone id="de:vvs:TariffZone:2" version="any">
+							<privateCodes>
+								<PrivateCode>2</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">2</ShortName>
-							<PrivateCode>2</PrivateCode>
 						</TariffZone>
 						<TariffZone id="de:vvs:TariffZone:3" version="any">
+							<privateCodes>
+								<PrivateCode>3</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">3</ShortName>
-							<PrivateCode>3</PrivateCode>
 						</TariffZone>
 						<TariffZone id="de:vvs:TariffZone:4" version="any">
+							<privateCodes>
+								<PrivateCode>4</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">4</ShortName>
-							<PrivateCode>4</PrivateCode>
 						</TariffZone>
 						<TariffZone id="de:vvs:TariffZone:5" version="any">
+							<privateCodes>
+								<PrivateCode>5</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">5</ShortName>
-							<PrivateCode>5</PrivateCode>
 						</TariffZone>
 						<TariffZone id="de:vvs:TariffZone:6o" version="any">
+							<privateCodes>
+								<PrivateCode>6</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">6 (orange)</ShortName>
-							<PrivateCode>6</PrivateCode>
 						</TariffZone>
 						<TariffZone id="de:vvs:TariffZone:6g" version="any">
+							<privateCodes>
+								<PrivateCode>6</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">6 (gray)</ShortName>
-							<PrivateCode>6</PrivateCode>
 						</TariffZone>
 						<TariffZone id="de:vvs:TariffZone:7o" version="any">
+							<privateCodes>
+								<PrivateCode>7</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">7 (orange)</ShortName>
-							<PrivateCode>7</PrivateCode>
 						</TariffZone>
 						<TariffZone id="de:vvs:TariffZone:7g" version="any">
+							<privateCodes>
+								<PrivateCode>7</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">7 (gray)</ShortName>
-							<PrivateCode>7</PrivateCode>
 						</TariffZone>
 						<TariffZone id="de:vvs:TariffZone:8g" version="any">
+							<privateCodes>
+								<PrivateCode>8</PrivateCode>
+							</privateCodes>
 							<ShortName lang="de">8 (gray)</ShortName>
-							<PrivateCode>8</PrivateCode>
 						</TariffZone>
 					</tariffZones>
 				</ServiceFrame>
@@ -381,15 +403,17 @@ There are some other exceptions:
 				<ResourceFrame id="de:vvs:ResourceFrame:vvs" version="any">
 					<responsibilitySets>
 						<ResponsibilitySet id="de:vvs:ResponsibilitySet:SVE_SVE" version="any">
+							<privateCodes>
+								<PrivateCode>SVE</PrivateCode>
+							</privateCodes>
 							<Name lang="de">Städtischer Verkehrsbetrieb Esslingen (SVE)</Name>
-							<PrivateCode>SVE</PrivateCode>
 							<roles>
 								<ResponsibilityRoleAssignment id="de:vvs:ResponsibilityRoleAssignment:SVE_SVE:1" version="any">
-									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+									<StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="de:vvs:Operator:69" version="any"/>
 								</ResponsibilityRoleAssignment>
 								<ResponsibilityRoleAssignment id="de:vvs:ResponsibilityRoleAssignment:SVE_SVE:2" version="any">
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="de:vvs:Operator:69" version="any"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -414,7 +438,9 @@ There are some other exceptions:
 					</typesOfValue>
 					<organisations>
 						<Operator id="de:vvs:Operator:69" version="any">
-							<PrivateCode>69</PrivateCode>
+							<privateCodes>
+								<PrivateCode>69</PrivateCode>
+							</privateCodes>
 							<Name lang="de">Städtischer Verkehrsbetrieb Esslingen (SVE)</Name>
 							<ShortName lang="de">SVE</ShortName>
 							<Description>Städtischer Verkehrsbetrieb Esslingen (SVE)</Description>
@@ -422,9 +448,11 @@ There are some other exceptions:
 					</organisations>
 					<operationalContexts>
 						<OperationalContext id="de:vvs:OperationalContext:31" version="any">
+							<privateCodes>
+								<PrivateCode>31</PrivateCode>
+							</privateCodes>
 							<Name lang="de">Bus (Region)</Name>
 							<ShortName lang="de">BusP</ShortName>
-							<PrivateCode>31</PrivateCode>
 						</OperationalContext>
 					</operationalContexts>
 				</ResourceFrame>

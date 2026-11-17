@@ -15,7 +15,7 @@
 				<Contributor>V1.0 Christophe Duquesne</Contributor>
 				<Contributor>Nicholas Knowles</Contributor>
 				<Coverage>Europe</Coverage>
-				<Creator>First drafted for version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.  mailto:schemer@netex.org.uk</Creator>
+				<Creator>First drafted for version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.</Creator>
 				<Date>
 					<Created>2011-09-04</Created>
 				</Date>
@@ -80,7 +80,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="AssistanceBookingService" abstract="false" substitutionGroup="LocalService">
+	<xsd:element name="AssistanceBookingService" substitutionGroup="LocalService">
 		<xsd:annotation>
 			<xsd:documentation>Information about how to book assistance for wheelchair and disabled users.</xsd:documentation>
 		</xsd:annotation>
@@ -104,7 +104,7 @@
 							<xsd:group ref="AssistanceBookingServiceGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="AssistanceBookingServiceIdType"/>
+					<xsd:attribute name="id" type="AssistanceBookingServiceIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>

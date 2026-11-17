@@ -58,7 +58,7 @@
 							<roles>
 								<ResponsibilityRoleAssignment version="fxc:v1.0" id="fxc:FXC_metadata:DfT">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" versionRef="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" versionRef="nptg:v2.1"/>
 								</ResponsibilityRoleAssignment>
@@ -184,13 +184,17 @@
 					<PricingParameterSet id="fxc:Common_Resources" version="fxc:v1.0">
 						<priceUnits>
 							<PriceUnit id="fxc:GBP" version="fxc:v1.0">
+								<privateCodes>
+									<PrivateCode>£</PrivateCode>
+								</privateCodes>
 								<Name>Pound Sterling</Name>
-								<PrivateCode>£</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 							<PriceUnit id="fxc:EUR" version="fxc:v1.0">
+								<privateCodes>
+									<PrivateCode>€</PrivateCode>
+								</privateCodes>
 								<Name>Euro</Name>
-								<PrivateCode>€</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 						</priceUnits>
@@ -496,15 +500,6 @@
 						<DefaultSystemOfUnits>SiKilometresAndMetres</DefaultSystemOfUnits>
 						<DefaultCurrency>GBP</DefaultCurrency>
 					</FrameDefaults>
-					<versions>
-						<Version id="fxc:v1.0" version="any">
-							<ValidBetween>
-								<FromDate>2019-01-01T01:01:01Z</FromDate>
-							</ValidBetween>
-							<Description>FXC version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<typesOfValue>
 						<!-- ======== Code sets ========= -->
 						<ValueSet version="fxc:v1.0" id="fxc:PointsOfInterest_Classifications" classOfValues="PointOfInterestClassification">
@@ -888,7 +883,7 @@
 								<TypeOfAccessRightAssignment version="fxc:v1.0" id="fxc:gives_entitlement">
 									<Name>Gives right to other products</Name>
 								</TypeOfAccessRightAssignment>
-								<TypeOfAccessRightAssignment version="fxc:v1.0" id="fxc:prerequisites">
+								<TypeOfAccessRightAssignment version="fxc:v1.0" id="fxc:otherprerequisites">
 									<Name>Requires right to other products</Name>
 								</TypeOfAccessRightAssignment>
 								<TypeOfAccessRightAssignment version="fxc:v1.0" id="fxc:penalties">
@@ -897,7 +892,7 @@
 								<TypeOfAccessRightAssignment version="fxc:v1.0" id="fxc:can_use_to_pay_for">
 									<Name>Gives ability to purchase automatically using</Name>
 								</TypeOfAccessRightAssignment>
-								<TypeOfAccessRightAssignment version="fxc:v1.0" id="fxc:payment_schedules">
+								<TypeOfAccessRightAssignment version="fxc:v1.0" id="fxc:sub_or_single_payment_schedules">
 									<Name>Specifies if subscription or single payment</Name>
 								</TypeOfAccessRightAssignment>
 								<TypeOfAccessRightAssignment version="fxc:v1.0" id="fxc:reservation_condition">
@@ -906,7 +901,7 @@
 								<TypeOfAccessRightAssignment version="fxc:v1.0" id="fxc:distribution_channel_restriction">
 									<Name>Constrains availability for distribution by a channel</Name>
 								</TypeOfAccessRightAssignment>
-								<TypeOfAccessRightAssignment version="fxc:v1.0" id="fxc:use_before">
+								<TypeOfAccessRightAssignment version="fxc:v1.0" id="fxc:condition_reserviation">
 									<Name>Condition for reservation</Name>
 								</TypeOfAccessRightAssignment>
 								<TypeOfAccessRightAssignment version="fxc:v1.0" id="fxc:quota_applies">
@@ -966,7 +961,7 @@
 					</groupsOfEntities>
 				</ResourceFrame>
 				<!-- === TransXchange Common fixed definitions  ===  -->
-				<ResourceFrame version="txc:v1.0" id="fxc:UK:DFT:ResourceFrame_UK_PI_METADATA:TransXChange:txc" responsibilitySetRef="txc:TransXChange_metadata" dataSourceRef="txc:dft">
+				<ResourceFrame version="txc:v2.1" id="fxc:UK:DFT:ResourceFrame_UK_PI_METADATA:TransXChange:txc" responsibilitySetRef="txc:TransXChange_metadata" dataSourceRef="txc:dft">
 					<ValidBetween>
 						<FromDate>2005-01-01T00:00:00</FromDate>
 					</ValidBetween>
@@ -999,29 +994,6 @@
 						<DefaultDataSourceRef ref="txc:dft" version="txc:v2.1"/>
 						<DefaultResponsibilitySetRef ref="txc:TransXChange_metadata" version="txc:v2.1"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="txc:v2.1" version="any">
-							<ValidBetween>
-								<FromDate>2003-01-01T01:01:01Z</FromDate>
-							</ValidBetween>
-							<Description>TransXChange  version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-						<Version id="txc:v2.4" version="any">
-							<ValidBetween>
-								<FromDate>2008-01-01T01:01:01Z</FromDate>
-							</ValidBetween>
-							<Description>TransXChange  version 2.3</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-						<Version id="txc:v2.5" version="any">
-							<ValidBetween>
-								<FromDate>2012-01-01T01:01:01Z</FromDate>
-							</ValidBetween>
-							<Description>TransXChange  version 2.5</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="txc:dft" version="txc:v2.1">
 							<Email>standards@transxchange.org.uk</Email>
@@ -1034,7 +1006,7 @@
 							<roles>
 								<ResponsibilityRoleAssignment version="txc:v2.1" id="txc:TransXChange_metadata">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" versionRef="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -1452,12 +1424,6 @@
 						<DefaultDataSourceRef ref="napt:dft" version="napt:v2.4"/>
 						<DefaultResponsibilitySetRef ref="napt:NaPTAN_metadata" version="napt:v2.4"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="napt:v2.4" version="any">
-							<Description>NaPTAN  version 2.4</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="napt:dft" version="napt:v2.4">
 							<Email>standards@naptan.org.uk</Email>
@@ -1470,7 +1436,7 @@
 							<roles>
 								<ResponsibilityRoleAssignment version="napt:v2.4" id="napt:NaPTAN_metadata">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -1481,7 +1447,7 @@
 							<roles>
 								<ResponsibilityRoleAssignment version="napt:v2.4" id="napt:naptan_data">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>Other</StakeholderRoleType>
+									<StakeholderRoleType>other</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -1649,26 +1615,8 @@
 						</Codespace>
 					</codespaces>
 					<countries>
-						<Country id="uk" principality="iso3166-2:GB-UKM" version="nptg:v2.1">
+						<Country id="uk" version="nptg:v2.1">
 							<Name>United Kingdom</Name>
-						</Country>
-						<Country id="uk" principality="iso3166-2:GB-EAW" version="nptg:v2.1">
-							<Name>England and Wales</Name>
-						</Country>
-						<Country id="uk" principality="iso3166-2:GB-EWN" version="nptg:v2.1">
-							<Name>England and Wales and norther ireland</Name>
-						</Country>
-						<Country id="uk" principality="iso3166-2:GB-ENG" version="nptg:v2.1">
-							<Name>England</Name>
-						</Country>
-						<Country id="uk" principality="iso3166-2:GB-NIR" version="nptg:v2.1">
-							<Name>Norther Ireland</Name>
-						</Country>
-						<Country id="uk" principality="iso3166-2:GB-SCT" version="nptg:v2.1">
-							<Name>Scotland</Name>
-						</Country>
-						<Country id="uk" principality="iso3166-2:GB-WLS" version="nptg:v2.1">
-							<Name>Wales</Name>
 						</Country>
 					</countries>
 				</SiteFrame>
@@ -1711,12 +1659,6 @@
 						<DefaultDataSourceRef ref="nptg:dft" version="nptg:v2.1"/>
 						<DefaultResponsibilitySetRef ref="nptg:NPTG_metadata" version="nptg:v2.1"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="nptg:v2.1" version="any">
-							<Description>NPTG version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="nptg:dft" version="nptg:v2.1">
 							<Email>standards@nptg.org.uk</Email>
@@ -1842,7 +1784,7 @@
 											<roles>
 												<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:NPTG_metadata">
 													<DataRoleType>creates distributes</DataRoleType>
-													<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+													<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 													<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 													<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 												</ResponsibilityRoleAssignment>
@@ -1853,7 +1795,7 @@
 											<roles>
 												<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:NPTG_data">
 													<DataRoleType>creates distributes</DataRoleType>
-													<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+													<StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
 													<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 													<ResponsibleAreaRef ref="nptg:UK">TODO</ResponsibleAreaRef>
 												</ResponsibilityRoleAssignment>
@@ -1883,7 +1825,7 @@
 					<values>
 						<TypeOfFrame version="nptg:v2.1" id="nptg:UK_NPTG_profile_payload">
 							<Name>NPTG Locations and  Tariff Zones Frame</Name>
-							<FrameClassRef nameOfClass="SiteeFrame"/>
+							<FrameClassRef nameOfClass="SiteFrame"/>
 							<classes>
 								<ClassInFrame nameOfClass="TopographicPlace">
 									<!-- 	 TopographicPlace maps to  a NPTG Locality 
@@ -2022,7 +1964,7 @@
 										</ClassRelationshipInFrame>
 										<ClassRelationshipInFrame name="alternativeDescriptors">
 											<!--  NB Only coccasionally  actually populated in current data set -->
-											<RelationshipRef nameOfClass="TopographicPlaceDescriptior"/>
+											<RelationshipRef nameOfClass="TopographicPlaceDescriptor"/>
 											<!--   NptgLocality.alternativeDeiscriptors.Descriptor -->
 											<Mandatory>optional</Mandatory>
 											<Containment>byVersionedReference</Containment>
@@ -2043,7 +1985,7 @@
 										</ClassRelationshipInFrame>
 									</relationships>
 								</ClassInFrame>
-								<ClassInFrame nameOfClass="TopographicDescriptor">
+								<ClassInFrame nameOfClass="TopographicPlaceDescriptor">
 									<!-- 	 TopographicPlace maps to  a NPTG Locality. 		lternativeDescriptors.Descrip  -->
 									<Mandatory>required</Mandatory>
 									<attributes>
@@ -2149,13 +2091,13 @@
 										</ClassRelationshipInFrame>
 										<ClassRelationshipInFrame name="projection">
 											<!--  NptgPlusBusZone.Mapping  ..  <Location><Easting>  .. <Northing>  -->
-											<RelationshipRef nameOfClass="Polygon"/>
+											<RelationshipRef nameOfClass="gml:Polygon"/>
 											<Mandatory>required</Mandatory>
 											<Containment>inline</Containment>
 										</ClassRelationshipInFrame>
 									</relationships>
 								</ClassInFrame>
-								<ClassInFrame nameOfClass="Polygon">
+								<ClassInFrame nameOfClass="gml:Polygon">
 									<!-- 	 gml:Polygon  maps to  a NPTG PlusBusZone.Mapping  -->
 									<Mandatory>required</Mandatory>
 									<attributes>

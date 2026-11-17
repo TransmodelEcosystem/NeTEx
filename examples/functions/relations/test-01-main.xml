@@ -94,12 +94,14 @@
 					<TypeOfFrameRef ref="epip:EU_PI_NETWORK" versionRef="1.0"/>
 					<lines>
 						<Line id="DK::Line:25294::" version="1641913466">
+							<privateCodes>
+								<PrivateCode>021</PrivateCode>
+							</privateCodes>
 							<Name>Arriva</Name>
 							<ShortName>021</ShortName>
 							<TransportMode>bus</TransportMode>
 							<PublicCode>Arriva</PublicCode>
-							<PrivateCode>021</PrivateCode>
-							<AuthorityRef ref="DK::Authority:516::" version="1641913466"/>
+							<AuthorityRef version="1641913466" ref="DK::Authority:516::"/>
 							<additionalOperators>
 								<OperatorRef ref="DK::Operator:306::" version="1641913466"/>
 							</additionalOperators>

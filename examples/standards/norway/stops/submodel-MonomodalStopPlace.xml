@@ -3,9 +3,11 @@
 This example desceribes a simple on-street stop place with quays, but without spesified boarding positions within quays. It also presents some additional information, like accessibility and an alternative name.
  -->
 <StopPlace xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:core="http://www.govtalk.gov.uk/core" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../../xsd/netex_part_1/part1_ifopt/netex_ifopt_stopPlace_version.xsd" id="id0" created="2006-05-04T18:13:51.0" version="any" status="active">
+	<privateCodes>
+		<PrivateCode>PrivateCode</PrivateCode>
+	</privateCodes>
 	<Name lang="en-US">Name</Name>
 	<Description lang="en-US">Description</Description>
-	<PrivateCode>PrivateCode</PrivateCode>
 	<!-- Point where the stop should be placed on the map -->
 	<Centroid>
 		<Location>
@@ -17,10 +19,10 @@ This example desceribes a simple on-street stop place with quays, but without sp
 		</Location>
 	</Centroid>
 	<!-- What kind of accessibility limitations are present -->
-	<AccessibilityAssessment>
+	<AccessibilityAssessment id="1">
 		<MobilityImpairedAccess>true</MobilityImpairedAccess>
 		<limitations>
-			<AccessibilityLimitation>
+			<AccessibilityLimitation id="1">
 				<WheelchairAccess>true</WheelchairAccess>
 				<StepFreeAccess>true</StepFreeAccess>
 				<AudibleSignalsAvailable>true</AudibleSignalsAvailable>
@@ -70,7 +72,7 @@ This example desceribes a simple on-street stop place with quays, but without sp
 					<Precision>0</Precision>
 				</Location>
 			</Centroid>
-			<RoadAddress>
+			<RoadAddress id="1">
 				<RoadNumber>RoadNumber</RoadNumber>
 				<RoadName lang="en-US">RoadName</RoadName>
 			</RoadAddress>

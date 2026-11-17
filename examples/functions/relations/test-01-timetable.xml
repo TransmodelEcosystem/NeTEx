@@ -41,6 +41,66 @@
 				<DefaultLocationSystem>urn:ogc:def:crs:EPSG::4326</DefaultLocationSystem>
 			</FrameDefaults>
 			<frames>
+				<ResourceFrame id="DK::ResourceFrame_EU_PI_COMMON:AR-000087-021" version="1641913466">
+					<TypeOfFrameRef ref="epip:EU_PI_COMMON" versionRef="1.0"/>
+					<dataSources>
+						<DataSource id="epip_data:DataSource:General" version="1641913466">
+							<Name>DK</Name>
+						</DataSource>
+					</dataSources>
+					<responsibilitySets>
+						<ResponsibilitySet id="DK::ResponsibilitySet:120::" version="1641913466">
+							<roles>
+								<ResponsibilityRoleAssignment id="DK::ResponsibilityRoleAssignment:120::" version="1641913466">
+									<DataRoleType>creates</DataRoleType>
+									<ResponsibleOrganisationRef ref="DK::Authority:516::" version="1641913466"/>
+								</ResponsibilityRoleAssignment>
+							</roles>
+						</ResponsibilitySet>
+					</responsibilitySets>
+					<organisations>
+						<Authority id="DK::Authority:516::" version="1641913466">
+							<PublicCode>AR</PublicCode>
+							<Name>Arriva</Name>
+							<ShortName>AR</ShortName>
+							<LegalName>Arriva</LegalName>
+							<ContactDetails>
+								<Phone>+45 70277482</Phone>
+							</ContactDetails>
+							<OrganisationType>authority</OrganisationType>
+							<Address id="DK::Address:240::" version="1641913466"/>
+						</Authority>
+						<Operator id="DK::Operator:306::" version="1641913466">
+							<PublicCode>Arriva</PublicCode>
+							<Name>Arriva tog</Name>
+							<ShortName>Arriva</ShortName>
+							<LegalName>Arriva tog</LegalName>
+							<ContactDetails>
+								<Url>http://www.mitarriva.dk</Url>
+							</ContactDetails>
+							<OrganisationType>operator</OrganisationType>
+							<Address id="DK::Address:241::" version="1641913466"/>
+						</Operator>
+					</organisations>
+				</ResourceFrame>
+				<ServiceFrame id="DK::ServiceFrame_EU_PI_NETWORK:AR-000087-021" version="1641913466">
+					<TypeOfFrameRef ref="epip:EU_PI_NETWORK" versionRef="1.0"/>
+					<lines>
+						<Line id="DK::Line:25294::" version="1641913466">
+							<privateCodes>
+								<PrivateCode>021</PrivateCode>
+							</privateCodes>
+							<Name>Arriva</Name>
+							<ShortName>021</ShortName>
+							<TransportMode>bus</TransportMode>
+							<PublicCode>Arriva</PublicCode>
+							<AuthorityRef version="1641913466" ref="DK::Authority:516::"/>
+							<additionalOperators>
+								<OperatorRef ref="DK::Operator:306::" version="1641913466"/>
+							</additionalOperators>
+						</Line>
+					</lines>
+				</ServiceFrame>
 				<TimetableFrame id="DK::TimetableFrame_EU_PI_TIMETABLE:AR-000087-021" version="1641913466">
 					<TypeOfFrameRef ref="epip:EU_PI_TIMETABLE" versionRef="1.0"/>
 					<prerequisites>

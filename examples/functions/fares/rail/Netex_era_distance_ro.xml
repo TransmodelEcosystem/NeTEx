@@ -195,6 +195,672 @@ FARE PRODUCTS::: Trip
 	<Description>Distance based fare - Romania </Description>
 	<!--- =============== RESULTS =========== -->
 	<dataObjects>
+		<CompositeFrame version="1.0" id="tfc:TFC@DistanceTariff_NetworkExtract">
+			<ValidBetween>
+				<FromDate>2017-01-01T00:00:00</FromDate>
+				<ToDate>2020-12-31T12:00:00</ToDate>
+			</ValidBetween>
+			<Name>Example of Ntwork for Distance Based Tariff</Name>
+			<Description>Netex code example based on   TFC (Romania) data</Description>
+			<!--- =======FRAME DEFAULTS======== -->
+			<FrameDefaults>
+				<DefaultCodespaceRef ref="tfc_data"/>
+				<DefaultDataSourceRef ref="tfc:example" version="any"/>
+				<DefaultCurrency>LEI</DefaultCurrency>
+			</FrameDefaults>
+			<prerequisites>
+				<CompositeFrameRef version="1.0" ref="eura:EURA@Generic"/>
+			</prerequisites>
+			<frames>
+				<TimetableFrame id="tfc:TFC@Timetable" version="1.0" responsibilitySetRef="tfc_products:TFC">
+					<!-- Only one journey declared here to illustrate  example sales tramsaction -->
+					<vehicleJourneys>
+						<ServiceJourney version="01" id="tfc:SJ@12356">
+							<Name>Bucharest North to Buzau</Name>
+							<DepartureTime>10:22:00</DepartureTime>
+							<OperatorRef ref="uic:3181" version="any">TFC</OperatorRef>
+							<LineRef version="01" ref="tfc:TFC@Lines@Bucharest+Buzau"/>
+							<trainNumbers>
+								<TrainNumberRef version="01" ref="tfc:E425"/>
+							</trainNumbers>
+							<Origin>
+								<Name>Bucharest North</Name>
+								<ScheduledStopPointRef version="01" ref="uic:10108"/>
+							</Origin>
+							<Destination>
+								<Name>Buzau</Name>
+								<ScheduledStopPointRef version="01" ref="uic:30172"/>
+							</Destination>
+						</ServiceJourney>
+						<!--  Two different instances of dated journeys for SERVICE JOURNE -->
+						<DatedVehicleJourney version="01" id="tfc:DSJ@12356@2018-07-08">
+							<Name>Bucharest North to Buzau</Name>
+							<DepartureTime>10:22:00</DepartureTime>
+							<ServiceJourneyRef version="01" ref="tfc:SJ@12356"/>
+							<OperatingDayView>
+								<CalendarDate>2018-07-08</CalendarDate>
+							</OperatingDayView>
+							<ServiceAlterationType>planned</ServiceAlterationType>
+						</DatedVehicleJourney>
+						<DatedVehicleJourney version="01" id="tfc:DSJ@12356@2018-07-09">
+							<Name>Bucharest North to Buzau</Name>
+							<DepartureTime>10:22:00</DepartureTime>
+							<ServiceJourneyRef version="01" ref="tfc:SJ@12356"/>
+							<OperatingDayView>
+								<CalendarDate>2018-07-09</CalendarDate>
+							</OperatingDayView>
+							<ServiceAlterationType>planned</ServiceAlterationType>
+						</DatedVehicleJourney>
+					</vehicleJourneys>
+					<trainNumbers>
+						<TrainNumber version="01" id="tfc:E425">
+							<Description>Bucharest-Buzau</Description>
+							<ForAdvertisement>true</ForAdvertisement>
+						</TrainNumber>
+					</trainNumbers>
+				</TimetableFrame>
+				<ResourceFrame version="01" id="tfc:TFC@Common_Resources@codes" responsibilitySetRef="tfc_products:TFC">
+					<Name>TFC specific  common  resources </Name>
+					<!--- ======= CODESPACEs======== -->
+					<codespaces>
+						<Codespace id="tfc_data">
+							<Xmlns>tfc</Xmlns>
+							<XmlnsUrl>https://www.transferoviarcalatori.ro/</XmlnsUrl>
+							<Description>Transferoviar Calatori/</Description>
+						</Codespace>
+					</codespaces>
+					<FrameDefaults>
+						<DefaultCodespaceRef ref="tfc_data"/>
+						<DefaultDataSourceRef ref="tfc:example" version="any"/>
+						<DefaultResponsibilitySetRef ref="tfc_products:TFC" version="any"/>
+						<DefaultLocale>
+							<DefaultLanguage>ro</DefaultLanguage>
+							<languages>
+								<LanguageUsage>
+									<Language>ro</Language>
+									<LanguageUse>allUses</LanguageUse>
+								</LanguageUsage>
+								<LanguageUsage>
+									<Language>hu</Language>
+									<LanguageUse>native</LanguageUse>
+								</LanguageUsage>
+								<LanguageUsage>
+									<Language>en</Language>
+									<LanguageUse>understood</LanguageUse>
+								</LanguageUsage>
+							</languages>
+						</DefaultLocale>
+						<DefaultLocationSystem>WGS84</DefaultLocationSystem>
+						<DefaultSystemOfUnits>SiKilometresAndMetres</DefaultSystemOfUnits>
+						<DefaultCurrency>LEI</DefaultCurrency>
+					</FrameDefaults>
+					<dataSources>
+						<DataSource id="tfc:example" version="any">
+							<Email>info@www.transferoviarcalatori.ro</Email>
+						</DataSource>
+					</dataSources>
+					<responsibilitySets>
+						<ResponsibilitySet version="any" id="tfc_products:TFC">
+							<Name>Common</Name>
+							<roles>
+								<ResponsibilityRoleAssignment version="any" id="tfc:tfc_products:TFC">
+									<DataRoleType>creates aggregates distributes</DataRoleType>
+									<StakeholderRoleType>fareManagement</StakeholderRoleType>
+									<ResponsibleOrganisationRef ref="uic:3181" version="any"/>
+									<ResponsibleAreaRef ref="tfc_region">TODO</ResponsibleAreaRef>
+								</ResponsibilityRoleAssignment>
+							</roles>
+						</ResponsibilitySet>
+						<ResponsibilitySet version="any" id="tfc_t:tfc_sales">
+							<Name>TFC Sales Example Data owner</Name>
+							<roles>
+								<ResponsibilityRoleAssignment version="any" id="tfc_t:tfc_sales">
+									<DataRoleType>creates aggregates distributes</DataRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
+									<ResponsibleOrganisationRef ref="uic:3181" version="any"/>
+									<ResponsibleAreaRef ref="tfc_region">TODO</ResponsibleAreaRef>
+								</ResponsibilityRoleAssignment>
+							</roles>
+						</ResponsibilitySet>
+					</responsibilitySets>
+					<!-- ======== Code sets ========= -->
+					<typesOfValue>
+						<ValueSet version="any" id="tfc:Branding" classOfValues="Branding">
+							<Name>Branding</Name>
+							<values>
+								<!--- ====PurposeOfGrouping method========= -->
+								<Branding version="any" id="tfc:TFC@brand">
+									<Name>Transferoviar Calatori</Name>
+									<Image>TODO-BITMAPVALUE</Image>
+									<Url>https://www.transferoviarcalatori.ro/logo.png</Url>
+									<PrivateCode>TFC</PrivateCode>
+								</Branding>
+							</values>
+						</ValueSet>
+						<ValueSet version="any" id="eura:Types_of_FareContract" classOfValues="TypeOfFareContract">
+							<Name>Types of Fare Contract TFC</Name>
+							<values>
+								<!--- ====TypeOfFareContract method========= -->
+								<TypeOfFareContract version="any" id="tfc:contract@season_pass">
+									<Name>Season Pass</Name>
+								</TypeOfFareContract>
+								<TypeOfFareContract version="any" id="tfc:contract@trip">
+									<Name>Trip contract</Name>
+								</TypeOfFareContract>
+								<TypeOfFareContract version="any" id="tfc:contract@discount">
+									<Name>Trip contract</Name>
+								</TypeOfFareContract>
+							</values>
+						</ValueSet>
+					</typesOfValue>
+					<!-- ========Operators ========== -->
+					<organisations>
+						<Operator version="any" id="uic:3181">
+							<!--			Nume firma: S.C. Transferoviar Calatori S.R.L.
+Cod Unic de Inregistrare: RO 26565289 Registrul Comertului: J12/1530/2012
+Sediul Social: Strada Tudor Vladimirescu, nr. 2-4, Cluj Napoca, Judetul Cluj
+c
+		 -->
+							<PublicCode>TFC</PublicCode>
+							<Name>Transferoviar Calatori S.R.L.</Name>
+							<ContactDetails>
+								<Email>ilete@tfc-online.ro</Email>
+								<Phone>0238 434 380</Phone>
+								<Fax>021.310.43.88</Fax>
+								<Url>http://www.transferoviarcalatori.ro</Url>
+							</ContactDetails>
+							<CountryRef ref="ro"/>
+							<Address>
+								<HouseNumber>nr. 2-4</HouseNumber>
+								<Street>Strada Tudor Vladimirescu</Street>
+								<Town>Cluj Napoca</Town>
+								<PostCode>ap 1 et 1 sector 1 </PostCode>
+								<Province>Judetul Cluj</Province>
+							</Address>
+						</Operator>
+					</organisations>
+				</ResourceFrame>
+				<ResourceFrame version="1.0" id="tfc:TFC@deck_plan_example_rail" responsibilitySetRef="tfc_products:TFC">
+					<Name>Rail examples of simple train  t</Name>
+					<Description>Describes a simple train with uniform carriages .</Description>
+					<!-- == FACILITY SETS ===-->
+					<serviceFacilitySets>
+						<!-- Sleeper wagon -->
+						<ServiceFacilitySet version="any" id="tfc:SFS-cw_general_facilities">
+							<Description>General facilities</Description>
+							<FareClasses>   standardClass</FareClasses>
+							<MobilityFacilityList>suitableForWheelchairs</MobilityFacilityList>
+							<NuisanceFacilityList>mobilePhoneFreeZone mobilePhoneUseZone noSmoking</NuisanceFacilityList>
+							<PassengerCommsFacilityList>publicWifi   powerSupplySockets</PassengerCommsFacilityList>
+							<PassengerInformationFacilityList>nextStopIndicator passengerInformationDisplay realTimeConnections stopAnnouncements</PassengerInformationFacilityList>
+							<SanitaryFacilityList>toilet wheelchairAccessToilet</SanitaryFacilityList>
+							<AccommodationFacilityList> couchette seating sleeper</AccommodationFacilityList>
+							<CouchetteFacilityList> C2 C6 T2</CouchetteFacilityList>
+							<LuggageCarriageFacilityList> baggageStorage baggageVan cyclesAllowedWithReservation luggageRacks</LuggageCarriageFacilityList>
+						</ServiceFacilitySet>
+						<ServiceFacilitySet version="any" id="tfc:SFS-cw_2nd_class_facilities">
+							<Description>Second class facilities</Description>
+							<CateringFacilityList>buffet</CateringFacilityList>
+							<ClimateControlList>airConditioning heating</ClimateControlList>
+							<FareClasses>standardClass</FareClasses>
+							<LightingControlFacilityList>blinds tintedWindows </LightingControlFacilityList>
+							<PassengerCommsFacilityList>powerSupplySockets publicWifi</PassengerCommsFacilityList>
+						</ServiceFacilitySet>
+						<ServiceFacilitySet version="any" id="tfc:SFS-cw_buffet">
+							<Description>Buffet facilities</Description>
+							<CateringFacilityList>buffet  </CateringFacilityList>
+						</ServiceFacilitySet>
+					</serviceFacilitySets>
+					<vehicleTypes>
+						<!-- == Trains ==== -->
+						<PoweredTrain version="any" id="tfc:Tr-rail_train_1">
+							<Name> 3 carriage   train   </Name>
+							<Description>[Wagon1] [Wagon2] [Wagon2]   [Engine]</Description>
+							<SelfPropelled> true</SelfPropelled>
+							<PropulsionTypes>electric</PropulsionTypes>
+							<capacities>
+								<PassengerCapacity version="any" id="tco:PC-rst_rail_train_1@passenger_capacity">
+									<TotalCapacity>204</TotalCapacity>
+									<!-- seated 48 x 3 carriages-->
+									<SeatingCapacity>144</SeatingCapacity>
+									<!-- standing   20 x 3 carriages -->
+									<StandingCapacity>60</StandingCapacity>
+								</PassengerCapacity>
+							</capacities>
+							<LowFloor>false</LowFloor>
+							<HasLiftOrRamp>true</HasLiftOrRamp>
+							<BoardingHeight>0.40</BoardingHeight>
+							<facilities>
+								<ServiceFacilitySetRef version="any" ref="tfc:SFS-cw_general_facilities"/>
+							</facilities>
+							<components>
+								<TrainComponent version="any" id="tco:TC-rail_train_1-1">
+									<Label>Engine </Label>
+									<Description>Engine</Description>
+									<TractiveElementTypeRef version="any" ref="tco:TraET-X444"/>
+									<OperationalOrientation>forwards</OperationalOrientation>
+									<ForwardCoupling>
+										<Splittable>true</Splittable>
+										<ThroughAccess>noThroughAccess</ThroughAccess>
+									</ForwardCoupling>
+								</TrainComponent>
+								<TrainComponent version="any" id="tco:TC-rail_train_1-2">
+									<Label>F01</Label>
+									<Description>Standard Carriage 01</Description>
+									<TrailingElementTypeRef version="any" ref="tco:TriET-S645"/>
+									<OperationalOrientation>forwards</OperationalOrientation>
+									<ForwardCoupling>
+										<Splittable>false</Splittable>
+										<ThroughAccess>door</ThroughAccess>
+									</ForwardCoupling>
+								</TrainComponent>
+								<TrainComponent version="any" id="tco:TC-rail_train_1-3">
+									<Label>F02</Label>
+									<Description>Standard Carriage 02</Description>
+									<TrailingElementTypeRef version="any" ref="tco:TriET-S645"/>
+									<OperationalOrientation>forwards</OperationalOrientation>
+									<ForwardCoupling>
+										<Splittable>false</Splittable>
+										<ThroughAccess>door</ThroughAccess>
+									</ForwardCoupling>
+								</TrainComponent>
+								<TrainComponent version="any" id="tco:TC-rail_train_1-4">
+									<Label>F03</Label>
+									<Description>Standard Carriage 03</Description>
+									<TrailingElementTypeRef version="any" ref="tco:TriET-S645"/>
+									<OperationalOrientation>forwards</OperationalOrientation>
+									<ForwardCoupling>
+										<Splittable>false</Splittable>
+										<ThroughAccess>door</ThroughAccess>
+									</ForwardCoupling>
+								</TrainComponent>
+							</components>
+						</PoweredTrain>
+					</vehicleTypes>
+					<trainElementTypes>
+						<TractiveElementType version="any" id="tco:TraET-X444">
+							<Name>Engine</Name>
+							<TrainElementType>engine</TrainElementType>
+							<Length>10</Length>
+							<Width>3.5</Width>
+							<Height>4</Height>
+							<Weight>1000</Weight>
+						</TractiveElementType>
+						<TrailingElementType version="any" id="tco:TriET-S645">
+							<Name>Standard Coach</Name>
+							<TrainElementType>carriage</TrainElementType>
+							<FareClasses>economyClass</FareClasses>
+							<LowFloor>false</LowFloor>
+							<HasLiftOrRamp>true</HasLiftOrRamp>
+							<BoardingHeight>0.15</BoardingHeight>
+							<Length>25</Length>
+							<Width>3.5</Width>
+							<Height>4</Height>
+							<Weight>1000</Weight>
+							<DeckPlanRef version="any" ref="tfc:DP-cw_standard_coach"/>
+						</TrailingElementType>
+					</trainElementTypes>
+					<rollingStockInventories>
+						<RollingStockInventory version="any" id="rc:RSI-rolling_stock">
+							<Name>Example rail stock</Name>
+							<rollingStockItems>
+								<TractiveRollingStockItem version="any" id="tco:TriRSI-E888">
+									<Name>Engine</Name>
+									<TractiveElementTypeRef version="any" ref="tco:TraET-X444"/>
+								</TractiveRollingStockItem>
+								<TrailingRollingStockItem version="any" id="tco:TriRSI-N7955">
+									<Name>Carriage</Name>
+									<TrailingElementTypeRef version="any" ref="tco:TriET-S645"/>
+								</TrailingRollingStockItem>
+								<TrailingRollingStockItem version="any" id="tco:TriRSI-B4044 ">
+									<Name>Carriage</Name>
+									<TrailingElementTypeRef version="any" ref="tco:TriET-S645"/>
+								</TrailingRollingStockItem>
+								<TrailingRollingStockItem version="any" id="tco:TriRSI-N7482">
+									<Name>Carriage</Name>
+									<TrailingElementTypeRef version="any" ref="tco:TriET-S645"/>
+								</TrailingRollingStockItem>
+							</rollingStockItems>
+						</RollingStockInventory>
+					</rollingStockInventories>
+					<deckPlans>
+						<DeckPlan version="any" id="tfc:DP-cw_standard_coach">
+							<Name>Rail standard wagon</Name>
+							<decks>
+								<Deck version="any" id="rc:DK-cw_standard_coach_1">
+									<Name>Standard wagon Passenger deck</Name>
+									<Label>1</Label>
+									<deckSpaces>
+										<PassengerSpace version="any" id="rc:PS-bfc_deck_1@seating_area">
+											<Name>@seating_area@</Name>
+											<ServiceFacilitySetRef version="any" ref="tfc:SFS-cw_general_facilities"/>
+											<SmokingAllowed>false</SmokingAllowed>
+											<TotalCapacity>20</TotalCapacity>
+											<StandingAllowed>true</StandingAllowed>
+											<passengerSpots>
+												<!-- Row 01 for 01-04 (forward facing) with no table-->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_01_col_A">
+													<Label>01</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_01"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_01_col_B">
+													<Label>02</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_01"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_01_col_C">
+													<Label>03</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_01"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_01_col_D">
+													<Label>04</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_01"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+												</PassengerSpot>
+												<!-- Row 02 for 05-08 (forward facing) with  fold down table-->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_02_col_A">
+													<Label>05</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_02"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_02_col_B">
+													<Label>06</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_02"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_02_col_C">
+													<Label>07</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_01"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_02_col_D">
+													<Label>08</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_02"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+												</PassengerSpot>
+												<!-- Row 03 for 09-12 (forward  facing) with fold down table -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_03_col_A">
+													<Label>09</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_03"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_03_col_B">
+													<Label>10</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_03"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_03_col_C">
+													<Label>11</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_01"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_03_col_D">
+													<Label>12</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_03"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+												</PassengerSpot>
+												<!-- Row 04 for 13-16 (Backward facing with fixed table)-->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_04_col_A">
+													<Label>13</Label>
+													<Orientation>backwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_04"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_04_col_B">
+													<Label>14</Label>
+													<Orientation>backwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_04"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_04_col_C">
+													<Label>15</Label>
+													<Orientation>backwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_01"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_04_col_D">
+													<Label>16</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_04"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+												</PassengerSpot>
+												<!-- Row 05 for 17-20 (forward facing with fixed table) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_05_col_A">
+													<Label>17</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_05"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_05_col_B">
+													<Label>18</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_05"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_05_col_C">
+													<Label>19</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_01"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_05_col_D">
+													<Label>20</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_05"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+												</PassengerSpot>
+												<!-- Row 06 for 21-24 (forward facing)  with fold down table  -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_06_col_A">
+													<Label>21</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_06"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_06_col_B">
+													<Label>22</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_06"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_06_col_C">
+													<Label>23</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_01"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_06_col_D">
+													<Label>24</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_06"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+												</PassengerSpot>
+												<!-- Row 07 for 25-29 (forward facing)  with fold down table  -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_07_col_A">
+													<Label>25</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_07"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_07_col_B">
+													<Label>26</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_07"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_07_col_C">
+													<Label>27</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_01"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_07_col_D">
+													<Label>28</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_07"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+												</PassengerSpot>
+												<!-- Row 04 for 37-40 (Backward facing with fixed table)-->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_10_col_A">
+													<Label>37</Label>
+													<Orientation>backwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_10"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_10_col_B">
+													<Label>38</Label>
+													<Orientation>backwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_10"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_10_col_C">
+													<Label>39</Label>
+													<Orientation>backwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_01"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_10_col_D">
+													<Label>40</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_10"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+												</PassengerSpot>
+												<!-- Row 11 for 41-44 (forward facing with fixed table) -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_11_col_A">
+													<Label>41</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_11"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_11_col_B">
+													<Label>42</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_11"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_11_col_C">
+													<Label>43</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_11"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_11_col_D">
+													<Label>44</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_11"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+												</PassengerSpot>
+												<!-- Row 12, for 45 , 46 or one wheelchair -->
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_12_col_A">
+													<Label>41</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_12"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_A"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_12_col_B">
+													<Label>42</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_12"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_B"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_12_col_C">
+													<Label>43</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_12"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_C"/>
+												</PassengerSpot>
+												<PassengerSpot version="any" id="rc:PSp-bfc_deck_1@seating_area@row_12_col_D">
+													<Label>44</Label>
+													<Orientation>forwards</Orientation>
+													<SpotRowRef version="any" ref="rc:SR-bfc_deck_1@row_12"/>
+													<SpotColumnRef version="any" ref="rc:SC-bfc_deck_1@col_D"/>
+												</PassengerSpot>
+											</passengerSpots>
+										</PassengerSpace>
+									</deckSpaces>
+									<spotRows>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_01"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_02"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_03"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_04"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_05"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_06"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_07"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_08"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_09"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_10"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_11"/>
+										<SpotRow version="any" id="rc:SR-bfc_deck_1@row_12"/>
+									</spotRows>
+									<spotColumns>
+										<SpotColumn version="any" id="rc:SC-bfc_deck_1@col_A">
+											<Label>Column A</Label>
+										</SpotColumn>
+										<SpotColumn version="any" id="rc:SC-bfc_deck_1@col_B">
+											<Label>Column B</Label>
+										</SpotColumn>
+										<SpotColumn version="any" id="rc:SC-bfc_deck_1@col_C">
+											<Label>Column C</Label>
+										</SpotColumn>
+										<SpotColumn version="any" id="rc:SC-bfc_deck_1@col_D">
+											<Label>Column D</Label>
+										</SpotColumn>
+									</spotColumns>
+								</Deck>
+							</decks>
+						</DeckPlan>
+					</deckPlans>
+				</ResourceFrame>
+				<ServiceCalendarFrame version="01" id="tfc:TFC@Common_Resources@calendar" responsibilitySetRef="tfc_products:TFC">
+					<Name>TFC routes </Name>
+					<FrameDefaults>
+						<DefaultCodespaceRef ref="tfc_data"/>
+						<DefaultDataSourceRef ref="tfc:example" version="any"/>
+						<DefaultResponsibilitySetRef ref="tfc_products:TFC" version="any"/>
+					</FrameDefaults>
+					<dayTypes>
+						<FareDayType version="any" id="tfc:everyday">
+							<Name>Every day</Name>
+							<properties>
+								<PropertyOfDay>
+									<DaysOfWeek>Everyday</DaysOfWeek>
+								</PropertyOfDay>
+							</properties>
+						</FareDayType>
+						<FareDayType version="any" id="tfc:working_day">
+							<Name>Working day</Name>
+							<properties>
+								<PropertyOfDay>
+									<DaysOfWeek>Weekdays</DaysOfWeek>
+									<HolidayTypes>NotHoliday</HolidayTypes>
+								</PropertyOfDay>
+							</properties>
+						</FareDayType>
+						<FareDayType id="tfc:January@1" version="01">
+							<properties>
+								<PropertyOfDay>
+									<DayOfYear>--01-01</DayOfYear>
+								</PropertyOfDay>
+							</properties>
+						</FareDayType>
+					</dayTypes>
+				</ServiceCalendarFrame>
+			</frames>
+		</CompositeFrame>
+		<!-- =======Tarif====== -->
 		<CompositeFrame version="01" id="tfc:TFC@DistanceTariff_Example">
 			<ValidBetween>
 				<FromDate>2017-01-01T00:00:00</FromDate>
@@ -209,11 +875,591 @@ FARE PRODUCTS::: Trip
 				<DefaultCurrency>LEI</DefaultCurrency>
 			</FrameDefaults>
 			<prerequisites>
-				<CompositeFrameRef version="1.0" ref="eura:EURA@Generic"/>
+				<CompositeFrameRef version="1.0" ref="tfc:TFC@DistanceTariff_NetworkExtract"/>
 			</prerequisites>
 			<!--- ===== CONTENTS ======= -->
 			<frames>
 				<!--   === special fare based  example  =====-->
+				<FareFrame id="tfc:TFC@Network@ODs" version="01" responsibilitySetRef="tfc_products:TFC">
+					<Name>This frame holds stop  point  and distance matrix elements referenced by other frames</Name>
+					<FrameDefaults>
+						<DefaultCodespaceRef ref="tfc_data"/>
+						<DefaultDataSourceRef ref="tfc:example" version="any"/>
+						<DefaultResponsibilitySetRef ref="tfc_products:TFC" version="any"/>
+					</FrameDefaults>
+					<prerequisites>
+						<ResourceFrameRef version="any" ref="eura:EURA@Common_Resources"/>
+					</prerequisites>
+					<!--- ===== CONTENTS ======= -->
+					<!--- ===STOP POINTS======= -->
+					<fareScheduledStopPoints>
+						<FareScheduledStopPoint id="uic:10108" version="01">
+							<ValidBetween>
+								<FromDate>1998-01-01T00:00:00Z</FromDate>
+							</ValidBetween>
+							<alternativeTexts>
+								<AlternativeText>
+									<Text lang="en" textIdType="Name">BUCHAREST NORTH</Text>
+								</AlternativeText>
+							</alternativeTexts>
+							<Name lang="ro">Bucuresti nord</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+						<FareScheduledStopPoint id="uic:30172" version="01">
+							<ValidBetween>
+								<FromDate>1998-01-01T00:00:00Z</FromDate>
+							</ValidBetween>
+							<Name lang="ro">Peris</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+						<FareScheduledStopPoint id="uic:30184" version="01">
+							<ValidBetween>
+								<FromDate>2001-06-10T00:00:00Z</FromDate>
+							</ValidBetween>
+							<Name lang="ro">Scrovistea</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+						<FareScheduledStopPoint id="uic:30196" version="01">
+							<ValidBetween>
+								<FromDate>1998-01-01T00:00:00Z</FromDate>
+							</ValidBetween>
+							<Name lang="ro">Crivina</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+						<FareScheduledStopPoint id="uic:30225" version="01">
+							<ValidBetween>
+								<FromDate>1998-01-01T00:00:00Z</FromDate>
+							</ValidBetween>
+							<Name lang="ro">Brazi</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+						<FareScheduledStopPoint id="uic:30304" version="01">
+							<ValidBetween>
+								<FromDate>1998-01-01T00:00:00Z</FromDate>
+							</ValidBetween>
+							<Name lang="ro">Ploiesti vest</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+						<FareScheduledStopPoint id="uic:50017" version="01">
+							<ValidBetween>
+								<FromDate>1998-01-01T00:00:00Z</FromDate>
+							</ValidBetween>
+							<Name lang="ro">Ploiesti sud</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+						<FareScheduledStopPoint id="uic:50079" version="01">
+							<ValidBetween>
+								<FromDate>1998-01-01T00:00:00Z</FromDate>
+							</ValidBetween>
+							<Name lang="ro">Ploiesti Est</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+						<FareScheduledStopPoint id="uic:50158" version="01">
+							<ValidBetween>
+								<FromDate>2001-06-10T00:00:00Z</FromDate>
+							</ValidBetween>
+							<Name lang="ro">Muru HC.</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+						<FareScheduledStopPoint id="uic:50160" version="01">
+							<ValidBetween>
+								<FromDate>1998-01-01T00:00:00Z</FromDate>
+							</ValidBetween>
+							<Name lang="ro">Cricov HM.</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+						<FareScheduledStopPoint id="uic:50172" version="01">
+							<ValidBetween>
+								<FromDate>2001-10-01T00:00:00Z</FromDate>
+							</ValidBetween>
+							<Name lang="ro">Tomsani HC.</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+						<FareScheduledStopPoint id="uic:50213" version="01">
+							<ValidBetween>
+								<FromDate>1998-01-01T00:00:00Z</FromDate>
+							</ValidBetween>
+							<Name lang="ro">Mizil</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+						<FareScheduledStopPoint id="uic:50237" version="01">
+							<ValidBetween>
+								<FromDate>1998-01-01T00:00:00Z</FromDate>
+							</ValidBetween>
+							<Name lang="ro">Sahateni</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+						<FareScheduledStopPoint id="uic:50263" version="01">
+							<ValidBetween>
+								<FromDate>1998-01-01T00:00:00Z</FromDate>
+							</ValidBetween>
+							<Name lang="ro">Ulmeni</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+						<FareScheduledStopPoint id="uic:50342" version="01">
+							<ValidBetween>
+								<FromDate>1998-01-01T00:00:00Z</FromDate>
+							</ValidBetween>
+							<Name lang="ro">Buzau</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+						<!-- extra  -->
+						<FareScheduledStopPoint id="uic:70706" version="01">
+							<ValidBetween>
+								<FromDate>1998-01-01T00:00:00Z</FromDate>
+							</ValidBetween>
+							<Name lang="ro">Braila</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+						<FareScheduledStopPoint id="uic:32663" version="01">
+							<ValidBetween>
+								<FromDate>1998-01-01T00:00:00Z</FromDate>
+							</ValidBetween>
+							<Name lang="ro">Oradea</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+						<!-- TODO ADD ALL OTHER STATIONS -->
+						<FareScheduledStopPoint id="uic:21543" version="01">
+							<ValidBetween>
+								<FromDate>1998-01-01T00:00:00Z</FromDate>
+							</ValidBetween>
+							<Name lang="ro">Slanic</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+						<FareScheduledStopPoint id="uic:33368" version="01">
+							<ValidBetween>
+								<FromDate>1998-01-01T00:00:00Z</FromDate>
+							</ValidBetween>
+							<Name lang="ro">Targoviste</Name>
+							<types>
+								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
+							</types>
+							<VehicleModes>rail</VehicleModes>
+							<CountryRef ref="ro"/>
+						</FareScheduledStopPoint>
+					</fareScheduledStopPoints>
+					<!-- unattached series constraints   -->
+					<seriesConstraints>
+						<SeriesConstraint version="01" id="tfc:sc_via_33368_or_50017" order="1">
+							<Name>Via  Ploioesti-Sud or Targoviste</Name>
+							<Itinerary>*(Ploioesti-Sud/Targoviste/)*</Itinerary>
+							<farePointsInPattern>
+								<FarePointInPattern version="01" id="tfc:sc_via_33368_or_50017@50017" order="2">
+									<FareScheduledStopPointRef ref="uic:50017" version="01">Ploesti Sud</FareScheduledStopPointRef>
+									<PresentationPosition>optionalLeft</PresentationPosition>
+								</FarePointInPattern>
+								<FarePointInPattern version="01" id="tfc:sc_via_33368_or_50017@21543" order="3">
+									<FareScheduledStopPointRef ref="uic:21543" version="01">Targoviste</FareScheduledStopPointRef>
+									<PresentationPosition>optionalRight</PresentationPosition>
+								</FarePointInPattern>
+							</farePointsInPattern>
+						</SeriesConstraint>
+						<SeriesConstraint version="01" id="tfc:sc_via_50017" order="2">
+							<Name>Via Ploiesti South</Name>
+							<Itinerary>*Ploiesti-Sud*</Itinerary>
+							<farePointsInPattern>
+								<FarePointInPattern version="01" id="tfc:sc_via_50017@50017" order="2">
+									<FareScheduledStopPointRef ref="uic:50017" version="01">Ploesti South</FareScheduledStopPointRef>
+									<PresentationPosition>required</PresentationPosition>
+								</FarePointInPattern>
+							</farePointsInPattern>
+						</SeriesConstraint>
+						<SeriesConstraint version="01" id="tfc:sc_via_33368_and_30304" order="3">
+							<Name>Targoviste</Name>
+							<Itinerary>*Targoviste*Ploiesti-Vest*</Itinerary>
+							<RoutingType>both</RoutingType>
+							<farePointsInPattern>
+								<FarePointInPattern version="01" id="tfc:sc_via_33368_and_30304@21543" order="2">
+									<FareScheduledStopPointRef ref="uic:21543" version="01">Targoviste</FareScheduledStopPointRef>
+									<vias>
+										<Via version="01" id="tfc:sc_via_33368_and_30304@21543">
+											<DestinationDisplayRef ref="tfc:dd@21543">Targoviste</DestinationDisplayRef>
+										</Via>
+									</vias>
+									<PresentationPosition>required</PresentationPosition>
+								</FarePointInPattern>
+								<FarePointInPattern version="01" id="tfc:sc_via_33368_and_30304@30304" order="3">
+									<FareScheduledStopPointRef ref="uic:30304" version="01">Ploesti west</FareScheduledStopPointRef>
+									<PresentationPosition>required</PresentationPosition>
+								</FarePointInPattern>
+							</farePointsInPattern>
+						</SeriesConstraint>
+						<SeriesConstraint version="01" id="tfc:sc_via_30172" order="2">
+							<Name>Via Peris</Name>
+							<Itinerary>*Peris*</Itinerary>
+							<farePointsInPattern>
+								<FarePointInPattern version="01" id="tfc:sc_via_30172" order="2">
+									<FareScheduledStopPointRef ref="uic:30172" version="01">Peris</FareScheduledStopPointRef>
+									<PresentationPosition>required</PresentationPosition>
+								</FarePointInPattern>
+							</farePointsInPattern>
+						</SeriesConstraint>
+					</seriesConstraints>
+					<!--  === TARIFFS  ===  -->
+					<tariffs>
+						<Tariff id="tfc:TFC@ODs" version="01">
+							<Name>Distance based fares for  TFC - ODs</Name>
+							<OperatorRef ref="uic:3181" version="any">TFC</OperatorRef>
+							<TypeOfTariffRef ref="eura:Distance_kilometers" version="any"/>
+							<fareStructureElements>
+								<FareStructureElement id="tfc:TFC@ODs@p2p_OD" version="01">
+									<Name>A single O/D pair from the following</Name>
+									<!-- TODO ADD others fromwhole network -->
+									<GroupOfDistanceMatrixElementsRef ref="tfc:TFC@ODs@all" version="01"/>
+								</FareStructureElement>
+							</fareStructureElements>
+							<!--- ===DISTANCE MATRIX==== -->
+							<groupsOfDistanceMatrixElements>
+								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@all" version="01">
+									<Name>All OD's</Name>
+									<members>
+										<DistanceMatrixElementRef version="01" ref="tfc:dme_10108+30172">Bucuresti nord to Peris</DistanceMatrixElementRef>
+										<DistanceMatrixElementRef version="01" ref="tfc:dme_30172+30184">Peris  to   Scrovistea</DistanceMatrixElementRef>
+										<DistanceMatrixElementRef version="01" ref="tfc:dme_30184+30196">Scrovistea  to  Crivina</DistanceMatrixElementRef>
+										<DistanceMatrixElementRef version="01" ref="tfc:dme_30196+30225">Crivina  to Brazi </DistanceMatrixElementRef>
+										<DistanceMatrixElementRef version="01" ref="tfc:dme_30225+30304">Brazi  to Ploiesti vest</DistanceMatrixElementRef>
+										<DistanceMatrixElementRef version="01" ref="tfc:dme_30304+50017">Ploiesti vest  to Ploiesti Sud</DistanceMatrixElementRef>
+										<DistanceMatrixElementRef version="01" ref="tfc:dme_50017+500792">Ploiesti Sud  to Ploiesti Est</DistanceMatrixElementRef>
+										<DistanceMatrixElementRef version="01" ref="tfc:dme_50079+50158">Ploiesti Est  to Muru HC.</DistanceMatrixElementRef>
+										<DistanceMatrixElementRef version="01" ref="tfc:dme_50158+50160">Muru HC. to Cricov HM.</DistanceMatrixElementRef>
+										<DistanceMatrixElementRef version="01" ref="tfc:dme_50160+50172">Cricov HM. to Tomsani HC.</DistanceMatrixElementRef>
+										<DistanceMatrixElementRef version="01" ref="tfc:dme_50172+50213">Tomsani HC.  to Mizil.</DistanceMatrixElementRef>
+										<DistanceMatrixElementRef version="01" ref="tfc:dme_50213+50237">Mizil  to Sahateni.</DistanceMatrixElementRef>
+										<DistanceMatrixElementRef version="01" ref="tfc:dme_50237+50263">Sahateni to Ulmeni.</DistanceMatrixElementRef>
+										<DistanceMatrixElementRef version="01" ref="tfc:dme_50263+50342">Ulmeni to Buzau.</DistanceMatrixElementRef>
+										<!-- TO DO ADD DISTANCE FOR OTHER ROUTES, ADD FULL P2P ENTRIES  -->
+										<DistanceMatrixElementRef version="01" ref="tfc:dme_50342+10108">Bucharest to Buzau.</DistanceMatrixElementRef>
+									</members>
+								</GroupOfDistanceMatrixElements>
+								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Bucuresti+Buzau" version="01">
+									<Name>Bucuresti to Buzau</Name>
+									<members>
+										<DistanceMatrixElement version="01" id="tfc:dme_10108+30172">
+											<Name>Bucuresti nord to Peris</Name>
+											<Distance>30</Distance>
+											<StartStopPointRef version="01" ref="uic:10108" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:30172" xsi:type="FareScheduledStopPointRefStructure"/>
+										</DistanceMatrixElement>
+										<DistanceMatrixElement version="01" id="tfc:dme_30172+30184">
+											<Name>Peris  to   Scrovistea</Name>
+											<Distance>5</Distance>
+											<StartStopPointRef version="01" ref="uic:30172" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:30184" xsi:type="FareScheduledStopPointRefStructure"/>
+										</DistanceMatrixElement>
+										<DistanceMatrixElement version="01" id="tfc:dme_30184+30196">
+											<Name>Scrovistea  to  Crivina</Name>
+											<Distance>4</Distance>
+											<StartStopPointRef version="01" ref="uic:30184" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:30196" xsi:type="FareScheduledStopPointRefStructure"/>
+										</DistanceMatrixElement>
+										<DistanceMatrixElement version="01" id="tfc:dme_30196+30225">
+											<Name>Crivina  to Brazi </Name>
+											<Distance>12</Distance>
+											<StartStopPointRef version="01" ref="uic:30196" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:30225" xsi:type="FareScheduledStopPointRefStructure"/>
+										</DistanceMatrixElement>
+										<DistanceMatrixElement version="01" id="tfc:dme_30225+30304">
+											<Name>Brazi  to Ploiesti vest</Name>
+											<Distance>6</Distance>
+											<StartStopPointRef version="01" ref="uic:30225" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:30304" xsi:type="FareScheduledStopPointRefStructure"/>
+										</DistanceMatrixElement>
+										<DistanceMatrixElement version="01" id="tfc:dme_30304+50017">
+											<Name>Ploiesti vest  to Ploiesti Sud</Name>
+											<Distance>3</Distance>
+											<StartStopPointRef version="01" ref="uic:30304" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:50017" xsi:type="FareScheduledStopPointRefStructure"/>
+										</DistanceMatrixElement>
+										<DistanceMatrixElement version="01" id="tfc:dme_50017+500792">
+											<Name>Ploiesti Sud  to Ploiesti Est</Name>
+											<Distance>4</Distance>
+											<StartStopPointRef version="01" ref="uic:50017" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:50079" xsi:type="FareScheduledStopPointRefStructure"/>
+										</DistanceMatrixElement>
+										<DistanceMatrixElement version="01" id="tfc:dme_50079+50158">
+											<Name>Ploiesti Est  to Muru HC.</Name>
+											<Distance>11</Distance>
+											<StartStopPointRef version="01" ref="uic:50079" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:50158" xsi:type="FareScheduledStopPointRefStructure"/>
+										</DistanceMatrixElement>
+										<DistanceMatrixElement version="01" id="tfc:dme_50158+50160">
+											<Name>Muru HC. to Cricov HM.</Name>
+											<Distance>12</Distance>
+											<StartStopPointRef version="01" ref="uic:50158" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:50160" xsi:type="FareScheduledStopPointRefStructure"/>
+										</DistanceMatrixElement>
+										<DistanceMatrixElement version="01" id="tfc:dme_50160+50172">
+											<Name>Cricov HM. to Tomsani HC.</Name>
+											<Distance>5</Distance>
+											<StartStopPointRef version="01" ref="uic:50160" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:50172" xsi:type="FareScheduledStopPointRefStructure"/>
+										</DistanceMatrixElement>
+										<DistanceMatrixElement version="01" id="tfc:dme_50172+50213">
+											<Name>Tomsani HC.  to Mizil.</Name>
+											<Distance>12</Distance>
+											<StartStopPointRef version="01" ref="uic:50172" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:50213" xsi:type="FareScheduledStopPointRefStructure"/>
+										</DistanceMatrixElement>
+										<DistanceMatrixElement version="01" id="tfc:dme_50213+50237">
+											<Name>Mizil  to Sahateni.</Name>
+											<Distance>7</Distance>
+											<StartStopPointRef version="01" ref="uic:50213" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:50237" xsi:type="FareScheduledStopPointRefStructure"/>
+										</DistanceMatrixElement>
+										<DistanceMatrixElement version="01" id="tfc:dme_50237+50263">
+											<Name>Sahateni to Ulmeni.</Name>
+											<Distance>12</Distance>
+											<StartStopPointRef version="01" ref="uic:50237" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:50263" xsi:type="FareScheduledStopPointRefStructure"/>
+										</DistanceMatrixElement>
+										<DistanceMatrixElement version="01" id="tfc:dme_50263+50342">
+											<Name>Ulmeni to Buzau.</Name>
+											<Distance>16</Distance>
+											<StartStopPointRef version="01" ref="uic:50263" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:50342" xsi:type="FareScheduledStopPointRefStructure"/>
+										</DistanceMatrixElement>
+										<!-- TO DO ADD DISTANCE FOR OTHER ROUTES, ADD FULL P2P ENTRIES  -->
+										<DistanceMatrixElement version="01" id="tfc:dme_10108+50342">
+											<Name>Bucharest to Buzau</Name>
+											<Distance>129</Distance>
+											<StartStopPointRef version="01" ref="uic:10108" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:50342" xsi:type="FareScheduledStopPointRefStructure"/>
+										</DistanceMatrixElement>
+										<DistanceMatrixElement version="01" id="tfc:dme_50342+10108">
+											<Name>Buzau to Bucharest.</Name>
+											<Distance>129</Distance>
+											<StartStopPointRef version="01" ref="uic:50342" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:10108" xsi:type="FareScheduledStopPointRefStructure"/>
+										</DistanceMatrixElement>
+										<DistanceMatrixElement version="01" id="tfc:dme_10108+50213">
+											<Name>Bucharest North to Mizil.</Name>
+											<StartStopPointRef version="01" ref="uic:10108" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:50213" xsi:type="FareScheduledStopPointRefStructure"/>
+											<seriesConstraints>
+												<SeriesConstraintRef version="01" ref="tfc:sc_via_30172" order="2">via Peris</SeriesConstraintRef>
+												<SeriesConstraintRef version="01" ref="tfc:sc_via_33368_and_30304" order="3">via Targoviste</SeriesConstraintRef>
+											</seriesConstraints>
+										</DistanceMatrixElement>
+									</members>
+								</GroupOfDistanceMatrixElements>
+								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@tfc:Cluj_Napoca+Oradea" version="01">
+									<Name>TODO - add members</Name>
+								</GroupOfDistanceMatrixElements>
+								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Titan_South_hm+Oltenita" version="01">
+									<Name>TODO - add members</Name>
+								</GroupOfDistanceMatrixElements>
+								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Buzau+Nehoiasu" version="01">
+									<Name>TODO - add members</Name>
+								</GroupOfDistanceMatrixElements>
+								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Galati+Barlad" version="01">
+									<Name>TODO - add members</Name>
+								</GroupOfDistanceMatrixElements>
+								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Ploiesti_South+Slanic" version="01">
+									<Name>TODO - add members</Name>
+									<members>
+										<DistanceMatrixElement version="01" id="tfc:dme_50017+50342">
+											<Name>Ploesti sud  to Slanic</Name>
+											<Distance>44</Distance>
+											<StartStopPointRef version="01" ref="uic:50017" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:50342" xsi:type="FareScheduledStopPointRefStructure"/>
+										</DistanceMatrixElement>
+										<DistanceMatrixElement version="01" id="tfc:dme_10108+33368">
+											<Name>Bucharest to Slanic</Name>
+											<Distance>71</Distance>
+											<StartStopPointRef version="01" ref="uic:10108" xsi:type="FareScheduledStopPointRefStructure"/>
+											<EndStopPointRef version="01" ref="uic:33368" xsi:type="FareScheduledStopPointRefStructure"/>
+											<seriesConstraints>
+												<SeriesConstraint version="01" id="tfc:sc_10108+33368@either" order="1">
+													<Name>(Bucharest to Slanic) - Via Ploesti South</Name>
+													<Itinerary>Bucaresti-Nord*(Ploiesti-Sud/Targoviste)*Slanic</Itinerary>
+													<RoutingType>both</RoutingType>
+													<FareBasis>distance</FareBasis>
+													<FirstClassDistance>71</FirstClassDistance>
+													<SecondClassDistance>71</SecondClassDistance>
+													<farePointsInPattern>
+														<FarePointInPattern version="01" id="tfc:sc_10108+33368@any@10108" order="1">
+															<FareScheduledStopPointRef ref="uic:10108" version="01">Bucharest North</FareScheduledStopPointRef>
+															<PresentationPosition>required</PresentationPosition>
+														</FarePointInPattern>
+														<FarePointInPattern version="01" id="tfc:sc_10108+33368@any@50017" order="2">
+															<FareScheduledStopPointRef ref="uic:50017" version="01">Ploesti South</FareScheduledStopPointRef>
+															<PresentationPosition>optionalLeft</PresentationPosition>
+															<InterchangeAllowed>true</InterchangeAllowed>
+														</FarePointInPattern>
+														<FarePointInPattern version="01" id="tfc:sc_10108+33368@any@21543" order="2">
+															<FareScheduledStopPointRef ref="uic:21543" version="01">Targoviste</FareScheduledStopPointRef>
+															<PresentationPosition>optionalRight</PresentationPosition>
+															<InterchangeAllowed>true</InterchangeAllowed>
+														</FarePointInPattern>
+														<FarePointInPattern version="01" id="tfc:sc_10108+33368@any33368" order="3">
+															<FareScheduledStopPointRef ref="uic:33368" version="01">Slanic</FareScheduledStopPointRef>
+															<PresentationPosition>required</PresentationPosition>
+														</FarePointInPattern>
+													</farePointsInPattern>
+												</SeriesConstraint>
+												<SeriesConstraint version="01" id="tfc:sc_10108+33368@via_50017" order="2">
+													<Name>(Bucharest to Slanic) - Via Ploesti South</Name>
+													<Itinerary>Bucaresti-Nord*Ploiesti-Sud*Slanic</Itinerary>
+													<FareBasis>distance</FareBasis>
+													<FirstClassDistance>71</FirstClassDistance>
+													<SecondClassDistance>71</SecondClassDistance>
+													<farePointsInPattern>
+														<FarePointInPattern version="01" id="tfc:sc_10108+33368@via_50017@10108" order="1">
+															<FareScheduledStopPointRef ref="uic:10108" version="01">Bucharest North</FareScheduledStopPointRef>
+															<vias>
+																<Via version="01" id="tfc:sc_10108+33368@via_50017@10108">
+																	<DestinationDisplayRef ref="tfc:dd@50017" versionRef="TODO">Ploesti South</DestinationDisplayRef>
+																</Via>
+															</vias>
+															<PresentationPosition>required</PresentationPosition>
+														</FarePointInPattern>
+														<FarePointInPattern version="01" id="tfc:sc_10108+33368@via_50017@50017" order="2">
+															<FareScheduledStopPointRef ref="uic:50017" version="01">Ploesti South</FareScheduledStopPointRef>
+															<PresentationPosition>required</PresentationPosition>
+															<InterchangeAllowed>true</InterchangeAllowed>
+														</FarePointInPattern>
+														<FarePointInPattern version="01" id="tfc:sc_10108+33368@via_50017@33368" order="3">
+															<FareScheduledStopPointRef ref="uic:33368" version="01">Slanic</FareScheduledStopPointRef>
+															<PresentationPosition>required</PresentationPosition>
+														</FarePointInPattern>
+													</farePointsInPattern>
+												</SeriesConstraint>
+												<SeriesConstraint version="01" id="tfc:sc_10108+33368@via_33368" order="3">
+													<Name>(Bucharest to Slanic) - Via Targoviste</Name>
+													<Itinerary>Bucaresti-Nord*Targoviste*Ploiesti-Vest*Slanic </Itinerary>
+													<FareBasis>distance</FareBasis>
+													<FirstClassDistance>110</FirstClassDistance>
+													<SecondClassDistance>110</SecondClassDistance>
+													<farePointsInPattern>
+														<FarePointInPattern version="01" id="tfc:sc_10108+33368@via@21543@10108" order="1">
+															<FareScheduledStopPointRef ref="uic:10108" version="01">Bucharest North</FareScheduledStopPointRef>
+															<vias>
+																<Via version="01" id="tfc:sc_10108+33368@via@21543@10108">
+																	<DestinationDisplayRef ref="tfc:dd@21543" versionRef="TODO">Targoviste</DestinationDisplayRef>
+																</Via>
+															</vias>
+															<PresentationPosition>required</PresentationPosition>
+														</FarePointInPattern>
+														<FarePointInPattern version="01" id="tfc:sc_10108+33368@via@21543@21543" order="2">
+															<FareScheduledStopPointRef ref="uic:21543" version="01">Targoviste</FareScheduledStopPointRef>
+															<vias>
+																<Via version="01" id="tfc:sc_10108+33368@via@21543@21543">
+																	<DestinationDisplayRef ref="tfc:dd@230304" versionRef="TODO">Ploiesti west</DestinationDisplayRef>
+																</Via>
+															</vias>
+															<PresentationPosition>required</PresentationPosition>
+															<InterchangeAllowed>true</InterchangeAllowed>
+														</FarePointInPattern>
+														<FarePointInPattern version="01" id="tfc:sc_10108+33368@via@21543@30304" order="3">
+															<FareScheduledStopPointRef ref="uic:30304" version="01">Ploesti Wwest</FareScheduledStopPointRef>
+															<PresentationPosition>required</PresentationPosition>
+															<InterchangeAllowed>true</InterchangeAllowed>
+														</FarePointInPattern>
+														<FarePointInPattern version="01" id="tfc:dme_10108+33368@via@21543@33368" order="4">
+															<FareScheduledStopPointRef ref="uic:33368" version="01">Slanic</FareScheduledStopPointRef>
+															<PresentationPosition>required</PresentationPosition>
+														</FarePointInPattern>
+													</farePointsInPattern>
+												</SeriesConstraint>
+											</seriesConstraints>
+										</DistanceMatrixElement>
+									</members>
+								</GroupOfDistanceMatrixElements>
+								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Bucharest_North+Galati" version="01">
+									<Name>TODO - add members</Name>
+								</GroupOfDistanceMatrixElements>
+								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Ploiesti_South+Maneciu" version="01">
+									<Name>TODO - add members</Name>
+								</GroupOfDistanceMatrixElements>
+								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Bucharest_North+Titu+Targoviste" version="01">
+									<Name>TODO - add members</Name>
+								</GroupOfDistanceMatrixElements>
+								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Ploiesti_South+Targoviste" version="01">
+									<Name>TODO - add members</Name>
+								</GroupOfDistanceMatrixElements>
+								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Târgoviste+Pietrosita" version="01">
+									<Name>TODO - add members</Name>
+								</GroupOfDistanceMatrixElements>
+								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Rosiori+Costesti" version="01">
+									<Name>TODO - add members</Name>
+								</GroupOfDistanceMatrixElements>
+							</groupsOfDistanceMatrixElements>
+							<!-- TODO ADD  ELEMENTS FOR P2P for ALL OTHER ROUTES -->
+						</Tariff>
+					</tariffs>
+				</FareFrame>
 				<FareFrame id="tfc:TFC@Common" version="01" responsibilitySetRef="tfc_products:TFC">
 					<FrameDefaults>
 						<DefaultCodespaceRef ref="tfc_data"/>
@@ -503,7 +1749,7 @@ FARE PRODUCTS::: Trip
 														<Value>OG 7/2005</Value>
 													</KeyValue>
 												</keyList>
-												<Name lang="ro">Copii până la vârsta de 5 ani</Name>
+												<Name lang="ro">Copii pâna la vârsta de 5 ani</Name>
 												<Description>Children up to the age of 5, for whom no separate place is required, are </Description>
 												<Url>https://www.transferoviarcalatori.ro/tarife/facilitati.html</Url>
 												<TypeOfConcessionRef version="any" ref="eura:infant"/>
@@ -531,7 +1777,7 @@ FARE PRODUCTS::: Trip
 														<Value>OG 7/2005</Value>
 													</KeyValue>
 												</keyList>
-												<Name lang="ro">Copiii până la vârsta de 10 ani împliniţi</Name>
+												<Name lang="ro">Copiii pâna la vârsta de 10 ani împliniti</Name>
 												<Description>Children up to the age of 10 are fulfilledpay 50% of the regional, interregio, class 1 or class 2, with a separate seat. On trains with reserved seats they pay the full fare of the ticket. </Description>
 												<Url>https://www.transferoviarcalatori.ro/tarife/facilitati.html</Url>
 												<DiscountingRuleRef ref="tfc:TFC@Common@rate@concession" version="any"/>
@@ -819,7 +2065,7 @@ Free travel tickets for all train categories, for the booking fee, 2nd class, as
 												</limitations>
 												<IncludesGroupingType>AND</IncludesGroupingType>
 												<includes>
-													<GenericParameterAssignment order="1" id="tfc:TFC@Tariff@General@eligibilities@classes@C2" version="01">
+													<GenericParameterAssignment order="1" id="tfc:TFC@Tariff@General@eligibilities@classes@C2-01" version="01">
 														<TypeOfAccessRightAssignmentRef version="any" ref="eura:can_access"/>
 														<validityParameters>
 															<ClassOfUseRef ref="eura:second"/>
@@ -827,7 +2073,7 @@ Free travel tickets for all train categories, for the booking fee, 2nd class, as
 													</GenericParameterAssignment>
 												</includes>
 											</GenericParameterAssignment>
-											<GenericParameterAssignment id="tfc:TFC@Tariff@General@eligibilities@classes@C1_and_C2" version="01" order="3">
+											<GenericParameterAssignment id="tfc:TFC@Tariff@General@eligibilities@classes@C1_and_C2_03" version="01" order="3">
 												<Description>Certain User Profiles may buy both 1st and second class tickets </Description>
 												<TypeOfAccessRightAssignmentRef version="any" ref="eura:eligible"/>
 												<LimitationGroupingType>OR</LimitationGroupingType>
@@ -1755,7 +3001,7 @@ The reservation fee is obligatory as follows:
 
 * for the Cluj Napoca - Oradea relationship and the return is paid including the reservation fee in the amount of 2.50 lei by the passengers traveling over the entire distance Cluj Napoca - Oradea and Oradea - Cluj Napoca.
 
-* North Bucharest - Târgovişte Reservation ticket is optional.
+* North Bucharest - Târgoviste Reservation ticket is optional.
 
 Dear travelers, we inform you that no reservations are made at this time. Thank you for your understanding.</Description>
 									<TypeOfAccessRightAssignmentRef version="any" ref="eura:reservation_condition"/>
@@ -1827,8 +3073,8 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
 												<LineRef ref="tfc:TFC@Lines@Ploiesti_South+Slanic" version="01"/>
 												<LineRef ref="tfc:TFC@Lines@Ploiesti_South+Maneciu" version="01"/>
 												<LineRef ref="tfc:TFC@Lines@Ploiesti_South+Targoviste" version="01"/>
-												<LineRef ref="tfc:TFC@Lines@Târgovişte+Pietroşiţa" version="01"/>
-												<LineRef ref="tfc:TFC@Lines@Roşiori+Costeşti" version="01"/>
+												<LineRef ref="tfc:TFC@Lines@Târgoviste+Pietrosita" version="01"/>
+												<LineRef ref="tfc:TFC@Lines@Rosiori+Costesti" version="01"/>
 												<ServiceJourneyRef ref="netex:JOURNEY" versionRef="netex:OPTIONAL">A specific journey may be specified</ServiceJourneyRef>
 											</validityParameters>
 										</GenericParameterAssignment>
@@ -2049,7 +3295,7 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
 						</GroupOfSalesOfferPackages>
 					</groupsOfSalesOfferPackages>
 				</FareFrame>
-				<FareFrame id="tfc:TFC@Trip@prices" version="01" responsibilitySetRef="tfc_products:TFC">
+				<FarePriceFrame id="tfc:TFC@Trip@prices" version="01" responsibilitySetRef="tfc_products:TFC">
 					<Name>Prices for TFC  TRIP products</Name>
 					<FrameDefaults>
 						<DefaultCodespaceRef ref="tfc_data"/>
@@ -5557,7 +6803,7 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
 							</includes>
 						</FareTable>
 					</fareTables>
-				</FareFrame>
+				</FarePriceFrame>
 				<FareFrame id="tfc:TFC@Pass" version="01" responsibilitySetRef="tfc_products:TFC">
 					<Name>TFC Season Pass products</Name>
 					<FrameDefaults>
@@ -5746,7 +6992,7 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
 						</SalesOfferPackage>
 					</salesOfferPackages>
 				</FareFrame>
-				<FareFrame id="tfc:TFC@Pass@prices" version="01" responsibilitySetRef="tfc_products:TFC">
+				<FarePriceFrame id="tfc:TFC@Pass@prices" version="01" responsibilitySetRef="tfc_products:TFC">
 					<Name>Prices for TFC Season Pass products</Name>
 					<FrameDefaults>
 						<DefaultCodespaceRef ref="tfc_data"/>
@@ -6669,7 +7915,7 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
 							</includes>
 						</FareTable>
 					</fareTables>
-				</FareFrame>
+				</FarePriceFrame>
 				<FareFrame id="tfc:TFC@Discount@Statutory_Right+Travel@products" version="01" responsibilitySetRef="tfc_products:TFC">
 					<Name>TFC DIscount products for special statutory rights</Name>
 					<Description>These products give certain users the right to a certain number of free trips per year</Description>
@@ -6815,7 +8061,7 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
 State Secretariat for Revolutionary Issues in December 1989: : 12 free round trips, first class, train any rank, with: 
 	* a single attendant - only circulated in the presence of the holder,   
 	* family members - can circulate without a holder</Description>
-							<ChargingMomentRef ref="eura:prepaid@free" version="any"/>
+							<ChargingMomentRef version="any" ref="eura:prepaid@free"/>
 							<ChargingMomentType>free</ChargingMomentType>
 							<TypeOfFareProductRef version="any" ref="eura:standard_product@all_tocs"/>
 							<OperatorRef ref="uic:3181" version="any">TFC</OperatorRef>
@@ -6891,8 +8137,8 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
 							<LineRef ref="tfc:TFC@Lines@Ploiesti_South+Maneciu" version="01"/>
 							<LineRef ref="tfc:TFC@Lines@Bucharest_North+Titu+Targoviste" version="01"/>
 							<LineRef ref="tfc:TFC@Lines@Ploiesti_South+Targoviste" version="01"/>
-							<LineRef ref="tfc:TFC@Lines@Târgovişte+Pietroşiţa" version="01"/>
-							<LineRef ref="tfc:TFC@Lines@Roşiori+Costeşti" version="01"/>
+							<LineRef ref="tfc:TFC@Lines@Târgoviste+Pietrosita" version="01"/>
+							<LineRef ref="tfc:TFC@Lines@Rosiori+Costesti" version="01"/>
 						</members>
 						<TransportMode>rail</TransportMode>
 						<GroupOfLinesType>marketing</GroupOfLinesType>
@@ -7005,20 +8251,20 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
 								<ColourName>Brown</ColourName>
 							</Presentation>
 						</Line>
-						<Line id="tfc:TFC@Lines@Târgovişte+Pietroşiţa" version="01">
-							<Name lang="ro">Târgovişte - Pietroşiţa</Name>
+						<Line id="tfc:TFC@Lines@Târgoviste+Pietrosita" version="01">
+							<Name lang="ro">Târgoviste - Pietrosita</Name>
 							<TransportMode>rail</TransportMode>
 							<Presentation>
 								<ColourName>Mauve</ColourName>
 							</Presentation>
 						</Line>
-						<Line id="tfc:TFC@Lines@Roşiori+Costeşti" version="01">
+						<Line id="tfc:TFC@Lines@Rosiori+Costesti" version="01">
 							<alternativeTexts>
-								<AlternativeText attributeName="Name" id="tfc:TFC@Lines@Roşiori+Costeşti@en" order="1">
-									<Text lang="en">Roşiori - Costeşti</Text>
+								<AlternativeText attributeName="Name" id="tfc:TFC@Lines@Rosiori+Costesti@en" order="1">
+									<Text lang="en">Rosiori - Costesti</Text>
 								</AlternativeText>
 							</alternativeTexts>
-							<Name lang="ro">Roşiori  Nord- Costeşti</Name>
+							<Name lang="ro">Rosiori  Nord- Costesti</Name>
 							<TransportMode>rail</TransportMode>
 							<Presentation>
 								<ColourName>Tan</ColourName>
@@ -7026,741 +8272,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
 						</Line>
 					</lines>
 				</ServiceFrame>
-				<FareFrame id="tfc:TFC@Network@ODs" version="01" responsibilitySetRef="tfc_products:TFC">
-					<Name>This frame holds stop  point  and distance matrix elements referenced by other frames</Name>
-					<FrameDefaults>
-						<DefaultCodespaceRef ref="tfc_data"/>
-						<DefaultDataSourceRef ref="tfc:example" version="any"/>
-						<DefaultResponsibilitySetRef ref="tfc_products:TFC" version="any"/>
-					</FrameDefaults>
-					<prerequisites>
-						<ResourceFrameRef version="any" ref="eura:EURA@Common_Resources"/>
-					</prerequisites>
-					<!--- ===== CONTENTS ======= -->
-					<!--- ===STOP POINTS======= -->
-					<fareScheduledStopPoints>
-						<FareScheduledStopPoint id="uic:10108" version="01">
-							<ValidBetween>
-								<FromDate>1998-01-01T00:00:00Z</FromDate>
-							</ValidBetween>
-							<alternativeTexts>
-								<AlternativeText>
-									<Text lang="en" textIdType="Name">BUCHAREST NORTH</Text>
-								</AlternativeText>
-							</alternativeTexts>
-							<Name lang="ro">Bucuresti nord</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-						<FareScheduledStopPoint id="uic:30172" version="01">
-							<ValidBetween>
-								<FromDate>1998-01-01T00:00:00Z</FromDate>
-							</ValidBetween>
-							<Name lang="ro">Peris</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-						<FareScheduledStopPoint id="uic:30184" version="01">
-							<ValidBetween>
-								<FromDate>2001-06-10T00:00:00Z</FromDate>
-							</ValidBetween>
-							<Name lang="ro">Scrovistea</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-						<FareScheduledStopPoint id="uic:30196" version="01">
-							<ValidBetween>
-								<FromDate>1998-01-01T00:00:00Z</FromDate>
-							</ValidBetween>
-							<Name lang="ro">Crivina</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-						<FareScheduledStopPoint id="uic:30225" version="01">
-							<ValidBetween>
-								<FromDate>1998-01-01T00:00:00Z</FromDate>
-							</ValidBetween>
-							<Name lang="ro">Brazi</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-						<FareScheduledStopPoint id="uic:30304" version="01">
-							<ValidBetween>
-								<FromDate>1998-01-01T00:00:00Z</FromDate>
-							</ValidBetween>
-							<Name lang="ro">Ploiesti vest</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-						<FareScheduledStopPoint id="uic:50017" version="01">
-							<ValidBetween>
-								<FromDate>1998-01-01T00:00:00Z</FromDate>
-							</ValidBetween>
-							<Name lang="ro">Ploiesti sud</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-						<FareScheduledStopPoint id="uic:50079" version="01">
-							<ValidBetween>
-								<FromDate>1998-01-01T00:00:00Z</FromDate>
-							</ValidBetween>
-							<Name lang="ro">Ploiesti Est</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-						<FareScheduledStopPoint id="uic:50158" version="01">
-							<ValidBetween>
-								<FromDate>2001-06-10T00:00:00Z</FromDate>
-							</ValidBetween>
-							<Name lang="ro">Muru HC.</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-						<FareScheduledStopPoint id="uic:50160" version="01">
-							<ValidBetween>
-								<FromDate>1998-01-01T00:00:00Z</FromDate>
-							</ValidBetween>
-							<Name lang="ro">Cricov HM.</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-						<FareScheduledStopPoint id="uic:50172" version="01">
-							<ValidBetween>
-								<FromDate>2001-10-01T00:00:00Z</FromDate>
-							</ValidBetween>
-							<Name lang="ro">Tomsani HC.</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-						<FareScheduledStopPoint id="uic:50213" version="01">
-							<ValidBetween>
-								<FromDate>1998-01-01T00:00:00Z</FromDate>
-							</ValidBetween>
-							<Name lang="ro">Mizil</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-						<FareScheduledStopPoint id="uic:50237" version="01">
-							<ValidBetween>
-								<FromDate>1998-01-01T00:00:00Z</FromDate>
-							</ValidBetween>
-							<Name lang="ro">Săhăteni</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-						<FareScheduledStopPoint id="uic:50263" version="01">
-							<ValidBetween>
-								<FromDate>1998-01-01T00:00:00Z</FromDate>
-							</ValidBetween>
-							<Name lang="ro">Ulmeni</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-						<FareScheduledStopPoint id="uic:50342" version="01">
-							<ValidBetween>
-								<FromDate>1998-01-01T00:00:00Z</FromDate>
-							</ValidBetween>
-							<Name lang="ro">Buzau</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-						<!-- extra  -->
-						<FareScheduledStopPoint id="uic:70706" version="01">
-							<ValidBetween>
-								<FromDate>1998-01-01T00:00:00Z</FromDate>
-							</ValidBetween>
-							<Name lang="ro">Braila</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-						<FareScheduledStopPoint id="uic:32663" version="01">
-							<ValidBetween>
-								<FromDate>1998-01-01T00:00:00Z</FromDate>
-							</ValidBetween>
-							<Name lang="ro">Oradea</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-						<!-- TODO ADD ALL OTHER STATIONS -->
-						<FareScheduledStopPoint id="uic:21543" version="01">
-							<ValidBetween>
-								<FromDate>1998-01-01T00:00:00Z</FromDate>
-							</ValidBetween>
-							<Name lang="ro">Slanic</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-						<FareScheduledStopPoint id="uic:33368" version="01">
-							<ValidBetween>
-								<FromDate>1998-01-01T00:00:00Z</FromDate>
-							</ValidBetween>
-							<Name lang="ro">Targoviste</Name>
-							<types>
-								<TypeOfPointRef ref="uic:Type_of_Point@00"/>
-							</types>
-							<VehicleModes>rail</VehicleModes>
-							<CountryRef ref="ro"/>
-						</FareScheduledStopPoint>
-					</fareScheduledStopPoints>
-					<!-- unattached series constraints   -->
-					<seriesConstraints>
-						<SeriesConstraint version="01" id="tfc:sc_via_33368_or_50017" order="1">
-							<Name>Via  Ploioesti-Sud or Targoviste</Name>
-							<Itinerary>*(Ploioesti-Sud/Targoviste/)*</Itinerary>
-							<farePointsInPattern>
-								<FarePointInPattern version="01" id="tfc:sc_via_33368_or_50017@50017" order="2">
-									<FareScheduledStopPointRef ref="uic:50017" version="01">Ploesti Sud</FareScheduledStopPointRef>
-									<PresentationPosition>optionalLeft</PresentationPosition>
-								</FarePointInPattern>
-								<FarePointInPattern version="01" id="tfc:sc_via_33368_or_50017@21543" order="3">
-									<FareScheduledStopPointRef ref="uic:21543" version="01">Targoviste</FareScheduledStopPointRef>
-									<PresentationPosition>optionalRight</PresentationPosition>
-								</FarePointInPattern>
-							</farePointsInPattern>
-						</SeriesConstraint>
-						<SeriesConstraint version="01" id="tfc:sc_via_50017" order="2">
-							<Name>Via Ploiesti South</Name>
-							<Itinerary>*Ploiesti-Sud*</Itinerary>
-							<farePointsInPattern>
-								<FarePointInPattern version="01" id="tfc:sc_via_50017@50017" order="2">
-									<FareScheduledStopPointRef ref="uic:50017" version="01">Ploesti South</FareScheduledStopPointRef>
-									<PresentationPosition>required</PresentationPosition>
-								</FarePointInPattern>
-							</farePointsInPattern>
-						</SeriesConstraint>
-						<SeriesConstraint version="01" id="tfc:sc_via_33368_and_30304" order="3">
-							<Name>Targoviste</Name>
-							<Itinerary>*Targoviste*Ploiesti-Vest*</Itinerary>
-							<RoutingType>both</RoutingType>
-							<farePointsInPattern>
-								<FarePointInPattern version="01" id="tfc:sc_via_33368_and_30304@21543" order="2">
-									<FareScheduledStopPointRef ref="uic:21543" version="01">Targoviste</FareScheduledStopPointRef>
-									<vias>
-										<Via version="01" id="tfc:sc_via_33368_and_30304@21543">
-											<DestinationDisplayRef ref="tfc:dd@21543">Targoviste</DestinationDisplayRef>
-										</Via>
-									</vias>
-									<PresentationPosition>required</PresentationPosition>
-								</FarePointInPattern>
-								<FarePointInPattern version="01" id="tfc:sc_via_33368_and_30304@30304" order="3">
-									<FareScheduledStopPointRef ref="uic:30304" version="01">Ploesti west</FareScheduledStopPointRef>
-									<PresentationPosition>required</PresentationPosition>
-								</FarePointInPattern>
-							</farePointsInPattern>
-						</SeriesConstraint>
-						<SeriesConstraint version="01" id="tfc:sc_via_30172" order="2">
-							<Name>Via Peris</Name>
-							<Itinerary>*Peris*</Itinerary>
-							<farePointsInPattern>
-								<FarePointInPattern version="01" id="tfc:sc_via_30172" order="2">
-									<FareScheduledStopPointRef ref="uic:30172" version="01">Peris</FareScheduledStopPointRef>
-									<PresentationPosition>required</PresentationPosition>
-								</FarePointInPattern>
-							</farePointsInPattern>
-						</SeriesConstraint>
-					</seriesConstraints>
-					<!--  === TARIFFS  ===  -->
-					<tariffs>
-						<Tariff id="tfc:TFC@ODs" version="01">
-							<Name>Distance based fares for  TFC - ODs</Name>
-							<OperatorRef ref="uic:3181" version="any">TFC</OperatorRef>
-							<TypeOfTariffRef ref="eura:Distance_kilometers" version="any"/>
-							<fareStructureElements>
-								<FareStructureElement id="tfc:TFC@ODs@p2p_OD" version="01">
-									<Name>A single O/D pair from the following</Name>
-									<!-- TODO ADD others fromwhole network -->
-									<GroupOfDistanceMatrixElementsRef ref="tfc:TFC@ODs@all" version="01"/>
-								</FareStructureElement>
-							</fareStructureElements>
-							<!--- ===DISTANCE MATRIX==== -->
-							<groupsOfDistanceMatrixElements>
-								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@all" version="01">
-									<Name>All OD's</Name>
-									<members>
-										<DistanceMatrixElementRef version="01" ref="tfc:dme_10108+30172">Bucuresti nord to Peris</DistanceMatrixElementRef>
-										<DistanceMatrixElementRef version="01" ref="tfc:dme_30172+30184">Peris  to   Scrovistea</DistanceMatrixElementRef>
-										<DistanceMatrixElementRef version="01" ref="tfc:dme_30184+30196">Scrovistea  to  Crivina</DistanceMatrixElementRef>
-										<DistanceMatrixElementRef version="01" ref="tfc:dme_30196+30225">Crivina  to Brazi </DistanceMatrixElementRef>
-										<DistanceMatrixElementRef version="01" ref="tfc:dme_30225+30304">Brazi  to Ploiesti vest</DistanceMatrixElementRef>
-										<DistanceMatrixElementRef version="01" ref="tfc:dme_30304+50017">Ploiesti vest  to Ploiesti Sud</DistanceMatrixElementRef>
-										<DistanceMatrixElementRef version="01" ref="tfc:dme_50017+500792">Ploiesti Sud  to Ploiesti Est</DistanceMatrixElementRef>
-										<DistanceMatrixElementRef version="01" ref="tfc:dme_50079+50158">Ploiesti Est  to Muru HC.</DistanceMatrixElementRef>
-										<DistanceMatrixElementRef version="01" ref="tfc:dme_50158+50160">Muru HC. to Cricov HM.</DistanceMatrixElementRef>
-										<DistanceMatrixElementRef version="01" ref="tfc:dme_50160+50172">Cricov HM. to Tomsani HC.</DistanceMatrixElementRef>
-										<DistanceMatrixElementRef version="01" ref="tfc:dme_50172+50213">Tomsani HC.  to Mizil.</DistanceMatrixElementRef>
-										<DistanceMatrixElementRef version="01" ref="tfc:dme_50213+50237">Mizil  to Săhăteni.</DistanceMatrixElementRef>
-										<DistanceMatrixElementRef version="01" ref="tfc:dme_50237+50263">Săhăteni to Ulmeni.</DistanceMatrixElementRef>
-										<DistanceMatrixElementRef version="01" ref="tfc:dme_50263+50342">Ulmeni to Buzau.</DistanceMatrixElementRef>
-										<!-- TO DO ADD DISTANCE FOR OTHER ROUTES, ADD FULL P2P ENTRIES  -->
-										<DistanceMatrixElementRef version="01" ref="tfc:dme_50342+10108">Bucharest to Buzau.</DistanceMatrixElementRef>
-									</members>
-								</GroupOfDistanceMatrixElements>
-								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Bucuresti+Buzau" version="01">
-									<Name>Bucuresti to Buzau</Name>
-									<members>
-										<DistanceMatrixElement version="01" id="tfc:dme_10108+30172">
-											<Name>Bucuresti nord to Peris</Name>
-											<Distance>30</Distance>
-											<StartStopPointRef version="01" ref="uic:10108" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:30172" xsi:type="FareScheduledStopPointRefStructure"/>
-										</DistanceMatrixElement>
-										<DistanceMatrixElement version="01" id="tfc:dme_30172+30184">
-											<Name>Peris  to   Scrovistea</Name>
-											<Distance>5</Distance>
-											<StartStopPointRef version="01" ref="uic:30172" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:30184" xsi:type="FareScheduledStopPointRefStructure"/>
-										</DistanceMatrixElement>
-										<DistanceMatrixElement version="01" id="tfc:dme_30184+30196">
-											<Name>Scrovistea  to  Crivina</Name>
-											<Distance>4</Distance>
-											<StartStopPointRef version="01" ref="uic:30184" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:30196" xsi:type="FareScheduledStopPointRefStructure"/>
-										</DistanceMatrixElement>
-										<DistanceMatrixElement version="01" id="tfc:dme_30196+30225">
-											<Name>Crivina  to Brazi </Name>
-											<Distance>12</Distance>
-											<StartStopPointRef version="01" ref="uic:30196" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:30225" xsi:type="FareScheduledStopPointRefStructure"/>
-										</DistanceMatrixElement>
-										<DistanceMatrixElement version="01" id="tfc:dme_30225+30304">
-											<Name>Brazi  to Ploiesti vest</Name>
-											<Distance>6</Distance>
-											<StartStopPointRef version="01" ref="uic:30225" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:30304" xsi:type="FareScheduledStopPointRefStructure"/>
-										</DistanceMatrixElement>
-										<DistanceMatrixElement version="01" id="tfc:dme_30304+50017">
-											<Name>Ploiesti vest  to Ploiesti Sud</Name>
-											<Distance>3</Distance>
-											<StartStopPointRef version="01" ref="uic:30304" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:50017" xsi:type="FareScheduledStopPointRefStructure"/>
-										</DistanceMatrixElement>
-										<DistanceMatrixElement version="01" id="tfc:dme_50017+500792">
-											<Name>Ploiesti Sud  to Ploiesti Est</Name>
-											<Distance>4</Distance>
-											<StartStopPointRef version="01" ref="uic:50017" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:50079" xsi:type="FareScheduledStopPointRefStructure"/>
-										</DistanceMatrixElement>
-										<DistanceMatrixElement version="01" id="tfc:dme_50079+50158">
-											<Name>Ploiesti Est  to Muru HC.</Name>
-											<Distance>11</Distance>
-											<StartStopPointRef version="01" ref="uic:50079" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:50158" xsi:type="FareScheduledStopPointRefStructure"/>
-										</DistanceMatrixElement>
-										<DistanceMatrixElement version="01" id="tfc:dme_50158+50160">
-											<Name>Muru HC. to Cricov HM.</Name>
-											<Distance>12</Distance>
-											<StartStopPointRef version="01" ref="uic:50158" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:50160" xsi:type="FareScheduledStopPointRefStructure"/>
-										</DistanceMatrixElement>
-										<DistanceMatrixElement version="01" id="tfc:dme_50160+50172">
-											<Name>Cricov HM. to Tomsani HC.</Name>
-											<Distance>5</Distance>
-											<StartStopPointRef version="01" ref="uic:50160" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:50172" xsi:type="FareScheduledStopPointRefStructure"/>
-										</DistanceMatrixElement>
-										<DistanceMatrixElement version="01" id="tfc:dme_50172+50213">
-											<Name>Tomsani HC.  to Mizil.</Name>
-											<Distance>12</Distance>
-											<StartStopPointRef version="01" ref="uic:50172" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:50213" xsi:type="FareScheduledStopPointRefStructure"/>
-										</DistanceMatrixElement>
-										<DistanceMatrixElement version="01" id="tfc:dme_50213+50237">
-											<Name>Mizil  to Săhăteni.</Name>
-											<Distance>7</Distance>
-											<StartStopPointRef version="01" ref="uic:50213" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:50237" xsi:type="FareScheduledStopPointRefStructure"/>
-										</DistanceMatrixElement>
-										<DistanceMatrixElement version="01" id="tfc:dme_50237+50263">
-											<Name>Săhăteni to Ulmeni.</Name>
-											<Distance>12</Distance>
-											<StartStopPointRef version="01" ref="uic:50237" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:50263" xsi:type="FareScheduledStopPointRefStructure"/>
-										</DistanceMatrixElement>
-										<DistanceMatrixElement version="01" id="tfc:dme_50263+50342">
-											<Name>Ulmeni to Buzau.</Name>
-											<Distance>16</Distance>
-											<StartStopPointRef version="01" ref="uic:50263" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:50342" xsi:type="FareScheduledStopPointRefStructure"/>
-										</DistanceMatrixElement>
-										<!-- TO DO ADD DISTANCE FOR OTHER ROUTES, ADD FULL P2P ENTRIES  -->
-										<DistanceMatrixElement version="01" id="tfc:dme_10108+50342">
-											<Name>Bucharest to Buzau</Name>
-											<Distance>129</Distance>
-											<StartStopPointRef version="01" ref="uic:10108" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:50342" xsi:type="FareScheduledStopPointRefStructure"/>
-										</DistanceMatrixElement>
-										<DistanceMatrixElement version="01" id="tfc:dme_50342+10108">
-											<Name>Buzau to Bucharest.</Name>
-											<Distance>129</Distance>
-											<StartStopPointRef version="01" ref="uic:50342" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:10108" xsi:type="FareScheduledStopPointRefStructure"/>
-										</DistanceMatrixElement>
-										<DistanceMatrixElement version="01" id="tfc:dme_10108+50213">
-											<Name>Bucharest North to Mizil.</Name>
-											<StartStopPointRef version="01" ref="uic:10108" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:50213" xsi:type="FareScheduledStopPointRefStructure"/>
-											<seriesConstraints>
-												<SeriesConstraintRef version="01" ref="tfc:sc_via_30172" order="2">via Peris</SeriesConstraintRef>
-												<SeriesConstraintRef version="01" ref="tfc:sc_via_33368_and_30304" order="3">via Targoviste</SeriesConstraintRef>
-											</seriesConstraints>
-										</DistanceMatrixElement>
-									</members>
-								</GroupOfDistanceMatrixElements>
-								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@tfc:Cluj_Napoca+Oradea" version="01">
-									<Name>TODO - add members</Name>
-								</GroupOfDistanceMatrixElements>
-								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Titan_South_hm+Oltenita" version="01">
-									<Name>TODO - add members</Name>
-								</GroupOfDistanceMatrixElements>
-								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Buzau+Nehoiasu" version="01">
-									<Name>TODO - add members</Name>
-								</GroupOfDistanceMatrixElements>
-								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Galati+Barlad" version="01">
-									<Name>TODO - add members</Name>
-								</GroupOfDistanceMatrixElements>
-								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Ploiesti_South+Slanic" version="01">
-									<Name>TODO - add members</Name>
-									<members>
-										<DistanceMatrixElement version="01" id="tfc:dme_50017+50342">
-											<Name>Ploesti sud  to Slanic</Name>
-											<Distance>44</Distance>
-											<StartStopPointRef version="01" ref="uic:50017" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:50342" xsi:type="FareScheduledStopPointRefStructure"/>
-										</DistanceMatrixElement>
-										<DistanceMatrixElement version="01" id="tfc:dme_10108+33368">
-											<Name>Bucharest to Slanic</Name>
-											<Distance>71</Distance>
-											<StartStopPointRef version="01" ref="uic:10108" xsi:type="FareScheduledStopPointRefStructure"/>
-											<EndStopPointRef version="01" ref="uic:33368" xsi:type="FareScheduledStopPointRefStructure"/>
-											<seriesConstraints>
-												<SeriesConstraint version="01" id="tfc:sc_10108+33368@either" order="1">
-													<Name>(Bucharest to Slanic) - Via Ploesti South</Name>
-													<Itinerary>Bucaresti-Nord*(Ploiesti-Sud/Targoviste)*Slanic</Itinerary>
-													<RoutingType>both</RoutingType>
-													<FareBasis>distance</FareBasis>
-													<FirstClassDistance>71</FirstClassDistance>
-													<SecondClassDistance>71</SecondClassDistance>
-													<farePointsInPattern>
-														<FarePointInPattern version="01" id="tfc:sc_10108+33368@any@10108" order="1">
-															<FareScheduledStopPointRef ref="uic:10108" version="01">Bucharest North</FareScheduledStopPointRef>
-															<PresentationPosition>required</PresentationPosition>
-														</FarePointInPattern>
-														<FarePointInPattern version="01" id="tfc:sc_10108+33368@any@50017" order="2">
-															<FareScheduledStopPointRef ref="uic:50017" version="01">Ploesti South</FareScheduledStopPointRef>
-															<PresentationPosition>optionalLeft</PresentationPosition>
-															<InterchangeAllowed>true</InterchangeAllowed>
-														</FarePointInPattern>
-														<FarePointInPattern version="01" id="tfc:sc_10108+33368@any@21543" order="2">
-															<FareScheduledStopPointRef ref="uic:21543" version="01">Targoviste</FareScheduledStopPointRef>
-															<PresentationPosition>optionalRight</PresentationPosition>
-															<InterchangeAllowed>true</InterchangeAllowed>
-														</FarePointInPattern>
-														<FarePointInPattern version="01" id="tfc:sc_10108+33368@any33368" order="3">
-															<FareScheduledStopPointRef ref="uic:33368" version="01">Slanic</FareScheduledStopPointRef>
-															<PresentationPosition>required</PresentationPosition>
-														</FarePointInPattern>
-													</farePointsInPattern>
-												</SeriesConstraint>
-												<SeriesConstraint version="01" id="tfc:sc_10108+33368@via_50017" order="2">
-													<Name>(Bucharest to Slanic) - Via Ploesti South</Name>
-													<Itinerary>Bucaresti-Nord*Ploiesti-Sud*Slanic</Itinerary>
-													<FareBasis>distance</FareBasis>
-													<FirstClassDistance>71</FirstClassDistance>
-													<SecondClassDistance>71</SecondClassDistance>
-													<farePointsInPattern>
-														<FarePointInPattern version="01" id="tfc:sc_10108+33368@via_50017@10108" order="1">
-															<FareScheduledStopPointRef ref="uic:10108" version="01">Bucharest North</FareScheduledStopPointRef>
-															<vias>
-																<Via version="01" id="tfc:sc_10108+33368@via_50017@10108">
-																	<DestinationDisplayRef ref="tfc:dd@50017" versionRef="TODO">Ploesti South</DestinationDisplayRef>
-																</Via>
-															</vias>
-															<PresentationPosition>required</PresentationPosition>
-														</FarePointInPattern>
-														<FarePointInPattern version="01" id="tfc:sc_10108+33368@via_50017@50017" order="2">
-															<FareScheduledStopPointRef ref="uic:50017" version="01">Ploesti South</FareScheduledStopPointRef>
-															<PresentationPosition>required</PresentationPosition>
-															<InterchangeAllowed>true</InterchangeAllowed>
-														</FarePointInPattern>
-														<FarePointInPattern version="01" id="tfc:sc_10108+33368@via_50017@33368" order="3">
-															<FareScheduledStopPointRef ref="uic:33368" version="01">Slanic</FareScheduledStopPointRef>
-															<PresentationPosition>required</PresentationPosition>
-														</FarePointInPattern>
-													</farePointsInPattern>
-												</SeriesConstraint>
-												<SeriesConstraint version="01" id="tfc:sc_10108+33368@via_33368" order="3">
-													<Name>(Bucharest to Slanic) - Via Targoviste</Name>
-													<Itinerary>Bucaresti-Nord*Targoviste*Ploiesti-Vest*Slanic </Itinerary>
-													<FareBasis>distance</FareBasis>
-													<FirstClassDistance>110</FirstClassDistance>
-													<SecondClassDistance>110</SecondClassDistance>
-													<farePointsInPattern>
-														<FarePointInPattern version="01" id="tfc:sc_10108+33368@via@21543@10108" order="1">
-															<FareScheduledStopPointRef ref="uic:10108" version="01">Bucharest North</FareScheduledStopPointRef>
-															<vias>
-																<Via version="01" id="tfc:sc_10108+33368@via@21543@10108">
-																	<DestinationDisplayRef ref="tfc:dd@21543" versionRef="TODO">Targoviste</DestinationDisplayRef>
-																</Via>
-															</vias>
-															<PresentationPosition>required</PresentationPosition>
-														</FarePointInPattern>
-														<FarePointInPattern version="01" id="tfc:sc_10108+33368@via@21543@21543" order="2">
-															<FareScheduledStopPointRef ref="uic:21543" version="01">Targoviste</FareScheduledStopPointRef>
-															<vias>
-																<Via version="01" id="tfc:sc_10108+33368@via@21543@21543">
-																	<DestinationDisplayRef ref="tfc:dd@230304" versionRef="TODO">Ploiesti west</DestinationDisplayRef>
-																</Via>
-															</vias>
-															<PresentationPosition>required</PresentationPosition>
-															<InterchangeAllowed>true</InterchangeAllowed>
-														</FarePointInPattern>
-														<FarePointInPattern version="01" id="tfc:sc_10108+33368@via@21543@30304" order="3">
-															<FareScheduledStopPointRef ref="uic:30304" version="01">Ploesti Wwest</FareScheduledStopPointRef>
-															<PresentationPosition>required</PresentationPosition>
-															<InterchangeAllowed>true</InterchangeAllowed>
-														</FarePointInPattern>
-														<FarePointInPattern version="01" id="tfc:dme_10108+33368@via@21543@33368" order="4">
-															<FareScheduledStopPointRef ref="uic:33368" version="01">Slanic</FareScheduledStopPointRef>
-															<PresentationPosition>required</PresentationPosition>
-														</FarePointInPattern>
-													</farePointsInPattern>
-												</SeriesConstraint>
-											</seriesConstraints>
-										</DistanceMatrixElement>
-									</members>
-								</GroupOfDistanceMatrixElements>
-								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Bucharest_North+Galati" version="01">
-									<Name>TODO - add members</Name>
-								</GroupOfDistanceMatrixElements>
-								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Ploiesti_South+Maneciu" version="01">
-									<Name>TODO - add members</Name>
-								</GroupOfDistanceMatrixElements>
-								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Bucharest_North+Titu+Targoviste" version="01">
-									<Name>TODO - add members</Name>
-								</GroupOfDistanceMatrixElements>
-								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Ploiesti_South+Targoviste" version="01">
-									<Name>TODO - add members</Name>
-								</GroupOfDistanceMatrixElements>
-								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Târgovişte+Pietroşiţa" version="01">
-									<Name>TODO - add members</Name>
-								</GroupOfDistanceMatrixElements>
-								<GroupOfDistanceMatrixElements id="tfc:TFC@ODs@Roşiori+Costeşti" version="01">
-									<Name>TODO - add members</Name>
-								</GroupOfDistanceMatrixElements>
-							</groupsOfDistanceMatrixElements>
-							<!-- TODO ADD  ELEMENTS FOR P2P for ALL OTHER ROUTES -->
-						</Tariff>
-					</tariffs>
-				</FareFrame>
-				<ResourceFrame version="01" id="tfc:TFC@Common_Resources@codes" responsibilitySetRef="tfc_products:TFC">
-					<Name>TFC specific  common  resources </Name>
-					<!--- ======= CODESPACEs======== -->
-					<codespaces>
-						<Codespace id="tfc_data">
-							<Xmlns>tfc</Xmlns>
-							<XmlnsUrl>https://www.transferoviarcalatori.ro/</XmlnsUrl>
-							<Description>Transferoviar Calatori/</Description>
-						</Codespace>
-					</codespaces>
-					<FrameDefaults>
-						<DefaultCodespaceRef ref="tfc_data"/>
-						<DefaultDataSourceRef ref="tfc:example" version="any"/>
-						<DefaultResponsibilitySetRef ref="tfc_products:TFC" version="any"/>
-						<DefaultLocale>
-							<DefaultLanguage>ro</DefaultLanguage>
-							<languages>
-								<LanguageUsage>
-									<Language>ro</Language>
-									<LanguageUse>allUses</LanguageUse>
-								</LanguageUsage>
-								<LanguageUsage>
-									<Language>hu</Language>
-									<LanguageUse>native</LanguageUse>
-								</LanguageUsage>
-								<LanguageUsage>
-									<Language>en</Language>
-									<LanguageUse>understood</LanguageUse>
-								</LanguageUsage>
-							</languages>
-						</DefaultLocale>
-						<DefaultLocationSystem>WGS84</DefaultLocationSystem>
-						<DefaultSystemOfUnits>SiKilometresAndMetres</DefaultSystemOfUnits>
-						<DefaultCurrency>LEI</DefaultCurrency>
-					</FrameDefaults>
-					<dataSources>
-						<DataSource id="tfc:example" version="any">
-							<Email>info@www.transferoviarcalatori.ro</Email>
-						</DataSource>
-					</dataSources>
-					<responsibilitySets>
-						<ResponsibilitySet version="any" id="tfc_products:TFC">
-							<Name>Common</Name>
-							<roles>
-								<ResponsibilityRoleAssignment version="any" id="tfc:tfc_products:TFC">
-									<DataRoleType>creates aggregates distributes</DataRoleType>
-									<StakeholderRoleType>FareManagement</StakeholderRoleType>
-									<ResponsibleOrganisationRef ref="uic:3181" version="any"/>
-									<ResponsibleAreaRef ref="tfc_region">TODO</ResponsibleAreaRef>
-								</ResponsibilityRoleAssignment>
-							</roles>
-						</ResponsibilitySet>
-						<ResponsibilitySet version="any" id="tfc_t:tfc_sales">
-							<Name>TFC Sales Example Data owner</Name>
-							<roles>
-								<ResponsibilityRoleAssignment version="any" id="tfc_t:tfc_sales">
-									<DataRoleType>creates aggregates distributes</DataRoleType>
-									<StakeholderRoleType>Operation</StakeholderRoleType>
-									<ResponsibleOrganisationRef ref="uic:3181" version="any"/>
-									<ResponsibleAreaRef ref="tfc_region">TODO</ResponsibleAreaRef>
-								</ResponsibilityRoleAssignment>
-							</roles>
-						</ResponsibilitySet>
-					</responsibilitySets>
-					<!-- ======== Code sets ========= -->
-					<typesOfValue>
-						<ValueSet version="any" id="tfc:Branding" classOfValues="Branding">
-							<Name>Branding</Name>
-							<values>
-								<!--- ====PurposeOfGrouping method========= -->
-								<Branding version="any" id="tfc:TFC@brand">
-									<Name>Transferoviar Călători</Name>
-									<Image>TODO-BITMAPVALUE</Image>
-									<Url>https://www.transferoviarcalatori.ro/logo.png</Url>
-									<PrivateCode>TFC</PrivateCode>
-								</Branding>
-							</values>
-						</ValueSet>
-						<ValueSet version="any" id="eura:Types_of_FareContract" classOfValues="TypeOfFareContract">
-							<Name>Types of Fare Contract TFC</Name>
-							<values>
-								<!--- ====TypeOfFareContract method========= -->
-								<TypeOfFareContract version="any" id="tfc:contract@season_pass">
-									<Name>Season Pass</Name>
-								</TypeOfFareContract>
-								<TypeOfFareContract version="any" id="tfc:contract@trip">
-									<Name>Trip contract</Name>
-								</TypeOfFareContract>
-								<TypeOfFareContract version="any" id="tfc:contract@discount">
-									<Name>Trip contract</Name>
-								</TypeOfFareContract>
-							</values>
-						</ValueSet>
-					</typesOfValue>
-					<!-- ========Operators ========== -->
-					<organisations>
-						<Operator version="any" id="uic:3181">
-							<!--			Nume firmă: S.C. Transferoviar Călători S.R.L.
-Cod Unic de Inregistrare: RO 26565289 Registrul Comerţului: J12/1530/2012
-Sediul Social: Strada Tudor Vladimirescu, nr. 2-4, Cluj Napoca, Judeţul Cluj
-c
-		 -->
-							<PublicCode>TFC</PublicCode>
-							<Name>Transferoviar Călători S.R.L.</Name>
-							<ContactDetails>
-								<Email>ilete@tfc-online.ro</Email>
-								<Phone>0238 434 380</Phone>
-								<Fax>021.310.43.88</Fax>
-								<Url>http://www.transferoviarcalatori.ro</Url>
-							</ContactDetails>
-							<CountryRef ref="ro"/>
-							<Address>
-								<HouseNumber>nr. 2-4</HouseNumber>
-								<Street>Strada Tudor Vladimirescu</Street>
-								<Town>Cluj Napoca</Town>
-								<PostCode>ap 1 et 1 sector 1 </PostCode>
-								<Province>Judeţul Cluj</Province>
-							</Address>
-						</Operator>
-					</organisations>
-				</ResourceFrame>
-				<ServiceCalendarFrame version="01" id="tfc:TFC@Common_Resources@calendar" responsibilitySetRef="tfc_products:TFC">
-					<Name>TFC routes </Name>
-					<FrameDefaults>
-						<DefaultCodespaceRef ref="tfc_data"/>
-						<DefaultDataSourceRef ref="tfc:example" version="any"/>
-						<DefaultResponsibilitySetRef ref="tfc_products:TFC" version="any"/>
-					</FrameDefaults>
-					<dayTypes>
-						<FareDayType version="any" id="tfc:everyday">
-							<Name>Every day</Name>
-							<properties>
-								<PropertyOfDay>
-									<DaysOfWeek>Everyday</DaysOfWeek>
-								</PropertyOfDay>
-							</properties>
-						</FareDayType>
-						<FareDayType version="any" id="tfc:working_day">
-							<Name>Working day</Name>
-							<properties>
-								<PropertyOfDay>
-									<DaysOfWeek>Weekdays</DaysOfWeek>
-									<HolidayTypes>NotHoliday</HolidayTypes>
-								</PropertyOfDay>
-							</properties>
-						</FareDayType>
-						<FareDayType id="tfc:January@1" version="01">
-							<properties>
-								<PropertyOfDay>
-									<DayOfYear>--01-01</DayOfYear>
-								</PropertyOfDay>
-							</properties>
-						</FareDayType>
-					</dayTypes>
-				</ServiceCalendarFrame>
 			</frames>
 		</CompositeFrame>
 		<CompositeFrame id="tfc_t:Sample_Transactions" version="01" responsibilitySetRef="tfc_t:tfc_sales">
@@ -7820,8 +8331,9 @@ c
 											<TypeOfFareContractRef ref="tfc:contract@trip" version="any"/>
 											<fareContractEntries>
 												<SalesTransaction version="any" id="tfc_t:ANONYMOUS@trans12345001">
-													<Description>Single Ticket - Bucharest North to Buzau, first class, adult, bought at ticket machine, issued as  paper ticket </Description>
+													<Description>Single Ticket - Bucharest North to Buzau, second class, adult, bought at ticket machine, issued as  paper ticket </Description>
 													<Date>2018-07-08T01:07:00</Date>
+													<IsValid>true</IsValid>
 													<TypeOfFareContractEntryRef ref="eura:product_purchase"/>
 													<Amount>36.30</Amount>
 													<PriceUnitRef ref="eura:Kilometres"/>
@@ -7829,6 +8341,7 @@ c
 													<PaymentMethod>cash</PaymentMethod>
 													<travelSpecifications>
 														<OfferedTravelSpecification version="any" id="tfc_t:ANONYMOUS@trans12345001@product_purchase@trip@single">
+															<Name>Access rights to travel</Name>
 															<Date>2018-07-08T01:07:00</Date>
 															<GeographicalIntervalPriceRef ref="tfc:Single@preboard@R@C1@full@121+140" version="01"/>
 															<Amount>36.30</Amount>
@@ -7866,17 +8379,19 @@ c
 																		<UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@adult"/>
 																	</limitations>
 																	<validityParameters>
-																		<ClassOfUseRef ref="eura:first" version="any"/>
+																		<ClassOfUseRef version="any" ref="eura:second"/>
+																		<FareClass>secondClass</FareClass>
+																		<ServiceFacilitySetRef version="any" ref="tfc:SFS-cw_2nd_class_facilities"/>
 																		<TypeOfProductCategoryRef version="any" ref="eura:interregional"/>
 																		<TypeOfTariffRef version="any" ref="eura:Distance_kilometers"/>
-																		<TrainNumberRef ref="tfc:E425" versionRef="EXTERNAL"/>
-																		<TrainElementRef ref="tfc:Carriage6" versionRef="EXTERNAL"/>
-																		<PassengerSeatRef ref="tfc:1234" versionRef="EXTERNAL">Seat Reservation</PassengerSeatRef>
+																		<TrainNumberRef ref="tfc:E425" version="01"/>
 																		<TypeOfFareProductRef version="any" ref="eura:product_type@single_trip"/>
 																		<TypeOfFareProductRef version="any" ref="eura:standard_product@single_toc"/>
 																		<ChargingMomentRef version="any" ref="eura:prepaid"/>
 																		<DistributionChannelRef ref="tfc:TFC@Common@self_service_ticket_machine" version="01"/>
-																		<FulfilmentMethodRef ref="eura:collect_at_counter" version="01"/>
+																		<FulfilmentMethodType>ticketMachine</FulfilmentMethodType>
+																		<FulfilmentMethodRef ref="eura:collect_from_machine" version="01"/>
+																		<PaymentMethod>cash</PaymentMethod>
 																		<TypeOfPaymentMethodRef versionRef="EXTERNAL" ref="tfc:vodka_bottles" version="01"/>
 																		<TypeOfTravelDocumentRef ref="eura:printed_ticket" version="01"/>
 																	</validityParameters>
@@ -7884,14 +8399,58 @@ c
 																</SpecificParameterAssignment>
 															</specificParameterAssignments>
 														</OfferedTravelSpecification>
+														<OfferedTravelSpecification version="any" id="tfc_t:ANONYMOUS@trans12345001@product_purchase@trip@single@reservation">
+															<Name>seat reservation</Name>
+															<Date>2018-07-08T01:07:00</Date>
+															<UsageParameterPriceRef ref="tfc:TFC@Tariff@General@reserving@required@reservation_fee" version="01"/>
+															<Amount>2.50</Amount>
+															<PriceUnitRef ref="tfc:LEI" version="any"/>
+															<StartOfValidity>2018-07-08T01:07:00</StartOfValidity>
+															<specificParameterAssignments>
+																<SpecificParameterAssignment version="any" order="1" id="tfc_t:ANONYMOUS@trans12345001@product_purchase@trip@single@resrevation">
+																	<ValidableElementRef ref="tfc:TFC@Trip_single@leg" version="01"/>
+																	<SupplementProductRef ref="tfc:TFC@Trip_Supplement@Seat_Reservation" version="01"/>
+																	<TariffRef ref="tfc:TFC@Tariff@Trip" version="01"/>
+																	<FareStructureElementRef version="01" ref="tfc:TFC@Tariff@Trip@composition@single"/>
+																	<DistanceMatrixElementRef ref="tfc:dme_10108+50342" version="01">Bucharest to Buzau</DistanceMatrixElementRef>
+																	<SalesOfferPackageRef version="01" ref="tfc:TFC@Trip_single-SOP"/>
+																	<validityParameters>
+																		<FareClass>secondClass</FareClass>
+																		<TrainNumberRef ref="tfc:E425" version="01"/>
+																		<TrainRef version="any" ref="tfc:Tr-rail_train_1"/>
+																		<TrainComponentRef version="any" ref="tco:TC-rail_train_1-2"/>
+																		<TrailingElementTypeRef version="any" ref="tco:TriET-S645"/>
+																		<DeckPlanRef version="any" ref="tfc:DP-cw_standard_coach"/>
+																		<DeckRef version="any" ref="rc:DK-cw_standard_coach_1"/>
+																		<PassengerSpaceRef version="any" ref="rc:PS-bfc_deck_1@seating_area"/>
+																		<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_01_col_C"/>
+																		<PassengerSeatRef ref="tfc:1234" versionRef="EXTERNAL">DEPRECATED Seat Reservation</PassengerSeatRef>
+																		<TypeOfFareProductRef version="any" ref="eura:standard_product@single_toc"/>
+																		<ChargingMomentRef version="any" ref="eura:prepaid"/>
+																		<DistributionChannelRef ref="tfc:TFC@Common@self_service_ticket_machine" version="01"/>
+																		<FulfilmentMethodType>ticketMachine</FulfilmentMethodType>
+																		<FulfilmentMethodRef ref="eura:collect_from_machine" version="01"/>
+																		<PaymentMethod>cash</PaymentMethod>
+																		<TypeOfTravelDocumentRef ref="eura:printed_ticket" version="01"/>
+																	</validityParameters>
+																</SpecificParameterAssignment>
+															</specificParameterAssignments>
+														</OfferedTravelSpecification>
 													</travelSpecifications>
 													<travelDocuments>
-														<TravelDocumentRef ref="tfc_t:1267459" versionRef="EXTERNAL">Ticket number</TravelDocumentRef>
+														<TravelDocumentRef version="any" ref="tfc_t:ANONYMOUS@trans12345001_01">Ticket</TravelDocumentRef>
+														<TravelDocumentRef version="any" ref="tfc_t:ANONYMOUS@trans12345001_02">Reservation</TravelDocumentRef>
 													</travelDocuments>
 												</SalesTransaction>
 											</fareContractEntries>
 										</FareContract>
 									</fareContracts>
+									<customerAccountEntries>
+										<SalesTransactionRef version="any" ref="tfc_t:ANONYMOUS@trans12345001"/>
+									</customerAccountEntries>
+									<customerPurchasePackages>
+										<CustomerPurchasePackageRef version="01" ref="tfc_t:ANONYMOUS@trans1234500"/>
+									</customerPurchasePackages>
 								</CustomerAccount>
 							</customerAccounts>
 						</Customer>
@@ -8121,13 +8680,18 @@ c
 																	<validityParameters>
 																		<ServiceJourneyRef ref="tfc:train-IR1571" versionRef="TODO">Specific journey for reservation</ServiceJourneyRef>
 																		<ClassOfUseRef ref="eura:first" version="any"/>
+																		<FareClass>firstClass</FareClass>
 																		<TypeOfProductCategoryRef version="any" ref="eura:interregional"/>
 																		<TypeOfTariffRef version="any" ref="eura:supplement"/>
 																		<TrainNumberRef ref="tfc:IR1571" versionRef="EXTERNAL"/>
-																		<TrainElementRef ref="tfc:Carriage@6" versionRef="EXTERNAL"/>
+																		<TrailingElementTypeRef ref="tfc:Carriage@6" versionRef="EXTERNAL"/>
 																		<PassengerSeatRef ref="tfc:23" versionRef="EXTERNAL">Seat Reservation</PassengerSeatRef>
+																		<ChargingMomentType>beforeTravel</ChargingMomentType>
 																		<ChargingMomentRef version="any" ref="eura:prepaid"/>
+																		<PreassignedFareProductType>singleTrip</PreassignedFareProductType>
+																		<DistributionChannelType>atStop</DistributionChannelType>
 																		<DistributionChannelRef ref="eura:at_counter" version="01"/>
+																		<PaymentMethod>cash</PaymentMethod>
 																		<TypeOfPaymentMethodRef versionRef="EXTERNAL" ref="tfc:vodka_bottles" version="01"/>
 																		<TypeOfTravelDocumentRef ref="eura:printed_ticket" version="01"/>
 																	</validityParameters>
@@ -8147,7 +8711,7 @@ c
 																		<TypeOfProductCategoryRef version="any" ref="eura:interregional"/>
 																		<TypeOfTariffRef version="any" ref="eura:supplement"/>
 																		<TrainNumberRef ref="tfc:IR1571" versionRef="EXTERNAL"/>
-																		<TrainElementRef ref="tfc:Carriage@6" versionRef="EXTERNAL"/>
+																		<TrailingElementTypeRef ref="tfc:Carriage@8" versionRef="EXTERNAL"/>
 																		<PassengerSeatRef ref="tfc:24" versionRef="EXTERNAL">Seat Reservation</PassengerSeatRef>
 																		<ChargingMomentRef version="any" ref="eura:prepaid"/>
 																		<DistributionChannelRef ref="eura:at_counter" version="01"/>
@@ -8207,7 +8771,7 @@ c
 																		<TypeOfProductCategoryRef version="any" ref="eura:interregional"/>
 																		<TypeOfTariffRef version="any" ref="eura:supplement"/>
 																		<TrainNumberRef ref="tfc:train-IR1950" versionRef="EXTERNAL"/>
-																		<TrainElementRef ref="tfc:Carriage@8" versionRef="EXTERNAL"/>
+																		<TrailingElementTypeRef ref="tfc:Carriage@9" versionRef="EXTERNAL"/>
 																		<PassengerSeatRef ref="tfc:12" versionRef="EXTERNAL">Seat Reservation</PassengerSeatRef>
 																		<DistributionChannelRef ref="eura:at_counter" version="01"/>
 																		<TypeOfTravelDocumentRef ref="eura:printed_ticket" version="01"/>
@@ -8223,12 +8787,12 @@ c
 																		<CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@veteran@companion@personal_assistant"/>
 																	</limitations>
 																	<validityParameters>
-																		<ServiceJourneyRef ref="tfc:train-IR1950" versionRef="TODO">Specific journey for reservation</ServiceJourneyRef>
+																		<DatedVehicleJourneyRef ref="tfc:train-IR1950" versionRef="External">Specific journey for reservation</DatedVehicleJourneyRef>
 																		<ClassOfUseRef ref="eura:first" version="any"/>
 																		<TypeOfProductCategoryRef version="any" ref="eura:interregional"/>
 																		<TypeOfTariffRef version="any" ref="eura:supplement"/>
 																		<TrainNumberRef ref="tfc:train-IR1950" versionRef="EXTERNAL"/>
-																		<TrainElementRef ref="tfc:Carriage@7" versionRef="EXTERNAL"/>
+																		<TrailingElementTypeRef ref="tfc:Carriage@9" versionRef="EXTERNAL"/>
 																		<PassengerSeatRef ref="tfc:12" versionRef="EXTERNAL">Seat Reservation</PassengerSeatRef>
 																		<DistributionChannelRef ref="eura:at_counter" version="01"/>
 																		<TypeOfTravelDocumentRef ref="eura:printed_ticket" version="01"/>
@@ -8248,6 +8812,286 @@ c
 							</customerAccounts>
 						</Customer>
 					</customers>
+					<customerPurchasePackages>
+						<!-- note that package repeats data that is available on teh Sales trnsaction as it is meant to be self contained -->
+						<CustomerPurchasePackage version="01" id="tfc_t:ANONYMOUS@trans1234500">
+							<Name>Single Ticket - Bucharest North to Buzau</Name>
+							<Description>Single Ticket - Bucharest North to Buzau, second class, adult, bought at ticket machine, issued as  paper ticket </Description>
+							<SalesOfferPackageRef version="01" ref="tfc:TFC@Trip_single-SOP"/>
+							<TravelSpecificationSummaryView>
+								<Origin>
+									<ScheduledStopPointView>
+										<ScheduledStopPointRef version="01" ref="uic:10108"/>
+										<Name>Bucharest North</Name>
+									</ScheduledStopPointView>
+								</Origin>
+								<Destination>
+									<ScheduledStopPointView>
+										<ScheduledStopPointRef version="01" ref="uic:30172"/>
+										<Name>Buzau</Name>
+									</ScheduledStopPointView>
+								</Destination>
+								<Start>2018-07-08T00:22:00Z</Start>
+								<End>2018-07-08T12:32:00Z</End>
+								<Duration>PT2H10M</Duration>
+								<journeys>
+									<TrainNumberRef version="01" ref="tfc:E425"/>
+								</journeys>
+								<OperatorRef ref="uic:3181" version="any">TFC</OperatorRef>
+								<TypeOfFareProductRef version="any" ref="eura:product_type@single_trip"/>
+								<FareClass>secondClass</FareClass>
+								<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_01_col_C"/>
+								<Label>Coach 1 Seat 03</Label>
+								<ConditionSummary>
+									<HasOperatorRestrictions>specifiedOperatorOnly</HasOperatorRestrictions>
+									<TrainRestrictions>specifiedTrainOnly</TrainRestrictions>
+									<CanBreakJourney>false</CanBreakJourney>
+									<IsRefundable>true</IsRefundable>
+									<IsExchangable>true</IsExchangable>
+									<RequiresReservation>true</RequiresReservation>
+									<HasReservationFee>true</HasReservationFee>
+								</ConditionSummary>
+							</TravelSpecificationSummaryView>
+							<customerPurchasePackageElements>
+								<CustomerPurchasePackageElement version="01" id="tfc_t:ANONYMOUS@trans1234500_01" order="1">
+									<Name>Ticket</Name>
+									<SalesOfferPackageElementRef version="01" ref="tfc:TFC@Trip_single-SOP@trip@travel_document"/>
+									<MarkedAs>unused</MarkedAs>
+									<validityParameterAssignments>
+										<CustomerPurchaseParameterAssignment version="01" order="1" id="tfc_t:ANONYMOUS@trans1234500_01">
+											<Name>Single Ticket Bucharest North to Buzau.</Name>
+											<ValidableElementRef version="01" ref="tfc:TFC@Trip_single@leg"/>
+											<PreassignedFareProductRef ref="tfc:TFC@Trip_single" version="01"/>
+											<DistanceMatrixElementRef version="01" ref="tfc:dme_50342+10108">Bucharest to Buzau.</DistanceMatrixElementRef>
+											<limitations>
+												<UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@adult"/>
+											</limitations>
+											<validityParameters>
+												<OperatorRef ref="uic:3181" version="any">TFC</OperatorRef>
+												<TypeOfFareProductRef version="any" ref="eura:product_type@single_trip"/>
+												<ChargingMomentType>beforeTravel</ChargingMomentType>
+												<PaymentMethod>cash</PaymentMethod>
+												<DistributionChannelType>atStop</DistributionChannelType>
+												<DistributionChannelRef ref="tfc:TFC@Common@self_service_ticket_machine" version="01"/>
+												<TypeOfTravelDocumentRef ref="eura:printed_ticket" version="01"/>
+											</validityParameters>
+										</CustomerPurchaseParameterAssignment>
+									</validityParameterAssignments>
+									<prices>
+										<CustomerPurchasePackagePrice version="01" id="tfc_t:ANONYMOUS@trans1234500_02_01">
+											<Amount>36.30</Amount>
+										</CustomerPurchasePackagePrice>
+									</prices>
+								</CustomerPurchasePackageElement>
+								<CustomerPurchasePackageElement version="01" id="tfc_t:ANONYMOUS@trans1234500_02" order="2">
+									<Name>Seat Reservation</Name>
+									<SalesOfferPackageElementRef version="01" ref="tfc:TFC@Trip_single-SOP@seat"/>
+									<MarkedAs>unused</MarkedAs>
+									<validityParameterAssignments>
+										<CustomerPurchaseParameterAssignment version="01" order="1" id="tfc_t:ANONYMOUS@trans1234500_02_01">
+											<Name>Seat reservation   </Name>
+											<SupplementProductRef ref="tfc:TFC@Trip_Supplement@Seat_Reservation" version="01"/>
+											<DistanceMatrixElementRef version="01" ref="tfc:dme_50342+10108">Bucharest to Buzau.</DistanceMatrixElementRef>
+											<validityParameters>
+												<TrainNumberRef version="01" ref="tfc:E425"/>
+												<TrailingElementTypeRef version="any" ref="tco:TriET-S645"/>
+												<DeckPlanRef version="any" ref="tfc:DP-cw_standard_coach"/>
+												<DeckRef version="any" ref="rc:DK-cw_standard_coach_1"/>
+												<PassengerSpaceRef version="any" ref="rc:PS-bfc_deck_1@seating_area"/>
+												<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_01_col_C"/>
+												<PassengerSeatRef ref="tfc:1234" versionRef="EXTERNAL Deprecated"/>
+											</validityParameters>
+										</CustomerPurchaseParameterAssignment>
+									</validityParameterAssignments>
+									<prices>
+										<CustomerPurchasePackagePrice version="01" id="tfc_t:ANONYMOUS@trans1234500_02_01">
+											<Amount>2.50</Amount>
+										</CustomerPurchasePackagePrice>
+									</prices>
+									<spotAllocations>
+										<PassengerSpotAllocationRef version="any" ref="tfc_t:PSA@12356_03"/>
+									</spotAllocations>
+								</CustomerPurchasePackageElement>
+							</customerPurchasePackageElements>
+							<SalesTransactionRef version="any" ref="tfc_t:ANONYMOUS@trans12345001"/>
+							<prices>
+								<CustomerPurchasePackagePrice version="01" id="tfc_t:ANONYMOUS@trans1234500">
+									<Amount>38.80</Amount>
+								</CustomerPurchasePackagePrice>
+							</prices>
+							<travelDocuments>
+								<TravelDocument version="any" id="tfc_t:ANONYMOUS@trans12345001_01">
+									<Name>Single Ticket - Bucharest North to Buzau</Name>
+									<Description>Single Ticket - Bucharest North to Buzau, second class, adult, bought at ticket machine, issued as  paper ticket.</Description>
+									<TypeOfTravelDocumentRef ref="eura:printed_ticket" version="01"/>
+								</TravelDocument>
+								<TravelDocument version="any" id="tfc_t:ANONYMOUS@trans12345001_02">
+									<Name>Reservation - Bucharest North to Buzau</Name>
+									<Description>Reservation - Bucharest North to Buzau, first class, adult, bought at ticket machine, issued as aper ticket.</Description>
+									<TypeOfTravelDocumentRef ref="eura:printed_ticket" version="01"/>
+								</TravelDocument>
+							</travelDocuments>
+							<customerPurchasePackageEntries>
+								<SalesTransactionRef version="any" ref="tfc_t:ANONYMOUS@trans12345001"/>
+							</customerPurchasePackageEntries>
+						</CustomerPurchasePackage>
+					</customerPurchasePackages>
+					<vehicleJourneySpotAllocations>
+						<VehicleJourneySpotAllocation version="any" id="tfc_t:VJSA@t12356">
+							<DatedVehicleJourneyRef versionRef="01" ref="tfc:DSJ@12356"/>
+							<SeatAllocationMethod>autoAssigned</SeatAllocationMethod>
+							<passengerSpotAllocations>
+								<!-- Row _01 -->
+								<PassengerSpotAllocation version="any" id="tfc_t:PSA@12356_01">
+									<LastUpdated>2018-07-07T01:00:00Z</LastUpdated>
+									<DeckRef version="any" ref="rc:DK-cw_standard_coach_1"/>
+									<PassengerSpaceRef version="any" ref="rc:PS-bfc_deck_1@seating_area"/>
+									<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_01_col_A"/>
+									<Label>01</Label>
+									<Description>Coach 1 Seat 01</Description>
+									<SpotAvailabilityStatus>free</SpotAvailabilityStatus>
+								</PassengerSpotAllocation>
+								<PassengerSpotAllocation version="any" id="tfc_t:PSA@12356_02">
+									<LastUpdated>2018-07-07T01:00:00Z</LastUpdated>
+									<DeckRef version="any" ref="rc:DK-cw_standard_coach_1"/>
+									<PassengerSpaceRef version="any" ref="rc:PS-bfc_deck_1@seating_area"/>
+									<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_01_col_B"/>
+									<Label>02</Label>
+									<Description>Coach 1 Seat 02</Description>
+									<SpotAvailabilityStatus>free</SpotAvailabilityStatus>
+								</PassengerSpotAllocation>
+								<PassengerSpotAllocation version="any" id="tfc_t:PSA@12356_03">
+									<LastUpdated>2018-08-08T09:10:00Z</LastUpdated>
+									<DeckRef version="any" ref="rc:DK-cw_standard_coach_1"/>
+									<PassengerSpaceRef version="any" ref="rc:PS-bfc_deck_1@seating_area"/>
+									<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_01_col_C"/>
+									<Label>03</Label>
+									<Description>Coach 1 Seat 03</Description>
+									<CustomerRef version="01" ref="tfc_cd:ANONYMOUS"/>
+									<SpotAvailabilityStatus>reserved</SpotAvailabilityStatus>
+									<SeatAllocationMethod>autoAssigned</SeatAllocationMethod>
+								</PassengerSpotAllocation>
+								<PassengerSpotAllocation version="any" id="tfc_t:PSA@12356_04">
+									<LastUpdated>2018-07-07T01:00:00Z</LastUpdated>
+									<DeckRef version="any" ref="rc:DK-cw_standard_coach_1"/>
+									<PassengerSpaceRef version="any" ref="rc:PS-bfc_deck_1@seating_area"/>
+									<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_01_col_D"/>
+									<Label>04</Label>
+									<Description>Coach 1 Seat 4</Description>
+									<SpotAvailabilityStatus>free</SpotAvailabilityStatus>
+								</PassengerSpotAllocation>
+								<!-- Row _02 -->
+								<PassengerSpotAllocation version="any" id="tfc_t:PSA@12356_05">
+									<LastUpdated>2018-07-07T01:00:00Z</LastUpdated>
+									<DeckRef version="any" ref="rc:DK-cw_standard_coach_1"/>
+									<PassengerSpaceRef version="any" ref="rc:PS-bfc_deck_1@seating_area"/>
+									<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_12_col_A"/>
+									<Label>01</Label>
+									<Description>Coach 1 Seat 05</Description>
+									<SpotAvailabilityStatus>free</SpotAvailabilityStatus>
+								</PassengerSpotAllocation>
+								<PassengerSpotAllocation version="any" id="tfc_t:PSA@12356_06">
+									<LastUpdated>2018-07-07T01:00:00Z</LastUpdated>
+									<DeckRef version="any" ref="rc:DK-cw_standard_coach_1"/>
+									<PassengerSpaceRef version="any" ref="rc:PS-bfc_deck_1@seating_area"/>
+									<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_12_col_B"/>
+									<Label>02</Label>
+									<Description>Coach 1 Seat 06</Description>
+									<SpotAvailabilityStatus>free</SpotAvailabilityStatus>
+								</PassengerSpotAllocation>
+								<PassengerSpotAllocation version="any" id="tfc_t:PSA@12356_07">
+									<LastUpdated>2018-08-08T09:00:00Z</LastUpdated>
+									<DeckRef version="any" ref="rc:DK-cw_standard_coach_1"/>
+									<PassengerSpaceRef version="any" ref="rc:PS-bfc_deck_1@seating_area"/>
+									<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_12_col_C"/>
+									<Label>03</Label>
+									<Description>Coach 1 Seat 07</Description>
+								</PassengerSpotAllocation>
+								<PassengerSpotAllocation version="any" id="tfc_t:PSA@12356_08">
+									<LastUpdated>2018-07-07T01:00:00Z</LastUpdated>
+									<DeckRef version="any" ref="rc:DK-cw_standard_coach_1"/>
+									<PassengerSpaceRef version="any" ref="rc:PS-bfc_deck_1@seating_area"/>
+									<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_12_col_D"/>
+									<Label>04</Label>
+									<Description>Coach 1 Seat 08</Description>
+									<SpotAvailabilityStatus>free</SpotAvailabilityStatus>
+								</PassengerSpotAllocation>
+								<!-- Row _03 -->
+								<PassengerSpotAllocation version="any" id="tfc_t:PSA@12356_09">
+									<LastUpdated>2018-07-07T01:00:00Z</LastUpdated>
+									<DeckRef version="any" ref="rc:DK-cw_standard_coach_1"/>
+									<PassengerSpaceRef version="any" ref="rc:PS-bfc_deck_1@seating_area"/>
+									<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_03_col_A"/>
+									<Label>09</Label>
+									<Description>Coach 1 Seat 09</Description>
+									<SpotAvailabilityStatus>free</SpotAvailabilityStatus>
+								</PassengerSpotAllocation>
+								<PassengerSpotAllocation version="any" id="tfc_t:PSA@12356_10">
+									<LastUpdated>2018-07-07T01:00:00Z</LastUpdated>
+									<DeckRef version="any" ref="rc:DK-cw_standard_coach_1"/>
+									<PassengerSpaceRef version="any" ref="rc:PS-bfc_deck_1@seating_area"/>
+									<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_03_col_B"/>
+									<Label>10</Label>
+									<Description>Coach 1 Seat10</Description>
+									<SpotAvailabilityStatus>free</SpotAvailabilityStatus>
+								</PassengerSpotAllocation>
+								<PassengerSpotAllocation version="any" id="tfc_t:PSA@12356_11">
+									<LastUpdated>2018-08-08T09:00:00Z</LastUpdated>
+									<DeckRef version="any" ref="rc:DK-cw_standard_coach_1"/>
+									<PassengerSpaceRef version="any" ref="rc:PS-bfc_deck_1@seating_area"/>
+									<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_03_col_C"/>
+									<Label>11</Label>
+									<Description>Coach 1 Seat 11</Description>
+								</PassengerSpotAllocation>
+								<PassengerSpotAllocation version="any" id="tfc_t:PSA@12356_12">
+									<LastUpdated>2018-07-07T01:00:00Z</LastUpdated>
+									<DeckRef version="any" ref="rc:DK-cw_standard_coach_1"/>
+									<PassengerSpaceRef version="any" ref="rc:PS-bfc_deck_1@seating_area"/>
+									<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_03_col_D"/>
+									<Label>12</Label>
+									<Description>Coach 1 Seat 12</Description>
+									<SpotAvailabilityStatus>free</SpotAvailabilityStatus>
+								</PassengerSpotAllocation>
+								<!---ETC ETC for rows 5 - 11 , seats 13 - 44 -->
+								<!-- Row _12 -->
+								<PassengerSpotAllocation version="any" id="tfc_t:PSA@12356_45">
+									<LastUpdated>2018-07-07T01:00:00Z</LastUpdated>
+									<DeckRef version="any" ref="rc:DK-cw_standard_coach_1"/>
+									<PassengerSpaceRef version="any" ref="rc:PS-bfc_deck_1@seating_area"/>
+									<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_12_col_A"/>
+									<Label>45</Label>
+									<Description>Coach 1 Seat 45</Description>
+									<SpotAvailabilityStatus>free</SpotAvailabilityStatus>
+								</PassengerSpotAllocation>
+								<PassengerSpotAllocation version="any" id="tfc_t:PSA@12356_46">
+									<LastUpdated>2018-07-07T01:00:00Z</LastUpdated>
+									<DeckRef version="any" ref="rc:DK-cw_standard_coach_1"/>
+									<PassengerSpaceRef version="any" ref="rc:PS-bfc_deck_1@seating_area"/>
+									<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_12_col_B"/>
+									<Label>46</Label>
+									<Description>Coach 1 Seat 46</Description>
+									<SpotAvailabilityStatus>free</SpotAvailabilityStatus>
+								</PassengerSpotAllocation>
+								<PassengerSpotAllocation version="any" id="tfc_t:PSA@12356_47">
+									<LastUpdated>2018-08-08T09:00:00Z</LastUpdated>
+									<DeckRef version="any" ref="rc:DK-cw_standard_coach_1"/>
+									<PassengerSpaceRef version="any" ref="rc:PS-bfc_deck_1@seating_area"/>
+									<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_12_col_C"/>
+									<Label>47</Label>
+									<Description>Coach 1 Seat 47</Description>
+								</PassengerSpotAllocation>
+								<PassengerSpotAllocation version="any" id="tfc_t:PSA@12356_48">
+									<LastUpdated>2018-07-07T01:00:00Z</LastUpdated>
+									<DeckRef version="any" ref="rc:DK-cw_standard_coach_1"/>
+									<PassengerSpaceRef version="any" ref="rc:PS-bfc_deck_1@seating_area"/>
+									<PassengerSpotRef version="any" ref="rc:PSp-bfc_deck_1@seating_area@row_12_col_D"/>
+									<Label>48</Label>
+									<Description>Coach 1 Seat 48</Description>
+									<SpotAvailabilityStatus>free</SpotAvailabilityStatus>
+								</PassengerSpotAllocation>
+							</passengerSpotAllocations>
+						</VehicleJourneySpotAllocation>
+					</vehicleJourneySpotAllocations>
 				</SalesTransactionFrame>
 			</frames>
 		</CompositeFrame>
@@ -8299,7 +9143,7 @@ c
 							<Name>National Rail Stations</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="uic_station_management:0070">
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="uic_station_management:0070" version="any"/>
 									<ResponsibleAreaRef ref="atoc:uk">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -8310,7 +9154,7 @@ c
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="eura:code_sets">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="eura:EURA" version="any"/>
 									<ResponsibleAreaRef ref="eura:Europe">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -8502,18 +9346,24 @@ c
 							<values>
 								<!--- ====Types OfTariff    ========= -->
 								<TypeOfPricingRule version="any" id="eura:vat@transport">
+									<privateCodes>
+										<PrivateCode>q9876</PrivateCode>
+									</privateCodes>
 									<Name>VAT Tax classifcation - transport</Name>
-									<PrivateCode>q9876</PrivateCode>
 									<TaxCategory>transportation</TaxCategory>
 								</TypeOfPricingRule>
 								<TypeOfPricingRule version="any" id="eura:vat@food">
+									<privateCodes>
+										<PrivateCode>q9877</PrivateCode>
+									</privateCodes>
 									<Name>VAT Tax classifcation - transport</Name>
-									<PrivateCode>q9877</PrivateCode>
 									<TaxCategory>food</TaxCategory>
 								</TypeOfPricingRule>
 								<TypeOfPricingRule version="any" id="eura:vat@parking">
+									<privateCodes>
+										<PrivateCode>q9877</PrivateCode>
+									</privateCodes>
 									<Name>VAT Tax classifcation - transport</Name>
-									<PrivateCode>q9877</PrivateCode>
 									<TaxCategory>parking</TaxCategory>
 								</TypeOfPricingRule>
 							</values>
@@ -8628,13 +9478,17 @@ c
 					<PricingParameterSet id="eura:Common_Resources" version="any">
 						<priceUnits>
 							<PriceUnit id="eura:EUR" version="any">
+								<privateCodes>
+									<PrivateCode>€</PrivateCode>
+								</privateCodes>
 								<Name>Euro</Name>
-								<PrivateCode>€</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 							<PriceUnit id="eura:GBP" version="any">
+								<privateCodes>
+									<PrivateCode>£</PrivateCode>
+								</privateCodes>
 								<Name>Pound Sterling</Name>
-								<PrivateCode>£</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 							<PriceUnit id="eura:SFR" version="any">

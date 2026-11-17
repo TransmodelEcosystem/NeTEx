@@ -233,7 +233,7 @@ At the end are shown some sample transactions showing the parameters that define
 	<Description>Fares for West of England</Description>
 	<!-- =============== RESULTS =========== -->
 	<dataObjects>
-		<CompositeFrame version="1.0" id="epd:UK:FBRI:FareFrame_UK_PI_LINE_FARE_OFFER:WoE@Bristol@48:frst" dataSourceRef="frst:WoE" responsibilitySetRef="frst:tariffs">
+		<CompositeFrame version="1.0" id="epd:UK:FBRI:FareFrame_UK_PI_LINE_FARE_OFFER:WoE@Bristol@48:frst" dataSourceRef="frst:first_WoE" responsibilitySetRef="frst:tariffs">
 			<ValidBetween>
 				<FromDate>2018-11-01T00:00:00</FromDate>
 			</ValidBetween>
@@ -283,10 +283,12 @@ At the end are shown some sample transactions showing the parameters that define
 					</directions>
 					<lines>
 						<Line version="1.0" id="frst:WoE@Bristol@48">
+							<privateCodes>
+								<PrivateCode type="noc_data">FBRI_48</PrivateCode>
+							</privateCodes>
 							<Name>Line 48</Name>
 							<Description>BRISTOL CITY CENTRE - EMERSONS GREEN Via Easton, Eastville, Fishponds, Downend, Blackhorse</Description>
 							<PublicCode>48</PublicCode>
-							<PrivateCode type="noc_data">FBRI_48</PrivateCode>
 							<OperatorRef version="1.0" ref="noc:FBRI">First Somerset &amp; Avon Ltd nocn:136361</OperatorRef>
 							<LineType>local</LineType>
 							<allowedDirections>
@@ -299,10 +301,12 @@ At the end are shown some sample transactions showing the parameters that define
 							</allowedDirections>
 						</Line>
 						<Line version="1.0" id="frst:WoE@Bristol@48A">
+							<privateCodes>
+								<PrivateCode type="noc_data">FBRI_48A</PrivateCode>
+							</privateCodes>
 							<Name>Line 48A</Name>
 							<Description>BRISTOL CITY CENTRE - UWE FRENCHAY CAMPUS  Via Easton, Eastville, Fishponds, Blackberry Hill</Description>
 							<PublicCode>48A</PublicCode>
-							<PrivateCode type="noc_data">FBRI_48A</PrivateCode>
 							<OperatorRef version="1.0" ref="noc:FBRI">First Somerset &amp; Avon Ltd nocn:136361</OperatorRef>
 							<LineType>local</LineType>
 							<allowedDirections>
@@ -311,10 +315,12 @@ At the end are shown some sample transactions showing the parameters that define
 							</allowedDirections>
 						</Line>
 						<Line version="1.0" id="frst:WoE@Bristol@49">
+							<privateCodes>
+								<PrivateCode type="noc_data">FBRI_49</PrivateCode>
+							</privateCodes>
 							<Name>Line 49</Name>
 							<Description>BRISTOL CITY CENTRE - EMERSONS GREEN  Via Easton, Eastville, Fishponds, Staple Hill, Mangotsfield, Blackhorse</Description>
 							<PublicCode>49</PublicCode>
-							<PrivateCode type="noc_data">FBRI_49</PrivateCode>
 							<OperatorRef version="1.0" ref="noc:FBRI">First Somerset &amp; Avon Ltd nocn:136361</OperatorRef>
 							<LineType>local</LineType>
 							<allowedDirections>
@@ -1181,127 +1187,127 @@ At the end are shown some sample transactions showing the parameters that define
 							<DirectionType>inbound</DirectionType>
 							<DirectionRef ref="frst:WoE@Bristol@towards_centre" version="1.0"/>
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="1">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-1">
 									<ScheduledStopPointRef version="any" ref="naptanStop:017000062">Emersons Green</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="2">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-2">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGA10049">Church Farm Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="3">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-3">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGA10047">Bett's Green</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="4">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-4">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGA10045">Meadgate</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="5">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-5">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGA10027">Blackhorse Lane</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="6">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-6">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGP90547">Leap Bridge</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="7">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-7">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGB20447">Queensholm Crescent</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="8">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-8">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGB20439">Four Acre Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="9">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-9">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGB20449">Wedgewood Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="10">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-10">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGB20451">Quakers Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="11">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-11">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGB20452">Bromley Heath Avenue</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="12">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-12">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGZ01475">Cleeve Hill</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="13">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-13">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRC53365">Long Close</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="14">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-14">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90187">Selbrooke Crescent</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="15">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-15">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90188">Ettricke Drive</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="16">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-16">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90189">Vassal Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="17">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-17">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90190">Straits Parade</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="18">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-18">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90201">New Station Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="19">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-19">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRBOGUS1">Fishponds, Channon's Hill</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="20">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-20">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90202">Channons Hill</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="21">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-21">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA10556">Snowdon Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="22">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-22">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA10555">Blackberry Hospital</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="23">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-23">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA10553">Trendlewood Park</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="24">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-24">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA10550">Small Lane</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="25">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-25">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA10548">River View</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="26">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-26">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA10545">Brinkworthy Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="27">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-27">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA10543">The Chine</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="28">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-28">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90226">Stapleton Church</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="293">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-293">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90224">Glenfrome Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="30">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-30">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90158">Stapleton Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="31">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-31">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRC53383">Eastville Park</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="32">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-32">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRC53386">Tesco Car Park (Estgate)</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="33">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-33">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90110">Narroways Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="34">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-34">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90097">Stafford Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="35">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-35">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90095">Sevier Street</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="36">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-36">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90093">Brook Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="37">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-37">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90090">Denbigh Street</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="38">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-38">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90088">Brigstocke Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="39">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-39">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90350">Stokes Croft</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="40">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-40">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90347">The Haymarket</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound" order="41">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@inbound-41">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA16910">Rupert Street</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
@@ -1311,130 +1317,130 @@ At the end are shown some sample transactions showing the parameters that define
 							<DirectionType>outbound</DirectionType>
 							<DirectionRef ref="frst:WoE@Bristol@from_centre" version="1.0"/>
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="1">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-1">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA16911">Rupert Street</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="2">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-2">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90347">The Haymarket</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="3">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-3">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90003">Stokes Croft</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="4">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-4">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90089">Brigstocke Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="5">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-5">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90091">Denbigh Street</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="6">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-6">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90092">Brook Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="7">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-7">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90094">Sevier Street</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="8">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-8">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90096">Stafford Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="9">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-9">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90110">Narroways Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="10">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-10">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRC53386">Tesco Car Park (Estgate)</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="11">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-11">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRC53385">Eastville Park</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="12">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-12">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90228">Stapleton Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="13">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-13">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90224">Glenfrome Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="14">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-14">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90225">Stapleton Church</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="15">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-15">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA10544">The Chine</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="16">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-16">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA10546">Brinkworthy Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="17">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-17">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA10549">River View</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="18">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-18">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA10551">Small Lane</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="19">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-19">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA10554">Trendlewood Park</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="20">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-20">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA10563">Blackberry Hospital</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="21">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-21">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA10557">Snowdon Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="22">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-22">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90178">Channon's Hill</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="23">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-23">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRBOGUS1">Fishponds, Channon's Hill</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="24">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-24">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90201">New Station Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="25">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-25">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90181">Straits Parade</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="26">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-26">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90183">Vassal Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="27">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-27">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90184">Ettricke Drive</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="28">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-28">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90185">Selbrooke Crescent</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="29">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-29">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90186">Long Close</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="30">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-30">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGZ01476">Cleeve Hill</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="31">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-31">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGA19692">Bromley Heath Avenue</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="32">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-32">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGB20450">Quakers Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="33">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-33">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGB20448">Wedgewood Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="34">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-34">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGB20440">Four Acre Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="35">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-35">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGB20447">Queensholm Crescent</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="36">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-36">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGP90546">Leap Bridge</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="37">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-37">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGA10028BOGUS">Downend, The Leap</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="38">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-38">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGA10028">Blackhorse Lane</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="39">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-39">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGB20003">Meadgate</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="40">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-40">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGB20001">Bett's Green</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="41">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-41">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGA10049">Church Farm Road</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound" order="42">
+								<StopPointInJourneyPattern version="1.0" id="frst:WoE@Bristol@48@outbound-42">
 									<ScheduledStopPointRef version="any" ref="naptanStop:017000062">Emersons Green</ScheduledStopPointRef>
 								</StopPointInJourneyPattern>
 							</pointsInSequence>
@@ -1450,93 +1456,93 @@ At the end are shown some sample transactions showing the parameters that define
 					</prerequisites>
 					<!--==== Fare sections - only Line 48 is coded === NB These are one way of coding - other is to use a journey pattern with the stops that are stages marked -->
 					<seriesConstraints>
-						<SeriesConstraint version="1.0" id="frst:WoE@Bristol@48@outbound_FP" order="1">
+						<SeriesConstraint version="1.0" id="frst:WoE@Bristol@48@outbound_FP-1">
 							<Name>Rupert Street to Emersons Green</Name>
 							<Description>Fare Stages on Route</Description>
 							<farePointsInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP" order="1">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP-1">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA16911">Rupert Street</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP" order="2">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP-2">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90089">Brigstocke Road</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP" order="3">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP-3">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90110">Narroways Road</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP" order="4">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP-4">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRC53385">Eastville Park</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP" order="5">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP-5">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA10549">River View</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP" order="6">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP-6">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90201">New Station Road</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP" order="7">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP-7">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90186">Long Close</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP" order="8">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP-8">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGP90546">Leap Bridge</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP" order="9">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP-9">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGB20003">Meadgate</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP" order="10">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@outbound_FP-10">
 									<ScheduledStopPointRef version="any" ref="naptanStop:017000062">Emersons Green</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
 							</farePointsInPattern>
 						</SeriesConstraint>
-						<SeriesConstraint version="1.0" id="frst:WoE@Bristol@48@inbound_FP" order="1">
+						<SeriesConstraint version="1.0" id="frst:WoE@Bristol@48@inbound_FP-1">
 							<Name>Emersons Green to Rupert Street</Name>
 							<Description>Fare Stages on Route</Description>
 							<farePointsInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP" order="10">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP-10">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA16911">Rupert Street</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP" order="9">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP-9">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90089">Brigstocke Road</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP" order="8">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP-8">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90110">Narroways Road</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP" order="7">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP-7">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRC53385">Eastville Park</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP" order="6">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP-6">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRA10549">River View</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP" order="5">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP-5">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90201">New Station Road</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP" order="4">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP-4">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0100BRP90186">Long Close</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP" order="3">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP-3">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGP90546">Leap Bridge</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP" order="2">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP-2">
 									<ScheduledStopPointRef version="any" ref="naptanStop:0170SGB20003">Meadgate</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP" order="1">
+								<FarePointInPattern version="1.0" id="frst:WoE@Bristol@48@inbound_FP-1">
 									<ScheduledStopPointRef version="any" ref="naptanStop:017000062">Emersons Green</ScheduledStopPointRef>
 									<IsFareStage>true</IsFareStage>
 								</FarePointInPattern>
@@ -1623,7 +1629,7 @@ At the end are shown some sample transactions showing the parameters that define
 								<FareStructureElement id="frst:Tariff@WoE_Distance@Trip@access_modes" version="1.0">
 									<Name>Available modes</Name>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:access"/>
-									<GenericParameterAssignment order="1" id="frst:Tariff@WoE_Distance@Trip@access_modes" version="1.0">
+									<GenericParameterAssignment id="frst:Tariff@WoE_Distance@Trip@access_modes-1" version="1.0">
 										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:can_access"/>
 										<ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
 										<validityParameters>
@@ -1636,7 +1642,7 @@ At the end are shown some sample transactions showing the parameters that define
 									<Name>Available zones</Name>
 									<Description>Trip may start in a city zone and continue to distance section</Description>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:access"/>
-									<GenericParameterAssignment version="1.0" id="frst:Tariff@WoE_Distance@Trip@from_zone" order="1">
+									<GenericParameterAssignment version="1.0" id="frst:Tariff@WoE_Distance@Trip@from_zone-1">
 										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:can_access"/>
 										<ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
 										<validityParameters>
@@ -1668,7 +1674,7 @@ The Leap would be £3.50 as you are travelling in four sections (5, 4, 3, 2).</D
 								<FareStructureElement version="1.0" id="frst:Tariff@WoE_Distance@Trip@eligibility">
 									<Name>eligible user types</Name>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:eligibility"/>
-									<GenericParameterAssignment order="1" id="frst:Tariff@WoE_Distance@eligibility" version="1.0">
+									<GenericParameterAssignment id="frst:Tariff@WoE_Distance@eligibility-1" version="1.0">
 										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:eligible"/>
 										<LimitationGroupingType>XOR</LimitationGroupingType>
 										<limitations>
@@ -1687,7 +1693,7 @@ The Leap would be £3.50 as you are travelling in four sections (5, 4, 3, 2).</D
 									<Description>Journey is potentially made up of two steps</Description>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:steps"/>
 									<fareStructureElementsInSequence>
-										<FareStructureElementInSequence version="1.0" id="frst:Tariff@WoE_Distance@Trip@from_zone" order="1">
+										<FareStructureElementInSequence version="1.0" id="frst:Tariff@WoE_Distance@Trip@from_zone-1">
 											<Name>Optional firstt leg in inner zone</Name>
 											<Description>If a journey begins within a flat fare zone but travels beyond the border of that zone, the fare will be calculated as follows:
 Flat fare to the border of the zone, then rounded up to £2.50, £3.50, £4.50 or £5.50 depending on the distance travelled thereafter.</Description>
@@ -1695,7 +1701,7 @@ Flat fare to the border of the zone, then rounded up to £2.50, £3.50, £4.50 o
 											<AccessNumberIsLimited>true</AccessNumberIsLimited>
 											<FareStructureElementRef ref="frst:Tariff@WoE_Distance@Trip@access_zones" version="1.0"/>
 										</FareStructureElementInSequence>
-										<FareStructureElementInSequence version="1.0" id="frst:Tariff@WoE_Distance@Trip@sections" order="2">
+										<FareStructureElementInSequence version="1.0" id="frst:Tariff@WoE_Distance@Trip@sections-2">
 											<Name>Unit stage count</Name>
 											<AccessNumberIsLimited>true</AccessNumberIsLimited>
 											<FareStructureElementRef version="1.0" ref="frst:Tariff@WoE_Distance@Trip@geographic_intervals"/>
@@ -1746,7 +1752,7 @@ Over 12 miles (within West of England area) 		£6.50
 										<FareStructureElementRef version="1.0" ref="frst:Tariff@WoE_Distance@Trip@steps"/>
 									</fareStructureElements>
 									<validityParameterAssignments>
-										<GenericParameterAssignment version="1.0" order="1" id="frst:WoE_Distance@Trip@travel@conditions">
+										<GenericParameterAssignment version="1.0" id="frst:WoE_Distance@Trip@travel@conditions-1">
 											<Name>Non transferable, single use</Name>
 											<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:condition_of_use"/>
 											<LimitationGroupingType>AND</LimitationGroupingType>
@@ -1772,7 +1778,7 @@ Over 12 miles (within West of England area) 		£6.50
 							</validableElements>
 							<!--==== ACCESS RIGHTs ===== -->
 							<accessRightsInProduct>
-								<AccessRightInProduct version="1.0" id="frst:WoE_Distance@Trip" order="1">
+								<AccessRightInProduct version="1.0" id="frst:WoE_Distance@Trip-1">
 									<ValidableElementRef version="1.0" ref="frst:WoE_Distance@Trip@travel"/>
 								</AccessRightInProduct>
 							</accessRightsInProduct>
@@ -1791,7 +1797,7 @@ Over 12 miles (within West of England area) 		£6.50
 								<CanBreakJourney>false</CanBreakJourney>
 							</ConditionSummary>
 							<distributionAssignments>
-								<DistributionAssignment version="1.0" id="frst:WoE_Distance@Trip-SOP@p-ticket" order="1">
+								<DistributionAssignment version="1.0" id="frst:WoE_Distance@Trip-SOP@p-ticket-1">
 									<Name>Onboard</Name>
 									<Description>Pay for ticket onboard</Description>
 									<DistributionChannelRef ref="fxc:on_board" version="fxc:v1.0"/>
@@ -1800,7 +1806,7 @@ Over 12 miles (within West of England area) 		£6.50
 								</DistributionAssignment>
 							</distributionAssignments>
 							<salesOfferPackageElements>
-								<SalesOfferPackageElement version="1.0" id="frst:WoE_Distance@Trip-SOP@p-ticket" order="1">
+								<SalesOfferPackageElement version="1.0" id="frst:WoE_Distance@Trip-SOP@p-ticket-1">
 									<TypeOfTravelDocumentRef version="1.0" ref="frst:paper-ticket"/>
 									<PreassignedFareProductRef version="1.0" ref="frst:WoE_Distance@Trip"/>
 								</SalesOfferPackageElement>
@@ -1823,7 +1829,7 @@ You'll need to scan the QR when you board the bus or show the ticket to the driv
 								<CanBreakJourney>false</CanBreakJourney>
 							</ConditionSummary>
 							<distributionAssignments>
-								<DistributionAssignment version="1.0" id="frst:WoE_Distance@Trip-SOP@m-ticket@mobile_app" order="1">
+								<DistributionAssignment version="1.0" id="frst:WoE_Distance@Trip-SOP@m-ticket@mobile_app-1">
 									<Name>Mobile app</Name>
 									<Description>Pay for ticket online with mobile app</Description>
 									<DistributionChannelRef version="fxc:v1.0" ref="fxc:online"/>
@@ -1832,11 +1838,11 @@ You'll need to scan the QR when you board the bus or show the ticket to the driv
 								</DistributionAssignment>
 							</distributionAssignments>
 							<salesOfferPackageElements>
-								<SalesOfferPackageElement version="1.0" id="frst:WoE_Distance@Trip-SOP@m-ticket" order="1">
+								<SalesOfferPackageElement version="1.0" id="frst:WoE_Distance@Trip-SOP@m-ticket-1">
 									<TypeOfTravelDocumentRef version="1.0" ref="frst:m-ticket"/>
 									<PreassignedFareProductRef version="1.0" ref="frst:WoE_Distance@Trip"/>
 									<validityParameterAssignments>
-										<GenericParameterAssignment version="1.0" id="frst:WoE_Distance@Trip-SOP@m-ticket@conditions@Transferability " order="1">
+										<GenericParameterAssignment version="1.0" id="frst:WoE_Distance@Trip-SOP@m-ticket@conditions@Transferability -1">
 											<Name>Transferable, to child</Name>
 											<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:condition_of_use"/>
 											<limitations>
@@ -1885,13 +1891,13 @@ Over 12 miles (within West of England area) 	£ 6.50		|	£ 3.30	|	£ 4.50	|
 										<GeographicalIntervalRef version="1.0" ref="frst:Tariff@WoE_Distance@00_to_03"/>
 									</pricesFor>
 									<cells>
-										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@00_to_03@adult" order="1">
+										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@00_to_03@adult-1">
 											<UsageParameterPrice version="1.0" id="frst:WoE_Distance@Trip@section@00_to_03@adult">
 												<Amount>2.50</Amount>
 												<UserProfileRef version="1.0" ref="frst:adult"/>
 											</UsageParameterPrice>
 										</Cell>
-										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@00_to_03@child" order="2">
+										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@00_to_03@child-2">
 											<UsageParameterPrice version="1.0" id="frst:WoE_Distance@Trip@section@00_to_03@child">
 												<Amount>1.30</Amount>
 												<UsageParameterPriceRef version="1.0" ref="frst:WoE_Distance@Trip@section@00_to_03@adult"/>
@@ -1899,7 +1905,7 @@ Over 12 miles (within West of England area) 	£ 6.50		|	£ 3.30	|	£ 4.50	|
 												<UserProfileRef version="1.0" ref="frst:child"/>
 											</UsageParameterPrice>
 										</Cell>
-										<Cell version="1.0" id="frst:WoE_Distance@Trip@00_to_03@student" order="3">
+										<Cell version="1.0" id="frst:WoE_Distance@Trip@00_to_03@student-3">
 											<UsageParameterPrice version="1.0" id="frst:WoE_Distance@Trip@section@00_to_03@student">
 												<Amount>1.80</Amount>
 												<UsageParameterPriceRef version="1.0" ref="frst:WoE_Distance@Trip@section@00_to_03@adult"/>
@@ -1915,13 +1921,13 @@ Over 12 miles (within West of England area) 	£ 6.50		|	£ 3.30	|	£ 4.50	|
 										<GeographicalIntervalRef version="1.0" ref="frst:Tariff@WoE_Distance@03_to_06"/>
 									</pricesFor>
 									<cells>
-										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@03_to_06@adult" order="1">
+										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@03_to_06@adult-1">
 											<UsageParameterPrice version="1.0" id="frst:WoE_Distance@Trip@section@03_to_06@adult">
 												<Amount>3.50</Amount>
 												<UserProfileRef version="1.0" ref="frst:adult"/>
 											</UsageParameterPrice>
 										</Cell>
-										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@03_to_06@child" order="2">
+										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@03_to_06@child-2">
 											<UsageParameterPrice version="1.0" id="frst:WoE_Distance@Trip@section@03_to_06@child">
 												<Amount>1.80</Amount>
 												<UsageParameterPriceRef version="1.0" ref="frst:WoE_Distance@Trip@section@03_to_06@adult"/>
@@ -1929,7 +1935,7 @@ Over 12 miles (within West of England area) 	£ 6.50		|	£ 3.30	|	£ 4.50	|
 												<UserProfileRef version="1.0" ref="frst:child"/>
 											</UsageParameterPrice>
 										</Cell>
-										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@03_to_06@student" order="3">
+										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@03_to_06@student-3">
 											<UsageParameterPrice version="1.0" id="frst:WoE_Distance@Trip@section@03_to_06@student">
 												<Amount>2.50</Amount>
 												<UsageParameterPriceRef version="1.0" ref="frst:WoE_Distance@Trip@section@03_to_06@adult"/>
@@ -1945,13 +1951,13 @@ Over 12 miles (within West of England area) 	£ 6.50		|	£ 3.30	|	£ 4.50	|
 										<GeographicalIntervalRef version="1.0" ref="frst:Tariff@WoE_Distance@06_to_09"/>
 									</pricesFor>
 									<cells>
-										<Cell version="1.0" id="frst:WoE_Distance@Trip@sectiont@06_to_09@adult" order="1">
+										<Cell version="1.0" id="frst:WoE_Distance@Trip@sectiont@06_to_09@adult-1">
 											<UsageParameterPrice version="1.0" id="frst:WoE_Distance@Trip@section@06_to_09@adult">
 												<Amount>4.50</Amount>
 												<UserProfileRef version="1.0" ref="frst:adult"/>
 											</UsageParameterPrice>
 										</Cell>
-										<Cell version="1.0" id="frst:WoE_Distance@Trip@sectionchild@06_to_09@child" order="2">
+										<Cell version="1.0" id="frst:WoE_Distance@Trip@sectionchild@06_to_09@child-2">
 											<UsageParameterPrice version="1.0" id="frst:WoE_Distance@Trip@section@06_to_09@child">
 												<Amount>2.30</Amount>
 												<UsageParameterPriceRef version="1.0" ref="frst:WoE_Distance@Trip@section@06_to_09@adult"/>
@@ -1959,7 +1965,7 @@ Over 12 miles (within West of England area) 	£ 6.50		|	£ 3.30	|	£ 4.50	|
 												<UserProfileRef version="1.0" ref="frst:child"/>
 											</UsageParameterPrice>
 										</Cell>
-										<Cell version="1.0" id="frst:WoE_Distance@Trip@sections@06_to_09@student" order="3">
+										<Cell version="1.0" id="frst:WoE_Distance@Trip@sections@06_to_09@student-3">
 											<UsageParameterPrice version="1.0" id="frst:WoE_Distance@Trip@section@06_to_09@student">
 												<Amount>3.20</Amount>
 												<UsageParameterPriceRef version="1.0" ref="frst:WoE_Distance@Trip@section@06_to_09@adult"/>
@@ -1975,13 +1981,13 @@ Over 12 miles (within West of England area) 	£ 6.50		|	£ 3.30	|	£ 4.50	|
 										<GeographicalIntervalRef version="1.0" ref="frst:Tariff@WoE_Distance@09_to_12"/>
 									</pricesFor>
 									<cells>
-										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@09_to_12@adult" order="1">
+										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@09_to_12@adult-1">
 											<UsageParameterPrice version="1.0" id="frst:WoE_Distance@Trip@section@09_to_12@adult">
 												<Amount>5.50</Amount>
 												<UserProfileRef version="1.0" ref="frst:adult"/>
 											</UsageParameterPrice>
 										</Cell>
-										<Cell version="1.0" id="frst:WoE_Distance@Trip@sectionchild@09_to_12" order="2">
+										<Cell version="1.0" id="frst:WoE_Distance@Trip@sectionchild@09_to_12-2">
 											<UsageParameterPrice version="1.0" id="frst:WoE_Distance@Trip@section@09_to_12@childs">
 												<Amount>2.80</Amount>
 												<UsageParameterPriceRef version="1.0" ref="frst:WoE_Distance@Trip@section@09_to_12@adult"/>
@@ -1989,7 +1995,7 @@ Over 12 miles (within West of England area) 	£ 6.50		|	£ 3.30	|	£ 4.50	|
 												<UserProfileRef version="1.0" ref="frst:child"/>
 											</UsageParameterPrice>
 										</Cell>
-										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@09_to_12@student" order="3">
+										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@09_to_12@student-3">
 											<UsageParameterPrice version="1.0" id="frst:WoE_Distance@Trip@section@09_to_12@student">
 												<Amount>3.90</Amount>
 												<UsageParameterPriceRef version="1.0" ref="frst:WoE_Distance@Trip@section@09_to_12@adult"/>
@@ -2005,13 +2011,13 @@ Over 12 miles (within West of England area) 	£ 6.50		|	£ 3.30	|	£ 4.50	|
 										<GeographicalIntervalRef version="1.0" ref="frst:Tariff@WoE_Distance@12_plus"/>
 									</pricesFor>
 									<cells>
-										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@12_plus@adult" order="1">
+										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@12_plus@adult-1">
 											<UsageParameterPrice version="1.0" id="frst:WoE_Distance@Trip@section@12_plus@adult">
 												<Amount>6.50</Amount>
 												<UserProfileRef version="1.0" ref="frst:adult"/>
 											</UsageParameterPrice>
 										</Cell>
-										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@12_plus@child" order="2">
+										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@12_plus@child-2">
 											<UsageParameterPrice version="1.0" id="frst:WoE_Distance@Trip@section@12_plus@child">
 												<Amount>3.30</Amount>
 												<UsageParameterPriceRef version="1.0" ref="frst:WoE_Distance@Trip@section@12_plus@adult"/>
@@ -2019,7 +2025,7 @@ Over 12 miles (within West of England area) 	£ 6.50		|	£ 3.30	|	£ 4.50	|
 												<UserProfileRef version="1.0" ref="frst:child"/>
 											</UsageParameterPrice>
 										</Cell>
-										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@12_plus@student" order="3">
+										<Cell version="1.0" id="frst:WoE_Distance@Trip@section@12_plus@student-3">
 											<UsageParameterPrice version="1.0" id="frst:WoE_Distance@Trip@12_plus@student">
 												<Amount>4.50</Amount>
 												<UsageParameterPriceRef version="1.0" ref="frst:WoE_Distance@Trip@section@12_plus@adult"/>
@@ -2195,7 +2201,7 @@ Young people aged 16-21 and students get up to 30% OFF all singles, day and seas
 								<FareStructureElement version="1.0" id="frst:Tariff@WoE@Photo_id@access_operators">
 									<Name>Allowed operators</Name>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:accepted_by"/>
-									<GenericParameterAssignment id="frst:Tariff@WoE@Photo_id@access_operators" version="1.0" order="1">
+									<GenericParameterAssignment id="frst:Tariff@WoE@Photo_id@access_operators-1" version="1.0">
 										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:can_access"/>
 										<ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
 										<validityParameters>
@@ -2206,7 +2212,7 @@ Young people aged 16-21 and students get up to 30% OFF all singles, day and seas
 								<FareStructureElement version="1.0" id="frst:Tariff@WoE@Photo_id@eligibility">
 									<Name>Allowed operaror</Name>
 									<TypeOfFareStructureElementRef version="fxc:v1.0" ref="fxc:eligibility"/>
-									<GenericParameterAssignment version="1.0" id=":Tariff@WoE@Photo_id@eligibility" order="1">
+									<GenericParameterAssignment version="1.0" id=":Tariff@WoE@Photo_id@eligibility-1">
 										<TypeOfAccessRightAssignmentRef version="fxc:v1.0" ref="fxc:eligible"/>
 										<limitations>
 											<UserProfile version="1.0" id="frst:child">
@@ -2313,7 +2319,7 @@ BS5 0DZ or email your details to ticketssww@firstgroup</Description>
 								</ValidableElement>
 							</validableElements>
 							<accessRightsInProduct>
-								<AccessRightInProduct version="1.0" id="frst:WoE@Photo_id" order="1">
+								<AccessRightInProduct version="1.0" id="frst:WoE@Photo_id-1">
 									<ValidableElementRef version="1.0" ref="frst:WoE@Photo_id@travel"/>
 								</AccessRightInProduct>
 							</accessRightsInProduct>
@@ -2327,7 +2333,7 @@ BS5 0DZ or email your details to ticketssww@firstgroup</Description>
 </Description>
 							<Url>https://www.firstgroup.com/bristol-bath-and-west/tickets/where-buy</Url>
 							<OperatorRef version="1.0" ref="noc:FBRI">First Somerset &amp; Avon Ltd nocn:136361</OperatorRef>
-							<DistributionGroupRef version="1.0" ref="frst:Travel_shops"/>
+							<DistributionGroupRef version="1.0" ref="frst:travel_shops"/>
 						</DistributionChannel>
 					</distributionChannels>
 					<typesOfTravelDocuments>
@@ -2347,13 +2353,13 @@ BS5 0DZ or email your details to ticketssww@firstgroup</Description>
 								<CanBreakJourney>false</CanBreakJourney>
 							</ConditionSummary>
 							<distributionAssignments>
-								<DistributionAssignment version="1.0" id="frst:WoE@Photo_id-SOP@travel_shop" order="1">
+								<DistributionAssignment version="1.0" id="frst:WoE@Photo_id-SOP@travel_shop-1">
 									<Name>Onboard</Name>
 									<Description>Get in shop</Description>
 									<DistributionChannelRef ref="frst:travel_shop" version="1.0"/>
 									<FulfilmentMethodRef ref="fxc:collect_at_counter" version="fxc:v1.0"/>
 								</DistributionAssignment>
-								<DistributionAssignment version="1.0" id="frst:WoE@Photo_id-SOP@online" order="1">
+								<DistributionAssignment version="1.0" id="frst:WoE@Photo_id-SOP@online-1">
 									<Name>Onboard</Name>
 									<Description>order online receive in post</Description>
 									<DistributionChannelRef ref="fxc:online" version="fxc:v1.0"/>
@@ -2361,7 +2367,7 @@ BS5 0DZ or email your details to ticketssww@firstgroup</Description>
 								</DistributionAssignment>
 							</distributionAssignments>
 							<salesOfferPackageElements>
-								<SalesOfferPackageElement version="1.0" id="frst:WoE@Photo_id-SOP@card" order="1">
+								<SalesOfferPackageElement version="1.0" id="frst:WoE@Photo_id-SOP@card-1">
 									<TypeOfTravelDocumentRef version="1.0" ref="frst:photo_id"/>
 									<SaleDiscountRightRef version="1.0" ref="frst:WoE@Photo_id"/>
 								</SalesOfferPackageElement>
@@ -2387,7 +2393,7 @@ BS5 0DZ or email your details to ticketssww@firstgroup</Description>
 							<roles>
 								<ResponsibilityRoleAssignment version="1.0" id="frst:tariff_data@creates">
 									<DataRoleType>creates</DataRoleType>
-									<StakeholderRoleType>FareManagement</StakeholderRoleType>
+									<StakeholderRoleType>fareManagement</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="noc:FBRI" version="1.0"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -2397,7 +2403,7 @@ BS5 0DZ or email your details to ticketssww@firstgroup</Description>
 							<roles>
 								<ResponsibilityRoleAssignment version="1.0" id="frst:network_data@creates">
 									<DataRoleType>creates</DataRoleType>
-									<StakeholderRoleType>Planning</StakeholderRoleType>
+									<StakeholderRoleType>planning</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="noc:FBRI" version="1.0"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -2407,7 +2413,7 @@ BS5 0DZ or email your details to ticketssww@firstgroup</Description>
 							<roles>
 								<ResponsibilityRoleAssignment version="1.0" id="frst:transaction_data@creates">
 									<DataRoleType>creates</DataRoleType>
-									<StakeholderRoleType>Planning</StakeholderRoleType>
+									<StakeholderRoleType>planning</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="noc:FBRI" version="1.0"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -2455,8 +2461,10 @@ BS5 0DZ or email your details to ticketssww@firstgroup</Description>
 					<organisations>
 						<!--==== Operators ==== -->
 						<Operator version="1.0" id="noc:FBRI">
+							<privateCodes>
+								<PrivateCode type="nocn">nocn:136361</PrivateCode>
+							</privateCodes>
 							<PublicCode>FBRI</PublicCode>
-							<PrivateCode type="nocn">nocn:136361</PrivateCode>
 							<Name>First Bristol Limited</Name>
 							<ShortName>First</ShortName>
 							<TradingName>First Bristol, Bath &amp; the West</TradingName>
@@ -2525,7 +2533,7 @@ This  frame Shows  sample Purchases
 											<Amount>3.50</Amount>
 											<StartOfValidity>2017-07-08T01:07:00</StartOfValidity>
 											<specificParameterAssignments>
-												<SpecificParameterAssignment version="any" order="1" id="frst-t:Anon001@trans001@purchase_single">
+												<SpecificParameterAssignment version="any" id="frst-t:Anon001@trans001@purchase_single-1">
 													<Name>Cash Adult single from Leap Bridge to Stapleton Church (3-6 sections used)</Name>
 													<ValidableElementRef version="1.0" ref="frst:WoE_Distance@Trip@travel"/>
 													<PreassignedFareProductRef version="1.0" ref="frst:WoE_Distance@Trip"/>
@@ -2572,7 +2580,7 @@ This  frame Shows  sample Purchases
 											<Amount>3.50</Amount>
 											<StartOfValidity>2017-07-08T01:08:00</StartOfValidity>
 											<specificParameterAssignments>
-												<SpecificParameterAssignment version="any" order="1" id="frst-t:Anon001@trans002@purchase_single">
+												<SpecificParameterAssignment version="any" id="frst-t:Anon001@trans002@purchase_single-1">
 													<Name>m-ticket Student single from Emersons Green to Rupert street  </Name>
 													<ValidableElementRef version="1.0" ref="frst:WoE_Distance@Trip@travel"/>
 													<PreassignedFareProductRef version="1.0" ref="frst:WoE_Distance@Trip"/>
@@ -2654,7 +2662,7 @@ This  frame Shows  sample Purchases
 							<roles>
 								<ResponsibilityRoleAssignment version="fxc:v1.0" id="fxc:FXC_metadata:DfT">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" versionRef="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" versionRef="nptg:v2.1"/>
 								</ResponsibilityRoleAssignment>
@@ -2780,13 +2788,17 @@ This  frame Shows  sample Purchases
 					<PricingParameterSet id="fxc:Common_Resources" version="fxc:v1.0">
 						<priceUnits>
 							<PriceUnit id="fxc:GBP" version="fxc:v1.0">
+								<privateCodes>
+									<PrivateCode>£</PrivateCode>
+								</privateCodes>
 								<Name>Pound Sterling</Name>
-								<PrivateCode>£</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 							<PriceUnit id="fxc:EUR" version="fxc:v1.0">
+								<privateCodes>
+									<PrivateCode>€</PrivateCode>
+								</privateCodes>
 								<Name>Euro</Name>
-								<PrivateCode>€</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 						</priceUnits>
@@ -2859,10 +2871,10 @@ This  frame Shows  sample Purchases
 						<DistributionChannel id="fxc:online" version="fxc:v1.0">
 							<ShortName>Internet sales</ShortName>
 							<alternativeNames>
-								<AlternativeName order="1" id="fxc:online_de" version="fxc:v1.0">
+								<AlternativeName id="fxc:online_de-1" version="fxc:v1.0">
 									<Name lang="de">Internetverkauf</Name>
 								</AlternativeName>
-								<AlternativeName order="1" id="fxc:online_fr" version="fxc:v1.0">
+								<AlternativeName id="fxc:online_fr-1" version="fxc:v1.0">
 									<Name lang="fr">A vendre par l'internet</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -2890,10 +2902,10 @@ This  frame Shows  sample Purchases
 						<DistributionChannel id="fxc:at_counter" version="fxc:v1.0">
 							<ShortName>Ticket counter sale</ShortName>
 							<alternativeNames>
-								<AlternativeName order="1" id="fxc:at_counter_de" version="fxc:v1.0">
+								<AlternativeName id="fxc:at_counter_de-1" version="fxc:v1.0">
 									<Name lang="de">Schalter</Name>
 								</AlternativeName>
-								<AlternativeName order="1" id="fxc:at_counter_fr" version="fxc:v1.0">
+								<AlternativeName id="fxc:at_counter_fr-1" version="fxc:v1.0">
 									<Name lang="fr">A vendre par le guichet</Name>
 								</AlternativeName>
 							</alternativeNames>
@@ -3086,15 +3098,6 @@ This  frame Shows  sample Purchases
 						<DefaultSystemOfUnits>SiKilometresAndMetres</DefaultSystemOfUnits>
 						<DefaultCurrency>GBP</DefaultCurrency>
 					</FrameDefaults>
-					<versions>
-						<Version id="fxc:v1.0" version="any">
-							<ValidBetween>
-								<FromDate>2019-01-01T01:01:01Z</FromDate>
-							</ValidBetween>
-							<Description>FXC version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<typesOfValue>
 						<!-- ======== Code sets ========= -->
 						<ValueSet version="fxc:v1.0" id="fxc:PointsOfInterest_Classifications" classOfValues="PointOfInterestClassification">

@@ -275,7 +275,6 @@ The Calendar is shown coded as
 						</AvailabilityCondition>
 					</validityConditions>
 					<Name>Winter timetable for route 23 outbound</Name>
-					<BaselineVersionFrameRef nameOfRefClass="TimetableFrame" ref="hde:1"/>
 					<!-- ======INTERCHANGE RUKES====== -->
 					<interchangeRules>
 						<InterchangeRule version="any" id="hde:IR_25_all_f">
@@ -375,7 +374,6 @@ The Calendar is shown coded as
 				<!-- ======Timetable ======= -->
 				<ResourceFrame version="2" id="hde:RS_23_O">
 					<Name>Resoucres</Name>
-					<BaselineVersionFrameRef nameOfRefClass="ResourceFrame" ref="hde:1"/>
 					<organisations>
 						<Authority version="101" id="hde:TFO">
 							<Name>Mission Central</Name>

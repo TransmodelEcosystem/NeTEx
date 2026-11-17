@@ -76,7 +76,7 @@ This example  maps
 	<PublicationRefreshInterval>P3M</PublicationRefreshInterval>
 	<!--- =============== RESULTS =========== -->
 	<dataObjects>
-		<CompositeFrame version="1" id="sta:SampleTimetable@894416" responsibilitySetRef="sta:Stagecoach_timetable_data" dataSourceRef="sta:Stagecoach">
+		<CompositeFrame version="sta:1.0" id="sta:SampleTimetable@894416" responsibilitySetRef="sta:Stagecoach_timetable_data" dataSourceRef="sta:Stagecoach">
 			<Name>Sample extract of a TransXChange timetable data encoded  in NeTEx</Name>
 			<TypeOfFrameRef ref="txc:UK_Timetable_profile@data_composite" version="txc:v2.1"/>
 			<!-- ==== CODESPACES == -->
@@ -96,8 +96,10 @@ This example  maps
 				<InfrastructureFrame id="sta:txc-example_GaragesAndVehicleTypes@89441" version="sta:1.0">
 					<garages>
 						<Garage id="sta:Garage@BYDEPOT" version="0">
+							<privateCodes>
+								<PrivateCode type="GarageCode">BYDEPOT</PrivateCode>
+							</privateCodes>
 							<Name>Banbury Depot</Name>
-							<PrivateCode type="GarageCode">BYDEPOT</PrivateCode>
 							<PostalAddress id="sta:Garage@Address@BYDEPOT" version="0">
 								<BuildingName>Pent House</BuildingName>
 								<Street>Canal Street</Street>
@@ -111,8 +113,10 @@ This example  maps
 							<OperatorRef version="2" ref="txcOperator:STA"/>
 						</Garage>
 						<Garage id="sta:Garage@LNDEPOT" version="0">
+							<privateCodes>
+								<PrivateCode type="GarageCode">LNDEPOT</PrivateCode>
+							</privateCodes>
 							<Name>Leamington Depot</Name>
-							<PrivateCode type="GarageCode">LNDEPOT</PrivateCode>
 							<PostalAddress id="sta:Garage@Address@LNDEPOT" version="0">
 								<Street>Station Approach</Street>
 								<Town>Royal Leamington Spa</Town>
@@ -125,8 +129,10 @@ This example  maps
 							<OperatorRef version="2" ref="txcOperator:STA"/>
 						</Garage>
 						<Garage id="sta:Garage@NNDEPOT" version="0">
+							<privateCodes>
+								<PrivateCode type="GarageCode">NNDEPOT</PrivateCode>
+							</privateCodes>
 							<Name>Nuneaton Depot</Name>
-							<PrivateCode type="GarageCode">NNDEPOT</PrivateCode>
 							<PostalAddress id="sta:Garage@Address@NNDEPOT" version="0">
 								<Street>Newtown Road</Street>
 								<Town>Royal Nuneaton</Town>
@@ -139,8 +145,10 @@ This example  maps
 							<OperatorRef version="2" ref="txcOperator:STA"/>
 						</Garage>
 						<Garage id="sta:Garage@RYDEPOT" version="0">
+							<privateCodes>
+								<PrivateCode type="GarageCode">RYDEPOT</PrivateCode>
+							</privateCodes>
 							<Name>Rugby Depot</Name>
-							<PrivateCode type="GarageCode">RYDEPOT</PrivateCode>
 							<PostalAddress id="sta:Garage@Address@RYDEPOT" version="0">
 								<Street>Railway Terrace</Street>
 								<Town>Rugby</Town>
@@ -153,8 +161,10 @@ This example  maps
 							<OperatorRef version="2" ref="txcOperator:STA"/>
 						</Garage>
 						<Garage id="sta:Garage@SDDEPOT" version="0">
+							<privateCodes>
+								<PrivateCode type="GarageCode">SDDEPOT</PrivateCode>
+							</privateCodes>
 							<Name>Stratford Depot</Name>
-							<PrivateCode type="GarageCode">SDDEPOT</PrivateCode>
 							<PostalAddress id="sta:Garage@Address@SDDEPOT" version="0">
 								<Street>Avenue Farm Industrial Estate</Street>
 								<Town>Stratford-on-Avon</Town>
@@ -191,12 +201,14 @@ This example  maps
 					</vehicleAndCrewPoints>
 					<vehicleTypes>
 						<VehicleType version="1" id="sta:VehicleType@B6">
+							<privateCodes>
+								<PrivateCode>B6</PrivateCode>
+							</privateCodes>
 							<!--	<VehicleType>
 									<VehicleTypeCode>B6</VehicleTypeCode>
 									<Description>B6</Description>
 								</VehicleType> -->
 							<Description>B6</Description>
-							<PrivateCode>B6</PrivateCode>
 						</VehicleType>
 					</vehicleTypes>
 				</InfrastructureFrame>
@@ -1035,7 +1047,7 @@ This example  maps
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@RouteSection"/>
 							<!-- ServiceLink definitions grouped by Section -->
 							<linksOnSection>
-								<LinkOnSection order="1" version="1" id="sta:RouteSection@11507">
+								<LinkOnSection id="sta:RouteSection@11507-1" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11507_1">
 										<Distance>525</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1069,7 +1081,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="2" version="1" id="sta:RouteSection@11507">
+								<LinkOnSection id="sta:RouteSection@11507-2" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11507_2">
 										<Distance>446</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1093,7 +1105,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="3" version="1" id="sta:RouteSection@11507">
+								<LinkOnSection id="sta:RouteSection@11507-3" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11507_3">
 										<Distance>615</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1134,7 +1146,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="4" version="1" id="sta:RouteSection@11507">
+								<LinkOnSection id="sta:RouteSection@11507-4" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11507_4">
 										<Distance>625</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1167,7 +1179,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="5" version="1" id="sta:RouteSection@11507">
+								<LinkOnSection id="sta:RouteSection@11507-5" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11507_5">
 										<Distance>502</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1187,7 +1199,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="6" version="1" id="sta:RouteSection@115076">
+								<LinkOnSection id="sta:RouteSection@115076-6" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11507_6">
 										<Distance>383</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1210,7 +1222,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="7" version="1" id="sta:RouteSection@11507">
+								<LinkOnSection id="sta:RouteSection@11507-7" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11507_7">
 										<Distance>268</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1231,7 +1243,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="8" version="1" id="sta:ServiceLink@11507_8">
+								<LinkOnSection id="sta:ServiceLink@11507_8-8" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11507_8">
 										<Distance>261</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1249,7 +1261,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="9" version="1" id="sta:ServiceLink@11507_9">
+								<LinkOnSection id="sta:ServiceLink@11507_9-9" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11507_9">
 										<Distance>480</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1267,7 +1279,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="10" version="1" id="sta:ServiceLink@11507_10">
+								<LinkOnSection id="sta:ServiceLink@11507_10-10" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11507_10">
 										<Distance>438</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1296,7 +1308,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="11" version="1" id="sta:ServiceLink@11507_11">
+								<LinkOnSection id="sta:ServiceLink@11507_11-11" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11507_11">
 										<Distance>290</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1318,7 +1330,7 @@ This example  maps
 						<GeneralSection nameOfLinkClass="ServiceLink" version="1" id="sta:RouteSection@11509">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@RouteSection"/>
 							<linksOnSection>
-								<LinkOnSection order="1" version="1" id="sta:ServiceLink@11509_1">
+								<LinkOnSection id="sta:ServiceLink@11509_1-1" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11509_1">
 										<Distance>279</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1346,7 +1358,7 @@ This example  maps
 						<GeneralSection nameOfLinkClass="ServiceLink" version="1" id="sta:RouteSection@11516">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@RouteSection"/>
 							<linksOnSection>
-								<LinkOnSection order="1" version="1" id="sta:ServiceLink@11516_1">
+								<LinkOnSection id="sta:ServiceLink@11516_1-1" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11516_1">
 										<Distance>408</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1368,7 +1380,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="2" version="1" id="sta:ServiceLink@11516_2">
+								<LinkOnSection id="sta:ServiceLink@11516_2-2" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11516_2">
 										<Distance>250</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1396,7 +1408,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="3" version="1" id="sta:ServiceLink@11516_3">
+								<LinkOnSection id="sta:ServiceLink@11516_3-3" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11516_3">
 										<Distance>302</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1428,7 +1440,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="4" version="1" id="sta:ServiceLink@11516_4">
+								<LinkOnSection id="sta:ServiceLink@11516_4-4" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11516_4">
 										<Distance>760</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1471,7 +1483,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="5" version="1" id="sta:ServiceLink@11516_5">
+								<LinkOnSection id="sta:ServiceLink@11516_5-5" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11516_5">
 										<Distance>432</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1488,7 +1500,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="6" version="1" id="sta:ServiceLink@11516_6">
+								<LinkOnSection id="sta:ServiceLink@11516_6-6" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11516_6">
 										<Distance>211</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1508,7 +1520,7 @@ This example  maps
 						<GeneralSection nameOfLinkClass="ServiceLink" version="1" id="sta:RouteSection@11522">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@RouteSection"/>
 							<linksOnSection>
-								<LinkOnSection order="1" version="1" id="sta:ServiceLink@11522_1">
+								<LinkOnSection id="sta:ServiceLink@11522_1-1" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11522_1">
 										<Distance>261</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1524,7 +1536,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="2" version="1" id="sta:ServiceLink@11522_2">
+								<LinkOnSection id="sta:ServiceLink@11522_2-2" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11522_2">
 										<Distance>414</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1542,7 +1554,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="3" version="1" id="sta:ServiceLink@11522_3">
+								<LinkOnSection id="sta:ServiceLink@11522_3-3" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11522_3">
 										<Distance>394</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1562,7 +1574,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="4" version="1" id="sta:ServiceLink@11522_4">
+								<LinkOnSection id="sta:ServiceLink@11522_4-4" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11522_4">
 										<Distance>691</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1587,7 +1599,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="5" version="1" id="sta:ServiceLink@11522_5">
+								<LinkOnSection id="sta:ServiceLink@11522_5-5" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11522_5">
 										<Distance>860</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1631,7 +1643,7 @@ This example  maps
 						<GeneralSection nameOfLinkClass="ServiceLink" version="1" id="sta:RouteSection@11524">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@RouteSection"/>
 							<linksOnSection>
-								<LinkOnSection order="1" version="1" id="sta:ServiceLink@11524_1">
+								<LinkOnSection id="sta:ServiceLink@11524_1-1" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11524_1">
 										<Distance>1022</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1671,7 +1683,7 @@ This example  maps
 						<GeneralSection nameOfLinkClass="ServiceLink" version="1" id="sta:RouteSection@11528">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@RouteSection"/>
 							<linksOnSection>
-								<LinkOnSection order="1" version="1" id="sta:ServiceLink@11528_1">
+								<LinkOnSection id="sta:ServiceLink@11528_1-1" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11528_1">
 										<Distance>279</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1703,7 +1715,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="2" version="1" id="sta:ServiceLink@11528_2">
+								<LinkOnSection id="sta:ServiceLink@11528_2-2" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11528_2">
 										<Distance>227</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1721,7 +1733,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="3" version="1" id="sta:ServiceLink@11528_3">
+								<LinkOnSection id="sta:ServiceLink@11528_3-3" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11528_3">
 										<Distance>252</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1748,7 +1760,7 @@ This example  maps
 						<GeneralSection nameOfLinkClass="ServiceLink" version="1" id="sta:RouteSection@11534">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@RouteSection"/>
 							<linksOnSection>
-								<LinkOnSection order="1" version="1" id="sta:ServiceLink@11534_1">
+								<LinkOnSection id="sta:ServiceLink@11534_1-1" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11534_1">
 										<Distance>340</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1767,7 +1779,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="2" version="1" id="sta:ServiceLink@11534_2">
+								<LinkOnSection id="sta:ServiceLink@11534_2-2" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11534_2">
 										<Distance>1923</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1807,7 +1819,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="3" version="1" id="sta:ServiceLink@11534_3">
+								<LinkOnSection id="sta:ServiceLink@11534_3-3" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11534_3">
 										<Distance>2107</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1836,7 +1848,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="4" version="1" id="sta:ServiceLink@11534_4">
+								<LinkOnSection id="sta:ServiceLink@11534_4-4" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11534_4">
 										<Distance>1890</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1869,7 +1881,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="5" version="1" id="sta:ServiceLink@11534_5">
+								<LinkOnSection id="sta:ServiceLink@11534_5-5" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11534_5">
 										<Distance>371</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1890,7 +1902,7 @@ This example  maps
 						<GeneralSection nameOfLinkClass="ServiceLink" version="1" id="sta:RouteSection@11536">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@RouteSection"/>
 							<linksOnSection>
-								<LinkOnSection order="1" version="1" id="sta:ServiceLink@11536_1">
+								<LinkOnSection id="sta:ServiceLink@11536_1-1" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11536_1">
 										<Distance>1163</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1922,7 +1934,7 @@ This example  maps
 						<GeneralSection nameOfLinkClass="ServiceLink" version="1" id="sta:RouteSection@11545">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@RouteSection"/>
 							<linksOnSection>
-								<LinkOnSection order="1" version="1" id="sta:ServiceLink@11545_1">
+								<LinkOnSection id="sta:ServiceLink@11545_1-1" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11545_1">
 										<Distance>292</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1942,7 +1954,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="2" version="1" id="sta:ServiceLink@11545_2">
+								<LinkOnSection id="sta:ServiceLink@11545_2-2" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11545_2">
 										<Distance>321</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1960,7 +1972,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="3" version="1" id="sta:ServiceLink@11545_3">
+								<LinkOnSection id="sta:ServiceLink@11545_3-3" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11545_3">
 										<Distance>294</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -1978,7 +1990,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="4" version="1" id="sta:ServiceLink@11545_4">
+								<LinkOnSection id="sta:ServiceLink@11545_4-4" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11545_4">
 										<Distance>530</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -2004,7 +2016,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="5" version="1" id="sta:ServiceLink@11545_5">
+								<LinkOnSection id="sta:ServiceLink@11545_5-5" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11545_5">
 										<Distance>618</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -2025,7 +2037,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="6" version="1" id="sta:ServiceLink@11545_6">
+								<LinkOnSection id="sta:ServiceLink@11545_6-6" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11545_6">
 										<Distance>506</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -2045,7 +2057,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="7" version="1" id="sta:ServiceLink@11545_7">
+								<LinkOnSection id="sta:ServiceLink@11545_7-7" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11545_7">
 										<Distance>405</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -2067,7 +2079,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="8" version="1" id="sta:ServiceLink@11545_8">
+								<LinkOnSection id="sta:ServiceLink@11545_8-8" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11545_8">
 										<Distance>312</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -2092,7 +2104,7 @@ This example  maps
 						<GeneralSection nameOfLinkClass="ServiceLink" version="1" id="sta:RouteSection@11550">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@RouteSection"/>
 							<linksOnSection>
-								<LinkOnSection order="1" version="1" id="sta:ServiceLink@11550_1">
+								<LinkOnSection id="sta:ServiceLink@11550_1-1" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11550_1">
 										<Distance>176</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -2110,7 +2122,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="2" version="1" id="sta:ServiceLink@11550_2">
+								<LinkOnSection id="sta:ServiceLink@11550_2-2" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11550_2">
 										<Distance>147</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -2128,7 +2140,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="3" version="1" id="sta:ServiceLink@11550_3">
+								<LinkOnSection id="sta:ServiceLink@11550_3-3" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11550_3">
 										<Distance>389</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -2154,7 +2166,7 @@ This example  maps
 										<!--  NAPT_StopPointRef -->
 									</ServiceLink>
 								</LinkOnSection>
-								<LinkOnSection order="4" version="1" id="sta:ServiceLink@11550_4">
+								<LinkOnSection id="sta:ServiceLink@11550_4-4" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11550_4">
 										<Distance>230</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -2177,7 +2189,7 @@ This example  maps
 						<GeneralSection nameOfLinkClass="ServiceLink" version="1" id="sta:RouteSection@11553">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@RouteSection"/>
 							<linksOnSection>
-								<LinkOnSection order="1" version="1" id="sta:ServiceLink@11553_1">
+								<LinkOnSection id="sta:ServiceLink@11553_1-1" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11553_1">
 										<Distance>407</Distance>
 										<!-- <Direction>outbound</Direction> -->
@@ -2206,7 +2218,7 @@ This example  maps
 						<GeneralSection nameOfLinkClass="ServiceLink" version="1" id="sta:RouteSection@11555">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@RouteSection"/>
 							<linksOnSection>
-								<LinkOnSection order="1" version="1" id="sta:ServiceLink@11555_1">
+								<LinkOnSection id="sta:ServiceLink@11555_1-1" version="1">
 									<ServiceLink version="1" id="sta:ServiceLink@11555_1">
 										<Distance>363</Distance>
 										<gml:LineString srsName="UKOS" gml:id="ID_11555_1">
@@ -2236,6 +2248,9 @@ This example  maps
 					<servicePatterns>
 						<!--					<Routes>  -->
 						<ServicePattern version="1" id="sta:Route@11551">
+							<privateCodes>
+								<PrivateCode type="txc:Route.PrivateCode">1</PrivateCode>
+							</privateCodes>
 							<!--		<Route id="sta:Route@11551">
 							<PrivateCode>1</PrivateCode>
 							<Description>Rugby - Coventry</Description>
@@ -2253,37 +2268,36 @@ This example  maps
 							<RouteSectionRef>11550</RouteSectionRef>
 						</Route>  -->
 							<Name>Rugby - Coventry</Name>
-							<PrivateCode type="txc:Route.PrivateCode">1</PrivateCode>
 							<!--  Describe the route as a sequence of reusable sections -->
 							<sectionsInSequence>
-								<SectionInSequence version="1" id="sta:Route@11551" order="1">
+								<SectionInSequence version="1" id="sta:Route@11551-1">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11507"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta:Route@11551" order="2">
+								<SectionInSequence version="1" id="sta:Route@11551-2">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11509"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta:Route@11551" order="3">
+								<SectionInSequence version="1" id="sta:Route@11551-3">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11516"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta:Route@11551" order="4">
+								<SectionInSequence version="1" id="sta:Route@11551-4">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11522"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta:Route@11551" order="5">
+								<SectionInSequence version="1" id="sta:Route@11551-5">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11524"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta:Route@11551" order="6">
+								<SectionInSequence version="1" id="sta:Route@11551-6">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11528"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta:Route@11551" order="7">
+								<SectionInSequence version="1" id="sta:Route@11551-7">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11534"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta:Route@11551" order="8">
+								<SectionInSequence version="1" id="sta:Route@11551-8">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11536"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta:Route@11551" order="9">
+								<SectionInSequence version="1" id="sta:Route@11551-9">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11545"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta:Route@11551" order="10">
+								<SectionInSequence version="1" id="sta:Route@11551-10">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11550"/>
 								</SectionInSequence>
 							</sectionsInSequence>
@@ -2291,130 +2305,133 @@ This example  maps
 							<TypeOfJourneyPatternRef version="txc:v2.1" ref="txc:TypeOfJourneyPattern@Route"/>
 							<!--  Alternatively spell out all the links -->
 							<linksInSequence>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="1">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_1"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="2">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-2">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_2"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="3">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-3">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_3"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="4">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-4">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_4"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="5">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-5">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_5"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="6">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-6">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_6"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="7">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-7">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_7"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="8">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-8">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_8"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="9">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-9">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_9"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="10">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-10">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_10"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="11">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-11">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11507_11"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="12">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-12">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11509_1"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551" order="13">
+								<ServiceLinkInJourneyPattern version="1" id="sta:Route@11551-13">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11516_1"/>
 								</ServiceLinkInJourneyPattern>
 								<!--  etc etc -->
-								<ServiceLinkInJourneyPattern order="14" version="1" id="sta:Route@11551">
+								<ServiceLinkInJourneyPattern id="sta:Route@11551-14" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11522_1"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="15" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-15" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11522_2"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="16" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-16" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11522_3"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="17" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-17" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11522_4"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="18" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-18" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11522_5"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="19" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-19" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11524_1"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="20" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-20" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11528_1"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="21" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-21" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11528_2"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="22" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-22" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11528_3"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="23" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-23" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11534_1"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="24" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-24" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11534_2"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="25" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-25" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11534_3"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="26" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-26" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11534_4"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="27" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-27" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11534_5"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="28" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-28" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11536_1"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="29" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-29" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_1"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="30" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-30" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_2"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="31" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-31" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_3"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="32" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-32" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_4"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="33" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-33" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_5"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="34" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-34" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_6"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="35" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-35" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_7"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="36" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-36" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11545_8"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="37" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-37" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11550_1"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="38" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-38" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11550_2"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="39" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-39" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11550_3"/>
 								</ServiceLinkInJourneyPattern>
-								<ServiceLinkInJourneyPattern order="40" version="1" id="Route@11551">
+								<ServiceLinkInJourneyPattern id="Route@11551-40" version="1">
 									<ServiceLinkRef version="1" ref="sta:ServiceLink@11550_4"/>
 								</ServiceLinkInJourneyPattern>
 							</linksInSequence>
 						</ServicePattern>
 						<ServicePattern version="1" id="sta:Route@11556">
+							<privateCodes>
+								<PrivateCode type="txc:Route.PrivateCode">2</PrivateCode>
+							</privateCodes>
 							<!--	<Route id="sta:Route@11556">
 							<PrivateCode>2</PrivateCode>
 							<Description>Rugby - Coventry</Description>
@@ -2432,36 +2449,35 @@ This example  maps
 
 					</Routes>  -->
 							<Name>Rugby - Coventry</Name>
-							<PrivateCode type="txc:Route.PrivateCode">2</PrivateCode>
 							<sectionsInSequence>
-								<SectionInSequence version="1" id="sta:Route@11556" order="1">
+								<SectionInSequence version="1" id="sta:Route@11556-1">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11507"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta:Route@11556" order="2">
+								<SectionInSequence version="1" id="sta:Route@11556-2">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11509"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta:Route@11556" order="3">
+								<SectionInSequence version="1" id="sta:Route@11556-3">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11516"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta:Route@11556" order="4">
+								<SectionInSequence version="1" id="sta:Route@11556-4">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11522"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta:Route@11556" order="5">
+								<SectionInSequence version="1" id="sta:Route@11556-5">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11553"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta:Route@11556" order="6">
+								<SectionInSequence version="1" id="sta:Route@11556-6">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11534"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta:Route@11556" order="7">
+								<SectionInSequence version="1" id="sta:Route@11556-7">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11536"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta:Route@11556" order="8">
+								<SectionInSequence version="1" id="sta:Route@11556-8">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11545"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta:Route@11556" order="9">
+								<SectionInSequence version="1" id="sta:Route@11556-9">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11550"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta:Route@11556" order="10">
+								<SectionInSequence version="1" id="sta:Route@11556-10">
 									<GeneralSectionRef version="1" ref="sta:RouteSection@11555"/>
 								</SectionInSequence>
 							</sectionsInSequence>
@@ -2476,7 +2492,7 @@ This example  maps
 						<GeneralSection version="1" id="sta89441:JourneyPatternSection@3">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@JourneyPatternSection"/>
 							<pointsOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3" order="1">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3-1">
 									<TimingPoint version="1" id="sta89441:JPS@3@StopPoint@43000001304@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@3@RoutePointRef@43000001304@TP">
@@ -2487,7 +2503,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>PTP>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3" order="2">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3-2">
 									<TimingPoint version="1" id="sta89441:JPS@3@StopPoint@43000007102@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@3@RoutePointRef@43000007102@TP">
@@ -2498,7 +2514,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3" order="3">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3-3">
 									<TimingPoint version="1" id="sta89441:JPS@3@StopPoint@43000006101@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@3@RoutePointRef@43000006101@TP">
@@ -2509,7 +2525,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3" order="4">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3-4">
 									<TimingPoint version="1" id="sta89441:JPS@3@StopPoint@43000116807@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@3@RoutePointRef@43000116807@TP">
@@ -2520,7 +2536,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3" order="5">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3-5">
 									<TimingPoint version="1" id="sta89441:JPS@3@StopPoint@43000041701@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@3@RoutePointRef@43000041701@TP">
@@ -2531,7 +2547,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3" order="6">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3-6">
 									<TimingPoint version="1" id="sta89441:JPS@3@StopPoint@43000041801@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@3@RoutePointRef@43000041801@TP">
@@ -2542,7 +2558,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3" order="7">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3-7">
 									<TimingPoint version="1" id="sta89441:JPS@3@StopPoint@43000043001@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@3@RoutePointRef@43000043001@TP">
@@ -2553,7 +2569,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3" order="8">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3-8">
 									<TimingPoint version="1" id="sta89441:JPS@3@StopPoint@43000043101@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@3@RoutePointRef@43000043101@TP">
@@ -2564,7 +2580,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3" order="9">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3-9">
 									<TimingPoint version="1" id="sta89441:JPS@3@StopPoint@43000043201@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@3@RoutePointRef@43000043201@TP">
@@ -2575,7 +2591,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3" order="10">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3-10">
 									<TimingPoint version="1" id="sta89441:JPS@3@StopPoint@43000043301@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@3@RoutePointRef@43000043301@TP">
@@ -2586,7 +2602,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3" order="11">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3-11">
 									<TimingPoint version="1" id="sta89441:JPS@3@StopPoint@43000044001@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@3@RoutePointRef@43000044001@TP">
@@ -2597,7 +2613,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3" order="12">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@3-12">
 									<TimingPoint version="1" id="sta89441:JPS@3@StopPoint@43000044101@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@3@RoutePointRef@43000044101@TP">
@@ -2610,7 +2626,7 @@ This example  maps
 								</PointOnSection>
 							</pointsOnSection>
 							<linksOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3" order="1">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3-1">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@4">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@3@RouteLinkRef@ServiceLink@111507_1">
@@ -2625,7 +2641,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3" order="2">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3-2">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@5">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@3@RouteLinkRef@ServiceLink@111507_2">
@@ -2640,7 +2656,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3" order="3">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3-3">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@6">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@3@RouteLinkRef@ServiceLink@111507_3">
@@ -2655,7 +2671,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3" order="4">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3-4">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@7">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@3@RouteLinkRef@ServiceLink@111507_4">
@@ -2670,7 +2686,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3" order="5">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3-5">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@8">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@3@RouteLinkRef@ServiceLink@111507_5">
@@ -2685,7 +2701,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3" order="6">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3-6">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@9">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@3@RouteLinkRef@ServiceLink@111507_6">
@@ -2700,7 +2716,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3" order="7">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3-7">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@10">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@3@RouteLinkRef@ServiceLink@111507_7">
@@ -2715,7 +2731,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3" order="8">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3-8">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@11">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@3@RouteLinkRef@ServiceLink@111507_8">
@@ -2730,7 +2746,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3" order="9">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3-9">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@12">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@3@RouteLinkRef@ServiceLink@111507_9">
@@ -2745,7 +2761,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3" order="10">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3-10">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@13">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@3@RouteLinkRef@ServiceLink@111507_10">
@@ -2760,7 +2776,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3" order="11">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@3-11">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@14">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@3@RouteLinkRef@ServiceLink@111507_11">
@@ -2780,7 +2796,7 @@ This example  maps
 						<GeneralSection version="1" id="sta89441:JourneyPatternSection@96">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@JourneyPatternSection"/>
 							<pointsOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@96" order="1">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@96-1">
 									<TimingPoint version="1" id="sta89441:JPS@96@StopPoint@4200F080500@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@96@RoutePointRef@4200F080500@TP">
@@ -2791,7 +2807,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>PTP>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@96" order="2">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@96-2">
 									<TimingPoint version="1" id="sta89441:JPS@96@StopPoint@4200F080501@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@96@RoutePointRef@4200F080501@TP">
@@ -2802,7 +2818,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@96" order="3">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@96-3">
 									<TimingPoint version="1" id="sta89441:JPS@96@StopPoint@4200F011200@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@96@RoutePointRef@4200F011200@TP">
@@ -2813,7 +2829,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@96" order="4">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@96-4">
 									<TimingPoint version="1" id="sta89441:JPS@96@StopPoint@4200F015601@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@96@RoutePointRef@4200F015601@TP">
@@ -2824,7 +2840,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>PTP>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@96" order="5">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@96-5">
 									<TimingPoint version="1" id="sta89441:JPS@96@StopPoint@4200F153331@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@96@RoutePointRef@4200F153331@TP">
@@ -2835,7 +2851,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@96" order="6">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@96-6">
 									<TimingPoint version="1" id="sta89441:JPS@96@StopPoint@4200F034300@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@96@RoutePointRef@4200F034300@TP">
@@ -2848,7 +2864,7 @@ This example  maps
 								</PointOnSection>
 							</pointsOnSection>
 							<linksOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@96" order="1">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@96-1">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@31">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@96@RouteLinkRef@ServiceLink@111534_1">
@@ -2862,7 +2878,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@96" order="2">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@96-2">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@32">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@96@RouteLinkRef@ServiceLink@111534_2">
@@ -2876,7 +2892,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@96" order="3">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@96-3">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@33">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@96@RouteLinkRef@ServiceLink@111534_3">
@@ -2890,7 +2906,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@96" order="4">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@96-4">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@34">
 										<projections>
 											<LinkProjection version="1" id="tsta:ServiceLink@111534_4">
@@ -2904,7 +2920,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@96" order="5">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@96-5">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@35">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@96@RouteLinkRef@ServiceLink@111534_5">
@@ -2923,7 +2939,7 @@ This example  maps
 						<GeneralSection version="1" id="sta89441:JourneyPatternSection@97">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@JourneyPatternSection"/>
 							<pointsOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@97" order="1">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@97-1">
 									<TimingPoint version="1" id="sta89441:JPS@97@StopPoint@4200F168001@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@97@RoutePointRef@4200F168001@TP">
@@ -2934,7 +2950,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@97" order="2">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@97-2">
 									<TimingPoint version="1" id="sta89441:JPS@97@StopPoint@4200F080500@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@97@RoutePointRef@4200F080500@TP">
@@ -2947,7 +2963,7 @@ This example  maps
 								</PointOnSection>
 							</pointsOnSection>
 							<linksOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@97" order="1">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@97-1">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@98">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@97@RouteLinkRef@ServiceLink@111553_1">
@@ -2966,7 +2982,7 @@ This example  maps
 						<GeneralSection version="1" id="sta89441:JourneyPatternSection@99">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@JourneyPatternSection"/>
 							<pointsOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@99" order="1">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@99-1">
 									<TimingPoint version="1" id="sta89441:JPS@99@StopPoint@4200F153310@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@99@RoutePointRef@4200F153310@TP">
@@ -2977,7 +2993,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@99" order="2">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@99-2">
 									<TimingPoint version="1" id="sta89441:JPS@99@StopPoint@4200F080600@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@99@RoutePointRef@4200F080600@TP">
@@ -2988,7 +3004,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@99" order="3">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@99-3">
 									<TimingPoint version="1" id="sta89441:JPS@99@StopPoint@4200F153290@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@99@RoutePointRef@4200F153290@TP">
@@ -2999,7 +3015,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@99" order="4">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@99-4">
 									<TimingPoint version="1" id="sta89441:JPS@99@StopPoint@4200F080500@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@99@RoutePointRef@4200F080500@TP">
@@ -3012,7 +3028,7 @@ This example  maps
 								</PointOnSection>
 							</pointsOnSection>
 							<linksOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@99" order="1">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@99-1">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@28">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@99@RouteLinkRef@ServiceLink@111528_1">
@@ -3026,7 +3042,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@99" order="2">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@99-2">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@29">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@99@RouteLinkRef@ServiceLink@111528_2">
@@ -3040,7 +3056,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@99" order="3">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@99-3">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@30">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@99@RouteLinkRef@ServiceLink@111528_3">
@@ -3059,7 +3075,7 @@ This example  maps
 						<GeneralSection version="1" id="sta89441:JourneyPatternSection@100">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@JourneyPatternSection"/>
 							<pointsOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@100" order="1">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@100-1">
 									<TimingPoint version="1" id="sta89441:JPS@100@StopPoint@4200F150341@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@100@RoutePointRef@4200F150341@TP">
@@ -3070,7 +3086,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>PTP>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@100" order="2">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@100-2">
 									<TimingPoint version="1" id="sta89441:JPS@100@StopPoint@4200F151991@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@100@RoutePointRef@4200F151991@TP">
@@ -3081,7 +3097,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@100" order="3">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@100-3">
 									<TimingPoint version="1" id="sta89441:JPS@100@StopPoint@4200F117501@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@100@RoutePointRef@4200F117501@TP">
@@ -3092,7 +3108,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@100" order="4">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@100-4">
 									<TimingPoint version="1" id="sta89441:JPS@100@StopPoint@4200F117401@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@100@RoutePointRef@4200F117401@TP">
@@ -3103,7 +3119,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@100" order="5">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@100-5">
 									<TimingPoint version="1" id="sta89441:JPS@100@StopPoint@4200F118301@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@100@RoutePointRef@4200F118301@TP">
@@ -3114,7 +3130,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@100" order="6">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@100-6">
 									<TimingPoint version="1" id="sta89441:JPS@100@StopPoint@4200F118401@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@100@RoutePointRef@4200F118401@TP">
@@ -3125,7 +3141,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>PTP>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@100" order="7">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@100-7">
 									<TimingPoint version="1" id="sta89441:JPS@100@StopPoint@4200F057900@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@100@RoutePointRef@4200F057900@TP">
@@ -3136,7 +3152,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>PTP>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@100" order="8">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@100-8">
 									<TimingPoint version="1" id="sta89441:JPS@100@StopPoint@4200F118702@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@100@RoutePointRef@4200F118702@TP">
@@ -3147,7 +3163,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@100" order="9">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@100-9">
 									<TimingPoint version="1" id="sta89441:JPS@100@StopPoint@4200F118901@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@100@RoutePointRef@4200F118901@TP">
@@ -3160,7 +3176,7 @@ This example  maps
 								</PointOnSection>
 							</pointsOnSection>
 							<linksOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@100" order="1">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@100-1">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@37">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@100@RouteLinkRef@ServiceLink@111545_1">
@@ -3175,7 +3191,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@100" order="2">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@100-2">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@38">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@100@RouteLinkRef@ServiceLink@111545_2">
@@ -3190,7 +3206,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@100" order="3">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@100-3">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@39">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@100@RouteLinkRef@ServiceLink@111545_3">
@@ -3205,7 +3221,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@100" order="4">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@100-4">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@40">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@100@RouteLinkRef@ServiceLink@111545_4">
@@ -3220,7 +3236,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@100" order="5">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@100-5">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@41">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@100@RouteLinkRef@ServiceLink@111545_5">
@@ -3235,7 +3251,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@100" order="6">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@100-6">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@42">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@100@RouteLinkRef@ServiceLink@111545_6">
@@ -3250,7 +3266,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@100" order="7">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@100-7">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@43">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@100@RouteLinkRef@ServiceLink@111545_7">
@@ -3265,7 +3281,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@100" order="8">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@100-8">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@44">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@100@RouteLinkRef@ServiceLink@111545_8">
@@ -3285,7 +3301,7 @@ This example  maps
 						<GeneralSection version="1" id="sta89441:JourneyPatternSection@101">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@JourneyPatternSection"/>
 							<pointsOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@101" order="1">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@101-1">
 									<TimingPoint version="1" id="sta89441:JPS@101@StopPoint@4200F034300@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@101@RoutePointRef@4200F034300@TP">
@@ -3296,7 +3312,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>PTP>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@101" order="2">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@101-2">
 									<TimingPoint version="1" id="sta89441:JPS@101@StopPoint@4200F150341@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@101@RoutePointRef@4200F150341@TP">
@@ -3309,7 +3325,7 @@ This example  maps
 								</PointOnSection>
 							</pointsOnSection>
 							<linksOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@101" order="1">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@101-1">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@102">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@X@RouteLinkRef@ServiceLink@111536_1">
@@ -3328,7 +3344,7 @@ This example  maps
 						<GeneralSection version="1" id="sta89441:JourneyPatternSection@103">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@JourneyPatternSection"/>
 							<pointsOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@103" order="1">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@103-1">
 									<TimingPoint version="1" id="sta89441:JPS@103@StopPoint@4200F034300@TP-DUP103">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@103@RoutePointRef@4200F034300@TP">
@@ -3339,7 +3355,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>PTP>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@103" order="2">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@103-2">
 									<TimingPoint version="1" id="sta89441:JPS@103@StopPoint@4200F150341@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@103@RoutePointRef@4200F150341@TP">
@@ -3352,7 +3368,7 @@ This example  maps
 								</PointOnSection>
 							</pointsOnSection>
 							<linksOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@103" order="1">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@103-1">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@36">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@103@RouteLinkRef@ServiceLink@111536_1">
@@ -3371,7 +3387,7 @@ This example  maps
 						<GeneralSection version="1" id="sta89441:JourneyPatternSection@104">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@JourneyPatternSection"/>
 							<pointsOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@104" order="1">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@104-1">
 									<TimingPoint version="1" id="sta89441:JPS@104@StopPoint@4200F058001@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@104@RoutePointRef@4200F058001@TP">
@@ -3382,7 +3398,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>PTP>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@104" order="2">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@104-2">
 									<TimingPoint version="1" id="sta89441:JPS@104@StopPoint@4200F055700@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@104@RoutePointRef@4200F055700@TP">
@@ -3395,7 +3411,7 @@ This example  maps
 								</PointOnSection>
 							</pointsOnSection>
 							<linksOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@104" order="1">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@104-1">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@106">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@104@RouteLinkRef@ServiceLink@111555_1">
@@ -3414,7 +3430,7 @@ This example  maps
 						<GeneralSection version="1" id="sta89441:JourneyPatternSection@198">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@JourneyPatternSection"/>
 							<pointsOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@198" order="1">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@198-1">
 									<TimingPoint version="1" id="sta89441:JPS@198@StopPoint@4200F167501@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@198@RoutePointRef@4200F167501@TP">
@@ -3425,7 +3441,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@198" order="2">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@198-2">
 									<TimingPoint version="1" id="sta89441:JPS@198@StopPoint@4200F167601@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@198@RoutePointRef@4200F167601@TP">
@@ -3436,7 +3452,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@198" order="3">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@198-3">
 									<TimingPoint version="1" id="sta89441:JPS@198@StopPoint@4200F167701@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@198@RoutePointRef@4200F167701@TP">
@@ -3447,7 +3463,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@198" order="4">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@198-4">
 									<TimingPoint version="1" id="sta89441:JPS@198@StopPoint@4200F167801@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@198@RoutePointRef@4200F167801@TP">
@@ -3458,7 +3474,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@198" order="5">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@198-5">
 									<TimingPoint version="1" id="sta89441:JPS@198@StopPoint@4200F011000@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@198@RoutePointRef@4200F011000@TP">
@@ -3469,7 +3485,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>PTP>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@198" order="6">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@198-6">
 									<TimingPoint version="1" id="sta89441:JPS@198@StopPoint@4200F168001@TP">
 										<projections>
 											<PointProjection version="1" id="apt@StopPoint@4200F168001@TP">
@@ -3482,7 +3498,7 @@ This example  maps
 								</PointOnSection>
 							</pointsOnSection>
 							<linksOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@198" order="1">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@198-1">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@22">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@198@RouteLinkRef@ServiceLink@111522_1">
@@ -3496,7 +3512,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@198" order="2">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@198-2">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@23">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@198@RouteLinkRef@ServiceLink@111522_2">
@@ -3510,7 +3526,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@198" order="3">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@198-3">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@24">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@198@RouteLinkRef@ServiceLink@111522_3">
@@ -3524,7 +3540,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@198" order="4">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@198-4">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@25">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@198@RouteLinkRef@ServiceLink@111522_4">
@@ -3538,7 +3554,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@198" order="5">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@198-5">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@26">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@198@RouteLinkRef@ServiceLink@111522_5">
@@ -3557,7 +3573,7 @@ This example  maps
 						<GeneralSection version="1" id="sta89441:JourneyPatternSection@199">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@JourneyPatternSection"/>
 							<pointsOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@199" order="10">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@199-10">
 									<TimingPoint version="1" id="sta89441:JPS@199@StopPoint@4200F167501@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@199@RoutePointRef@4200F167501@TP">
@@ -3568,7 +3584,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@199" order="11">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@199-11">
 									<TimingPoint version="1" id="sta89441:JPS@199@StopPoint@4200F147150@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@199@RoutePointRef@4200F147150@TP">
@@ -3581,7 +3597,7 @@ This example  maps
 								</PointOnSection>
 							</pointsOnSection>
 							<linksOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@199" order="10">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@199-10">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@200">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@199@RouteLinkRef@ServiceLink@111558_1">
@@ -3600,7 +3616,7 @@ This example  maps
 						<GeneralSection version="1" id="sta89441:JourneyPatternSection@222">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@JourneyPatternSection"/>
 							<pointsOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@222" order="1">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@222-1">
 									<TimingPoint version="1" id="sta89441:JPS@222@StopPoint@4200F118901@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@222@RoutePointRef@4200F118901@TP">
@@ -3611,7 +3627,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@222" order="2">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@222-2">
 									<TimingPoint version="1" id="sta89441:JPS@222@StopPoint@4200F119001@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@222@RoutePointRef@4200F119001@TP">
@@ -3622,7 +3638,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@222" order="3">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@222-3">
 									<TimingPoint version="1" id="sta89441:JPS@222@StopPoint@4200F119101@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@222@RoutePointRef@4200F119101@TP">
@@ -3633,7 +3649,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@222" order="4">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@222-4">
 									<TimingPoint version="1" id="sta89441:JPS@222@StopPoint@4200F132380@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@222@RoutePointRef@4200F132380@TP">
@@ -3644,7 +3660,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@222" order="5">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@222-5">
 									<TimingPoint version="1" id="sta89441:JPS@222@StopPoint@4200F058001@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@222@RoutePointRef@4200F058001@TP">
@@ -3657,7 +3673,7 @@ This example  maps
 								</PointOnSection>
 							</pointsOnSection>
 							<linksOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@222" order="1">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@222-1">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@45">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@222@RouteLinkRef@ServiceLink@111550_1">
@@ -3672,7 +3688,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@222" order="2">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@222-2">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@46">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@222@RouteLinkRef@ServiceLink@111550_2">
@@ -3687,7 +3703,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@222" order="3">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@222-3">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@47">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@222@RouteLinkRef@ServiceLink@111550_3">
@@ -3702,7 +3718,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@222" order="4">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@222-4">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@48">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@222@RouteLinkRef@ServiceLink@111550_4">
@@ -3722,7 +3738,7 @@ This example  maps
 						<GeneralSection version="1" id="sta89441:JourneyPatternSection@839">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@JourneyPatternSection"/>
 							<pointsOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@839" order="1">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@839-1">
 									<TimingPoint version="1" id="sta89441:JPS@839@StopPoint@4200F168001@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@839@RoutePointRef@4200F168001@TP">
@@ -3733,7 +3749,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@839" order="2">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@839-2">
 									<TimingPoint version="1" id="sta89441:JPS@839@StopPoint@4200F153310@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@839@RoutePointRef@4200F153310@TP">
@@ -3746,7 +3762,7 @@ This example  maps
 								</PointOnSection>
 							</pointsOnSection>
 							<linksOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@839" order="1">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@839-1">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@27">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@839@RouteLinkRef@ServiceLink@111524_1">
@@ -3765,7 +3781,7 @@ This example  maps
 						<GeneralSection version="1" id="sta89441:JourneyPatternSection@1342">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@JourneyPatternSection"/>
 							<pointsOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@1342" order="1">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@1342-1">
 									<TimingPoint version="1" id="sta89441:JPS@1342@StopPoint@43000046002@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@1342@RoutePointRef@43000046002@TP">
@@ -3776,7 +3792,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@1342" order="2">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@1342-2">
 									<TimingPoint version="1" id="sta89441:JPS@1342@StopPoint@43000046102@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@1342@RoutePointRef@43000046102@TP">
@@ -3787,7 +3803,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@1342" order="3">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@1342-3">
 									<TimingPoint version="1" id="sta89441:JPS@1342@StopPoint@43000028101@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@1342@RoutePointRef@43000028101@TP">
@@ -3798,7 +3814,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@1342" order="4">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@1342-4">
 									<TimingPoint version="1" id="sta89441:JPS@1342@StopPoint@43000046801@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@1342@RoutePointRef@43000046801@TP">
@@ -3809,7 +3825,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>PTP>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@1342" order="5">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@1342-5">
 									<TimingPoint version="1" id="sta89441:JPS@1342@StopPoint@4200F009301@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@1342@RoutePointRef@4200F009301@TP">
@@ -3820,7 +3836,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@1342" order="6">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@1342-6">
 									<TimingPoint version="1" id="sta89441:JPS@1342@StopPoint@4200F009400@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@1342@RoutePointRef@4200F009400@TP">
@@ -3831,7 +3847,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>PTP>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@1342" order="7">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@1342-7">
 									<TimingPoint version="1" id="sta89441:JPS@1342@StopPoint@4200F167501@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@1342@RoutePointRef@4200F167501@TP">
@@ -3844,7 +3860,7 @@ This example  maps
 								</PointOnSection>
 							</pointsOnSection>
 							<linksOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@1342" order="1">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@1342-1">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@16">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@1342@RouteLinkRef@ServiceLink@111516_1">
@@ -3858,7 +3874,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@1342" order="2">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@1342-2">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@17">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@1342@RouteLinkRef@ServiceLink@111516_2">
@@ -3872,7 +3888,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@1342" order="3">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@1342-3">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@18">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@1342@RouteLinkRef@ServiceLink@111516_3">
@@ -3886,7 +3902,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@1342" order="4">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@1342-4">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@19">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@1342@RouteLinkRef@ServiceLink@111516_4">
@@ -3900,7 +3916,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@1342" order="5">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@1342-5">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@20">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@1342@RouteLinkRef@ServiceLink@111516_5">
@@ -3914,7 +3930,7 @@ This example  maps
 										<!-- <RunTime>PT0M0S</RunTime> -->
 									</TimingLink>
 								</LinkOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@1342" order="6">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@1342-6">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@21">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@1342@RouteLinkRef@ServiceLink@111516_6">
@@ -3933,7 +3949,7 @@ This example  maps
 						<GeneralSection version="1" id="sta89441:JourneyPatternSection@1358">
 							<PurposeOfGroupingRef version="txc:v2.1" ref="txc:PurposeOfGrouping@JourneyPatternSection"/>
 							<pointsOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@1358" order="1">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@1358-1">
 									<TimingPoint version="1" id="sta89441:JPS@1358@StopPoint@43000044101@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@1358@RoutePointRef@43000044101@TP">
@@ -3944,7 +3960,7 @@ This example  maps
 										<!-- TXC_<TimingStatus>OTH>  -->
 									</TimingPoint>
 								</PointOnSection>
-								<PointOnSection version="1" id="sta89441:JourneyPatternSection@1358" order="2">
+								<PointOnSection version="1" id="sta89441:JourneyPatternSection@1358-2">
 									<TimingPoint version="1" id="sta89441:JPS@1358@StopPoint@43000046002@TP">
 										<projections>
 											<PointProjection version="1" id="sta89441:JPS@1358@RoutePointRef@43000046002@TP">
@@ -3957,7 +3973,7 @@ This example  maps
 								</PointOnSection>
 							</pointsOnSection>
 							<linksOnSection>
-								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@1358" order="1">
+								<LinkOnSection version="1" id="sta89441:JourneyPatternSection@1358-1">
 									<TimingLink version="1" id="sta89441:JourneyPatternTimingLink@15">
 										<projections>
 											<LinkProjection version="1" id="sta89441:JPS@1358@RouteLinkRef@ServiceLink@111509_1">
@@ -3976,8 +3992,10 @@ This example  maps
 					</generalSections>
 					<timingPatterns>
 						<TimingPattern version="any" id="sta89441:ServiceJourneyPattern@1@TP">
+							<privateCodes>
+								<PrivateCode>119993</PrivateCode>
+							</privateCodes>
 							<Name>Timing pattern part of TXC JourneyPattern</Name>
-							<PrivateCode>119993</PrivateCode>
 							<!--
 <JourneyPattern id="1">
 									<PrivateCode>119993</PrivateCode>
@@ -3996,34 +4014,34 @@ This example  maps
 	<DirectionType>outbound</DirectionType>
 								</JourneyPattern> -->
 							<sectionsInSequence>
-								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@1@TP" order="1">
+								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@1@TP-1">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@3"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@1@TP" order="2">
+								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@1@TP-2">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@1358"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@TP" order="3">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@TP-3">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@1342"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@TP" order="4">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@TP-4">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@198"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@TP" order="5">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@TP-5">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@839"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@TP" order="6">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@TP-6">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@99"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@TP" order="7">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@TP-7">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@96"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@TP" order="8">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@TP-8">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@103"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@TP" order="9">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@TP-9">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@100"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@TP" order="10">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@TP-10">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@222"/>
 								</SectionInSequence>
 							</sectionsInSequence>
@@ -4049,34 +4067,34 @@ This example  maps
 								</JourneyPattern>
 -->
 							<sectionsInSequence>
-								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@95@TP" order="1">
+								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@95@TP-1">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@3"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@95@TP" order="2">
+								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@95@TP-2">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@1358"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@95@TP" order="3">
+								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@95@TP-3">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@1342"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@95@TP" order="4">
+								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@95@TP-4">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@198"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@95@TP" order="5">
+								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@95@TP-5">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@97"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@95@TP" order="6">
+								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@95@TP-6">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@96"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@95@TP" order="7">
+								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@95@TP-7">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@103"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@95@TP" order="8">
+								<SectionInSequence version="1" id="sta89441:ServiceJourneyPattern@95@TP-8">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@100"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@222" order="9">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@222-9">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@222"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@104" order="10">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@104-10">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@104"/>
 								</SectionInSequence>
 							</sectionsInSequence>
@@ -4088,7 +4106,9 @@ This example  maps
 					<Name>TXC JPTL ==&gt; NeTEX JourneyPattern Pattern </Name>
 					<journeyPatterns>
 						<ServiceJourneyPattern version="any" id="sta89441:ServiceJourneyPattern@1@JP">
-							<PrivateCode>119993</PrivateCode>
+							<privateCodes>
+								<PrivateCode>119993</PrivateCode>
+							</privateCodes>
 							<!--
 
 <JourneyPattern id="1">
@@ -4108,34 +4128,34 @@ This example  maps
 
 -->
 							<sectionsInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP" order="1">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP-1">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@3"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP" order="2">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP-2">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@1358"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP" order="3">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP-3">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@1342"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP" order="4">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP-4">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@198"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP" order="5">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP-5">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@839"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP" order="6">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP-6">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@99"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP" order="7">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP-7">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@96"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP" order="8">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP-8">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@103"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP" order="9">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP-9">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@100"/>
 								</SectionInSequence>
-								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP" order="10">
+								<SectionInSequence version="1" id="sta89441:JourneyPattern@1@JP-10">
 									<GeneralSectionRef version="1" ref="sta89441:JourneyPatternSection@222"/>
 								</SectionInSequence>
 							</sectionsInSequence>
@@ -4401,14 +4421,14 @@ TXC									NETEX
 							</runTimes>
 							<!--  Alternatively  list the points -->
 							<pointsInSequence>
-								<StopPointInJourneyPattern version="1" id="sta89441:ServiceJourneyPattern@1" order="1">
+								<StopPointInJourneyPattern version="1" id="sta89441:ServiceJourneyPattern@1-1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000001304"/>
 									<OnwardTimingLinkRef versionRef="1" ref="sta:ServiceLink@111507_1"/>
 									<!--- NB LINK MISSING -->
 									<ForAlighting>false</ForAlighting>
 									<RequestStop>false</RequestStop>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="1" id="sta89441:ServiceJourneyPattern@1" order="2">
+								<StopPointInJourneyPattern version="1" id="sta89441:ServiceJourneyPattern@1-2">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000007102"/>
 									<OnwardTimingLinkRef versionRef="1" ref="sta:ServiceLink@111507_2"/>
 									<!--- NB LINK MISSING -->
@@ -6501,7 +6521,9 @@ TXC									NETEX
 								<Destination>Rugby Clifton Road</Destination>
 								<UseAllStopPoints>true</UseAllStopPoints>
 								<JourneyPattern id="1">
-									<PrivateCode>119993</PrivateCode>
+									<privateCodes>
+										<PrivateCode>119993</PrivateCode>
+									</privateCodes>
 									<DestinationDisplay>Rugby Town Centre</DestinationDisplay>
 									<Direction>outbound</Direction>
 									<RouteRef>11551</RouteRef>
@@ -6517,7 +6539,9 @@ TXC									NETEX
 									<JourneyPatternSectionRefs>222</JourneyPatternSectionRefs>
 								</JourneyPattern>
 								<JourneyPattern id="95">
-									<PrivateCode>119995</PrivateCode>
+									<privateCodes>
+										<PrivateCode>119995</PrivateCode>
+									</privateCodes>
 									<DestinationDisplay>Rugby Town Centre</DestinationDisplay>
 									<Direction>outbound</Direction>
 									<RouteRef>11556</RouteRef>
@@ -6556,7 +6580,9 @@ TXC									NETEX
 							<DepartureTime>07:32:00</DepartureTime>
 
 -->
-							<PrivateCode type="txc:TicketMachineJourneyCode">894416</PrivateCode>
+							<privateCodes>
+								<PrivateCode type="txc:TicketMachineJourneyCode">894416</PrivateCode>
+							</privateCodes>
 							<DepartureTime>07:32:00</DepartureTime>
 							<ServiceJourneyPatternRef ref="sta89441:JourneyPattern@1"/>
 							<!--
@@ -6581,7 +6607,7 @@ TXC									NETEX
 								<GroupOfServicesRef version="1" ref="sta:Service@R86@out@monday-to-friday"/>
 							</groupsOfServices>
 							<calls>
-								<Call id="sta:VehicleJourney@894416" version="1" order="1">
+								<Call id="sta:VehicleJourney@894416-1" version="1">
 									<!-- act ual
 								<JourneyPatternTimingLinkRef>4</JourneyPatternTimingLinkRef>  -->
 									<ScheduledStopPointRef version="1" ref="naptStop:43000001304"/>
@@ -6599,7 +6625,7 @@ TXC									NETEX
 										<ForAlighting>false</ForAlighting>
 									</Arrival>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="2">
+								<Call id="sta:VehicleJourney@894416-2" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000007102"/>
 									<OnwardTimingLinkView>
 										<!-- 	<VehicleJourneyTimingLink id="51">
@@ -6613,7 +6639,7 @@ TXC									NETEX
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 									<!-- 	<PointInJourneyPatternRef version="any" ref="mytim:StopPointInJourneyPattern:jp_r1-01"/>  -->
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="3">
+								<Call id="sta:VehicleJourney@894416-3" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000006101"/>
 									<OnwardTimingLinkView>
 										<!-- 	<VehicleJourneyTimingLink id="52">
@@ -6626,7 +6652,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="4">
+								<Call id="sta:VehicleJourney@894416-4" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000116807"/>
 									<OnwardTimingLinkView>
 										<!-- 		<VehicleJourneyTimingLink id="53">
@@ -6640,7 +6666,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="5">
+								<Call id="sta:VehicleJourney@894416-5" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000041701"/>
 									<OnwardTimingLinkView>
 										<!-- 	 				<VehicleJourneyTimingLink id="54">
@@ -6654,7 +6680,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="6">
+								<Call id="sta:VehicleJourney@894416-6" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000041801"/>
 									<OnwardTimingLinkView>
 										<!-- 		<VehicleJourneyTimingLink id="55">
@@ -6668,7 +6694,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="7">
+								<Call id="sta:VehicleJourney@894416-7" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000043001"/>
 									<OnwardTimingLinkView>
 										<!-- 						<VehicleJourneyTimingLink id="56">
@@ -6682,7 +6708,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="8">
+								<Call id="sta:VehicleJourney@894416-8" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000043101"/>
 									<OnwardTimingLinkView>
 										<!-- 				<VehicleJourneyTimingLink id="57">
@@ -6695,7 +6721,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="9">
+								<Call id="sta:VehicleJourney@894416-9" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000043201"/>
 									<OnwardTimingLinkView>
 										<!-- 			<VehicleJourneyTimingLink id="58">
@@ -6708,7 +6734,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="10">
+								<Call id="sta:VehicleJourney@894416-10" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000043301"/>
 									<OnwardTimingLinkView>
 										<!-- 			<VehicleJourneyTimingLink id="59">
@@ -6721,7 +6747,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="11">
+								<Call id="sta:VehicleJourney@894416-11" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000044001"/>
 									<OnwardTimingLinkView>
 										<!-- 						<VehicleJourneyTimingLink id="60">
@@ -6734,7 +6760,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="12">
+								<Call id="sta:VehicleJourney@894416-12" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000044001"/>
 									<OnwardTimingLinkView>
 										<!-- 			<VehicleJourneyTimingLink id="61">
@@ -6746,7 +6772,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="13">
+								<Call id="sta:VehicleJourney@894416-13" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000046002"/>
 									<OnwardTimingLinkView>
 										<!-- 			
@@ -6762,7 +6788,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="14">
+								<Call id="sta:VehicleJourney@894416-14" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000046102"/>
 									<OnwardTimingLinkView>
 										<!-- 			 
@@ -6776,7 +6802,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="15">
+								<Call id="sta:VehicleJourney@894416-15" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000028101"/>
 									<OnwardTimingLinkView>
 										<!-- 		 
@@ -6791,7 +6817,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="16">
+								<Call id="sta:VehicleJourney@894416-16" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000046801"/>
 									<OnwardTimingLinkView>
 										<!-- 		
@@ -6805,7 +6831,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="17">
+								<Call id="sta:VehicleJourney@894416-17" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F009301"/>
 									<OnwardTimingLinkView>
 										<!-- 		<VehicleJourneyTimingLink id="66">
@@ -6819,7 +6845,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="18">
+								<Call id="sta:VehicleJourney@894416-18" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F009400"/>
 									<OnwardTimingLinkView>
 										<!-- <VehicleJourneyTimingLink id="67">
@@ -6832,7 +6858,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="19">
+								<Call id="sta:VehicleJourney@894416-19" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F009400"/>
 									<OnwardTimingLinkView>
 										<!-- 	 <VehicleJourneyTimingLink id="68">
@@ -6846,7 +6872,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="20">
+								<Call id="sta:VehicleJourney@894416-20" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F167501"/>
 									<OnwardTimingLinkView>
 										<!-- 	 		<VehicleJourneyTimingLink id="69">
@@ -6859,7 +6885,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="21">
+								<Call id="sta:VehicleJourney@894416-21" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F167601"/>
 									<OnwardTimingLinkView>
 										<!-- 	 		 	<VehicleJourneyTimingLink id="70">
@@ -6872,7 +6898,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="22">
+								<Call id="sta:VehicleJourney@894416-22" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F167701"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	 	<VehicleJourneyTimingLink id="71">
@@ -6887,7 +6913,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="23">
+								<Call id="sta:VehicleJourney@894416-23" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F167801"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	 	<VehicleJourneyTimingLink id="72">
@@ -6900,7 +6926,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="24">
+								<Call id="sta:VehicleJourney@894416-24" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F011000"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	 							<VehicleJourneyTimingLink id="73">
@@ -6913,7 +6939,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="25">
+								<Call id="sta:VehicleJourney@894416-25" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F168001"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	 	<VehicleJourneyTimingLink id="74">
@@ -6927,7 +6953,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="26">
+								<Call id="sta:VehicleJourney@894416-26" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F153310"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	 	 
@@ -6941,7 +6967,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="27">
+								<Call id="sta:VehicleJourney@894416-27" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F080600"/>
 									<OnwardTimingLinkView>
 										<!-- 	  
@@ -6956,7 +6982,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="28">
+								<Call id="sta:VehicleJourney@894416-28" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F153290"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	 	
@@ -6970,7 +6996,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="29">
+								<Call id="sta:VehicleJourney@894416-29" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F080500"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	 	
@@ -6984,7 +7010,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="30">
+								<Call id="sta:VehicleJourney@894416-30" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F080501"/>
 									<OnwardTimingLinkView>
 										<!-- 	<VehicleJourneyTimingLink id="79">
@@ -6996,7 +7022,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="31">
+								<Call id="sta:VehicleJourney@894416-31" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F011200"/>
 									<OnwardTimingLinkView>
 										<!--  
@@ -7011,7 +7037,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="32">
+								<Call id="sta:VehicleJourney@894416-32" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F015601"/>
 									<OnwardTimingLinkView>
 										<!-- 	<
@@ -7025,7 +7051,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="33">
+								<Call id="sta:VehicleJourney@894416-33" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F153331"/>
 									<OnwardTimingLinkView>
 										<!-- 		<VehicleJourneyTimingLink id="82">
@@ -7037,7 +7063,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="34">
+								<Call id="sta:VehicleJourney@894416-34" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F034300"/>
 									<OnwardTimingLinkView>
 										<!-- 
@@ -7052,7 +7078,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="35">
+								<Call id="sta:VehicleJourney@894416-35" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F150341"/>
 									<OnwardTimingLinkView>
 										<!-- 					<VehicleJourneyTimingLink id="84">
@@ -7065,7 +7091,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="36">
+								<Call id="sta:VehicleJourney@894416-36" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F151991"/>
 									<OnwardTimingLinkView>
 										<!-- 	<VehicleJourneyTimingLink id="85">
@@ -7078,7 +7104,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="37">
+								<Call id="sta:VehicleJourney@894416-37" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F117501"/>
 									<OnwardTimingLinkView>
 										<!-- 			<VehicleJourneyTimingLink id="86">
@@ -7092,7 +7118,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="38">
+								<Call id="sta:VehicleJourney@894416-38" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F117401"/>
 									<OnwardTimingLinkView>
 										<!-- 	
@@ -7107,7 +7133,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="39">
+								<Call id="sta:VehicleJourney@894416-39" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F118301"/>
 									<OnwardTimingLinkView>
 										<!-- 	<
@@ -7121,7 +7147,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="40">
+								<Call id="sta:VehicleJourney@894416-40" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F118401"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	<VehicleJourneyTimingLink id="89">
@@ -7135,7 +7161,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="41">
+								<Call id="sta:VehicleJourney@894416-41" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F057900"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	 							<VehicleJourneyTimingLink id="90">
@@ -7149,7 +7175,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="42">
+								<Call id="sta:VehicleJourney@894416-42" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F118702"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	 
@@ -7164,7 +7190,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>timingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="43">
+								<Call id="sta:VehicleJourney@894416-43" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F118901"/>
 									<OnwardTimingLinkView>
 										<!-- 	 							<VehicleJourneyTimingLink id="92">
@@ -7178,7 +7204,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="44">
+								<Call id="sta:VehicleJourney@894416-44" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F119001"/>
 									<OnwardTimingLinkView>
 										<!-- 	 							<VehicleJourneyTimingLink id="93">
@@ -7192,7 +7218,7 @@ TXC									NETEX
 									</OnwardTimingLinkView>
 									<TimingPointStatus>notTimingPoint</TimingPointStatus>
 								</Call>
-								<Call id="sta:VehicleJourney@894416" version="1" order="45">
+								<Call id="sta:VehicleJourney@894416-45" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:4200F119101"/>
 									<OnwardTimingLinkView>
 										<!-- 	 	
@@ -7431,7 +7457,9 @@ TXC									NETEX
 							<JourneyPatternRef>95</JourneyPatternRef>
 							<DepartureTime>08:07:00</DepartureTime>
 -->
-							<PrivateCode type="txc:TicketMachineJourneyCode">894417</PrivateCode>
+							<privateCodes>
+								<PrivateCode type="txc:TicketMachineJourneyCode">894417</PrivateCode>
+							</privateCodes>
 							<DepartureTime>08:07:00</DepartureTime>
 							<ServiceJourneyPatternRef ref="sta89441:JourneyPattern@95"/>
 							<!--
@@ -7464,7 +7492,7 @@ TXC									NETEX
 							 
 
 -->
-								<Call id="sta:VehicleJourney@894417" version="1" order="1">
+								<Call id="sta:VehicleJourney@894417-1" version="1">
 									<!-- act ual
 								<JourneyPatternTimingLinkRef>4</JourneyPatternTimingLinkRef>  -->
 									<ScheduledStopPointRef version="1" ref="naptStop:43000001304"/>
@@ -7485,7 +7513,7 @@ TXC									NETEX
 							</VehicleJourneyTimingLink>
 				
 -->
-								<Call id="sta:VehicleJourney@894417" version="1" order="2">
+								<Call id="sta:VehicleJourney@894417-2" version="1">
 									<ScheduledStopPointRef version="1" ref="naptStop:43000007102"/>
 									<OnwardTimingLinkView>
 										<TimingLinkRef ref="sta:VehicleJourneyTimingLink@109"/>
@@ -7729,12 +7757,12 @@ TXC									NETEX
 							</dayTypes>
 							<DirectionType>outbound</DirectionType>
 							<members>
-								<GroupOfServicesMember id="sta:Service@R86@out@monday-to-friday" version="1" order="1">
+								<GroupOfServicesMember id="sta:Service@R86@out@monday-to-friday-1" version="1">
 									<ServiceJourneyRef version="1" ref="sta:VehicleJourney@894416"/>
 								</GroupOfServicesMember>
 							</members>
 							<noticeAssignments>
-								<NoticeAssignment id="sta:Service@Note@R86@out@monday-to-friday" version="1" order="1">
+								<NoticeAssignment id="sta:Service@Note@R86@out@monday-to-friday-1" version="1">
 									<Notice id="sta:Service@Note@R86@out@monday-to-friday" version="1">
 										<Text>Sample notice</Text>
 									</Notice>
@@ -7750,7 +7778,7 @@ TXC									NETEX
 							</dayTypes>
 							<DirectionType>outbound</DirectionType>
 							<members>
-								<GroupOfServicesMember id="sta:Service@R86@out@saturday" version="1" order="1">
+								<GroupOfServicesMember id="sta:Service@R86@out@saturday-1" version="1">
 									<ServiceJourneyRef version="1" ref="sta:VehicleJourney@894417"/>
 								</GroupOfServicesMember>
 							</members>
@@ -7817,12 +7845,6 @@ TXC									NETEX
 							<Description>Unique within Stage coach Service 89441 </Description>
 						</Codespace>
 					</codespaces>
-					<versions>
-						<Version id="sta:1,0" version="any">
-							<Description>Version 1 of timetable</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="sta:Stagecoach" version="sta:1.0">
 							<Email>data@stagecoach.co.uk</Email>
@@ -7835,7 +7857,7 @@ TXC									NETEX
 							<roles>
 								<ResponsibilityRoleAssignment version="sta:1.04" id="sta:Stagecoach_stop_data">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>Other</StakeholderRoleType>
+									<StakeholderRoleType>other</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="txcOperator:STA" version="2"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -7843,10 +7865,12 @@ TXC									NETEX
 					</responsibilitySets>
 					<organisations>
 						<Operator created="2003-06-09T14:20:00-05:00" changed="2004-05-09T14:20:00-05:00" modification="revise" version="2" id="txcOperator:STA">
-							<!-- NationalOperatorCode: PublicCOde -->
+							<privateCodes>
+								<PrivateCode>12345</PrivateCode>
+								<PrivateCode type="LicenceNumber">vosa:PD0000479</PrivateCode>
+							</privateCodes>
+							<!-- NationalOperatorCode: PublicCode -->
 							<PublicCode>STA</PublicCode>
-							<PrivateCode>12345</PrivateCode>
-							<ExternalOperatorRef type="LicenceNumber" ref="vosa:PD0000479"/>
 							<!-- Name: TradingName  -->
 							<Name>Stagecoach</Name>
 							<ShortName>Stagecoach</ShortName>
@@ -7908,12 +7932,6 @@ TXC									NETEX
 						<DefaultDataSourceRef ref="txc:dft" version="txc:v2.1"/>
 						<DefaultResponsibilitySetRef ref="txc:TransXChange_metadata" version="txc:v2.1"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="txc:v2.1" version="any">
-							<Description>TransXChange  version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="txc:dft" version="txc:v2.1">
 							<Email>standards@transxchange.org.uk</Email>
@@ -7926,7 +7944,7 @@ TXC									NETEX
 							<roles>
 								<ResponsibilityRoleAssignment version="txc:v2.1" id="txc:TransXChange_metadata">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -8244,12 +8262,6 @@ TXC									NETEX
 						<DefaultDataSourceRef ref="napt:dft" version="napt:v2.4"/>
 						<DefaultResponsibilitySetRef ref="napt:NaPTAN_metadata" version="napt:v2.4"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="napt:v2.4" version="any">
-							<Description>NaPTAN  version 2.4</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="napt:dft" version="napt:v2.4">
 							<Email>standards@naptan.org.uk</Email>
@@ -8262,7 +8274,7 @@ TXC									NETEX
 							<roles>
 								<ResponsibilityRoleAssignment version="napt:v2.4" id="napt:NaPTAN_metadata">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -8273,7 +8285,7 @@ TXC									NETEX
 							<roles>
 								<ResponsibilityRoleAssignment version="napt:v2.4" id="napt:naptan_data">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>Other</StakeholderRoleType>
+									<StakeholderRoleType>other</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -8764,7 +8776,7 @@ TXC									NETEX
 												</ClassRelationshipInFrame>
 											</relationships>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="StopAssignment">
+										<ClassInFrame nameOfClass="PassengerStopAssignment">
 											<!-- 	 NeTex StopAssignment  maps from a NaPTan StopPoint
  		-->
 											<Mandatory>optional</Mandatory>
@@ -8962,12 +8974,6 @@ TXC									NETEX
 						<DefaultDataSourceRef ref="nptg:dft" version="nptg:v2.1"/>
 						<DefaultResponsibilitySetRef ref="nptg:NPTG_metadata" version="nptg:v2.1"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="nptg:v2.1" version="any">
-							<Description>NPTG version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="nptg:dft" version="nptg:v2.1">
 							<Email>standards@nptg.org.uk</Email>
@@ -8980,7 +8986,7 @@ TXC									NETEX
 							<roles>
 								<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:NPTG_metadata">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -8991,7 +8997,7 @@ TXC									NETEX
 							<roles>
 								<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:data">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+									<StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptg:UK">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -9154,7 +9160,7 @@ TXC									NETEX
 												</ClassRelationshipInFrame>
 												<ClassRelationshipInFrame name="alternativeDescriptors">
 													<!--  NB Only coccasionally  actually populated in current data set -->
-													<RelationshipRef nameOfClass="TopographicPlaceDescriptior"/>
+													<RelationshipRef nameOfClass="TopographicPlaceDescriptor"/>
 													<!--   NptgLocality.alternativeDeiscriptors.Descriptor -->
 													<Mandatory>optional</Mandatory>
 													<Containment>byVersionedReference</Containment>
@@ -9175,7 +9181,7 @@ TXC									NETEX
 												</ClassRelationshipInFrame>
 											</relationships>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="TopographicDescriptor">
+										<ClassInFrame nameOfClass="TopographicPlaceDescriptor">
 											<!-- 	 TopographicPlace maps to  a NPTG Locality. 		lternativeDescriptors.Descrip  -->
 											<Mandatory>required</Mandatory>
 											<attributes>
@@ -9281,13 +9287,13 @@ TXC									NETEX
 												</ClassRelationshipInFrame>
 												<ClassRelationshipInFrame name="projection">
 													<!--  NptgPlusBusZone.Mapping  ..  <Location><Easting>  .. <Northing>  -->
-													<RelationshipRef nameOfClass="Polygon"/>
+													<RelationshipRef nameOfClass="gml:Polygon"/>
 													<Mandatory>required</Mandatory>
 													<Containment>inline</Containment>
 												</ClassRelationshipInFrame>
 											</relationships>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="Polygon">
+										<ClassInFrame nameOfClass="gml:Polygon">
 											<!-- 	 gml:Polygon  maps to  a NPTG PlusBusZone.Mapping  -->
 											<Mandatory>required</Mandatory>
 											<attributes>

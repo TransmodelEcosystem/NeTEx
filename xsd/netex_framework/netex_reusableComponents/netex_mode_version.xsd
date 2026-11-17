@@ -5,7 +5,7 @@
 	<xsd:include schemaLocation="netex_submode_version.xsd"/>
 	<xsd:annotation>
 		<xsd:appinfo>
-			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs"><Aggregation>main schema</Aggregation><Audience>e-service developers</Audience><Coverage>Europe</Coverage><Creator>First drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles.  mailto:schemer@netex.org.uk</Creator><Date><Created>2010-09-04</Created></Date><Date><Modified>2011-02-05</Modified></Date><Date><Modified>2020-10-05</Modified>New Modes: Add submode relationship. Add OpenTransportmodes_structure
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs"><Aggregation>main schema</Aggregation><Audience>e-service developers</Audience><Coverage>Europe</Coverage><Creator>First drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles.</Creator><Date><Created>2010-09-04</Created></Date><Date><Modified>2011-02-05</Modified></Date><Date><Modified>2020-10-05</Modified>New Modes: Add submode relationship. Add OpenTransportmodes_structure
 				</Date><Description><p>NeTEx - Network Exchange. This subschema defines common MODE types.</p></Description><Format><MediaType>text/xml</MediaType><Syntax>http://www.w3.org/2001/XMLSchema</Syntax><Description>XML schema, W3C Recommendation 2001</Description></Format>m
 			<Identifier>{http://www.netex.org.uk/schemas/1.0/xsd/netex_framework/netex_reusableComponents}netex_mode_version.xsd</Identifier><Language>[ISO 639-2/B] ENG</Language><Publisher>Kizoom Software Ltd, 16 High Holborn, London WC1V 6BX</Publisher><Rights>Unclassified
  <Copyright>CEN, Crown Copyright 2009-2020</Copyright>
@@ -40,12 +40,12 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:group name="TransportModeGroup">
 		<xsd:annotation>
-			<xsd:documentation>Elements for a Transport MODE.</xsd:documentation>
+			<xsd:documentation>Elements for a MODE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="TransportMode" type="AllModesEnumeration">
 				<xsd:annotation>
-					<xsd:documentation>Categorisation of mode.</xsd:documentation>
+					<xsd:documentation>Categorisation of MODE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:group ref="AllSubmodeChoiceGroup"/>
@@ -53,7 +53,7 @@ Rail transport, Roads and Road transport
 	</xsd:group>
 	<xsd:complexType name="TransportModeStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for a TRANSPORT MODE.</xsd:documentation>
+			<xsd:documentation>Type for a MODE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:group ref="TransportModeGroup"/>
@@ -62,7 +62,7 @@ Rail transport, Roads and Road transport
 	<!--====== MODEs =============================================================================-->
 	<xsd:complexType name="openModesRelStructure">
 		<xsd:annotation>
-			<xsd:documentation>SUBMODEs  associated with entity.</xsd:documentation>
+			<xsd:documentation>SUBMODEs associated with entity.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="containmentAggregationStructure">
@@ -93,7 +93,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="OpenTransportModeGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="OpenTransportModeIdType" use="optional">
+					<xsd:attribute name="id" type="OpenTransportModeIdType" use="required">
 						<xsd:annotation>
 							<xsd:documentation>Identifier of ENTITY.</xsd:documentation>
 						</xsd:annotation>
@@ -126,7 +126,7 @@ Rail transport, Roads and Road transport
 	<!-- ====== SUBMODEs ========================================================== -->
 	<xsd:complexType name="submodes_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>SUBMODEs  associated with entity.</xsd:documentation>
+			<xsd:documentation>SUBMODEs associated with entity.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="containmentAggregationStructure">
@@ -157,7 +157,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="OpenTransportModeGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="SubmodeIdType" use="optional"/>
+					<xsd:attribute name="id" type="SubmodeIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>

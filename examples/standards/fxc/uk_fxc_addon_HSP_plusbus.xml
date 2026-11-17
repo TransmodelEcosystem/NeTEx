@@ -832,6 +832,9 @@ http://www.plusbus.info/faq/14-are-refunds-available-ltigtplusbusltigt-tickets
 					<!-- === SALES OFFER PACKAGES === -->
 					<salesOfferPackages>
 						<SalesOfferPackage id="jsp:JSP@Pass@PlusBus@Day-SOP@1D@p-ticket" version="1.0">
+							<privateCodes>
+								<PrivateCode>PBD</PrivateCode>
+							</privateCodes>
 							<BrandingRef ref="jsp:PlusBus@brand" version="1.0"/>
 							<Name>PlusBus Day - Paper ticket</Name>
 							<Description>Add On - bought separately rather than bundled with product
@@ -845,7 +848,6 @@ Period Return rail ticket = issue two PlusBus Day (PBD) tickets for origin and/o
 							
 							</Description>
 							<Url>http://www.plusbus.info/how-issue</Url>
-							<PrivateCode>PBD</PrivateCode>
 							<validityParameterAssignments>
 								<GenericParameterAssignment order="1" id="jsp:JSP@Pass@PlusBus@Day-SOP@1D@p-ticket@purchasing" version="1.0">
 									<Name>How to purchase</Name>
@@ -912,6 +914,9 @@ Train companies prefer customers to buy their tickets before getting on a train 
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="jsp:JSP@Pass@PlusBus@Day-SOP@1D@smartcard" version="1.0">
+							<privateCodes>
+								<PrivateCode>PBD</PrivateCode>
+							</privateCodes>
 							<BrandingRef ref="jsp:PlusBus@brand" version="1.0"/>
 							<Name>PlusBus Day - Smartcard</Name>
 							<Description>Add On - bought separately rather than bundled with product
@@ -924,7 +929,6 @@ Day Return rail ticket = issue a PlusBus Day (PBD) ticket for origin and/or dest
 Period Return rail ticket = issue two PlusBus Day (PBD) tickets for origin and/or destination town, one for the outward date and a second for the return date. If the return date is not known, you can only issue a PlusBus Day ticket for the customers outward journey date.
 							</Description>
 							<Url>http://www.plusbus.info/how-issue</Url>
-							<PrivateCode>PBD</PrivateCode>
 							<validityParameterAssignments>
 								<GenericParameterAssignment order="1" id="jsp:JSP@Pass@PlusBus@Day-SOP@1D@smartcard@self_service_machine" version="1.0">
 									<Description>self service</Description>
@@ -968,12 +972,14 @@ Period Return rail ticket = issue two PlusBus Day (PBD) tickets for origin and/o
 						</SalesOfferPackage>
 						<!--  Season Passes -->
 						<SalesOfferPackage id="jsp:JSP@Pass@PlusBus@Season-SOP@1W@p-ticket" version="1.0">
+							<privateCodes>
+								<PrivateCode>PB7</PrivateCode>
+							</privateCodes>
 							<Name>PlusBus 7-day</Name>
 							<Description>Season are available for set periods only: 7-days, Month; Quarter and Annual. See the ticket codes and descriptions (below).
 You will need to use the same Photocard number on the PlusBus season ticket as used on the rail season ticket.
 7-day season		PB7				PlusBus 7-day</Description>
 							<Url>http://www.plusbus.info/how-issue</Url>
-							<PrivateCode>PB7</PrivateCode>
 							<validityParameterAssignments>
 								<GenericParameterAssignment version="1.0" id="jsp:JSP@Pass@PlusBus@Season@1W@p-ticket@duration" order="1">
 									<Name>Valid 1 week</Name>
@@ -985,12 +991,14 @@ You will need to use the same Photocard number on the PlusBus season ticket as u
 							<GroupOfSalesOfferPackagesRef ref="jsp:JSP@Pass@PlusBus@Season-GSOP@p-ticket" version="1.0"/>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="jsp:JSP@Pass@PlusBus@Season-SOP@1W@smartcard" version="1.0">
+							<privateCodes>
+								<PrivateCode>PB7</PrivateCode>
+							</privateCodes>
 							<Name>PlusBus 7-day Smartcard  </Name>
 							<Description>Season are available for set periods only: 7-days, Month; Quarter and Annual. See the ticket codes and descriptions (below).
 You will need to use the same Photocard number on the PlusBus season ticket as used on the rail season ticket.
 7-day season		PB7				PlusBus 7-day</Description>
 							<Url>http://www.plusbus.info/how-issue</Url>
-							<PrivateCode>PB7</PrivateCode>
 							<validityParameterAssignments>
 								<GenericParameterAssignment version="1.0" id="jsp:JSP@Pass@PlusBus@Season@1W@smartcard@duration" order="1">
 									<Name>Valid 1 week</Name>
@@ -1002,12 +1010,14 @@ You will need to use the same Photocard number on the PlusBus season ticket as u
 							<GroupOfSalesOfferPackagesRef ref="jsp:JSP@Pass@PlusBus@Season-GSOP@smartcard" version="1.0"/>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="jsp:JSP@Pass@PlusBus@Season-SOP@1M@p-ticket" version="1.0">
+							<privateCodes>
+								<PrivateCode>PBM</PrivateCode>
+							</privateCodes>
 							<Name>PlusBus Month</Name>
 							<Description>Season are available for set periods only: 7-days, Month; Quarter and Annual. See the ticket codes and descriptions (below).
 You will need to use the same Photocard number on the PlusBus season ticket as used on the rail season ticket.
 Month season		PBM				PlusBus Month</Description>
 							<Url>http://www.plusbus.info/how-issue</Url>
-							<PrivateCode>PBM</PrivateCode>
 							<validityParameterAssignments>
 								<GenericParameterAssignment version="1.0" id="jsp:JSP@Pass@PlusBus@Season@1M@p-ticket@duration" order="1">
 									<Name>Valid 1 month</Name>
@@ -1019,12 +1029,14 @@ Month season		PBM				PlusBus Month</Description>
 							<GroupOfSalesOfferPackagesRef ref="jsp:JSP@Pass@PlusBus@Season-GSOP@p-ticket" version="1.0"/>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="jsp:JSP@Pass@PlusBus@Season-SOP@3M@p-ticket" version="1.0">
+							<privateCodes>
+								<PrivateCode>PBQ</PrivateCode>
+							</privateCodes>
 							<Name>PlusBus Month</Name>
 							<Description>Season are available for set periods only: 7-days, Month; Quarter and Annual. See the ticket codes and descriptions (below).
 You will need to use the same Photocard number on the PlusBus season ticket as used on the rail season ticket.
 Quarter season		PBQ				PlusBus Quarter</Description>
 							<Url>http://www.plusbus.info/how-issue</Url>
-							<PrivateCode>PBQ</PrivateCode>
 							<validityParameterAssignments>
 								<GenericParameterAssignment version="1.0" id="jsp:JSP@Pass@PlusBus@Season@3M@p-ticket@duration" order="1">
 									<Name>Valid 3 months</Name>
@@ -1036,13 +1048,15 @@ Quarter season		PBQ				PlusBus Quarter</Description>
 							<GroupOfSalesOfferPackagesRef ref="jsp:JSP@Pass@PlusBus@Season-GSOP@p-ticket" version="1.0"/>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="jsp:JSP@Pass@PlusBus@Season-SOP@1Y@p-ticket" version="1.0">
+							<privateCodes>
+								<PrivateCode>PBA</PrivateCode>
+							</privateCodes>
 							<Name>PlusBus Annual</Name>
 							<Description>Season ticket = issue the relevant period PlusBus season ticket. Most, but not all towns have PlusBus season tickets.
 Season are available for set periods only: 7-days, Month; Quarter and Annual. See the ticket codes and descriptions (below).
 You will need to use the same Photocard number on the PlusBus season ticket as used on the rail season ticket.
 Annual season		PBA				PlusBus Annual</Description>
 							<Url>http://www.plusbus.info/how-issue</Url>
-							<PrivateCode>PBA</PrivateCode>
 							<validityParameterAssignments>
 								<GenericParameterAssignment version="1.0" id="jsp:JSP@Pass@PlusBus@Season@1Y@p-ticket@duration" order="1">
 									<Name>Time Interval</Name>
@@ -1424,8 +1438,10 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 					<tariffZones>
 						<!--==== Fare regions === -->
 						<TariffZone version="any" id="nptg_tarif_zone:All_Zones">
+							<privateCodes>
+								<PrivateCode>PlusBus</PrivateCode>
+							</privateCodes>
 							<Name lang="en">All Zones</Name>
-							<PrivateCode>PlusBus</PrivateCode>
 							<types>
 								<TypeOfZoneRef ref="nptg:PlusBusZone" version="nptg:v2.1"/>
 							</types>
@@ -1436,8 +1452,10 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</projections>
 						</TariffZone>
 						<TariffZone version="any" id="nptg_tarif_zone:South_East_Region">
+							<privateCodes>
+								<PrivateCode>SE</PrivateCode>
+							</privateCodes>
 							<Name lang="en">South East Region</Name>
-							<PrivateCode>SE</PrivateCode>
 							<types>
 								<TypeOfZoneRef ref="nptg:PlusBusZone" version="nptg:v2.1"/>
 							</types>
@@ -1449,8 +1467,10 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ParentZoneRef ref="nptg_tarif_zone:All_Zones" version="any"/>
 						</TariffZone>
 						<TariffZone version="any" id="nptg_tarif_zone:Outside_South_East_Region">
+							<privateCodes>
+								<PrivateCode>SE</PrivateCode>
+							</privateCodes>
 							<Name lang="en">South East Region</Name>
-							<PrivateCode>SE</PrivateCode>
 							<types>
 								<TypeOfZoneRef ref="nptg:PlusBusZone" version="nptg:v2.1"/>
 							</types>
@@ -1463,8 +1483,10 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 						</TariffZone>
 						<!--==== Plusbus Fare zones === NB BOGUS CODES &amp;COORDINATES -->
 						<TariffZone created="2013-10-11T12:27:13" changed="2013-10-11T12:27:13" modification="new" version="any" id="nptg_PlusBus_zone:IPSWICH">
+							<privateCodes>
+								<PrivateCode>IPSWICH</PrivateCode>
+							</privateCodes>
 							<Name lang="en">IPSWICH</Name>
-							<PrivateCode>IPSWICH</PrivateCode>
 							<types>
 								<TypeOfZoneRef ref="nptg:PlusBusZone" version="nptg:v2.1"/>
 							</types>
@@ -1488,8 +1510,10 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ParentZoneRef ref="nptg_tarif_zone:South_East_Region" version="any"/>
 						</TariffZone>
 						<TariffZone created="2013-10-11T12:27:13" changed="2013-10-11T12:27:13" modification="new" version="any" id="nptg_PlusBus_zone:NORWICH">
+							<privateCodes>
+								<PrivateCode>NORWICH</PrivateCode>
+							</privateCodes>
 							<Name lang="en">NORWICH</Name>
-							<PrivateCode>NORWICH</PrivateCode>
 							<types>
 								<TypeOfZoneRef ref="nptg:PlusBusZone" version="nptg:v2.1"/>
 							</types>
@@ -1513,8 +1537,10 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ParentZoneRef ref="nptg_tarif_zone:South_East_Region" version="any"/>
 						</TariffZone>
 						<TariffZone created="2013-10-11T12:27:13" changed="2013-10-11T12:27:13" modification="new" version="any" id="nptg_PlusBus_zone:LOWESTOFT">
+							<privateCodes>
+								<PrivateCode>LOWESTOFT</PrivateCode>
+							</privateCodes>
 							<Name lang="en">LOWESTOFT</Name>
-							<PrivateCode>LOWESTOFT</PrivateCode>
 							<types>
 								<TypeOfZoneRef ref="nptg:PlusBusZone" version="nptg:v2.1"/>
 							</types>
@@ -1551,9 +1577,11 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 					</FrameDefaults>
 					<organisations>
 						<!--==== Operators ==== -->
-						<Operator version="1.0" id="noc:METR">
+						<Operator id="noc:METR" version="1.0">
+							<privateCodes>
+								<PrivateCode type="nocn">nocn:137122</PrivateCode>
+							</privateCodes>
 							<PublicCode>METR</PublicCode>
-							<PrivateCode type="nocn">nocn:137122</PrivateCode>
 							<Name>Metrobus</Name>
 							<ShortName>Metrobus</ShortName>
 							<TradingName>Metrobus Ltd</TradingName>
@@ -1660,7 +1688,7 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 					<dayTypes>
 						<FareDayType version="any" id="jsp:everyday">
 							<Name>Every day</Name>
-							<Description>ANy time</Description>
+							<Description>Any time</Description>
 							<EarliestTime>00:00:00</EarliestTime>
 							<properties>
 								<PropertyOfDay>
@@ -1717,7 +1745,7 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<Name>Plus Bus Products</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="1.0" id="jsp_products">
-									<StakeholderRoleType>FareManagement</StakeholderRoleType>
+									<StakeholderRoleType>fareManagement</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="jsp:JSP" version="1.0"/>
 									<ResponsibleAreaRef ref="jsp:uk">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -1727,7 +1755,7 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<Name>Plus Bus Tarff Zones</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:tariff_zones">
-									<StakeholderRoleType>FareManagement</StakeholderRoleType>
+									<StakeholderRoleType>fareManagement</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="fxc:DfT" version="fxc:v1.0"/>
 									<ResponsibleAreaRef ref="nptg:uk">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -1904,11 +1932,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100BRAINTR</PrivateCode>
+								<PrivateCode type="uicLocation">uic:68010</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Braintree</Name>
 							<Location>
 								<Longitude>0.556687108</Longitude>
 								<Latitude>51.87539168</Latitude>
-								<gml:pos srsName="UKOS">576093	222736</gml:pos>
+								<gml:pos srsName="UKOS">576093.0 222736.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef version="txc:v2.1" ref="txc:StopType@RLY"/>
@@ -1916,8 +1948,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>BRAINTREE</ShortName>
 							<PublicCode>BTR</PublicCode>
-							<PrivateCode type="naptan">9100BRAINTR</PrivateCode>
-							<ExternalStopPointRef ref="uic:68010" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="uk" refPrincipality="iso3166-2:GB-ESS"/>
 							<TopographicPlaceView>
@@ -1929,11 +1959,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100CLACTON</PrivateCode>
+								<PrivateCode type="uicLocation">uic:68500</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Clacton-on-Sea</Name>
 							<Location>
 								<Longitude>1.154091821</Longitude>
 								<Latitude>51.794002810</Latitude>
-								<gml:pos srsName="UKOS">617600	215300</gml:pos>
+								<gml:pos srsName="UKOS">617600.0 215300.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef version="txc:v2.1" ref="txc:StopType@RLY"/>
@@ -1941,8 +1975,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>CLACTON</ShortName>
 							<PublicCode>CLT</PublicCode>
-							<PrivateCode type="naptan">9100CLACTON</PrivateCode>
-							<ExternalStopPointRef ref="uic:68500" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="uk" refPrincipality="iso3166-2:GB-ESS"/>
 							<TopographicPlaceView>
@@ -1954,11 +1986,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100YARMTH</PrivateCode>
+								<PrivateCode type="uicLocation">uic:73280</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Great Yarmouth</Name>
 							<Location>
 								<Longitude>1.720886341</Longitude>
 								<Latitude>52.6121599</Latitude>
-								<gml:pos srsName="UKOS">652000	308100</gml:pos>
+								<gml:pos srsName="UKOS">652000.0 308100.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef version="txc:v2.1" ref="txc:StopType@RLY"/>
@@ -1966,8 +2002,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>GREAT YARMOUTH</ShortName>
 							<PublicCode>GYM</PublicCode>
-							<PrivateCode type="naptan">9100YARMTH</PrivateCode>
-							<ExternalStopPointRef ref="uic:73280" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="uk" refPrincipality="iso3166-2:GB-NFK"/>
 							<TopographicPlaceView>
@@ -1979,11 +2013,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100HARWICH</PrivateCode>
+								<PrivateCode type="uicLocation">uic:69050</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Harwich Town</Name>
 							<Location>
 								<Longitude>1.286681923</Longitude>
 								<Latitude>51.9441454</Latitude>
-								<gml:pos srsName="UKOS">625987	232397</gml:pos>
+								<gml:pos srsName="UKOS">625987.0 232397.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef version="txc:v2.1" ref="txc:StopType@RLY"/>
@@ -1991,8 +2029,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>HARWICH TOWN</ShortName>
 							<PublicCode>HWC</PublicCode>
-							<PrivateCode type="naptan">9100HARWICH</PrivateCode>
-							<ExternalStopPointRef ref="uic:69050" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="uk" refPrincipality="iso3166-2:GB-ESS"/>
 							<TopographicPlaceView>
@@ -2004,11 +2040,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100IPSWICH</PrivateCode>
+								<PrivateCode type="uicLocation">uic:72170</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Ipswich</Name>
 							<Location>
 								<Longitude>1.14442571</Longitude>
 								<Latitude>52.05059234</Latitude>
-								<gml:pos srsName="UKOS">615700	243800</gml:pos>
+								<gml:pos srsName="UKOS">615700.0 243800.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef version="txc:v2.1" ref="txc:StopType@RLY"/>
@@ -2016,8 +2056,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>IPSWICH</ShortName>
 							<PublicCode>IPS</PublicCode>
-							<PrivateCode type="naptan">9100IPSWICH</PrivateCode>
-							<ExternalStopPointRef ref="uic:72170" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="uk" refPrincipality="iso3166-2:GB-SFK"/>
 							<TopographicPlaceView>
@@ -2034,11 +2072,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 									<Text lang="en" textIdType="Name">Liverpool Street</Text>
 								</AlternativeText>
 							</alternativeTexts>
+							<privateCodes>
+								<PrivateCode type="naptan">9100LIVST</PrivateCode>
+								<PrivateCode type="uicLocation">uic:69650</PrivateCode>
+							</privateCodes>
 							<Name lang="en">London Liverpool Street</Name>
 							<Location>
 								<Longitude>-0.081425944</Longitude>
 								<Latitude>51.51799103</Latitude>
-								<gml:pos srsName="UKOS">533216 181641</gml:pos>
+								<gml:pos srsName="UKOS">533216.0 181641.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef version="txc:v2.1" ref="txc:StopType@RLY"/>
@@ -2046,8 +2088,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>LONDON LIVERP STR</ShortName>
 							<PublicCode>LST</PublicCode>
-							<PrivateCode type="naptan">9100LIVST</PrivateCode>
-							<ExternalStopPointRef ref="uic:69650" type="uicLocation"/>
 							<VehicleModes>rail metro coach bus</VehicleModes>
 							<CountryRef ref="uk"/>
 							<TopographicPlaceView>
@@ -2060,11 +2100,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100LOWSTFT</PrivateCode>
+								<PrivateCode type="uicLocation">uic:72680</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Lowestoft</Name>
 							<Location>
 								<Longitude>1.749708046</Longitude>
 								<Latitude>52.47443783</Latitude>
-								<gml:pos srsName="UKOS">654747	292890</gml:pos>
+								<gml:pos srsName="UKOS">654747.0 292890.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef version="txc:v2.1" ref="txc:StopType@RLY"/>
@@ -2072,8 +2116,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>LOWESTOFT</ShortName>
 							<PublicCode>LWT</PublicCode>
-							<PrivateCode type="naptan">9100LOWSTFT</PrivateCode>
-							<ExternalStopPointRef ref="uic:72680" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="uk"/>
 							<TopographicPlaceView>
@@ -2085,11 +2127,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100NRCH</PrivateCode>
+								<PrivateCode type="uicLocation">uic:73090</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Norwich</Name>
 							<Location>
 								<Longitude>1.306820205</Longitude>
 								<Latitude>52.62715355</Latitude>
-								<gml:pos srsName="UKOS">623900 308400</gml:pos>
+								<gml:pos srsName="UKOS">623900.0 308400.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef version="txc:v2.1" ref="txc:StopType@RLY"/>
@@ -2097,8 +2143,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>NORWICH</ShortName>
 							<PublicCode>NRW</PublicCode>
-							<PrivateCode type="naptan">9100NRCH</PrivateCode>
-							<ExternalStopPointRef ref="uic:73090" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="uk"/>
 							<TopographicPlaceView>
@@ -2110,11 +2154,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100STFD</PrivateCode>
+								<PrivateCode type="uicLocation">uic:7190</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Stratford</Name>
 							<Location>
 								<Longitude>-0.003396657</Longitude>
 								<Latitude>51.54189507</Latitude>
-								<gml:pos srsName="UKOS">538557	184444</gml:pos>
+								<gml:pos srsName="UKOS">538557.0 184444.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef version="txc:v2.1" ref="txc:StopType@RLY"/>
@@ -2122,8 +2170,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>STRATFORD</ShortName>
 							<PublicCode>SFA</PublicCode>
-							<PrivateCode type="naptan">9100STFD</PrivateCode>
-							<ExternalStopPointRef ref="uic:7190" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="uk"/>
 							<TopographicPlaceView>
@@ -2136,11 +2182,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100SHENFLD</PrivateCode>
+								<PrivateCode type="uicLocation">uic:68880</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Shenfield</Name>
 							<Location>
 								<Longitude>0.329851319</Longitude>
 								<Latitude>51.63087735</Latitude>
-								<gml:pos srsName="UKOS">561349	195022</gml:pos>
+								<gml:pos srsName="UKOS">561349.0 195022.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef version="txc:v2.1" ref="txc:StopType@RLY"/>
@@ -2148,8 +2198,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>SHENFIELD</ShortName>
 							<PublicCode>SNF</PublicCode>
-							<PrivateCode type="naptan">9100SHENFLD</PrivateCode>
-							<ExternalStopPointRef ref="uic:68880" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="uk"/>
 							<TopographicPlaceView>
@@ -2162,11 +2210,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100STANAIR</PrivateCode>
+								<PrivateCode type="uicLocation">uic:68340</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Stansted Airport</Name>
 							<Location>
 								<Longitude>0.260815594</Longitude>
 								<Latitude>51.88859105</Latitude>
-								<gml:pos srsName="UKOS">555683	223530</gml:pos>
+								<gml:pos srsName="UKOS">555683.0 223530.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef version="txc:v2.1" ref="txc:StopType@RLY"/>
@@ -2174,8 +2226,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>STANSTED AIRPORT</ShortName>
 							<PublicCode>SSD</PublicCode>
-							<PrivateCode type="naptan">9100STANAIR</PrivateCode>
-							<ExternalStopPointRef ref="uic:68340" type="uicLocation"/>
 							<VehicleModes>rail bus coach</VehicleModes>
 							<CountryRef ref="uk"/>
 							<TopographicPlaceView>
@@ -2187,11 +2237,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100STHVIC</PrivateCode>
+								<PrivateCode type="uicLocation">uic:74200</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Southend Victoria</Name>
 							<Location>
 								<Longitude>0.711500859</Longitude>
 								<Latitude>51.5415127</Latitude>
-								<gml:pos srsName="UKOS">588128	185997</gml:pos>
+								<gml:pos srsName="UKOS">588128.0 185997.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef version="txc:v2.1" ref="txc:StopType@RLY"/>
@@ -2199,8 +2253,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>SOUTHEND VICTORIA</ShortName>
 							<PublicCode>SOV</PublicCode>
-							<PrivateCode type="naptan">9100STHVIC</PrivateCode>
-							<ExternalStopPointRef ref="uic:74200" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="uk"/>
 							<TopographicPlaceView>
@@ -2212,11 +2264,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100SUDBURY</PrivateCode>
+								<PrivateCode type="uicLocation">uic:70980</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Sudbury</Name>
 							<Location>
 								<Longitude>0.735444414</Longitude>
 								<Latitude>52.03627818</Latitude>
-								<gml:pos srsName="UKOS">587723	241073</gml:pos>
+								<gml:pos srsName="UKOS">587723.0 241073.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef version="txc:v2.1" ref="txc:StopType@RLY"/>
@@ -2224,8 +2280,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>SUDBURY SUFFOLK</ShortName>
 							<PublicCode>SUY</PublicCode>
-							<PrivateCode type="naptan">9100SUDBURY</PrivateCode>
-							<ExternalStopPointRef ref="uic:70980" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="uk"/>
 							<TopographicPlaceView>
@@ -2238,11 +2292,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100TTNHMHL</PrivateCode>
+								<PrivateCode type="uicLocation">uic:69510</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Tottenham Hale</Name>
 							<Location>
 								<Longitude>-0.059929104</Longitude>
-								<Latitude>51.58830984	</Latitude>
-								<gml:pos srsName="UKOS">534500 189500</gml:pos>
+								<Latitude>51.58830984</Latitude>
+								<gml:pos srsName="UKOS">534500.0 189500.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef version="txc:v2.1" ref="txc:StopType@RLY"/>
@@ -2250,8 +2308,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>TOTTENHAM HALE</ShortName>
 							<PublicCode>TOM</PublicCode>
-							<PrivateCode type="naptan">9100TTNHMHL</PrivateCode>
-							<ExternalStopPointRef ref="uic:69510" type="uicLocation"/>
 							<VehicleModes>rail metro bus</VehicleModes>
 							<CountryRef ref="uk"/>
 							<TopographicPlaceView>
@@ -2264,11 +2320,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100WONNAZE</PrivateCode>
+								<PrivateCode type="uicLocation">uic:68580</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Walton-on-the-Naze</Name>
 							<Location>
 								<Longitude>1.267669817</Longitude>
 								<Latitude>51.84616912</Latitude>
-								<gml:pos srsName="UKOS">625170	221445</gml:pos>
+								<gml:pos srsName="UKOS">625170.0 221445.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef version="txc:v2.1" ref="txc:StopType@RLY"/>
@@ -2276,8 +2336,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>WALTON-ON-NAZE</ShortName>
 							<PublicCode>WON</PublicCode>
-							<PrivateCode type="naptan">9100WONNAZE</PrivateCode>
-							<ExternalStopPointRef ref="uic:68580" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="uk"/>
 							<TopographicPlaceView>
@@ -3291,7 +3349,7 @@ http://www.nationalrail.co.uk/stations_destinations/44863.aspx
 							<Name>National Rail Products</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="atc_products:NRE">
-									<StakeholderRoleType>Other</StakeholderRoleType>
+									<StakeholderRoleType>other</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="atc_consortium:NRE" version="any"/>
 									<ResponsibleAreaRef ref="atc:uk">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -3618,7 +3676,7 @@ West Midlands Railway
 			</ValidBetween>
 			<FrameDefaults>
 				<DefaultCodespaceRef ref="eura_data"/>
-				<DefaultDataSourceRef ref="eura:common_example" version="any"/>
+				<DefaultDataSourceRef ref="eura:common_example" version="eura:v1.0"/>
 				<DefaultResponsibilitySetRef ref="eura:code_sets" version="any"/>
 			</FrameDefaults>
 			<frames>
@@ -3639,7 +3697,7 @@ West Midlands Railway
 					</codespaces>
 					<FrameDefaults>
 						<DefaultCodespaceRef ref="eura_data"/>
-						<DefaultDataSourceRef ref="eura:common_example" version="any"/>
+						<DefaultDataSourceRef ref="eura:common_example" version="eura:v1.0"/>
 						<DefaultResponsibilitySetRef ref="eura:code_sets" version="any"/>
 						<DefaultLocale>
 							<DefaultLanguage>en</DefaultLanguage>
@@ -3649,7 +3707,7 @@ West Midlands Railway
 						<DefaultCurrency>EUR</DefaultCurrency>
 					</FrameDefaults>
 					<dataSources>
-						<DataSource id="eura:common_example" version="any">
+						<DataSource id="eura:common_example" version="eura:v1.0">
 							<Email>standards@eura.eu</Email>
 						</DataSource>
 					</dataSources>
@@ -3659,7 +3717,7 @@ West Midlands Railway
 							<Name>National Rail Stations</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="uic_station_management:0070">
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="uic_station_management:0070" version="any"/>
 									<ResponsibleAreaRef ref="atc:uk">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -3670,7 +3728,7 @@ West Midlands Railway
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="eura:code_sets:EURA">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="eura:EURA" version="any"/>
 									<ResponsibleAreaRef ref="eura:Europe">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -3956,20 +4014,24 @@ West Midlands Railway
 					<Name>Common Country independent fare component</Name>
 					<FrameDefaults>
 						<DefaultCodespaceRef ref="eura_data"/>
-						<DefaultDataSourceRef ref="eura:common_example" version="any"/>
+						<DefaultDataSourceRef ref="eura:common_example" version="eura:v1.0"/>
 						<DefaultResponsibilitySetRef ref="eura:code_sets" version="any"/>
 						<DefaultCurrency>EUR</DefaultCurrency>
 					</FrameDefaults>
 					<PricingParameterSet id="eura:Common_Resources" version="eura:v1.0">
 						<priceUnits>
 							<PriceUnit id="eura:EUR" version="any">
+								<privateCodes>
+									<PrivateCode>€</PrivateCode>
+								</privateCodes>
 								<Name>Euro</Name>
-								<PrivateCode>€</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 							<PriceUnit id="eura:GBP" version="any">
+								<privateCodes>
+									<PrivateCode>£</PrivateCode>
+								</privateCodes>
 								<Name>Pound Sterling</Name>
-								<PrivateCode>£</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 							<PriceUnit id="eura:SFR" version="any">
@@ -4324,13 +4386,17 @@ West Midlands Railway
 					<PricingParameterSet id="fxc:Common_Resources" version="fxc:v1.0">
 						<priceUnits>
 							<PriceUnit id="fxc:GBP" version="fxc:v1.0">
+								<privateCodes>
+									<PrivateCode>£</PrivateCode>
+								</privateCodes>
 								<Name>Pound Sterling</Name>
-								<PrivateCode>£</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 							<PriceUnit id="fxc:EUR" version="fxc:v1.0">
+								<privateCodes>
+									<PrivateCode>€</PrivateCode>
+								</privateCodes>
 								<Name>Euro</Name>
-								<PrivateCode>€</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 						</priceUnits>
@@ -4643,12 +4709,6 @@ West Midlands Railway
 						<DefaultSystemOfUnits>SiKilometresAndMetres</DefaultSystemOfUnits>
 						<DefaultCurrency>GBP</DefaultCurrency>
 					</FrameDefaults>
-					<versions>
-						<Version id="fxc:v1.0" version="any">
-							<Description>FXC version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="fxc:dft" version="fxc:v1.0">
 							<Email>standards@netex.org.uk</Email>
@@ -4661,7 +4721,7 @@ West Midlands Railway
 							<roles>
 								<ResponsibilityRoleAssignment version="fxc:v1.0" id="fxc:FXC_metadata:DfT">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="fxc:DfT" version="fxc:v1.0"/>
 									<ResponsibleAreaRef ref="fxc:UK">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -5089,12 +5149,6 @@ West Midlands Railway
 						<DefaultDataSourceRef ref="napt:dft" version="napt:v2.4"/>
 						<DefaultResponsibilitySetRef ref="napt:NaPTAN_metadata" version="napt:v2.4"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="napt:v2.4" version="any">
-							<Description>NaPTAN  version 2.4</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="napt:dft" version="napt:v2.4">
 							<Email>standards@naptan.org.uk</Email>
@@ -5107,7 +5161,7 @@ West Midlands Railway
 							<roles>
 								<ResponsibilityRoleAssignment version="napt:v2.4" id="napt:NaPTAN_metadata">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -5118,7 +5172,7 @@ West Midlands Railway
 							<roles>
 								<ResponsibilityRoleAssignment version="napt:v2.4" id="napt:naptan_data">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>Other</StakeholderRoleType>
+									<StakeholderRoleType>other</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -5300,12 +5354,6 @@ West Midlands Railway
 						<DefaultDataSourceRef ref="nptg:dft" version="nptg:v2.1"/>
 						<DefaultResponsibilitySetRef ref="nptg:NPTG_metadata" version="nptg:v2.1"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="nptg:v2.1" version="any">
-							<Description>NPTG version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="nptg:dft" version="nptg:v2.1">
 							<Email>standards@nptg.org.uk</Email>
@@ -5318,7 +5366,7 @@ West Midlands Railway
 							<roles>
 								<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:NPTG_metadata">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -5329,7 +5377,7 @@ West Midlands Railway
 							<roles>
 								<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:NPTG_data">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+									<StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptg:UK">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -5344,7 +5392,7 @@ West Midlands Railway
 							<values>
 								<TypeOfFrame version="nptg:v2.1" id="nptg:UK_NPTG_profile_payload">
 									<Name>NPTG Locations and  Tariff Zones Frame</Name>
-									<FrameClassRef nameOfClass="SiteeFrame"/>
+									<FrameClassRef nameOfClass="SiteFrame"/>
 									<classes>
 										<ClassInFrame nameOfClass="TopographicPlace">
 											<!-- 	 TopographicPlace maps to  a NPTG Locality 
@@ -5483,7 +5531,7 @@ West Midlands Railway
 												</ClassRelationshipInFrame>
 												<ClassRelationshipInFrame name="alternativeDescriptors">
 													<!--  NB Only coccasionally  actually populated in current data set -->
-													<RelationshipRef nameOfClass="TopographicPlaceDescriptior"/>
+													<RelationshipRef nameOfClass="TopographicPlaceDescriptor"/>
 													<!--   NptgLocality.alternativeDeiscriptors.Descriptor -->
 													<Mandatory>optional</Mandatory>
 													<Containment>byVersionedReference</Containment>
@@ -5504,7 +5552,7 @@ West Midlands Railway
 												</ClassRelationshipInFrame>
 											</relationships>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="TopographicDescriptor">
+										<ClassInFrame nameOfClass="TopographicPlaceDescriptor">
 											<!-- 	 TopographicPlace maps to  a NPTG Locality. 		lternativeDescriptors.Descrip  -->
 											<Mandatory>required</Mandatory>
 											<attributes>
@@ -5610,13 +5658,13 @@ West Midlands Railway
 												</ClassRelationshipInFrame>
 												<ClassRelationshipInFrame name="projection">
 													<!--  NptgPlusBusZone.Mapping  ..  <Location><Easting>  .. <Northing>  -->
-													<RelationshipRef nameOfClass="Polygon"/>
+													<RelationshipRef nameOfClass="gml:Polygon"/>
 													<Mandatory>required</Mandatory>
 													<Containment>inline</Containment>
 												</ClassRelationshipInFrame>
 											</relationships>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="Polygon">
+										<ClassInFrame nameOfClass="gml:Polygon">
 											<!-- 	 gml:Polygon  maps to  a NPTG PlusBusZone.Mapping  -->
 											<Mandatory>required</Mandatory>
 											<attributes>
@@ -5881,7 +5929,7 @@ West Midlands Railway
 					</organisations>
 				</ResourceFrame>
 				<!-- === TransXchange Common fixed definitions  ===  -->
-				<ResourceFrame version="txc:v1.0" id="fxc:UK:DFT:ResourceFrame_UK_PI_METADATA:TransXChange:txc" responsibilitySetRef="txc:TransXChange_metadata" dataSourceRef="txc:dft">
+				<ResourceFrame version="txc:v2.1" id="fxc:UK:DFT:ResourceFrame_UK_PI_METADATA:TransXChange:txc" responsibilitySetRef="txc:TransXChange_metadata" dataSourceRef="txc:dft">
 					<ValidBetween>
 						<FromDate>2005-01-01T00:00:00</FromDate>
 					</ValidBetween>
@@ -5909,12 +5957,6 @@ West Midlands Railway
 						<DefaultDataSourceRef ref="txc:dft" version="txc:v2.1"/>
 						<DefaultResponsibilitySetRef ref="txc:TransXChange_metadata" version="txc:v2.1"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="txc:v2.1" version="any">
-							<Description>TransXChange  version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="txc:dft" version="txc:v2.1">
 							<Email>standards@transxchange.org.uk</Email>
@@ -5927,7 +5969,7 @@ West Midlands Railway
 							<roles>
 								<ResponsibilityRoleAssignment version="txc:v2.1" id="txc:TransXChange_metadata">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>

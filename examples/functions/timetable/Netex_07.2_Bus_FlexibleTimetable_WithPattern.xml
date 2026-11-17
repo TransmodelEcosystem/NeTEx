@@ -146,6 +146,17 @@ The Calendar is shown coded as
 			<frames>
 				<ResourceFrame version="1" id="mybus:svf_24">
 					<Name>ValueSet for TypeOfFlexibleService</Name>
+					<contracts>
+						<Contract version="any" id="mytim:con_0123">
+							<ContractType>formal</ContractType>
+							<contractees>
+								<AuthorityRef versionRef="any" ref="acs:Transport_Region_Omega"/>
+							</contractees>
+							<contractors>
+								<OrganisationRef versionRef="any" ref="acs:ACS"/>
+							</contractors>
+						</Contract>
+					</contracts>
 					<typesOfValue>
 						<ValueSet id="myvalueset" version="any" nameOfClass="TypeOfFlexibleService">
 							<values>
@@ -397,7 +408,7 @@ The Calendar is shown coded as
 					</servicePatterns>
 					<!--- =========STOP ASSIGNMENTs=========== -->
 					<stopAssignments>
-						<FlexibleStopAssignment version="any" id="hde:fsa_SSP_077+fsp_Sigma">
+						<FlexibleStopAssignment version="any" id="hde:fsa_SSP_077+fsp_Sigma" order="1">
 							<Description lang="en">Assigns Charley to Tau Zone </Description>
 							<ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
 							<FlexibleStopPlaceRef version="any" ref="mybus:fsp_Tau"/>
@@ -438,33 +449,33 @@ The Calendar is shown coded as
 					<timingLinks>
 						<TimingLink version="any" id="mybus:SSP_001+SSP_077">
 							<Name>Overall timing Alpha  to  Charley reen</Name>
-							<FromPointRef version="any" xsi:type="ScheduledStopPointRefStructure" ref="mybus:SSP_001"/>
-							<ToPointRef version="any" xsi:type="ScheduledStopPointRefStructure" ref="mybus:SSP_077"/>
+							<FromPointRef version="any" nameOfRefClass="ScheduledStopPoint" ref="mybus:SSP_001"/>
+							<ToPointRef version="any" nameOfRefClass="ScheduledStopPoint" ref="mybus:SSP_077"/>
 						</TimingLink>
 						<TimingLink version="any" id="mybus:SSP_001+SSP_001_t1">
 							<Name>After Alpha   t1</Name>
-							<FromPointRef version="any" xsi:type="ScheduledStopPointRefStructure" ref="mybus:SSP_001"/>
-							<ToPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_001_t1"/>
+							<FromPointRef version="any" nameOfRefClass="ScheduledStopPoint" ref="mybus:SSP_001"/>
+							<ToPointRef version="any" nameOfRefClass="TimingPoint" ref="mybus:SSP_001_t1"/>
 						</TimingLink>
 						<TimingLink version="any" id="mybus:SSP_001_t1+SSP_001_t2">
 							<Name>After Alpha   t1 to After Alpha  t2</Name>
-							<FromPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_001_t1"/>
-							<ToPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_002_t3"/>
+							<FromPointRef version="any" nameOfRefClass="TimingPoint" ref="mybus:SSP_001_t1"/>
+							<ToPointRef version="any" nameOfRefClass="TimingPoint" ref="mybus:SSP_002_t3"/>
 						</TimingLink>
 						<TimingLink version="any" id="mybus:SSP_001_t2+SSP_002">
 							<Name>After Alpha  t2 to Bravo</Name>
-							<FromPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_001_t2"/>
-							<ToPointRef version="any" xsi:type="ScheduledStopPointRefStructure" ref="mybus:SSP_002"/>
+							<FromPointRef version="any" nameOfRefClass="TimingPoint" ref="mybus:SSP_001_t2"/>
+							<ToPointRef version="any" nameOfRefClass="ScheduledStopPoint" ref="mybus:SSP_002"/>
 						</TimingLink>
 						<TimingLink version="any" id="mybus:SSP_002+SSP_002_t3">
 							<Name>Bravo to After Bravo t1</Name>
-							<FromPointRef version="any" xsi:type="ScheduledStopPointRefStructure" ref="mybus:SSP_002"/>
-							<ToPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_002_t3"/>
+							<FromPointRef version="any" nameOfRefClass="ScheduledStopPoint" ref="mybus:SSP_002"/>
+							<ToPointRef version="any" nameOfRefClass="TimingPoint" ref="mybus:SSP_002_t3"/>
 						</TimingLink>
 						<TimingLink version="any" id="mybus:SSP_002_t3+SSP_077">
 							<Name>After Bravo t1 to Charley</Name>
-							<FromPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_002_t3"/>
-							<ToPointRef version="any" xsi:type="ScheduledStopPointRefStructure" ref="mybus:SSP_077"/>
+							<FromPointRef version="any" nameOfRefClass="TimingPoint" ref="mybus:SSP_002_t3"/>
+							<ToPointRef version="any" nameOfRefClass="ScheduledStopPoint" ref="mybus:SSP_077"/>
 						</TimingLink>
 					</timingLinks>
 					<!--- =========TIMING PATTERNs============ -->
@@ -475,23 +486,23 @@ The Calendar is shown coded as
 							<DirectionType>outbound</DirectionType>
 							<pointsInSequence>
 								<TimingPointInJourneyPattern version="any" order="1" id="hde:tpijp_24o@01">
-									<TimingPointRef version="any" xsi:type="ScheduledStopPointRefStructure" ref="mybus:SSP_001"/>
+									<TimingPointRef version="any" nameOfRefClass="ScheduledStopPoint" ref="mybus:SSP_001"/>
 									<OnwardTimingLinkRef version="any" ref="mybus:SSP_001+SSP_001_t1"/>
 								</TimingPointInJourneyPattern>
 								<TimingPointInJourneyPattern version="any" order="2" id="hde:tpijp_24o@02">
-									<TimingPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_001_t1"/>
+									<TimingPointRef version="any" ref="mybus:SSP_001_t1"/>
 									<OnwardTimingLinkRef version="any" ref="mybus:SSP_001_t1+SSP_001_t2"/>
 								</TimingPointInJourneyPattern>
 								<TimingPointInJourneyPattern version="any" order="3" id="hde:tpijp_24o@03">
-									<TimingPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_001_t2"/>
+									<TimingPointRef version="any" ref="mybus:SSP_001_t2"/>
 									<OnwardTimingLinkRef version="any" ref="mybus:SSP_001_t2+SSP_002"/>
 								</TimingPointInJourneyPattern>
 								<TimingPointInJourneyPattern version="any" order="4" id="hde:tpijp_24o@04">
-									<TimingPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_002"/>
+									<TimingPointRef version="any" ref="mybus:SSP_002"/>
 									<OnwardTimingLinkRef version="any" ref="mybus:SSP_002+SSP_002_t3"/>
 								</TimingPointInJourneyPattern>
 								<TimingPointInJourneyPattern version="any" order="5" id="hde:tpijp_24o@05">
-									<TimingPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_002_t3"/>
+									<TimingPointRef version="any" ref="mybus:SSP_002_t3"/>
 									<OnwardTimingLinkRef version="any" ref="mybus:SSP_002_t3+SSP_077"/>
 								</TimingPointInJourneyPattern>
 								<TimingPointInJourneyPattern version="any" order="6" id="hde:tpijp_24o@06">
@@ -517,16 +528,16 @@ The Calendar is shown coded as
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
 								</StopPointInJourneyPattern>
 								<TimingPointInJourneyPattern version="any" order="2" id="hde:pijp_24o@02">
-									<TimingPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_001_t1"/>
+									<TimingPointRef version="any" ref="mybus:SSP_001_t1"/>
 								</TimingPointInJourneyPattern>
 								<TimingPointInJourneyPattern version="any" order="3" id="hde:pijp_24o@03">
-									<TimingPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_001_t2"/>
+									<TimingPointRef version="any" ref="mybus:SSP_001_t2"/>
 								</TimingPointInJourneyPattern>
 								<StopPointInJourneyPattern version="any" order="4" id="hde:pijp_24o@04">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
 								</StopPointInJourneyPattern>
 								<TimingPointInJourneyPattern version="any" order="5" id="hde:tpip_24o@05">
-									<TimingPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_002_t3"/>
+									<TimingPointRef version="any" ref="mybus:SSP_002_t3"/>
 								</TimingPointInJourneyPattern>
 								<StopPointInJourneyPattern version="any" order="6" id="hde:tpip_24o@06">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
@@ -588,13 +599,15 @@ The Calendar is shown coded as
 						<ServiceJourney version="any" id="hde:sj_24o@01">
 							<journeyAccountings>
 								<JourneyAccounting version="any" id="mytim:sj_24o@01_01" order="1">
-									<OrganisationRef xsi:type="AuthorityRefStructure" ref="txc:xshire">EXTERNAL</OrganisationRef>
+									<AuthorityRef versionRef="EXTERNAL" ref="txc:xshire"/>
+									<SupplyContractRef version="any" ref="mytim:con_0123"/>
 									<AccountingType>subsidy</AccountingType>
 									<Partial>false</Partial>
 									<Distance>20</Distance>
 								</JourneyAccounting>
 								<JourneyAccounting version="any" id="mytim:sj_24o@01_02" order="2">
-									<OrganisationRef xsi:type="AuthorityRefStructure" ref="txc:xshire">EXTERNAL</OrganisationRef>
+									<AuthorityRef versionRef="EXTERNAL" ref="txc:xshire"/>
+									<SupplyContractRef version="any" ref="mytim:con_0123"/>
 									<AccountingType>contract</AccountingType>
 									<Partial>false</Partial>
 									<Distance>20</Distance>
@@ -602,7 +615,7 @@ The Calendar is shown coded as
 							</journeyAccountings>
 							<DepartureTime>14:20:00.0Z</DepartureTime>
 							<ServicePatternRef version="any" ref="hde:svp_24o"/>
-							<BlockRef ref="mybus:BLK_24o5">EXTERNAL</BlockRef>
+							<BlockRef versionRef="EXTERNAL" ref="mybus:BLK_24o5"/>
 							<LineRef version="any" ref="mybus:FL_24"/>
 							<JourneyPatternView>
 								<RouteRef version="any" ref="mybus:RT_24o"/>
@@ -670,7 +683,7 @@ The Calendar is shown coded as
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
 									<OnwardTimingLinkView>
 										<TimingLinkRef version="any" ref="mybus:SSP_002+SSP_002_t3"/>
-										<ToPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_002_t3"/>
+										<ToPointRef version="any" nameOfRefClass="TimingPoint" ref="mybus:SSP_002_t3"/>
 									</OnwardTimingLinkView>
 									<OnwardServiceLinkRef version="any" ref="mybus:SSP_002+SSP_077"/>
 									<Arrival>
@@ -692,7 +705,7 @@ The Calendar is shown coded as
 									</Departure>
 								</Call>
 							</calls>
-							<FlexibleServiceProperties version="1" id="hde:FlexibleServiceProperties:sj_24o@02">
+							<FlexibleServiceProperties version="1" id="hde:FlexibleServiceProperties:sj_24o@01">
 								<TypeOfFlexibleServiceRef ref="myfs" version="any"/>
 								<BookingMethods>online callOffice</BookingMethods>
 								<BookingAccess>public</BookingAccess>
@@ -706,7 +719,7 @@ The Calendar is shown coded as
 								<DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
 							</dayTypes>
 							<ServicePatternRef version="any" ref="hde:svp_24o"/>
-							<BlockRef ref="mybus:BLK_24o8">EXTERNAL</BlockRef>
+							<BlockRef versionRef="EXTERNAL" ref="mybus:BLK_24o8"/>
 							<LineRef version="any" ref="mybus:FL_24"/>
 							<JourneyPatternView>
 								<RouteRef version="any" ref="mybus:RT_24o"/>
@@ -760,7 +773,7 @@ The Calendar is shown coded as
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
 									<OnwardTimingLinkView>
 										<TimingLinkRef version="any" ref="mybus:SSP_001+SSP_001_t1"/>
-										<ToPointRef version="any" xsi:type="TimingPointRefStructure" ref="mybus:SSP_001_t1"/>
+										<ToPointRef version="any" nameOfRefClass="TimingPoint" ref="mybus:SSP_001_t1"/>
 									</OnwardTimingLinkView>
 									<OnwardServiceLinkRef version="any" ref="mybus:SSP_001+SSP_002"/>
 									<Arrival>

@@ -44,7 +44,7 @@ Frames (gruppering)
 							<AccessibilityAssessment version="any" id="NSR:AccessibilityAssessment:1">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
-									<AccessibilityLimitation>
+									<AccessibilityLimitation id="NSR:AccessibilityAssessment:1" version="any">
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>true</StepFreeAccess>
 									</AccessibilityLimitation>
@@ -52,7 +52,9 @@ Frames (gruppering)
 							</AccessibilityAssessment>
 							<placeEquipments>
 								<GeneralSign id="NSR:GeneralSign:1" version="any">
-									<PrivateCode>512</PrivateCode>
+									<privateCodes>
+										<PrivateCode>512</PrivateCode>
+									</privateCodes>
 									<SignContentType>transportMode</SignContentType>
 								</GeneralSign>
 							</placeEquipments>
@@ -62,8 +64,8 @@ Frames (gruppering)
 								<Quay version="any" id="NSR:Quay:12345679">
 									<Centroid>
 										<Location>
-											<Longitude>59.9139819</Longitude>
-											<Latitude>10.8247039</Latitude>
+											<Longitude>10.8244793</Longitude>
+											<Latitude>59.9138612</Latitude>
 										</Location>
 									</Centroid>
 									<Lighting>poorlyLit</Lighting>
@@ -77,8 +79,8 @@ Frames (gruppering)
 								<Quay version="any" id="NSR:Quay:12345670">
 									<Centroid>
 										<Location>
-											<Longitude>59.9138612</Longitude>
-											<Latitude>10.8244793</Latitude>
+											<Longitude>10.8247039</Longitude>
+											<Latitude>59.9139819</Latitude>
 										</Location>
 									</Centroid>
 									<Lighting>wellLit</Lighting>

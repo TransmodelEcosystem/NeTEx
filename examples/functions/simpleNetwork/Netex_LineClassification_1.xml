@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==== SImple Network Example ====== 
+This example shows the encoding of a simple bus infrastructure network in NeTEx XML  
+
+
+
+v1.1 revised ids
+
+(C) COpyright CEN, Crown Copyright 2010-2024
+-->
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml/3.2" version="1.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2010-12-17T09:30:47.0Z</PublicationTimestamp>
+	<ParticipantRef>SYS001</ParticipantRef>
+	<!--- ======WHAT WAS REQUESTED ========== -->
+	<PublicationRequest version="1.0">
+		<RequestTimestamp>2010-12-17T09:30:47.0Z</RequestTimestamp>
+		<ParticipantRef>SYS002</ParticipantRef>
+		<topics>
+			<NetworkFrameTopic>
+				<Current/>
+				<InfrastructureFrameRef ref="mybus:ifwkf001">REQUEST</InfrastructureFrameRef>
+				<ServiceFrameRef ref="mybus:ntwkf001">REQUEST</ServiceFrameRef>
+			</NetworkFrameTopic>
+		</topics>
+	</PublicationRequest>
+	<PublicationRefreshInterval>P7D</PublicationRefreshInterval>
+	<Description>Netex basic Versioning Example Step 05</Description>
+	<!--- =============== RESULTS =========== -->
+	<dataObjects>
+		<CompositeFrame version="1" id="mybus:SVC_01@composite">
+			<!--- ======= CODESPACEs======== -->
+			<codespaces>
+				<Codespace id="mybus">
+					<Xmlns>mybus</Xmlns>
+					<XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
+					<Description>My buses</Description>
+				</Codespace>
+				<Codespace id="hde">
+					<Xmlns>hde</Xmlns>
+					<XmlnsUrl>http://www.halt.de/</XmlnsUrl>
+					<Description>Stop data  data</Description>
+				</Codespace>
+				<Codespace id="gis">
+					<Xmlns>gis</Xmlns>
+					<XmlnsUrl>http://www.gisdata.com/data</XmlnsUrl>
+					<Description>GIS   data</Description>
+				</Codespace>
+			</codespaces>
+			<!--- =======FRAME DEFAULTS======== -->
+			<frames>
+				<!--- =====FRAME WITH ROUTEs========= -->
+				<ServiceFrame version="1.0" id="mybus:LineClassiifactionExample">
+					<lines>
+						<Line version="any" id="mybus:0066">
+							<Name>Private School bus Line</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>schoolBus</BusSubmode>
+							</TransportSubmode>
+							<PublicCode>SB11</PublicCode>
+							<OperatorRef versionRef="EXTERNAL" ref="mybus:Org_TL001"/>
+							<LineType>local</LineType>
+							<RestrictedLine>true</RestrictedLine>
+							<UserTypes>schoolPupil</UserTypes>
+							<Monitored>true</Monitored>
+							<Presentation>
+								<ColourName>yellow</ColourName>
+							</Presentation>
+							<AccessibilityAssessment version="any" id="mybus:0066">
+								<MobilityImpairedAccess>true</MobilityImpairedAccess>
+								<limitations>
+									<AccessibilityLimitation id="mybus:0066" version="any">
+										<WheelchairAccess>true</WheelchairAccess>
+									</AccessibilityLimitation>
+								</limitations>
+							</AccessibilityAssessment>
+							<bookingArrangements>
+								<BookingArrangement version="any" id="mybus:0066">
+									<BookingContact>
+										<ContactPerson>Miss S. Place</ContactPerson>
+										<Email>busbook@bigschool.edu</Email>
+										<Phone>+331234567</Phone>
+									</BookingContact>
+								</BookingArrangement>
+							</bookingArrangements>
+						</Line>
+						<Line version="any" id="morail:05">
+							<Name>Motor rail Line 5</Name>
+							<TransportMode>rail</TransportMode>
+							<TransportSubmode>
+								<RailSubmode>carTransportRailService</RailSubmode>
+							</TransportSubmode>
+							<PublicCode>MOTORAIL5</PublicCode>
+							<OperatorRef versionRef="EXTERNAL" ref="mybus:Org_TL001"/>
+							<LineType>longDistance</LineType>
+							<AccessModes>motorcycle car</AccessModes>
+							<Presentation>
+								<ColourName>blue</ColourName>
+							</Presentation>
+							<PaymentMethods>creditCard debitCard epayDevice mobileApp</PaymentMethods>
+							<PurchaseMoment>inAdvanceOnly</PurchaseMoment>
+						</Line>
+					</lines>
+				</ServiceFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

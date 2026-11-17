@@ -50,6 +50,11 @@ v1.1 revised ids and corrections
 	<PublicationRefreshInterval>PT5M0S</PublicationRefreshInterval>
 	<!--- =============== RESULTS =========== -->
 	<dataObjects>
+		<ResourceFrame id="mypark:RF01" version="any">
+			<dataSources>
+				<DataSource id="parkopedia" version="any"/>
+			</dataSources>
+		</ResourceFrame>
 		<SiteFrame version="any" id="mypark:SF01">
 			<validityConditions>
 				<AvailabilityCondition version="any" id="mypark:PP01@Opening_Hours">
@@ -156,7 +161,7 @@ v1.1 revised ids and corrections
 					<AccessibilityAssessment version="any" id="mypark:PP01">
 						<MobilityImpairedAccess>partial</MobilityImpairedAccess>
 						<limitations>
-							<AccessibilityLimitation>
+							<AccessibilityLimitation id="mypark:PP01" version="any">
 								<WheelchairAccess>true</WheelchairAccess>
 								<StepFreeAccess>true</StepFreeAccess>
 								<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -537,7 +542,7 @@ v1.1 revised ids and corrections
 								</spaces>
 							</ParkingProperties>
 							<entrances>
-								<ParkingEntranceRef version="any" ref="mypark:PP01@EP01"/>
+								<ParkingPassengerEntranceRef version="any" ref="mypark:PP01@EP01"/>
 								<ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV11@Entrance"/>
 								<ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV12@Exit"/>
 								<ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV01+02"/>
@@ -604,7 +609,7 @@ v1.1 revised ids and corrections
 								</spaces>
 							</ParkingProperties>
 							<entrances>
-								<ParkingEntranceRef version="any" ref="mypark:PP01@EP02 "/>
+								<ParkingPassengerEntranceRef version="any" ref="mypark:PP01@EP02"/>
 								<ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV02+03"/>
 								<ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV03+02"/>
 							</entrances>

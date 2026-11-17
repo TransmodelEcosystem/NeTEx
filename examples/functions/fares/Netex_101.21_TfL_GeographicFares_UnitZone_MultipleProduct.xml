@@ -12,7 +12,7 @@ Data is (C) Copyright Transport for Lonond  2017-2019
 (C) CEN & Crown Copyright 2018, 2019 
 Free to use under a Creative Commons license.
 
-v1.1 Revised & corrected to use Tariff and simpler ids
+v1.1 Revised & corrected to use Tariff and simpler ids 
 
 ===================================================
 
@@ -643,11 +643,13 @@ Special peak and off-peak times apply on journeys that start at stations north o
 					<!--- ====LINES===== -->
 					<lines>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:BAK">
+							<privateCodes>
+								<PrivateCode>B</PrivateCode>
+							</privateCodes>
 							<Name>Bakerloo Line</Name>
 							<ShortName>Bakerloo</ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>BAK</PublicCode>
-							<PrivateCode>B</PrivateCode>
 							<Presentation>
 								<ColourName>brown</ColourName>
 							</Presentation>
@@ -667,11 +669,13 @@ Special peak and off-peak times apply on journeys that start at stations north o
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:CEN">
+							<privateCodes>
+								<PrivateCode>C</PrivateCode>
+							</privateCodes>
 							<Name>Central Line</Name>
 							<ShortName>Central</ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>CEN</PublicCode>
-							<PrivateCode>C</PrivateCode>
 							<Presentation>
 								<ColourName>red</ColourName>
 							</Presentation>
@@ -685,11 +689,13 @@ Special peak and off-peak times apply on journeys that start at stations north o
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:CIR">
+							<privateCodes>
+								<PrivateCode>R</PrivateCode>
+							</privateCodes>
 							<Name>Circle Line</Name>
 							<ShortName>Circle</ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>CIR</PublicCode>
-							<PrivateCode>R</PrivateCode>
 							<Presentation>
 								<ColourName>yellow</ColourName>
 							</Presentation>
@@ -703,11 +709,13 @@ Special peak and off-peak times apply on journeys that start at stations north o
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:TRM">
+							<privateCodes>
+								<PrivateCode>T</PrivateCode>
+							</privateCodes>
 							<Name>Croydon DLR</Name>
 							<ShortName>DLR </ShortName>
 							<TransportMode>tram</TransportMode>
 							<PublicCode>TRM</PublicCode>
-							<PrivateCode>T</PrivateCode>
 							<Presentation>
 								<ColourName>green</ColourName>
 							</Presentation>
@@ -727,11 +735,13 @@ Special peak and off-peak times apply on journeys that start at stations north o
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:DIS">
+							<privateCodes>
+								<PrivateCode>D</PrivateCode>
+							</privateCodes>
 							<Name>District Line</Name>
 							<ShortName>District </ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>DIS</PublicCode>
-							<PrivateCode>D</PrivateCode>
 							<Presentation>
 								<ColourName>green</ColourName>
 							</Presentation>
@@ -745,11 +755,13 @@ Special peak and off-peak times apply on journeys that start at stations north o
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:JUB">
+							<privateCodes>
+								<PrivateCode>J</PrivateCode>
+							</privateCodes>
 							<Name>Jubilee Line</Name>
 							<ShortName>Jubilee </ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>JUB</PublicCode>
-							<PrivateCode>J</PrivateCode>
 							<Presentation>
 								<ColourName>silver</ColourName>
 							</Presentation>
@@ -769,11 +781,13 @@ Special peak and off-peak times apply on journeys that start at stations north o
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:DLR">
+							<privateCodes>
+								<PrivateCode>L</PrivateCode>
+							</privateCodes>
 							<Name>Docklands light railway</Name>
 							<ShortName>DLR</ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>DLR</PublicCode>
-							<PrivateCode>L</PrivateCode>
 							<Presentation>
 								<ColourName>lightGreen</ColourName>
 							</Presentation>
@@ -793,11 +807,13 @@ Special peak and off-peak times apply on journeys that start at stations north o
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:HAM">
+							<privateCodes>
+								<PrivateCode>H</PrivateCode>
+							</privateCodes>
 							<Name>Hammersmith  &amp;  City Line</Name>
 							<ShortName>Hammersmith  &amp; City</ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>HAM</PublicCode>
-							<PrivateCode>H</PrivateCode>
 							<Presentation>
 								<ColourName>pink</ColourName>
 							</Presentation>
@@ -811,11 +827,13 @@ Special peak and off-peak times apply on journeys that start at stations north o
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:MET">
+							<privateCodes>
+								<PrivateCode>M</PrivateCode>
+							</privateCodes>
 							<Name>Metropolitan Line</Name>
 							<ShortName>Metropolitan</ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>MET</PublicCode>
-							<PrivateCode>M</PrivateCode>
 							<Presentation>
 								<ColourName>maroon</ColourName>
 							</Presentation>
@@ -835,11 +853,13 @@ Special peak and off-peak times apply on journeys that start at stations north o
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:NTN">
+							<privateCodes>
+								<PrivateCode>N</PrivateCode>
+							</privateCodes>
 							<Name>Northern Line</Name>
 							<ShortName>Northern</ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>NTN</PublicCode>
-							<PrivateCode>N</PrivateCode>
 							<Presentation>
 								<ColourName>black</ColourName>
 							</Presentation>
@@ -853,11 +873,13 @@ Special peak and off-peak times apply on journeys that start at stations north o
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:OVR">
+							<privateCodes>
+								<PrivateCode>O</PrivateCode>
+							</privateCodes>
 							<Name>London Overground</Name>
 							<ShortName>Overground </ShortName>
 							<TransportMode>rail</TransportMode>
 							<PublicCode>OVR</PublicCode>
-							<PrivateCode>O</PrivateCode>
 							<Presentation>
 								<ColourName>orange</ColourName>
 							</Presentation>
@@ -874,11 +896,13 @@ Special peak and off-peak times apply on journeys that start at stations north o
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:PIC">
+							<privateCodes>
+								<PrivateCode>P</PrivateCode>
+							</privateCodes>
 							<Name>Piccadilly Line</Name>
 							<ShortName>Piccadilly</ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>PIC</PublicCode>
-							<PrivateCode>P</PrivateCode>
 							<Presentation>
 								<ColourName>darkblue</ColourName>
 							</Presentation>
@@ -892,11 +916,13 @@ Special peak and off-peak times apply on journeys that start at stations north o
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:VIC">
+							<privateCodes>
+								<PrivateCode>V</PrivateCode>
+							</privateCodes>
 							<Name>VictoriaLine</Name>
 							<ShortName>Victoria</ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>VIC</PublicCode>
-							<PrivateCode>V</PrivateCode>
 							<Presentation>
 								<ColourName>lightblue</ColourName>
 							</Presentation>
@@ -910,11 +936,13 @@ Special peak and off-peak times apply on journeys that start at stations north o
 							</allowedDirections>
 						</Line>
 						<Line version="002" created="2011-01-17T09:30:47.0Z" changed="2011-02-08T09:30:47.0Z" id="lul:WAC">
+							<privateCodes>
+								<PrivateCode>W</PrivateCode>
+							</privateCodes>
 							<Name>Waterloo &amp; City Line</Name>
 							<ShortName>Waterloo &amp; City </ShortName>
 							<TransportMode>metro</TransportMode>
 							<PublicCode>WAC</PublicCode>
-							<PrivateCode>W</PrivateCode>
 							<Presentation>
 								<ColourName>turquoise</ColourName>
 							</Presentation>
@@ -5170,7 +5198,7 @@ You can only get these as paper tickets, not on an Oyster card, and they must be
 						<DistributionChannel version="any" id="tfl:Visitor_Centres">
 							<Name>Visitor centres</Name>
 							<PaymentMethods>debitCard creditCard companyCheque cash</PaymentMethods>
-							<DistributionGroupRef version="any" ref="nr:Visitor_Centres"/>
+							<DistributionGroupRef version="any" ref="tfl:Visitor_Centres"/>
 						</DistributionChannel>
 						<DistributionChannel version="any" id="tfl:OverseasAgents">
 							<Name>Overseas Agents centres</Name>
@@ -5196,7 +5224,7 @@ You can't
 	Buy paper tickets (cash single tickets and Day Travelcards)</Description>
 							<!-- TO DO -->
 							<PaymentMethods>debitCard creditCard   cash</PaymentMethods>
-							<DistributionGroupRef ref="nr:OysterTicketShops"/>
+							<DistributionGroupRef version="any" ref="nr:OysterTicketShops"/>
 						</DistributionChannel>
 						<DistributionChannel version="any" id="tfl:Oyster_Online">
 							<Name>Oyster Online</Name>
@@ -15577,6 +15605,13 @@ For more information on National Rail services see the
 							</members>
 						</GeneralGroupOfEntities>
 						<GeneralGroupOfEntities version="any" id="tfl:Registered_Educational_Establishments" nameOfMemberClass="OtherOrganisation">
+							<Name>List of registered universties</Name>
+							<members>
+								<OtherOrganisationRef ref="tfl:University_of_London"/>
+								<!--  etc etc -->
+							</members>
+						</GeneralGroupOfEntities>
+						<GeneralGroupOfEntities version="any" id="nr:OysterTicketShops" nameOfMemberClass="OtherOrganisation">
 							<Name>List of registered universties</Name>
 							<members>
 								<OtherOrganisationRef ref="tfl:University_of_London"/>

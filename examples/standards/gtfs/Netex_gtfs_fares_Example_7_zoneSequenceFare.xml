@@ -177,7 +177,7 @@ v1.1 Revised to use Tarifff
 							<TypeOfTariffRef version="gtfs:1.5" ref="gtfs:zone_sequence"/>
 							<fareStructureElements>
 								<FareStructureElement version="1.0" id="myfares:BOILERPLATE_ZS@access">
-									<GenericParameterAssignment order="1" id="myfares:BOILERPLATE_ZS@access" version="1.0">
+									<GenericParameterAssignment id="myfares:BOILERPLATE_ZS@access-1" version="1.0">
 										<TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:can_access"/>
 										<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
 										<validityParameters>
@@ -186,25 +186,25 @@ v1.1 Revised to use Tarifff
 										</validityParameters>
 										<IncludesGroupingType>XOR</IncludesGroupingType>
 										<includes>
-											<GenericParameterAssignment version="any" order="1" id="mygtfsxm:BOILERPLATE_ZS@access@details">
+											<GenericParameterAssignment version="any" id="mygtfsxm:BOILERPLATE_ZS@access@details-1">
 												<FareStructureElementRef version="any" ref="mygtfsxm:F1"/>
 											</GenericParameterAssignment>
-											<GenericParameterAssignment version="any" order="2" id="mygtfsxm:BOILERPLATE_ZS@access@details">
+											<GenericParameterAssignment version="any" id="mygtfsxm:BOILERPLATE_ZS@access@details-2">
 												<FareStructureElementRef version="any" ref="mygtfsxm:F2"/>
 											</GenericParameterAssignment>
-											<GenericParameterAssignment version="any" order="3" id="mygtfsxm:BOILERPLATE_ZS@access@details">
+											<GenericParameterAssignment version="any" id="mygtfsxm:BOILERPLATE_ZS@access@details-3">
 												<FareStructureElementRef version="any" ref="mygtfsxm:F3"/>
 											</GenericParameterAssignment>
-											<GenericParameterAssignment version="any" order="4" id="mygtfsxm:BOILERPLATE_ZS@access@details">
+											<GenericParameterAssignment version="any" id="mygtfsxm:BOILERPLATE_ZS@access@details-4">
 												<FareStructureElementRef version="any" ref="mygtfsxm:F4"/>
 											</GenericParameterAssignment>
-											<GenericParameterAssignment version="any" order="5" id="mygtfsxm:BOILERPLATE_ZS@access@details">
+											<GenericParameterAssignment version="any" id="mygtfsxm:BOILERPLATE_ZS@access@details-5">
 												<FareStructureElementRef version="any" ref="mygtfsxm:F5"/>
 											</GenericParameterAssignment>
-											<GenericParameterAssignment version="any" order="6" id="mygtfsxm:BOILERPLATE_ZS@access@details">
+											<GenericParameterAssignment version="any" id="mygtfsxm:BOILERPLATE_ZS@access@details-6">
 												<FareStructureElementRef version="any" ref="mygtfsxm:F6"/>
 											</GenericParameterAssignment>
-											<GenericParameterAssignment version="any" order="7" id="mygtfsxm:BOILERPLATE_ZS@access@details">
+											<GenericParameterAssignment version="any" id="mygtfsxm:BOILERPLATE_ZS@access@details-7">
 												<FareStructureElementRef version="any" ref="mygtfsxm:F7"/>
 											</GenericParameterAssignment>
 										</includes>
@@ -212,7 +212,7 @@ v1.1 Revised to use Tarifff
 								</FareStructureElement>
 								<FareStructureElement id="myfares:BOILERPLATE_ZS@conditions_of_travel" version="1.0">
 									<Name>Conditions of travel</Name>
-									<GenericParameterAssignment version="1.0" order="1" id="myfares:BOILERPLATE_ZS@conditions_of_travel">
+									<GenericParameterAssignment version="1.0" id="myfares:BOILERPLATE_ZS@conditions_of_travel-1">
 										<Name>Conditions of travel</Name>
 										<TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:condition_of_use"/>
 										<LimitationGroupingType>AND</LimitationGroupingType>
@@ -234,7 +234,7 @@ v1.1 Revised to use Tarifff
 								<FareStructureElement version="any" id="mygtfsxm:1">
 									<Name>Zone 1</Name>
 									<validityParameterAssignments>
-										<GenericParameterAssignment version="any" order="1" id="mygtfsxm:1">
+										<GenericParameterAssignment version="any" id="mygtfsxm:1-1">
 											<Name>Use of Zone 1</Name>
 											<validityParameters>
 												<TariffZoneRef version="any" ref="mygtfsxm:1"/>
@@ -245,7 +245,7 @@ v1.1 Revised to use Tarifff
 								<FareStructureElement version="any" id="mygtfsxm:2">
 									<Name>Zone 2</Name>
 									<validityParameterAssignments>
-										<GenericParameterAssignment version="any" order="1" id="mygtfsxm:2">
+										<GenericParameterAssignment version="any" id="mygtfsxm:2-1">
 											<Name>Use of Zone 2</Name>
 											<validityParameters>
 												<TariffZoneRef version="any" ref="mygtfsxm:2"/>
@@ -256,7 +256,7 @@ v1.1 Revised to use Tarifff
 								<FareStructureElement version="any" id="mygtfsxm:3">
 									<Name>Zone 3</Name>
 									<validityParameterAssignments>
-										<GenericParameterAssignment version="any" order="1" id="mygtfsxm:3">
+										<GenericParameterAssignment version="any" id="mygtfsxm:3-1">
 											<Name>Use of Zone 3</Name>
 											<validityParameters>
 												<TariffZoneRef version="any" ref="mygtfsxm:3"/>
@@ -268,14 +268,14 @@ v1.1 Revised to use Tarifff
 								<FareStructureElement version="any" id="mygtfsxm:F1">
 									<Name>F1 = Sequence 1,2,3</Name>
 									<fareStructureElementsInSequence>
-										<FareStructureElementInSequence version="any" id="mygtfsxm:F1" order="1">
+										<FareStructureElementInSequence version="any" id="mygtfsxm:F1-1">
 											<IsFirstInSequence>true</IsFirstInSequence>
 											<FareStructureElementRef version="any" ref="mygtfsxm:1"/>
 										</FareStructureElementInSequence>
-										<FareStructureElementInSequence version="any" id="mygtfsxm:F1" order="2">
+										<FareStructureElementInSequence version="any" id="mygtfsxm:F1-2">
 											<FareStructureElementRef version="any" ref="mygtfsxm:2"/>
 										</FareStructureElementInSequence>
-										<FareStructureElementInSequence version="any" id="mygtfsxm:F1" order="3">
+										<FareStructureElementInSequence version="any" id="mygtfsxm:F1-3">
 											<IsLastInSequence>true</IsLastInSequence>
 											<FareStructureElementRef version="any" ref="mygtfsxm:3"/>
 										</FareStructureElementInSequence>
@@ -284,11 +284,11 @@ v1.1 Revised to use Tarifff
 								<FareStructureElement version="any" id="mygtfsxm:F2">
 									<Name>F2 = Sequence 1,2 </Name>
 									<fareStructureElementsInSequence>
-										<FareStructureElementInSequence version="any" id="mygtfsxm:F2" order="1">
+										<FareStructureElementInSequence version="any" id="mygtfsxm:F2-1">
 											<IsFirstInSequence>true</IsFirstInSequence>
 											<FareStructureElementRef version="any" ref="mygtfsxm:1"/>
 										</FareStructureElementInSequence>
-										<FareStructureElementInSequence version="any" id="mygtfsxm:F2" order="2">
+										<FareStructureElementInSequence version="any" id="mygtfsxm:F2-2">
 											<IsLastInSequence>true</IsLastInSequence>
 											<FareStructureElementRef version="any" ref="mygtfsxm:2"/>
 										</FareStructureElementInSequence>
@@ -297,11 +297,11 @@ v1.1 Revised to use Tarifff
 								<FareStructureElement version="any" id="mygtfsxm:F3">
 									<Name>F3 = Sequence 1,3 </Name>
 									<fareStructureElementsInSequence>
-										<FareStructureElementInSequence version="any" id="mygtfsxm:F3" order="1">
+										<FareStructureElementInSequence version="any" id="mygtfsxm:F3-1">
 											<IsFirstInSequence>true</IsFirstInSequence>
 											<FareStructureElementRef version="any" ref="mygtfsxm:1"/>
 										</FareStructureElementInSequence>
-										<FareStructureElementInSequence version="any" id="mygtfsxm:F3" order="2">
+										<FareStructureElementInSequence version="any" id="mygtfsxm:F3-2">
 											<IsLastInSequence>true</IsLastInSequence>
 											<FareStructureElementRef version="any" ref="mygtfsxm:3"/>
 										</FareStructureElementInSequence>
@@ -310,11 +310,11 @@ v1.1 Revised to use Tarifff
 								<FareStructureElement version="any" id="mygtfsxm:F4">
 									<Name>F4 = Sequence 2,3 </Name>
 									<fareStructureElementsInSequence>
-										<FareStructureElementInSequence version="any" id="mygtfsxm:F4" order="1">
+										<FareStructureElementInSequence version="any" id="mygtfsxm:F4-1">
 											<IsFirstInSequence>true</IsFirstInSequence>
 											<FareStructureElementRef version="any" ref="mygtfsxm:1"/>
 										</FareStructureElementInSequence>
-										<FareStructureElementInSequence version="any" id="mygtfsxm:F4" order="2">
+										<FareStructureElementInSequence version="any" id="mygtfsxm:F4-2">
 											<IsLastInSequence>true</IsLastInSequence>
 											<FareStructureElementRef version="any" ref="mygtfsxm:3"/>
 										</FareStructureElementInSequence>
@@ -323,7 +323,7 @@ v1.1 Revised to use Tarifff
 								<FareStructureElement version="any" id="mygtfsxm:F5">
 									<Name>F5 = Zone 1  only </Name>
 									<fareStructureElementsInSequence>
-										<FareStructureElementInSequence version="any" id="mygtfsxm:F5" order="1">
+										<FareStructureElementInSequence version="any" id="mygtfsxm:F5-1">
 											<IsFirstInSequence>true</IsFirstInSequence>
 											<IsLastInSequence>true</IsLastInSequence>
 											<FareStructureElementRef version="any" ref="mygtfsxm:1"/>
@@ -333,7 +333,7 @@ v1.1 Revised to use Tarifff
 								<FareStructureElement version="any" id="mygtfsxm:F6">
 									<Name>F6 =   Zone 2  only </Name>
 									<fareStructureElementsInSequence>
-										<FareStructureElementInSequence version="any" id="mygtfsxm:F6" order="1">
+										<FareStructureElementInSequence version="any" id="mygtfsxm:F6-1">
 											<IsFirstInSequence>true</IsFirstInSequence>
 											<IsLastInSequence>true</IsLastInSequence>
 											<FareStructureElementRef version="any" ref="mygtfsxm:2"/>
@@ -343,7 +343,7 @@ v1.1 Revised to use Tarifff
 								<FareStructureElement version="any" id="mygtfsxm:F7">
 									<Name>F7 =     Zone 3  only </Name>
 									<fareStructureElementsInSequence>
-										<FareStructureElementInSequence version="any" id="mygtfsxm:F7" order="1">
+										<FareStructureElementInSequence version="any" id="mygtfsxm:F7-1">
 											<IsFirstInSequence>true</IsFirstInSequence>
 											<IsLastInSequence>true</IsLastInSequence>
 											<FareStructureElementRef version="any" ref="mygtfsxm:3"/>
@@ -370,7 +370,7 @@ v1.1 Revised to use Tarifff
 							</validableElements>
 							<!--- ====ACCESS RIGHTS======= -->
 							<accessRightsInProduct>
-								<AccessRightInProduct order="1" version="any" id="mygtfsxm:BOILERPLATE_ZS">
+								<AccessRightInProduct id="mygtfsxm:BOILERPLATE_ZS-1" version="any">
 									<Name>A trip on the network</Name>
 									<ValidableElementRef version="any" ref="mygtfsxm:trip"/>
 								</AccessRightInProduct>
@@ -440,7 +440,7 @@ v1.1 Revised to use Tarifff
 				<DefaultCodespaceRef ref="gtfs"/>
 			</FrameDefaults>
 			<typesOfValue>
-				<ValueSet version="gtfs:1.5" id="gtfs:Charging_Moments" classOfValues="ChargingMomenr">
+				<ValueSet version="gtfs:1.5" id="gtfs:Charging_Moments" classOfValues="ChargingMoment">
 					<Name>GTFS Built in  Charging Methods: FareAttribute@payment_method</Name>
 					<values>
 						<!--- ====Charging method========= -->

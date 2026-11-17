@@ -309,7 +309,7 @@ attribution002,0,1,Transdev,12345
 
 (C) NTA 2020
   -->
-	<PublicationTimestamp>20209-12-17T09:30:46.0Z</PublicationTimestamp>
+	<PublicationTimestamp>2019-12-17T09:30:46.0Z</PublicationTimestamp>
 	<ParticipantRef>SYS001</ParticipantRef>
 	<!-- ======WHAT WAS REQUESTED ========== -->
 	<PublicationRequest version="1.0">
@@ -366,7 +366,7 @@ attribution002,0,1,Transdev,12345
 							<Name>Transport For Ireland</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="attribution001">
-									<StakeholderRoleType>Planning</StakeholderRoleType>
+									<StakeholderRoleType>planning</StakeholderRoleType>
 									<ResponsibleOrganisationRef version="any" ref="noc:10000"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -375,7 +375,7 @@ attribution002,0,1,Transdev,12345
 							<Name>Transdev</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="attribution002">
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 									<ResponsibleOrganisationRef version="any" ref="noc:12345"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -3422,127 +3422,127 @@ attribution002,0,1,Transdev,12345
 							</Destination>
 							<!-- === Gtfs stop_times.txt === -->
 							<calls>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="1">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-01" order="1">
 									<ScheduledStopPointRef version="any" ref="naptStop:823GA00354"/>
 									<Departure>
 										<Time>06:30:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="2">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-02" order="2">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00357"/>
 									<Departure>
 										<Time>06:35:28</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="3">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-03" order="3">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00361"/>
 									<Departure>
 										<Time>06:37:23</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="4">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-04" order="4">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00364"/>
 									<Departure>
 										<Time>06:39:14</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="5">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-05" order="5">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00367"/>
 									<Departure>
 										<Time>06:40:55</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="6">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-06" order="6">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00370"/>
 									<Departure>
 										<Time>06:41:49</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="7">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-07" order="7">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00373"/>
 									<Departure>
 										<Time>06:42:54</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="8">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-08" order="8">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00376"/>
 									<Departure>
 										<Time>06:44:42</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="9">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-09" order="9">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00379"/>
 									<Departure>
 										<Time>06:45:32</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="10">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-10" order="10">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00382"/>
 									<Departure>
 										<Time>06:46:31</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="11">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-11" order="11">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00387"/>
 									<Departure>
 										<Time>06:48:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="12">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-12" order="12">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00390"/>
 									<Departure>
 										<Time>06:49:42</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="13">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-13" order="13">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00399"/>
 									<Departure>
 										<Time>06:52:35</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="14">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-14" order="14">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00402"/>
 									<Departure>
 										<Time>06:54:02</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="15">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-15" order="15">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00405"/>
 									<Departure>
 										<Time>06:56:45</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="16">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-16" order="16">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00409"/>
 									<Departure>
 										<Time>06:59:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="17">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-17" order="17">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00421"/>
 									<Departure>
 										<Time>07:01:28</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="18">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-18" order="18">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00428"/>
 									<Departure>
 										<Time>07:02:50</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="19">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-19" order="19">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00431"/>
 									<Departure>
 										<Time>07:04:17</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="20">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-20" order="20">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00434"/>
 									<Departure>
 										<Time>07:06:20</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I" order="21">
+								<Call version="any" id="10.MF-BH.93-RED-y11-1.104.I-21" order="21">
 									<ScheduledStopPointRef version="any" ref="naptStop:822GA00437"/>
 									<Arrival>
 										<Time>07:09:00</Time>

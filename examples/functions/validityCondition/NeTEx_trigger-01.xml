@@ -31,7 +31,7 @@
 					<Description>Use when Icy</Description>
 					<ConditionedObjectRef nameOfRefClass="TimetableFrame" ref="abc:Tf01"/>
 					<WithConditionRef version="any" ref="hde:VC_ntwkf003_002_winter"/>
-					<RuleObjectRef nameOfRefClass="Weather" ref="Myobj:Cur001">EXTERNAL</RuleObjectRef>
+					<RuleObjectRef ref="Myobj:Cur001">EXTERNAL</RuleObjectRef>
 					<AttributeName>roadCondition</AttributeName>
 					<ComparisonOperator>EQ</ComparisonOperator>
 					<AttributeValue>icy</AttributeValue>

@@ -6,14 +6,14 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
  Actual
 
 -->
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uic="http://www.uic.org/schema" version="1.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" xmlns:uic="http://www.uic.org/schema" version="1.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
 	<PublicationTimestamp>2011-03-24T17:04:40.873+01:00</PublicationTimestamp>
 	<ParticipantRef>ERA001</ParticipantRef>
 	<Description>Example for the mapping of simple timetables</Description>
 	<dataObjects>
-		<CompositeFrame version="1" id="uic:Cf_01">
+		<CompositeFrame version="1" id="uic:Cf_01" modification="new" status="active">
 			<!--- ======= CODESPACEs======== -->
-			<codespaces>
+			<codespaces modificationSet="all">
 				<Codespace id="tap">
 					<Xmlns>tap</Xmlns>
 					<XmlnsUrl>http://www.era.eu/codes</XmlnsUrl>
@@ -44,27 +44,254 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 			<FrameDefaults>
 				<DefaultCodespaceRef ref="uic"/>
 			</FrameDefaults>
-			<frames>
-				<TimetableFrame version="any" id="uicvj:00199121">
-					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="uicvj:00199121">
+			<frames modificationSet="all">
+				<ServiceCalendarFrame id="tap:ServiceCalendarFrame" version="any">
+					<operatingPeriods>
+						<UicOperatingPeriod id="2011-02-07+2011-08-26" version="any" modification="new" status="active">
+							<FromDate>2011-02-07T00:00:00</FromDate>
+							<ToDate>2011-08-26T00:00:00</ToDate>
+							<ValidDayBits>111110011111001111100111110011111001111100111110011111001111100111110011111000111100011110011111001111100111110001111001111100111110011111001111100111110011111001111100111110011111001111100111110011111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="2011-02-11+2011-05-06" version="any" modification="new" status="active">
+							<FromDate>2011-02-11T00:00:00</FromDate>
+							<ToDate>2011-05-06T00:00:00</ToDate>
+							<ValidDayBits>1001111100111110011111001111100111110011111001111100111110011111001111100011110001111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="2011-02-07+2011-08-29" version="any" modification="new" status="active">
+							<FromDate>2011-02-07T00:00:00</FromDate>
+							<ToDate>2011-08-29T00:00:00</ToDate>
+							<ValidDayBits>000000100000010000001000000100000010000001000000100000010000001000000100000011000001100000100000010000001000000110000010000001000000100000010000001000000100000010000001000000100000010000001000000100000011</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="2011-02-07+2011-08-26B" version="any" modification="new" status="active">
+							<FromDate>2011-02-07T00:00:00</FromDate>
+							<ToDate>2011-08-26T00:00:00</ToDate>
+							<ValidDayBits>111110011111001111100111110011111001111100111110011111001111100111110011111000111100011110011111001111100111110001111001111100111110011111001111100111110011111001111100111110011111001111100111110011111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="2011-07-09+2011-08-27" version="any" modification="new" status="active">
+							<FromDate>2011-07-09T00:00:00</FromDate>
+							<ToDate>2011-08-27T00:00:00</ToDate>
+							<ValidDayBits>10000001000000100000010000001000000100000010000001</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="2011-02-12+2011-07-02" version="any" modification="new" status="active">
+							<FromDate>2011-02-12T00:00:00</FromDate>
+							<ToDate>2011-07-02T00:00:00</ToDate>
+							<ValidDayBits>100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="2011-02-06+2011-08-29" version="any" modification="new" status="active">
+							<FromDate>2011-02-06T00:00:00</FromDate>
+							<ToDate>2011-08-29T00:00:00</ToDate>
+							<ValidDayBits>1000000100000010000001000000100000010000001000000100000010000001000000100000011000001100000100000010000001000000110000010000001000000100000010000001000001100000110000011000001100000110000011000001100000111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="2011-02-12+2011-08-26" version="any" modification="new" status="active">
+							<FromDate>2011-02-12T00:00:00</FromDate>
+							<ToDate>2011-08-26T00:00:00</ToDate>
+							<ValidDayBits>1011111101111110111111011111101111110111111011111101111110111111011111101111110011111011111101111110111111001111101111110111111011111101111110111110011111001111100111110011111001111100111110011111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="2011-02-13+2011-08-29" version="any" modification="new" status="active">
+							<FromDate>2011-02-13T00:00:00</FromDate>
+							<ToDate>2011-08-29T00:00:00</ToDate>
+							<ValidDayBits>100000010000001000000100000010000001000000100000010000001000000100000011000001100000100000010000001000000110000010000001000000100000010000001000000100000010000001000000100000010000001000000100000011</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="2011-02-12+2011-08-27" version="any" modification="new" status="active">
+							<FromDate>2011-02-12T00:00:00</FromDate>
+							<ToDate>2011-08-27T00:00:00</ToDate>
+							<ValidDayBits>10111111011111101111110111111011111101111110111111011111101111110111111001111100111110111111011111101111110011111011111101111110111111011111101111110111111011111101111110111111011111101111110111111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="2011-02-11+2011-08-29" version="any" modification="new" status="active">
+							<FromDate>2011-02-11T00:00:00</FromDate>
+							<ToDate>2011-08-29T00:00:00</ToDate>
+							<ValidDayBits>10111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="2011-02-11+2011-08-29C" version="any" modification="new" status="active">
+							<FromDate>2011-02-11T00:00:00</FromDate>
+							<ToDate>2011-08-29T00:00:00</ToDate>
+							<ValidDayBits>00100000010000001000000100000010000001000000100000000000001000000100000011000001100000100000010000001000000110000010000001000000100000010000001000000100000010000001000000100000010000001000000100000011</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="2011-04-03+2011-04-03" version="any" modification="new" status="active">
+							<FromDate>2011-04-03T00:00:00</FromDate>
+							<ToDate>2011-04-03T00:00:00</ToDate>
+							<ValidDayBits>1</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X31" version="any" modification="new" status="active">
+							<FromDate>2011-02-11T00:00:00</FromDate>
+							<ToDate>2011-08-26T00:00:00</ToDate>
+							<ValidDayBits>10000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X01" version="any" modification="new" status="active">
+							<FromDate>2011-02-11T00:00:00</FromDate>
+							<ToDate>2011-08-25T00:00:00</ToDate>
+							<ValidDayBits>0001111000111100011110001111000111100011110001111000111100011110001111000011100001110001111000111100011110000111000111100011110001111000111100011110001111000111100011110001111000111100011110001111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X03" version="any" modification="new" status="active">
+							<FromDate>2011-02-12T00:00:00</FromDate>
+							<ToDate>2011-08-29T00:00:00</ToDate>
+							<ValidDayBits>0100000010000001000000100000010000001000000100000010000001000000100000011000001100000100000010000001000000110000010000001000000100000010000001000000100000010000001000000100000010000001000000100000011</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X04" version="any" modification="new" status="active">
+							<FromDate>2011-02-12T00:00:00</FromDate>
+							<ToDate>2011-08-27T00:00:00</ToDate>
+							<ValidDayBits>10111111011111101111110111111011111101111110111111011111101111110111111001111100111110111111011111101111110011111011111101111110111111011111101111110111111011111101111110111111011111101111110111111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X05" version="any" modification="new" status="active">
+							<FromDate>2011-07-03T00:00:00</FromDate>
+							<ToDate>2011-08-29T00:00:00</ToDate>
+							<ValidDayBits>1000000100000010000001000000100000010000001000000100000011</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X06" version="any" modification="new" status="active">
+							<FromDate>2011-02-06T00:00:00</FromDate>
+							<ToDate>2011-06-26T00:00:00</ToDate>
+							<ValidDayBits>100000010000001000000100000010000001000000100000010000000000000100000010000001100000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X07" version="any" modification="new" status="active">
+							<FromDate>2011-04-03T00:00:00</FromDate>
+							<ToDate>2011-04-03T00:00:00</ToDate>
+							<ValidDayBits>1</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X08" version="any" modification="new" status="active">
+							<FromDate>2011-02-11T00:00:00</FromDate>
+							<ToDate>2011-08-29T00:00:00</ToDate>
+							<ValidDayBits>10111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X09" version="any" modification="new" status="active">
+							<FromDate>2011-02-11T00:00:00</FromDate>
+							<ToDate>2011-08-26T00:00:00</ToDate>
+							<ValidDayBits>10011111001111100111110011111001111100111110011111001111100111110011111000111100011110011111001111100111110001111001111100111110011111001111100111110011111001111100111110011111001111100111110011111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X10" version="any" modification="new" status="active">
+							<FromDate>2011-02-12T00:00:00</FromDate>
+							<ToDate>2011-08-29T00:00:00</ToDate>
+							<ValidDayBits>1100000110000011000001100000110000011000001100000110000011000001100000111000011100001100000110000011000001110000110000011000001100000110000011000001100000110000011000001100000110000011000001100000111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X11" version="any" modification="new" status="active">
+							<FromDate>2011-02-06T00:00:00</FromDate>
+							<ToDate>2011-08-29T00:00:00</ToDate>
+							<ValidDayBits>1000000100000010000001000000100000010000001000000100000010000001000000100000011000001100000100000010000001000000110000010000001000000100000010000001000000100000010000001000000100000010000001000000100000011</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X12" version="any" modification="new" status="active">
+							<FromDate>2011-02-08T00:00:00</FromDate>
+							<ToDate>2011-08-26T00:00:00</ToDate>
+							<ValidDayBits>11110011111001111100111110011111001111100111110011111001111100111110011111000111100011110011111001111100111110001111001111100111110011111001111100111110011111001111100111110011111001111100111110011111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X13" version="any" modification="new" status="active">
+							<FromDate>2011-02-13T00:00:00</FromDate>
+							<ToDate>2011-08-29T00:00:00</ToDate>
+							<ValidDayBits>111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X14" version="any" modification="new" status="active">
+							<FromDate>2011-02-12T00:00:00</FromDate>
+							<ToDate>2011-08-27T00:00:00</ToDate>
+							<ValidDayBits>10000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X15" version="any" modification="new" status="active">
+							<FromDate>2011-07-04T00:00:00</FromDate>
+							<ToDate>2011-08-27T00:00:00</ToDate>
+							<ValidDayBits>1111110111111011111101111110111111011111101111110111111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X16" version="any" modification="new" status="active">
+							<FromDate>2011-02-12T00:00:00</FromDate>
+							<ToDate>2011-07-02T00:00:00</ToDate>
+							<ValidDayBits>101111110111111011111101111110111111011111101111110111111011111101111110111111001111101111110111111011111100111110111111011111101111110111111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X17" version="any" modification="new" status="active">
+							<FromDate>2011-02-06T00:00:00</FromDate>
+							<ToDate>2011-08-28T00:00:00</ToDate>
+							<ValidDayBits>100000010000001000000100000010000001000000100000010000001000000100000010000001100000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X18" version="any" modification="new" status="active">
+							<FromDate>2011-02-12T00:00:00</FromDate>
+							<ToDate>2011-08-27T00:00:00</ToDate>
+							<ValidDayBits>10111111011111101111110111111011111101111110111111011111101111110111111001111100111110111111011111101111110011111011111101111110111111011111101111110111111011111101111110111111011111101111110111111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X19" version="any" modification="new" status="active">
+							<FromDate>2011-02-14T00:00:00</FromDate>
+							<ToDate>2011-08-26T00:00:00</ToDate>
+							<ValidDayBits>11111001111100111110011111001111100111110011111001111100111110011111000111100011110011111001111100111110001111001111100111110011111001111100111110011111001111100111110011111001111100111110011111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X20" version="any" modification="new" status="active">
+							<FromDate>2011-02-12T00:00:00</FromDate>
+							<ToDate>2011-08-29T00:00:00</ToDate>
+							<ValidDayBits>1100000110000011000001100000110000011000001100000110000011000001100000111000011100001100000110000011000001110000110000011000001100000110000011000001100000110000011000001100000110000011000001100000111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X21" version="any" modification="new" status="active">
+							<FromDate>2011-02-13T00:00:00</FromDate>
+							<ToDate>2011-08-29T00:00:00</ToDate>
+							<ValidDayBits>100000010000001000000100000010000001000000100000010000001000000100000011000001100000100000010000001000000110000010000001000000100000010000001000000100000010000001000000100000010000001000000100000011</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X22" version="any" modification="new" status="active">
+							<FromDate>2011-02-12T00:00:00</FromDate>
+							<ToDate>2011-08-27T00:00:00</ToDate>
+							<ValidDayBits>10000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X23" version="any" modification="new" status="active">
+							<FromDate>2011-02-12T00:00:00</FromDate>
+							<ToDate>2011-08-27T00:00:00</ToDate>
+							<ValidDayBits>10000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X24" version="any" modification="new" status="active">
+							<FromDate>2011-05-09T00:00:00</FromDate>
+							<ToDate>2011-08-26T00:00:00</ToDate>
+							<ValidDayBits>11111001111100111110001111001111100111110011111001111100111110011111001111100111110011111001111100111110011111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X25" version="any" modification="new" status="active">
+							<FromDate>2011-02-05T00:00:00</FromDate>
+							<ToDate>2011-08-27T00:00:00</ToDate>
+							<ValidDayBits>100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X26" version="any" modification="new" status="active">
+							<FromDate>2011-07-04T00:00:00</FromDate>
+							<ToDate>2011-08-26T00:00:00</ToDate>
+							<ValidDayBits>111110011111001111100111110011111001111100111110011111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X27" version="any" modification="new" status="active">
+							<FromDate>2011-02-11T00:00:00</FromDate>
+							<ToDate>2011-07-01T00:00:00</ToDate>
+							<ValidDayBits>100111110011111001111100111110011111001111100111110011111001111100111110001111000111100111110011111001111100011110011111001111100111110011111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X28" version="any" modification="new" status="active">
+							<FromDate>2011-02-12T00:00:00</FromDate>
+							<ToDate>2011-08-27T00:00:00</ToDate>
+							<ValidDayBits>10000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X29" version="any" modification="new" status="active">
+							<FromDate>2011-02-11T00:00:00</FromDate>
+							<ToDate>2011-08-27T00:00:00</ToDate>
+							<ValidDayBits>110111111011111101111110111111011111101111110111111011111101111110111111001111100111110111111011111101111110011111011111100111110111111011111101111110111111011111101111110111111011111101111110111111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="X30" version="any" modification="new" status="active">
+							<FromDate>2011-07-04T00:00:00</FromDate>
+							<ToDate>2011-08-26T00:00:00</ToDate>
+							<ValidDayBits>111110011111001111100111110011111001111100111110011111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="31" version="any" modification="new" status="active">
+							<FromDate>2011-02-11T00:00:00</FromDate>
+							<ToDate>2011-07-01T00:00:00</ToDate>
+							<ValidDayBits>100111110011111001111100111110011111001111100111110011111001111100111110001111000111100111110011111001111100011110011111000111100111110011111</ValidDayBits>
+						</UicOperatingPeriod>
+					</operatingPeriods>
+				</ServiceCalendarFrame>
+				<TimetableFrame version="any" id="uicvj:00199121" modification="new" status="active">
+					<vehicleJourneys modificationSet="all">
+						<ServiceJourney id="uicvj:00199121" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:00199121">
+								<AvailabilityCondition version="any" id="uicvj:00199121" modification="new" status="active">
 									<FromDate>2011-02-07T00:00:00</FromDate>
 									<ToDate>2011-08-26T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>10:32:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="2011-02-07+2011-08-26"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:00199121" order="1">
+								<Call version="any" id="uicvj:00199121-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:00199121" order="2">
+								<Call version="any" id="uicvj:00199121-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>10:32:00</Time>
@@ -73,7 +300,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:00199121" order="3">
+								<Call version="any" id="uicvj:00199121-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>10:56:00</Time>
@@ -83,30 +310,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="2011-02-07+2011-08-26" version="any">
-								<FromDate>2011-02-07T00:00:00</FromDate>
-								<ToDate>2011-08-26T00:00:00</ToDate>
-								<ValidDayBits>111110011111001111100111110011111001111100111110011111001111100111110011111000111100011110011111001111100111110001111001111100111110011111001111100111110011111001111100111110011111001111100111110011111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:00199115">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:00199115" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:00199115">
+								<AvailabilityCondition version="any" id="uicvj:00199115" modification="new" status="active">
 									<FromDate>2011-02-11T00:00:00</FromDate>
 									<ToDate>2011-05-06T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>09:26:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="2011-02-11+2011-05-06"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:00199115" order="1">
+								<Call version="any" id="uicvj:00199115-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:00199115" order="2">
+								<Call version="any" id="uicvj:00199115-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>09:26:00</Time>
@@ -116,29 +341,27 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="2011-02-11+2011-05-06" version="any">
-								<FromDate>2011-02-11T00:00:00</FromDate>
-								<ToDate>2011-05-06T00:00:00</ToDate>
-								<ValidDayBits>1001111100111110011111001111100111110011111001111100111110011111001111100011110001111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:00199129">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:00199129" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:00199129">
+								<AvailabilityCondition version="any" id="uicvj:00199129" modification="new" status="active">
 									<FromDate>2011-02-07T00:00:00</FromDate>
 									<ToDate>2011-08-29T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<DepartureTime>12:53:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="2011-02-07+2011-08-29"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:00199129" order="1">
+								<Call version="any" id="uicvj:00199129-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:00199129" order="2">
+								<Call version="any" id="uicvj:00199129-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>12:53:00</Time>
@@ -147,7 +370,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:00199129" order="3">
+								<Call version="any" id="uicvj:00199129-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008728107"/>
 									<Arrival>
 										<Time>13:28:00</Time>
@@ -156,7 +379,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:00199129" order="4">
+								<Call version="any" id="uicvj:00199129-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>13:15:00</Time>
@@ -167,7 +390,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:00199129" order="5">
+								<Call version="any" id="uicvj:00199129-5" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>13:33:00</Time>
@@ -177,30 +400,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="2011-02-07+2011-08-29" version="any">
-								<FromDate>2011-02-07T00:00:00</FromDate>
-								<ToDate>2011-08-29T00:00:00</ToDate>
-								<ValidDayBits>000000100000010000001000000100000010000001000000100000010000001000000100000011000001100000100000010000001000000110000010000001000000100000010000001000000100000010000001000000100000010000001000000100000011</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199129-2">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199129-2" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199129-2">
+								<AvailabilityCondition version="any" id="uicvj:0:0199129-2" modification="new" status="active">
 									<FromDate>2011-02-07T00:00:00</FromDate>
 									<ToDate>2011-08-26T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>13:02:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="2011-02-07+2011-08-26B"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199129-2" order="1">
+								<Call version="any" id="uicvj:0:0199129-2-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199129-2" order="2">
+								<Call version="any" id="uicvj:0:0199129-2-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>13:02:00</Time>
@@ -209,7 +430,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199129-2" order="3">
+								<Call version="any" id="uicvj:0:0199129-2-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>13:15:00</Time>
@@ -220,7 +441,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199129-2" order="4">
+								<Call version="any" id="uicvj:0:0199129-2-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>13:33:00</Time>
@@ -230,30 +451,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="2011-02-07+2011-08-26B" version="any">
-								<FromDate>2011-02-07T00:00:00</FromDate>
-								<ToDate>2011-08-26T00:00:00</ToDate>
-								<ValidDayBits>111110011111001111100111110011111001111100111110011111001111100111110011111000111100011110011111001111100111110001111001111100111110011111001111100111110011111001111100111110011111001111100111110011111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199181">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199181" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199181">
+								<AvailabilityCondition version="any" id="uicvj:0:0199181" modification="new" status="active">
 									<FromDate>2011-07-09T00:00:00</FromDate>
 									<ToDate>2011-08-27T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>12:02:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="2011-07-09+2011-08-27"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199181" order="1">
+								<Call version="any" id="uicvj:0:0199181-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199181" order="2">
+								<Call version="any" id="uicvj:0:0199181-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>12:02:00</Time>
@@ -262,7 +481,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199181" order="3">
+								<Call version="any" id="uicvj:0:0199181-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>12:16:00</Time>
@@ -273,7 +492,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199181" order="4">
+								<Call version="any" id="uicvj:0:0199181-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>12:39:00</Time>
@@ -283,30 +502,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="2011-07-09+2011-08-27" version="any">
-								<FromDate>2011-07-09T00:00:00</FromDate>
-								<ToDate>2011-08-27T00:00:00</ToDate>
-								<ValidDayBits>10000001000000100000010000001000000100000010000001</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199181-2">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199181-2" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199181-2">
+								<AvailabilityCondition version="any" id="uicvj:0:0199181-2" modification="new" status="active">
 									<FromDate>2011-02-12T00:00:00</FromDate>
 									<ToDate>2011-07-02T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>12:02:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="2011-02-12+2011-07-02"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199181-2" order="1">
+								<Call version="any" id="uicvj:0:0199181-2-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199181-2" order="2">
+								<Call version="any" id="uicvj:0:0199181-2-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>12:02:00</Time>
@@ -315,7 +532,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199181-2" order="3">
+								<Call version="any" id="uicvj:0:0199181-2-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>12:26:00</Time>
@@ -325,30 +542,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="2011-02-12+2011-07-02" version="any">
-								<FromDate>2011-02-12T00:00:00</FromDate>
-								<ToDate>2011-07-02T00:00:00</ToDate>
-								<ValidDayBits>100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199163">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199163" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199163">
+								<AvailabilityCondition version="any" id="uicvj:0:0199163" modification="new" status="active">
 									<FromDate>2011-02-06T00:00:00</FromDate>
 									<ToDate>2011-08-29T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>21:02:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="2011-02-06+2011-08-29"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199163" order="1">
+								<Call version="any" id="uicvj:0:0199163-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199163" order="2">
+								<Call version="any" id="uicvj:0:0199163-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>21:02:00</Time>
@@ -357,7 +572,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199163" order="3">
+								<Call version="any" id="uicvj:0:0199163-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>21:15:00</Time>
@@ -368,7 +583,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199163" order="4">
+								<Call version="any" id="uicvj:0:0199163-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>21:33:00</Time>
@@ -378,30 +593,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="2011-02-06+2011-08-29" version="any">
-								<FromDate>2011-02-06T00:00:00</FromDate>
-								<ToDate>2011-08-29T00:00:00</ToDate>
-								<ValidDayBits>1000000100000010000001000000100000010000001000000100000010000001000000100000011000001100000100000010000001000000110000010000001000000100000010000001000001100000110000011000001100000110000011000001100000111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199161">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199161" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199161">
+								<AvailabilityCondition version="any" id="uicvj:0:0199161" modification="new" status="active">
 									<FromDate>2011-02-12T00:00:00</FromDate>
 									<ToDate>2011-08-26T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>20:32:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="2011-02-12+2011-08-26"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199161" order="1">
+								<Call version="any" id="uicvj:0:0199161-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199161" order="2">
+								<Call version="any" id="uicvj:0:0199161-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>20:32:00</Time>
@@ -410,7 +623,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199161" order="3">
+								<Call version="any" id="uicvj:0:0199161-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>20:45:00</Time>
@@ -421,7 +634,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199161" order="4">
+								<Call version="any" id="uicvj:0:0199161-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>21:03:00</Time>
@@ -431,30 +644,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="2011-02-12+2011-08-26" version="any">
-								<FromDate>2011-02-12T00:00:00</FromDate>
-								<ToDate>2011-08-26T00:00:00</ToDate>
-								<ValidDayBits>1011111101111110111111011111101111110111111011111101111110111111011111101111110011111011111101111110111111001111101111110111111011111101111110111110011111001111100111110011111001111100111110011111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199158">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199158" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199158">
+								<AvailabilityCondition version="any" id="uicvj:0:0199158" modification="new" status="active">
 									<FromDate>2011-02-13T00:00:00</FromDate>
 									<ToDate>2011-08-29T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>21:29:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="2011-02-13+2011-08-29"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199158" order="1">
+								<Call version="any" id="uicvj:0:0199158-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199158" order="2">
+								<Call version="any" id="uicvj:0:0199158-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008728107"/>
 									<Arrival>
 										<Time>21:29:00</Time>
@@ -463,7 +674,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199158" order="3">
+								<Call version="any" id="uicvj:0:0199158-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>22:01:00</Time>
@@ -472,7 +683,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199158" order="4">
+								<Call version="any" id="uicvj:0:0199158-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>22:39:00</Time>
@@ -482,30 +693,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="2011-02-13+2011-08-29" version="any">
-								<FromDate>2011-02-13T00:00:00</FromDate>
-								<ToDate>2011-08-29T00:00:00</ToDate>
-								<ValidDayBits>100000010000001000000100000010000001000000100000010000001000000100000011000001100000100000010000001000000110000010000001000000100000010000001000000100000010000001000000100000010000001000000100000011</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199158-2">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199158-2" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199158-2">
+								<AvailabilityCondition version="any" id="uicvj:0:0199158-2" modification="new" status="active">
 									<FromDate>2011-02-12T00:00:00</FromDate>
 									<ToDate>2011-08-27T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>21:54:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="2011-02-12+2011-08-27"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199158-2" order="1">
+								<Call version="any" id="uicvj:0:0199158-2-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199158-2" order="2">
+								<Call version="any" id="uicvj:0:0199158-2-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>21:54:00</Time>
@@ -514,7 +723,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199158-2" order="3">
+								<Call version="any" id="uicvj:0:0199158-2-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>22:33:00</Time>
@@ -524,34 +733,32 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="2011-02-12+2011-08-27" version="any">
-								<FromDate>2011-02-12T00:00:00</FromDate>
-								<ToDate>2011-08-27T00:00:00</ToDate>
-								<ValidDayBits>10111111011111101111110111111011111101111110111111011111101111110111111001111100111110111111011111101111110011111011111101111110111111011111101111110111111011111101111110111111011111101111110111111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
-				<TimetableFrame version="any" id="uicvj:0199157">
-					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="uicvj:0:0199157">
+				<TimetableFrame version="any" id="uicvj:0199157" modification="new" status="active">
+					<vehicleJourneys modificationSet="all">
+						<ServiceJourney id="uicvj:0:0199157" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199157">
+								<AvailabilityCondition version="any" id="uicvj:0:0199157" modification="new" status="active">
 									<FromDate>2011-02-11T00:00:00</FromDate>
 									<ToDate>2011-08-29T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>19:23:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="2011-02-11+2011-08-29"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0199157" order="1">
+								<Call version="any" id="uicvj:0199157-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0199157" order="2">
+								<Call version="any" id="uicvj:0199157-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>19:23:00</Time>
@@ -560,7 +767,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0199157" order="3">
+								<Call version="any" id="uicvj:0199157-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008728107"/>
 									<Arrival>
 										<Time>19:59:00</Time>
@@ -569,7 +776,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0199157" order="4">
+								<Call version="any" id="uicvj:0199157-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>19:45:00</Time>
@@ -580,7 +787,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0199157" order="5">
+								<Call version="any" id="uicvj:0199157-5" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>20:03:00</Time>
@@ -590,34 +797,32 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="2011-02-11+2011-08-29" version="any">
-								<FromDate>2011-02-11T00:00:00</FromDate>
-								<ToDate>2011-08-29T00:00:00</ToDate>
-								<ValidDayBits>10111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
-				<TimetableFrame version="any" id="uicvj:0:0199154">
-					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="uicvj:0:0199154">
+				<TimetableFrame version="any" id="uicvj:0:0199154" modification="new" status="active">
+					<vehicleJourneys modificationSet="all">
+						<ServiceJourney id="uicvj:0:0199154" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199154">
+								<AvailabilityCondition version="any" id="uicvj:0:0199154" modification="new" status="active">
 									<FromDate>2011-02-11T00:00:00</FromDate>
 									<ToDate>2011-08-29T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>18:53:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="2011-02-11+2011-08-29C"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199154" order="1">
+								<Call version="any" id="uicvj:0:0199154-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199154" order="2">
+								<Call version="any" id="uicvj:0:0199154-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007054660"/>
 									<Arrival>
 										<Time>18:53:00</Time>
@@ -628,7 +833,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199154" order="3">
+								<Call version="any" id="uicvj:0:0199154-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>20:51:00</Time>
@@ -637,7 +842,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199154" order="4">
+								<Call version="any" id="uicvj:0:0199154-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>21:30:00</Time>
@@ -647,34 +852,32 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="2011-02-11+2011-08-29C" version="any">
-								<FromDate>2011-02-11T00:00:00</FromDate>
-								<ToDate>2011-08-29T00:00:00</ToDate>
-								<ValidDayBits>00100000010000001000000100000010000001000000100000000000001000000100000011000001100000100000010000001000000110000010000001000000100000010000001000000100000010000001000000100000010000001000000100000011</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
-				<TimetableFrame version="any" id="uicvj:004">
-					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="uicvj:0:0199154-2">
+				<TimetableFrame version="any" id="uicvj:004" modification="new" status="active">
+					<vehicleJourneys modificationSet="all">
+						<ServiceJourney id="uicvj:0:0199154-2" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199154-2">
+								<AvailabilityCondition version="any" id="uicvj:0:0199154-2" modification="new" status="active">
 									<FromDate>2011-04-03T00:00:00</FromDate>
 									<ToDate>2011-04-03T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>20:51:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="2011-04-03+2011-04-03"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:004" order="1">
+								<Call version="any" id="uicvj:004-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:004" order="2">
+								<Call version="any" id="uicvj:004-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>20:51:00</Time>
@@ -683,7 +886,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:004" order="3">
+								<Call version="any" id="uicvj:004-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>21:30:00</Time>
@@ -693,34 +896,32 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="2011-04-03+2011-04-03" version="any">
-								<FromDate>2011-04-03T00:00:00</FromDate>
-								<ToDate>2011-04-03T00:00:00</ToDate>
-								<ValidDayBits>1</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
-				<TimetableFrame version="any" id="uicvj:0:0199154-3">
-					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="uicvj:0:0199154-3">
+				<TimetableFrame version="any" id="uicvj:0:0199154-3" modification="new" status="active">
+					<vehicleJourneys modificationSet="all">
+						<ServiceJourney id="uicvj:0:0199154-3" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199154-3">
+								<AvailabilityCondition version="any" id="uicvj:0:0199154-3" modification="new" status="active">
 									<FromDate>2011-02-11T00:00:00</FromDate>
 									<ToDate>2011-08-26T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>20:29:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X31"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199154-3" order="1">
+								<Call version="any" id="uicvj:0:0199154-3-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199154-3" order="2">
+								<Call version="any" id="uicvj:0:0199154-3-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008728107"/>
 									<Arrival>
 										<Time>20:29:00</Time>
@@ -729,7 +930,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199154-3" order="3">
+								<Call version="any" id="uicvj:0:0199154-3-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>21:33:00</Time>
@@ -739,34 +940,32 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X31" version="any">
-								<FromDate>2011-02-11T00:00:00</FromDate>
-								<ToDate>2011-08-26T00:00:00</ToDate>
-								<ValidDayBits>10000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
-				<TimetableFrame version="any" id="uicvj:0:0199154-4">
-					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="uicvj:0:0199154-4">
+				<TimetableFrame version="any" id="uicvj:0:0199154-4" modification="new" status="active">
+					<vehicleJourneys modificationSet="all">
+						<ServiceJourney id="uicvj:0:0199154-4" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199154-4">
+								<AvailabilityCondition version="any" id="uicvj:0:0199154-4" modification="new" status="active">
 									<FromDate>2011-02-11T00:00:00</FromDate>
 									<ToDate>2011-08-25T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>20:29:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X01"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199154-4" order="1">
+								<Call version="any" id="uicvj:0:0199154-4-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199154-4" order="2">
+								<Call version="any" id="uicvj:0:0199154-4-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008728107"/>
 									<Arrival>
 										<Time>20:29:00</Time>
@@ -775,7 +974,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199154-4" order="3">
+								<Call version="any" id="uicvj:0:0199154-4-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>20:59:00</Time>
@@ -784,7 +983,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199154-4" order="4">
+								<Call version="any" id="uicvj:0:0199154-4-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>21:37:00</Time>
@@ -794,34 +993,32 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X01" version="any">
-								<FromDate>2011-02-11T00:00:00</FromDate>
-								<ToDate>2011-08-25T00:00:00</ToDate>
-								<ValidDayBits>0001111000111100011110001111000111100011110001111000111100011110001111000011100001110001111000111100011110000111000111100011110001111000111100011110001111000111100011110001111000111100011110001111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
-				<TimetableFrame version="any" id="uicvj:0:0199153">
-					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="uicvj:0:0199153">
+				<TimetableFrame version="any" id="uicvj:0:0199153" modification="new" status="active">
+					<vehicleJourneys modificationSet="all">
+						<ServiceJourney id="uicvj:0:0199153" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199153">
+								<AvailabilityCondition version="any" id="uicvj:0:0199153" modification="new" status="active">
 									<FromDate>2011-02-12T00:00:00</FromDate>
 									<ToDate>2011-08-29T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>18:32:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X03"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199153" order="1">
+								<Call version="any" id="uicvj:0:0199153-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199153" order="2">
+								<Call version="any" id="uicvj:0:0199153-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>18:32:00</Time>
@@ -830,7 +1027,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199153" order="3">
+								<Call version="any" id="uicvj:0:0199153-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>18:45:00</Time>
@@ -841,7 +1038,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199153" order="4">
+								<Call version="any" id="uicvj:0:0199153-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>19:03:00</Time>
@@ -851,34 +1048,32 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X03" version="any">
-								<FromDate>2011-02-12T00:00:00</FromDate>
-								<ToDate>2011-08-29T00:00:00</ToDate>
-								<ValidDayBits>0100000010000001000000100000010000001000000100000010000001000000100000011000001100000100000010000001000000110000010000001000000100000010000001000000100000010000001000000100000010000001000000100000011</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
-				<TimetableFrame version="any" id="uicvj:0:0199153-1">
-					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="uicvj:0:0199153-1">
+				<TimetableFrame version="any" id="uicvj:0:0199153-1" modification="new" status="active">
+					<vehicleJourneys modificationSet="all">
+						<ServiceJourney id="uicvj:0:0199153-1" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199153-1">
+								<AvailabilityCondition version="any" id="uicvj:0:0199153-1" modification="new" status="active">
 									<FromDate>2011-02-12T00:00:00</FromDate>
 									<ToDate>2011-08-27T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>18:32:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X04"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199153-1" order="1">
+								<Call version="any" id="uicvj:0:0199153-1-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199153-1" order="2">
+								<Call version="any" id="uicvj:0:0199153-1-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>18:32:00</Time>
@@ -887,7 +1082,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199153-1" order="3">
+								<Call version="any" id="uicvj:0:0199153-1-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007054660"/>
 									<Arrival>
 										<Time>18:33:00</Time>
@@ -898,7 +1093,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199153-1" order="4">
+								<Call version="any" id="uicvj:0:0199153-1-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>19:03:00</Time>
@@ -908,34 +1103,32 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X04" version="any">
-								<FromDate>2011-02-12T00:00:00</FromDate>
-								<ToDate>2011-08-27T00:00:00</ToDate>
-								<ValidDayBits>10111111011111101111110111111011111101111110111111011111101111110111111001111100111110111111011111101111110011111011111101111110111111011111101111110111111011111101111110111111011111101111110111111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
-				<TimetableFrame version="any" id="uicvj:0:0199149">
-					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="uicvj:0:0199149">
+				<TimetableFrame version="any" id="uicvj:0:0199149" modification="new" status="active">
+					<vehicleJourneys modificationSet="all">
+						<ServiceJourney id="uicvj:0:0199149" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199149">
+								<AvailabilityCondition version="any" id="uicvj:0:0199149" modification="new" status="active">
 									<FromDate>2011-07-03T00:00:00</FromDate>
 									<ToDate>2011-08-29T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>17:25:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X05"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199149" order="1">
+								<Call version="any" id="uicvj:0:0199149-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199149" order="2">
+								<Call version="any" id="uicvj:0:0199149-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>17:25:00</Time>
@@ -944,7 +1137,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199149" order="3">
+								<Call version="any" id="uicvj:0:0199149-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008728107"/>
 									<Arrival>
 										<Time>17:58:00</Time>
@@ -953,7 +1146,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199149" order="4">
+								<Call version="any" id="uicvj:0:0199149-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007054660"/>
 									<Arrival>
 										<Time>17:33:00</Time>
@@ -964,7 +1157,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199149" order="5">
+								<Call version="any" id="uicvj:0:0199149-5" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>18:06:00</Time>
@@ -974,34 +1167,32 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X05" version="any">
-								<FromDate>2011-07-03T00:00:00</FromDate>
-								<ToDate>2011-08-29T00:00:00</ToDate>
-								<ValidDayBits>1000000100000010000001000000100000010000001000000100000011</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
-				<TimetableFrame version="any" id="uicvj:0:0199149-1">
-					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="uicvj:0:0199149-1">
+				<TimetableFrame version="any" id="uicvj:0:0199149-1" modification="new" status="active">
+					<vehicleJourneys modificationSet="all">
+						<ServiceJourney id="uicvj:0:0199149-1" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199149-1">
+								<AvailabilityCondition version="any" id="uicvj:0:0199149-1" modification="new" status="active">
 									<FromDate>2011-02-06T00:00:00</FromDate>
 									<ToDate>2011-06-26T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>17:25:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X06"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199149-1" order="1">
+								<Call version="any" id="uicvj:0:0199149-1-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199149-1" order="2">
+								<Call version="any" id="uicvj:0:0199149-1-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>17:25:00</Time>
@@ -1010,7 +1201,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199149-1" order="3">
+								<Call version="any" id="uicvj:0:0199149-1-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008728107"/>
 									<Arrival>
 										<Time>17:58:00</Time>
@@ -1019,7 +1210,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199149-1" order="4">
+								<Call version="any" id="uicvj:0:0199149-1-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007054660"/>
 									<Arrival>
 										<Time>17:33:00</Time>
@@ -1030,7 +1221,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199149-1" order="5">
+								<Call version="any" id="uicvj:0:0199149-1-5" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>18:05:00</Time>
@@ -1040,34 +1231,32 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X06" version="any">
-								<FromDate>2011-02-06T00:00:00</FromDate>
-								<ToDate>2011-06-26T00:00:00</ToDate>
-								<ValidDayBits>100000010000001000000100000010000001000000100000010000000000000100000010000001100000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
-				<TimetableFrame version="any" id="uicvj:0:0199149-2">
-					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="uicvj:0:0199149-2">
+				<TimetableFrame version="any" id="uicvj:0:0199149-2" modification="new" status="active">
+					<vehicleJourneys modificationSet="all">
+						<ServiceJourney id="uicvj:0:0199149-2" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199149-2">
+								<AvailabilityCondition version="any" id="uicvj:0:0199149-2" modification="new" status="active">
 									<FromDate>2011-04-03T00:00:00</FromDate>
 									<ToDate>2011-04-03T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>17:25:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X07"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199149-2" order="1">
+								<Call version="any" id="uicvj:0:0199149-2-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199149-2" order="2">
+								<Call version="any" id="uicvj:0:0199149-2-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>17:25:00</Time>
@@ -1076,7 +1265,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199149-2" order="3">
+								<Call version="any" id="uicvj:0:0199149-2-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008728107"/>
 									<Arrival>
 										<Time>17:58:00</Time>
@@ -1085,7 +1274,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199149-2" order="4">
+								<Call version="any" id="uicvj:0:0199149-2-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>18:05:00</Time>
@@ -1095,34 +1284,32 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X07" version="any">
-								<FromDate>2011-04-03T00:00:00</FromDate>
-								<ToDate>2011-04-03T00:00:00</ToDate>
-								<ValidDayBits>1</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
-				<TimetableFrame version="any" id="uicvj:0:0199148">
-					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="uicvj:0:0199148">
+				<TimetableFrame version="any" id="uicvj:0:0199148" modification="new" status="active">
+					<vehicleJourneys modificationSet="all">
+						<ServiceJourney id="uicvj:0:0199148" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199148">
+								<AvailabilityCondition version="any" id="uicvj:0:0199148" modification="new" status="active">
 									<FromDate>2011-02-11T00:00:00</FromDate>
 									<ToDate>2011-08-29T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>19:24:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X08"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199148" order="1">
+								<Call version="any" id="uicvj:0:0199148-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199148" order="2">
+								<Call version="any" id="uicvj:0:0199148-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>19:24:00</Time>
@@ -1131,7 +1318,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199148" order="3">
+								<Call version="any" id="uicvj:0:0199148-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>20:03:00</Time>
@@ -1141,34 +1328,32 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X08" version="any">
-								<FromDate>2011-02-11T00:00:00</FromDate>
-								<ToDate>2011-08-29T00:00:00</ToDate>
-								<ValidDayBits>10111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
-				<TimetableFrame version="any" id="uicvj:0:0199145">
-					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="uicvj:0:0199145">
+				<TimetableFrame version="any" id="uicvj:0:0199145" modification="new" status="active">
+					<vehicleJourneys modificationSet="all">
+						<ServiceJourney id="uicvj:0:0199145" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199145">
+								<AvailabilityCondition version="any" id="uicvj:0:0199145" modification="new" status="active">
 									<FromDate>2011-02-11T00:00:00</FromDate>
 									<ToDate>2011-08-26T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>16:32:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X09"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199145" order="1">
+								<Call version="any" id="uicvj:0:0199145-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199145" order="2">
+								<Call version="any" id="uicvj:0:0199145-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>16:32:00</Time>
@@ -1177,7 +1362,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199145" order="3">
+								<Call version="any" id="uicvj:0:0199145-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>16:45:00</Time>
@@ -1188,7 +1373,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199145" order="4">
+								<Call version="any" id="uicvj:0:0199145-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>17:03:00</Time>
@@ -1198,34 +1383,32 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X09" version="any">
-								<FromDate>2011-02-11T00:00:00</FromDate>
-								<ToDate>2011-08-26T00:00:00</ToDate>
-								<ValidDayBits>10011111001111100111110011111001111100111110011111001111100111110011111000111100011110011111001111100111110001111001111100111110011111001111100111110011111001111100111110011111001111100111110011111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
-				<TimetableFrame version="any" id="uicvj:0:0199144">
-					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="uicvj:0:0199144">
+				<TimetableFrame version="any" id="uicvj:0:0199144" modification="new" status="active">
+					<vehicleJourneys modificationSet="all">
+						<ServiceJourney id="uicvj:0:0199144" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199144">
+								<AvailabilityCondition version="any" id="uicvj:0:0199144" modification="new" status="active">
 									<FromDate>2011-02-12T00:00:00</FromDate>
 									<ToDate>2011-08-29T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>17:59:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X10"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199144" order="1">
+								<Call version="any" id="uicvj:0:0199144-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199144" order="2">
+								<Call version="any" id="uicvj:0:0199144-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008728107"/>
 									<Arrival>
 										<Time>17:59:00</Time>
@@ -1234,7 +1417,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199144" order="3">
+								<Call version="any" id="uicvj:0:0199144-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>18:30:00</Time>
@@ -1243,7 +1426,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199144" order="4">
+								<Call version="any" id="uicvj:0:0199144-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>19:11:00</Time>
@@ -1253,34 +1436,32 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X10" version="any">
-								<FromDate>2011-02-12T00:00:00</FromDate>
-								<ToDate>2011-08-29T00:00:00</ToDate>
-								<ValidDayBits>1100000110000011000001100000110000011000001100000110000011000001100000111000011100001100000110000011000001110000110000011000001100000110000011000001100000110000011000001100000110000011000001100000111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
-				<TimetableFrame version="any" id="uicvj:0:0199141">
-					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="uicvj:0:0199141">
+				<TimetableFrame version="any" id="uicvj:0:0199141" modification="new" status="active">
+					<vehicleJourneys modificationSet="all">
+						<ServiceJourney id="uicvj:0:0199141" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199141">
+								<AvailabilityCondition version="any" id="uicvj:0:0199141" modification="new" status="active">
 									<FromDate>2011-02-06T00:00:00</FromDate>
 									<ToDate>2011-08-29T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>15:32:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X11"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199141" order="1">
+								<Call version="any" id="uicvj:0:0199141-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199141" order="2">
+								<Call version="any" id="uicvj:0:0199141-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>15:32:00</Time>
@@ -1289,7 +1470,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199141" order="3">
+								<Call version="any" id="uicvj:0:0199141-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>15:56:00</Time>
@@ -1299,37 +1480,32 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X11" version="any">
-								<FromDate>2011-02-06T00:00:00</FromDate>
-								<ToDate>2011-08-29T00:00:00</ToDate>
-								<ValidDayBits>1000000100000010000001000000100000010000001000000100000010000001000000100000011000001100000100000010000001000000110000010000001000000100000010000001000000100000010000001000000100000010000001000000100000011</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
-				<TimetableFrame version="any" id="uicvj:001">
-					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="uicvj:0:0199139">
+				<TimetableFrame version="any" id="uicvj:001" modification="new" status="active">
+					<vehicleJourneys modificationSet="all">
+						<ServiceJourney id="uicvj:0:0199139" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199139">
+								<AvailabilityCondition version="any" id="uicvj:0:0199139" modification="new" status="active">
 									<FromDate>2011-02-08T00:00:00</FromDate>
 									<ToDate>2011-08-26T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>15:02:00</DepartureTime>
-							<!-- ???
-
-							<DepartureTime>15:26:00</DepartureTime> -->
+							<dayTypes>
+								<DayTypeRef ref="X12"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199139" order="1">
+								<Call version="any" id="uicvj:0:0199139-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199139" order="2">
+								<Call version="any" id="uicvj:0:0199139-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>15:02:00</Time>
@@ -1338,7 +1514,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199139" order="3">
+								<Call version="any" id="uicvj:0:0199139-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>15:26:00</Time>
@@ -1348,30 +1524,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X12" version="any">
-								<FromDate>2011-02-08T00:00:00</FromDate>
-								<ToDate>2011-08-26T00:00:00</ToDate>
-								<ValidDayBits>11110011111001111100111110011111001111100111110011111001111100111110011111000111100011110011111001111100111110001111001111100111110011111001111100111110011111001111100111110011111001111100111110011111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199138">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199138" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199138">
+								<AvailabilityCondition version="any" id="uicvj:0:0199138" modification="new" status="active">
 									<FromDate>2011-02-13T00:00:00</FromDate>
 									<ToDate>2011-08-29T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>16:54:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X13"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199138" order="1">
+								<Call version="any" id="uicvj:0:0199138-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199138" order="2">
+								<Call version="any" id="uicvj:0:0199138-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>16:54:00</Time>
@@ -1380,7 +1554,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199138" order="3">
+								<Call version="any" id="uicvj:0:0199138-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>17:33:00</Time>
@@ -1390,30 +1564,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X13" version="any">
-								<FromDate>2011-02-13T00:00:00</FromDate>
-								<ToDate>2011-08-29T00:00:00</ToDate>
-								<ValidDayBits>111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011111101111110111111011</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199137">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199137" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199137">
+								<AvailabilityCondition version="any" id="uicvj:0:0199137" modification="new" status="active">
 									<FromDate>2011-02-12T00:00:00</FromDate>
 									<ToDate>2011-08-27T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>14:25:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X14"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199137" order="1">
+								<Call version="any" id="uicvj:0:0199137-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199137" order="2">
+								<Call version="any" id="uicvj:0:0199137-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>14:25:00</Time>
@@ -1422,7 +1594,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199137" order="3">
+								<Call version="any" id="uicvj:0:0199137-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008728107"/>
 									<Arrival>
 										<Time>14:58:00</Time>
@@ -1431,7 +1603,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199137" order="4">
+								<Call version="any" id="uicvj:0:0199137-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>14:45:00</Time>
@@ -1442,7 +1614,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199137" order="5">
+								<Call version="any" id="uicvj:0:0199137-5" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>15:03:00</Time>
@@ -1452,30 +1624,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X14" version="any">
-								<FromDate>2011-02-12T00:00:00</FromDate>
-								<ToDate>2011-08-27T00:00:00</ToDate>
-								<ValidDayBits>10000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199132">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199132" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199132">
+								<AvailabilityCondition version="any" id="uicvj:0:0199132" modification="new" status="active">
 									<FromDate>2011-07-04T00:00:00</FromDate>
 									<ToDate>2011-08-27T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>13:12:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X15"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199132" order="1">
+								<Call version="any" id="uicvj:0:0199132-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199132" order="2">
+								<Call version="any" id="uicvj:0:0199132-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>13:12:00</Time>
@@ -1486,7 +1656,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199132" order="3">
+								<Call version="any" id="uicvj:0:0199132-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>15:24:00</Time>
@@ -1495,7 +1665,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199132" order="4">
+								<Call version="any" id="uicvj:0:0199132-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>16:05:00</Time>
@@ -1505,30 +1675,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X15" version="any">
-								<FromDate>2011-07-04T00:00:00</FromDate>
-								<ToDate>2011-08-27T00:00:00</ToDate>
-								<ValidDayBits>1111110111111011111101111110111111011111101111110111111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199132-3">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199132-3" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199132-3">
+								<AvailabilityCondition version="any" id="uicvj:0:0199132-3" modification="new" status="active">
 									<FromDate>2011-02-12T00:00:00</FromDate>
 									<ToDate>2011-07-02T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>13:12:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X16"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199132-3" order="1">
+								<Call version="any" id="uicvj:0:0199132-3-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199132-3" order="2">
+								<Call version="any" id="uicvj:0:0199132-3-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>13:12:00</Time>
@@ -1539,7 +1707,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199132-3" order="3">
+								<Call version="any" id="uicvj:0:0199132-3-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>15:24:00</Time>
@@ -1548,7 +1716,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199132-3" order="4">
+								<Call version="any" id="uicvj:0:0199132-3-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>16:05:00</Time>
@@ -1558,30 +1726,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X16" version="any">
-								<FromDate>2011-02-12T00:00:00</FromDate>
-								<ToDate>2011-07-02T00:00:00</ToDate>
-								<ValidDayBits>101111110111111011111101111110111111011111101111110111111011111101111110111111001111101111110111111011111100111110111111011111101111110111111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199116-2">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199116-2" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199130">
+								<AvailabilityCondition version="any" id="uicvj:0:0199130" modification="new" status="active">
 									<FromDate>2011-02-06T00:00:00</FromDate>
 									<ToDate>2011-08-28T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>12:11:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X17"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199116-2" order="1">
+								<Call version="any" id="uicvj:0:0199116-2-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199116-2" order="2">
+								<Call version="any" id="uicvj:0:0199116-2-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>12:11:00</Time>
@@ -1592,7 +1758,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199116-2" order="3">
+								<Call version="any" id="uicvj:0:0199116-2-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>14:24:00</Time>
@@ -1601,7 +1767,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199116-2" order="4">
+								<Call version="any" id="uicvj:0:0199116-2-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>15:05:00</Time>
@@ -1611,30 +1777,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X17" version="any">
-								<FromDate>2011-02-06T00:00:00</FromDate>
-								<ToDate>2011-08-28T00:00:00</ToDate>
-								<ValidDayBits>100000010000001000000100000010000001000000100000010000001000000100000010000001100000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199126">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199126" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199126">
+								<AvailabilityCondition version="any" id="uicvj:0:0199126" modification="new" status="active">
 									<FromDate>2011-02-12T00:00:00</FromDate>
 									<ToDate>2011-08-27T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>11:11:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X18"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199126" order="1">
+								<Call version="any" id="uicvj:0:0199126-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199126" order="2">
+								<Call version="any" id="uicvj:0:0199126-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>11:11:00</Time>
@@ -1645,7 +1809,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199126" order="3">
+								<Call version="any" id="uicvj:0:0199126-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008728107"/>
 									<Arrival>
 										<Time>12:59:00</Time>
@@ -1654,7 +1818,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199126" order="4">
+								<Call version="any" id="uicvj:0:0199126-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>13:31:00</Time>
@@ -1663,7 +1827,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199126" order="5">
+								<Call version="any" id="uicvj:0:0199126-5" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>14:12:00</Time>
@@ -1673,30 +1837,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X18" version="any">
-								<FromDate>2011-02-12T00:00:00</FromDate>
-								<ToDate>2011-08-27T00:00:00</ToDate>
-								<ValidDayBits>10111111011111101111110111111011111101111110111111011111101111110111111001111100111110111111011111101111110011111011111101111110111111011111101111110111111011111101111110111111011111101111110111111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199116-3">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199116-3" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199120">
+								<AvailabilityCondition version="any" id="uicvj:0:0199120" modification="new" status="active">
 									<FromDate>2011-02-14T00:00:00</FromDate>
 									<ToDate>2011-08-26T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>08:41:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X19"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199116-3" order="1">
+								<Call version="any" id="uicvj:0:0199116-3-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199116-3" order="2">
+								<Call version="any" id="uicvj:0:0199116-3-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>08:41:00</Time>
@@ -1707,7 +1869,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199116-3" order="3">
+								<Call version="any" id="uicvj:0:0199116-3-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>10:54:00</Time>
@@ -1716,7 +1878,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199116-3" order="4">
+								<Call version="any" id="uicvj:0:0199116-3-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>11:33:00</Time>
@@ -1726,30 +1888,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X19" version="any">
-								<FromDate>2011-02-14T00:00:00</FromDate>
-								<ToDate>2011-08-26T00:00:00</ToDate>
-								<ValidDayBits>11111001111100111110011111001111100111110011111001111100111110011111000111100011110011111001111100111110001111001111100111110011111001111100111110011111001111100111110011111001111100111110011111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199119">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199119" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199119">
+								<AvailabilityCondition version="any" id="uicvj:0:0199119" modification="new" status="active">
 									<FromDate>2011-02-12T00:00:00</FromDate>
 									<ToDate>2011-08-29T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>10:02:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X20"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199119" order="1">
+								<Call version="any" id="uicvj:0:0199119-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199119" order="2">
+								<Call version="any" id="uicvj:0:0199119-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>10:02:00</Time>
@@ -1758,7 +1918,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199119" order="3">
+								<Call version="any" id="uicvj:0:0199119-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>10:26:00</Time>
@@ -1768,30 +1928,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X20" version="any">
-								<FromDate>2011-02-12T00:00:00</FromDate>
-								<ToDate>2011-08-29T00:00:00</ToDate>
-								<ValidDayBits>1100000110000011000001100000110000011000001100000110000011000001100000111000011100001100000110000011000001110000110000011000001100000110000011000001100000110000011000001100000110000011000001100000111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199116">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199116" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199116">
+								<AvailabilityCondition version="any" id="uicvj:0:0199116" modification="new" status="active">
 									<FromDate>2011-02-13T00:00:00</FromDate>
 									<ToDate>2011-08-29T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>09:11:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X21"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199116" order="1">
+								<Call version="any" id="uicvj:0:0199116-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199116" order="2">
+								<Call version="any" id="uicvj:0:0199116-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>09:11:00</Time>
@@ -1802,7 +1960,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199116" order="3">
+								<Call version="any" id="uicvj:0:0199116-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008728107"/>
 									<Arrival>
 										<Time>10:59:00</Time>
@@ -1811,7 +1969,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199116" order="4">
+								<Call version="any" id="uicvj:0:0199116-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>11:30:00</Time>
@@ -1820,7 +1978,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199116" order="5">
+								<Call version="any" id="uicvj:0:0199116-5" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>12:08:00</Time>
@@ -1830,30 +1988,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X21" version="any">
-								<FromDate>2011-02-13T00:00:00</FromDate>
-								<ToDate>2011-08-29T00:00:00</ToDate>
-								<ValidDayBits>100000010000001000000100000010000001000000100000010000001000000100000011000001100000100000010000001000000110000010000001000000100000010000001000000100000010000001000000100000010000001000000100000011</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199116-5">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199116-5" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199116-2">
+								<AvailabilityCondition version="any" id="uicvj:0:0199116-2" modification="new" status="active">
 									<FromDate>2011-02-12T00:00:00</FromDate>
 									<ToDate>2011-08-27T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>09:11:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X22"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199116-5" order="1">
+								<Call version="any" id="uicvj:0:0199116-5-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199116-5" order="2">
+								<Call version="any" id="uicvj:0:0199116-5-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>09:11:00</Time>
@@ -1864,7 +2020,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199116-5" order="3">
+								<Call version="any" id="uicvj:0:0199116-5-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>11:24:00</Time>
@@ -1873,7 +2029,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199116-5" order="4">
+								<Call version="any" id="uicvj:0:0199116-5-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>12:03:00</Time>
@@ -1883,30 +2039,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X22" version="any">
-								<FromDate>2011-02-12T00:00:00</FromDate>
-								<ToDate>2011-08-27T00:00:00</ToDate>
-								<ValidDayBits>10000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199114">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199114" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199114">
+								<AvailabilityCondition version="any" id="uicvj:0:0199114" modification="new" status="active">
 									<FromDate>2011-02-12T00:00:00</FromDate>
 									<ToDate>2011-08-27T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>08:25:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X23"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199114" order="1">
+								<Call version="any" id="uicvj:0:0199114-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199114" order="2">
+								<Call version="any" id="uicvj:0:0199114-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007054660"/>
 									<Arrival>
 										<Time>08:25:00</Time>
@@ -1917,7 +2071,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199114" order="3">
+								<Call version="any" id="uicvj:0:0199114-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>10:30:00</Time>
@@ -1926,7 +2080,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199114" order="4">
+								<Call version="any" id="uicvj:0:0199114-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>11:08:00</Time>
@@ -1936,30 +2090,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X23" version="any">
-								<FromDate>2011-02-12T00:00:00</FromDate>
-								<ToDate>2011-08-27T00:00:00</ToDate>
-								<ValidDayBits>10000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199113">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199113" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199113">
+								<AvailabilityCondition version="any" id="uicvj:0:0199113" modification="new" status="active">
 									<FromDate>2011-05-09T00:00:00</FromDate>
 									<ToDate>2011-08-26T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>08:59:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X24"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199113" order="1">
+								<Call version="any" id="uicvj:0:0199113-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199113" order="2">
+								<Call version="any" id="uicvj:0:0199113-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>08:59:00</Time>
@@ -1969,30 +2121,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X24" version="any">
-								<FromDate>2011-05-09T00:00:00</FromDate>
-								<ToDate>2011-08-26T00:00:00</ToDate>
-								<ValidDayBits>11111001111100111110001111001111100111110011111001111100111110011111001111100111110011111001111100111110011111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199113-2">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199113-2" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199113-2">
+								<AvailabilityCondition version="any" id="uicvj:0:0199113-2" modification="new" status="active">
 									<FromDate>2011-02-05T00:00:00</FromDate>
 									<ToDate>2011-08-27T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>08:58:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X25"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199113-2" order="1">
+								<Call version="any" id="uicvj:0:0199113-2-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199113-2" order="2">
+								<Call version="any" id="uicvj:0:0199113-2-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008728107"/>
 									<Arrival>
 										<Time>08:58:00</Time>
@@ -2001,7 +2151,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199113-2" order="3">
+								<Call version="any" id="uicvj:0:0199113-2-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>08:56:00</Time>
@@ -2011,30 +2161,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X25" version="any">
-								<FromDate>2011-02-05T00:00:00</FromDate>
-								<ToDate>2011-08-27T00:00:00</ToDate>
-								<ValidDayBits>100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199112">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199112" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199112">
+								<AvailabilityCondition version="any" id="uicvj:0:0199112" modification="new" status="active">
 									<FromDate>2011-07-04T00:00:00</FromDate>
 									<ToDate>2011-08-26T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>09:54:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X26"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199112" order="1">
+								<Call version="any" id="uicvj:0:0199112-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199112" order="2">
+								<Call version="any" id="uicvj:0:0199112-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>09:54:00</Time>
@@ -2043,7 +2191,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199112" order="3">
+								<Call version="any" id="uicvj:0:0199112-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>10:27:00</Time>
@@ -2053,30 +2201,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X26" version="any">
-								<FromDate>2011-07-04T00:00:00</FromDate>
-								<ToDate>2011-08-26T00:00:00</ToDate>
-								<ValidDayBits>111110011111001111100111110011111001111100111110011111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199112-2">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199112-2" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199112-2">
+								<AvailabilityCondition version="any" id="uicvj:0:0199112-2" modification="new" status="active">
 									<FromDate>2011-02-11T00:00:00</FromDate>
 									<ToDate>2011-07-01T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>10:27:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X27"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199112-2" order="1">
+								<Call version="any" id="uicvj:0:0199112-2-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199112-2" order="2">
+								<Call version="any" id="uicvj:0:0199112-2-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>10:27:00</Time>
@@ -2086,30 +2232,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X27" version="any">
-								<FromDate>2011-02-11T00:00:00</FromDate>
-								<ToDate>2011-07-01T00:00:00</ToDate>
-								<ValidDayBits>100111110011111001111100111110011111001111100111110011111001111100111110001111000111100111110011111001111100011110011111001111100111110011111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199110">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199110" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199110">
+								<AvailabilityCondition version="any" id="uicvj:0:0199110" modification="new" status="active">
 									<FromDate>2011-02-12T00:00:00</FromDate>
 									<ToDate>2011-08-27T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>07:12:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X28"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199110" order="1">
+								<Call version="any" id="uicvj:0:0199110-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199110" order="2">
+								<Call version="any" id="uicvj:0:0199110-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>07:12:00</Time>
@@ -2120,7 +2264,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199110" order="3">
+								<Call version="any" id="uicvj:0:0199110-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008728107"/>
 									<Arrival>
 										<Time>08:59:00</Time>
@@ -2129,7 +2273,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199110" order="4">
+								<Call version="any" id="uicvj:0:0199110-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>09:29:00</Time>
@@ -2138,7 +2282,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199110" order="5">
+								<Call version="any" id="uicvj:0:0199110-5" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>10:08:00</Time>
@@ -2148,30 +2292,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X28" version="any">
-								<FromDate>2011-02-12T00:00:00</FromDate>
-								<ToDate>2011-08-27T00:00:00</ToDate>
-								<ValidDayBits>10000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199109">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199109" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199109">
+								<AvailabilityCondition version="any" id="uicvj:0:0199109" modification="new" status="active">
 									<FromDate>2011-02-11T00:00:00</FromDate>
 									<ToDate>2011-08-27T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>07:24:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X29"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199109" order="1">
+								<Call version="any" id="uicvj:0:0199109-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199109" order="2">
+								<Call version="any" id="uicvj:0:0199109-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>07:24:00</Time>
@@ -2180,7 +2322,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199109" order="3">
+								<Call version="any" id="uicvj:0:0199109-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008728107"/>
 									<Arrival>
 										<Time>07:58:00</Time>
@@ -2189,7 +2331,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199109" order="4">
+								<Call version="any" id="uicvj:0:0199109-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival>
 										<Time>07:56:00</Time>
@@ -2199,30 +2341,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X29" version="any">
-								<FromDate>2011-02-11T00:00:00</FromDate>
-								<ToDate>2011-08-27T00:00:00</ToDate>
-								<ValidDayBits>110111111011111101111110111111011111101111110111111011111101111110111111001111100111110111111011111101111110011111011111100111110111111011111101111110111111011111101111110111111011111101111110111111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199108">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199108" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199108">
+								<AvailabilityCondition version="any" id="uicvj:0:0199108" modification="new" status="active">
 									<FromDate>2011-07-04T00:00:00</FromDate>
 									<ToDate>2011-08-26T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>06:33:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="X30"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199108" order="1">
+								<Call version="any" id="uicvj:0:0199108-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199108" order="2">
+								<Call version="any" id="uicvj:0:0199108-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>06:33:00</Time>
@@ -2233,7 +2373,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199108" order="3">
+								<Call version="any" id="uicvj:0:0199108-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007054660"/>
 									<Arrival>
 										<Time>06:55:00</Time>
@@ -2244,7 +2384,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199108" order="4">
+								<Call version="any" id="uicvj:0:0199108-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008728107"/>
 									<Arrival>
 										<Time>08:29:00</Time>
@@ -2253,7 +2393,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199108" order="5">
+								<Call version="any" id="uicvj:0:0199108-5" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>09:07:00</Time>
@@ -2262,7 +2402,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199108" order="6">
+								<Call version="any" id="uicvj:0:0199108-6" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>09:42:00</Time>
@@ -2272,30 +2412,28 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="X30" version="any">
-								<FromDate>2011-07-04T00:00:00</FromDate>
-								<ToDate>2011-08-26T00:00:00</ToDate>
-								<ValidDayBits>111110011111001111100111110011111001111100111110011111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="uicvj:0:0199108-2">
+						</ServiceJourney>
+						<ServiceJourney id="uicvj:0:0199108-2" version="any">
 							<validityConditions>
-								<AvailabilityCondition version="any" id="uicvj:0:0199108-2">
+								<AvailabilityCondition version="any" id="uicvj:0:0199108-2" modification="new" status="active">
 									<FromDate>2011-02-11T00:00:00</FromDate>
 									<ToDate>2011-07-01T00:00:00</ToDate>
 								</AvailabilityCondition>
 							</validityConditions>
 							<Name>EUROSTAR</Name>
 							<DepartureTime>06:33:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="31"/>
+							</dayTypes>
 							<calls>
-								<Call version="any" id="uicvj:0:0199108-2" order="1">
+								<Call version="any" id="uicvj:0:0199108-2-1" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015400"/>
 									<Arrival/>
 									<Departure>
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199108-2" order="2">
+								<Call version="any" id="uicvj:0:0199108-2-2" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007015440"/>
 									<Arrival>
 										<Time>06:33:00</Time>
@@ -2306,7 +2444,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199108-2" order="3">
+								<Call version="any" id="uicvj:0:0199108-2-3" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:007054660"/>
 									<Arrival>
 										<Time>06:55:00</Time>
@@ -2317,7 +2455,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199108-2" order="4">
+								<Call version="any" id="uicvj:0:0199108-2-4" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008728107"/>
 									<Arrival>
 										<Time>08:29:00</Time>
@@ -2326,7 +2464,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199108-2" order="5">
+								<Call version="any" id="uicvj:0:0199108-2-5" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008722326"/>
 									<Arrival>
 										<Time>09:07:00</Time>
@@ -2335,7 +2473,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 										<QuayAssignmentView/>
 									</Departure>
 								</Call>
-								<Call version="any" id="uicvj:0:0199108-2" order="6">
+								<Call version="any" id="uicvj:0:0199108-2-6" modification="new" status="active">
 									<ScheduledStopPointRef ref="uicloc:008814002"/>
 									<Arrival>
 										<Time>09:42:00</Time>
@@ -2345,12 +2483,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="31" version="any">
-								<FromDate>2011-02-11T00:00:00</FromDate>
-								<ToDate>2011-07-01T00:00:00</ToDate>
-								<ValidDayBits>100111110011111001111100111110011111001111100111110011111001111100111110001111000111100111110011111001111100011110011111000111100111110011111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
 			</frames>

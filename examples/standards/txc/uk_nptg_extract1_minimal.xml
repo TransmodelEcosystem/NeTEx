@@ -82,6 +82,11 @@ NeTEx separates  organisational structure (ORGANISATION, ORGANISATION PART)  fro
 				<CodespaceRef ref="nptg_metadata"/>
 			</codespaces>
 			<frames>
+				<ResourceFrame id="epd:RF1" version="1.0">
+					<dataSources>
+						<DataSource id="nptg:dft" version="nptg:NPTG_data_1.0"/>
+					</dataSources>
+				</ResourceFrame>
 				<!--   ======================================================================= -->
 				<!--   NPTG  Payload Data: Localities and PlusBus Zones  -->
 				<SiteFrame id="epd:UK:DFT:CompositeFrame_UK_PI_STOP:NPTG-sample:nptg" version="nptg:NPTG_data_1.0" responsibilitySetRef="nptg:NPTG_data" dataSourceRef="nptg:dft">
@@ -398,8 +403,10 @@ NeTEx separates  organisational structure (ORGANISATION, ORGANISATION PART)  fro
 					<!-- PLUS BUS Zones  -->
 					<tariffZones>
 						<TariffZone created="2013-10-11T12:27:13" changed="2013-10-11T12:27:13" modification="new" version="0" id="nptgTariffZone:ABDARE">
+							<privateCodes>
+								<PrivateCode>ABDARE</PrivateCode>
+							</privateCodes>
 							<Name lang="en">ABDARE</Name>
-							<PrivateCode>ABDARE</PrivateCode>
 							<types>
 								<TypeOfZoneRef ref="nptg:PlusBusZone" versionRef="nptg:v2.1"/>
 							</types>
@@ -423,8 +430,10 @@ NeTEx separates  organisational structure (ORGANISATION, ORGANISATION PART)  fro
 							</projections>
 						</TariffZone>
 						<TariffZone created="2013-10-11T12:27:13" changed="2013-10-11T12:27:13" modification="new" version="0" id="nptgTariffZone:ABRDEEN">
+							<privateCodes>
+								<PrivateCode>ABRDEEN</PrivateCode>
+							</privateCodes>
 							<Name lang="en">ABRDEEN</Name>
-							<PrivateCode>ABRDEEN</PrivateCode>
 							<types>
 								<TypeOfZoneRef ref="nptg:PlusBusZone" versionRef="nptg:v2.1"/>
 							</types>
@@ -447,8 +456,10 @@ NeTEx separates  organisational structure (ORGANISATION, ORGANISATION PART)  fro
 							</projections>
 						</TariffZone>
 						<TariffZone created="2013-10-11T12:27:13" changed="2013-10-11T12:27:13" modification="new" version="0" id="nptgTariffZone:ALNMOTH">
+							<privateCodes>
+								<PrivateCode>ALNMOTH</PrivateCode>
+							</privateCodes>
 							<Name lang="en">ALNMOTH</Name>
-							<PrivateCode>ALNMOTH</PrivateCode>
 							<types>
 								<TypeOfZoneRef ref="nptg:PlusBusZone" versionRef="nptg:v2.1"/>
 							</types>

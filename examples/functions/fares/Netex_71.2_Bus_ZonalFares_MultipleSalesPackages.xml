@@ -1084,7 +1084,7 @@ For the  student product
 					</salesOfferPackages>
 				</FareFrame>
 				<!-- prices -->
-				<FareFrame version="1.0" id="cdla:CDLA@Multiple_packages@prices">
+				<FarePriceFrame version="1.0" id="cdla:CDLA@Multiple_packages@prices">
 					<FrameDefaults>
 						<DefaultCurrency>GBP</DefaultCurrency>
 					</FrameDefaults>
@@ -2409,7 +2409,7 @@ TopologicalPlace>North East</TopologicalPlace>
 							</cells>
 						</FareTable>
 					</fareTables>
-				</FareFrame>
+				</FarePriceFrame>
 				<!--- ====RESOURCES==== -->
 				<ResourceFrame version="1.0" id="cdla:CDLA@Common_resources">
 					<codespaces>

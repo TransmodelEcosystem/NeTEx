@@ -11,7 +11,7 @@
 				<Aggregation>main schema</Aggregation>
 				<Audience>e-service developers</Audience>
 				<Coverage>Europe</Coverage>
-				<Creator>First drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles.  mailto:schemer@netex.org.uk</Creator>
+				<Creator>First drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles.</Creator>
 				<Date>
 					<Created>2010-09-04</Created>
 				</Date>
@@ -24,6 +24,8 @@
 				<Date><Modified>2017-06-28</Modified> CR047 Drop ParkingTaxRate as now covered by chained rules
 				</Date>
 				<Date><Modified>2020-10-08</Modified>New Modes: Widen VehicleType to TransportType
+				</Date>
+				<Date><Modified>2023-11-07</Modified>CR0544 Deprecate PrivateCode.
 				</Date>
 				<Description>
 					<p>NeTEx - Network Exchange. This subschema defines PARKING TARIFF elements</p>
@@ -116,7 +118,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="ParkingTariffGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="ParkingTariffIdType"/>
+					<xsd:attribute name="id" type="ParkingTariffIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -182,17 +184,17 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="ParkingVehicleTypes" type="ParkingVehicleListOfEnumerations" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Type of Vehicle for which PARKING TARIFF applies.  Fixed values.</xsd:documentation>
+					<xsd:documentation>Type of Vehicle for which PARKING TARIFF applies. Fixed values.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="vehicleTypes" type="transportTypeRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Opnen specifcation of VEHICLE TYPEs + v1.1</xsd:documentation>
+					<xsd:documentation>Open specification of VEHICLE TYPEs +v1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="appliesTo" type="parkingRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>PaARKIMNGs to which this tariff applies</xsd:documentation>
+					<xsd:documentation>PARKINGs to which this tariff applies.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -235,7 +237,7 @@ Rail transport, Roads and Road transport
 						<xsd:sequence>
 							<xsd:element ref="PrivateCode" minOccurs="0">
 								<xsd:annotation>
-									<xsd:documentation>DEPRECATED - use privateCodes</xsd:documentation>
+									<xsd:documentation>DEPRECATED - use privateCodes. -v2.0</xsd:documentation>
 								</xsd:annotation>
 							</xsd:element>
 							<xsd:element ref="TypeOfFareStructureFactorRef" minOccurs="0"/>
@@ -252,7 +254,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="ParkingChargeBandGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="ParkingChargeBandIdType"/>
+					<xsd:attribute name="id" type="ParkingChargeBandIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -302,7 +304,7 @@ Rail transport, Roads and Road transport
 			<xsd:extension base="strictContainmentAggregationStructure">
 				<xsd:choice maxOccurs="unbounded">
 					<xsd:element ref="ParkingPriceRef"/>
-					<xsd:element ref="CellRef_"/>
+					<xsd:element ref="CellRef_Dummy"/>
 					<xsd:element name="ParkingPrice" type="ParkingPrice_VersionedChildStructure">
 						<xsd:annotation>
 							<xsd:documentation>A set of all possible price features of a PARKING TARIFF ELEMENT: default total price, discount in value or percentage etc.</xsd:documentation>
@@ -312,7 +314,7 @@ Rail transport, Roads and Road transport
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="ParkingPrice" substitutionGroup="FarePrice_">
+	<xsd:element name="ParkingPrice" substitutionGroup="FarePrice_Dummy">
 		<xsd:annotation>
 			<xsd:documentation>A set of all possible price features of a PARKING TARIFF ELEMENT: default total price, discount in value or percentage etc.</xsd:documentation>
 		</xsd:annotation>
@@ -333,7 +335,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="ParkingPriceGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="ParkingPriceIdType"/>
+					<xsd:attribute name="id" type="ParkingPriceIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>

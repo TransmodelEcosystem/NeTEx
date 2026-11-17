@@ -68,15 +68,12 @@ This Example shows an extract of  real  Irish Operator  data     encoded  in NeT
 							<Description>National operator codes</Description>
 						</Codespace>
 					</codespaces>
-					<versions>
-						<Version id="noc:1,0" version="any">
-							<Description>Version 1 of codes</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="noc:NTA" version="noc:1.0">
 							<Email>data@http://www.nta.ie/</Email>
+						</DataSource>
+						<DataSource id="noc:Transdev" version="noc:1.0">
+							<Email>data@http://www.transdev.ie/</Email>
 						</DataSource>
 					</dataSources>
 					<!-- ========Responsibility Sets========== -->
@@ -86,7 +83,7 @@ This Example shows an extract of  real  Irish Operator  data     encoded  in NeT
 							<roles>
 								<ResponsibilityRoleAssignment version="noc:1.04" id="noc:Operator_stop_data">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>Other</StakeholderRoleType>
+									<StakeholderRoleType>other</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="noc:NTA" version="any"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -765,74 +762,74 @@ This Example shows an extract of  real  Irish Operator  data     encoded  in NeT
 						<ValueSet version="any" id="noc:typeofOrg">
 							<Name>Typpes of Organisation</Name>
 							<values>
-								<TypeOfOrganisation version="any" id="10-EIR">
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="10-EIR">
 									<Name>All Eire</Name>
 								</TypeOfOrganisation>
-								<TypeOfOrganisation version="any" id="11-240"/>
-								<TypeOfOrganisation version="any" id="12-297"/>
-								<TypeOfOrganisation version="any" id="13-609"/>
-								<TypeOfOrganisation version="any" id="14-587"/>
-								<TypeOfOrganisation version="any" id="15-866"/>
-								<TypeOfOrganisation version="any" id="16-026"/>
-								<TypeOfOrganisation version="any" id="1-663"/>
-								<TypeOfOrganisation version="any" id="18-245"/>
-								<TypeOfOrganisation version="any" id="19-573"/>
-								<TypeOfOrganisation version="any" id="20-305"/>
-								<TypeOfOrganisation version="any" id="21-132"/>
-								<TypeOfOrganisation version="any" id="23-454"/>
-								<TypeOfOrganisation version="any" id="24-1024"/>
-								<TypeOfOrganisation version="any" id="25-197"/>
-								<TypeOfOrganisation version="any" id="27-199"/>
-								<TypeOfOrganisation version="any" id="28-351"/>
-								<TypeOfOrganisation version="any" id="2-GAH"/>
-								<TypeOfOrganisation version="any" id="30-200"/>
-								<TypeOfOrganisation version="any" id="3-301"/>
-								<TypeOfOrganisation version="any" id="33-219"/>
-								<TypeOfOrganisation version="any" id="34-292"/>
-								<TypeOfOrganisation version="any" id="36-363"/>
-								<TypeOfOrganisation version="any" id="37-700"/>
-								<TypeOfOrganisation version="any" id="38-293"/>
-								<TypeOfOrganisation version="any" id="40-291"/>
-								<TypeOfOrganisation version="any" id="41-298"/>
-								<TypeOfOrganisation version="any" id="42-967"/>
-								<TypeOfOrganisation version="any" id="43-COL">
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="11-240"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="12-297"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="13-609"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="14-587"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="15-866"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="16-026"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="1-663"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="18-245"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="19-573"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="20-305"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="21-132"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="23-454"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="24-1024"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="25-197"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="27-199"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="28-351"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="2-GAH"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="30-200"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="3-301"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="33-219"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="34-292"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="36-363"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="37-700"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="38-293"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="40-291"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="41-298"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="42-967"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="43-COL">
 									<Name>Coach</Name>
 								</TypeOfOrganisation>
-								<TypeOfOrganisation version="any" id="44-MAC">
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="44-MAC">
 									<Name>Coach</Name>
 								</TypeOfOrganisation>
-								<TypeOfOrganisation version="any" id="4-593"/>
-								<TypeOfOrganisation version="any" id="46-999"/>
-								<TypeOfOrganisation version="any" id="47-1049"/>
-								<TypeOfOrganisation version="any" id="48-940"/>
-								<TypeOfOrganisation version="any" id="49-LOC">
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="4-593"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="46-999"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="47-1049"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="48-940"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="49-LOC">
 									<Name>Local Link</Name>
 								</TypeOfOrganisation>
-								<TypeOfOrganisation version="any" id="50-391"/>
-								<TypeOfOrganisation version="any" id="52-CS"/>
-								<TypeOfOrganisation version="any" id="5-359"/>
-								<TypeOfOrganisation version="any" id="56-289"/>
-								<TypeOfOrganisation version="any" id="58-408"/>
-								<TypeOfOrganisation version="any" id="60-DUB">
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="50-391"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="52-CS"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="5-359"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="56-289"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="58-408"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="60-DUB">
 									<Name>Dublin</Name>
 								</TypeOfOrganisation>
-								<TypeOfOrganisation version="any" id="6-135"/>
-								<TypeOfOrganisation version="any" id="70-PTSR"/>
-								<TypeOfOrganisation version="any" id="73-676"/>
-								<TypeOfOrganisation version="any" id="7-758"/>
-								<TypeOfOrganisation version="any" id="82-625"/>
-								<TypeOfOrganisation version="any" id="84-620"/>
-								<TypeOfOrganisation version="any" id="85-619"/>
-								<TypeOfOrganisation version="any" id="86-514"/>
-								<TypeOfOrganisation version="any" id="8-870"/>
-								<TypeOfOrganisation version="any" id="92-604"/>
-								<TypeOfOrganisation version="any" id="93-10000"/>
-								<TypeOfOrganisation version="any" id="9-526"/>
-								<TypeOfOrganisation version="any" id="96-NTLK"/>
-								<TypeOfOrganisation version="any" id="97-FRY">
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="6-135"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="70-PTSR"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="73-676"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="7-758"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="82-625"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="84-620"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="85-619"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="86-514"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="8-870"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="92-604"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="93-10000"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="9-526"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="96-NTLK"/>
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="97-FRY">
 									<Name>Ferry</Name>
 								</TypeOfOrganisation>
-								<TypeOfOrganisation version="any" id="99-RLY">
+								<TypeOfOrganisation nameOfClassifiedEntityClass="Operator" version="any" id="99-RLY">
 									<Name>Ferry</Name>
 								</TypeOfOrganisation>
 							</values>

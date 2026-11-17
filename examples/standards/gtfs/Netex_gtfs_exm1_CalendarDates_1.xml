@@ -14,7 +14,7 @@ The data comes from the sample-feed.zip available at   http://code.google.com/tr
 2. MAPPING
 
 A CALENDAR DATE maps to a VALIDITY CONDITION  
-The condition can be included as part of a SERVICE CALENDAR FRAME alonfg with the calendar.txts
+The condition can be included as part of a SERVICE CALENDAR FRAME along with the calendar.txts
 
 GTFS									NeTEx
 service_id,								<ServiceCalendarFrame #service_id>@id

@@ -453,7 +453,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 					</groupsOfSalesOfferPackages>
 				</FareFrame>
 				<!--- =============== FAREs =========== -->
-				<FareFrame version="1.0" id="myfares:DTA@RailCards@prices">
+				<FarePriceFrame version="1.0" id="myfares:DTA@RailCards@prices">
 					<Name>Railcard prices</Name>
 					<prerequisites>
 						<FareFrameRef version="1.0" ref="myfares:DTA@RailCards@products"/>
@@ -597,7 +597,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 							</includes>
 						</FareTable>
 					</fareTables>
-				</FareFrame>
+				</FarePriceFrame>
 				<!--- ===========RESOURCEs========== -->
 				<ResourceFrame version="1.0" id="myfares:DTA@Common_Resources">
 					<codespaces>

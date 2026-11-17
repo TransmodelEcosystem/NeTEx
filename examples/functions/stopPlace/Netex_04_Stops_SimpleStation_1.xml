@@ -340,7 +340,7 @@ B. Frames and grouping
 							<AccessibilityAssessment version="any" id="ztb:bh0023">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
-									<AccessibilityLimitation>
+									<AccessibilityLimitation id="ztb:bh0023" version="any">
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>true</StepFreeAccess>
 										<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -506,7 +506,7 @@ B. Frames and grouping
 												<EquipmentPosition version="any" id="ztb:bh0023@Rail@Q1@Sign_02">
 													<EquipmentRef version="any" ref="ztb:bh0023@Rail@Q1@Sign_02"/>
 													<Description>ExitSigtn  on Platform 1,  5 metres from platform entrance</Description>
-													<ReferencePointRef version="any" ref="tbd:bh0023@A1-E2@Sign_011"/>
+													<ReferencePointRef version="any" ref="tbd:bh0023@A1-E2@Sign_01"/>
 													<XOffset>5</XOffset>
 													<YOffset>0</YOffset>
 												</EquipmentPosition>
@@ -573,7 +573,7 @@ B. Frames and grouping
 									<AccessibilityAssessment version="01" created="2010-05-17T09:30:47Z" id="ztb:bh0023@A1">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation version="01" created="2010-05-17T09:30:47Z">
+											<AccessibilityLimitation version="01" created="2010-05-17T09:30:47Z" id="ztb:bh0023@A1">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -609,7 +609,7 @@ B. Frames and grouping
 									<AccessibilityAssessment version="01" created="2010-05-17T09:30:47Z" id="ztb:bh0023@A2">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation version="01" created="2010-05-17T09:30:47Z">
+											<AccessibilityLimitation version="01" created="2010-05-17T09:30:47Z" id="ztb:bh0023@A2">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -629,7 +629,7 @@ B. Frames and grouping
 									<AccessibilityAssessment version="01" created="2010-05-17T09:30:47Z" id="ztb:bh0023@AX3">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation version="01" created="2010-05-17T09:30:47Z">
+											<AccessibilityLimitation version="01" created="2010-05-17T09:30:47Z" id="ztb:bh0023@AX3">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -866,8 +866,8 @@ B. Frames and grouping
 									<NavigationType>quayToHall</NavigationType>
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="ztb:bh0023@Bus-Q1+Rail@Q2-E2tr-01">
-											<PathLinkRef version="any" ref="ztb:bh0023@lnk_A1-E1+Bus-Q1"/>
 											<Description>Bus stop to entrance (Reverse use of Link)</Description>
+											<PathLinkRef version="any" ref="ztb:bh0023@lnk_A1-E1+Bus-Q1"/>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
@@ -893,8 +893,8 @@ B. Frames and grouping
 									<NavigationType>hallToQuay</NavigationType>
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="ztb:NP_bh0023@A1+Bus-Q-01">
-											<PathLinkRef version="any" ref="ztb:bh0023@lnk_A1-E1+Bus-Q1"/>
 											<Description>Bus stop to entrance (Forwards use of Link)</Description>
+											<PathLinkRef version="any" ref="ztb:bh0023@lnk_A1-E1+Bus-Q1"/>
 											<Reverse>false</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
@@ -914,8 +914,8 @@ B. Frames and grouping
 									<NavigationType>hallToQuay</NavigationType>
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="ztb:NP_bh0023@A1+Rail@Q1">
-											<PathLinkRef version="any" ref="ztb:bh0023@lnk_A1-E1+A1-E2"/>
 											<Description>From  ticket hall to platform 1</Description>
+											<PathLinkRef version="any" ref="ztb:bh0023@lnk_A1-E1+A1-E2"/>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -934,8 +934,8 @@ B. Frames and grouping
 									<NavigationType>quayToHall</NavigationType>
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="ztb:NP_bh0023@Rail@Q1+A1">
-											<PathLinkRef version="any" ref="ztb:bh0023@lnk_A1-E1+A1-E2"/>
 											<Description>Reverse use: platform 1 to From  ticket hall </Description>
+											<PathLinkRef version="any" ref="ztb:bh0023@lnk_A1-E1+A1-E2"/>
 											<Reverse>true</Reverse>
 											<Heading> forward</Heading>
 											<Transition>level</Transition>
@@ -961,22 +961,22 @@ B. Frames and grouping
 									<NavigationType>hallToQuay</NavigationType>
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="ztb:NP_bh0023@A1+Rail@Q2-02">
-											<PathLinkRef version="any" ref="ztb:bh0023@lnk_A1-E1+A1-E2"/>
 											<Description>Across ticket hall</Description>
+											<PathLinkRef version="any" ref="ztb:bh0023@lnk_A1-E1+A1-E2"/>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="ztb:NP_bh0023@A1+Rail@Q2-03">
-											<PathLinkRef version="any" ref="ztb:bh0023@lnk_A1-E2+Rail@Q1-E1tr"/>
 											<Description>Along platform 1 to crossing</Description>
+											<PathLinkRef version="any" ref="ztb:bh0023@lnk_A1-E2+Rail@Q1-E1tr"/>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="ztb:NP_bh0023@A1+Rail@Q2-04">
-											<PathLinkRef version="any" ref="ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr"/>
 											<Description>Crossing from platform 1 to platform 2</Description>
+											<PathLinkRef version="any" ref="ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr"/>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>downAndUp</Transition>
@@ -1002,22 +1002,22 @@ B. Frames and grouping
 									<NavigationType>quayToHall</NavigationType>
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="ztb:NP_bh0023@Rail@Q2+A1-01">
-											<PathLinkRef version="any" ref="ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr"/>
 											<Description>Crossing from platform 1 to platform 2</Description>
+											<PathLinkRef version="any" ref="ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr"/>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>downAndUp</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="ztb:NP_bh0023@Rail@Q2+A1-02">
-											<PathLinkRef version="any" ref="ztb:bh0023@lnk_A1-E2+Rail@Q1-E1tr"/>
 											<Description>Along platform 1 to crossing</Description>
+											<PathLinkRef version="any" ref="ztb:bh0023@lnk_A1-E2+Rail@Q1-E1tr"/>
 											<Reverse>true</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="ztb:NP_bh0023@Rail@Q2+A1-03">
-											<PathLinkRef version="any" ref="ztb:bh0023@lnk_A1-E1+A1-E2"/>
 											<Description>Across ticket hall</Description>
+											<PathLinkRef version="any" ref="ztb:bh0023@lnk_A1-E1+A1-E2"/>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -1053,8 +1053,8 @@ B. Frames and grouping
 									<NavigationType>quayToQuay</NavigationType>
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="ztb:bh0023@Rail@Q1+Rail@Q2_01">
-											<PathLinkRef version="any" ref="ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr"/>
 											<Description>Crossing  from platform 1 to platform 2</Description>
+											<PathLinkRef version="any" ref="ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr"/>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>downAndUp</Transition>
@@ -1090,8 +1090,8 @@ B. Frames and grouping
 									<NavigationType>quayToQuay</NavigationType>
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="ztb:bh0023@Rail@Q2+Rail@Q1_01">
-											<PathLinkRef version="any" ref="ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr"/>
 											<Description>Crossing  from platform 2 to platform 1 (Reverse use of Link</Description>
+											<PathLinkRef version="any" ref="ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr"/>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>downAndUp</Transition>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" xmlns="http://www.netex.org.uk/netex" version="1.10" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<PublicationTimestamp>2022-01-10T17:10:54.0424911+01:00</PublicationTimestamp>
+	<ParticipantRef>MENTZ</ParticipantRef>
+	<Description>EPIAP minimal level conform delivery of the station of Chur. PathLinks/PathJunctions available, all relevant equipment modeled.</Description>
+	<dataObjects>
+		<CompositeFrame id="ch:1:CompositeFrame:j21" version="epiap:1.0">
+			<ValidBetween>
+				<FromDate>2021-01-01T00:00:00</FromDate>
+				<ToDate>2021-12-11T23:59:59</ToDate>
+			</ValidBetween>
+			<FrameDefaults>
+				<DefaultCodespaceRef ref="sbbinfoplus"/>
+				<DefaultDataSourceRef ref="sbbinfoplus:DataSource_E01" version="1"/>
+				<DefaultLocale>
+					<TimeZoneOffset>1</TimeZoneOffset>
+					<SummerTimeZoneOffset>2</SummerTimeZoneOffset>
+					<DefaultLanguage>de</DefaultLanguage>
+				</DefaultLocale>
+			</FrameDefaults>
+			<frames>
+				<ResourceFrame id="ch:1:ResourceFrame:j21" version="1">
+					<codespaces>
+						<Codespace id="sbbinfoplus">
+							<Xmlns>www.sbb.ch</Xmlns>
+						</Codespace>
+					</codespaces>
+					<dataSources>
+						<DataSource id="sbbinfoplus:DataSource_E01" version="1">
+							<Name>SBB</Name>
+						</DataSource>
+					</dataSources>
+					<equipments>
+						<CrossingEquipment version="1" id="ch:1:CrossingEquipment:850771:2">
+							<Description>Example of a crossing equipment.</Description>
+							<Width>2</Width>
+							<DirectionOfUse>both</DirectionOfUse>
+							<SafeForGuideDog>true</SafeForGuideDog>
+							<CrossingType>levelCrossing</CrossingType>
+							<PedestrianLights>false</PedestrianLights>
+							<AcousticDeviceSensors>true</AcousticDeviceSensors>
+							<TactileGuidanceStrips>false</TactileGuidanceStrips>
+							<TactileWarningStrip>tactileStripAtEnd</TactileWarningStrip>
+							<VisualGuidanceBands>true</VisualGuidanceBands>
+							<DroppedKerb>true</DroppedKerb>
+							<SuitableForCycles>true</SuitableForCycles>
+						</CrossingEquipment>
+					</equipments>
+				</ResourceFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

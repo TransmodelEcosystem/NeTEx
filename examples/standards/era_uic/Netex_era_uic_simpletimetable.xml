@@ -28,6 +28,15 @@ NeTEx - Example for a simple timetable, generated from TAP TSI  timetable data
 				<DefaultCodespaceRef ref="tap"/>
 			</FrameDefaults>
 			<frames>
+				<ServiceCalendarFrame id="tap:ServiceCalendarFrame" version="any">
+					<operatingPeriods>
+						<UicOperatingPeriod id="tap:UicOperatingPeriod2011-02-07+2011-08-29" version="any">
+							<FromDate>2011-02-07T00:00:00</FromDate>
+							<ToDate>2011-08-29T00:00:00</ToDate>
+							<ValidDayBits>000000100000010000001000000100000010000001000000100000010000001000000100000011000001100000100000010000001000000110000010000001000000100000010000001000000100000010000001000000100000010000001000000100000011</ValidDayBits>
+						</UicOperatingPeriod>
+					</operatingPeriods>
+				</ServiceCalendarFrame>
 				<ResourceFrame id="tap:RessourceFrame:Rf_01" version="any">
 					<responsibilitySets>
 						<ResponsibilitySet id="tap:distributes@0003" version="any">
@@ -47,7 +56,7 @@ NeTEx - Example for a simple timetable, generated from TAP TSI  timetable data
 						<ResponsibilitySet id="tap:operates@0019" version="any">
 							<roles>
 								<ResponsibilityRoleAssignment id="tap:operates@0019" version="any">
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 								</ResponsibilityRoleAssignment>
 							</roles>
 						</ResponsibilitySet>
@@ -86,14 +95,17 @@ NeTEx - Example for a simple timetable, generated from TAP TSI  timetable data
 						</AvailabilityCondition>
 					</validityConditions>
 					<vehicleJourneys>
-						<DatedServiceJourney id="tap:00199129_2011-02-07/2011-08-29" version="any">
+						<ServiceJourney id="tap:00199129_2011-02-07/2011-08-29" version="any">
 							<ShortName>EUROSTAR</ShortName>
+							<dayTypes>
+								<DayTypeRef ref="tap:UicOperatingPeriod2011-02-07+2011-08-29"/>
+							</dayTypes>
 							<LineView>
 								<PublicCode>9129</PublicCode>
 								<TransportMode>rail</TransportMode>
 							</LineView>
 							<calls>
-								<Call version="any" id="tap:00199129_2011-02-07/2011-08-29" order="1">
+								<Call version="any" id="tap:00199129_2011-02-07/2011-08-29-1">
 									<ScheduledStopPointView>
 										<ScheduledStopPointRef ref="tap:008814002"/>
 										<Name>BRUXELLES MIDI EUROSTAR</Name>
@@ -103,7 +115,7 @@ NeTEx - Example for a simple timetable, generated from TAP TSI  timetable data
 										<Time>12:20:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="tap:00199129_2011-02-07/2011-08-29" order="2">
+								<Call version="any" id="tap:00199129_2011-02-07/2011-08-29-2">
 									<ScheduledStopPointView>
 										<ScheduledStopPointRef ref="tap:008722326"/>
 										<Name>LILLE EUROPE</Name>
@@ -115,7 +127,7 @@ NeTEx - Example for a simple timetable, generated from TAP TSI  timetable data
 										<Time>12:56:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="tap:00199129_2011-02-07/2011-08-29" order="3">
+								<Call version="any" id="tap:00199129_2011-02-07/2011-08-29-3">
 									<ScheduledStopPointView>
 										<ScheduledStopPointRef ref="tap:008728107"/>
 										<Name>CALAIS FRETHUN</Name>
@@ -127,7 +139,7 @@ NeTEx - Example for a simple timetable, generated from TAP TSI  timetable data
 										<Time>13:32:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="tap:00199129_2011-02-07/2011-08-29" order="4">
+								<Call version="any" id="tap:00199129_2011-02-07/2011-08-29-4">
 									<ScheduledStopPointView>
 										<ScheduledStopPointRef ref="tap:007015440"/>
 										<Name>EBBSFLEET</Name>
@@ -141,7 +153,7 @@ NeTEx - Example for a simple timetable, generated from TAP TSI  timetable data
 										<ForBoarding>false</ForBoarding>
 									</Departure>
 								</Call>
-								<Call version="any" id="tap:00199129_2011-02-07/2011-08-29" order="5">
+								<Call version="any" id="tap:00199129_2011-02-07/2011-08-29-5">
 									<ScheduledStopPointView>
 										<ScheduledStopPointRef ref="tap:007015400"/>
 										<Name>ST PANCRAS</Name>
@@ -159,12 +171,7 @@ NeTEx - Example for a simple timetable, generated from TAP TSI  timetable data
 									<FareClasses>premiumClass businessClass secondClass</FareClasses>
 								</ServiceFacilitySet>
 							</facilities>
-							<UicOperatingPeriod id="2011-02-07+2011-08-29" version="any">
-								<FromDate>2011-02-07T00:00:00</FromDate>
-								<ToDate>2011-08-29T00:00:00</ToDate>
-								<ValidDayBits>000000100000010000001000000100000010000001000000100000010000001000000100000011000001100000100000010000001000000110000010000001000000100000010000001000000100000010000001000000100000010000001000000100000011</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
 			</frames>

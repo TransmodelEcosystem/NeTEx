@@ -243,7 +243,7 @@ The example  comprises
 								</EquipmentPlace>
 							</equipmentPlaces>
 							<placeEquipments>
-								<EntranceEquipment version="any" id="tbd:POI_23_A1-E1_Eq2">
+								<EntranceEquipment version="any" id="tbd:POI_23_A1-E1_Eq3">
 									<Name>gates</Name>
 									<DirectionOfUse>both</DirectionOfUse>
 									<NumberOfGates>10</NumberOfGates>
@@ -815,8 +815,8 @@ The example  comprises
 									<PlaceRef version="any" xsi:type="PointOfInterestEntranceRefStructure" ref="tbd:POI_23_A1-E1"/>
 									<onwardLinks>
 										<PathLinkInSequence version="any" order="1" id="tbd:PLIS_POI_23_A1-E1_to_A1_01">
-											<PathLinkRef version="any" ref="tbd:POI_23_pl_A1-E1_to_A1-J1"/>
 											<Description>Entrance A</Description>
+											<PathLinkRef version="any" ref="tbd:POI_23_pl_A1-E1_to_A1-J1"/>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -829,7 +829,6 @@ The example  comprises
 									<onwardLinks>
 										<PathLinkInSequence version="any" order="1" id="tbd:PLIS_POI_23_A1-E1_to_A1_02">
 											<PathLinkRef version="any" ref="tbd:POI_23_pl_A1-J1_to_A2"/>
-											<Description>normalizedString</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -843,15 +842,15 @@ The example  comprises
 							</placesInSequence>
 							<pathLinksInSequence>
 								<PathLinkInSequence version="any" order="1" id="tbd:POI_23_N1_A1-E1_to_A2_l01">
-									<PathLinkRef version="any" ref="tbd:POI_23_pl_A1-E1_to_A1-J1"/>
 									<Description>Link 1</Description>
+									<PathLinkRef version="any" ref="tbd:POI_23_pl_A1-E1_to_A1-J1"/>
 									<Reverse>true</Reverse>
 									<Heading>forward</Heading>
 									<Transition>level</Transition>
 								</PathLinkInSequence>
 								<PathLinkInSequence version="any" order="2" id="tbd:POI_23_N1_A1-E1_to_A2_l02">
+									<Description>Link 2</Description>
 									<PathLinkRef version="any" ref="tbd:POI_23_pl_A1-J1_to_A2"/>
-									<Description>Link 1</Description>
 									<Reverse>true</Reverse>
 									<Heading>forward</Heading>
 									<Transition>level</Transition>
@@ -894,8 +893,8 @@ The example  comprises
 									<PlaceRef version="any" ref="tbd:POI_23_A1-E1"/>
 									<onwardLinks>
 										<PathLinkInSequence version="any" order="1" id="tbd:POI_23_N2_A1-E1_to_A3_p01_01">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="tbd:POI_23_pl_A1-E1_to_A1-J1"/>
 											<Description>Entrance A</Description>
+											<SitePathLinkRef version="any" ref="tbd:POI_23_pl_A1-E1_to_A1-J1"/>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -908,7 +907,6 @@ The example  comprises
 									<onwardLinks>
 										<PathLinkInSequence version="any" order="1" id="tbd:POI_23_N2_A1-E1_to_A3_p02_01">
 											<PathLinkRef version="any" ref="tbd:POI_23_pl_A1-J1_to_A3"/>
-											<Description>normalizedString</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -922,15 +920,15 @@ The example  comprises
 							</placesInSequence>
 							<pathLinksInSequence>
 								<PathLinkInSequence version="any" order="1" id="tbd:POI_23_N2_A1-E1_to_A3_l01">
-									<PathLinkRef version="any" ref="tbd:POI_23_pl_A1-E1_to_A1-J1"/>
 									<Description>Link 1 into concourse</Description>
+									<PathLinkRef version="any" ref="tbd:POI_23_pl_A1-E1_to_A1-J1"/>
 									<Reverse>false</Reverse>
 									<Heading>forward</Heading>
 									<Transition>level</Transition>
 								</PathLinkInSequence>
 								<PathLinkInSequence version="any" order="2" id="tbd:POI_23_N2_A1-E1_to_A3_l02">
-									<PathLinkRef version="any" ref="tbd:POI_23_pl_A1-J1_to_A3"/>
 									<Description>Link 2 up stairs</Description>
+									<PathLinkRef version="any" ref="tbd:POI_23_pl_A1-J1_to_A3"/>
 									<Reverse>false</Reverse>
 									<Heading>forward</Heading>
 									<Transition>up</Transition>
@@ -971,8 +969,8 @@ The example  comprises
 									<PlaceRef version="any" xsi:type="PointOfInterestEntranceRefStructure" ref="tbd:POI_23_B1-E1"/>
 									<onwardLinks>
 										<PathLinkInSequence version="any" order="1" id="tbd:PLIS_POI_23_B1-E1_to_B1_01">
-											<PathLinkRef version="any" ref="tbd:POI_23_pl_B1-E1_to_B1-J1"/>
 											<Description>Entrance A</Description>
+											<PathLinkRef version="any" ref="tbd:POI_23_pl_B1-E1_to_B1-J1"/>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -984,8 +982,8 @@ The example  comprises
 									<PlaceRef version="any" ref="tbd:POI_23_B1-J1"/>
 									<onwardLinks>
 										<PathLinkInSequence version="any" order="1" id="tbd:PLIS_POI_23_B1-E1_to_B1_02">
-											<PathLinkRef version="any" ref="tbd:POI_23_pl_B1-J1_to_B2"/>
 											<Description>normalizedString</Description>
+											<PathLinkRef version="any" ref="tbd:POI_23_pl_B1-J1_to_B2"/>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -999,15 +997,15 @@ The example  comprises
 							</placesInSequence>
 							<pathLinksInSequence>
 								<PathLinkInSequence version="any" order="1" id="tbd:POI_23_N1_B1-E1_to_B2_l01">
-									<PathLinkRef version="any" ref="tbd:POI_23_pl_B1-E1_to_B1-J1"/>
 									<Description>Link 1</Description>
+									<PathLinkRef version="any" ref="tbd:POI_23_pl_B1-E1_to_B1-J1"/>
 									<Reverse>true</Reverse>
 									<Heading>forward</Heading>
 									<Transition>level</Transition>
 								</PathLinkInSequence>
 								<PathLinkInSequence version="any" order="2" id="tbd:POI_23_N1_B1-E1_to_B2_l02">
+									<Description>Link 2</Description>
 									<PathLinkRef version="any" ref="tbd:POI_23_pl_B1-J1_to_B2"/>
-									<Description>Link 1</Description>
 									<Reverse>true</Reverse>
 									<Heading>forward</Heading>
 									<Transition>level</Transition>
@@ -1050,8 +1048,8 @@ The example  comprises
 									<PlaceRef version="any" xsi:type="PointOfInterestEntranceRefStructure" ref="tbd:POI_23_B1-E1"/>
 									<onwardLinks>
 										<PathLinkInSequence version="any" order="1" id="tbd:POI_23_N2_B1-E1_to_B3_p01_01">
-											<PathLinkRef version="any" xsi:type="SitePathLinkRefStructure" ref="tbd:POI_23_pl_B1-E1_to_B1-J1"/>
 											<Description>Entrance A</Description>
+											<SitePathLinkRef version="any" ref="tbd:POI_23_pl_B1-E1_to_B1-J1"/>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -1064,7 +1062,6 @@ The example  comprises
 									<onwardLinks>
 										<PathLinkInSequence version="any" order="1" id="tbd:POI_23_N2_B1-E1_to_B3_p02_01">
 											<PathLinkRef version="any" ref="tbd:POI_23_pl_B1-J1_to_B3"/>
-											<Description>normalizedString</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -1078,15 +1075,15 @@ The example  comprises
 							</placesInSequence>
 							<pathLinksInSequence>
 								<PathLinkInSequence version="any" order="1" id="tbd:POI_23_N2_B1-E1_to_B3_l01">
-									<PathLinkRef version="any" ref="tbd:POI_23_pl_B1-E1_to_B1-J1"/>
 									<Description>Link 1 into concourse</Description>
+									<PathLinkRef version="any" ref="tbd:POI_23_pl_B1-E1_to_B1-J1"/>
 									<Reverse>false</Reverse>
 									<Heading>forward</Heading>
 									<Transition>level</Transition>
 								</PathLinkInSequence>
 								<PathLinkInSequence version="any" order="2" id="tbd:POI_23_N2_B1-E1_to_B3_l02">
-									<PathLinkRef version="any" ref="tbd:POI_23_pl_B1-J1_to_B3"/>
 									<Description>Link 2 up stairs</Description>
+									<PathLinkRef version="any" ref="tbd:POI_23_pl_B1-J1_to_B3"/>
 									<Reverse>false</Reverse>
 									<Heading>forward</Heading>
 									<Transition>up</Transition>

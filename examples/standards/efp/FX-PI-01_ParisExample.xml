@@ -1,0 +1,2808 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==== AMSY Arriva Saveres==== -->
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+	<!-- PARIS Île-de-France Mobilités  t+ product
+
+Describes the paris t+ (t_plus) product 
+
+
+The t+ Ticket allows you to travel on metro lines, RER lines (zone 1), Île-de-France bus lines (except Orlybus and Roissybus), Tramway lines (except T11, T12 and T13) and the Funiculaire de Montmartre.
+
+The following connections are possible:
+(No connection possible between metro/RER and bus)
+
+Metro - Metro for 90 minutes hours from validation;
+Metro - RER and RER - RER within Paris, for 90 minutes hours between the first and last validation;
+Bus - Bus (including transfers between the RATP and OPTILE networks), for 90 minutes between the first and last validation;
+Bus - Tram and Tram - Tram, for 90 minutes between the first and last validation
+
+
+Connection times depend on ticket type
+|:::::::::::::::::::::::::::::::|:::::::::::::::::::|:::::::::::::::::::|:::::::::::::::::::|
+| 								|				Duration  									|
+| Type of connections 			| Paper ticket  	| Smartcard/Mob app | sms				|
+|:::::::::::::::::::::::::::::::|:::::::::::::::::::|:::::::::::::::::::|:::::::::::::::::::|
+| Metro / RER / Train with Bus	| No connection		| No connection		| not available		|		
+| Metro / RER /Bus with funicul | No connection		| No connection		| not available		|
+| RER / Train with Metro		| 2H in Paris		| 1H30 in Paris		| not available		| Except between Pomt Cardinet and Saimt Lazare? 
+| Metro with Metro				| 2H in Paris		| 1H30 in Paris		| not available		|
+| Bus with Tramway				| 1H30				| 1H30  			| not available		|
+| Tramway with Tramway			| 1H30				| 1H30  			| not available		|
+| Bus with Bus					| 1H30				| 1H30  			| 1H	 			|
+|:::::::::::::::::::::::::::::::|:::::::::::::::::::|:::::::::::::::::::||::::::::::::::::::|
+
+
+
+Available as paper ticket with magstripe, mobile apps from IDFM and third parties,  and on navigo smartcard
+
+Prices vary by  usertype (adult, concession/child) and fulfilment method (sms and onboard are more)
+Concesionary fair is availabel for childre, veterans , blidn people and various other categories
+ 
+Price table  t+ 2024 - Absolute prices
+|:::::::::::::::::::::::::::|:::::::::|:::::::::::::|
+| Channel/Media			 	|  Full   | Concession	|
+|:::::::::::::::::::::::::::|:::::::::|:::::::::::::|
+| Navigo (resident) card	|   0.00  |				|
+| Navigo Easy card			|   €2.00 |				|
+|:::::::::::::::::::::::::::|:::::::::|:::::::::::::|
+| t+ Single paper ticket	|   €2.15 | €1.10		|
+| t+ Single  ticket onboard	|   €2.50 | £1.25 ?		|
+| t+ Mobile app ticket		|   €2.15 |	€1.10		|
+| t+ Smartcard ticket		|   €2.15 | €1.10		|
+| SMS ticket				|   €2.50 | £1.25 ?		|
+|:::::::::::::::::::::::::::|:::::::::|:::::::::::::|
+| t+ carnet 10 mobile app	|  €17.35 | €8.65		|
+| t+ carnet 10 smartcard	|  €17.35 | €8.65		|
+|:::::::::::::::::::::::::::|:::::::::|:::::::::::::|
+
+It is likely that there is an underlying derivation structure, such that all the prices are relative to a base price
+
+for example  child is 50% adult.  
+Price table - Derived prices
+|:::::::::::::::::::::::::::|:::::::::::::::|:::::::::::::::::::::::| 
+| Channel/Media			 	|  Adult  		| Concession R1(x*50%)	| 
+|:::::::::::::::::::::::::::|:::::::::::::::|:::::::::::::::::::::::| 
+| Navigo (resident) card	|   €0.00  		|   €0.00  				|
+| Navigo Easy card			|   €2.00  		|   	n/a				|
+|:::::::::::::::::::::::::::|:::::::::::::::|:::::::::::::::::::::::| 
+| t+ Base Price				|   €2.15 (A)	| 	R1(A*50%)			|
+| Onboard fee	R2(x+B)		|   €0.35 (B) 	|   	 				|
+| Sms fee		R3(x+C)		|   €0.35 (C) 	|   			    	|
+|:::::::::::::::::::::::::::|:::::::::::::::|:::::::::::::::::::::::| 
+| t+ Paper ticket			|   A			|  						|
+| t+ Paper ticket onboard	|   R2(A+B) 	|  	R1(R2(A+B)*50%)		|  
+| t+ Mobile app  ticket		|	A			| 	R1(A*50%) rounded	|
+| t+ Smartcard ticket		|	A			| 	R1(A*50%) rounded 	|
+| SMS ticket				|   R3(A+C) 	| 	R3(R1(A*50%)+C)		|
+|:::::::::::::::::::::::::::|:::::::::::::::|:::::::::::::::::::::::| 
+| t+ Carnet 10 mobile app	|	€17.35 (D)	| 	R1(D*50%)	rounded	|
+| t+ Carnet 10 smartcard	|	D			| 	R1(D*50%)			|
+|:::::::::::::::::::::::::::|:::::::::::::::|:::::::::::::::::::::::| 
+
+=============================================
+
+The t+ can also be used on the Noctilien night bus network
+
+Noctilien uses a differentt tariff structure based on unit zone count 
+COunt of zones an be done with  DISTANCE MATRIX ELEMENTs 
+|:::::::::::|:::::::::::|:::::::::::|:::::::::::|:::::::::::|:::::::::::|
+| from   /to| Zone 1	| Zone 2	|  Zone 3	|  Zone 4	|  Zone 5	|
+| Noctilien uses a differet tariff structure based on unit zones 		|
+|:::::::::::|:::::::::::|:::::::::::|:::::::::::|:::::::::::|:::::::::::|
+| Zone 1 	|  1		| 	1		|  	2		|  	3		|	4		|
+| Zone 2 	|  -		| 	1		|  	1		|  	2		|	3		|
+| Zone 3	|  -		| 	-		|  	1		|  	1		|	2		|
+| Zone 4	|  -		| 	-		|  	-		|  	1		|	2		|
+| Zone 5	|  -		| 	-		|  	-		|  	-		|	1		| 
+|:::::::::::|:::::::::::|:::::::::::|:::::::::::|:::::::::::|:::::::::::|
+
+Units zone regular = same price as t+
+
+ Certain lines are charged double price per zone count. 
+
+There is also a special rate for sms for a few  lines 
+=========================================
+
+The T+ can be used on a Navigo smartcard. There are two variants 
+    - the personalised Navigo card for Paris residents and workers 
+    0 The Navigo easy, a n impersonal card
+ 
+=============================================================================================================
+
+The above Modelled  here in NeTEx  as 
+  NETWORK
+   LINE funicular
+   GROUP OF LINES airport express buses
+   GROUP OF LINES noctilien
+ 
+  TARIFF t_ Flat fare
+    TIME INTERVAL metr and RER 2H
+    TIME INTERVAL bus and tram 2H
+    FARE STRUCTURE ELEMENT  Access rights
+         XOR    
+           GENERIC PARAMETER ASSIGNMENT Metro and RER (metre/RER centrazone interchange only)
+           GENERIC PARAMETER ASSIGNMENT Bus and Tram (bus/tram interchange only)
+           GENERIC PARAMETER ASSIGNMENT Onboard Bus (bus only, no interchanges)
+           GENERIC PARAMETER ASSIGNMENT Funicular (funicular only, no interchanges)
+     FARE STRUCTURE ELEMENT eligibility 
+          USER PROFILEs Adult, CInfant, Concessionary (Child, Veteran, etc) oters??
+          GROUP TICKETs  Primary School, Others??
+     FARE STRUCTURE ELEMENT conditions of sale no refunds
+          REFUNDING not allowed
+
+  TARIFF t_ noctilien unit zone
+    FARE STRUCTURE ELEMENT  Access       
+
+  Fare products for single trip with access rights
+     PREASSIGNED FARE PROUCT t+
+
+  SALES OFFER PACKAGES
+    SALES OFFER PACKAGE t+ paper_ticket
+    
+    SALES OFFER PACKAGE t+ mobile_app,  requires entitlement   mobile app
+    SALES OFFER PACKAGE t+ smartcard      requires entitlement   navigo smart card
+
+    SALES OFFER PACKAGE t+ sms   
+
+==============
+t+ Noctilien
+ 
+Use GEOGRAPHICAL INTERVAL  1_zone to relate zone count to zones
+   unit is tariff zone
+
+Certain lines are charged double price per zone count. 
+
+  GROUP OF LINEs normal rate, double rate
+
+To specify sing;le double rates
+ GEOGRAPHICAL STRUCTURE FACTOR Price normal 1 unit
+ GEOGRAPHICAL STRUCTURE FACTOR Price double  2 units 
+
+To associate a price with each of these
+ FARE STRUCTURE ELEMENT   normal
+ FARE STRUCTURE ELEMEN Price double
+ FARE STRUCTURE ELEMEN long distance  
+ 
+=================
+t+ Carnet
+ 
+  TARIFF t_ carnet
+    FARE QUALITY FActOR  10 units
+    FARE STRUCTURE ELEMENT  Access rights 
+           GENERIC PARAMETER ASSIGNMENT x 10 single ticket 
+    FARE STRUCTURE ELEMENT  Eligbility > Full, COncessionary, Group
+    FARE STRUCTURE ELEMENT  Conditions of sale - no refund
+
+  Fare products for single trip with access rights
+     AMOUNT OF PRICE UNIT  PROUCT t+ carnet 
+
+  SALES OFFER PACKAGES
+    SALES OFFER PACKAGE t+ carnet; paper;  No 
+    
+    SALES OFFER PACKAGE t+ carnet; mobile_app,  requires entitlement   mobile app
+    SALES OFFER PACKAGE t+ carnet; smartcard      requires entitlement   navigo smart card
+
+=================
+Navigo  
+  Fare products  for prerequesite media products
+     SALE DISCOUNT RIGHT  navigo  smart card
+     SALE DISCOUNT RIGHT  idfm app
+
+  SALES OFFER PACKAGES
+    SALES OFFER PACKAGE navigo_resident smart card
+    SALES OFFER PACKAGE navigo_easy smart card
+
+ (c) 2024 CEN  
+-->
+	<PublicationTimestamp>2024-01-30T09:30:47.0Z</PublicationTimestamp>
+	<ParticipantRef>SYS003</ParticipantRef>
+	<!-- ======WHAT WAS REQUESTED ========== -->
+	<PublicationRequest version="1.0">
+		<RequestTimestamp>2024-01-30T09:30:47.0Z</RequestTimestamp>
+		<ParticipantRef>SYS002</ParticipantRef>
+		<Description>Request for AMSY bus pass fares</Description>
+	</PublicationRequest>
+	<PublicationRefreshInterval>P3M</PublicationRefreshInterval>
+	<Description>Example of simple zonal pass fares.</Description>
+	<!-- =============== RESULTS =========== -->
+	<dataObjects>
+		<CompositeFrame version="1.0" id="idfm:Paris-Example@t_plus" dataSourceRef="idfm:src" responsibilitySetRef="idfm:tariffs">
+			<ValidBetween>
+				<FromDate>2024-01-30T09:30:47.0Z</FromDate>
+				<ToDate>2030-01-30T09:30:47.0Z</ToDate>
+			</ValidBetween>
+			<Name>Paris t+ for metro/bus/tram - Fares Example</Name>
+			<!--==== CODESPACEs ==== -->
+			<codespaces>
+				<Codespace id="op_data">
+					<Xmlns>idfm</Xmlns>
+					<XmlnsUrl>https://www.iledefrance-mobilites.fr</XmlnsUrl>
+					<Description> Île-de-France Mobilités data.</Description>
+				</Codespace>
+				<Codespace id="transilien_data">
+					<Xmlns>tsln</Xmlns>
+					<XmlnsUrl>https://www.transilien.fr</XmlnsUrl>
+					<Description>Transilien data.</Description>
+				</Codespace>
+				<Codespace id="ratp_data">
+					<Xmlns>ratp</Xmlns>
+					<XmlnsUrl>https://www.ratp.fr/</XmlnsUrl>
+					<Description>RATP data.</Description>
+				</Codespace>
+				<Codespace id="sncf_data">
+					<Xmlns>sncf</Xmlns>
+					<XmlnsUrl>https://www.sncf.fr/</XmlnsUrl>
+					<Description>SNCF data.</Description>
+				</Codespace>
+				<Codespace id="transdev_data">
+					<Xmlns>transdev</Xmlns>
+					<XmlnsUrl>https://www.transdev.com/</XmlnsUrl>
+					<Description>Transdev data.</Description>
+				</Codespace>
+			</codespaces>
+			<!--==== FRAME DEFAULTS ==== -->
+			<FrameDefaults>
+				<DefaultCodespaceRef ref="op_data"/>
+			</FrameDefaults>
+			<frames>
+				<!--====FARE STRUCTURE ==== -->
+				<ResourceFrame version="1.0" id="idfm:Paris-Example@t_plus@Resources" responsibilitySetRef="idfm:network_data">
+					<Name>Operator specific common resources</Name>
+					<!-- ========Responsibility Sets========== -->
+					<dataSources>
+						<DataSource id="idfm:src" version="1.0">
+							<Email>feedback@www.iledefrance-mobilites.fr/</Email>
+						</DataSource>
+					</dataSources>
+					<!-- ========Responsibility Sets========== -->
+					<responsibilitySets>
+						<ResponsibilitySet version="1.0" id="idfm:tariffs">
+							<Name>Operator tariff data</Name>
+							<roles>
+								<ResponsibilityRoleAssignment version="1.0" id="idfm:tariff_data@creates">
+									<DataRoleType>creates</DataRoleType>
+									<StakeholderRoleType>FareManagement</StakeholderRoleType>
+									<ResponsibleOrganisationRef version="any" ref="idfm:IDFM"/>
+								</ResponsibilityRoleAssignment>
+							</roles>
+						</ResponsibilitySet>
+						<ResponsibilitySet version="1.0" id="idfm:network_data">
+							<Name>Operator Network data</Name>
+							<roles>
+								<ResponsibilityRoleAssignment version="1.0" id="idfm:network_data@creates">
+									<DataRoleType>creates</DataRoleType>
+									<StakeholderRoleType>Planning</StakeholderRoleType>
+									<ResponsibleOrganisationRef version="any" ref="idfm:IDFM"/>
+								</ResponsibilityRoleAssignment>
+							</roles>
+						</ResponsibilitySet>
+					</responsibilitySets>
+					<typesOfValue>
+						<ValueSet version="any" id="idfm:types_of_concession" classOfValues="TypeOfConcession">
+							<values>
+								<TypeOfConcession version="any" id="idfm:full_fare">
+									<Name>Full fare</Name>
+								</TypeOfConcession>
+								<TypeOfConcession version="any" id="idfm:reduced_fare">
+									<Name>Half fare</Name>
+								</TypeOfConcession>
+							</values>
+						</ValueSet>
+					</typesOfValue>
+					<organisations>
+						<!--==== Operators ==== -->
+						<Authority version="any" id="idfm:IDFM">
+							<PublicCode>IDFM</PublicCode>
+							<Name>Île-de-France Mobilités</Name>
+							<PrimaryMode>bus</PrimaryMode>
+							<CustomerServiceContactDetails>
+								<Email>contact@ww.iledefrance-mobilites.fr</Email>
+								<Phone>+33 1 47 53 28 00</Phone>
+								<Url>https://www.iledefrance-mobilites.fr/en/contact-us</Url>
+							</CustomerServiceContactDetails>
+							<otherModes>
+								<ModeRef ref="" mode="metro"/>
+								<ModeRef ref="" mode="tram"/>
+								<ModeRef ref="" mode="urbanRail">RER</ModeRef>
+								<ModeRef ref="" mode="funicular">Funiculaire de Montmartre</ModeRef>
+							</otherModes>
+						</Authority>
+						<Operator version="any" id="tsln:Transilien">
+							<PublicCode>Transilien</PublicCode>
+							<Name>Transilien</Name>
+							<PrimaryMode>bus</PrimaryMode>
+						</Operator>
+					</organisations>
+				</ResourceFrame>
+				<ServiceFrame version="1.0" id="idfm:Paris-Example@t_plus@Network" responsibilitySetRef="idfm:network_data">
+					<Name>Île-de-France Mobilités network</Name>
+					<FrameDefaults>
+						<DefaultCodespaceRef ref="op_data"/>
+					</FrameDefaults>
+					<prerequisites>
+						<ResourceFrameRef version="1.0" ref="idfm:Paris-Example@t_plus@Resources"/>
+					</prerequisites>
+					<Network version="any" id="tsln:isle_de_france_mobilite">
+						<Name>Isle de France Network</Name>
+						<groupsOfLines>
+							<GroupOfLines version="any" id="idfm:express_tram">
+								<Name>Express trams</Name>
+								<Description>Exluded from t+ fares</Description>
+								<members>
+									<LineRef version="any" ref="idfm:T11"/>
+									<LineRef version="any" ref="idfm:T12"/>
+									<LineRef version="any" ref="idfm:T13"/>
+								</members>
+								<TransportMode>tram</TransportMode>
+								<TransportSubmode>
+									<TramSubmode>regionalTram</TramSubmode>
+								</TransportSubmode>
+								<GroupOfLinesType>tariff</GroupOfLinesType>
+							</GroupOfLines>
+						</groupsOfLines>
+					</Network>
+					<lines>
+						<Line version="any" id="idfm:funi_de_Montmartre">
+							<Name>Funiculaire de Montmartre</Name>
+							<TransportMode>funicular</TransportMode>
+							<LineType>local</LineType>
+						</Line>
+						<Line version="any" id="idfm:orly_bus">
+							<Name>OrlyBus: Paris Denfert-Rochereau to Orly</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>airportLinkBus</BusSubmode>
+							</TransportSubmode>
+							<PublicCode>OrlyBus</PublicCode>
+							<AuthorityRef version="any" ref="idfm:IDFM"/>
+							<LineType>express</LineType>
+							<PurchaseMoment>beforeBoardingOnly</PurchaseMoment>
+						</Line>
+						<Line version="any" id="idfm:roissy_bus">
+							<Name>RoissyBus:  Paris Opera to Roissy Charles de Gaulle Airport.</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>airportLinkBus</BusSubmode>
+							</TransportSubmode>
+							<PublicCode>RoissyBus</PublicCode>
+							<AuthorityRef version="any" ref="idfm:IDFM"/>
+							<LineType>express</LineType>
+							<PurchaseMoment>beforeBoardingOnly</PurchaseMoment>
+						</Line>
+						<Line version="any" id="idfm:T11">
+							<Name>ExpressTram line T11</Name>
+							<TransportMode>tram</TransportMode>
+							<TransportSubmode>
+								<TramSubmode>regionalTram</TramSubmode>
+							</TransportSubmode>
+							<PublicCode>T11</PublicCode>
+							<AuthorityRef version="any" ref="idfm:IDFM"/>
+							<LineType>express</LineType>
+						</Line>
+						<Line version="any" id="idfm:T12">
+							<Name>ExpressTram line T12</Name>
+							<TransportMode>tram</TransportMode>
+							<TransportSubmode>
+								<TramSubmode>regionalTram</TramSubmode>
+							</TransportSubmode>
+							<PublicCode>T12</PublicCode>
+							<AuthorityRef version="any" ref="idfm:IDFM"/>
+							<LineType>express</LineType>
+						</Line>
+						<Line version="any" id="idfm:T13">
+							<Name>Express Tram line T13</Name>
+							<TransportMode>tram</TransportMode>
+							<TransportSubmode>
+								<TramSubmode>regionalTram</TramSubmode>
+							</TransportSubmode>
+							<PublicCode>T13</PublicCode>
+							<AuthorityRef version="any" ref="idfm:IDFM"/>
+							<LineType>express</LineType>
+						</Line>
+					</lines>
+					<tariffZones>
+						<TariffZone version="any" id="idfm:rer_central_paris">
+							<Name>Paris central zone </Name>
+							<Description>Zone on which t+ is valid on RER</Description>
+						</TariffZone>
+					</tariffZones>
+				</ServiceFrame>
+				<ServiceFrame version="1.0" id="idfm:Paris-Example@noctilien@Network" responsibilitySetRef="tsln:network_data">
+					<Name>Noctilien network</Name>
+					<FrameDefaults>
+						<DefaultCodespaceRef ref="op_data"/>
+					</FrameDefaults>
+					<prerequisites>
+						<ResourceFrameRef version="1.0" ref="idfm:Paris-Example@t_plus@Resources"/>
+					</prerequisites>
+					<contentValidityConditions>
+						<AvailabilityCondition version="any" id="tsln:noctilien_operating_hours">
+							<Name>The Noctilien night bus lines operate from 00:30 a.m. to about 5:30 a.m.</Name>
+							<IsAvailable>true</IsAvailable>
+							<timebands>
+								<Timeband version="any" id="tsln:noctilien_operating_hours">
+									<StartTime>00:30:00</StartTime>
+									<EndTime>05:30:00</EndTime>
+								</Timeband>
+							</timebands>
+						</AvailabilityCondition>
+					</contentValidityConditions>
+					<Network version="any" id="tsln:noctilien">
+						<Name>Noctilien</Name>
+						<Description>Noctilien offers a real night bus network in Ile-de-France. In total, the 48 night bus routes mean that Ile-de-France residents can travel easily at night throughout the region:
+
+- Two lines within Paris, one in each direction (N01, N02), connect the four major bus transfer stations at the main train stations (Gare de Lyon, Gare de l'Est, Gare Saint-Lazare and Gare Montparnasse) as well as the major centres for nightlife (Champs-Elysées, Saint-Germain-des-Prés, Bastille, Pigalle, etc.). Routes N01 and N02 are suitable for people with reduced mobility, access will be progressive expanded to other routes.
+
+- Thirty-seven routes leave from Paris to the inner and outer suburbs, from the five bus transfer stations located in central Paris (Gare Saint-Lazare, Gare de l'Est, Châtelet, Gare de Lyon, Gare Montparnasse);
+
+- Eight suburb-to-suburb routes. These routes provide express and semi-express services from Paris to the inner and outer suburbs;
+
+- One route (N73) in the inner suburbs, which follows part of the TVM route between Saint-Maur Créteil and Bourg la Reine via Rungis Marché International. This route is suitable for people with reduced mobility.</Description>
+						<infoLinks>
+							<InfoLink>https://www.iledefrance-mobilites.fr/en/the-network/mobility-services/bus/noctilien-night-buses</InfoLink>
+						</infoLinks>
+						<members>
+							<LineRef versionRef="any" ref="tsln:N140"/>
+							<LineRef versionRef="any" ref="tsln:N143"/>
+							<!--... etc to add -->
+						</members>
+						<TransportMode>bus</TransportMode>
+						<TransportSubmode>
+							<BusSubmode>nightBus</BusSubmode>
+						</TransportSubmode>
+						<GroupOfLinesType>tariff</GroupOfLinesType>
+						<groupsOfLines>
+							<GroupOfLines version="any" id="tsln:noctilien_normal_fare">
+								<Name>Noctilien - lines wwth normal fares</Name>
+								<Description>SoLines with Nxx format are charged one zone - one t+</Description>
+								<members>
+									<LineRef versionRef="EXTERNAL" ref="tsln:N01"/>
+									<LineRef versionRef="EXTERNAL" ref="tsln:N02"/>
+									<LineRef versionRef="EXTERNAL" ref="tsln:N11"/>
+									<LineRef versionRef="EXTERNAL" ref="tsln:N12"/>
+									<LineRef versionRef="EXTERNAL" ref="tsln:N13"/>
+									<!-- add more etc -->
+								</members>
+								<TransportMode>bus</TransportMode>
+								<TransportSubmode>
+									<BusSubmode>nightBus</BusSubmode>
+								</TransportSubmode>
+								<GroupOfLinesType>tariff</GroupOfLinesType>
+							</GroupOfLines>
+							<GroupOfLines version="any" id="tsln:noctilien_double_fare">
+								<Name>Noctilien - lines wwth double fares</Name>
+								<Description>Lines with Nxxx format are charged  zone - two one t+</Description>
+								<members>
+									<LineRef version="any" ref="tsln:N122"/>
+									<LineRef versionRef="EXTERNAL" ref="tsln:N131"/>
+									<!-- add more etc -->
+									<LineRef version="any" ref="tsln:N140"/>
+									<LineRef version="any" ref="tsln:N143"/>
+									<LineRef version="any" ref="tsln:N153"/>
+									<!-- add more etc -->
+								</members>
+								<TransportMode>bus</TransportMode>
+								<TransportSubmode>
+									<BusSubmode>nightBus</BusSubmode>
+								</TransportSubmode>
+								<GroupOfLinesType>tariff</GroupOfLinesType>
+							</GroupOfLines>
+							<GroupOfLines version="any" id="tsln:noctilien_routes_with_special_sms_fare">
+								<Name>Noctilien SMS fares - long distance bus routes</Name>
+								<Description>Some Night bus network routes have a special high sms fare N122 and N153</Description>
+								<members>
+									<LineRef version="any" ref="tsln:N122"/>
+									<LineRef version="any" ref="tsln:N153"/>
+								</members>
+								<TransportMode>bus</TransportMode>
+								<TransportSubmode>
+									<BusSubmode>nightBus</BusSubmode>
+								</TransportSubmode>
+								<GroupOfLinesType>tariff</GroupOfLinesType>
+							</GroupOfLines>
+						</groupsOfLines>
+					</Network>
+					<lines>
+						<Line version="any" id="tsln:N140">
+							<Name>Night bus: Gare de l'Est to Charles de Gaulle</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>nightBus</BusSubmode>
+							</TransportSubmode>
+							<Url>https://www.ratp.fr/en/plans-lignes/noctilien/N140</Url>
+							<PublicCode>N140</PublicCode>
+							<OperatorRef version="any" ref="tsln:Transilien"/>
+							<LineType>express</LineType>
+						</Line>
+						<Line version="any" id="tsln:N143">
+							<Name>Night bus: Gare de l'Est to Charles de Gaulle</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>nightBus</BusSubmode>
+							</TransportSubmode>
+							<Url>https://www.ratp.fr/en/plans-lignes/noctilien/N143</Url>
+							<PublicCode>N143"&gt;</PublicCode>
+							<OperatorRef version="any" ref="tsln:Transilien"/>
+							<LineType>express</LineType>
+						</Line>
+						<Line version="any" id="tsln:N122">
+							<Name>Night bus: Gare de Saint-Rémy-Lès-Chevreuse to Châtelet</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>nightBus</BusSubmode>
+							</TransportSubmode>
+							<Url>https://www.ratp.fr/en/plans-lignes/noctilien/N122</Url>
+							<PublicCode>N122"&gt;</PublicCode>
+							<OperatorRef version="any" ref="tsln:Transilien"/>
+							<LineType>urban</LineType>
+						</Line>
+						<Line version="any" id="tsln:N153">
+							<Name>Night bus: Gare St-Lazare to Saint-Germain-en-Laye RER</Name>
+							<TransportMode>bus</TransportMode>
+							<TransportSubmode>
+								<BusSubmode>nightBus</BusSubmode>
+							</TransportSubmode>
+							<Url>https://www.ratp.fr/en/plans-lignes/noctilien/N153</Url>
+							<PublicCode>N153"&gt;</PublicCode>
+							<OperatorRef version="any" ref="tsln:Transilien"/>
+							<LineType>urban</LineType>
+						</Line>
+						<!-- add others-->
+					</lines>
+					<tariffZones>
+						<FareZone version="any" id="tsln:zone_1">
+							<Name>Noctilien zone 1</Name>
+							<PrivateCode>1</PrivateCode>
+							<!-- NB add stop points -->
+							<ZoneTopology>ring</ZoneTopology>
+							<neighbours>
+								<FareZoneRef version="any" ref="tsln:zone_2"/>
+							</neighbours>
+						</FareZone>
+						<FareZone version="any" id="tsln:zone_2">
+							<Name>Noctilien zone 2</Name>
+							<PrivateCode>2</PrivateCode>
+							<!-- NB add stop points -->
+							<ZoneTopology>ring</ZoneTopology>
+							<neighbours>
+								<FareZoneRef version="any" ref="tsln:zone_3"/>
+								<FareZoneRef version="any" ref="tsln:zone_3"/>
+							</neighbours>
+						</FareZone>
+						<FareZone version="any" id="tsln:zone_3">
+							<Name>Noctilien zone 3</Name>
+							<PrivateCode>3</PrivateCode>
+							<!-- NB add stop points -->
+							<ZoneTopology>ring</ZoneTopology>
+							<neighbours>
+								<FareZoneRef version="any" ref="tsln:zone_2"/>
+								<FareZoneRef version="any" ref="tsln:zone_4"/>
+							</neighbours>
+						</FareZone>
+						<FareZone version="any" id="tsln:zone_4">
+							<Name>Noctilien zone 4</Name>
+							<PrivateCode>4</PrivateCode>
+							<!-- NB add stop points -->
+							<ZoneTopology>ring</ZoneTopology>
+							<neighbours>
+								<FareZoneRef version="any" ref="tsln:zone_3"/>
+								<FareZoneRef version="any" ref="tsln:zone_5"/>
+							</neighbours>
+						</FareZone>
+						<FareZone version="any" id="tsln:zone_5">
+							<Name>Noctilien zone 5</Name>
+							<PrivateCode>5</PrivateCode>
+							<!-- NB add stop points -->
+							<ZoneTopology>ring</ZoneTopology>
+							<neighbours>
+								<FareZoneRef version="any" ref="tsln:zone_4"/>
+							</neighbours>
+						</FareZone>
+					</tariffZones>
+				</ServiceFrame>
+				<!-- ==== FARE PRODUCTS   === -->
+				<FareFrame version="1.0" id="idfm:Paris-Example@navigo@Fare_Definitions" responsibilitySetRef="idfm:tariffs">
+					<Name>Paris example - Platforms for e products: navigo smartcard product and IDFM mobile app</Name>
+					<FrameDefaults>
+						<DefaultCodespaceRef ref="op_data"/>
+					</FrameDefaults>
+					<prerequisites>
+						<ServiceFrameRef version="1.0" ref="idfm:Paris-Example@t_plus@Network"/>
+					</prerequisites>
+					<fareProducts>
+						<SaleDiscountRight version="1.0" id="idfm:navigo_smartcard">
+							<Name>Navigo smartcard</Name>
+							<Url>https://www.iledefrance-mobilites.fr/en/tickets-fares/media/navigo-travel-card</Url>
+							<ConditionSummary>
+								<TariffBasis>flat</TariffBasis>
+								<ProvidesCard>true</ProvidesCard>
+								<MustCarry>true</MustCarry>
+								<RequiresAccount>true</RequiresAccount>
+								<GivesEntitlement>true</GivesEntitlement>
+								<IsRefundable>false</IsRefundable>
+							</ConditionSummary>
+							<validityParameterAssignments>
+								<GenericParameterAssignment version="1.0" id="idfm:navigo_smartcard@entitling" order="1">
+									<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:entitlements"/>
+									<LimitationGroupingType>AND</LimitationGroupingType>
+									<limitations>
+										<SalesOfferPackageEntitlementGiven version="1.0" id="idfm:navigo_smartcard@entitling@t_plus">
+											<Name>Can be used for  the Île-de-France Mobilités  t+ ticket on smartcard </Name>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@smartcard"/>
+										</SalesOfferPackageEntitlementGiven>
+										<!-- other products could be listed here eg season passes -->
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<ProductType>travelCard</ProductType>
+						</SaleDiscountRight>
+						<SaleDiscountRight version="1.0" id="idfm:idfm_mobility_app">
+							<Name>Île-de-France Mobilités  mobile app</Name>
+							<Url>https://www.iledefrance-mobilites.fr/en/tickets-fares/media/smartphone</Url>
+							<infoLinks>
+								<InfoLink targetPlatform="ios">https://apps.apple.com/us/app/%C3%AEle-de-france-mobilit%C3%A9s/id484527651</InfoLink>
+								<InfoLink targetPlatform="android">https://play.google.com/store/apps/details?id=com.applidium.vianavigo</InfoLink>
+							</infoLinks>
+							<ConditionSummary>
+								<TariffBasis>free</TariffBasis>
+								<ProvidesCard>false</ProvidesCard>
+								<IsPersonal>true</IsPersonal>
+								<RequiresPhoto>false</RequiresPhoto>
+								<MustCarry>true</MustCarry>
+								<RequiresAccount>true</RequiresAccount>
+								<GivesEntitlement>true</GivesEntitlement>
+							</ConditionSummary>
+							<validityParameterAssignments>
+								<GenericParameterAssignment version="1.0" id="idfm:idfm_mobility_app@entitling" order="1">
+									<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:entitlements"/>
+									<LimitationGroupingType>AND</LimitationGroupingType>
+									<limitations>
+										<SalesOfferPackageEntitlementGiven version="1.0" id="idfm:idfm_mobility_app@entitling@t_plus">
+											<Name>Can be used for the  the Île-de-France Mobilités t+ ticket</Name>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@mobile_app"/>
+										</SalesOfferPackageEntitlementGiven>
+										<!-- other products could be listed here eg season passes -->
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<ProductType>travelCard</ProductType>
+						</SaleDiscountRight>
+					</fareProducts>
+					<!--==== SALE Distribution ==== -->
+					<distributionChannels>
+						<DistributionChannel version="any" id="idfm:at_stop">
+							<Name>Ticket machine at stop on board</Name>
+							<PaymentMethods>debitCard creditCard epayDevice cash</PaymentMethods>
+						</DistributionChannel>
+						<DistributionChannel version="any" id="idfm:ticket_office">
+							<Name>Ticket Officer</Name>
+							<PaymentMethods>debitCard creditCard cash cheque bankTransfer epayDevice</PaymentMethods>
+						</DistributionChannel>
+						<DistributionChannel version="any" id="idfm:retailer">
+							<Name>Third party Retailer</Name>
+							<PaymentMethods>debitCard creditCard cash epayDevice</PaymentMethods>
+						</DistributionChannel>
+						<DistributionChannel version="any" id="idfm:online">
+							<PaymentMethods>cardsOnly epayAccount</PaymentMethods>
+						</DistributionChannel>
+						<DistributionChannel version="any" id="idfm:onboard">
+							<Name>Pay conductor on board</Name>
+							<PaymentMethods>debitCard creditCard cash</PaymentMethods>
+						</DistributionChannel>
+						<DistributionChannel version="any" id="idfm:sms_93100">
+							<Description>Client : désigne l’acheteur d’un TAB-SMS par envoi d’une demande de titre de
+transport au numéro court 93100 ou 93800 par SMS depuis son téléphone mobile, ou
+l’utilisateur d’un TAB-SMS qui lui est propre obtenu par le téléphone d’un autre usager
+avec lequel il voyage conjointement ;</Description>
+							<PaymentMethods>sms</PaymentMethods>
+						</DistributionChannel>
+						<DistributionChannel version="any" id="idfm:sms_93800">
+							<Description>Client : désigne l’acheteur d’un TAB-SMS par envoi d’une demande de titre de
+transport au numéro court 93100 ou 93800 par SMS depuis son téléphone mobile, ou
+l’utilisateur d’un TAB-SMS qui lui est propre obtenu par le téléphone d’un autre usager
+avec lequel il voyage conjointement ;</Description>
+							<PaymentMethods>sms</PaymentMethods>
+						</DistributionChannel>
+					</distributionChannels>
+					<fulfilmentMethods>
+						<FulfilmentMethod version="any" id="idfm:ticket_machine">
+							<FulfilmentMethodType>ticketMachine</FulfilmentMethodType>
+						</FulfilmentMethod>
+						<FulfilmentMethod version="any" id="idfm:over_counter">
+							<FulfilmentMethodType>agent</FulfilmentMethodType>
+						</FulfilmentMethod>
+						<FulfilmentMethod version="any" id="idfm:mobile_app">
+							<FulfilmentMethodType>mobileApp</FulfilmentMethodType>
+						</FulfilmentMethod>
+						<FulfilmentMethod version="any" id="idfm:sms_service">
+							<Name>Sms service</Name>
+							<FulfilmentMethodType>sms</FulfilmentMethodType>
+						</FulfilmentMethod>
+						<FulfilmentMethod version="any" id="idfm:onboard">
+							<FulfilmentMethodType>conductor</FulfilmentMethodType>
+						</FulfilmentMethod>
+						<FulfilmentMethod version="any" id="idfm:post">
+							<FulfilmentMethodType>post</FulfilmentMethodType>
+						</FulfilmentMethod>
+					</fulfilmentMethods>
+					<typesOfTravelDocuments>
+						<TypeOfTravelDocument version="any" id="idfm:paper">
+							<Name>Paper ticket with magnetic strip</Name>
+							<IsSmartCard>false</IsSmartCard>
+							<MachineReadable>magneticStrip</MachineReadable>
+						</TypeOfTravelDocument>
+						<TypeOfTravelDocument version="any" id="idfm:smartcard">
+							<Name>Navigo Smart card</Name>
+							<IsSmartCard>true</IsSmartCard>
+							<MachineReadable>magneticStrip nfc</MachineReadable>
+						</TypeOfTravelDocument>
+						<TypeOfTravelDocument version="any" id="idfm:mobile_app">
+							<Name>Mobile app</Name>
+							<IsSmartCard>false</IsSmartCard>
+							<MachineReadable>nfc</MachineReadable>
+						</TypeOfTravelDocument>
+						<TypeOfTravelDocument version="any" id="idfm:sms_message">
+							<Name>SMS text message</Name>
+							<IsSmartCard>false</IsSmartCard>
+							<MachineReadable>ocr</MachineReadable>
+						</TypeOfTravelDocument>
+					</typesOfTravelDocuments>
+					<!-- === SALES OFFER PACKAGEs  === -->
+					<salesOfferPackages>
+						<!-- === navigo  === -->
+						<SalesOfferPackage version="1.0" id="idfm:navigo_resident">
+							<Name>t+ ticket - paper</Name>
+							<Description>Must reside or work in Paris area to get a Navigo residents card </Description>
+							<Url>https://www.iledefrance-mobilites.fr/en/tickets-fares/media/navigo-travel-card</Url>
+							<ConditionSummary>
+								<TariffBasis>free</TariffBasis>
+								<ProvidesCard>true</ProvidesCard>
+								<GoesOnCard>true</GoesOnCard>
+								<IsPersonal>true</IsPersonal>
+								<RequiresPhoto>true</RequiresPhoto>
+								<RequiresAccount>true</RequiresAccount>
+								<RequiresEntitlement>true</RequiresEntitlement>
+							</ConditionSummary>
+							<validityParameterAssignments>
+								<GenericParameterAssignment version="1.0" id="idfm:navigo_resident@eligibility" order="1">
+									<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:eligibility"/>
+									<LimitationGroupingType>AND</LimitationGroupingType>
+									<limitations>
+										<UserProfile version="1.0" id="idfm:paris_resident">
+											<Name>Must reside or work in Isle de France area</Name>
+											<resides>
+												<ResidentialQualification version="1.0" id="idfm:paris_resident@live">
+													<MustReside>true</MustReside>
+													<TopographicPlaceRef versionRef="EXTERNAL" ref="idfm:isle_de_france_region"/>
+													<ResidenceType>live</ResidenceType>
+												</ResidentialQualification>
+												<ResidentialQualification version="1.0" id="idfm:paris_resident@work">
+													<MustReside>true</MustReside>
+													<TopographicPlaceRef versionRef="EXTERNAL" ref="idfm:isle_de_france_region"/>
+													<ResidenceType>work</ResidenceType>
+												</ResidentialQualification>
+												<ResidentialQualification version="1.0" id="idfm:paris_resident@study">
+													<MustReside>true</MustReside>
+													<TopographicPlaceRef versionRef="EXTERNAL" ref="idfm:isle_de_france_region"/>
+													<ResidenceType>study</ResidenceType>
+												</ResidentialQualification>
+											</resides>
+										</UserProfile>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<distributionAssignments>
+								<DistributionAssignment version="1.0" id="idfm:navigo_smartcard@online@post" order="1">
+									<Name>Online</Name>
+									<Description>The Navigo Travel Card can be obtained: online from the "Order a Navigo card" section. You will need a photo to upload or take a photo during the online ordering process. You can have it posted to you</Description>
+									<DistributionChannelRef version="any" ref="idfm:online"/>
+									<FulfilmentMethodRef version="any" ref="idfm:post"/>
+								</DistributionAssignment>
+								<DistributionAssignment version="1.0" id="idfm:navigo_smartcard@online@collect" order="2">
+									<Name>Online</Name>
+									<Description>The Navigo Travel Card can be obtained: online from the "Order a Navigo card" section. You will need a photo to upload or take a photo during the online ordering process. You can collect it from a ticket office</Description>
+									<DistributionChannelRef version="any" ref="idfm:online"/>
+									<FulfilmentMethodRef version="any" ref="idfm:over_counter"/>
+								</DistributionAssignment>
+								<DistributionAssignment version="1.0" id="idfm:navigo_smartcard@ticket_office" order="3">
+									<Name>ticket office</Name>
+									<Description>The Navigo Travel Card can be obtained:at any time in a ticket or sales office. You will need proof of identity and proof of residence). The photo will be taken by staff;</Description>
+									<DistributionChannelRef version="any" ref="idfm:ticket_office"/>
+									<FulfilmentMethodRef version="any" ref="idfm:over_counter"/>
+								</DistributionAssignment>
+								<DistributionAssignment version="1.0" id="idfm:navigo_smartcard@mail@post" order="4">
+									<Name>ticket office</Name>
+									<Description>The Navigo Travel Card can be obtained: - by post with the Agence Navigo by sending a completed Navigo Travel Card application form (available at Navigo sales offices, ticket offices or customer service offices.</Description>
+									<DistributionChannelRef version="any" ref="idfm:ticket_office"/>
+									<FulfilmentMethodRef version="any" ref="idfm:post"/>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<!-- == Elements == -->
+							<salesOfferPackageElements>
+								<SalesOfferPackageElement version="1.0" id="idfm:navigo_resident@travel_card" order="2">
+									<TypeOfTravelDocumentRef version="any" ref="idfm:smartcard"/>
+									<SaleDiscountRightRef version="1.0" ref="idfm:navigo_smartcard"/>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+						<SalesOfferPackage version="1.0" id="idfm:navigo_easy">
+							<Name>t+ ticket - paper</Name>
+							<Url>https://www.iledefrance-mobilites.fr/en/tickets-fares/media/navigo-travel-card</Url>
+							<ConditionSummary>
+								<TariffBasis>flat</TariffBasis>
+								<ProvidesCard>true</ProvidesCard>
+								<GoesOnCard>true</GoesOnCard>
+								<IsPersonal>false</IsPersonal>
+								<RequiresPhoto>false</RequiresPhoto>
+								<RequiresAccount>true</RequiresAccount>
+								<RequiresEntitlement>true</RequiresEntitlement>
+							</ConditionSummary>
+							<distributionAssignments>
+								<DistributionAssignment version="1.0" id="idfm:navigo_easy@ticket_office" order="1">
+									<Name>ticket office</Name>
+									<Description>Go to a ticket office to get your Navigo Easy Travel Card.</Description>
+									<DistributionChannelRef version="any" ref="idfm:ticket_office"/>
+									<FulfilmentMethodRef version="any" ref="idfm:over_counter"/>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<!-- == Elements == -->
+							<salesOfferPackageElements>
+								<SalesOfferPackageElement version="1.0" id="idfm:navigo_easy@travel_card" order="2">
+									<TypeOfTravelDocumentRef version="any" ref="idfm:smartcard"/>
+									<SaleDiscountRightRef version="1.0" ref="idfm:navigo_smartcard"/>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+					</salesOfferPackages>
+				</FareFrame>
+				<FareFrame version="1.0" id="idfm:Paris-Example@t_plus_single_trip@Fare_Definitions" responsibilitySetRef="idfm:tariffs">
+					<Name>Paris example - t+ flat fare product</Name>
+					<FrameDefaults>
+						<DefaultCodespaceRef ref="op_data"/>
+					</FrameDefaults>
+					<prerequisites>
+						<ServiceFrameRef version="1.0" ref="idfm:Paris-Example@t_plus@Network"/>
+						<ServiceFrameRef version="1.0" ref="idfm:Paris-Example@noctilien@Network"/>
+						<FareFrameRef version="1.0" ref="idfm:Paris-Example@navigo@Fare_Definitions"/>
+					</prerequisites>
+					<AuthorityRef version="any" ref="idfm:IDFM"/>
+					<geographicalUnits>
+						<GeographicalUnit version="1.0" id="tsln:t_plus_noctilien@1_zone">
+							<Name>Noctilien Unit Zone </Name>
+							<Description>Noctilien trips are priced in terms of unit zones with the same price as a t+ trip</Description>
+							<Distance>1</Distance>
+						</GeographicalUnit>
+					</geographicalUnits>
+					<tariffs>
+						<Tariff version="1.0" id="idfm:t_plus_single_trip">
+							<Name>t+</Name>
+							<Description>How does it work ?
+The t+ Ticket allows you to travel on metro lines, RER lines (zone 3), Île-de-France bus lines (except Orlybus and Roissybus), Tramway lines (except T11, T12 and T13) and the Funiculaire de Montmartre.
+
+The following connections are possible:
+(No connection possible between metro/RER and bus)
+
+Metro - Metro for 90 minutes hours from validation;
+Metro - RER and RER - RER within Paris, for 90 minutes hours between the first and last validation;
+Bus - Bus (including transfers between the RATP and OPTILE networks), for 90 minutes between the first and last validation;
+Bus - Tram and Tram - Tram, for 90 minutes between the first and last validation.</Description>
+							<TariffBasis>flat</TariffBasis>
+							<timeIntervals>
+								<TimeInterval version="1.0" id="idfm:t_plus_single_trip@travel_time_limit@60m">
+									<Name>Bus / Tram Duration</Name>
+									<Description>SMS bus ticket buys a single 60 minute ride</Description>
+									<Url>https://www.iledefrance-mobilites.fr/en/tickets-fares/detail/on-board-ticket</Url>
+									<Duration>PT60M</Duration>
+								</TimeInterval>
+								<TimeInterval version="1.0" id="idfm:t_plus_single_trip@travel_time_limit@90m">
+									<Name>Bus / Tram Trip Duration</Name>
+									<Description>In the bus network, tickets are valid for 90 minutes between the first and last validation, including one or several transfers. T+ tickets must be validated each time you board a bus or tram. 
+									With a smart card or mobile app ticket In the metro and RER, tickets are valid for 90 minutes for a single, one-way trip, which might include transfers. It cannot be used for several different trips within this time period.</Description>
+									<Url>https://www.ratp.fr/en/how-long-are-metro-rer-or-bus-tickets-valid</Url>
+									<Duration>PT90M</Duration>
+								</TimeInterval>
+								<TimeInterval version="1.0" id="idfm:t_plus_single_trip@travel_time_limit@120m">
+									<Name>Metro / RER Trip Duration</Name>
+									<Description>With a paper ticket In the metro and RER, tickets are valid for two hours for a single, one-way trip, which might include transfers. It cannot be used for several different trips within this time period.</Description>
+									<Url>https://www.ratp.fr/en/how-long-are-metro-rer-or-bus-tickets-valid</Url>
+									<Duration>PT120M</Duration>
+								</TimeInterval>
+							</timeIntervals>
+							<fareStructureElements>
+								<FareStructureElement version="1.0" id="idfm:t_plus_single_trip@access">
+									<Name>Access rights Bus Tram</Name>
+									<Description>Bus/Tram can be used for 90 minutes (between first and last validation), OR the Metro/RER can be used for 9 minutes 0 [eticket]/120 minutes  ]Papsr ticket](you need to exit the network before 90 minutes after the first validation)</Description>
+									<TypeOfFareStructureElementRef versionRef="efp:v1.0" ref="efp:access"/>
+									<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@access" order="1">
+										<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:can_access"/>
+										<ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
+										<includes>
+											<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@access@metro_and_RER" order="1">
+												<Name>Can use Metro and local train (RER) and connect from one to the other</Name>
+												<Description>In the metro and RER, tickets are valid for 90 minute on eticket or 120 mins paper ticket for a single, one-way trip, which might include transfers. It cannot be used for several different trips within this time period.</Description>
+												<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:can_access"/>
+												<limitations>
+													<UsageValidityPeriod version="1.0" id="idfm:t_plus_single_trip@access@metro_and_RER">
+														<Description>Metro - Metro for 90 minutes hours from validation;
+Metro - RER and RER - RER within Paris, for 90 minutes hours between the first and last validation;</Description>
+														<!-- note that duration is specified by separate access_when GENERIC PARAMETER ASSIGNMENT -->
+														<ValidityPeriodType>singleTrip</ValidityPeriodType>
+														<UsageTrigger>activation</UsageTrigger>
+														<UsageEnd>standardDuration</UsageEnd>
+														<ActivationMeans>useOfValidator</ActivationMeans>
+													</UsageValidityPeriod>
+													<Interchanging version="1.0" id="idfm:t_plus_single_trip@access@metro_and_RER">
+														<Description>Return trips or a break in your journey on the same bus or tram route are not allowed with the same Ticket t+.</Description>
+														<CanInterchange>true</CanInterchange>
+														<CanBreakJourney>false</CanBreakJourney>
+													</Interchanging>
+													<RoundTrip version="1.0" id="idfm:t_plus_single_trip@access@metro_and_RER">
+														<Name>One way trip</Name>
+														<TripType>single</TripType>
+													</RoundTrip>
+												</limitations>
+												<IncludesGroupingType>OR</IncludesGroupingType>
+												<includes>
+													<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@access@metro_and_RER@metro" order="1">
+														<Description>Valid for Metro any zone</Description>
+														<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
+														<validityParameters>
+															<TransportModes>metro</TransportModes>
+															<AuthorityRef version="any" ref="idfm:IDFM"/>
+															<OperatorRef versionRef="EXTERNAL" ref="idfm:RATP"/>
+														</validityParameters>
+													</GenericParameterAssignment>
+													<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@access@metro_and_RER@RER" order="2">
+														<Description>Valid for RER central zone only</Description>
+														<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
+														<validityParameters>
+															<TransportModes>rail</TransportModes>
+															<TransportSubmode>
+																<RailSubmode>local</RailSubmode>
+															</TransportSubmode>
+															<AuthorityRef version="any" ref="idfm:IDFM"/>
+															<OperatorRef versionRef="EXTERNAL" ref="idfm:RATP"/>
+															<TariffZoneRef version="any" ref="idfm:rer_central_paris"/>
+														</validityParameters>
+													</GenericParameterAssignment>
+												</includes>
+											</GenericParameterAssignment>
+											<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@access@bus_and_tram" order="2">
+												<Description>In the bus network, tickets are valid for 90 minutes between the first and last validation, including one or several transfers. T+ tickets must be validated each time you board a bus or tram.
+												
+See  https://www.iledefrance-mobilites.fr/en/tickets-fares/detail/ticket-t
+A single Ticket t+ is valid from end to end of a bus route (with the exception of certain regular routes, see below).
+You can connect between bus and tram for 90 minutes between the first and last validation. 
+Please note: the t+ ticket is not accepted on express trams
+Return trips or a break in your journey on the same bus or tram route are not allowed with the same Ticket t+.
+												</Description>
+												<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:can_access"/>
+												<limitations>
+													<UsageValidityPeriod version="1.0" id="idfm:t_plus_single_trip@access@bus_and_tram">
+														<Description>You can connect between bus and tram for 90 minutes between the first and last validation. 
+Bus - Bus (including transfers between the RATP and OPTILE networks), for 90 minutes between the first and last validation;
+Bus - Tram and Tram - Tram, for 90 minutes between the first and last validation.</Description>
+														<ValidityPeriodType>singleTrip</ValidityPeriodType>
+														<UsageTrigger>activation</UsageTrigger>
+														<UsageEnd>endOfTrip</UsageEnd>
+														<ActivationMeans>useOfValidator</ActivationMeans>
+													</UsageValidityPeriod>
+													<Interchanging version="1.0" id="idfm:t_plus_single_trip@access@bus_and_tram">
+														<Description>Return trips or a break in your journey on the same bus or tram route are not allowed with the same Ticket t+.</Description>
+														<CanInterchange>true</CanInterchange>
+														<CanBreakJourney>false</CanBreakJourney>
+													</Interchanging>
+													<RoundTrip version="1.0" id="idfm:t_plus_single_trip@access@bus_and_tram">
+														<Name>One way trip</Name>
+														<TripType>single</TripType>
+													</RoundTrip>
+												</limitations>
+												<validityParameters>
+													<TransportModes>bus tram</TransportModes>
+													<AuthorityRef version="any" ref="idfm:IDFM"/>
+												</validityParameters>
+												<IncludesGroupingType>AND</IncludesGroupingType>
+												<includes>
+													<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@access@excluded" order="1">
+														<Name>Excluded lines</Name>
+														<Description>Please note: the t+ ticket is not accepted on express trams</Description>
+														<IsAllowed>false</IsAllowed>
+														<ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
+														<validityParameters>
+															<LineRef version="any" ref="idfm:orly_bus"/>
+															<LineRef version="any" ref="idfm:roissy_bus"/>
+															<GroupOfLinesRef version="any" ref="idfm:express_tram"/>
+														</validityParameters>
+													</GenericParameterAssignment>
+												</includes>
+											</GenericParameterAssignment>
+											<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@access@funicular_only" order="1">
+												<Name>Can make a single funicular ride</Name>
+												<Description>A Ticket t+ can be used for a single trip. (The Ticket t+ does not allow for a free interchange between the Métro or bus network and the funicular.)</Description>
+												<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:can_access"/>
+												<limitations>
+													<UsageValidityPeriod id="idfm:t_plus_single_trip@access@funicular_only" version="1.0">
+														<ValidityPeriodType>singleRide</ValidityPeriodType>
+														<UsageTrigger>activation</UsageTrigger>
+														<ActivationMeans>useOfValidator</ActivationMeans>
+													</UsageValidityPeriod>
+												</limitations>
+												<validityParameters>
+													<LineRef version="any" ref="idfm:funi_de_Montmartre"/>
+													<TransportModes>funicular</TransportModes>
+													<AuthorityRef version="any" ref="idfm:IDFM"/>
+												</validityParameters>
+											</GenericParameterAssignment>
+										</includes>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<!--  ==== ELIGIBILITY -================= -->
+								<FareStructureElement version="1.0" id="idfm:t_plus_single_trip@eligibility">
+									<Name>Eligibility</Name>
+									<Description>? Children under age 4 can travel free throughout the metro, RER, bus, and tramway networks, provided they do not occupy a seat. 
+? Children under 10 can travel with reduced fare tickets: 50% discount on packs of 10 t+ tickets loaded on your Navigo Easy pass/smartphone and 50% discount on origin/destination tickets (single tickets or ticket packs)</Description>
+									<Url>https://www.ratp.fr/en/titres-et-tarifs/reduced-fares-children</Url>
+									<TypeOfFareStructureElementRef versionRef="efp:v1.0" ref="efp:eligibility"/>
+									<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@eligibility" order="1">
+										<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:eligibility"/>
+										<LimitationGroupingType>XOR</LimitationGroupingType>
+										<limitations>
+											<UserProfile version="any" id="idfm:t_plus@adult">
+												<Name>Adult</Name>
+												<MinimumAge>13</MinimumAge>
+											</UserProfile>
+											<UserProfile version="any" id="idfm:t_plus@infant">
+												<Name>Infant</Name>
+												<MaximumAge>3</MaximumAge>
+												<DiscountBasis>free</DiscountBasis>
+												<companionProfiles>
+													<CompanionProfile version="any" id="idfm:t_plus@infant">
+														<Name>Babe in arms must be with adult</Name>
+														<UserProfileRef version="any" ref="idfm:t_plus@adult"/>
+														<MinimumNumberOfPersons>3</MinimumNumberOfPersons>
+													</CompanionProfile>
+												</companionProfiles>
+											</UserProfile>
+											<UserProfile version="any" id="idfm:t_plus@concessionary">
+												<Name>Concessionary fare </Name>
+												<TypeOfConcessionRef ref="idfm:reduced_fare"/>
+												<DiscountBasis>discount</DiscountBasis>
+											</UserProfile>
+											<UserProfile version="any" id="idfm:t_plus@child">
+												<Name>Child</Name>
+												<Description>Children, aged 4 to under 10</Description>
+												<BaseUserProfileRef version="any" ref="idfm:t_plus@concessionary"/>
+												<TypeOfConcessionRef ref="idfm:reduced_fare"/>
+												<MinimumAge>4</MinimumAge>
+												<MaximumAge>10</MaximumAge>
+												<DiscountBasis>discount</DiscountBasis>
+											</UserProfile>
+											<UserProfile version="any" id="idfm:t_plus@veteran">
+												<Name>Veteran</Name>
+												<Description>Disabled veterans with a priority card issued by the prefecture of police or a disability card issued by the National Office for Veterans and War Victims, with a single or double blue or red bar, presented alone;</Description>
+												<Url>https://www.ratp.fr/en/titres-et-tarifs/t-tickets</Url>
+												<BaseUserProfileRef version="any" ref="idfm:t_plus@concessionary"/>
+												<TypeOfConcessionRef version="any" ref="idfm:reduced_fare"/>
+												<MinimumAge>18</MinimumAge>
+												<ProofRequired>identityDocument</ProofRequired>
+												<DiscountBasis>discount</DiscountBasis>
+											</UserProfile>
+											<UserProfile version="any" id="idfm:t_plus@registered_disabled">
+												<Name>Registered disabled</Name>
+												<Description>Blind civilians with a “social assistance for the blind and severely disabled” disability card certified “blind”, together with a travel coupon for the guide;</Description>
+												<Url>https://www.ratp.fr/en/titres-et-tarifs/t-tickets</Url>
+												<BaseUserProfileRef version="any" ref="idfm:t_plus@concessionary"/>
+												<TypeOfConcessionRef version="any" ref="idfm:reduced_fare"/>
+												<ProofRequired>identityDocument</ProofRequired>
+												<DiscountBasis>discount</DiscountBasis>
+											</UserProfile>
+											<UserProfile version="any" id="idfm:t_plus@large_familiy">
+												<Name>Registered disabled</Name>
+												<Description>“Large family” (Famille nombreuse) blue discount cardholders,</Description>
+												<Url>https://www.ratp.fr/en/titres-et-tarifs/t-tickets</Url>
+												<BaseUserProfileRef version="any" ref="idfm:t_plus@concessionary"/>
+												<TypeOfConcessionRef version="any" ref="idfm:reduced_fare"/>
+												<ProofRequired>identityDocument</ProofRequired>
+												<DiscountBasis>discount</DiscountBasis>
+											</UserProfile>
+											<UserProfile version="any" id="idfm:t_plus@unemployed">
+												<Name>Solidarité Transport</Name>
+												<Description>Solidarité Transport discount card holders;</Description>
+												<Url>https://www.ratp.fr/en/titres-et-tarifs/t-tickets</Url>
+												<BaseUserProfileRef version="any" ref="idfm:t_plus@concessionary"/>
+												<TypeOfConcessionRef version="any" ref="idfm:reduced_fare"/>
+												<ProofRequired>identityDocument</ProofRequired>
+												<DiscountBasis>discount</DiscountBasis>
+											</UserProfile>
+										</limitations>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<!--  ==== Conditions of SALE  -================= -->
+								<FareStructureElement version="1.0" id="idfm:t_plus_single_trip@conditions_of_sale">
+									<Name>Conditions of Sale</Name>
+									<TypeOfFareStructureElementRef versionRef="efp:v1.0" ref="efp:conditions_of_sale"/>
+									<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@conditions_of_sale" order="1">
+										<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:conditions_of_sale"/>
+										<LimitationGroupingType>XOR</LimitationGroupingType>
+										<limitations>
+											<Refunding version="1.0" id="idfm:t_plus_single_trip@conditions_of_sale">
+												<Name>NoRefund</Name>
+												<Description>Public transport regulations for the Ile-de-France region do not provide for the reimbursement of unused or partially used transportation tickets (purchased individually or in packages of 10)..</Description>
+												<Url>https://www.ratp.fr/en/i-have-unused-tickets-can-i-have-them-refunded</Url>
+												<Allowed>none</Allowed>
+											</Refunding>
+										</limitations>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+							</fareStructureElements>
+						</Tariff>
+						<Tariff version="1.0" id="tsln:t_plus_noctilien">
+							<Name>Noctilien - Night bus tariff</Name>
+							<Description>See  https://www.iledefrance-mobilites.fr/en/tickets-fares/detail/ticket-t
+ Ticket t+  
+  des   lignes   Noctilien,   sur   lesquelles   les correspondances sont interdites, que le voyageur 
+peut utiliser en validant un ticket t+ pour deux zones carte  orange  et  un  ticket  t+  par  zone 
+supplementaire ; par exception,  pour les trajets banlieue-banlieue via Paris, le nombre de ticket 
+t+ est egal au nombre de zones traversees sans les compter deux fois 	</Description>
+							<TariffBasis>unitSection</TariffBasis>
+							<geographicalIntervals>
+								<!-- some lines  ar charged at 2 units per zone, some at 1 -->
+								<GeographicalInterval version="1.0" id="tsln:t_plus_noctilien@1_zone">
+									<Name>Noctilien Unit Zone </Name>
+									<Description>Noctilien trips are priced in terms of unit zones with the same price as a t+ trip</Description>
+									<NumberOfUnits>1</NumberOfUnits>
+									<IntervalType>tariffZone</IntervalType>
+								</GeographicalInterval>
+							</geographicalIntervals>
+							<geographicalStructureFactors>
+								<!-- some lines  ar charged at 2 units per zone, some at 1 -->
+								<GeographicalStructureFactor version="1.0" id="tsln:t_plus_noctilien@1_zone@normal">
+									<Name>Noctilien Unit Zone - normal </Name>
+									<Description>prices are priced in terms of unit zones with the same price as  t+ trip</Description>
+									<GeographicalIntervalRef version="1.0" ref="tsln:t_plus_noctilien@1_zone"/>
+									<NumberOfUnits>1</NumberOfUnits>
+								</GeographicalStructureFactor>
+								<GeographicalStructureFactor version="1.0" id="tsln:t_plus_noctilien@1_zone@double">
+									<Name>Noctilien Unit Zone - Double rate </Name>
+									<Description>Noctilien trips are priced in terms of unit zones with the same price as a t+ trip</Description>
+									<GeographicalIntervalRef version="1.0" ref="tsln:t_plus_noctilien@1_zone"/>
+									<NumberOfUnits>2</NumberOfUnits>
+								</GeographicalStructureFactor>
+							</geographicalStructureFactors>
+							<fareStructureElements>
+								<FareStructureElement version="1.0" id="tsln:t_plus_noctilien@access">
+									<Name>Access rights</Name>
+									<Description>One ticket for travel between the first two zones, and then one ticket for each zone crossed thereafter. Example: zones 1-2 = 1 ticket; zones 1-3 = 2 tickets.
+Each time you change buses, you must validate a new ticket. The t+ ticket is not valid for transfers between Noctilien night buses.</Description>
+									<TypeOfFareStructureElementRef versionRef="efp:v1.0" ref="efp:access"/>
+									<distanceMatrixElements>
+										<DistanceMatrixElementRef version="any" ref="tsln:noctilien_z1+z1"/>
+										<DistanceMatrixElementRef version="any" ref="tsln:noctilien_z1+z2"/>
+										<DistanceMatrixElementRef version="any" ref="tsln:noctilien_z1+z3"/>
+										<DistanceMatrixElementRef version="any" ref="tsln:noctilien_z1+z4"/>
+										<DistanceMatrixElementRef version="any" ref="tsln:noctilien_z1+z5"/>
+										<DistanceMatrixElementRef version="any" ref="tsln:noctilien_z2+z2"/>
+										<DistanceMatrixElementRef version="any" ref="tsln:noctilien_z2+z3"/>
+										<DistanceMatrixElementRef version="any" ref="tsln:noctilien_z2+z4"/>
+										<DistanceMatrixElementRef version="any" ref="tsln:noctilien_z2+z5"/>
+										<DistanceMatrixElementRef version="any" ref="tsln:noctilien_z3+z3"/>
+										<DistanceMatrixElementRef version="any" ref="tsln:noctilien_z3+z4"/>
+										<DistanceMatrixElementRef version="any" ref="tsln:noctilien_z3+z5"/>
+										<DistanceMatrixElementRef version="any" ref="tsln:noctilien_z4+z4"/>
+										<DistanceMatrixElementRef version="any" ref="tsln:noctilien_z4+z5"/>
+										<DistanceMatrixElementRef version="any" ref="tsln:noctilien_z5+z5"/>
+									</distanceMatrixElements>
+									<GenericParameterAssignment version="1.0" id="tsln:t_plus_noctilien@access" order="1">
+										<Name>t+ noctilien uses a  unit zone interval consumption</Name>
+										<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:can_access"/>
+										<limitations>
+											<UsageValidityPeriod version="1.0" id="idfm:t_plus_noctilien@access">
+												<ValidityPeriodType>singleRide</ValidityPeriodType>
+												<UsageTrigger>activation</UsageTrigger>
+												<UsageEnd>endOfRide</UsageEnd>
+												<ActivationMeans>useOfValidator</ActivationMeans>
+											</UsageValidityPeriod>
+											<Interchanging version="1.0" id="tsln:t_plus_noctilien@access">
+												<CanInterchange>false</CanInterchange>
+												<CanBreakJourney>false</CanBreakJourney>
+											</Interchanging>
+											<RoundTrip version="1.0" id="idfm:t_plus_noctilien@access">
+												<Name>One way trip</Name>
+												<TripType>single</TripType>
+											</RoundTrip>
+										</limitations>
+										<temporalValidityParameters>
+											<AvailabilityConditionRef version="any" ref="tsln:noctilien_operating_hours"/>
+										</temporalValidityParameters>
+										<validityParameters>
+											<TransportModes>bus</TransportModes>
+											<TransportSubmode>
+												<BusSubmode>nightBus</BusSubmode>
+											</TransportSubmode>
+											<OperatorRef version="any" ref="tsln:Transilien"/>
+											<NetworkRef version="any" ref="tsln:noctilien"/>
+										</validityParameters>
+										<IncludesGroupingType>XOR</IncludesGroupingType>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<!-- elements for pricing -->
+								<FareStructureElement version="1.0" id="tsln:t_plus_noctilien@normal">
+									<Name>Normal price </Name>
+									<Description>Normal zone rate</Description>
+									<GenericParameterAssignment version="1.0" id="tsln:t_plus_noctilien@normal" order="1">
+										<Name>Noctilien line - normal</Name>
+										<Description>Regular lines charge 1 unit per zone</Description>
+										<validityParameters>
+											<GroupOfLinesRef version="any" ref="tsln:noctilien_normal_fare"/>
+										</validityParameters>
+										<GeographicalStructureFactorRef version="1.0" ref="tsln:t_plus_noctilien@1_zone@normal">Any one zone</GeographicalStructureFactorRef>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<FareStructureElement version="1.0" id="tsln:t_plus_noctilien@double">
+									<Name>double price </Name>
+									<Description>double zone rate</Description>
+									<GenericParameterAssignment version="1.0" id="tsln:t_plus_noctilien@double" order="1">
+										<Name>Noctilien line - double</Name>
+										<Description>Some  lines charge 2 unit per zone</Description>
+										<validityParameters>
+											<GroupOfLinesRef version="any" ref="tsln:noctilien_double_fare"/>
+										</validityParameters>
+										<GeographicalStructureFactorRef version="1.0" ref="tsln:t_plus_noctilien@1_zone@double">Any one zone</GeographicalStructureFactorRef>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<FareStructureElement version="1.0" id="tsln:t_plus_noctilien@long_distance_bus_route">
+									<Name>Special prices for sms for certain noctilien lines</Name>
+									<Description>Special prices for sms for certain noctilien lines</Description>
+									<Url>https://www.iledefrance-mobilites.fr/medias/portail-idfm/2fb7cacc-ed42-4cc3-b2fe-b1c694954f43_CGVU+SMS+ticketing_03_2020.pdf</Url>
+									<GenericParameterAssignment version="1.0" id="tsln:t_plus_noctilien@long_distance_bus_route" order="1">
+										<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:pricing"/>
+										<validityParameters>
+											<TransportModes>bus</TransportModes>
+											<TransportSubmode>
+												<BusSubmode>nightBus</BusSubmode>
+											</TransportSubmode>
+											<OperatorRef version="any" ref="tsln:Transilien"/>
+											<GroupOfLinesRef version="any" ref="tsln:noctilien_routes_with_special_sms_fare"/>
+										</validityParameters>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+							</fareStructureElements>
+							<distanceMatrixElements>
+								<!-- NB could instead  deduce the unit distances from the topology of the zones, but this is clearer -->
+								<DistanceMatrixElement version="any" id="tsln:noctilien_z1+z1">
+									<Name>Noctilien zone 1 to zone 1</Name>
+									<Distance>1</Distance>
+									<StartTariffZoneRef version="any" ref="tsln:zone_1"/>
+									<EndTariffZoneRef version="any" ref="tsln:zone_1"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement version="any" id="tsln:noctilien_z1+z2">
+									<Name>Noctilien zone 1 to zone 2</Name>
+									<Distance>1</Distance>
+									<StartTariffZoneRef version="any" ref="tsln:zone_1"/>
+									<EndTariffZoneRef version="any" ref="tsln:zone_2"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement version="any" id="tsln:noctilien_z1+z3">
+									<Name>Noctilien zone 1 to zone 3</Name>
+									<Distance>2</Distance>
+									<StartTariffZoneRef version="any" ref="tsln:zone_1"/>
+									<EndTariffZoneRef version="any" ref="tsln:zone_3"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement version="any" id="tsln:noctilien_z1+z4">
+									<Name>Noctilien zone 1 to zone 4</Name>
+									<Distance>1</Distance>
+									<StartTariffZoneRef version="any" ref="tsln:zone_1"/>
+									<EndTariffZoneRef version="any" ref="tsln:zone_4"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement version="any" id="tsln:noctilien_z1+z5">
+									<Name>Noctilien zone 1 to zone 4</Name>
+									<Distance>4</Distance>
+									<StartTariffZoneRef version="any" ref="tsln:zone_1"/>
+									<EndTariffZoneRef version="any" ref="tsln:zone_5"/>
+								</DistanceMatrixElement>
+								<!--matrix zone 2 -->
+								<DistanceMatrixElement version="any" id="tsln:noctilien_z2+z2">
+									<Name>Noctilien zone 2 to zone 2</Name>
+									<Distance>3</Distance>
+									<StartTariffZoneRef version="any" ref="tsln:zone_2"/>
+									<EndTariffZoneRef version="any" ref="tsln:zone_2"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement version="any" id="tsln:noctilien_z2+z3">
+									<Name>Noctilien zone 2 to zone 3</Name>
+									<Distance>2</Distance>
+									<StartTariffZoneRef version="any" ref="tsln:zone_2"/>
+									<EndTariffZoneRef version="any" ref="tsln:zone_3"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement version="any" id="tsln:noctilien_z2+z4">
+									<Name>Noctilien zone 2 to zone 4</Name>
+									<Distance>3</Distance>
+									<StartTariffZoneRef version="any" ref="tsln:zone_2"/>
+									<EndTariffZoneRef version="any" ref="tsln:zone_4"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement version="any" id="tsln:noctilien_z2+z5">
+									<Name>Noctilien zone 2 to zone 4</Name>
+									<Distance>4</Distance>
+									<StartTariffZoneRef version="any" ref="tsln:zone_2"/>
+									<EndTariffZoneRef version="any" ref="tsln:zone_5"/>
+								</DistanceMatrixElement>
+								<!--matrix zone 3 -->
+								<DistanceMatrixElement version="any" id="tsln:noctilien_z3+z3">
+									<Name>Noctilien zone 3 to zone 3</Name>
+									<Distance>3</Distance>
+									<StartTariffZoneRef version="any" ref="tsln:zone_3"/>
+									<EndTariffZoneRef version="any" ref="tsln:zone_3"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement version="any" id="tsln:noctilien_z3+z4">
+									<Name>Noctilien zone 3 to zone 4</Name>
+									<Distance>3</Distance>
+									<StartTariffZoneRef version="any" ref="tsln:zone_3"/>
+									<EndTariffZoneRef version="any" ref="tsln:zone_4"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement version="any" id="tsln:noctilien_z3+z5">
+									<Name>Noctilien zone 3 to zone 4</Name>
+									<Distance>4</Distance>
+									<StartTariffZoneRef version="any" ref="tsln:zone_3"/>
+									<EndTariffZoneRef version="any" ref="tsln:zone_5"/>
+								</DistanceMatrixElement>
+								<!--matrix zone 4 -->
+								<DistanceMatrixElement version="any" id="tsln:noctilien_z4+z4">
+									<Name>Noctilien zone 4 to zone 4</Name>
+									<Distance>3</Distance>
+									<StartTariffZoneRef version="any" ref="tsln:zone_4"/>
+									<EndTariffZoneRef version="any" ref="tsln:zone_4"/>
+								</DistanceMatrixElement>
+								<DistanceMatrixElement version="any" id="tsln:noctilien_z4+z5">
+									<Name>Noctilien zone 4 to zone 4</Name>
+									<Distance>4</Distance>
+									<StartTariffZoneRef version="any" ref="tsln:zone_4"/>
+									<EndTariffZoneRef version="any" ref="tsln:zone_5"/>
+								</DistanceMatrixElement>
+								<!--matrix zone 5 -->
+								<DistanceMatrixElement version="any" id="tsln:noctilien_z5+z5">
+									<Name>Noctilien zone 5 to zone 5</Name>
+									<Distance>3</Distance>
+									<StartTariffZoneRef version="any" ref="tsln:zone_5"/>
+									<EndTariffZoneRef version="any" ref="tsln:zone_5"/>
+								</DistanceMatrixElement>
+							</distanceMatrixElements>
+						</Tariff>
+					</tariffs>
+					<!--==== FARE PRODUCTs ==== -->
+					<fareProducts>
+						<PreassignedFareProduct version="1.0" id="idfm:t_plus_single_trip">
+							<Name>t+ ticket</Name>
+							<Url>https://www.iledefrance-mobilites.fr/cgvu-ticket-t-sans-contact/</Url>
+							<infoLinks>
+								<InfoLink typeOfInfoLink="document">https://www.iledefrance-mobilites.fr/medias/portail-idfm/52792370-337a-4376-8bf5-83f9e2be73b6_CGU_ticket-t.pdf</InfoLink>
+							</infoLinks>
+							<!--==== VALIDABLE ELEMENTs ==== -->
+							<ChargingMomentType>beforeTravel</ChargingMomentType>
+							<AuthorityRef version="any" ref="idfm:IDFM"/>
+							<ConditionSummary>
+								<FareStructureType>networkFlatFare</FareStructureType>
+								<TariffBasis>flat</TariffBasis>
+								<RequiresAccount>false</RequiresAccount>
+								<RequiresEntitlement>false</RequiresEntitlement>
+								<HasRouteRestrictions>true</HasRouteRestrictions>
+								<CanBreakJourney>false</CanBreakJourney>
+								<IsRefundable>false</IsRefundable>
+								<IsExchangable>false</IsExchangable>
+							</ConditionSummary>
+							<validableElements>
+								<ValidableElement version="1.0" id="idfm:t_plus_single_trip">
+									<Name>Unlimited rides available for specified duration</Name>
+									<fareStructureElements>
+										<FareStructureElementRef version="1.0" ref="idfm:t_plus_single_trip@access"/>
+										<FareStructureElementRef version="1.0" ref="tsln:t_plus_noctilien@access"/>
+										<FareStructureElementRef version="1.0" ref="idfm:t_plus_single_trip@eligibility"/>
+										<FareStructureElementRef version="1.0" ref="idfm:t_plus_single_trip@conditions_of_sale"/>
+									</fareStructureElements>
+								</ValidableElement>
+							</validableElements>
+							<!--==== ACCESS RIGHTs ===== -->
+							<accessRightsInProduct>
+								<AccessRightInProduct version="1.0" id="idfm:t_plus_single_trip" order="1">
+									<ValidableElementRef version="1.0" ref="idfm:t_plus_single_trip"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+							<ProductType>singleTrip</ProductType>
+						</PreassignedFareProduct>
+					</fareProducts>
+					<!-- === SALES OFFER PACKAGEs  === -->
+					<salesOfferPackages>
+						<!-- === t+  === -->
+						<SalesOfferPackage version="1.0" id="idfm:t_plus_single_trip@paper">
+							<Name>t+ ticket - paper</Name>
+							<Url>https://www.iledefrance-mobilites.fr/cgvu-ticket-t-sans-contact/</Url>
+							<ConditionSummary>
+								<FareStructureType>networkFlatFare</FareStructureType>
+								<TariffBasis>flat</TariffBasis>
+								<GoesOnCard>false</GoesOnCard>
+								<RequiresAccount>false</RequiresAccount>
+								<RequiresEntitlement>false</RequiresEntitlement>
+								<HasRouteRestrictions>true</HasRouteRestrictions>
+								<CanBreakJourney>false</CanBreakJourney>
+								<IsRefundable>false</IsRefundable>
+								<IsExchangable>false</IsExchangable>
+							</ConditionSummary>
+							<validityParameterAssignments>
+								<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@paper@access_duration" order="1">
+									<Name>Maximum Duration for trip</Name>
+									<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:access_duration"/>
+									<IncludesGroupingType>XOR</IncludesGroupingType>
+									<includes>
+										<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@paper@access_duration@metro_rer" order="1">
+											<Description>Time limit on travel for metro rer - 120 mins for eticket</Description>
+											<validityParameters>
+												<TransportModes>metro rail</TransportModes>
+											</validityParameters>
+											<TimeIntervalRef version="1.0" ref="idfm:t_plus_single_trip@travel_time_limit@120m"/>
+										</GenericParameterAssignment>
+										<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@paper@access_duration@bus_tram" order="2">
+											<Description>Time limit on travel for bus tram  - 90 mins for eticket</Description>
+											<validityParameters>
+												<TransportModes>bus tram</TransportModes>
+											</validityParameters>
+											<TimeIntervalRef version="1.0" ref="idfm:t_plus_single_trip@travel_time_limit@90m"/>
+										</GenericParameterAssignment>
+									</includes>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<distributionAssignments>
+								<DistributionAssignment version="1.0" id="idfm:t_plus_single_trip@paper@ticket_machine" order="1">
+									<Name>Ticket Machine</Name>
+									<DistributionChannelRef version="any" ref="idfm:at_stop"/>
+									<FulfilmentMethodRef version="any" ref="idfm:ticket_machine"/>
+								</DistributionAssignment>
+								<DistributionAssignment version="1.0" id="idfm:t_plus_single_trip@paper@retailer" order="1">
+									<Name>Retailer</Name>
+									<DistributionChannelRef version="any" ref="idfm:retailer"/>
+									<FulfilmentMethodRef version="any" ref="idfm:over_counter"/>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<!-- == Elements == -->
+							<salesOfferPackageElements>
+								<SalesOfferPackageElement version="1.0" id="idfm:t_plus_single_trip@paper@single_trip" order="2">
+									<TypeOfTravelDocumentRef version="any" ref="idfm:paper"/>
+									<PreassignedFareProductRef version="1.0" ref="idfm:t_plus_single_trip"/>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+						<SalesOfferPackage version="1.0" id="idfm:t_plus_single_trip@paper_onboard">
+							<Name>t+ ticket - paper, bus/tram purchased onboard</Name>
+							<Url>https://www.iledefrance-mobilites.fr/en/tickets-fares/detail/on-board-ticket</Url>
+							<ConditionSummary>
+								<FareStructureType>networkFlatFare</FareStructureType>
+								<TariffBasis>flat</TariffBasis>
+								<GoesOnCard>false</GoesOnCard>
+								<RequiresAccount>false</RequiresAccount>
+								<RequiresEntitlement>false</RequiresEntitlement>
+								<HasRouteRestrictions>true</HasRouteRestrictions>
+								<CanBreakJourney>false</CanBreakJourney>
+								<IsRefundable>false</IsRefundable>
+								<IsExchangable>false</IsExchangable>
+							</ConditionSummary>
+							<validityParameterAssignments>
+								<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@paper_onboard@access" order="1">
+									<Name>Maximum Duration for trip</Name>
+									<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:access_duration"/>
+									<limitations>
+										<UsageValidityPeriod version="1.0" id="idfm:t_plus_single_trip@paper_onboard@access">
+											<Description>Single ride.</Description>
+											<ValidityPeriodType>singleRide</ValidityPeriodType>
+											<UsageTrigger>activation</UsageTrigger>
+											<UsageEnd>endOfRide</UsageEnd>
+											<ActivationMeans>useOfValidator</ActivationMeans>
+										</UsageValidityPeriod>
+										<Interchanging version="1.0" id="idfm:t_plus_single_trip@paper_onboard@access">
+											<Description>Return trips or a break in your journey on the same bus or tram route are not allowed with the same Ticket t+.</Description>
+											<CanInterchange>false</CanInterchange>
+											<CanBreakJourney>false</CanBreakJourney>
+										</Interchanging>
+										<RoundTrip version="1.0" id="idfm:t_plus_single_trip@paper_onboard@access">
+											<Name>One way trip</Name>
+											<TripType>single</TripType>
+										</RoundTrip>
+									</limitations>
+									<validityParameters>
+										<TransportModes>bus</TransportModes>
+									</validityParameters>
+								</GenericParameterAssignment>
+								<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@paper_onboard@access_duration" order="1">
+									<Name>Maximum Duration for trip</Name>
+									<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:access_duration"/>
+									<TimeIntervalRef version="1.0" ref="idfm:t_plus_single_trip@travel_time_limit@90m"/>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<distributionAssignments>
+								<DistributionAssignment version="1.0" id="idfm:t_plus_single_trip@paper_onboard" order="1">
+									<Name>Tonboard purchasee</Name>
+									<DistributionChannelRef version="any" ref="idfm:onboard"/>
+									<FulfilmentMethodRef version="any" ref="idfm:onboard"/>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<!-- == Elements == -->
+							<salesOfferPackageElements>
+								<SalesOfferPackageElement version="1.0" id="idfm:t_plus_single_trip@paper_onboard@single_trip" order="2">
+									<TypeOfTravelDocumentRef version="any" ref="idfm:paper"/>
+									<PreassignedFareProductRef version="1.0" ref="idfm:t_plus_single_trip"/>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+						<SalesOfferPackage version="1.0" id="idfm:t_plus_single_trip@smartcard">
+							<Name>t+ ticket - smartcard</Name>
+							<Url>https://www.iledefrance-mobilites.fr/cgvu-ticket-t-sans-contact/</Url>
+							<ConditionSummary>
+								<FareStructureType>networkFlatFare</FareStructureType>
+								<TariffBasis>flat</TariffBasis>
+								<ProvidesCard>false</ProvidesCard>
+								<GoesOnCard>true</GoesOnCard>
+								<RequiresAccount>true</RequiresAccount>
+								<RequiresEntitlement>true</RequiresEntitlement>
+								<!-- must have smartcard -->
+								<HasRouteRestrictions>true</HasRouteRestrictions>
+								<CanBreakJourney>false</CanBreakJourney>
+								<IsRefundable>false</IsRefundable>
+								<IsExchangable>false</IsExchangable>
+								<RequiresPositiveBalance>true</RequiresPositiveBalance>
+							</ConditionSummary>
+							<validityParameterAssignments>
+								<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@smartcard@access_duration" order="1">
+									<Name>Maximu Duration for trip</Name>
+									<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:access_duration"/>
+									<TimeIntervalRef version="1.0" ref="idfm:t_plus_single_trip@travel_time_limit@90m"/>
+								</GenericParameterAssignment>
+								<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@smartcard@prerequisites" order="2">
+									<Name>Requires a supporting smart card to run on</Name>
+									<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:entitlements"/>
+									<LimitationGroupingType>OR</LimitationGroupingType>
+									<limitations>
+										<EntitlementRequired version="1.0" id="idfm:t_plus_single_trip@smartcard@prerequisites@navigo_smartcard">
+											<Name>Navigo smartcard</Name>
+											<SaleDiscountRightRef version="1.0" ref="idfm:navigo_smartcard"/>
+										</EntitlementRequired>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<distributionAssignments>
+								<DistributionAssignment version="1.0" id="t_plus@smartcard" order="1">
+									<Name>Recharge smart card from machine</Name>
+									<DistributionChannelRef version="any" ref="idfm:at_stop"/>
+									<FulfilmentMethodRef version="any" ref="idfm:ticket_machine"/>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<!-- == Elements == -->
+							<salesOfferPackageElements>
+								<SalesOfferPackageElement version="1.0" id="t_plus@smartcard@single_trip" order="2">
+									<TypeOfTravelDocumentRef version="any" ref="idfm:smartcard"/>
+									<PreassignedFareProductRef version="1.0" ref="idfm:t_plus_single_trip"/>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+						<SalesOfferPackage version="1.0" id="idfm:t_plus_single_trip@mobile_app">
+							<Name>t+ ticket - Mobile app</Name>
+							<Url>https://www.iledefrance-mobilites.fr/cgvu-ticket-t-sans-contact/</Url>
+							<ConditionSummary>
+								<FareStructureType>networkFlatFare</FareStructureType>
+								<TariffBasis>flat</TariffBasis>
+								<RequiresAccount>true</RequiresAccount>
+								<RequiresEntitlement>true</RequiresEntitlement>
+								<!-- must have smartcard -->
+								<HasRouteRestrictions>true</HasRouteRestrictions>
+								<CanBreakJourney>false</CanBreakJourney>
+								<IsRefundable>false</IsRefundable>
+								<IsExchangable>false</IsExchangable>
+								<RequiresPositiveBalance>true</RequiresPositiveBalance>
+							</ConditionSummary>
+							<validityParameterAssignments>
+								<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@mobile_app@access_duration" order="1">
+									<Name>Maximum Duration for trip</Name>
+									<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:access_duration"/>
+									<TimeIntervalRef version="1.0" ref="idfm:t_plus_single_trip@travel_time_limit@90m"/>
+								</GenericParameterAssignment>
+								<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@mobile_appp@rerequisites" order="1">
+									<Name>Requires a supporting app</Name>
+									<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:entitlements"/>
+									<LimitationGroupingType>OR</LimitationGroupingType>
+									<limitations>
+										<EntitlementRequired version="1.0" id="idfm:t_plus_single_trip@mobile_app@prerequisites@idfm">
+											<Name>Île-de-France Mobilités</Name>
+											<SaleDiscountRightRef version="1.0" ref="idfm:idfm_mobility_app"/>
+										</EntitlementRequired>
+										<EntitlementRequired version="1.0" id="idfm:t_plus_single_trip@mobile_app@prerequisites@ratp">
+											<Name>RATP Bonjour RATP APP</Name>
+											<ThirdPartyProductRef versionRef="EXTERNAL" ref="ratp:bonjour_ratp_app"/>
+										</EntitlementRequired>
+										<EntitlementRequired version="1.0" id="idfm:t_plus_single_trip@mobile_app@prerequisites@transdev">
+											<Name>Transdev mobile app</Name>
+											<ThirdPartyProductRef versionRef="EXTERNAL" ref="ratp:transdev_app"/>
+										</EntitlementRequired>
+										<EntitlementRequired version="1.0" id="idfm:t_plus_single_trip@mobile_app@prerequisites@sncf">
+											<Name>SNCF  mobile app</Name>
+											<ThirdPartyProductRef versionRef="EXTERNAL" ref="sncf:sncf_app"/>
+										</EntitlementRequired>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<distributionAssignments>
+								<DistributionAssignment version="1.0" id="t_plus@mobile_app" order="1">
+									<Name>Mobile APP app</Name>
+									<DistributionChannelRef version="any" ref="idfm:online"/>
+									<FulfilmentMethodRef version="any" ref="idfm:mobile_app"/>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<!-- == Elements == -->
+							<salesOfferPackageElements>
+								<SalesOfferPackageElement version="1.0" id="t_plus@mobile_app@single_trip" order="2">
+									<TypeOfTravelDocumentRef version="any" ref="idfm:mobile_app"/>
+									<PreassignedFareProductRef version="1.0" ref="idfm:t_plus_single_trip"/>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+						<SalesOfferPackage version="1.0" id="idfm:t_plus_single_trip@sms">
+							<Name>t+ ticket - sms</Name>
+							<Description>Bus only 60 minutes, no interchanges </Description>
+							<Url>https://www.ratp.fr/en/le-titre-a-bord-sms</Url>
+							<noticeAssignments>
+								<NoticeAssignment version="1.0" id="idfm:t_plus_single_trip@sms@1" order="1">
+									<Notice version="1.0" id="idfm:t_plus_single_trip@sms">
+										<Name>Mobile operators supported</Name>
+										<Text>This service is only available to customers of Bouygues Télécom, Orange, SFR or Free (this excludes limited plans). 
+
+The SMS ticket is not available to customers: 
+using virtual mobile network operators. These include Bell, La Poste Mobile, CIC Mobile, Auchan Telecom, NRJ Mobile, Crédit Mutuel Mobile, etc.
+most business phone plans (check with your employer);
+non-French phone operators. €2.50 plus the possible cost of sending the SMS for mobile plans that do not include unlimited SMS messages (or any SMS cost the phone operator may apply). The ticket is valid for one hour, no connections with other services are permitted.
+
+The price of the ticket will appear on your phone bill. This service is available via Bouygues, Orange, SFR and Free phone operators. In you are using a prepaid phone card, the price of the SMS ticket is taken from the remaining balance.
+
+You can only buy one ticket for each SMS sent.</Text>
+										<CanBeAdvertised>true</CanBeAdvertised>
+									</Notice>
+								</NoticeAssignment>
+								<NoticeAssignment version="1.0" id="idfm:t_plus_single_trip@sms@2" order="2">
+									<Notice version="1.0" id="idfm:t_plus_single_trip@sms@">
+										<Name>Conditions</Name>
+										<Text>The ticket is valid for one hour, no connections with other services are permitted.
+The price of the ticket will appear on your phone bill. You can only buy one ticket for each SMS sent.</Text>
+										<CanBeAdvertised>true</CanBeAdvertised>
+									</Notice>
+								</NoticeAssignment>
+							</noticeAssignments>
+							<ConditionSummary>
+								<FareStructureType>networkFlatFare</FareStructureType>
+								<TariffBasis>flat</TariffBasis>
+								<HasRouteRestrictions>true</HasRouteRestrictions>
+								<CanBreakJourney>false</CanBreakJourney>
+								<IsRefundable>false</IsRefundable>
+								<IsExchangable>false</IsExchangable>
+							</ConditionSummary>
+							<validityParameterAssignments>
+								<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@sms@access_duration" order="1">
+									<Name>Maximum Duration for trip</Name>
+									<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:access_duration"/>
+									<TimeIntervalRef version="1.0" ref="idfm:t_plus_single_trip@travel_time_limit@60m"/>
+								</GenericParameterAssignment>
+								<GenericParameterAssignment version="1.0" id="idfm:t_plus_single_trip@sms@access" order="2">
+									<Description>Single journey no interchanges</Description>
+									<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:can_access"/>
+									<limitations>
+										<UsageValidityPeriod version="1.0" id="idfm:t_plus_single_trip@sms@access">
+											<ValidityPeriodType>singleTrip</ValidityPeriodType>
+											<UsageTrigger>activation</UsageTrigger>
+											<UsageEnd>endOfRide</UsageEnd>
+											<ActivationMeans>useOfMobileDevice</ActivationMeans>
+										</UsageValidityPeriod>
+										<Interchanging version="1.0" id="idfm:t_plus_single_trip@sms@access">
+											<CanInterchange>false</CanInterchange>
+											<CanBreakJourney>false</CanBreakJourney>
+										</Interchanging>
+										<RoundTrip version="1.0" id="idfm:t_plus_single_trip@sms@access">
+											<Name>One way trip</Name>
+											<TripType>single</TripType>
+										</RoundTrip>
+									</limitations>
+									<validityParameters>
+										<TransportModes>bus</TransportModes>
+										<AuthorityRef version="any" ref="idfm:IDFM"/>
+									</validityParameters>
+									<IncludesGroupingType>AND</IncludesGroupingType>
+									<includes>
+										<GenericParameterAssignment version="1.0" id="iidfm:t_plus_single_trip@sms@access" order="1">
+											<Name>Excluded lines</Name>
+											<IsAllowed>false</IsAllowed>
+											<ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
+											<validityParameters>
+												<TransportModes>tram</TransportModes>
+												<LineRef version="any" ref="idfm:orly_bus"/>
+												<LineRef version="any" ref="idfm:roissy_bus"/>
+											</validityParameters>
+										</GenericParameterAssignment>
+									</includes>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<distributionAssignments>
+								<DistributionAssignment version="1.0" id="idfm:t_plus_single_trip@sms_93100" order="1">
+									<DistributionChannelRef version="any" ref="idfm:sms_93100"/>
+									<FulfilmentMethodRef version="any" ref="idfm:sms_service"/>
+								</DistributionAssignment>
+								<DistributionAssignment version="1.0" id="idfm:t_plus_single_trip@sms_93800" order="2">
+									<DistributionChannelRef version="any" ref="idfm:sms_93800"/>
+									<FulfilmentMethodRef version="any" ref="idfm:sms_service"/>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<!-- == Elements == -->
+							<salesOfferPackageElements>
+								<SalesOfferPackageElement version="1.0" id="idfm:t_plus_single_trip@sms@travel" order="1">
+									<TypeOfTravelDocumentRef version="any" ref="idfm:sms_message"/>
+									<PreassignedFareProductRef version="1.0" ref="idfm:t_plus_single_trip"/>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+					</salesOfferPackages>
+				</FareFrame>
+				<FareFrame version="1.0" id="idfm:Paris-Example@t_plus_carnet@Fare_Definitions" responsibilitySetRef="idfm:tariffs">
+					<Name>Paris example - t+ flat carnet of 10</Name>
+					<FrameDefaults>
+						<DefaultCodespaceRef ref="op_data"/>
+					</FrameDefaults>
+					<prerequisites>
+						<FareFrameRef version="1.0" ref="idfm:Paris-Example@t_plus_single_trip@Fare_Definitions"/>
+						<FareFrameRef version="1.0" ref="idfm:Paris-Example@navigo@Fare_Definitions"/>
+					</prerequisites>
+					<tariffs>
+						<Tariff version="1.0" id="idfm:t_plus_carnet">
+							<Name>t+ carnet of 10 tickets</Name>
+							<Description> </Description>
+							<TariffBasis>flat</TariffBasis>
+							<qualityStructureFactors>
+								<QualityStructureFactor version="1.0" id="idfm:t_plus_carnet@10_units">
+									<Name>30 tickets</Name>
+									<Url>https://www.ratp.fr/en/how-long-are-metro-rer-or-bus-tickets-valid</Url>
+									<Value>30</Value>
+								</QualityStructureFactor>
+							</qualityStructureFactors>
+							<fareStructureElements>
+								<FareStructureElement version="1.0" id="idfm:t_plus_carnet@access">
+									<Name>Access rights</Name>
+									<Description>30 t+ single trip tickets</Description>
+									<TypeOfFareStructureElementRef versionRef="efp:v1.0" ref="efp:access"/>
+									<GenericParameterAssignment version="1.0" id="idfm:t_plus_carnet@access" order="1">
+										<PreassignedFareProductRef version="1.0" ref="idfm:t_plus_single_trip"/>
+										<QualityStructureFactorRef version="1.0" ref="idfm:t_plus_carnet@10_units"/>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<!--  ==== ELIGIBILITY -================= -->
+								<FareStructureElement version="1.0" id="idfm:t_plus_carnet@eligibility">
+									<Name>Eligibility</Name>
+									<Description>? Children under age 4 can travel free throughout the metro, RER, bus, and tramway networks, provided they do not occupy a seat. 
+? Children under 10 can travel with reduced fare tickets: 50% discount on packs of 10 t+ tickets loaded on your Navigo Easy pass/smartphone and 50% discount on origin/destination tickets (single tickets or ticket packs)</Description>
+									<Url>https://www.ratp.fr/en/titres-et-tarifs/reduced-fares-children</Url>
+									<TypeOfFareStructureElementRef versionRef="efp:v1.0" ref="efp:eligibility"/>
+									<GenericParameterAssignment version="1.0" id="idfm:t_plus_carnet@eligibility" order="1">
+										<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:eligibility"/>
+										<LimitationGroupingType>XOR</LimitationGroupingType>
+										<limitations>
+											<UserProfileRef version="any" ref="idfm:t_plus@adult"/>
+											<UserProfileRef version="any" ref="idfm:t_plus@concessionary"/>
+											<GroupTicket version="any" id="idfm:t_plus_carnet@primary_school">
+												<Name>Primary School party</Name>
+												<Description>Groups of at least 8 children and their accompanying adult traveling on school outings or extracurricular trips organized by primary schools or recreation centers hosted by these institutions. The accompanying adult must fill in a declaration on honor.</Description>
+												<!-- TODO How to specify PROOF REQUIREd for declaration of honour -->
+												<Url>https://www.ratp.fr/en/titres-et-tarifs/t-tickets</Url>
+												<MinimumNumberOfPersons>9</MinimumNumberOfPersons>
+												<companionProfiles>
+													<CompanionProfile version="any" id="idfm:t_plus_carnet@primary_school@pupil">
+														<UserProfileRef version="any" ref="idfm:t_plus@child"/>
+														<CompanionRelationshipType>pupil</CompanionRelationshipType>
+														<MinimumNumberOfPersons>8</MinimumNumberOfPersons>
+													</CompanionProfile>
+													<CompanionProfile version="any" id="idfm:t_plus_carnet@primary_school@teacher">
+														<UserProfileRef version="any" ref="idfm:t_plus@adult"/>
+														<CompanionRelationshipType>teacher</CompanionRelationshipType>
+														<MinimumNumberOfPersons>3</MinimumNumberOfPersons>
+													</CompanionProfile>
+												</companionProfiles>
+												<PricingBasis>perPerson</PricingBasis>
+											</GroupTicket>
+										</limitations>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+								<!--  ==== Conditions of SALE  -================= -->
+								<FareStructureElement version="1.0" id="idfm:t_plus_carnet@conditions_of_sale">
+									<Name>Conditions of Sale</Name>
+									<TypeOfFareStructureElementRef versionRef="efp:v1.0" ref="efp:conditions_of_sale"/>
+									<GenericParameterAssignment version="1.0" id="idfm:t_plus_carnet@conditions_of_sale" order="1">
+										<TypeOfAccessRightAssignmentRef versionRef="efp:v1.0" ref="efp:conditions_of_sale"/>
+										<LimitationGroupingType>XOR</LimitationGroupingType>
+										<limitations>
+											<Refunding version="1.0" id="idfm:t_plus_carnet@conditions_of_sale">
+												<Name>NoRefund</Name>
+												<Description>Public transport regulations for the Ile-de-France region do not provide for the reimbursement of unused or partially used transportation tickets (purchased individually or in packages of 10)..</Description>
+												<Url>https://www.ratp.fr/en/i-have-unused-tickets-can-i-have-them-refunded</Url>
+												<Allowed>none</Allowed>
+											</Refunding>
+										</limitations>
+									</GenericParameterAssignment>
+								</FareStructureElement>
+							</fareStructureElements>
+						</Tariff>
+					</tariffs>
+					<!--- ==-FARE PRDUCTS=== -->
+					<fareProducts>
+						<AmountOfPriceUnitProduct version="1.0" id="idfm:t_plus_carnet">
+							<Name>t+ ticket carnet of ten</Name>
+							<Url>https://www.iledefrance-mobilites.fr/en/tickets-fares/detail/ticket-t</Url>
+							<!--==== VALIDABLE ELEMENTs ==== -->
+							<ChargingMomentType>beforeTravel</ChargingMomentType>
+							<AuthorityRef version="any" ref="idfm:IDFM"/>
+							<ConditionSummary>
+								<FareStructureType>networkFlatFare</FareStructureType>
+								<TariffBasis>flat</TariffBasis>
+								<RequiresAccount>false</RequiresAccount>
+								<RequiresEntitlement>false</RequiresEntitlement>
+								<HasRouteRestrictions>true</HasRouteRestrictions>
+								<IsRefundable>false</IsRefundable>
+								<IsExchangable>false</IsExchangable>
+							</ConditionSummary>
+							<validableElements>
+								<ValidableElement version="1.0" id="idfm:t_plus_carnet">
+									<Name>t+ Carnet of 10 tickets</Name>
+									<fareStructureElements>
+										<FareStructureElementRef version="1.0" ref="idfm:t_plus_carnet@access"/>
+										<FareStructureElementRef version="1.0" ref="idfm:t_plus_carnet@eligibility"/>
+										<FareStructureElementRef version="1.0" ref="idfm:t_plus_carnet@conditions_of_sale"/>
+									</fareStructureElements>
+								</ValidableElement>
+							</validableElements>
+							<!--==== ACCESS RIGHTs ===== -->
+							<accessRightsInProduct>
+								<AccessRightInProduct version="1.0" id="idfm:t_plus_carnet" order="1">
+									<ValidableElementRef version="1.0" ref="idfm:t_plus_carnet"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+							<ProductType>tripCarnet</ProductType>
+						</AmountOfPriceUnitProduct>
+					</fareProducts>
+					<salesOfferPackages>
+						<!-- === SALES OFFER PACKAGES  === -->
+						<SalesOfferPackage version="1.0" id="idfm:t_plus_carnet@smartcard">
+							<Name>t+ ticket - paper</Name>
+							<Url>https://www.iledefrance-mobilites.fr/en/tickets-fares/detail/ticket-t</Url>
+							<ConditionSummary>
+								<TariffBasis>flat</TariffBasis>
+								<ProvidesCard>true</ProvidesCard>
+								<GoesOnCard>true</GoesOnCard>
+								<IsPersonal>false</IsPersonal>
+								<RequiresPhoto>false</RequiresPhoto>
+								<RequiresAccount>true</RequiresAccount>
+								<RequiresEntitlement>true</RequiresEntitlement>
+							</ConditionSummary>
+							<validityParameterAssignments>
+								<GenericParameterAssignment version="1.0" id="idfm:t_plus_carnet@smartcard" order="1">
+									<limitations>
+										<SalesOfferPackageEntitlementRequired version="1.0" id="idfm:t_plus_carnet@smartcard@navigo_easy">
+											<Name>Only allowed on navigo easy</Name>
+											<SalesOfferPackageRef version="1.0" ref="idfm:navigo_easy"/>
+										</SalesOfferPackageEntitlementRequired>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<distributionAssignments>
+								<DistributionAssignment version="1.0" id="t_plus_carnet@smartcard@at_stop" order="1">
+									<Name>Recharge smart card from machine</Name>
+									<DistributionChannelRef version="any" ref="idfm:at_stop"/>
+									<FulfilmentMethodRef version="any" ref="idfm:ticket_machine"/>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<!-- == Elements == -->
+							<salesOfferPackageElements>
+								<SalesOfferPackageElement version="1.0" id="idfm:t_plus_carnet@smartcard@travel_rights" order="2">
+									<TypeOfTravelDocumentRef version="any" ref="idfm:smartcard"/>
+									<AmountOfPriceUnitProductRef version="1.0" ref="idfm:t_plus_carnet"/>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+						<SalesOfferPackage version="1.0" id="idfm:t_plus_carnet@mobile_app">
+							<Name>t+ ticket - carnet of 10 tickets</Name>
+							<Url>https://www.iledefrance-mobilites.fr/en/tickets-fares/detail/ticket-t</Url>
+							<ConditionSummary>
+								<TariffBasis>flat</TariffBasis>
+								<ProvidesCard>false</ProvidesCard>
+								<GoesOnCard>false</GoesOnCard>
+								<IsPersonal>false</IsPersonal>
+								<RequiresPhoto>false</RequiresPhoto>
+								<RequiresAccount>true</RequiresAccount>
+								<RequiresEntitlement>true</RequiresEntitlement>
+							</ConditionSummary>
+							<distributionAssignments>
+								<DistributionAssignment version="1.0" id="t_plus_carnet@mobile_app@online" order="1">
+									<Name>By using Mobile   app</Name>
+									<DistributionChannelRef version="any" ref="idfm:online"/>
+									<FulfilmentMethodRef version="any" ref="idfm:mobile_app"/>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<!-- == Elements == -->
+							<salesOfferPackageElements>
+								<SalesOfferPackageElement version="1.0" id="idfm:t_plus_carnet@mobile_app@travel_rights" order="1">
+									<TypeOfTravelDocumentRef version="any" ref="idfm:smartcard"/>
+									<AmountOfPriceUnitProductRef version="1.0" ref="idfm:t_plus_carnet"/>
+								</SalesOfferPackageElement>
+							</salesOfferPackageElements>
+						</SalesOfferPackage>
+					</salesOfferPackages>
+				</FareFrame>
+				<!-- ==== FARE PRICES - ALternative ways of encoding shown as version1,2 and 3 === -->
+				<FareFrame version="1.0" id="idfm:Paris-Example@t_plus@Fare_Prices@2024-nested_encoding_using_absolute_prices" responsibilitySetRef="idfm:tariffs">
+					<ValidBetween>
+						<FromDate>2024-01-30T09:30:47.0Z</FromDate>
+						<ToDate>2025-01-30T09:30:47.0Z</ToDate>
+					</ValidBetween>
+					<Name>Prices for fare example, using nested fare tables and specific fare price types</Name>
+					<Description>Here we use absolute prices. We include examples of how a justification of the derivation can be optionally included as RUKE STEP RESULTs. 
+ DISCOUNTING RULE       Concessionary fare =   (Adult Fare  * 50%)		
+ DISCOUNTING RULE       Onboard fare =   (x  + onboard Fee)	
+ DISCOUNTING RULE       Sms fare =   (x  + SMS Fee)					
+					  </Description>
+					<FrameDefaults>
+						<DefaultCurrency>EUR</DefaultCurrency>
+					</FrameDefaults>
+					<prerequisites>
+						<FareFrameRef version="1.0" ref="idfm:Paris-Example@t_plus_single_trip@Fare_Definitions"/>
+					</prerequisites>
+					<PricingParameterSet version="1.0" id="idfm:t_plus">
+						<priceUnits>
+							<PriceUnit version="1.0" id="idfm:euro">
+								<Name>Euros</Name>
+								<PrivateCode>EUR</PrivateCode>
+							</PriceUnit>
+						</priceUnits>
+						<pricingRules>
+							<DiscountingRule version="1.0" id="idfm:concessionary_discount">
+								<Name>Concessionary discount rate for chidren etc is 50%</Name>
+								<DiscountAsPercentage>0.5</DiscountAsPercentage>
+								<CanBeCumulative>true</CanBeCumulative>
+							</DiscountingRule>
+							<DiscountingRule version="1.0" id="idfm:onboard_fee">
+								<Name>Onboard  purchase fee</Name>
+								<Description>Negative discount - charge 0.35 EUR for onboard purchase</Description>
+								<PriceUnitRef version="1.0" ref="idfm:euro"/>
+								<DiscountAsValue>-0.35</DiscountAsValue>
+								<CanBeCumulative>true</CanBeCumulative>
+							</DiscountingRule>
+							<DiscountingRule version="1.0" id="idfm:sms_fee">
+								<Name>SMS fee</Name>
+								<Description>Negative discount - charge 0.35 EUR for sms delivery</Description>
+								<PriceUnitRef version="1.0" ref="idfm:euro"/>
+								<DiscountAsValue>-0.35</DiscountAsValue>
+								<CanBeCumulative>true</CanBeCumulative>
+							</DiscountingRule>
+						</pricingRules>
+						<roundings>
+							<Rounding version="1.0" id="idfm:round_down">
+								<Name>Round down to nearest 0.05 euros</Name>
+								<RoundingMethod>up</RoundingMethod>
+								<RoundingModulus>0.5</RoundingModulus>
+							</Rounding>
+						</roundings>
+					</PricingParameterSet>
+					<fareTables>
+						<FareTable version="1.0" id="idfm:navigo-nested_encoding_using_absolute_prices">
+							<Name>Navigo smart card prices</Name>
+							<prices>
+								<SalesOfferPackagePrice version="1.0" id="idfm:navigo_resident">
+									<Name>Navigo  Resident smartcard price</Name>
+									<Amount>0.00</Amount>
+									<SalesOfferPackageRef version="1.0" ref="idfm:navigo_resident"/>
+								</SalesOfferPackagePrice>
+								<SalesOfferPackagePrice version="1.0" id="idfm:navigo_easy">
+									<Name>Navigo Easy smartcard price</Name>
+									<Amount>2.00</Amount>
+									<SalesOfferPackageRef version="1.0" ref="idfm:navigo_easy"/>
+								</SalesOfferPackagePrice>
+							</prices>
+						</FareTable>
+						<FareTable version="1.0" id="idfm:t_plus-nested_encoding_using_absolute_prices">
+							<Name>t+ single trip prices</Name>
+							<usedIn>
+								<TariffRef version="1.0" ref="idfm:t_plus_single_trip"/>
+							</usedIn>
+							<includes>
+								<FareTable version="1.0" id="idfm:t_plus_single_trip@full">
+									<Name>t+ single trip prices Full fare</Name>
+									<pricesFor>
+										<UserProfileRef version="any" ref="idfm:t_plus@adult"/>
+									</pricesFor>
+									<prices>
+										<!-- ===  t+ prices === -->
+										<SalesOfferPackagePrice version="1.0" id="idfm:t_plus_single_trip@full@paper">
+											<Name>t+ single trip Adult paper ticket</Name>
+											<Amount>2.15</Amount>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@paper"/>
+										</SalesOfferPackagePrice>
+										<SalesOfferPackagePrice version="1.0" id="idfm:t_plus_single_trip@full@paper_onboard">
+											<Name>t+ single trip Adult paper ticket purchased onboard</Name>
+											<Amount>2.50</Amount>
+											<ruleStepResults>
+												<RuleStepResult id="idfm:t_plus_single_trip@full@paper_onboard" order="1">
+													<SalesOfferPackagePriceRef version="1.0" ref="idfm:t_plus_single_trip@full@paper"/>
+													<Amount>2.15</Amount>
+													<AdjustmentAmount>+0.35</AdjustmentAmount>
+													<DiscountingRuleRef version="1.0" ref="idfm:onboard_fee"/>
+													<RoundingRef version="1.0" ref="idfm:round_down"/>
+													<Narrative>Onboard purchase  has a  40 cent surcharge</Narrative>
+												</RuleStepResult>
+											</ruleStepResults>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@paper"/>
+										</SalesOfferPackagePrice>
+										<SalesOfferPackagePrice version="1.0" id="idfm:t_plus_single_trip@full@mobile_app">
+											<Name>t+ single trip Adult mobile app ticket</Name>
+											<Amount>2.15</Amount>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@mobile_app"/>
+										</SalesOfferPackagePrice>
+										<SalesOfferPackagePrice version="1.0" id="idfm:t_plus_single_trip@full@smartcard">
+											<Name>t+ single trip Adult smartcard ticket</Name>
+											<Amount>2.15</Amount>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@smartcard"/>
+										</SalesOfferPackagePrice>
+										<SalesOfferPackagePrice version="1.0" id="idfm:t_plus_single_trip@full@sms">
+											<Name>t+ single trip Adult sms ticket</Name>
+											<Amount>2.50</Amount>
+											<ruleStepResults>
+												<RuleStepResult id="idfm:t_plus_single_trip@full@paper" order="1">
+													<SalesOfferPackagePriceRef version="1.0" ref="idfm:t_plus_single_trip@full@paper"/>
+													<Amount>2.15</Amount>
+													<AdjustmentAmount>+0.35</AdjustmentAmount>
+													<DiscountingRuleRef version="1.0" ref="idfm:sms_fee"/>
+													<RoundingRef version="1.0" ref="idfm:round_down"/>
+													<Narrative>SMS  fare is normal fare + 0.35 EUR</Narrative>
+												</RuleStepResult>
+											</ruleStepResults>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@sms"/>
+										</SalesOfferPackagePrice>
+									</prices>
+								</FareTable>
+								<FareTable version="1.0" id="idfm:t_plus_single_trip@demi">
+									<Name>t+ single trip child prices</Name>
+									<Description>This shows derivation of price </Description>
+									<pricesFor>
+										<UserProfileRef version="any" ref="idfm:t_plus@concessionary"/>
+									</pricesFor>
+									<prices>
+										<SalesOfferPackagePrice version="1.0" id="idfm:t_plus_single_trip@demi@paper">
+											<Name>t+ single trip Concessionary fare paper ticket</Name>
+											<Amount>1.10</Amount>
+											<ruleStepResults>
+												<RuleStepResult id="idfm:t_plus_single_trip@demi@paper" order="1">
+													<SalesOfferPackagePriceRef version="1.0" ref="idfm:t_plus_single_trip@full@paper"/>
+													<Amount>2.50</Amount>
+													<RateUsed>0.5</RateUsed>
+													<AdjustmentAmount>-1.05</AdjustmentAmount>
+													<DiscountingRuleRef version="1.0" ref="idfm:concessionary_discount"/>
+													<RoundingRef version="1.0" ref="idfm:round_down"/>
+													<Narrative>Concessionary fare is half adult fare</Narrative>
+												</RuleStepResult>
+											</ruleStepResults>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@paper"/>
+										</SalesOfferPackagePrice>
+										<SalesOfferPackagePrice version="1.0" id="idfm:t_plus_single_trip@demi@paper_onboard">
+											<Name>t+ single trip Concessionary fare paper ticket purchased onboard</Name>
+											<Amount>1.25</Amount>
+											<ruleStepResults>
+												<RuleStepResult id="idfm:t_plus_single_trip@demi@paper_onboard" order="1">
+													<SalesOfferPackagePriceRef version="1.0" ref="idfm:t_plus_single_trip@full@paper_onboard"/>
+													<Amount>2.50</Amount>
+													<RateUsed>0.5</RateUsed>
+													<AdjustmentAmount>-1.25</AdjustmentAmount>
+													<DiscountingRuleRef version="1.0" ref="idfm:concessionary_discount"/>
+													<RoundingRef version="1.0" ref="idfm:round_down"/>
+													<Narrative>Concessionary fare is   half adult fare</Narrative>
+												</RuleStepResult>
+											</ruleStepResults>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@paper_onboard"/>
+										</SalesOfferPackagePrice>
+										<SalesOfferPackagePrice version="1.0" id="idfm:t_plus_single_trip@demi@mobile_app">
+											<Name>t+ single trip Concessionary fare mobile app ticket</Name>
+											<Amount>1.05</Amount>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@mobile_app"/>
+										</SalesOfferPackagePrice>
+										<SalesOfferPackagePrice version="1.0" id="idfm:t_plus_single_trip@demi@smartcard">
+											<Name>t+ single trip Concessionary fare smartcard ticket</Name>
+											<Amount>1.05</Amount>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@smartcard"/>
+										</SalesOfferPackagePrice>
+										<SalesOfferPackagePrice version="1.0" id="idfm:t_plus_single_trip@demi@sms">
+											<Name>t+ single trip Concessionary fare sms ticket</Name>
+											<Amount>1.45</Amount>
+											<ruleStepResults>
+												<RuleStepResult id="idfm:t_plus_single_trip@demi@paper" order="1">
+													<SalesOfferPackagePriceRef version="1.0" ref="idfm:t_plus_single_trip@demi@paper"/>
+													<Amount>1.05</Amount>
+													<AdjustmentAmount>+0.35</AdjustmentAmount>
+													<DiscountingRuleRef version="1.0" ref="idfm:sms_fee"/>
+													<RoundingRef version="1.0" ref="idfm:round_down"/>
+													<Narrative>Concessionary fare is normal fare + 0.35 EUR</Narrative>
+												</RuleStepResult>
+											</ruleStepResults>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@sms"/>
+										</SalesOfferPackagePrice>
+									</prices>
+								</FareTable>
+							</includes>
+						</FareTable>
+						<FareTable version="1.0" id="idfm:t_plus_noctilien-nested_encoding_using_absolute_prices">
+							<Name>t+ noctilien single trip prices</Name>
+							<usedIn>
+								<TariffRef version="1.0" ref="tsln:t_plus_noctilien"/>
+							</usedIn>
+							<includes>
+								<FareTable version="1.0" id="tsln:t_plus_noctilien@full">
+									<Name>t+ noctilien single trip prices Adult</Name>
+									<pricesFor>
+										<UserProfileRef version="any" ref="idfm:t_plus@adult"/>
+									</pricesFor>
+									<prices>
+										<!-- ===  t+ prices === -->
+										<FareStructureElementPrice version="1.0" id="tsln:t_plus_noctilien@normal">
+											<Name>t+ Noctilien 1 zone  price normal </Name>
+											<Description>One ticket for travel between the first two zones, and then one ticket for each zone crossed thereafter. Example: zones 1-2 = 1 ticket; zones 1-3 = 2 tickets.Prices is same as t+ adult</Description>
+											<Amount>2.20</Amount>
+											<Units>1</Units>
+											<FareStructureElementRef version="1.0" ref="tsln:t_plus_noctilien@normal"/>
+										</FareStructureElementPrice>
+										<FareStructureElementPrice version="1.0" id="tsln:t_plus_noctilien@double">
+											<Name>t+ Noctilien 1 zone  price double </Name>
+											<Description>Two tickets for travel between the first two zones, and then two  tickets for each zone crossed thereafter. Example: zones 1-2 = 2 ticket; zones 1-3 = 4 tickets.Prices is same as 2 x  t+  adult</Description>
+											<Amount>4.40</Amount>
+											<Units>2</Units>
+											<FareStructureElementRef version="1.0" ref="tsln:t_plus_noctilien@double"/>
+										</FareStructureElementPrice>
+										<FareStructureElementPrice version="1.0" id="tsln:t_plus_noctilien@full@1_zone@long_distance_bus_route">
+											<Name>t+ single trip Adult sms ticket - special night price</Name>
+											<Description>Hack to allow special prices without creating a separate sales package</Description>
+											<Amount>5.0</Amount>
+											<FareStructureElementRef version="1.0" ref="tsln:t_plus_noctilien@long_distance_bus_route"/>
+										</FareStructureElementPrice>
+									</prices>
+								</FareTable>
+							</includes>
+						</FareTable>
+						<FareTable version="1.0" id="idfm:t_plus_carnet-nested_encoding_using_absolute_prices">
+							<Name>T+ carnet of 10 tickets</Name>
+							<pricesFor>
+								<AmountOfPriceUnitProductRef version="1.0" ref="idfm:t_plus_carnet"/>
+							</pricesFor>
+							<usedIn>
+								<TariffRef version="1.0" ref="idfm:t_plus_carnet"/>
+							</usedIn>
+							<includes>
+								<FareTable version="1.0" id="idfm:t_plus_carnet@full">
+									<pricesFor>
+										<UserProfileRef version="any" ref="idfm:t_plus@adult"/>
+									</pricesFor>
+									<prices>
+										<!-- ===  t+ carnet prices === -->
+										<QualityStructureFactorPrice version="1.0" id="idfm:t_plus_carnet@full">
+											<Name>t+ single trip Adult sms carnet of 10</Name>
+											<Amount>17.35</Amount>
+											<QualityStructureFactorRef version="1.0" ref="idfm:t_plus_carnet@10_units"/>
+										</QualityStructureFactorPrice>
+									</prices>
+								</FareTable>
+								<FareTable version="1.0" id="tsln:t_plus_carnet@demi">
+									<pricesFor>
+										<UserProfileRef version="any" ref="idfm:t_plus@concessionary"/>
+									</pricesFor>
+									<prices>
+										<!-- ===  t+ carnet prices Child === -->
+										<QualityStructureFactorPrice version="1.0" id="idfm:t_plus_carnet@demi">
+											<Name>t+ single trip Concessionary fare sms carnet of 10</Name>
+											<Amount>8.65</Amount>
+											<ruleStepResults>
+												<RuleStepResult id="idfm:t_plus_carnet@demi" order="1">
+													<QualityStructureFactorPriceRef version="1.0" ref="idfm:t_plus_carnet@demi"/>
+													<Amount>17.35</Amount>
+													<RateUsed>0.5</RateUsed>
+													<AdjustmentAmount>-8.70</AdjustmentAmount>
+													<DiscountingRuleRef version="1.0" ref="idfm:concessionary_discount"/>
+													<RoundingRef version="1.0" ref="idfm:round_down"/>
+													<Narrative>Concessionary carnet is half adult carnet, rounded down to the nearest 5 cents.</Narrative>
+												</RuleStepResult>
+											</ruleStepResults>
+											<QualityStructureFactorRef version="1.0" ref="idfm:t_plus_carnet@10_units"/>
+										</QualityStructureFactorPrice>
+									</prices>
+								</FareTable>
+							</includes>
+						</FareTable>
+					</fareTables>
+				</FareFrame>
+				<FareFrame version="2.0" id="idfm:Paris-Example@t_plus@Fare_Prices@2024-flat_encoding_using_absolute_prices" responsibilitySetRef="idfm:tariffs">
+					<ValidBetween>
+						<FromDate>2024-01-30T09:30:47.0Z</FromDate>
+						<ToDate>2025-01-30T09:30:47.0Z</ToDate>
+					</ValidBetween>
+					<Name>Prices for fare example, using flat  fare tables and sgeneric CELL fare price types</Name>
+					<FrameDefaults>
+						<DefaultCurrency>EUR</DefaultCurrency>
+					</FrameDefaults>
+					<prerequisites>
+						<FareFrameRef version="1.0" ref="idfm:Paris-Example@t_plus_single_trip@Fare_Definitions"/>
+					</prerequisites>
+					<PricingParameterSet version="2.0" id="idfm:t_plus">
+						<pricingRules>
+							<DiscountingRule version="2.0" id="idfm:concessionary_discount">
+								<DiscountAsPercentage>0.5</DiscountAsPercentage>
+							</DiscountingRule>
+						</pricingRules>
+						<roundings>
+							<Rounding version="2.0" id="idfm:round_down">
+								<Name>Round down to nearest 0.05 euros</Name>
+								<RoundingMethod>up</RoundingMethod>
+								<RoundingModulus>0.5</RoundingModulus>
+							</Rounding>
+						</roundings>
+					</PricingParameterSet>
+					<fareTables>
+						<FareTable version="2.0" id="idfm:t_plus-flat_encoding_using_absolute_prices">
+							<usedIn>
+								<TariffRef version="1.0" ref="idfm:t_plus_single_trip"/>
+							</usedIn>
+							<cells>
+								<Cell version="2.0" id="idfm:navigo_resident" order="1">
+									<CellPrice version="2.0" id="idfm:navigo_resident">
+										<Name>Navigo smartcard</Name>
+										<Amount>0.00</Amount>
+									</CellPrice>
+									<SalesOfferPackageRef version="1.0" ref="idfm:navigo_resident"/>
+								</Cell>
+								<Cell version="2.0" id="idfm:navigo_easy" order="2">
+									<CellPrice version="2.0" id="idfm:navigo_easy">
+										<Name>Navigo smartcard</Name>
+										<Amount>2.00</Amount>
+									</CellPrice>
+									<SalesOfferPackageRef version="1.0" ref="idfm:navigo_easy"/>
+								</Cell>
+								<!-- ===  t+  adult prices === -->
+								<Cell version="2.0" id="idfm:t_plus_single_trip@full@paper" order="1">
+									<CellPrice version="2.0" id="idfm:t_plus_single_trip@full@paper">
+										<Name>t+ single trip Adult paper ticket</Name>
+										<Amount>2.15</Amount>
+									</CellPrice>
+									<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@paper"/>
+									<UserProfileRef version="any" ref="idfm:t_plus@adult"/>
+								</Cell>
+								<Cell version="2.0" id="idfm:t_plus_single_trip@full@paper_onboard" order="2">
+									<CellPrice version="2.0" id="idfm:t_plus_single_trip@full@paper_onboard">
+										<Name>t+ single trip Adult paper ticket</Name>
+										<Amount>2.50</Amount>
+									</CellPrice>
+									<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@paper_onboard"/>
+									<UserProfileRef version="any" ref="idfm:t_plus@adult"/>
+									<FulfilmentMethodRef version="any" ref="idfm:onboard"/>
+								</Cell>
+								<Cell version="2.0" id="idfm:t_plus_single_trip@full@mobile_app" order="3">
+									<CellPrice version="2.0" id="idfm:t_plus_single_trip@full@mobile_app">
+										<Name>t+ single trip Adult paper ticket</Name>
+										<Amount>2.15</Amount>
+									</CellPrice>
+									<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@mobile_app"/>
+									<UserProfileRef version="any" ref="idfm:t_plus@adult"/>
+								</Cell>
+								<Cell version="2.0" id="idfm:t_plus_single_trip@full@smartcard" order="4">
+									<CellPrice version="2.0" id="idfm:t_plus_single_trip@full@smartcard">
+										<Name>t+ single trip Adult smartcard ticket</Name>
+										<Amount>2.15</Amount>
+									</CellPrice>
+									<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@smartcard"/>
+									<UserProfileRef version="any" ref="idfm:t_plus@adult"/>
+								</Cell>
+								<Cell version="2.0" id="idfm:t_plus_single_trip@full@sms" order="5">
+									<CellPrice version="2.0" id="idfm:t_plus_single_trip@full@sms">
+										<Name>t+ single trip Adult sms ticket</Name>
+										<Amount>2.50</Amount>
+									</CellPrice>
+									<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@sms"/>
+									<UserProfileRef version="any" ref="idfm:t_plus@adult"/>
+									<FulfilmentMethodRef version="any" ref="idfm:sms_service"/>
+								</Cell>
+								<!-- ===  t+  child prices === -->
+								<Cell version="2.0" id="idfm:t_plus_single_trip@demi@paper" order="1">
+									<CellPrice version="2.0" id="idfm:t_plus_single_trip@demi@paper">
+										<Name>t+ Concessionary fare paper ticket</Name>
+										<Amount>1.05</Amount>
+										<ruleStepResults>
+											<RuleStepResult id="idfm:t_plus_single_trip@demi@paper@cell" order="1">
+												<!-- NB   Ref to base cell MISSING to fix 	<CellPriceRef ref="idfm:t_plus_single_trip@full@paper" version="03"/>  -->
+												<Amount>2.50</Amount>
+												<RateUsed>0.5</RateUsed>
+												<AdjustmentAmount>-1.05</AdjustmentAmount>
+												<DiscountingRuleRef version="2.0" ref="idfm:concessionary_discount"/>
+												<RoundingRef version="2.0" ref="idfm:round_down"/>
+												<Narrative>Concessionary fare is half full fare price</Narrative>
+											</RuleStepResult>
+										</ruleStepResults>
+									</CellPrice>
+									<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@paper"/>
+									<UserProfileRef version="any" ref="idfm:t_plus@concessionary"/>
+								</Cell>
+								<Cell version="2.0" id="idfm:t_plus_single_trip@demi@concessionary@paper_onboard" order="2">
+									<CellPrice version="2.0" id="idfm:t_plus_single_trip@demi@paper_onboard">
+										<Name>t+ Concessionary fare paper ticket onboard</Name>
+										<Amount>1.25</Amount>
+										<ruleStepResults>
+											<RuleStepResult id="idfm:t_plus_single_trip@demi@paper_onboard@cell" order="1">
+												<!-- NB  Ref to base cell MISSING to fix 	<CellPriceRef ref="idfm:t_plus_single_trip@full@paper" version="03"/> -->
+												<Amount>2.50</Amount>
+												<RateUsed>0.5</RateUsed>
+												<AdjustmentAmount>-1.25</AdjustmentAmount>
+												<DiscountingRuleRef version="2.0" ref="idfm:concessionary_discount"/>
+												<RoundingRef version="1.0" ref="idfm:round_down"/>
+											</RuleStepResult>
+										</ruleStepResults>
+									</CellPrice>
+									<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@paper_onboard"/>
+									<UserProfileRef version="any" ref="idfm:t_plus@concessionary"/>
+								</Cell>
+								<Cell version="2.0" id="idfm:t_plus_single_trip@demi@concessionary@paper" order="3">
+									<CellPrice version="2.0" id="idfm:t_plus_single_trip@demi@paper">
+										<Name>t+ single trip Concessionary fare paper ticket</Name>
+										<Amount>1.05</Amount>
+										<ruleStepResults>
+											<RuleStepResult id="idfm:t_plus_single_trip@demi@smartcard@cell" order="1">
+												<!-- NB  Ref to base cell MISSING to fix 	<CellPriceRef ref="idfm:t_plus_single_trip@full@paper" version="03"/> -->
+												<Amount>2.15</Amount>
+												<RateUsed>0.5</RateUsed>
+												<AdjustmentAmount>-1.05</AdjustmentAmount>
+												<DiscountingRuleRef version="2.0" ref="idfm:concessionary_discount"/>
+												<Narrative>Concessionary fare is half full fare price</Narrative>
+											</RuleStepResult>
+										</ruleStepResults>
+									</CellPrice>
+									<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@paper"/>
+									<UserProfileRef version="any" ref="idfm:t_plus@concessionary"/>
+								</Cell>
+								<Cell version="2.0" id="idfm:t_plus_single_trip@demi" order="4">
+									<CellPrice version="2.0" id="idfm:t_plus_single_trip@demi@mobile_app">
+										<Name>t+ single trip Concessionary fare paper ticket</Name>
+										<Amount>1.05</Amount>
+										<ruleStepResults>
+											<RuleStepResult id="idfm:t_plus_single_trip@demi@paper@cell" order="1">
+												<!-- Ref to base cell MISSING to fix 	<CellPriceRef ref="idfm:t_plus_single_trip@full@paper" version="03"/> -->
+												<Amount>2.15</Amount>
+												<RateUsed>0.5</RateUsed>
+												<AdjustmentAmount>-1.05</AdjustmentAmount>
+												<DiscountingRuleRef version="2.0" ref="idfm:concessionary_discount"/>
+												<RoundingRef version="2.0" ref="idfm:round_down"/>
+												<Narrative>Concessionary fare is half full fare price</Narrative>
+											</RuleStepResult>
+										</ruleStepResults>
+									</CellPrice>
+									<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@mobile_app"/>
+									<UserProfileRef version="any" ref="idfm:t_plus@concessionary"/>
+								</Cell>
+								<Cell version="2.0" id="idfm:t_plus_single_trip@demi@sms" order="5">
+									<CellPrice version="2.0" id="idfm:t_plus_single_trip@demi@sms">
+										<Name>t+ single trip Concessionary fare sms ticket</Name>
+										<Amount>1.45</Amount>
+										<ruleStepResults>
+											<RuleStepResult id="idfm:t_plus_single_trip@demi@sms@cell" order="1">
+												<!-- Ref to base cell MISSING to fix 	<CellPriceRef ref="idfm:t_plus_single_trip@demi@paper" version="03"/> -->
+												<Amount>1.05</Amount>
+												<AdjustmentAmount>+0.35</AdjustmentAmount>
+												<DiscountingRuleRef version="2.0" ref="idfm:concessionary_discount"/>
+												<RoundingRef version="2.0" ref="idfm:round_down"/>
+												<Narrative>Sms Concessionary fare has 0.35 EUR fulfilment fee</Narrative>
+											</RuleStepResult>
+										</ruleStepResults>
+									</CellPrice>
+									<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@sms"/>
+									<UserProfileRef version="any" ref="idfm:t_plus@concessionary"/>
+									<FulfilmentMethodRef version="any" ref="idfm:sms_service"/>
+								</Cell>
+								<!-- Noctilien -->
+								<Cell version="2.0" id="tsln:t_plus_noctilien" order="1">
+									<CellPrice version="2.0" id="tsln:t_plus_noctilien@normal">
+										<Name>t+ Noctilien 1 zone  price normal </Name>
+										<Amount>2.20</Amount>
+										<Units>1</Units>
+									</CellPrice>
+									<FareStructureElementRef version="1.0" ref="tsln:t_plus_noctilien@normal"/>
+								</Cell>
+								<Cell version="2.0" id="tsln:t_plus_noctiliendouble" order="2">
+									<CellPrice version="2.0" id="tsln:t_plus_noctilien@double">
+										<Name>t+ Noctilien 1 zone  price normal </Name>
+										<Amount>4.40</Amount>
+										<Units>2</Units>
+									</CellPrice>
+									<FareStructureElementRef version="1.0" ref="tsln:t_plus_noctilien@double"/>
+								</Cell>
+								<Cell version="2.0" id="tsln:t_plus_noctilien@long_distance_bus_route" order="3">
+									<CellPrice version="2.0" id="tsln:t_plus_noctilien@long_distance_bus_route">
+										<Name>t+ single trip Adult sms ticket - special night price</Name>
+										<Description>Hack to allow special prices without creating a separate sales package</Description>
+										<Amount>5.0</Amount>
+									</CellPrice>
+									<FareStructureElementRef version="1.0" ref="tsln:t_plus_noctilien@long_distance_bus_route"/>
+								</Cell>
+								<!--  Carnets -->
+								<Cell version="2.0" id="idfm:t_plus_carnet@full" order="1">
+									<CellPrice version="2.0" id="idfm:t_plus_carnet@full">
+										<Name>t+ carnet  </Name>
+										<Amount>17.35</Amount>
+										<Units>10</Units>
+										<ruleStepResults>
+											<RuleStepResult id="idfm:t_plus_carnet@full" order="1">
+												<!-- NB MISSING <CellPriceRef version="2.0" ref="idfm:t_plus_single_trip@full@paper"/> -->
+												<Amount>2.20</Amount>
+												<Units>10</Units>
+												<RateUsed>0.20</RateUsed>
+												<AdjustmentAmount>-4.65</AdjustmentAmount>
+												<DiscountingRuleRef version="3.0" ref="idfm:carnet_discount"/>
+												<RoundingRef version="3.0" ref="idfm:round_down"/>
+												<Narrative>Carnet of 10 tickets is at 20% discount</Narrative>
+											</RuleStepResult>
+										</ruleStepResults>
+									</CellPrice>
+									<AmountOfPriceUnitProductRef version="1.0" ref="idfm:t_plus_carnet"/>
+									<UserProfileRef version="any" ref="idfm:t_plus@adult"/>
+									<QualityStructureFactorRef version="1.0" ref="idfm:t_plus_carnet@10_units"/>
+								</Cell>
+								<Cell version="2.0" id="idfm:t_plus_carnet@demi" order="2">
+									<CellPrice version="2.0" id="idfm:t_plus_carnet@demi">
+										<Name>t+ carnet  </Name>
+										<Amount>1.05</Amount>
+										<Units>10</Units>
+										<ruleStepResults>
+											<RuleStepResult id="idfm:t_plus_carnet@cell" order="1">
+												<!-- Ref to base cell MISSING to fix 	<CellPriceRef ref="idfm:t_plus_carnet@full" version="03"/> -->
+												<Amount>17.35</Amount>
+												<RateUsed>0.5</RateUsed>
+												<AdjustmentAmount>-8.70</AdjustmentAmount>
+												<DiscountingRuleRef version="2.0" ref="idfm:concessionary_discount"/>
+												<RoundingRef version="2.0" ref="idfm:round_down"/>
+												<Narrative>Concessionary carnet is half adult carnet, rounded down to the nearest 5 cents.</Narrative>
+											</RuleStepResult>
+										</ruleStepResults>
+									</CellPrice>
+									<AmountOfPriceUnitProductRef version="1.0" ref="idfm:t_plus_carnet"/>
+									<UserProfileRef version="any" ref="idfm:t_plus@concessionary"/>
+									<QualityStructureFactorRef version="1.0" ref="idfm:t_plus_carnet@10_units"/>
+								</Cell>
+							</cells>
+						</FareTable>
+					</fareTables>
+				</FareFrame>
+				<FareFrame version="3.0" id="idfm:Paris-Example@t_plus@Fare_Prices@2024-nested_encoding_using_base_prices" responsibilitySetRef="idfm:tariffs">
+					<ValidBetween>
+						<FromDate>2024-01-30T09:30:47.0Z</FromDate>
+						<ToDate>2025-01-30T09:30:47.0Z</ToDate>
+					</ValidBetween>
+					<Name>Prices for fare example, using nested fare tables and specific fare price types</Name>
+					<Description>Here we base prices on other prices so that a price change would be propagated automatically</Description>
+					<FrameDefaults>
+						<DefaultCurrency>EUR</DefaultCurrency>
+					</FrameDefaults>
+					<prerequisites>
+						<FareFrameRef version="1.0" ref="idfm:Paris-Example@t_plus_single_trip@Fare_Definitions"/>
+					</prerequisites>
+					<PricingParameterSet version="3.0" id="idfm:t_plus-nested_encoding_using_base_prices">
+						<priceUnits>
+							<PriceUnit version="3.0" id="idfm:euro">
+								<Name>Euros</Name>
+								<PrivateCode>EUR</PrivateCode>
+							</PriceUnit>
+						</priceUnits>
+						<pricingRules>
+							<DiscountingRule version="3.0" id="idfm:concessionary_discount">
+								<Name>Child discount</Name>
+								<Description>50% reduction</Description>
+								<DiscountAsPercentage>0.5</DiscountAsPercentage>
+								<CanBeCumulative>true</CanBeCumulative>
+							</DiscountingRule>
+							<DiscountingRule version="3.0" id="idfm:onboard_fee">
+								<Name>Onboard  purchase fee</Name>
+								<Description>Negative discount - charge 0.35 EUR for onboard purchase</Description>
+								<PriceUnitRef version="3.0" ref="idfm:euro"/>
+								<DiscountAsValue>-0.35</DiscountAsValue>
+							</DiscountingRule>
+							<DiscountingRule version="3.0" id="idfm:sms_fee">
+								<Name>SMS fee</Name>
+								<Description>Negative discount - charge 0.35 EUR for sms delivery</Description>
+								<PriceUnitRef version="3.0" ref="idfm:euro"/>
+								<DiscountAsValue>-0.35</DiscountAsValue>
+							</DiscountingRule>
+							<DiscountingRule version="3.0" id="idfm:carnet_discount">
+								<Name>Reduction for carnet</Name>
+								<Description>21% reduction</Description>
+								<DiscountAsPercentage>0.23</DiscountAsPercentage>
+								<CanBeCumulative>true</CanBeCumulative>
+							</DiscountingRule>
+						</pricingRules>
+						<roundings>
+							<Rounding version="3.0" id="idfm:round_down">
+								<Name>Round down to nearest 0.05 euros</Name>
+								<RoundingMethod>up</RoundingMethod>
+								<RoundingModulus>0.5</RoundingModulus>
+							</Rounding>
+						</roundings>
+					</PricingParameterSet>
+					<fareTables>
+						<FareTable version="3.0" id="idfm:navigo-nested_encoding_using_base_prices">
+							<prices>
+								<SalesOfferPackagePrice version="3.0" id="idfm:navigo_resident">
+									<Name>Navigo smartcard price</Name>
+									<Amount>2.00</Amount>
+									<SalesOfferPackageRef version="1.0" ref="idfm:navigo_resident"/>
+								</SalesOfferPackagePrice>
+								<SalesOfferPackagePrice version="3.0" id="idfm:navigo_easy">
+									<Name>Navigo smartcard price</Name>
+									<Amount>2.00</Amount>
+									<SalesOfferPackageRef version="1.0" ref="idfm:navigo_easy"/>
+								</SalesOfferPackagePrice>
+							</prices>
+						</FareTable>
+						<FareTable version="3.0" id="idfm:@t_plus_single_trip-nested_encoding_using_base_prices">
+							<Name>Base prices</Name>
+							<Description>Here we define the base prices that are referenced by the specifc prices</Description>
+							<usedIn>
+								<TariffRef version="1.0" ref="idfm:t_plus_single_trip"/>
+							</usedIn>
+							<includes>
+								<FareTable version="3.0" id="idfm:t_plus@base">
+									<prices>
+										<!-- ===  t+ prices === -->
+										<FareProductPrice version="3.0" id="idfm:t_plus@base">
+											<Name>t+ Base price</Name>
+											<Amount>2.15</Amount>
+											<FareProductRef version="1.0" ref="idfm:t_plus"/>
+										</FareProductPrice>
+										<FareProductPrice version="3.0" id="idfm:t_plus_single_trip@demi">
+											<Name>t+ Concessionary price is 50% full price</Name>
+											<Amount>1.05</Amount>
+											<ruleStepResults>
+												<RuleStepResult id="idfm:t_plus_single_trip@demi" order="1">
+													<FareProductPriceRef version="3.0" ref="idfm:t_plus@base"/>
+													<Amount>2.05</Amount>
+													<RateUsed>0.5</RateUsed>
+													<AdjustmentAmount>-1.05</AdjustmentAmount>
+													<DiscountingRuleRef version="3.0" ref="idfm:concessionary_discount"/>
+													<RoundingRef version="3.0" ref="idfm:round_down"/>
+													<Narrative>Concessionary fare is half adult fare</Narrative>
+												</RuleStepResult>
+											</ruleStepResults>
+											<FareProductPriceRef version="3.0" ref="idfm:t_plus@base"/>
+											<FareProductRef version="3.0" ref="idfm:t_plus"/>
+										</FareProductPrice>
+										<FulfilmentMethodPrice version="3.0" id="idfm:t_plus@onboard">
+											<Name>t+   purchased onboard surcharge</Name>
+											<Amount>0.35</Amount>
+											<FulfilmentMethodRef version="any" ref="idfm:onboard"/>
+										</FulfilmentMethodPrice>
+										<FulfilmentMethodPrice version="3.0" id="idfm:t_plus_single_trip@sms">
+											<Name>t+   sms surcharge</Name>
+											<Amount>0.35</Amount>
+											<FulfilmentMethodRef version="any" ref="idfm:sms_service"/>
+										</FulfilmentMethodPrice>
+									</prices>
+								</FareTable>
+								<FareTable version="3.0" id="idfm:t_plus_single_trip@full">
+									<pricesFor>
+										<UserProfileRef version="any" ref="idfm:t_plus@adult"/>
+									</pricesFor>
+									<prices>
+										<!-- ===  t+ prices === -->
+										<SalesOfferPackagePrice version="3.0" id="idfm:t_plus_single_trip@full@paper">
+											<Name>t+ single trip Adult paper ticket</Name>
+											<FareProductPriceRef version="3.0" ref="idfm:t_plus@base"/>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@paper"/>
+										</SalesOfferPackagePrice>
+										<SalesOfferPackagePrice version="3.0" id="idfm:t_plus_single_trip@full@paper_onboard">
+											<Name>t+ single trip Adult paper ticket purchased onboard</Name>
+											<Amount>2.50</Amount>
+											<ruleStepResults>
+												<RuleStepResult id="idfm:t_plus_single_trip@full@paper_onboard" order="1">
+													<SalesOfferPackagePriceRef version="3.0" ref="idfm:t_plus_single_trip@full@paper"/>
+													<Amount>2.15</Amount>
+													<AdjustmentAmount>+0.35</AdjustmentAmount>
+													<DiscountingRuleRef version="3.0" ref="idfm:onboard_fee"/>
+													<RoundingRef version="3.0" ref="idfm:round_down"/>
+													<Narrative>Onboard fare has extra charge of 0.35 EURO</Narrative>
+												</RuleStepResult>
+											</ruleStepResults>
+											<FulfilmentMethodPriceRef version="3.0" ref="idfm:t_plus@onboard"/>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@paper_onboard"/>
+										</SalesOfferPackagePrice>
+										<SalesOfferPackagePrice version="3.0" id="idfm:t_plus_single_trip@full@mobile_app">
+											<Name>t+ single trip Adult mobile app ticket</Name>
+											<FareProductPriceRef version="3.0" ref="idfm:t_plus@base"/>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@mobile_app"/>
+										</SalesOfferPackagePrice>
+										<SalesOfferPackagePrice version="3.0" id="idfm:t_plus_single_trip@full@smartcard">
+											<Name>t+ single trip Adult smartcard ticket</Name>
+											<FareProductPriceRef version="3.0" ref="idfm:t_plus@base"/>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@smartcard"/>
+										</SalesOfferPackagePrice>
+										<SalesOfferPackagePrice version="3.0" id="idfm:t_plus_single_trip@full@sms">
+											<Name>t+ single trip Adult sms ticket</Name>
+											<ruleStepResults>
+												<RuleStepResult id="idfm:t_plus_single_trip@full@sms" order="1">
+													<SalesOfferPackagePriceRef version="3.0" ref="idfm:t_plus_single_trip@full@sms"/>
+													<Amount>2.15</Amount>
+													<AdjustmentAmount>+0.35</AdjustmentAmount>
+													<DiscountingRuleRef version="3.0" ref="idfm:onboard_fee"/>
+													<RoundingRef version="3.0" ref="idfm:round_down"/>
+													<Narrative>Sms fare has extra charge of 0.35 EURO</Narrative>
+												</RuleStepResult>
+											</ruleStepResults>
+											<FulfilmentMethodPriceRef version="3.0" ref="idfm:t_plus_single_trip@sms"/>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@sms"/>
+										</SalesOfferPackagePrice>
+									</prices>
+								</FareTable>
+								<FareTable version="3.0" id="idfm:t_plus_single_trip@demi">
+									<Name>t+ single trip Concessionary fare prices</Name>
+									<Description>This shows derivation of price </Description>
+									<pricesFor>
+										<UserProfileRef version="any" ref="idfm:t_plus@concessionary"/>
+									</pricesFor>
+									<prices>
+										<!-- ===  t+ prices === -->
+										<SalesOfferPackagePrice version="3.0" id="idfm:t_plus_single_trip@demi@paper">
+											<Name>t+ single trip Concessionary fare paper ticket</Name>
+											<FareProductPriceRef version="3.0" ref="idfm:t_plus_single_trip@demi"/>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@paper"/>
+										</SalesOfferPackagePrice>
+										<SalesOfferPackagePrice version="3.0" id="idfm:t_plus_single_trip@demi@paper_onboard">
+											<Name>t+ single trip Concessionary fare paper ticket purchased onboard</Name>
+											<Amount>1.25</Amount>
+											<ruleStepResults>
+												<RuleStepResult id="idfm:t_plus_single_trip@demi@sms" order="1">
+													<SalesOfferPackagePriceRef version="3.0" ref="idfm:t_plus_single_trip@full@paper_onboard"/>
+													<Amount>2.50</Amount>
+													<RateUsed>0.5</RateUsed>
+													<AdjustmentAmount>-1.25</AdjustmentAmount>
+													<DiscountingRuleRef version="3.0" ref="idfm:concessionary_discount"/>
+													<RoundingRef version="3.0" ref="idfm:round_down"/>
+													<Narrative>Concessionary fare is half adult onbard purchase  fare   </Narrative>
+												</RuleStepResult>
+											</ruleStepResults>
+											<FulfilmentMethodPriceRef version="3.0" ref="idfm:t_plus_single_trip@sms"/>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@paper_onboard"/>
+										</SalesOfferPackagePrice>
+										<SalesOfferPackagePrice version="3.0" id="idfm:t_plus_single_trip@demi@mobile_app">
+											<Name>t+ single trip Concessionary fare mobile app ticket</Name>
+											<FareProductPriceRef version="3.0" ref="idfm:t_plus_single_trip@demi"/>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@mobile_app"/>
+										</SalesOfferPackagePrice>
+										<SalesOfferPackagePrice version="3.0" id="idfm:t_plus_single_trip@demi@smartcard">
+											<Name>t+ single trip Concessionary fare smartcard ticket</Name>
+											<FareProductPriceRef version="3.0" ref="idfm:t_plus_single_trip@demi"/>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@smartcard"/>
+										</SalesOfferPackagePrice>
+										<SalesOfferPackagePrice version="3.0" id="idfm:t_plus_single_trip@demi@sms">
+											<Name>t+ single trip Concessionary fare sms ticket</Name>
+											<Amount>1.45</Amount>
+											<ruleStepResults>
+												<RuleStepResult id="idfm:t_plus_single_trip@demi@sms" order="1">
+													<SalesOfferPackagePriceRef version="3.0" ref="idfm:t_plus_single_trip@demi@sms"/>
+													<Amount>1.05</Amount>
+													<AdjustmentAmount>+0.35</AdjustmentAmount>
+													<DiscountingRuleRef version="3.0" ref="idfm:onboard_fee"/>
+													<RoundingRef version="3.0" ref="idfm:round_down"/>
+													<Narrative>Sms fare has extra charge of 0.35 EURO</Narrative>
+												</RuleStepResult>
+											</ruleStepResults>
+											<FulfilmentMethodPriceRef version="3.0" ref="idfm:t_plus_single_trip@sms"/>
+											<SalesOfferPackageRef version="1.0" ref="idfm:t_plus_single_trip@sms"/>
+										</SalesOfferPackagePrice>
+									</prices>
+								</FareTable>
+							</includes>
+						</FareTable>
+						<FareTable version="3.0" id="tsln:t_plus_noctilien">
+							<usedIn>
+								<TariffRef version="1.0" ref="tsln:t_plus_noctilien"/>
+							</usedIn>
+							<includes>
+								<FareTable version="3.0" id="tsln:t_plus_noctilien@full">
+									<pricesFor>
+										<UserProfileRef version="any" ref="idfm:t_plus@adult"/>
+									</pricesFor>
+									<prices>
+										<!-- ===  t+ prices === -->
+										<FareStructureElementPrice version="3.0" id="tsln:t_plus_noctilien@normal">
+											<Name>t+ Noctilien 1 zone  price normal </Name>
+											<Description>One ticket for travel between the first two zones, and then one ticket for each zone crossed thereafter. Example: zones 1-2 = 1 ticket; zones 1-3 = 2 tickets.Prices is same as t+ adult</Description>
+											<Amount>2.20</Amount>
+											<Units>1</Units>
+											<FareStructureElementRef version="1.0" ref="tsln:t_plus_noctilien@normal"/>
+										</FareStructureElementPrice>
+										<FareStructureElementPrice version="3.0" id="tsln:t_plus_noctilien@double">
+											<Name>t+ Noctilien 1 zone  price double </Name>
+											<Description>Two tickets for travel between the first two zones, and then two  tickets for each zone crossed thereafter. Example: zones 1-2 = 2 ticket; zones 1-3 = 4 tickets.Prices is same as 2 x  t+  adult</Description>
+											<Amount>4.40</Amount>
+											<Units>2</Units>
+											<FareStructureElementRef version="1.0" ref="tsln:t_plus_noctilien@double"/>
+										</FareStructureElementPrice>
+										<!-- ===  t+ prices === -->
+										<FareStructureElementPrice version="3.0" id="tsln:t_plus_noctilien@full@long_distance_bus_route">
+											<Name>t+ FUll fare ticket - special night price</Name>
+											<Description>Hack to allow special prices without creating a separate sales package</Description>
+											<Amount>5.0</Amount>
+											<FareStructureElementRef version="1.0" ref="tsln:t_plus_noctilien@long_distance_bus_route"/>
+										</FareStructureElementPrice>
+									</prices>
+								</FareTable>
+								<FareTable version="3.0" id="tsln:t_plus_noctilien@demi">
+									<pricesFor>
+										<UserProfileRef version="any" ref="idfm:t_plus@concessionary"/>
+									</pricesFor>
+								</FareTable>
+							</includes>
+						</FareTable>
+						<FareTable version="3.0" id="idfm:t_plus_carnet-nested_encoding_using_absolute_prices">
+							<Name>T+ carnet of 10 ticket prices</Name>
+							<pricesFor>
+								<AmountOfPriceUnitProductRef version="1.0" ref="idfm:t_plus_carnet"/>
+							</pricesFor>
+							<usedIn>
+								<TariffRef version="1.0" ref="idfm:t_plus_carnet"/>
+							</usedIn>
+							<includes>
+								<FareTable version="3.0" id="idfm:t_plus_carnet@full">
+									<pricesFor>
+										<UserProfileRef version="any" ref="idfm:t_plus@adult"/>
+									</pricesFor>
+									<prices>
+										<!-- ===  t+ carnet prices === -->
+										<QualityStructureFactorPrice version="3.0" id="idfm:t_plus_carnet@full">
+											<Name>t+ single trip Adult sms carnet of 10</Name>
+											<Amount>17.35</Amount>
+											<ruleStepResults>
+												<RuleStepResult id="idfm:t_plus_carnet@ful" order="1">
+													<SalesOfferPackagePriceRef version="3.0" ref="idfm:t_plus_single_trip@full@paper"/>
+													<Amount>2.20</Amount>
+													<Units>10</Units>
+													<RateUsed>0.20</RateUsed>
+													<AdjustmentAmount>-4.65</AdjustmentAmount>
+													<DiscountingRuleRef version="3.0" ref="idfm:carnet_discount"/>
+													<RoundingRef version="3.0" ref="idfm:round_down"/>
+													<Narrative>Carnet of 10 tickets is at 20% discount</Narrative>
+												</RuleStepResult>
+											</ruleStepResults>
+											<QualityStructureFactorRef version="1.0" ref="idfm:t_plus_carnet@10_units"/>
+										</QualityStructureFactorPrice>
+									</prices>
+								</FareTable>
+								<FareTable version="3.0" id="tsln:t_plus_carnet@demi">
+									<pricesFor>
+										<UserProfileRef version="any" ref="idfm:t_plus@concessionary"/>
+									</pricesFor>
+									<prices>
+										<!-- ===  t+ carnet prices Child === -->
+										<QualityStructureFactorPrice version="3.0" id="idfm:t_plus_carnet@demi">
+											<Name>t+ single trip Concessionary fare sms carnet of 10</Name>
+											<Amount>8.65</Amount>
+											<ruleStepResults>
+												<RuleStepResult id="idfm:t_plus_carnet@demi" order="1">
+													<QualityStructureFactorPriceRef version="3.0" ref="idfm:t_plus_carnet@full"/>
+													<Amount>17.35</Amount>
+													<RateUsed>0.5</RateUsed>
+													<AdjustmentAmount>-8.70</AdjustmentAmount>
+													<DiscountingRuleRef version="3.0" ref="idfm:concessionary_discount"/>
+													<RoundingRef version="3.0" ref="idfm:round_down"/>
+													<Narrative>Concessionary carnet is half adult carnet, rounded down to the nearest 5 cents.</Narrative>
+												</RuleStepResult>
+											</ruleStepResults>
+											<QualityStructureFactorRef version="1.0" ref="idfm:t_plus_carnet@10_units"/>
+										</QualityStructureFactorPrice>
+									</prices>
+								</FareTable>
+							</includes>
+						</FareTable>
+					</fareTables>
+				</FareFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>

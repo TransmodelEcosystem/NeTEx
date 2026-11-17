@@ -142,7 +142,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 				</Codespace>
 				<Codespace id="myfares">
 					<Xmlns>myfares</Xmlns>
-					<XmlnsUrl>http://www.myfares,com/fares</XmlnsUrl>
+					<XmlnsUrl>http://www.myfares.com/fares</XmlnsUrl>
 					<Description>Fare data</Description>
 				</Codespace>
 			</codespaces>
@@ -270,33 +270,33 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 						<ServiceFrameRef version="1.0" ref="mybus:DTA@Fare_Stage@network"/>
 					</prerequisites>
 					<seriesConstraints>
-						<SeriesConstraint version="1.0" id="myfares:Line_5" order="1">
+						<SeriesConstraint version="1.0" id="myfares:Line_5-1">
 							<Name>Line 1 normal service: fare stages </Name>
 							<farePointsInPattern>
-								<FarePointInPattern version="1.0" id="myfares:Line_5" order="1">
+								<FarePointInPattern version="1.0" id="myfares:Line_5-1">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_001">Alpha</ScheduledStopPointRef>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="myfares:Line_5" order="2">
+								<FarePointInPattern version="1.0" id="myfares:Line_5-2">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_002">Bravo</ScheduledStopPointRef>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="myfares:Line_5" order="3">
+								<FarePointInPattern version="1.0" id="myfares:Line_5-3">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_077">Charley</ScheduledStopPointRef>
 									<PresentationPosition>required</PresentationPosition>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="myfares:Line_5" order="4">
+								<FarePointInPattern version="1.0" id="myfares:Line_5-4">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_078">Delta</ScheduledStopPointRef>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="myfares:Line_5" order="5">
+								<FarePointInPattern version="1.0" id="myfares:Line_5-5">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_101">Echo</ScheduledStopPointRef>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="myfares:Line_5" order="6">
+								<FarePointInPattern version="1.0" id="myfares:Line_5-6">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_102">Foxtrot</ScheduledStopPointRef>
 									<PresentationPosition>required</PresentationPosition>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="myfares:Line_5" order="7">
+								<FarePointInPattern version="1.0" id="myfares:Line_5-7">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_103">Golf</ScheduledStopPointRef>
 								</FarePointInPattern>
-								<FarePointInPattern version="1.0" id="myfares:Line_5" order="8">
+								<FarePointInPattern version="1.0" id="myfares:Line_5-8">
 									<ScheduledStopPointRef version="any" ref="mybus:SSP_104">Hotel</ScheduledStopPointRef>
 								</FarePointInPattern>
 							</farePointsInPattern>
@@ -344,18 +344,18 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 							<!--- ===FARE STRUCTURE ELEMENTS==== -->
 							<fareStructureElements>
 								<FareStructureElement version="1.0" id="myfares:Stage@access">
-									<GenericParameterAssignment order="1" id="myfares:Tz2z@access" version="1.0">
+									<GenericParameterAssignment id="myfares:Tz2z@access-1" version="1.0">
 										<TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_access"/>
 										<ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
 										<validityParameters>
 											<LineRef version="1.0" ref="mybus:line_5"/>
-											<SeriesConstraintRef version="1.0" ref="myfares:Line_5" order="1"/>
+											<SeriesConstraintRef version="1.0" ref="myfares:Line_5-1"/>
 										</validityParameters>
 									</GenericParameterAssignment>
 								</FareStructureElement>
 								<FareStructureElement id="myfares:Stage@conditions_of_travel" version="1.0">
 									<Name>eligible user types</Name>
-									<GenericParameterAssignment version="1.0" order="1" id="myfares:Stage@conditions_of_travel">
+									<GenericParameterAssignment version="1.0" id="myfares:Stage@conditions_of_travel-1">
 										<Name>Conditions of travel</Name>
 										<TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_use"/>
 										<LimitationGroupingType>AND</LimitationGroupingType>
@@ -396,7 +396,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 							</validableElements>
 							<!--- ====ACCESS RIGHTs======= -->
 							<accessRightsInProduct>
-								<AccessRightInProduct version="1.0" id="myfares:Single_trip@travel" order="1">
+								<AccessRightInProduct version="1.0" id="myfares:Single_trip@travel-1">
 									<Name>First ride</Name>
 									<ValidableElementRef version="1.0" ref="myfares:Single_trip@travel"/>
 								</AccessRightInProduct>

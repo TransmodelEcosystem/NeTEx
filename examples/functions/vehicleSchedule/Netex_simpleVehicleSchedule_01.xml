@@ -899,11 +899,11 @@ There is one DUTY ops:Duty:dty_01 with TWO DUTY PARTS
 							<TimeDemandTypeRef version="any" ref="kx:tdt_45_Day"/>
 							<BlockRef version="any" ref="ops:blk_L24_01"/>
 							<passingTimes>
-								<TimetabledPassingTime id="kx:tpt_dr_L24_01o_001">
+								<TimetabledPassingTime version="any" id="kx:tpt_dr_L24_01o_001">
 									<TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_01o_001"/>
 									<DepartureTime>11:00:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime id="kx:tpt_dr_L24_01o_002">
+								<TimetabledPassingTime version="any" id="kx:tpt_dr_L24_01o_002">
 									<StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_01o_002"/>
 									<ArrivalTime>11:10:00.0Z</ArrivalTime>
 									<WaitingTime>PT5M</WaitingTime>
@@ -1074,11 +1074,11 @@ There is one DUTY ops:Duty:dty_01 with TWO DUTY PARTS
 							<TimeDemandTypeRef version="any" ref="kx:tdt_45_Day"/>
 							<BlockRef version="any" ref="ops:blk_L24_01"/>
 							<passingTimes>
-								<TimetabledPassingTime id="kx:tpt_dr_L24_03o_001">
+								<TimetabledPassingTime version="any" id="kx:tpt_dr_L24_03o_001">
 									<StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_02o_001"/>
 									<DepartureTime>12:50:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime id="kx:tpt_dr_L24_03o_002">
+								<TimetabledPassingTime version="any" id="kx:tpt_dr_L24_03o_002">
 									<TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_02o_002"/>
 									<ArrivalTime>12:55:00.0Z</ArrivalTime>
 								</TimetabledPassingTime>
@@ -1103,11 +1103,11 @@ There is one DUTY ops:Duty:dty_01 with TWO DUTY PARTS
 							<TimeDemandTypeRef version="any" ref="kx:tdt_45_Day"/>
 							<BlockRef version="any" ref="ops:blk_L24_02"/>
 							<passingTimes>
-								<TimetabledPassingTime id="kx:tpt_dr_L24_04i_001">
+								<TimetabledPassingTime version="any" id="kx:tpt_dr_L24_04i_001">
 									<TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_03i_001"/>
 									<DepartureTime>13:00:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime id="kx:tpt_dr_L24_04i_002">
+								<TimetabledPassingTime version="any" id="kx:tpt_dr_L24_04i_002">
 									<StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_03i_002"/>
 									<ArrivalTime>13:05:00.0Z</ArrivalTime>
 								</TimetabledPassingTime>
@@ -1324,11 +1324,11 @@ There is one DUTY ops:Duty:dty_01 with TWO DUTY PARTS
 							<TimeDemandTypeRef version="any" ref="kx:tdt_45_Day"/>
 							<BlockRef version="any" ref="ops:blk_L24_02"/>
 							<passingTimes>
-								<TimetabledPassingTime id="kx:tpt_dr_L24_07o_001">
+								<TimetabledPassingTime version="any" id="kx:tpt_dr_L24_07o_001">
 									<StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_02o_001"/>
 									<DepartureTime>16:25:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime id="kx:tpt_dr_L24_07o_002">
+								<TimetabledPassingTime version="any" id="kx:tpt_dr_L24_07o_002">
 									<TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_02o_002"/>
 									<ArrivalTime>16:30:00.0Z</ArrivalTime>
 								</TimetabledPassingTime>
@@ -1353,11 +1353,11 @@ There is one DUTY ops:Duty:dty_01 with TWO DUTY PARTS
 							<TimeDemandTypeRef version="any" ref="kx:tdt_45_Day"/>
 							<BlockRef version="any" ref="ops:blk_L24_03"/>
 							<passingTimes>
-								<TimetabledPassingTime id="kx:tpt_dr_L24_08i_001">
+								<TimetabledPassingTime version="any" id="kx:tpt_dr_L24_08i_001">
 									<TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_03i_001"/>
 									<DepartureTime>16:50:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime id="kx:tpt_dr_L24_08i_002">
+								<TimetabledPassingTime version="any" id="kx:tpt_dr_L24_08i_002">
 									<StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_03i_002"/>
 									<ArrivalTime>16:55:00.0Z</ArrivalTime>
 								</TimetabledPassingTime>
@@ -1528,11 +1528,11 @@ There is one DUTY ops:Duty:dty_01 with TWO DUTY PARTS
 							<TimeDemandTypeRef version="any" ref="kx:tdt_45_Day"/>
 							<BlockRef version="any" ref="ops:blk_L24_03"/>
 							<passingTimes>
-								<TimetabledPassingTime id="kx:tpt_dr_L24_10i_001">
+								<TimetabledPassingTime version="any" id="kx:tpt_dr_L24_10i_001">
 									<StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_04i_001"/>
 									<DepartureTime>16:35:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime id="kx:tpt_dr_L24_10i_002">
+								<TimetabledPassingTime version="any" id="kx:tpt_dr_L24_10i_002">
 									<TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_04i_002"/>
 									<ArrivalTime>16:45:00.0Z</ArrivalTime>
 								</TimetabledPassingTime>
@@ -1557,11 +1557,11 @@ There is one DUTY ops:Duty:dty_01 with TWO DUTY PARTS
 							<TimeDemandTypeRef version="any" ref="kx:tdt_46_Night"/>
 							<BlockRef version="any" ref="ops:blk_L24N_04"/>
 							<passingTimes>
-								<TimetabledPassingTime id="kx:tpt_dr_L24N_11o_001">
+								<TimetabledPassingTime version="any" id="kx:tpt_dr_L24N_11o_001">
 									<TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_01o_001"/>
 									<DepartureTime>16:25:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime id="kx:tpt_dr_L24N_11o_002">
+								<TimetabledPassingTime version="any" id="kx:tpt_dr_L24N_11o_002">
 									<StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_01o_002"/>
 									<ArrivalTime>16:30:00.0Z</ArrivalTime>
 								</TimetabledPassingTime>
@@ -1683,11 +1683,11 @@ There is one DUTY ops:Duty:dty_01 with TWO DUTY PARTS
 							<TimeDemandTypeRef version="any" ref="kx:tdt_46_Night"/>
 							<BlockRef version="any" ref="ops:blk_L24N_04"/>
 							<passingTimes>
-								<TimetabledPassingTime id="kx:tpt_dr_L24_10i_001">
+								<TimetabledPassingTime version="any" id="kx:tpt_dr_L24_10i_001a">
 									<StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_04i_001"/>
 									<DepartureTime>21:15:00.0Z</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime id="kx:tpt_dr_L24_10i_002">
+								<TimetabledPassingTime version="any" id="kx:tpt_dr_L24_10i_002a">
 									<TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_04i_002"/>
 									<ArrivalTime>21:25:00.0Z</ArrivalTime>
 								</TimetabledPassingTime>
@@ -1894,7 +1894,7 @@ There is one DUTY ops:Duty:dty_01 with TWO DUTY PARTS
 					<vehicleTypes>
 						<VehicleType version="any" created="2010-12-17T09:30:47.0Z" id="xj:vt-447">
 							<Name>Big red bus</Name>
-							<PassengerCapacity>
+							<PassengerCapacity version="any" id="xj:vt-447">
 								<SeatingCapacity>50</SeatingCapacity>
 								<StandingCapacity>20</StandingCapacity>
 								<WheelchairPlaceCapacity>2</WheelchairPlaceCapacity>
@@ -1903,7 +1903,7 @@ There is one DUTY ops:Duty:dty_01 with TWO DUTY PARTS
 						</VehicleType>
 						<VehicleType version="any" created="2010-12-17T09:30:47.0Z" id="xj:vt-450">
 							<Name>Small blue red bus</Name>
-							<PassengerCapacity>
+							<PassengerCapacity version="any" id="xj:vt-450">
 								<SeatingCapacity>20</SeatingCapacity>
 								<StandingCapacity>120</StandingCapacity>
 								<WheelchairPlaceCapacity>0</WheelchairPlaceCapacity>

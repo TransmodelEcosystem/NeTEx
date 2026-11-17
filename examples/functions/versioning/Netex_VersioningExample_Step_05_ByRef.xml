@@ -51,7 +51,6 @@ This version shows the use of thye general  frame to hold references rather than
 				</AvailabilityCondition>
 			</validityConditions>
 			<Name>My Network  Version 4 One link has been removed. Baseline is version 3 as Links  needs exist</Name>
-			<BaselineVersionFrameRef ref="mybus:GeneralFrame:003">EXTERNAL</BaselineVersionFrameRef>
 			<!--- ======= CODESPACEs======== -->
 			<codespaces>
 				<Codespace id="mybus">
@@ -66,25 +65,25 @@ This version shows the use of thye general  frame to hold references rather than
 				<DefaultResponsibilitySetRef ref="mybus:RS_10"/>
 			</FrameDefaults>
 			<members>
-				<GeneralFrameMember id="mybus:ntwkf001_01">
+				<GeneralFrameMember id="mybus:ntwkf001_01" version="001">
 					<ScheduledStopPointRef ref="mybus:SSP0001A"/>
 				</GeneralFrameMember>
-				<GeneralFrameMember id="mybus:ntwkf001_02">
+				<GeneralFrameMember id="mybus:ntwkf001_02" version="001">
 					<ScheduledStopPointRef ref="mybus:SSP0001B"/>
 				</GeneralFrameMember>
-				<GeneralFrameMember id="mybus:ntwkf001_05">
+				<GeneralFrameMember id="mybus:ntwkf001_05" version="001">
 					<ScheduledStopPointRef ref="mybus:SSP0001C"/>
 				</GeneralFrameMember>
-				<GeneralFrameMember id="mybus:ntwkf001_03">
+				<GeneralFrameMember id="mybus:ntwkf001_03" version="001">
 					<DayTypeRef ref="mybus:DT001_MF"/>
 				</GeneralFrameMember>
-				<GeneralFrameMember id="mybus:ntwkf001_04">
+				<GeneralFrameMember id="mybus:ntwkf001_04" version="001">
 					<ServiceLinkRef ref="mybu:SL_AtoB01"/>
 				</GeneralFrameMember>
-				<GeneralFrameMember modification="new " id="mybus:ntwkf001_06">
+				<GeneralFrameMember modification="new " id="mybus:ntwkf001_06" version="001">
 					<ServiceLinkRef ref="mybu:SL_BtoC01"/>
 				</GeneralFrameMember>
-				<GeneralFrameMember id="mybus:ntwkf001_07">
+				<GeneralFrameMember id="mybus:ntwkf001_07" version="001">
 					<ServicePatternRef ref="mybus:SP001"/>
 				</GeneralFrameMember>
 			</members>

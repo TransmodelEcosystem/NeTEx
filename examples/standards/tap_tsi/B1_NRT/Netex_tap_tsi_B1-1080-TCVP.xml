@@ -20,8 +20,8 @@ This example provides an example of encodeing TAP TSI  NRT  fares in NeTEx XML
 				<FareFrame id="B1:TCVP:1080" version="any">
 					<Name>B.1 NRT fare based  example  for RU 1080 - Fare table description </Name>
 					<!-- TCVP 1080 Price Definitions : NeTex TARIFF-->
-					<salesPackages>
-						<SalesPackage id="2000" version="01" derivedFromVersionRef="0000" responsibilitySetRef="1080">
+					<salesOfferPackages>
+						<SalesOfferPackage id="2000" version="01" derivedFromVersionRef="0000" responsibilitySetRef="1080">
 							<validityConditions>
 								<ValidBetween>
 									<FromDate>2012-12-09T00:00:00Z</FromDate>
@@ -43,7 +43,7 @@ This example provides an example of encodeing TAP TSI  NRT  fares in NeTEx XML
 									<Name lang="ru">Flexpreis</Name>
 								</AlternativeName>
 							</alternativeNames>
-							<TypeOfSalesPackageRef version="any" ref="01"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="01"/>
 							<ConditionSummary>
 								<TariffBasis>route</TariffBasis>
 							</ConditionSummary>
@@ -68,8 +68,8 @@ This example provides an example of encodeing TAP TSI  NRT  fares in NeTEx XML
 									</limitations>
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
-						</SalesPackage>
-						<SalesPackage id="2002" version="01" derivedFromVersionRef="0000" responsibilitySetRef="1080">
+						</SalesOfferPackage>
+						<SalesOfferPackage id="2002" version="01" derivedFromVersionRef="0000" responsibilitySetRef="1080">
 							<validityConditions>
 								<ValidBetween>
 									<FromDate>2012-12-09T00:00:00Z</FromDate>
@@ -91,7 +91,7 @@ This example provides an example of encodeing TAP TSI  NRT  fares in NeTEx XML
 									<Name lang="ru">Private Railways</Name>
 								</AlternativeName>
 							</alternativeNames>
-							<TypeOfSalesPackageRef version="any" ref="01"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="01"/>
 							<ConditionSummary>
 								<TariffBasis>route</TariffBasis>
 							</ConditionSummary>
@@ -116,8 +116,8 @@ This example provides an example of encodeing TAP TSI  NRT  fares in NeTEx XML
 									</limitations>
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
-						</SalesPackage>
-						<SalesPackage id="8888" version="01" derivedFromVersionRef="0000" responsibilitySetRef="1080">
+						</SalesOfferPackage>
+						<SalesOfferPackage id="8888" version="01" derivedFromVersionRef="0000" responsibilitySetRef="1080">
 							<validityConditions>
 								<ValidBetween>
 									<FromDate>2012-12-09T00:00:00Z</FromDate>
@@ -139,7 +139,7 @@ This example provides an example of encodeing TAP TSI  NRT  fares in NeTEx XML
 									<Name lang="ru">Made up group</Name>
 								</AlternativeName>
 							</alternativeNames>
-							<TypeOfSalesPackageRef version="any" ref="01"/>
+							<TypeOfSalesOfferPackageRef version="any" ref="01"/>
 							<ConditionSummary>
 								<TariffBasis>route</TariffBasis>
 							</ConditionSummary>
@@ -164,8 +164,8 @@ This example provides an example of encodeing TAP TSI  NRT  fares in NeTEx XML
 									</limitations>
 								</GenericParameterAssignment>
 							</validityParameterAssignments>
-						</SalesPackage>
-					</salesPackages>
+						</SalesOfferPackage>
+					</salesOfferPackages>
 				</FareFrame>
 				<!-- ====RESOURCE FRAME======== -->
 				<ResourceFrame version="any" id="B1:Common:Resources">
@@ -188,29 +188,29 @@ This example provides an example of encodeing TAP TSI  NRT  fares in NeTEx XML
 								</PurposeOfGrouping>
 							</values>
 						</ValueSet>
-						<ValueSet version="any" id="tapB1:TypeOfSalesPackage" nameOfClass="TypeOfSalesPackage">
+						<ValueSet version="any" id="tapB1:TypeOfSalesOfferPackage" nameOfClass="TypeOfSalesOfferPackage">
 							<!-- UIC      Common codes -->
-							<Name>Allowed values for TypeOfSalesPackagef  code list B.1.1
+							<Name>Allowed values for TypeOfSalesOfferPackagef  code list B.1.1
 Fare type </Name>
 							<values>
-								<TypeOfSalesPackage version="any" id="01">
+								<TypeOfSalesOfferPackage version="any" id="01">
 									<Name>TCV Full Fare</Name>
-								</TypeOfSalesPackage>
-								<TypeOfSalesPackage version="any" id="02">
+								</TypeOfSalesOfferPackage>
+								<TypeOfSalesOfferPackage version="any" id="02">
 									<Name>Distance Based Fare</Name>
-								</TypeOfSalesPackage>
-								<TypeOfSalesPackage version="any" id="03">
+								</TypeOfSalesOfferPackage>
+								<TypeOfSalesOfferPackage version="any" id="03">
 									<Name>Market Fare</Name>
-								</TypeOfSalesPackage>
-								<TypeOfSalesPackage version="any" id="04">
+								</TypeOfSalesOfferPackage>
+								<TypeOfSalesOfferPackage version="any" id="04">
 									<Name>Group Fare</Name>
-								</TypeOfSalesPackage>
-								<TypeOfSalesPackage version="any" id="05">
+								</TypeOfSalesOfferPackage>
+								<TypeOfSalesOfferPackage version="any" id="05">
 									<Name>Supplement</Name>
-								</TypeOfSalesPackage>
-								<TypeOfSalesPackage version="any" id="06">
+								</TypeOfSalesOfferPackage>
+								<TypeOfSalesOfferPackage version="any" id="06">
 									<Name>Surcharge</Name>
-								</TypeOfSalesPackage>
+								</TypeOfSalesOfferPackage>
 							</values>
 						</ValueSet>
 					</typesOfValue>

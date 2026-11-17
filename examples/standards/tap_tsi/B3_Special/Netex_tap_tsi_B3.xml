@@ -363,11 +363,11 @@ The example shows the usage of special fares for
 								<ValidableElementRef ref="tap:international_train_ride" version="01"/>
 							</validableElements>
 							<accessRightsInProduct>
-								<AccessRightInProduct order="1" id="tap:Nrt_Product" version="01">
+								<AccessRightInProduct order="1" id="tap:Nrt_Product@01" version="01">
 									<Name>Product covers domestic trips</Name>
 									<ValidableElementRef ref="tap:domestic_train_ride" version="01"/>
 								</AccessRightInProduct>
-								<AccessRightInProduct order="2" id="tap:Nrt_Product" version="01">
+								<AccessRightInProduct order="2" id="tap:Nrt_Product@02" version="01">
 									<Name>Product covers international trips</Name>
 									<ValidableElementRef ref="tap:international_train_ride" version="01"/>
 								</AccessRightInProduct>
@@ -469,7 +469,7 @@ The example shows the usage of special fares for
 					<groupsOfSalesOfferPackages>
 						<GroupOfSalesOfferPackages id="tap:B2TariffRange01" version="01">
 							<distributionAssignments>
-								<DistributionAssignment id="tap:B2TariffRange01" order="1" version="01">
+								<DistributionAssignment id="tap:B2TariffRange01@01" order="1" version="01">
 									<Name>Can sell in France</Name>
 									<DistributionRights>sell</DistributionRights>
 									<CountryRef ref="fr"/>
@@ -479,7 +479,7 @@ The example shows the usage of special fares for
 									<AllowedInChannel>true</AllowedInChannel>
 									<OperatorRef ref="tap:0087" version="any"/>
 								</DistributionAssignment>
-								<DistributionAssignment id="tap:B2TariffRange01" order="2" version="01">
+								<DistributionAssignment id="tap:B2TariffRange01@02" order="2" version="01">
 									<Name>Can sell in Belgium</Name>
 									<DistributionRights>sell</DistributionRights>
 									<CountryRef ref="fr"/>
@@ -489,7 +489,7 @@ The example shows the usage of special fares for
 									<AllowedInChannel>true</AllowedInChannel>
 									<OperatorRef ref="tap:0088" version="any"/>
 								</DistributionAssignment>
-								<DistributionAssignment id="tap:B2TariffRange01" order="3" version="01">
+								<DistributionAssignment id="tap:B2TariffRange01@03" order="3" version="01">
 									<Name>Can sell in Germany</Name>
 									<DistributionRights>sell</DistributionRights>
 									<CountryRef ref="fr"/>
@@ -510,12 +510,12 @@ The example shows the usage of special fares for
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="tap:res01@transferor_RU">
 									<Description>Company code of transferor RU</Description>
-									<StakeholderRoleType>Planning</StakeholderRoleType>
+									<StakeholderRoleType>planning</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="tap:0087" version="any"/>
 								</ResponsibilityRoleAssignment>
 								<ResponsibilityRoleAssignment version="any" id="tap:res01@participating_RU">
 									<Description>Company code of participating RU</Description>
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="tap:0087" version="any"/>
 								</ResponsibilityRoleAssignment>
 							</roles>

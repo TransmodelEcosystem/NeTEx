@@ -98,6 +98,22 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 				<DefaultCodespaceRef ref="op_cs"/>
 			</FrameDefaults>
 			<frames>
+				<ResourceFrame version="any" id="RF1">
+					<dataSources>
+						<DataSource id="uic:0060" version="any"/>
+					</dataSources>
+				</ResourceFrame>
+				<!--  Narrative:  The SERVICE CALENDAR FRAME provides a container to organise the operational dates -->
+				<ServiceCalendarFrame id="uic:SKDUPD_example_2_3_Leo_Express" version="any">
+					<operatingPeriods>
+						<UicOperatingPeriod id="uic:SKDUPD_example_2_3_Leo_Express" version="any">
+							<!-- POP+273:2022-04-01/2022-12-10::11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111'		 -->
+							<FromDate>2022-04-01T00:00:00</FromDate>
+							<ToDate>2022-12-10T23:59:59</ToDate>
+							<ValidDayBits>11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</ValidDayBits>
+						</UicOperatingPeriod>
+					</operatingPeriods>
+				</ServiceCalendarFrame>
 				<ServiceFrame version="any" id="SKDUPD_example_3_Leo_Express">
 					<!--- comment: THESE STOP DECLARATIONS Are so as to be able to define SERVICE LINKS  with distances -->
 					<scheduledStopPoints>
@@ -283,7 +299,7 @@ MES+363700:MTR' -->
 				</ServiceFrame>
 				<TimetableFrame version="any" id="SKDUPD_example_3_Leo_Express">
 					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="41" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						<ServiceJourney version="any" id="41" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<!-- PRD+410:11:1:9:::Leo Express+3244' -->
 							<!-- SKPUPD_TRAIN
 ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	not_used	Reservation_system	First_day	Last_day	Operation_days	Second_service_number
@@ -298,15 +314,19 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="9">Intercity</TypeOfServiceRef>
 							<!-- TapTsi B.4.7009   	9 Intercity    -->
 							<DepartureTime>06:36:00</DepartureTime>
+							<!-- POP+273:2022-04-01/2022-12-10::11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111'		 -->
+							<dayTypes>
+								<DayTypeRef ref="uic:SKDUPD_example_2_3_Leo_Express"/>
+							</dayTypes>
 							<OperatorRef versionRef="EXTERNAL" ref="uic:3244">LE</OperatorRef>
 							<trainNumbers>
 								<TrainNumberRef version="any" ref="410"/>
 							</trainNumbers>
 							<parts>
-								<JourneyPart version="any" id="41@005434124+005434124" order="1">
+								<JourneyPart version="any" id="41@005434124+005434124-1">
 									<!-- ODI+005434124*005457076+1*15' -->
 									<ParentJourneyRef version="any" ref="41"/>
-									<MainPartRef version="any" ref="41@005434124+005434124"/>
+									<MainPartRef version="any" ref="41@005434124+005434124-1"/>
 									<FromStopPointRef version="any" ref="uic:005434124"/>
 									<ToStopPointRef version="any" ref="uic:005434124"/>
 									<StartTime>06:57:00</StartTime>
@@ -379,7 +399,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 3	13	005453414	0954		0955						301300:MTR
 3	14	005457176	1032		1032					2	358000:MTR
 3	15	005457076	1039								363700:MTR  -->
-								<Call version="any" id="41" order="1">
+								<Call version="any" id="41-1">
 									<!-- POR+005434124+*0636+'
 MES+0:MTR'	-->
 									<ScheduledStopPointRef version="any" ref="uic:005434124">Bohumin</ScheduledStopPointRef>
@@ -391,7 +411,7 @@ MES+0:MTR'	-->
 										<Time>06:36:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="41" order="2">
+								<Call version="any" id="41-2">
 									<!-- POR+005434364+0642*0644+'
 MES+8700:MTR'	POR+005434364+0642*0644+'
 MES+8700:MTR' -->
@@ -404,7 +424,7 @@ MES+8700:MTR' -->
 										<Time>06:44:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="41" order="41">
+								<Call version="any" id="41-41">
 									<!-- POR+005434434+0650*0652+'
 									MES+14000:MTR' -->
 									<ScheduledStopPointRef version="any" ref="uic:005434434">Ostrava Svinov</ScheduledStopPointRef>
@@ -416,7 +436,7 @@ MES+8700:MTR' -->
 										<Time>06:52:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="41" order="4">
+								<Call version="any" id="41-4">
 									<!-- POR+005434694+0701*0702+'
 MES+31200:MTR' -->
 									<ScheduledStopPointRef version="any" ref="uic:005434694">Studenka</ScheduledStopPointRef>
@@ -428,7 +448,7 @@ MES+31200:MTR' -->
 										<Time>07:02:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="41" order="5">
+								<Call version="any" id="41-5">
 									<!--POR+005434804+0708*0709+'
 MES+43200:MTR'-->
 									<ScheduledStopPointRef version="any" ref="uic:005434804">Suchdol Nad Ordrou</ScheduledStopPointRef>
@@ -440,7 +460,7 @@ MES+43200:MTR'-->
 										<Time>07:09:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="41" order="6">
+								<Call version="any" id="41-6">
 									<!-- POR+005433722+0722*0723+'
 MES+64100:MTR'-->
 									<ScheduledStopPointRef version="any" ref="uic:005433722">Hranice Na Morave</ScheduledStopPointRef>
@@ -452,7 +472,7 @@ MES+64100:MTR'-->
 										<Time>07:23:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="41" order="7">
+								<Call version="any" id="41-7">
 									<!-- POR+005434662+0739*0744+'
 MES+92400:MTR'-->
 									<ScheduledStopPointRef version="any" ref="uic:005434662">Prerov</ScheduledStopPointRef>
@@ -464,7 +484,7 @@ MES+92400:MTR'-->
 										<Time>07:44:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="41" order="8">
+								<Call version="any" id="41-8">
 									<!-- POR+005434362+0758*0800+'
 MES+114700:MTR'-->
 									<ScheduledStopPointRef version="any" ref="uic:005434362">Olomouc Hlavni Nadrazi</ScheduledStopPointRef>
@@ -476,7 +496,7 @@ MES+114700:MTR'-->
 										<Time>08:00:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="41" order="9">
+								<Call version="any" id="41-9">
 									<!-- POR+005433312++'
 MES+135700:MTR'-->
 									<ScheduledStopPointRef version="any" ref="uic:005433312">Cervenka</ScheduledStopPointRef>
@@ -490,7 +510,7 @@ MES+135700:MTR'-->
 										<ForBoarding>false</ForBoarding>
 									</Departure>
 								</Call>
-								<Call version="any" id="41" order="10">
+								<Call version="any" id="41-10">
 									<!-- POR+005434282++'
 MES+148400:MTR' -->
 									<ScheduledStopPointRef version="any" ref="uic:005434282">Mohelnice</ScheduledStopPointRef>
@@ -504,7 +524,7 @@ MES+148400:MTR' -->
 										<ForBoarding>false</ForBoarding>
 									</Departure>
 								</Call>
-								<Call version="any" id="41" order="11">
+								<Call version="any" id="41-11">
 									<!-- POR+005435502+0821*0822+'
 MES+160200:MTR'-->
 									<ScheduledStopPointRef version="any" ref="uic:005435502">Zabreh Na Morave</ScheduledStopPointRef>
@@ -516,7 +536,7 @@ MES+160200:MTR'-->
 										<Time>08:22:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="41" order="12">
+								<Call version="any" id="41-12">
 									<!-- POR+005453613+0934*0935+'
 MES+259300:MTR'-->
 									<ScheduledStopPointRef version="any" ref="uic:005453613">Pardubice Hlavni Nadrazi</ScheduledStopPointRef>
@@ -528,7 +548,7 @@ MES+259300:MTR'-->
 										<Time>09:35:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="41" order="14">
+								<Call version="any" id="41-14">
 									<!-- POR+005453414+0954*0955+'
 MES+301300:MTR'-->
 									<ScheduledStopPointRef version="any" ref="uic:005453414">Kolin</ScheduledStopPointRef>
@@ -540,7 +560,7 @@ MES+301300:MTR'-->
 										<Time>09:55:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="41" order="15">
+								<Call version="any" id="41-15">
 									<!-- POR+005457176+1032*1032+'
 MES+358000:MTR'
 TRF+2'-->
@@ -555,7 +575,7 @@ TRF+2'-->
 										<ForBoarding>false</ForBoarding>
 									</Departure>
 								</Call>
-								<Call version="any" id="41" order="16">
+								<Call version="any" id="41-16">
 									<!-- POR+005457076+1039+'
 MES+363700:MTR'			-->
 									<ScheduledStopPointRef version="any" ref="uic:005457076">Praha Hlavni Nadrazin</ScheduledStopPointRef>
@@ -577,14 +597,7 @@ MES+363700:MTR'			-->
 									<!-- Tariff 1 Taf TSI B4.7139: 	1	TCV -->
 								</ServiceFacilitySet>
 							</facilities>
-							<UicOperatingPeriod id="41" version="any">
-								<!-- 
-POP+273:2022-04-01/2022-12-10::11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111'		 -->
-								<FromDate>2022-04-01T00:00:00</FromDate>
-								<ToDate>2022-12-10T23:59:59</ToDate>
-								<ValidDayBits>11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 					<trainNumbers>
 						<TrainNumber version="any" id="410">

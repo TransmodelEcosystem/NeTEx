@@ -3,6 +3,7 @@
 	<xsd:include schemaLocation="netex_nm_individualTraveller_support.xsd"/>
 	<xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_facility_support.xsd"/>
 	<xsd:include schemaLocation="../../netex_part_3/part3_salesTransactions/netex_salesContract_support.xsd"/>
+	<xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_vehicle_support.xsd"/>
 	<xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_vehicleType_support.xsd"/>
 	<xsd:include schemaLocation="../../netex_framework/netex_responsibility/netex_responsibility_version.xsd"/>
 	<!-- ======================================================================= -->
@@ -14,7 +15,7 @@
 				<Contributor>V1.0 Christophe Duquesne</Contributor>
 				<Contributor>Nicholas Knowles</Contributor>
 				<Coverage>Europe</Coverage>
-				<Creator>First drafted for NeTEx version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.  mailto:schemer@netex.org.uk</Creator>
+				<Creator>First drafted for NeTEx version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.</Creator>
 				<Date><Created>2020-10-15</Created>New Modes
 				</Date>
 				<Date><Modified>2020-10-15</Modified>New modes
@@ -99,10 +100,9 @@ Rail transport, Roads and Road transport
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="IndividualTraveller" abstract="false" substitutionGroup="DataManagedObject">
+	<xsd:element name="IndividualTraveller" substitutionGroup="DataManagedObject">
 		<xsd:annotation>
-			<xsd:documentation>Individual travelling person.  +v1.2.2
-</xsd:documentation>
+			<xsd:documentation>Individual travelling person. +v1.2.2</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
@@ -118,7 +118,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="IndividualTravellerGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="IndividualTravellerIdType"/>
+					<xsd:attribute name="id" type="IndividualTravellerIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -148,7 +148,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="CustomerRef" minOccurs="0"/>
 			<xsd:element name="IdentityVerified" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether traveller'ss identify has been verified. has been </xsd:documentation>
+					<xsd:documentation>Whether the traveller's identify has been verified.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Ranking" type="GlobalRankingType" minOccurs="0">
@@ -168,7 +168,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="Smoker" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether traveller  likes to talk.</xsd:documentation>
+					<xsd:documentation>Whether traveller likes to talk.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Languages" type="LanguageListOfEnumerations" minOccurs="0">
@@ -178,12 +178,12 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="vehiclePoolingDriverInfos" type="vehiclePoolingDriverInfos_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>VEHICLE POOLING DRIVER INFOrs for Traveller</xsd:documentation>
+					<xsd:documentation>VEHICLE POOLING DRIVER INFO for traveller.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="individualPassengerInfos" type="individualPassengerInfos_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>INDIVIDUAL PASSENGER INFOrs for Traveller</xsd:documentation>
+					<xsd:documentation>INDIVIDUAL PASSENGER INFO for traveller.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -201,11 +201,9 @@ Rail transport, Roads and Road transport
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="VehiclePoolingDriverInfo" abstract="false" substitutionGroup="DataManagedObject">
+	<xsd:element name="VehiclePoolingDriverInfo" substitutionGroup="DataManagedObject">
 		<xsd:annotation>
-			<xsd:documentation>Information characterising an INDIVIDUAL TRAVELER as a driver of a VEHICLE POOLING SERVICE.
-  +v1.2.2
-</xsd:documentation>
+			<xsd:documentation>Information characterising an INDIVIDUAL TRAVELLER as a driver of a VEHICLE POOLING SERVICE. +v1.2.2</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
@@ -221,7 +219,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="VehiclePoolingDriverInfoGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="VehiclePoolingDriverInfoIdType"/>
+					<xsd:attribute name="id" type="VehiclePoolingDriverInfoIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -276,7 +274,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="DrivingStyle" type="DrivingStyleEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Preferrred style of driving.</xsd:documentation>
+					<xsd:documentation>Preferred style of driving.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="NumberOfProposedTrips" type="xsd:nonNegativeInteger" minOccurs="0">
@@ -292,7 +290,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="VehicleRef" minOccurs="0"/>
 			<xsd:element name="reviews" type="reviews_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Reviews associated to the vehicle pooling driver</xsd:documentation>
+					<xsd:documentation>Reviews associated to the vehicle pooling driver. +v2.0</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -310,11 +308,9 @@ Rail transport, Roads and Road transport
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="IndividualPassengerInfo" abstract="false" substitutionGroup="DataManagedObject">
+	<xsd:element name="IndividualPassengerInfo" substitutionGroup="DataManagedObject">
 		<xsd:annotation>
-			<xsd:documentation>Information characterising an INDIVIDUAL TRAVELER as a driver of a VEHICLE POOLING SERVICE.
-  +v1.2.2
-</xsd:documentation>
+			<xsd:documentation>Information characterising an INDIVIDUAL TRAVELLER as a driver of a VEHICLE POOLING SERVICE. +v1.2.2</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
@@ -330,7 +326,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="IndividualPassengerInfoGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="IndividualPassengerInfoIdType"/>
+					<xsd:attribute name="id" type="IndividualPassengerInfoIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -370,7 +366,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="TravellingWithPet" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether  travelling with Pet.</xsd:documentation>
+					<xsd:documentation>Whether travelling with Pet.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="reviews" type="reviews_RelStructure" minOccurs="0">
@@ -383,7 +379,7 @@ Rail transport, Roads and Road transport
 	<!-- ====  REVIEWS.  ============================================ -->
 	<xsd:element name="Review" type="ReviewStructure">
 		<xsd:annotation>
-			<xsd:documentation>A review of a diver or of a traveler.</xsd:documentation>
+			<xsd:documentation>A review of a diver or of a traveller. +v2.0</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="reviews_RelStructure">

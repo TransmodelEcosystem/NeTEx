@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Train xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:core="http://www.govtalk.gov.uk/core" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../../xsd/netex_framework/netex_reusableComponents/netex_trainElement_version.xsd">
+<Train xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:core="http://www.govtalk.gov.uk/core" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="1" version="any" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../../xsd/netex_framework/netex_reusableComponents/netex_trainElement_version.xsd">
 	<TrainSize>
 		<NumberOfCars>1</NumberOfCars>
 		<TrainSizeType>normal</TrainSizeType>
 	</TrainSize>
 	<components>
-		<TrainComponent>
+		<TrainComponent id="1" version="any">
 			<Label>Type 72</Label>
 			<Description>NSB Type 72</Description>
-			<TrainElement>
+			<TrainElement id="1" version="any">
 				<TrainElementType>carriage</TrainElementType>
 				<FareClasses>standardClass</FareClasses>
 				<PassengerCapacity>

@@ -70,7 +70,21 @@ NeTEx separates  organisational structure (ORGANISATION, ORGANISATION PART)  fro
 			<TypeOfFrameRef ref="eix:EI:NTA:TypeOfFrame_EI_PI_STOP_OFFER:EIRE_NP" versionRef="eix:v1.0"/>
 			<!-- ==== CODESPACES == -->
 			<frames>
-				<SiteFrame id="epd:EI:NTA:CompositeFrame_EI_PI_STOP:NPTG-sample:nptg" version="nptg:NPTG_data_1.0" responsibilitySetRef="nptg:NPTG_data" dataSourceRef="nptg:nta">
+				<ResourceFrame id="epd:IE:NTA:ResourceFrame_IE_PI_STOP:NAPTAN:napt" version="9.6" dataSourceRef="napt:NTA">
+					<Name>Sample Stop and Stop Area data encoded NeTEx - Area 700</Name>
+					<TypeOfFrameRef ref="eix:IE:NTA:TypeOfFrame_IE_PI_STOP:EIRE_NP" versionRef="eix:v1.0"/>
+					<FrameDefaults>
+						<DefaultDataSourceRef ref="napt:NTA" version="napt:v2.4"/>
+						<DefaultResponsibilitySetRef ref="nptgAdminArea:700" versionRef="nptg:v2.1"/>
+					</FrameDefaults>
+					<dataSources>
+						<DataSource id="napt:NTA" version="napt:v2.4">
+						</DataSource>
+						<DataSource id="nptg:NTA" version="napt:v2.4">
+						</DataSource>
+					</dataSources>
+				</ResourceFrame>
+				<SiteFrame id="epd:EI:NTA:CompositeFrame_EI_PI_STOP:NPTG-sample:nptg" version="nptg:NPTG_data_1.0" responsibilitySetRef="nptg:NPTG_data" dataSourceRef="nptg:NTA">
 					<Name>NPTG content data - Localities and Plusbus zones </Name>
 					<Description>This is an example showing an encoding  in NeTEx of  actual NPTG  data for NPTG localities and PlusBus tariff zones  </Description>
 					<TypeOfFrameRef ref="eix:EI:NTA:TypeOfFrame_EI_PI_NPTG" versionRef="eix:v1.0"/>
@@ -2697,11 +2711,6 @@ NeTEx separates  organisational structure (ORGANISATION, ORGANISATION PART)  fro
 						<DefaultDataSourceRef ref="nptg:NTA" versionRef="nptg:v2.1"/>
 						<DefaultResponsibilitySetRef ref="nptg:NPTG_metadata" versionRef="nptg:v2.1"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="nptg:NPTG_data_1.0" version="any">
-							<Description>NPTG data version </Description>
-						</Version>
-					</versions>
 					<!--   === ADMIN AREAS ===== -->
 					<organisations>
 						<!---  EIRE  REGIONs -->

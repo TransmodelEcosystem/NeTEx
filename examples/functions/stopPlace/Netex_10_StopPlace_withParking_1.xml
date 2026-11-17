@@ -277,10 +277,10 @@ Changes
 				<ResourceFrame version="any" id="nptg:SVC01">
 					<!-- ==  For each NPTG Admin area a responsibility  is created : = -->
 					<dataSources>
-						<DataSource version="any" id="nptg:NaPTAN">
+						<DataSource version="001" id="nptg:NaPTAN">
 							<Name>DfT Naptan database </Name>
 						</DataSource>
-						<DataSource version="any" id="nptg:Xtra_accessibility_data">
+						<DataSource version="001" id="nptg:Xtra_accessibility_data">
 							<Name>Additional accessibility Data </Name>
 						</DataSource>
 					</dataSources>
@@ -323,7 +323,7 @@ Changes
 								<ResponsibilityRoleAssignment version="001" created="2010-05-17T09:30:47Z" id="napt:RS_nptg">
 									<Description>NPTG Coordination of area codes UK  </Description>
 									<DataRoleType>collects validates distributes</DataRoleType>
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 									<ResponsibleOrganisationRef version="any" ref="nptg:Org_TD002"/>
 									<ResponsibleAreaRef version="any" ref="nptg:Administrative_Zone@UK"/>
 								</ResponsibilityRoleAssignment>
@@ -491,19 +491,19 @@ Changes
 							<ImageUri>http://www.tbde.com/Wimbledonplan1.jpg</ImageUri>
 							<DepictedObjectRef nameOfRefClass="StopPlace" ref="naptStop:910GWIMBLDN"/>
 							<members>
-								<SchematicMapMember id="nptg:WimMap_001_01">
+								<SchematicMapMember id="nptg:WimMap_001_01" version="001">
 									<Name>Entrance</Name>
 									<SchematicMapMemberRef nameOfRefClass="StopPlaceEntrance" ref="nptg:9100WIMBLDN_A1-EE1"/>
 									<x>0123</x>
 									<y>346</y>
 								</SchematicMapMember>
-								<SchematicMapMember id="nptg:WimMap_001_02">
+								<SchematicMapMember id="nptg:WimMap_001_02" version="001">
 									<Name>Side Entrance</Name>
 									<SchematicMapMemberRef nameOfRefClass="StopPlaceEntrance" ref="nptg:9100WIMBLDN_A4-EE1"/>
 									<x>014</x>
 									<y>344</y>
 								</SchematicMapMember>
-								<SchematicMapMember id="nptg:WimMap_001_03">
+								<SchematicMapMember id="nptg:WimMap_001_03" version="001">
 									<Name>Men and Women's Toilets</Name>
 									<SchematicMapMemberRef nameOfRefClass="SanitaryEquipment" ref="nptg:9100WIMBLDN_A2-Eq-WC1"/>
 									<x>0145</x>
@@ -783,9 +783,11 @@ Changes
 						<!-- ========== RAIL========= -->
 						<StopPlace version="001" created="2006-09-11T15:42:00" modification="revise" dataSourceRef="nptg:NaPTAN" changed="2009-02-26T15:47:00" responsibilitySetRef="napt:RS_110" id="naptStop:910GWIMBLDN">
 							<!-- 		<StopAreaCode>910GWIMBLDN</StopAreaCode> -->
+							<privateCodes>
+								<PrivateCode>86738</PrivateCode>
+							</privateCodes>
 							<Name>Wimbledon Rail Station</Name>
 							<ShortName>Wimbledon Station</ShortName>
-							<PrivateCode>86738</PrivateCode>
 							<types>
 								<TypeOfZoneRef version="any" ref="napt:Type_of_zone@GRLS"/>
 							</types>
@@ -800,7 +802,7 @@ Changes
 							<AccessibilityAssessment version="any" id="nptg:910GWIMBLDN_Ac1">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
-									<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" changed="2010-05-17T09:30:47Z">
+									<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" changed="2010-05-17T09:30:47Z" id="nptg:910GWIMBLDN_Ac1" version="any">
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>true</StepFreeAccess>
 										<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -810,63 +812,63 @@ Changes
 									</AccessibilityLimitation>
 								</limitations>
 								<suitabilities>
-									<Suitability id="naptStop:910GWIMBLDN_Ac1_S01">
+									<Suitability id="naptStop:910GWIMBLDN_Ac1_S01" version="001">
 										<MobilityNeed> wheelchair</MobilityNeed>
 										<Suitable>suitable</Suitable>
 									</Suitability>
-									<Suitability id="naptStop:910GWIMBLDN_Ac1_S02">
+									<Suitability id="naptStop:910GWIMBLDN_Ac1_S02" version="001">
 										<MobilityNeed>  assistedWheelchair</MobilityNeed>
 										<Suitable>suitable</Suitable>
 									</Suitability>
-									<Suitability id="naptStop:910GWIMBLDN_Ac1_S03">
+									<Suitability id="naptStop:910GWIMBLDN_Ac1_S03" version="001">
 										<MobilityNeed> motorizedWheelchair</MobilityNeed>
 										<Suitable>suitable</Suitable>
 									</Suitability>
-									<Suitability id="naptStop:910GWIMBLDN_Ac1_S04">
+									<Suitability id="naptStop:910GWIMBLDN_Ac1_S04" version="001">
 										<EncumbranceNeed>pushchair</EncumbranceNeed>
 										<Suitable>suitable</Suitable>
 									</Suitability>
-									<Suitability id="naptStop:910GWIMBLDN_Ac1_S05">
+									<Suitability id="naptStop:910GWIMBLDN_Ac1_S05" version="001">
 										<EncumbranceNeed>oversizeBaggage</EncumbranceNeed>
 										<Suitable>suitable</Suitable>
 									</Suitability>
-									<Suitability id="naptStop:910GWIMBLDN_Ac1_S06">
+									<Suitability id="naptStop:910GWIMBLDN_Ac1_S06" version="001">
 										<EncumbranceNeed>guideDog</EncumbranceNeed>
 										<Suitable>suitable</Suitable>
 									</Suitability>
-									<Suitability id="naptStop:910GWIMBLDN_Ac1_S07">
+									<Suitability id="naptStop:910GWIMBLDN_Ac1_S07" version="001">
 										<EncumbranceNeed>baggageTrolley</EncumbranceNeed>
 										<Suitable>suitable</Suitable>
 									</Suitability>
-									<Suitability id="naptStop:910GWIMBLDN_Ac1_S08">
+									<Suitability id="naptStop:910GWIMBLDN_Ac1_S08" version="001">
 										<MedicalNeed>heartCondition</MedicalNeed>
 										<Suitable>suitable</Suitable>
 									</Suitability>
-									<Suitability id="naptStop:910GWIMBLDN_Ac1_S09">
+									<Suitability id="naptStop:910GWIMBLDN_Ac1_S09" version="001">
 										<MedicalNeed>allergic</MedicalNeed>
 										<Suitable>suitable</Suitable>
 									</Suitability>
-									<Suitability id="naptStop:910GWIMBLDN_Ac1_S10">
+									<Suitability id="naptStop:910GWIMBLDN_Ac1_S10" version="001">
 										<PsychosensoryNeed>visualImpairment</PsychosensoryNeed>
 										<Suitable>suitable</Suitable>
 									</Suitability>
-									<Suitability id="naptStop:910GWIMBLDN_Ac1_S11">
+									<Suitability id="naptStop:910GWIMBLDN_Ac1_S11" version="001">
 										<PsychosensoryNeed>auditoryImpairment</PsychosensoryNeed>
 										<Suitable>suitable</Suitable>
 									</Suitability>
-									<Suitability id="naptStop:910GWIMBLDN_Ac1_S12">
+									<Suitability id="naptStop:910GWIMBLDN_Ac1_S12" version="001">
 										<PsychosensoryNeed>averseToCrowds</PsychosensoryNeed>
 										<Suitable>suitable</Suitable>
 									</Suitability>
-									<Suitability id="naptStop:910GWIMBLDN_Ac1_S13">
+									<Suitability id="naptStop:910GWIMBLDN_Ac1_S13" version="001">
 										<PsychosensoryNeed>averseToConfinedSpaces</PsychosensoryNeed>
 										<Suitable>suitable</Suitable>
 									</Suitability>
-									<Suitability id="naptStop:910GWIMBLDN_Ac1_S14">
+									<Suitability id="naptStop:910GWIMBLDN_Ac1_S14" version="001">
 										<PsychosensoryNeed>averseToLifts</PsychosensoryNeed>
 										<Suitable>suitable</Suitable>
 									</Suitability>
-									<Suitability id="naptStop:910GWIMBLDN_Ac1_S15">
+									<Suitability id="naptStop:910GWIMBLDN_Ac1_S15" version="001">
 										<PsychosensoryNeed>averseToEscalators</PsychosensoryNeed>
 										<Suitable>suitable</Suitable>
 									</Suitability>
@@ -922,7 +924,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:9100WIMBLDN_A1-EE1">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_A1-EE1" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 											</AccessibilityLimitation>
@@ -930,6 +932,7 @@ Changes
 									</AccessibilityAssessment>
 									<LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
 									<EntranceType>openDoor</EntranceType>
+									<EntrancePurpose>main</EntrancePurpose>
 									<IsExternal>true</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -961,6 +964,7 @@ Changes
 										</EntranceEquipment>
 									</placeEquipments>
 									<EntranceType>ticketBarrier</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -972,6 +976,7 @@ Changes
 									<ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2"/>
 									<LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
 									<EntranceType>opening</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -983,6 +988,7 @@ Changes
 									<ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2"/>
 									<LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
 									<EntranceType>opening</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -994,6 +1000,7 @@ Changes
 									<ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2"/>
 									<LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
 									<EntranceType>opening</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -1005,6 +1012,7 @@ Changes
 									<ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2"/>
 									<LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
 									<EntranceType>opening</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -1020,10 +1028,12 @@ Changes
 										<EntranceEquipment version="any" id="nptg:9100WIMBLDN_A2b-EI5_e1">
 											<Door>true</Door>
 											<KeptOpen>true</KeptOpen>
+											<DoorControlElementHeight>0.8</DoorControlElementHeight>
 											<WheelchairPassable>true</WheelchairPassable>
 										</EntranceEquipment>
 									</placeEquipments>
 									<EntranceType>openDoor</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -1038,10 +1048,12 @@ Changes
 										<EntranceEquipment version="any" id="nptg:9100WIMBLDN_A2b-EI6">
 											<Door>true</Door>
 											<KeptOpen>true</KeptOpen>
+											<DoorControlElementHeight>0.8</DoorControlElementHeight>
 											<WheelchairPassable>true</WheelchairPassable>
 										</EntranceEquipment>
 									</placeEquipments>
 									<EntranceType>openDoor</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -1060,6 +1072,7 @@ Changes
 										</EntranceEquipment>
 									</placeEquipments>
 									<EntranceType>automaticDoor</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -1078,6 +1091,7 @@ Changes
 										</EntranceEquipment>
 									</placeEquipments>
 									<EntranceType>automaticDoor</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -1096,6 +1110,7 @@ Changes
 										</EntranceEquipment>
 									</placeEquipments>
 									<EntranceType>automaticDoor</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -1114,6 +1129,7 @@ Changes
 										</EntranceEquipment>
 									</placeEquipments>
 									<EntranceType>automaticDoor</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -1139,6 +1155,7 @@ Changes
 										</EntranceEquipment>
 									</placeEquipments>
 									<EntranceType>openDoor</EntranceType>
+									<EntrancePurpose>main</EntrancePurpose>
 									<IsExternal>true</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -1150,6 +1167,7 @@ Changes
 									<ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2"/>
 									<LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
 									<EntranceType>ticketBarrier</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -1162,6 +1180,7 @@ Changes
 									<ParentZoneRef version="001" ref="naptStop:9100WIMBLDN_5n6"/>
 									<LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
 									<EntranceType>opening</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -1173,6 +1192,7 @@ Changes
 									<ParentZoneRef version="001" ref="naptStop:9100WIMBLDN_5n6"/>
 									<LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
 									<EntranceType>opening</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -1184,6 +1204,7 @@ Changes
 									<ParentZoneRef version="001" ref="naptStop:9100WIMBLDN_7n8"/>
 									<LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
 									<EntranceType>opening</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -1195,6 +1216,7 @@ Changes
 									<ParentZoneRef version="001" ref="naptStop:9100WIMBLDN_7n8"/>
 									<LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
 									<EntranceType>opening</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -1206,6 +1228,7 @@ Changes
 									<ParentZoneRef version="001" ref="naptStop:9100WIMBLDN_9n10"/>
 									<LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
 									<EntranceType>opening</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -1217,6 +1240,7 @@ Changes
 									<ParentZoneRef version="001" ref="naptStop:9100WIMBLDN_9n10"/>
 									<LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
 									<EntranceType>opening</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -1274,7 +1298,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" id="nptg:9100WIMBLDN_5n6">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:9100WIMBLDN_5n6" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -1334,7 +1358,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" id="nptg:9100WIMBLDN_7n8">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:9100WIMBLDN_7n8" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -1394,7 +1418,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" id="nptg:9100WIMBLDN_9n10">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:9100WIMBLDN_9n10" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -1482,7 +1506,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_A1">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_A1" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -1549,7 +1573,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_A2">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_A2" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -1623,7 +1647,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_A4">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_A4" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -1670,7 +1694,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_L1">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_L1" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -1713,7 +1737,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_L2">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_L2" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -1750,7 +1774,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_L3">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_L3" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -1787,7 +1811,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_L4">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_L4" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -1824,7 +1848,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_S2">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_S2" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -1846,7 +1870,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_S3">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_S3" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -1868,7 +1892,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_S4">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_S4" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -1890,7 +1914,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_FC">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_FC" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -1922,7 +1946,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_lnk_A1-EE1_A1-EI1">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_lnk_A1-EE1_A1-EI1" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -2355,7 +2379,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_lnk_A2-ES2g_5n6-ES1pl_by-S2">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_lnk_A2-ES2g_5n6-ES1pl_by-S2" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -2402,7 +2426,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -2448,7 +2472,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_lnk_A2-ES4g_9n10-ES1pl_by-S4">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_lnk_A2-ES4g_9n10-ES1pl_by-S4" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -2494,7 +2518,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_lnk_A2b-EL2g_5n6-EL1pl_by-L2">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_lnk_A2b-EL2g_5n6-EL1pl_by-L2" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -2560,7 +2584,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_lnk_A2b-EL3g_7n8-EL1pl_by-L3">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_lnk_A2b-EL3g_7n8-EL1pl_by-L3" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -2626,7 +2650,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_lnk_A2b-EL4g_9n10-EL1pl_by-L4">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_lnk_A2b-EL4g_9n10-EL1pl_by-L4" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -2941,7 +2965,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_lnk_A4-EE1_A4-EI3">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_lnk_A4-EE1_A4-EI3" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -2962,7 +2986,7 @@ Changes
 							</pathLinks>
 							<!-- === Centre Court area  === -->
 							<pathJunctions>
-								<PathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_A2_J1">
+								<SitePathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_A2_J1">
 									<Name>Branch from main entrance to DL stairs 1-4</Name>
 									<Location>
 										<Longitude>-180</Longitude>
@@ -2970,8 +2994,8 @@ Changes
 									</Location>
 									<ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2"/>
 									<Covered>indoors</Covered>
-								</PathJunction>
-								<PathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_A2_J2">
+								</SitePathJunction>
+								<SitePathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_A2_J2">
 									<Name>Branch from main entrance to Rail stairs to  5 and 6</Name>
 									<Location>
 										<Longitude>-180</Longitude>
@@ -2979,8 +3003,8 @@ Changes
 									</Location>
 									<ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2"/>
 									<Covered>indoors</Covered>
-								</PathJunction>
-								<PathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_A2_J3">
+								</SitePathJunction>
+								<SitePathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_A2_J3">
 									<Name>Branch from path junction 2 to Rail stairs to  7 and 8</Name>
 									<Location>
 										<Longitude>-180</Longitude>
@@ -2988,8 +3012,8 @@ Changes
 									</Location>
 									<ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2"/>
 									<Covered>indoors</Covered>
-								</PathJunction>
-								<PathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_A2_J4">
+								</SitePathJunction>
+								<SitePathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_A2_J4">
 									<Name>Branch from path junction 3 to Rail stairs  to 9 and 10</Name>
 									<Location>
 										<Longitude>-180</Longitude>
@@ -2997,8 +3021,8 @@ Changes
 									</Location>
 									<ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2"/>
 									<Covered>indoors</Covered>
-								</PathJunction>
-								<PathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_A2b_J5">
+								</SitePathJunction>
+								<SitePathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_A2b_J5">
 									<Name>Branch from lift area  internal entrance 5  to Lift 1 and Lift 2 </Name>
 									<Location>
 										<Longitude>-180</Longitude>
@@ -3006,8 +3030,8 @@ Changes
 									</Location>
 									<ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2b"/>
 									<Covered>indoors</Covered>
-								</PathJunction>
-								<PathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_A2b_J6">
+								</SitePathJunction>
+								<SitePathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_A2b_J6">
 									<Name>Branch from lift area  internal entrance 6 to Lift 3 and Lift 4</Name>
 									<Location>
 										<Longitude>-180</Longitude>
@@ -3015,8 +3039,8 @@ Changes
 									</Location>
 									<ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2b"/>
 									<Covered>indoors</Covered>
-								</PathJunction>
-								<PathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_FC_J1">
+								</SitePathJunction>
+								<SitePathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_FC_J1">
 									<Name>Branch in front foreCourt Near entrance</Name>
 									<Location>
 										<Longitude>-180</Longitude>
@@ -3024,8 +3048,8 @@ Changes
 									</Location>
 									<ParentZoneRef version="001" ref="nptg:9100WIMBLDN_FC"/>
 									<Covered>outdoors</Covered>
-								</PathJunction>
-								<PathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_FC_J2">
+								</SitePathJunction>
+								<SitePathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_FC_J2">
 									<Name>Branch in front foreCourt near street</Name>
 									<Location>
 										<Longitude>-180</Longitude>
@@ -3033,7 +3057,7 @@ Changes
 									</Location>
 									<ParentZoneRef version="001" ref="nptg:9100WIMBLDN_FC"/>
 									<Covered>outdoors</Covered>
-								</PathJunction>
+								</SitePathJunction>
 							</pathJunctions>
 							<navigationPaths>
 								<!--===== Paths between Hall / 5 & 6-->
@@ -3042,7 +3066,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_A1-EE1_to_5n6-acc">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:9100WIMBLDN_A1-EE1_to_5n6-acc" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -3060,36 +3084,32 @@ Changes
 									<NavigationType>hallToQuay</NavigationType>
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_A1-EE1_to_5n6-acc-01">
-											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
 											<Description>From Upper Concourse  Main Entrance to  Path Junction 2 in upper concourse</Description>
+											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_A1-EE1_to_5n6-acc-02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Internal Entrance 1  to  Path Junction 2  in upper concourse</Description>
 											<Reverse>true</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_A1-EE1_to_5n6-acc-03">
 											<PathLinkRef version="001" ref="nptg:SitePathLink9100WIMBLDN_lnk_A2b-EI5_A2b-J5"/>
-											<Description>From Upper Concourse Lift area   Internal  Entrance 5 to  Path Junction 5 in lift area </Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_A1-EE1_to_5n6-acc-04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL2g_A2b-J5"/>
-											<Description>From Upper Concourse  Lift  Entrance 2 to  Path Junction 5 in lift area</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_A1-EE1_to_5n6-acc-05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL2g_5n6-EL1pl_by-L2"/>
-											<Description>From Upper Concourse  to platform 5 and 6 by Lift </Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -3101,7 +3121,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_A1-EE1_to_5n6-notacc">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_A1-EE1_to_5n6-notacc" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -3120,21 +3140,18 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2-01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Entrance to  Path Junction 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2-02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES2g_A2-J2"/>
-											<Description>From Upper Concourse  Stair Entrance 2 to  Path Junction 2 in upper concourse </Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2-03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES2g_5n6-ES1pl_by-S2"/>
-											<Description>From Upper Concourse  to Plaform 5 and 6 by stairs </Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -3146,7 +3163,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_5n6to_A1-EE1-acc">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:9100WIMBLDN_5n6to_A1-EE1-acc" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -3165,35 +3182,30 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_5n6to_A1-EE1-acc-01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL2g_5n6-EL1pl_by-L2"/>
-											<Description>From Upper Concourse  to Platform 5 and 6 by Lift </Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_5n6to_A1-EE1-acc-02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL2g_A2b-J5"/>
-											<Description>From Upper Concourse  Lift  Entrance 2 to  Path Junction 5 in lift area</Description>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_5n6to_A1-EE1-acc-03">
 											<PathLinkRef version="001" ref="nptg:SitePathLink9100WIMBLDN_lnk_A2b-EI5_A2b-J5"/>
-											<Description>From Upper Concourse Lift area   Internal  Entrance 1 to  Path Junction 5 in lift area </Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_5n6to_A1-EE1-acc-04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Internal Entrance 1  to  Path Junction 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_5n6to_A1-EE1-acc-05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Main Entrance to  Path Junction 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -3205,7 +3217,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_5n6_to_A1-EE1-notacc">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_5n6_to_A1-EE1-notacc" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -3224,21 +3236,18 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_5n6to_A1-EE1-notacc-01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES2g_5n6-ES1pl_by-S2"/>
-											<Description>From Upper Concourse  to Platform 5 and 6  by stairs </Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_5n6to_A1-EE1-notacc-02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES2g_A2-J2"/>
-											<Description>From Upper Concourse  Stair Entrance 2 to  Path Junction 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_5n6to_A1-EE1-notacc-03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Entrance to  Path Junction 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -3251,7 +3260,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_A1-EE1_to_7n8-acc">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:9100WIMBLDN_A1-EE1_to_7n8-acc" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -3270,42 +3279,36 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_A1-EE1_to_7n8-acc-01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Main Entrance to  Path Junction 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_A1-EE1_to_7n8-acc-02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Internal Entrance 1  to  Path Junction 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_A1-EE1_to_7n8-acc-03">
 											<PathLinkRef version="001" ref="nptg:SitePathLink9100WIMBLDN_lnk_A2b-EI5_A2b-J5"/>
-											<Description>From Upper Concourse Lift area   Internal  Entrance 1 to  Path Junction 5 in lift area </Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_A1-EE1_to_7n8-acc-04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6"/>
-											<Description>From Upper Concourse  Lift Area  Path Junction 1 to Path Junction 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_A1-EE1_to_7n8-acc-05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL3g_A2b-J6"/>
-											<Description>From Upper Concourse  Lift  Entrance 3 to  Path Junction 6 in lift area</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="6" id="nptg:9100WIMBLDN_A1-EE1_to_7n8-acc-06">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL3g_7n8-EL1pl_by-L3"/>
-											<Description>From Upper Concourse  to platform 7 and 8 by Lift </Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -3317,7 +3320,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_A1-EE1_to_7n8-notacc">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_A1-EE1_to_7n8-notacc" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -3336,28 +3339,24 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_A1-EE1_to_7n8-notacc-01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Entrance to  Path Junction 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_A1-EE1_to_7n8-notacc-02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J2_A2-J3"/>
-											<Description>From Upper Concourse  Lift Area  Path Junction 2 to Path Junction3</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_A1-EE1_to_7n8-notacc-03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3"/>
-											<Description>From Upper Concourse  Stair Entrance 3 to  Path Junction 3</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_A1-EE1_to_7n8-notacc-04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3"/>
-											<Description>From Upper Concourse  to Plaform 7 and 8 by stairs </Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -3369,7 +3368,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_7n8to_A1-EE1-acc">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:9100WIMBLDN_7n8to_A1-EE1-acc" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -3388,42 +3387,36 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_7n8to_A1-EE1-acc-01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL3g_7n8-EL1pl_by-L3"/>
-											<Description>From Upper Concourse  to Platform 7 and 8 by Lift </Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_7n8to_A1-EE1-acc-02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL3g_A2b-J6"/>
-											<Description>From Upper Concourse  Lift  Entrance 32 to  Path Junction 6 in lift area</Description>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_7n8to_A1-EE1-acc-03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6"/>
-											<Description>From Upper Concourse  Lift Area  Path Junction 1 to Path Junction 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_7n8to_A1-EE1-acc-04">
 											<PathLinkRef version="001" ref="nptg:SitePathLink9100WIMBLDN_lnk_A2b-EI5_A2b-J5"/>
-											<Description>From Upper Concourse Lift area   Internal  Entrance 1 to  Path Junction 5 in lift area </Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_7n8to_A1-EE1-acc-05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Internal Entrance 1  to  Path Junction 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="6" id="nptg:9100WIMBLDN_7n8to_A1-EE1-acc-06">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Main Entrance to  Path Junction 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -3435,7 +3428,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_7n8_to_A1-EE1-notacc">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_7n8_to_A1-EE1-notacc" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -3454,28 +3447,24 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_7n8to_A1-EE1-notacc-01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3"/>
-											<Description>From Upper Concourse  to Platform 7 and 8  by stairs </Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_7n8to_A1-EE1-notacc-02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3"/>
-											<Description>From Upper Concourse  Stair Entrance 3 to  Path Junction 3</Description>
 											<Reverse>false</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_7n8to_A1-EE1-notacc-03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J2_A2-J3"/>
-											<Description>From Upper Concourse   Path Junction 2 to Path Junction 3</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_7n8to_A1-EE1-notacc-04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Entrance to  Path Junction 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -3488,7 +3477,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_A1-EE1_to_9n10-acc">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:9100WIMBLDN_A1-EE1_to_9n10-acc" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -3507,42 +3496,36 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_A1-EE1_to_9n10-acc-01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Main Entrance to  Path Junction 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_A1-EE1_to_9n10-acc-02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Internal Entrance 1  to  Path Junction 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_A1-EE1_to_9n10-acc-03">
 											<PathLinkRef version="001" ref="nptg:SitePathLink9100WIMBLDN_lnk_A2b-EI5_A2b-J5"/>
-											<Description>From Upper Concourse Lift area   Internal  Entrance 1 to  Path Junction 5 in lift area </Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_A1-EE1_to_9n10-acc-04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6"/>
-											<Description>From Upper Concourse  Lift area  Path Junction 1 to Path Junction 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_A1-EE1_to_9n10-acc-05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL4g_A2b-J6"/>
-											<Description>From Upper Concourse  Lift  Entrance 4 to  Path Junction 6 in lift area</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="6" id="nptg:9100WIMBLDN_A1-EE1_to_9n10-acc-06">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL4g_9n10-EL1pl_by-L4"/>
-											<Description>From Upper Concourse  to platform 9 and 10 by Lift </Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -3554,7 +3537,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_A1-EE1_to_9n10-notacc">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_A1-EE1_to_9n10-notacc" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -3573,35 +3556,30 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_A1-EE1_to_9n10-notacc-01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Entrance to  Path Junction 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_A1-EE1_to_9n10-notacc-02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J2_A2-J3"/>
-											<Description>From Upper Concourse  Lift Area  Path Junction 2 to Path Junction3</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_A1-EE1_to_9n10-notacc-03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J3_A2-J4"/>
-											<Description>From Upper Concourse  Lift Area  Path Junction 2 to Path Junction4</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_A1-EE1_to_9n10-notacc-04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES4g_A2-J4"/>
-											<Description>From Upper Concourse  Stair Entrance 4 to  Path Junction 4</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_A1-EE1_to_9n10-notacc-05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES4g_9n10-ES1pl_by-S4"/>
-											<Description>From Upper Concourse  to Plaform 9 and 10 by stairs </Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -3613,7 +3591,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_9n10to_A1-EE1-acc">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:9100WIMBLDN_9n10to_A1-EE1-acc" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -3632,42 +3610,36 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_9n10to_A1-EE1-acc-01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL4g_9n10-EL1pl_by-L4"/>
-											<Description>From Upper Concourse  to Platform 9 and 10 by Lift </Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_9n10to_A1-EE1-acc-02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL4g_A2b-J6"/>
-											<Description>From Upper Concourse  Lift  Entrance 4 to  Path Junction 6 in lift area</Description>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_9n10to_A1-EE1-acc-03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6"/>
-											<Description>From Upper Concourse  Lift Area  Path Junction 1 to Path Junction 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_9n10to_A1-EE1-acc-04">
 											<PathLinkRef version="001" ref="nptg:SitePathLink9100WIMBLDN_lnk_A2b-EI5_A2b-J5"/>
-											<Description>From Upper Concourse Lift area   Internal  Entrance 1 to  Path Junction 5 in lift area </Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_9n10to_A1-EE1-acc-05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Internal Entrance 1  to  Path Junction 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="6" id="nptg:9100WIMBLDN_9n10to_A1-EE1-acc-06">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Main Entrance to  Path Junction 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -3679,7 +3651,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_9n10_to_A1-EE1-notacc">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_9n10_to_A1-EE1-notacc" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -3698,35 +3670,30 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_9n10to_A1-EE1-notacc-01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES4g_9n10-ES1pl_by-S4"/>
-											<Description>From Upper Concourse  to Platform 9 and 10  by stairs 4</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_9n10to_A1-EE1-notacc-02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES4g_A2-J4"/>
-											<Description>From Upper Concourse  Stair Entrance 4 to  Path Junction 1</Description>
 											<Reverse>false</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_9n10to_A1-EE1-notacc-03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J3_A2-J4"/>
-											<Description>From Upper Concourse  Lift Area  Path Junction 3 to Path Junction 4</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_9n10to_A1-EE1-notacc-04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J2_A2-J3"/>
-											<Description>From Upper Concourse  Lift Area  Path Junction 2 to Path Junction 3</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_9n10to_A1-EE1-notacc-05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Entrance to  Path Junction 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -3739,7 +3706,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_DL_to_7n8-acc">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:9100WIMBLDN_DL_to_7n8-acc" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -3758,35 +3725,30 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_DL_to_7n8-acc_01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL1g_A5-EL1pl_by-L1"/>
-											<Description>Lift From District  Line concourse  to Upper  Concourse by Lift 1</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_DL_to_7n8-acc_02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL1g_A2b-J5"/>
-											<Description>From Upper Concourse  Lift  Entrance 1 to  Path Junction 5 in lift area</Description>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_DL_to_7n8-acc_03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6"/>
-											<Description>From Upper Concourse  Lift area Path Junction 5  to  Path Junction 6</Description>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_DL_to_7n8-acc_04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL3g_A2b-J6"/>
-											<Description>From Upper Concourse  Lift  Entrance 3 to  Path Junction 6 in lift area</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_DL_to_7n8-acc_05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL3g_7n8-EL1pl_by-L3"/>
-											<Description>From Upper Concourse  to platform 7 and 8 by Lift 3</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -3798,7 +3760,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_DL_to_7n8-notacc">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_DL_to_7n8-notacc" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -3817,42 +3779,36 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_DL_to_7n8-notacc_01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES1g_S1-J1_by-S1"/>
-											<Description>From Upper Concourse  to Platform District  Line concourse  by stairs 1</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_DL_to_7n8-notacc_02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES1g_A2-J1"/>
-											<Description>From Upper Concourse  Stair Entrance 1 to  Path Junction 1</Description>
 											<Reverse>false</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_DL_to_7n8-notacc_03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J1_A2-J2"/>
-											<Description>From Upper Concourse    Path Junction 1 to Path Junction 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_DL_to_7n8-notacc_04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J2_A2-J3"/>
-											<Description>From Upper Concourse  Path Junction 2 to Path Junction 3</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_DL_to_7n8-notacc_05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3"/>
-											<Description>From Upper Concourse  Stair Entrance 3 to  Path Junction 3</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="6" id="nptg:9100WIMBLDN_DL_to_7n8-notacc_06">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3"/>
-											<Description>From Upper Concourse  to Plaform 7 and 8 by stairs 3</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -3864,7 +3820,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_7n8to_DL-acc">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:9100WIMBLDN_7n8to_DL-acc" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -3883,35 +3839,30 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_7n8to_DL-acc_01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL3g_7n8-EL1pl_by-L3"/>
-											<Description>From Upper Concourse  to Platform 7 and 8 by Lift 3</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_7n8to_DL-acc_02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL3g_A2b-J6"/>
-											<Description>From Upper Concourse  Lift  Entrance 3  to  Path Junction 6 in lift area</Description>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_7n8to_DL-acc_03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6"/>
-											<Description>From Upper Concourse  Lift Area  Path Junction 5 to Path Junction 6</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_7n8to_DL-acc_04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL1g_A2b-J5"/>
-											<Description>From Upper Concourse  Lift  Entrance 1 to  Path Junction 5 in lift area</Description>
 											<Reverse>true</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_7n8to_DL-acc_05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL1g_A5-EL1pl_by-L1"/>
-											<Description>From Upper Concourse  to Platform District  Line concourse by Lift  1</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -3923,7 +3874,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_7n8_to_DL-notacc">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_7n8_to_DL-notacc" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -3942,42 +3893,36 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_7n8_to_DL-notacc_01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3"/>
-											<Description>From Upper Concourse  to Platform 7 and 8  by stairs </Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_7n8_to_DL-notacc_02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3"/>
-											<Description>From Upper Concourse  Stair Entrance 3 to  Path Junction 3</Description>
 											<Reverse>false</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_7n8_to_DL-notacc_03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J2_A2-J3"/>
-											<Description>From Upper Concourse    Path Junction 2 to Path Junction3</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_7n8_to_DL-notacc_04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J1_A2-J2"/>
-											<Description>From Upper Concourse    Path Junction 1 to Path Junction 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_7n8_to_DL-notacc_05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES1g_A2-J1"/>
-											<Description>From Upper Concourse  Stair Entrance 1 to  Path Junction 1</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="6" id="nptg:9100WIMBLDN_7n8_to_DL-notacc_06">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES1g_S1-J1_by-S1"/>
-											<Description>From Upper Concourse  to Platform District  Line concourse  by stairs </Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -3990,7 +3935,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_5n6_to_7n8-acc">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:9100WIMBLDN_5n6_to_7n8-acc" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -4013,35 +3958,30 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_5n6_to_7n8-acc_01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL2g_5n6-EL1pl_by-L2"/>
-											<Description>From Upper Concourse  to Platform 5 and 6 by Lift 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_5n6_to_7n8-acc_02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL2g_A2b-J5"/>
-											<Description>From Upper Concourse  Lift  Entrance 2 to  Path Junction 5 in lift area</Description>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_5n6_to_7n8-acc_03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6"/>
-											<Description>From Upper Concourse  Lift area Path Junction 5 to  Path Junction 6</Description>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_5n6_to_7n8-acc_04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL3g_A2b-J6"/>
-											<Description>From Upper Concourse  Lift  Entrance 3 to  Path Junction 6 in lift area</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_5n6_to_7n8-acc_05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL3g_7n8-EL1pl_by-L3"/>
-											<Description>From Upper Concourse  to platform 7 and 8 by Lift 3</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -4053,7 +3993,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_5n6_to_7n8-notacc">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_5n6_to_7n8-notacc" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -4075,35 +4015,30 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_5n6_to_7n8-notacc_01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES2g_5n6-ES1pl_by-S2"/>
-											<Description>From Upper Concourse  to Platform 5 and 6  by stairs 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_5n6_to_7n8-notacc_02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES2g_A2-J2"/>
-											<Description>From Upper Concourse  Stair Entrance 2 to  Path Junction 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_5n6_to_7n8-notacc_03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J2_A2-J3"/>
-											<Description>From Upper Concourse  Lift Area  Path Junction 2 to Path Junction 3</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_5n6_to_7n8-notacc_04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3"/>
-											<Description>From Upper Concourse  Stair Entrance 3 to  Path Junction 3</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_5n6_to_7n8-notacc_05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3"/>
-											<Description>From Upper Concourse  to Plaform 7 and 8 by stairs 3</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -4115,7 +4050,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_7n8to_5n6-acc">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:9100WIMBLDN_7n8to_5n6-acc" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -4138,35 +4073,30 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_7n8to_5n6-acc_01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL3g_7n8-EL1pl_by-L3"/>
-											<Description>From Upper Concourse  to Platform 7 and 8 by Lift 3</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_7n8to_5n6-acc_02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL3g_A2b-J6"/>
-											<Description>From Upper Concourse  Lift  Entrance 3  to  Path Junction 6 in lift area</Description>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_7n8to_5n6-acc_03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6"/>
-											<Description>From Upper Concourse  Lift Area  Path Junction 5 to Path Junction  6</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_7n8to_5n6-acc_04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL2g_A2b-J5"/>
-											<Description>From Upper Concourse  Lift  Entrance 2 to  Path Junction 5 in lift area</Description>
 											<Reverse>true</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_7n8to_5n6-acc_05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL2g_5n6-EL1pl_by-L2"/>
-											<Description>From Upper Concourse  to Platform 5 and 6 by Lift 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -4178,7 +4108,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_7n8_to_5n6-notacc">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_7n8_to_5n6-notacc" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -4200,35 +4130,30 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_7n8_to_5n6-notacc_01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3"/>
-											<Description>From Upper Concourse  to Platform 7 and 8  by stairs </Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_7n8_to_5n6-notacc_02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3"/>
-											<Description>From Upper Concourse  Stair Entrance 3 to  Path Junction 3</Description>
 											<Reverse>false</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_7n8_to_5n6-notacc_03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J2_A2-J3"/>
-											<Description>From Upper Concourse    Path Junction 2 to Path Junction 3</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_7n8_to_5n6-notacc_04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3"/>
-											<Description>From Upper Concourse  Stair Entrance 2 to  Path Junction 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_7n8_to_5n6-notacc_05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES2g_5n6-ES1pl_by-S2"/>
-											<Description>From Upper Concourse  to Platform 5 and 6  by stairs </Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -4241,7 +4166,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_5n6_to_9n10-acc">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:9100WIMBLDN_5n6_to_9n10-acc" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -4264,35 +4189,30 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_5n6_to_9n10-acc_01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL2g_5n6-EL1pl_by-L2"/>
-											<Description>From Upper Concourse  to Platform 5 and 6 by Lift 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_5n6_to_9n10-acc_02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL2g_A2b-J5"/>
-											<Description>From Upper Concourse  Lift  Entrance 2 to  Path Junction 5 in lift area</Description>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_5n6_to_9n10-acc_03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6"/>
-											<Description>From Upper Concourse  Lift area Path Junction 5 to  Path Junction 5</Description>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_5n6_to_9n10-acc_04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL4g_A2b-J6"/>
-											<Description>From Upper Concourse  Lift  Entrance 4 to  Path Junction 6 in lift area</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_5n6_to_9n10-acc_05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL4g_9n10-EL1pl_by-L4"/>
-											<Description>From Upper Concourse  to platform 9 and 10 by Lift 4</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -4304,7 +4224,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_5n6_to_9n10-notacc">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_5n6_to_9n10-notacc" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -4327,42 +4247,36 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_5n6_to_9n10-notacc-01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES2g_5n6-ES1pl_by-S2"/>
-											<Description>From Upper Concourse  to Platform 5 and 6  by stairs 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_5n6_to_9n10-notacc-02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES2g_A2-J2"/>
-											<Description>From Upper Concourse  Stair Entrance 2 to  Path Junction 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_5n6_to_9n10-notacc-03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J2_A2-J3"/>
-											<Description>From Upper Concourse  Lift Area  Path Junction 2 to Path Junction 3</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_5n6_to_9n10-notacc-04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J3_A2-J4"/>
-											<Description>From Upper Concourse  Lift Area  Path Junction 2 to Path Junction 4</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_5n6_to_9n10-notacc-05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES4g_A2-J4"/>
-											<Description>From Upper Concourse  Stair Entrance 4 to  Path Junction 4</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="6" id="nptg:9100WIMBLDN_5n6_to_9n10-notacc-06">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES4g_9n10-ES1pl_by-S4"/>
-											<Description>From Upper Concourse  to Plaform 9 and 10 by stairs 4</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -4374,7 +4288,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_9n10to_5n6-acc">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:9100WIMBLDN_9n10to_5n6-acc" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -4397,35 +4311,30 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_9n10to_5n6-acc_01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL4g_9n10-EL1pl_by-L4"/>
-											<Description>From Upper Concourse  to Platform 9 and 10 by Lift 4</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_9n10to_5n6-acc_02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL4g_A2b-J6"/>
-											<Description>From Upper Concourse  Lift  Entrance 4 to  Path Junction 6 in lift area</Description>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_9n10to_5n6-acc_03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6"/>
-											<Description>From Upper Concourse  Lift Area  Path Junction 5 to Path Junction 6</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_9n10to_5n6-acc_04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL2g_A2b-J5"/>
-											<Description>From Upper Concourse  Lift  Entrance 2 to  Path Junction 5 in lift area</Description>
 											<Reverse>true</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_9n10to_5n6-acc_05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL2g_5n6-EL1pl_by-L2"/>
-											<Description>From Upper Concourse  to Platform 5 and 6 by Lift 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -4437,7 +4346,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_9n10_to_5n6-notacc">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_9n10_to_5n6-notacc" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -4456,42 +4365,36 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_9n10_to_5n6-notacc_01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES4g_9n10-ES1pl_by-S4"/>
-											<Description>From Upper Concourse  to Platform 9 and 10  by stairs 4</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_9n10_to_5n6-notacc_02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES4g_A2-J4"/>
-											<Description>From Upper Concourse  Stair Entrance 4 to  Path Junction 1</Description>
 											<Reverse>false</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_9n10_to_5n6-notacc_03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J3_A2-J4"/>
-											<Description>From Upper Concourse  Lift Area  Path Junction 3 to Path Junction4</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_9n10_to_5n6-notacc_04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J2_A2-J3"/>
-											<Description>From Upper Concourse  Lift area  Path Junction 2 to Path Junction3</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_9n10_to_5n6-notacc_05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES2g_A2-J2"/>
-											<Description>From Upper Concourse  Stair Entrance 2 to  Path Junction 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="6" id="nptg:9100WIMBLDN_9n10_to_5n6-notacc_06">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES2g_5n6-ES1pl_by-S2"/>
-											<Description>From Upper Concourse  to Platform 5 and 6  by stairs 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -4504,7 +4407,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_7n8_to_9n10-acc">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:9100WIMBLDN_7n8_to_9n10-acc" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -4523,28 +4426,24 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_7n8_to_9n10-acc_01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL3g_7n8-EL1pl_by-L3"/>
-											<Description>From Upper Concourse  to Platform 7 and 8 by Lift 3</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_7n8_to_9n10-acc_02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL3g_A2b-J6"/>
-											<Description>From Upper Concourse  Lift  Entrance 3 to  Path Junction 6 in lift area</Description>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_7n8_to_9n10-acc_03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL4g_A2b-J6"/>
-											<Description>From Upper Concourse  Lift  Entrance 4 to  Path Junction 6 in lift area</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_7n8_to_9n10-acc_04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL4g_9n10-EL1pl_by-L4"/>
-											<Description>From Upper Concourse  to platform 9 and 10 by Lift 4</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -4556,7 +4455,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_7n8_to_9n10-notacc">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_7n8_to_9n10-notacc" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -4575,35 +4474,30 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_7n8_to_9n10-notacc-01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3"/>
-											<Description>From Upper Concourse  to Platform 7 and 8  by stairs 3</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_7n8_to_9n10-notacc-02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3"/>
-											<Description>From Upper Concourse  Stair Entrance 3 to  Path Junction 3</Description>
 											<Reverse>false</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_7n8_to_9n10-notacc-03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J3_A2-J4"/>
-											<Description>From Upper Concourse  Lift Area  Path Junction 2 to Path Junction 4</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_7n8_to_9n10-notacc-04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES4g_A2-J4"/>
-											<Description>From Upper Concourse  Stair Entrance 4 to  Path Junction 4</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_7n8_to_9n10-notacc-05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES4g_9n10-ES1pl_by-S4"/>
-											<Description>From Upper Concourse  to Plaform 9 and 10 by stairs 4</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -4615,7 +4509,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_9n10to_7n8-acc">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:9100WIMBLDN_9n10to_7n8-acc" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -4634,28 +4528,24 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_9n10to_7n8-acc_01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL4g_9n10-EL1pl_by-L4"/>
-											<Description>From Upper Concourse  to Platform 9 and 10 by Lift 4</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_9n10to_7n8-acc_02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL4g_A2b-J6"/>
-											<Description>From Upper Concourse  Lift  Entrance 4 to  Path Junction 6 in lift area</Description>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_9n10to_7n8-acc_03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL3g_A2b-J6"/>
-											<Description>From Upper Concourse  Lift  Entrance 3 to  Path Junction 6 in lift area</Description>
 											<Reverse>true</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_9n10to_7n8-acc_04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL3g_7n8-EL1pl_by-L3"/>
-											<Description>From Upper Concourse  to Platform 7 and 8 by Lift  3</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -4667,7 +4557,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_9n10_to_7n8-notacc">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_9n10_to_7n8-notacc" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -4686,35 +4576,32 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_9n10_to_7n8-notacc_01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES4g_9n10-ES1pl_by-S4"/>
-											<Description>From Upper Concourse  to Platform 9 and 10  by stairs 4</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_9n10_to_7n8-notacc_02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES4g_A2-J4"/>
-											<Description>From Upper Concourse  Stair Entrance 4 to  Path Junction 1</Description>
 											<Reverse>false</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_9n10_to_7n8-notacc_03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J3_A2-J4"/>
-											<Description>From Upper Concourse  Lift Area  Path Junction 3 to Path Junction 4</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_9n10_to_7n8-notacc_04">
-											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3"/>
 											<Description>From Upper Concourse  Stair Entrance 2 to  Path Junction 3</Description>
+											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3"/>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_9n10_to_7n8-notacc_05">
-											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3"/>
 											<Description>From Upper Concourse  to Platform 7 and 8  by stairs 3</Description>
+											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3"/>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
@@ -4726,9 +4613,11 @@ Changes
 						<!-- ========== UNDERGROUND ========= -->
 						<StopPlace version="001" created="2006-09-11T15:42:00" modification="revise" changed="2009-02-26T15:47:00" responsibilitySetRef="napt:RS_147" id="naptStop:940GZZLUWIM">
 							<!-- 		<StopAreaCode>940GZZLUWIM</StopAreaCode> -->
+							<privateCodes>
+								<PrivateCode>86286</PrivateCode>
+							</privateCodes>
 							<Name>Wimbledon Underground Station </Name>
 							<ShortName>Wimbledon</ShortName>
-							<PrivateCode>86286</PrivateCode>
 							<types>
 								<TypeOfZoneRef version="any" ref="napt:Type_of_zone@GTMU"/>
 							</types>
@@ -4741,7 +4630,7 @@ Changes
 							<AccessibilityAssessment version="any" id="nptg:940GZZLUWIM">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
-									<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" changed="2010-05-17T09:30:47Z">
+									<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" changed="2010-05-17T09:30:47Z" id="nptg:940GZZLUWIM" version="any">
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>true</StepFreeAccess>
 										<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -4773,6 +4662,7 @@ Changes
 									<ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A5"/>
 									<LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
 									<EntranceType>automaticDoor</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -4790,6 +4680,7 @@ Changes
 										</EntranceEquipment>
 									</placeEquipments>
 									<EntranceType>opening</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -4807,6 +4698,7 @@ Changes
 										</EntranceEquipment>
 									</placeEquipments>
 									<EntranceType>opening</EntranceType>
+									<EntrancePurpose>withinStopPlace</EntrancePurpose>
 									<IsExternal>false</IsExternal>
 									<IsEntry>true</IsEntry>
 									<IsExit>true</IsExit>
@@ -4841,7 +4733,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" id="nptg:4900ZZLUWIM1n2">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:4900ZZLUWIM1n2" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -4915,7 +4807,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" id="nptg:4900ZZLUWIM3n4">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:4900ZZLUWIM3n4" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -4942,7 +4834,7 @@ Changes
 												<WaitingRoomEquipment version="any" id="nptg:4900ZZLUWIM3n4_Eq-Seats1">
 													<Seats>8</Seats>
 												</WaitingRoomEquipment>
-												<AssistanceService version="any" id="nptg:4900ZZLUWIM3n4_Eq-Seats1">
+												<AssistanceService version="any" id="nptg:4900ZZLUWIM3n4_Assist">
 													<AssistanceFacilityList>none</AssistanceFacilityList>
 												</AssistanceService>
 											</placeEquipments>
@@ -4986,7 +4878,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_A5">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_A5" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -5026,7 +4918,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_S1">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_S1" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -5059,7 +4951,7 @@ Changes
 											<SpiralStair>false</SpiralStair>
 											<NumberOfFlights>2</NumberOfFlights>
 											<flights>
-												<StairFlight id="nptg:StairFlight:9100WIMBLDN_S1_Eq-Sc1-f01">
+												<StairFlight id="nptg:StairFlight:9100WIMBLDN_S1_Eq-Sc1-f01" version="001">
 													<NumberOfSteps>13</NumberOfSteps>
 													<StepColourContrast>false</StepColourContrast>
 													<TopEnd>
@@ -5073,7 +4965,7 @@ Changes
 														<VisualContrast>false</VisualContrast>
 													</BottomEnd>
 												</StairFlight>
-												<StairFlight id="nptg:StairFlight:9100WIMBLDN_S1_Eq-Sc1-f02">
+												<StairFlight id="nptg:StairFlight:9100WIMBLDN_S1_Eq-Sc1-f02" version="001">
 													<NumberOfSteps>13</NumberOfSteps>
 													<StepColourContrast>false</StepColourContrast>
 													<TopEnd>
@@ -5115,7 +5007,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_lnk_A2b-EL1g_A5-EL1pl_by-L1">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_lnk_A2b-EL1g_A5-EL1pl_by-L1" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -5173,7 +5065,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_lnk_A2-ES1g_S1-J1_by-S1">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_lnk_A2-ES1g_S1-J1_by-S1" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -5206,7 +5098,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_lnk_S1-J1_A5-ES1pl_by-S1">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:9100WIMBLDN_lnk_S1-J1_A5-ES1pl_by-S1" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -5352,7 +5244,7 @@ Changes
 								</SitePathLink>
 							</pathLinks>
 							<pathJunctions>
-								<PathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_S1_J1">
+								<SitePathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_S1_J1">
 									<Name>Landing on Stairs 1 on way to DL </Name>
 									<Location>
 										<Longitude>-180</Longitude>
@@ -5360,7 +5252,7 @@ Changes
 									</Location>
 									<ParentZoneRef version="001" ref="nptg:9100WIMBLDN_S1"/>
 									<Covered>indoors</Covered>
-								</PathJunction>
+								</SitePathJunction>
 							</pathJunctions>
 							<navigationPaths>
 								<NavigationPath version="001" created="2010-05-17T09:30:47Z" id="nptg:9100WIMBLDN_A1-EE1_to_DL_is-acc">
@@ -5368,7 +5260,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_A1-EE1_to_DL_is-acc">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_A1-EE1_to_DL_is-acc" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -5387,56 +5279,48 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_A1-EE1_to_DL_-01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A1-EE1_A1-EI1"/>
-											<Description>From Ticket Hall Entrance to Upper Concourse  </Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_A1-EE1_to_DL_-02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-EI1_A2-J1"/>
-											<Description>From Upper Concourse  Entrance to  Path Junction 1</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_A1-EE1_to_DL_-03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Entrance to  Path Junction 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_A1-EE1_to_DL_-04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A1-EI1_A2-J1"/>
-											<Description>From Upper Concourse  Internal  Entrance 1 to  Path Junction 1</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_A1-EE1_to_DL_-05">
 											<PathLinkRef version="001" ref="nptg:SitePathLink9100WIMBLDN_lnk_A2b-EI5_A2b-J5"/>
-											<Description>From Upper Concourse Lift area   Internal  Entrance 1 to  Path Junction 5</Description>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="6" id="nptg:9100WIMBLDN_A1-EE1_to_DL_-06">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL1g_A2b-J5"/>
-											<Description>From Upper Concourse  Lift  Entrance 1 to  Path Junction 5</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="7" id="nptg:9100WIMBLDN_A1-EE1_to_DL_-07">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL1g_A5-EL1pl_by-L1"/>
-											<Description>From Upper Concourse  Lift entrance 1  to district  Line concourse by Lift 1</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="8" id="nptg:9100WIMBLDN_A1-EE1_to_DL_-08">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A5-EL1pl_1n2-EI1pl"/>
-											<Description>From District  Line concourse  Lift Entrance 1 to entrance to platform 1 and 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -5448,7 +5332,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_DL-acc-to-EI1_is-acc">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_DL-acc-to-EI1_is-acc" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -5467,56 +5351,48 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_DL-acc-to-EI1_is-acc_01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A5-EL1pl_1n2-EI1pl"/>
-											<Description>From District  Line concourse  Lift Entrance 1 to entrance to platform 1 and 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_DL-acc-to-EI1_is-acc_02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL1g_A5-EL1pl_by-L1"/>
-											<Description>From Upper Concourse  Lift entrance 1  to district  Line concourse by Lift 1</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_DL-acc-to-EI1_is-acc_03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL1g_A2b-J5"/>
-											<Description>From Upper Concourse  Lift  Entrance 1 to  Path Junction 5</Description>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_DL-acc-to-EI1_is-acc_04">
 											<PathLinkRef version="001" ref="nptg:SitePathLink9100WIMBLDN_lnk_A2b-EI5_A2b-J5"/>
-											<Description>From Upper Concourse Lift area   Path Junction 5 to  Internal  Entrance 1   </Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_DL-acc-to-EI1_is-acc_05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-											<Description>From Upper Concourse  Junct1 to Junction  Path Junction 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="6" id="nptg:9100WIMBLDN_DL-acc-to-EI1_is-acc_06">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J1_A2-J2"/>
-											<Description>From Upper  Path Junction 2 </Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="7" id="nptg:9100WIMBLDN_DL-acc-to-EI1_is-acc_07">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-EI1_A2-J1"/>
-											<Description>From Upper Concourse  Entrance to  Path Junction 1</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="8" id="nptg:9100WIMBLDN_DL-acc-to-EI1_is-acc_08">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A1-EE1_A1-EI1"/>
-											<Description>From Ticket Hall Entrance to Upper Concourse  Entrance</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -5528,7 +5404,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_A1-EE1_to_DL_is-notacc">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_A1-EE1_to_DL_is-notacc" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -5547,42 +5423,36 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_A1-EE1_to_DL_is-notacc_01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A1-EE1_A1-EI1"/>
-											<Description>From Ticket Hall Entrance to Upper Concourse  </Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_A1-EE1_to_DL_is-notacc_02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-EI1_A2-J1"/>
-											<Description>From Upper Concourse  Entrance to  Path Junction 1</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_A1-EE1_to_DL_is-notacc_03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES1g_A2-J1"/>
-											<Description>From Upper Concourse  Stair Entrance 1 to  Path Junction 1</Description>
 											<Reverse>true</Reverse>
 											<Heading>left</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_A1-EE1_to_DL_is-notacc_04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES1g_S1-J1_by-S1"/>
-											<Description>From Upper Concourse  to district  Line concourse by stairs: top flight </Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_A1-EE1_to_DL_is-notacc_05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_S1-J1_A5-ES1pl_by-S1"/>
-											<Description>From Upper Concourse  to district  Line concourse by stairs: bottom flight </Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>down</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="6" id="nptg:9100WIMBLDN_A1-EE1_to_DL_is-notacc_06">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A5-ES1pl_1n2-EI1pl"/>
-											<Description>From District  Line concourse  Stair Entrance 1 to entrance to platform 1 and 2</Description>
 											<Reverse>false</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -5594,7 +5464,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_DL_to_A1-EE1-is-notacc">
 										<MobilityImpairedAccess>false</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_DL_to_A1-EE1-is-notacc" version="001">
 												<WheelchairAccess>false</WheelchairAccess>
 												<StepFreeAccess>false</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -5613,42 +5483,36 @@ Changes
 									<pathLinksInSequence>
 										<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_DL_to_A1-EE1-is-notacc_01">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A5-ES1pl_1n2-EI1pl"/>
-											<Description>From District  Line concourse  Stair Entrance 1 to entrance to platform 1 and 2</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_DL_to_A1-EE1-is-notacc_02">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_S1-J1_A5-ES1pl_by-S1"/>
-											<Description>From Upper Concourse  to district  Line concourse by stairs bottom flight</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="3" id="nptg:9100WIMBLDN_DL_to_A1-EE1-is-notacc_03">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES1g_S1-J1_by-S1"/>
-											<Description>From Upper Concourse  to district  Line concourse by stairs - top flight </Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>up</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_DL_to_A1-EE1-is-notacc_04">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES1g_A2-J1"/>
-											<Description>From Upper Concourse  Stair Entrance 1 to  Path Junction 1</Description>
 											<Reverse>false</Reverse>
 											<Heading>right</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_DL_to_A1-EE1-is-notacc_05">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-EI1_A2-J1"/>
-											<Description>From Upper Concourse  Entrance to  Path Junction 1</Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
 										</PathLinkInSequence>
 										<PathLinkInSequence version="any" order="6" id="nptg:9100WIMBLDN_DL_to_A1-EE1-is-notacc_06">
 											<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A1-EE1_A1-EI1"/>
-											<Description>From Ticket Hall Entrance to Upper Concourse  </Description>
 											<Reverse>true</Reverse>
 											<Heading>forward</Heading>
 											<Transition>level</Transition>
@@ -5660,7 +5524,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_DL_to_Q1-Q2-is-acc">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:9100WIMBLDN_DL_to_Q1-Q2-is-acc" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -5675,7 +5539,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:490G00272P_ST-StopD_to_DL_is-branched">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:490G00272P_ST-StopD_to_DL_is-branched" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -5686,87 +5550,73 @@ Changes
 									<NavigationType>hallToQuay</NavigationType>
 									<placesInSequence>
 										<PlaceInSequence version="001" order="1" id="nptg:9100WIMBLDN_DL_to_Q1-Q2-is-acc_01">
-											<Description>Ticket Hall  </Description>
 											<PlaceRef version="001" xsi:type="AccessSpaceRefStructure" ref="nptg:9100WIMBLDN_A1"/>
 											<BranchLevel>1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="5" id="nptg:9100WIMBLDN_DL_to_Q1-Q2-is-acc_01_01">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A1-EI1_A2-J2"/>
-													<Description>From Upper concourse internal entrance to path junction 2</Description>
 													<Reverse>false</Reverse>
 													<Heading>forward</Heading>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="2" id="nptg:9100WIMBLDN_DL_to_Q1-Q2-is-acc_02">
-											<Description>Path Junction j2  in   Upper Concourse Ticket Hall (BRANCH POINT)</Description>
 											<PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J2"/>
 											<BranchLevel>1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_DL_to_Q1-Q2-is-acc_02_01">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J1_A2-J2"/>
-													<Description>From   Upper concourse  path junction 2 to  path junction 1 concourse</Description>
 													<Reverse>true</Reverse>
 												</PathLinkInSequence>
 												<PathLinkInSequence version="any" order="2" id="nptg:9100WIMBLDN_DL_to_Q1-Q2-is-acc_02_02">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-													<Description>From Entrance1  to Lift Area  in Upper concourse to path junction 2 in Upper concourse</Description>
 													<Reverse>true</Reverse>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="3" id="nptg:9100WIMBLDN_DL_to_Q1-Q2-is-acc_03">
-											<Description>Path Junction j1  in   Upper Concourse Ticket Hall  </Description>
 											<PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J1"/>
 											<BranchLevel>2.1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_DL_to_Q1-Q2-is-acc_03_03">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES1g_A2-J1"/>
-													<Description>From Entrance to stairs 1 in Upper concourse to path junction 1 in Upper concourse</Description>
 													<Reverse>true</Reverse>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="4" id="nptg:9100WIMBLDN_DL_to_Q1-Q2-is-acc_04">
-											<Description>Stairs 1</Description>
 											<PlaceRef version="001" xsi:type="AccessSpaceRefStructure" ref="nptg:9100WIMBLDN_S1"/>
 											<BranchLevel>2.1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_DL_to_Q1-Q2-is-acc_04_01">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-J1_A2-J2"/>
-													<Description>From Upper Concourse path junct 1   to Path Junk 2   </Description>
 													<Reverse>false</Reverse>
 													<Transition>down</Transition>
 												</PathLinkInSequence>
 												<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_DL_to_Q1-Q2-is-acc_04_02">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES2g_A2-J2"/>
-													<Description>From Upper Concourse path junct 2   to Stairs 2  Entrance to stairs  </Description>
 													<Reverse>true</Reverse>
 													<Transition>down</Transition>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="5" id="nptg:9100WIMBLDN_DL_to_Q1-Q2-is-acc_05">
-											<Description>Upper Concourse Lift Area path junction5</Description>
 											<PlaceRef version="001" ref="nptg:9100WIMBLDN_A2b_J5"/>
 											<BranchLevel>2.1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:9100WIMBLDN_DL_to_Q1-Q2-is-acc_05">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL2g_A2b-J5"/>
-													<Description>From Lift Entrance 2  in Lift Area  in Upper concourse to path junction 5  in Lift area  in Upper concourse </Description>
 													<Reverse>false</Reverse>
 													<Heading>forward</Heading>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="6" id="nptg:9100WIMBLDN_DL_to_Q1-Q2-is-acc_06">
-											<Description>Lift 2 to platform 5 and 6</Description>
 											<PlaceRef version="001" ref="nptg:9100WIMBLDN_L2"/>
 											<BranchLevel>2.1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="4" id="nptg:9100WIMBLDN_DL_to_Q1-Q2-is-acc_06_01">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL1g_A5-EL1pl_by-L1"/>
-													<Description>From Lift Area Lift 1 to Platform 5 and 6  Lift1 ENtrance</Description>
 													<Reverse>false</Reverse>
 													<Transition>down</Transition>
 												</PathLinkInSequence>
@@ -5784,9 +5634,11 @@ Changes
 						<!-- ========== TRAM========= -->
 						<StopPlace version="001" created="2006-09-11T15:42:00" modification="revise" changed="2009-02-26T15:47:00" responsibilitySetRef="napt:RS_147" id="naptStop:940GZZCRWIM">
 							<!-- 		<StopAreaCode>940GZZLUWIM</StopAreaCode> -->
+							<privateCodes>
+								<PrivateCode>20026</PrivateCode>
+							</privateCodes>
 							<Name>Wimbledon Tramlink Station </Name>
 							<ShortName>Wimbledon</ShortName>
-							<PrivateCode>20026</PrivateCode>
 							<types>
 								<TypeOfZoneRef version="any" ref="napt:Type_of_zone@GTMU"/>
 							</types>
@@ -5799,7 +5651,7 @@ Changes
 							<AccessibilityAssessment version="any" id="nptg:940GZZCRWIM">
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
-									<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" changed="2010-05-17T09:30:47Z">
+									<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" changed="2010-05-17T09:30:47Z" id="nptg:940GZZCRWIM" version="any">
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>true</StepFreeAccess>
 										<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -5843,7 +5695,7 @@ Changes
 								<TopographicPlaceRef version="001" ref="nptgLocality:E0034695"/>
 							</TopographicPlaceView>
 							<OperatingOrganisationView>
-								<OrganisationRef version="any" ref="nptg:Org_Tfl"/>
+								<AuthorityRef version="any" ref="nptg:Org_Tfl"/>
 								<Name>Transport for London</Name>
 							</OperatingOrganisationView>
 							<ParentSiteRef version="001" xsi:type="StopPlaceRefStructure" ref="naptStop:910GWIMBLDN"/>
@@ -5917,7 +5769,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" id="nptg:490000272C">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:490000272C" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -5963,7 +5815,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" id="nptg:490015472D">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:490015472D" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -6009,7 +5861,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" id="nptg:490015472L">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:490015472L" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -6164,7 +6016,7 @@ Changes
 								</SitePathLink>
 							</pathLinks>
 							<pathJunctions>
-								<PathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:490G00272P_Jw1">
+								<SitePathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:490G00272P_Jw1">
 									<Name>Branch in way to Stop D and Stop P</Name>
 									<Location>
 										<Longitude>-180</Longitude>
@@ -6172,8 +6024,8 @@ Changes
 									</Location>
 									<ParentZoneRef version="001" ref="naptStop:490G00272P"/>
 									<Covered>outdoors</Covered>
-								</PathJunction>
-								<PathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:490G00272P_Jw2">
+								</SitePathJunction>
+								<SitePathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:490G00272P_Jw2">
 									<Name>Branch on way from main entrance to Stop P</Name>
 									<Location>
 										<Longitude>-180</Longitude>
@@ -6181,8 +6033,8 @@ Changes
 									</Location>
 									<ParentZoneRef version="001" ref="naptStop:490G00272P"/>
 									<Covered>outdoors</Covered>
-								</PathJunction>
-								<PathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:490G00272P_Jw3">
+								</SitePathJunction>
+								<SitePathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:490G00272P_Jw3">
 									<Name>Branch on way from  Stop P  to Stop L </Name>
 									<Location>
 										<Longitude>-180</Longitude>
@@ -6190,8 +6042,8 @@ Changes
 									</Location>
 									<ParentZoneRef version="001" ref="naptStop:490G00272P"/>
 									<Covered>outdoors</Covered>
-								</PathJunction>
-								<PathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:490G00272P_Jw4">
+								</SitePathJunction>
+								<SitePathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:490G00272P_Jw4">
 									<Name>Branch on way from Stop D and Stop L to centre Court </Name>
 									<Location>
 										<Longitude>-180</Longitude>
@@ -6199,8 +6051,8 @@ Changes
 									</Location>
 									<ParentZoneRef version="001" ref="naptStop:490G00272P"/>
 									<Covered>outdoors</Covered>
-								</PathJunction>
-								<PathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:490G00272P_Jw5">
+								</SitePathJunction>
+								<SitePathJunction version="001" created="2010-05-17T09:30:47Z" id="nptg:490G00272P_Jw5">
 									<Name>Branch on way to Stop L from Centre Court</Name>
 									<Location>
 										<Longitude>-180</Longitude>
@@ -6208,7 +6060,7 @@ Changes
 									</Location>
 									<ParentZoneRef version="001" ref="naptStop:490G00272P"/>
 									<Covered>outdoors</Covered>
-								</PathJunction>
+								</SitePathJunction>
 							</pathJunctions>
 							<navigationPaths>
 								<NavigationPath version="001" created="2010-05-17T09:30:47Z" id="nptg:490G00272P_ST-StopD_to_5n6">
@@ -6216,7 +6068,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:490G00272P_ST-StopD_to_5n6">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:490G00272P_ST-StopD_to_5n6" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -6232,8 +6084,8 @@ Changes
 											<BranchLevel>1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopD_to_5n6_01_01">
-													<PathLinkRef version="001" ref="nptg:490G00272P_lnk_ST-Jw2_StopP"/>
 													<Description>From  Path Junction w2  on street to  Stop P on street </Description>
+													<PathLinkRef version="001" ref="nptg:490G00272P_lnk_ST-Jw2_StopP"/>
 													<Reverse>true</Reverse>
 													<Heading>forward</Heading>
 												</PathLinkInSequence>
@@ -6245,21 +6097,20 @@ Changes
 											<BranchLevel>1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopD_to_5n6_02_01">
-													<PathLinkRef version="001" ref="nptg:490G00272P_lnk_ST-Jw1_ST-Jw2"/>
 													<Description>From  Path Junction w1  on street to     Path Junction 2</Description>
+													<PathLinkRef version="001" ref="nptg:490G00272P_lnk_ST-Jw1_ST-Jw2"/>
 													<Reverse>true</Reverse>
 													<Heading>forward</Heading>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="3" id="nptg:490G00272P_ST-StopD_to_5n6_03">
-											<Description>Path Junction W1 on way from  Fore Court to Stop P</Description>
+											<Description>From  path junction 2 in foreCourt  on street to Path Junction w3 on street</Description>
 											<PlaceRef version="001" ref="nptg:490G00272P_Jw1"/>
 											<BranchLevel>1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="2" id="nptg:490G00272P_ST-StopD_to_5n6_03_01">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_FC-J2_ST-Jw1"/>
-													<Description>From  path junction 2 in foreCourt  on street to Path Junction w3 on street</Description>
 													<Reverse>true</Reverse>
 													<Heading>forward</Heading>
 												</PathLinkInSequence>
@@ -6272,109 +6123,92 @@ Changes
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopD_to_5n6_04_01">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_FC-J1_FC-J2"/>
-													<Description>From junction 1 in forecort to path junction 2 in foreCourt tion w3 on street</Description>
 													<Reverse>true</Reverse>
 													<Heading>forward</Heading>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="5" id="nptg:490G00272P_ST-StopD_to_5n6_05">
-											<Description>Path Junction j1  in   Fore Court  </Description>
 											<PlaceRef version="001" ref="nptg:9100WIMBLDN_FC_J1"/>
 											<BranchLevel>1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopD_to_5n6_05_01">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A1-EE1_FC-J1"/>
-													<Description>Ticket Hall Nain Entrance to path junction 2 in foreCourt tion w3 on street</Description>
 													<Reverse>true</Reverse>
 													<Heading>forward</Heading>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="6" id="nptg:490G00272P_ST-StopD_to_5n6_06">
-											<Description>Ticket Hall  </Description>
 											<PlaceRef version="001" xsi:type="AccessSpaceRefStructure" ref="nptg:9100WIMBLDN_A1"/>
 											<BranchLevel>1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopD_to_5n6_06_01">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A1-EI1_A2-J2"/>
-													<Description>From Upper concourse internal entrance to path junction 2</Description>
 													<Reverse>false</Reverse>
 													<Heading>forward</Heading>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="7" id="nptg:490G00272P_ST-StopD_to_5n6_07">
-											<Description>Path Junction j6  in   Upper Concourse Ticket Hall (BRANCH POINT)</Description>
 											<PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J2"/>
 											<BranchLevel>1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopD_to_5n6_07_01_01">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES1g_A2-J1"/>
-													<Description>From Entrance to stairs 1 in Upper concourse to path junction 1 in Upper concourse</Description>
 													<Reverse>true</Reverse>
 												</PathLinkInSequence>
 												<PathLinkInSequence version="any" order="2" id="nptg:490G00272P_ST-StopD_to_5n6_07_01_02">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2"/>
-													<Description>From Entrance1  to Lift Area  in Upper concourse to path junction 2 in Upper concourse</Description>
 													<Reverse>true</Reverse>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="8" id="nptg:490G00272P_ST-StopD_to_5n6_08">
-											<Description>Upper Concourse Lift Area</Description>
 											<PlaceRef version="001" xsi:type="AccessSpaceRefStructure" ref="nptg:9100WIMBLDN_A2b"/>
 											<BranchLevel>2.1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopD_to_5n6_08_01">
 													<PathLinkRef version="001" ref="nptg:SitePathLink9100WIMBLDN_lnk_A2b-EI5_A2b-J5"/>
-													<Description>From Entrance   to Lift Area  in Upper concourse to path junction 5 in Upper concourse Lift Area</Description>
 													<Reverse>false</Reverse>
 													<Heading>forward</Heading>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="9" id="nptg:490G00272P_ST-StopD_to_5n6_09">
-											<Description>Upper Concourse Lift Area path junction j5</Description>
 											<PlaceRef version="001" ref="nptg:9100WIMBLDN_A2b_J5"/>
 											<BranchLevel>2.1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopD_to_5n6_09_01">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL2g_A2b-J5"/>
-													<Description>From Lift Entrance 2  in Lift Area  in Upper concourse to path junction 5  in Lift area  in Upper concourse </Description>
 													<Reverse>false</Reverse>
 													<Heading>forward</Heading>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="10" id="nptg:490G00272P_ST-StopD_to_5n6_10">
-											<Description>Lift 2 to platform 5 and 6</Description>
 											<PlaceRef version="001" ref="nptg:9100WIMBLDN_L2"/>
 											<BranchLevel>2.1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopD_to_5n6_10_01">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL2g_5n6-EL1pl_by-L2"/>
-													<Description>From Lift Area Lift 2 to Platform 5 and 6  Lift1 Entrance</Description>
 													<Reverse>false</Reverse>
 													<Transition>down</Transition>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="11" id="nptg:490G00272P_ST-StopD_to_5n6_11">
-											<Description>Stairs 1</Description>
 											<PlaceRef version="001" xsi:type="AccessSpaceRefStructure" ref="nptg:9100WIMBLDN_S2"/>
 											<BranchLevel>2.2</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopD_to_5n6_11_01">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES2g_5n6-ES1pl_by-S2"/>
-													<Description>From Upper Concourse Entrance to Stairs 2  to Platform 5 and 6 Entrance to stairs by stairs</Description>
 													<Reverse>false</Reverse>
 													<Transition>down</Transition>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="12" id="nptg:490G00272P_ST-StopD_to_5n6_12">
-											<Description>Platform 5 and 6</Description>
 											<PlaceRef version="001" ref="naptStop:9100WIMBLDN_5n6"/>
 											<BranchLevel>1</BranchLevel>
 										</PlaceInSequence>
@@ -6385,7 +6219,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:490G00272P_ST-StopL_to_9n10">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data">
+											<AccessibilityLimitation modification="new" dataSourceRef="nptg:Xtra_accessibility_data" id="nptg:490G00272P_ST-StopL_to_9n10" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -6396,142 +6230,120 @@ Changes
 									<NavigationType>quayToQuay</NavigationType>
 									<placesInSequence>
 										<PlaceInSequence version="001" order="1" id="nptg:490G00272P_ST-StopL_to_9n10_01">
-											<Description>Stop L </Description>
 											<PlaceRef version="001" xsi:type="StopPlaceRefStructure" ref="naptStop:490G00272L"/>
 											<BranchLevel>1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopL_to_9n10_01_01">
 													<PathLinkRef version="001" ref="nptg:490G00272P_lnk_ST-Jw3_ST-StopL"/>
-													<Description>From  Stop L on street to Path Junction w3 on street</Description>
 													<Reverse>true</Reverse>
 													<Heading>forward</Heading>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="2" id="nptg:490G00272P_ST-StopL_to_9n10_02">
-											<Description>Branch jw3 on wayfrom Stop P  to Stop L </Description>
 											<PlaceRef version="001" ref="nptg:490G00272P_Jw3"/>
 											<BranchLevel>1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="2" id="nptg:490G00272P_ST-StopL_to_9n10_02_01">
 													<PathLinkRef version="001" ref="nptg:490G00272P_lnk_ST-Jw3_ST-Jw4"/>
-													<Description>From   Path Junction w3 on street to From   Path Junction w4 on street</Description>
 													<Reverse>false</Reverse>
 													<Heading>forward</Heading>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="3" id="nptg:490G00272P_ST-StopL_to_9n10_03">
-											<Description>Path Junction  jw4 on way from Stop D and Stop L to centre Court </Description>
 											<PlaceRef version="001" ref="nptg:490G00272P_Jw4"/>
 											<BranchLevel>1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopL_to_9n10_03_01">
 													<PathLinkRef version="001" ref="nptg:490G00272P_lnk_ST-Jw4_ST-Jw5"/>
-													<Description>From   Path Junction w4 on street to From   Path Junction w5 outside centre Court</Description>
 													<Reverse>true</Reverse>
 													<Heading>forward</Heading>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="4" id="nptg:490G00272P_ST-StopL_to_9n10_04">
-											<Description>Path Junction jw5 on way to Stop L from Centre Court</Description>
 											<PlaceRef version="001" ref="nptg:490G00272P_Jw5"/>
 											<BranchLevel>1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopL_to_9n10_04_01">
 													<PathLinkRef version="001" ref="nptg:490G00272P_lnk_A4-EE1-ST-Jw5"/>
-													<Description>Centre Court entrance to Path Junction w5 on Street  to </Description>
 													<Reverse>true</Reverse>
 													<Heading>forward</Heading>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="5" id="nptg:490G00272P_ST-StopL_to_9n10_05">
-											<Description>Centre Court entrance Hall</Description>
 											<PlaceRef version="001" xsi:type="AccessSpaceRefStructure" ref="nptg:9100WIMBLDN_A4"/>
 											<BranchLevel>1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopL_to_9n10_05_01">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A4-EE1_A4-EI3"/>
-													<Description>From  Centre Court Entrance to Upper Concourse entrance  </Description>
 													<Reverse>true</Reverse>
 													<Heading>forward</Heading>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="6" id="nptg:490G00272P_ST-StopL_to_9n10_06">
-											<Description>Upper Concourse </Description>
 											<PlaceRef version="001" xsi:type="AccessSpaceRefStructure" ref="nptg:9100WIMBLDN_A2"/>
 											<BranchLevel>1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopL_to_9n10_06_01">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-EI6_A2-J4"/>
-													<Description>From Upper Concourse  In Entrance 6 to Path Junction 4 </Description>
 													<Reverse>true</Reverse>
 													<Heading>forward</Heading>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="7" id="nptg:490G00272P_ST-StopL_to_9n10_07">
-											<Description>Upper Concourse   (Branch Point)</Description>
 											<PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J4"/>
 											<BranchLevel>1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopL_to_9n10_07_01">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES1g_A2-J1"/>
-													<Description>From Entrance to stairs 1 in Upper concourse to path junction 1 in Upper concourse</Description>
 													<Reverse>true</Reverse>
 												</PathLinkInSequence>
 												<PathLinkInSequence version="any" order="2" id="nptg:490G00272P_ST-StopL_to_9n10_07_02">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI6_A2-J1"/>
-													<Description>From Upper Concourse j1  to Lift Area Entrance 2 </Description>
 													<Reverse>true</Reverse>
 													<Heading>forward</Heading>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="8" id="nptg:490G00272P_ST-StopL_to_9n10_08">
-											<Description>Path Junction 6 from lift area  internal entrance 6 to Lift 1 and Lift 2</Description>
 											<PlaceRef version="001" ref="nptg:9100WIMBLDN_A2b_J6"/>
 											<BranchLevel>2.1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopL_to_9n10_08_01">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EI1_A2b-J6"/>
-													<Description>From Upper Concourse  Centre Court Entrance to Lift Area Entrance 2  to Lift area path junction 6</Description>
 													<Reverse>true</Reverse>
 													<Heading>forward</Heading>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="9" id="nptg:490G00272P_ST-StopL_to_9n10_09">
-											<Description>Lift 4 to platform 9 and 10</Description>
 											<PlaceRef version="001" ref="nptg:9100WIMBLDN_L4"/>
 											<BranchLevel>2.1</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopL_to_9n10_09_01">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2b-EL4g_9n10-EL1pl_by-L4"/>
-													<Description>From Lift Area Lift 4 to platform 9 and 10 Lift Entrance 1</Description>
 													<Reverse>true</Reverse>
 													<Transition>down</Transition>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="10" id="nptg:490G00272P_ST-StopL_to_9n10_10">
-											<Description>Stairs 4 to 9 and 10</Description>
 											<PlaceRef version="001" xsi:type="AccessSpaceRefStructure" ref="nptg:9100WIMBLDN_S4"/>
 											<BranchLevel>2.2</BranchLevel>
 											<onwardLinks>
 												<PathLinkInSequence version="any" order="1" id="nptg:490G00272P_ST-StopL_to_9n10_10_01">
 													<PathLinkRef version="001" ref="nptg:9100WIMBLDN_lnk_A2-ES4g_9n10-ES1pl_by-S4"/>
-													<Description>From Upper Concourse Entrance to Stairs 4 to 9 and 10 Entrance to stairs by stairs</Description>
 													<Reverse>false</Reverse>
 													<Transition>down</Transition>
 												</PathLinkInSequence>
 											</onwardLinks>
 										</PlaceInSequence>
 										<PlaceInSequence version="001" order="11" id="nptg:490G00272P_ST-StopL_to_9n10_11">
-											<Description>Platform 9 and 10</Description>
 											<PlaceRef version="001" ref="naptStop:9100WIMBLDN_9n10"/>
 											<BranchLevel>1</BranchLevel>
 										</PlaceInSequence>
@@ -6592,7 +6404,7 @@ Changes
 								<TopographicPlaceRef version="001" ref="nptgLocality:E0034695"/>
 							</TopographicPlaceView>
 							<OperatingOrganisationView>
-								<OrganisationRef version="any" ref="nptg:Org_Tfl"/>
+								<AuthorityRef version="any" ref="nptg:Org_Tfl"/>
 								<Name>Transport for London</Name>
 							</OperatingOrganisationView>
 							<ParentSiteRef version="001" xsi:type="StopPlaceRefStructure" ref="naptStop:490G00272P"/>
@@ -6658,7 +6470,7 @@ Changes
 									<AccessibilityAssessment version="001" created="2010-05-17T09:30:47Z" modification="new" id="nptg:490014734B">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation modification="new">
+											<AccessibilityLimitation modification="new" id="nptg:490014734B" version="001">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -6685,7 +6497,7 @@ Changes
 								</Quay>
 							</quays>
 							<pathJunctions>
-								<PathJunction version="001" created="2010-05-17T09:30:47Z" responsibilitySetRef="nptg:082" id="nptg:9100WIMBLDN_ST_G1">
+								<SitePathJunction version="001" created="2010-05-17T09:30:47Z" responsibilitySetRef="nptg:082" id="nptg:9100WIMBLDN_ST_G1">
 									<Name>first Branch on way from main entrance  to Alexandra Road 1</Name>
 									<Location>
 										<Longitude>-180</Longitude>
@@ -6693,8 +6505,8 @@ Changes
 									</Location>
 									<ParentZoneRef version="001" ref="naptStop:490G0019043"/>
 									<Covered>outdoors</Covered>
-								</PathJunction>
-								<PathJunction version="001" created="2010-05-17T09:30:47Z" responsibilitySetRef="nptg:082" id="nptg:9100WIMBLDN_ST_g2">
+								</SitePathJunction>
+								<SitePathJunction version="001" created="2010-05-17T09:30:47Z" responsibilitySetRef="nptg:082" id="nptg:9100WIMBLDN_ST_g2">
 									<Name>second Branch on way to Alexandra Road 1</Name>
 									<Location>
 										<Longitude>-180</Longitude>
@@ -6702,7 +6514,7 @@ Changes
 									</Location>
 									<ParentZoneRef version="001" ref="naptStop:490G0019043"/>
 									<Covered>outdoors</Covered>
-								</PathJunction>
+								</SitePathJunction>
 							</pathJunctions>
 						</StopPlace>
 						<StopPlace version="001" created="2006-09-11T15:42:00" responsibilitySetRef="napt:RS_082" id="naptStop:490G00272L">
@@ -6728,7 +6540,7 @@ Changes
 								<TopographicPlaceRef version="001" ref="nptgLocality:E0034695"/>
 							</TopographicPlaceView>
 							<OperatingOrganisationView>
-								<OrganisationRef version="any" ref="nptg:Org_Tfl"/>
+								<AuthorityRef version="any" ref="nptg:Org_Tfl"/>
 								<Name>Transport for London</Name>
 							</OperatingOrganisationView>
 							<ParentSiteRef version="001" xsi:type="StopPlaceRefStructure" ref="naptStop:490G00272P"/>
@@ -6854,65 +6666,81 @@ Changes
 					<scheduledStopPoints>
 						<!-- Scheduled stop ponts -->
 						<ScheduledStopPoint version="any" id="naptStop:9100WIMBLDN">
+							<privateCodes>
+								<PrivateCode>INT123</PrivateCode>
+							</privateCodes>
 							<Name>Wimbledon  Rail Station</Name>
 							<Description>SWt trains </Description>
-							<PrivateCode>INT123</PrivateCode>
 							<VehicleModes>rail</VehicleModes>
 							<ForAlighting>true</ForAlighting>
 							<ForBoarding>true</ForBoarding>
 						</ScheduledStopPoint>
 						<ScheduledStopPoint version="any" id="naptStop:9100WIMBLDN10">
+							<privateCodes>
+								<PrivateCode>INT1236</PrivateCode>
+							</privateCodes>
 							<Name>Wimbledon  Rail Station Station</Name>
 							<Description>SWt trains </Description>
-							<PrivateCode>INT1236</PrivateCode>
 							<VehicleModes>rail</VehicleModes>
 							<ForAlighting>true</ForAlighting>
 							<ForBoarding>true</ForBoarding>
 						</ScheduledStopPoint>
 						<ScheduledStopPoint version="any" id="naptStop:9400ZZLUWIM">
+							<privateCodes>
+								<PrivateCode>INT12356</PrivateCode>
+							</privateCodes>
 							<Name>Wimbledon  Underground</Name>
 							<Description>Wimbledon Underground</Description>
-							<PrivateCode>INT12356</PrivateCode>
 							<VehicleModes>metro</VehicleModes>
 							<ForAlighting>true</ForAlighting>
 							<ForBoarding>true</ForBoarding>
 						</ScheduledStopPoint>
 						<ScheduledStopPoint version="any" id="naptStop:9400ZZCRWIM">
+							<privateCodes>
+								<PrivateCode>673456</PrivateCode>
+							</privateCodes>
 							<Name>Wimbledon  Tramlink Stop</Name>
 							<Description>Croydon Tramlink</Description>
-							<PrivateCode>673456</PrivateCode>
 							<VehicleModes>tram</VehicleModes>
 							<ForAlighting>true</ForAlighting>
 							<ForBoarding>true</ForBoarding>
 						</ScheduledStopPoint>
 						<ScheduledStopPoint version="any" id="naptStop:490000272P">
+							<privateCodes>
+								<PrivateCode>3456</PrivateCode>
+							</privateCodes>
 							<Name>Wimbledon Stop P</Name>
 							<Description>Bus outside station</Description>
-							<PrivateCode>3456</PrivateCode>
 							<VehicleModes>bus</VehicleModes>
 							<ForAlighting>true</ForAlighting>
 							<ForBoarding>true</ForBoarding>
 						</ScheduledStopPoint>
 						<ScheduledStopPoint version="any" id="naptStop:490000272C">
+							<privateCodes>
+								<PrivateCode>3457</PrivateCode>
+							</privateCodes>
 							<Name>Wimbledon Stop C</Name>
 							<Description>Bus </Description>
-							<PrivateCode>3457</PrivateCode>
 							<VehicleModes>bus</VehicleModes>
 							<ForAlighting>true</ForAlighting>
 							<ForBoarding>true</ForBoarding>
 						</ScheduledStopPoint>
 						<ScheduledStopPoint version="any" id="naptStop:490000272D">
+							<privateCodes>
+								<PrivateCode>34567</PrivateCode>
+							</privateCodes>
 							<Name>Wimbledon Stop D</Name>
 							<Description/>
-							<PrivateCode>34567</PrivateCode>
 							<VehicleModes>bus</VehicleModes>
 							<ForAlighting>true</ForAlighting>
 							<ForBoarding>true</ForBoarding>
 						</ScheduledStopPoint>
 						<ScheduledStopPoint version="any" id="naptStop:490000272L">
+							<privateCodes>
+								<PrivateCode>34568</PrivateCode>
+							</privateCodes>
 							<Name>Wimbledon Stop L</Name>
 							<Description/>
-							<PrivateCode>34568</PrivateCode>
 							<VehicleModes>bus</VehicleModes>
 							<ForAlighting>true</ForAlighting>
 							<ForBoarding>true</ForBoarding>
@@ -7088,7 +6916,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_01to01_both_N01_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_01to01_both_N01_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7130,7 +6958,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_01to02_both_N01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_01to02_both_N01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7172,7 +7000,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_01to03_both">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_01to03_both" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7214,7 +7042,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_01to04_both">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_01to04_both" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7256,7 +7084,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_01to05_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_01to05_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7298,7 +7126,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_01to06_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_01to06_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7339,7 +7167,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_01to07_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_01to07_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7379,7 +7207,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_01to00_both_02">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_01to00_both_02" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7423,7 +7251,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_02to02_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_02to02_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7466,7 +7294,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_02to03_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_02to03_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7509,7 +7337,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_02to04_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_02to04_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7552,7 +7380,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_02to05_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_02to05_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7596,7 +7424,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_02to06_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_02to06_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7640,7 +7468,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_02to07_both">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_02to07_both" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7681,7 +7509,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_02to00_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_02to00_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7730,7 +7558,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_03to04_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_03to04_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7773,7 +7601,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_03to05_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_03to05_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7817,7 +7645,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_03to06_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_03to06_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7861,7 +7689,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_03to07_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_03to07_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7902,7 +7730,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_03to00_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_03to00_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7946,7 +7774,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_04to04_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_04to04_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -7989,7 +7817,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_04to05_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_04to05_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -8038,7 +7866,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_04to06_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_04to06_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -8082,7 +7910,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_04to07_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_04to07_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -8123,7 +7951,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_04to00_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_04to00_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -8173,7 +8001,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_05to06_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_05to06_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -8217,7 +8045,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_05to07_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_05to07_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -8258,7 +8086,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_05to00_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_05to00_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -8304,7 +8132,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_06to06_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_06to06_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -8348,7 +8176,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_06to07_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_06to07_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -8389,7 +8217,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_06to00_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_06to00_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -8440,7 +8268,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_07to07_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_07to07_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>
@@ -8482,7 +8310,7 @@ Changes
 									<AccessibilityAssessment version="any" id="nptg:wimcon_07to00_both_01">
 										<MobilityImpairedAccess>true</MobilityImpairedAccess>
 										<limitations>
-											<AccessibilityLimitation>
+											<AccessibilityLimitation id="nptg:wimcon_07to00_both_01" version="any">
 												<WheelchairAccess>true</WheelchairAccess>
 												<StepFreeAccess>true</StepFreeAccess>
 												<EscalatorFreeAccess>true</EscalatorFreeAccess>

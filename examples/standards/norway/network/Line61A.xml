@@ -299,7 +299,7 @@
 									<ScheduledStopPointRef version="any" ref="RUT:ScheduledStopPoint:0061101007"/>
 									<ForBoarding>false</ForBoarding>
 								</StopPointInJourneyPattern>
-								<StopPointInJourneyPattern version="any" id="RUT:StopPointInJourneyPattern:0061101007" order="8">
+								<StopPointInJourneyPattern version="any" id="RUT:StopPointInJourneyPattern:0061101008" order="8">
 									<ScheduledStopPointRef version="any" ref="RUT:ScheduledStopPoint:0061101007"/>
 									<ForBoarding>false</ForBoarding>
 								</StopPointInJourneyPattern>
@@ -363,37 +363,37 @@
 							<!-- Hvilken linje det gjelder (optional) -->
 							<LineRef version="any" ref="RUT:Line:0061"/>
 							<passingTimes>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="RUT:TemplateServiceJourney:0061_0061101001">
 									<!-- Tveita T -->
 									<StopPointInJourneyPatternRef version="any" ref="RUT:StopPointInJourneyPattern:0061101001"/>
 									<DepartureTime>00:15:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="RUT:TemplateServiceJourney:0061_0061101002">
 									<!-- Tveita bedriftsområde -->
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:0061101002"/>
 									<DepartureTime>00:17:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="RUT:TemplateServiceJourney:0061_0061101003">
 									<!-- Solfjellet -->
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:0061101003"/>
 									<DepartureTime>00:21:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="RUT:TemplateServiceJourney:0061_0061101004">
 									<!-- Larsbråten -->
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:0061101004"/>
 									<DepartureTime>00:24:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="RUT:TemplateServiceJourney:0061_0061101005">
 									<!-- Tveita bedriftsområde -->
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:0061101005"/>
 									<DepartureTime>00:27:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="RUT:TemplateServiceJourney:0061_0061101006">
 									<!-- Tveita -->
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:0061101006"/>
 									<DepartureTime>00:28:00</DepartureTime>
 								</TimetabledPassingTime>
-								<TimetabledPassingTime>
+								<TimetabledPassingTime version="any" id="RUT:TemplateServiceJourney:0061_0061101007">
 									<!-- Tveita -->
 									<StopPointInJourneyPatternRef ref="RUT:StopPointInJourneyPattern:0061101007"/>
 									<ArrivalTime>00:31:00</ArrivalTime>

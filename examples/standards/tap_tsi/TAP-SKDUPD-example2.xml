@@ -60,6 +60,17 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 				<DefaultCodespaceRef ref="op_cs"/>
 			</FrameDefaults>
 			<frames>
+				<!--  Narrative:  The SERVICE CALENDAR FRAME provides a container to organise the operational dates -->
+				<ServiceCalendarFrame id="uic:SKDUPD_example_2_Classic_train" version="any">
+					<operatingPeriods>
+						<!-- POP+273:2022-03-28/2022-06-18::11111101111110111111011111101111110111111011111101111110111111011111101111110111111'		 -->
+						<UicOperatingPeriod id="uic:SKDUPD_example_2_Classic_train_1" version="any">
+							<FromDate>2022-03-28T00:00:00</FromDate>
+							<ToDate>2022-06-18T23:59:59</ToDate>
+							<ValidDayBits>11111101111110111111011111101111110111111011111101111110111111011111101111110111111</ValidDayBits>
+						</UicOperatingPeriod>
+					</operatingPeriods>
+				</ServiceCalendarFrame>
 				<ServiceFrame version="any" id="uic:SKDUPD_example_1_Classic_train">
 					<!--- comment: THESE STOP DECLARATIONS COULD BE EXTERNAL as in a TSDUPD location , they are here so as to be able to define names
 			  to make the example easier to follow  and to show how data can be cross validated for referential integrity -->
@@ -135,7 +146,7 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 					<Name>Uic Example of a very simple train timetable</Name>
 					<VehicleModes>rail</VehicleModes>
 					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="1" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						<ServiceJourney version="any" id="1" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<!-- SKPUPD_TRAIN
 ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	not_used	Reservation_system	First_day	Last_day	Operation_days	Second_service_number
 1	1	13	2	9	Classic train	0010			2022-03-28	2022-06-18	11111101111110111111011111101111110111111011111101111110111111011111101111110111111	-->
@@ -148,14 +159,17 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="9">Intercity</TypeOfServiceRef>
 							<!-- tap/tsi B.4.7009   	9 Intercity    -->
 							<DepartureTime>06:57:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="uic:SKDUPD_example_2_Classic_train_1"/>
+							</dayTypes>
 							<OperatorRef versionRef="EXTERNAL" ref="uic:0010">VR</OperatorRef>
 							<trainNumbers>
 								<TrainNumberRef version="any" ref="1"/>
 							</trainNumbers>
 							<parts>
-								<JourneyPart version="any" id="1@001002326+001000460" order="1">
+								<JourneyPart version="any" id="1@001002326+001000460-1">
 									<ParentJourneyRef version="any" ref="1"/>
-									<MainPartRef version="any" ref="1@001002326+001000460"/>
+									<MainPartRef version="any" ref="1@001002326+001000460-1"/>
 									<FromStopPointRef version="any" ref="uic:001002326"/>
 									<ToStopPointRef version="any" ref="uic:001000460"/>
 									<StartTime>06:57:00</StartTime>
@@ -244,7 +258,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 1	11	001000966	1044		1045						
 1	12	001000453	1103		1104						
 1	13	001000460	1141			-->
-								<Call version="any" id="1" order="1">
+								<Call version="any" id="1-1">
 									<ScheduledStopPointRef version="any" ref="uic:001002326">Helsinki</ScheduledStopPointRef>
 									<Arrival>
 										<ForAlighting>false</ForAlighting>
@@ -253,7 +267,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>06:57:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="2">
+								<Call version="any" id="1-2">
 									<ScheduledStopPointRef version="any" ref="uic:001000010">Pasil</ScheduledStopPointRef>
 									<Arrival>
 										<Time>07:02:00</Time>
@@ -262,7 +276,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>07:03:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="3">
+								<Call version="any" id="1-3">
 									<ScheduledStopPointRef version="any" ref="uic:001000018">Tikkurila</ScheduledStopPointRef>
 									<Arrival>
 										<Time>07:12:00</Time>
@@ -271,7 +285,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>07:14:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="4">
+								<Call version="any" id="1-4">
 									<ScheduledStopPointRef version="any" ref="uic:001000100">Lahti</ScheduledStopPointRef>
 									<Arrival>
 										<Time>07:49:00</Time>
@@ -280,7 +294,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>07:51:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="5">
+								<Call version="any" id="1-5">
 									<ScheduledStopPointRef version="any" ref="uic:001000480">Kouvola</ScheduledStopPointRef>
 									<Arrival>
 										<Time>08:19:00</Time>
@@ -289,7 +303,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>08:23:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="6">
+								<Call version="any" id="1-6">
 									<ScheduledStopPointRef version="any" ref="uic:001000495">Lapeenranta</ScheduledStopPointRef>
 									<Arrival>
 										<Time>09:07:00</Time>
@@ -298,7 +312,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>09:09:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="7">
+								<Call version="any" id="1-7">
 									<ScheduledStopPointRef version="any" ref="uic:001000499">Joutseno</ScheduledStopPointRef>
 									<Arrival>
 										<Time>09:24:00</Time>
@@ -307,7 +321,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>09:25:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="8">
+								<Call version="any" id="1-8">
 									<ScheduledStopPointRef version="any" ref="uic:001000603">Imatra</ScheduledStopPointRef>
 									<Arrival>
 										<Time>09:37:00</Time>
@@ -316,7 +330,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>09:40:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="9">
+								<Call version="any" id="1-9">
 									<ScheduledStopPointRef version="any" ref="uic:001000507">Simpele</ScheduledStopPointRef>
 									<Arrival>
 										<Time>10:06:00</Time>
@@ -325,7 +339,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>10:07:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="10">
+								<Call version="any" id="1-10">
 									<ScheduledStopPointRef version="any" ref="uic:001000510">Parikkala</ScheduledStopPointRef>
 									<Arrival>
 										<Time>10:20:00</Time>
@@ -334,7 +348,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>10:22:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="11">
+								<Call version="any" id="1-11">
 									<ScheduledStopPointRef version="any" ref="uic:001000966">Kehsalahti</ScheduledStopPointRef>
 									<Arrival>
 										<Time>10:44:00</Time>
@@ -343,7 +357,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>10:45:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="12">
+								<Call version="any" id="1-12">
 									<ScheduledStopPointRef version="any" ref="uic:001000453">Kitee</ScheduledStopPointRef>
 									<Arrival>
 										<Time>11:03:00</Time>
@@ -352,7 +366,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>11:04:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="1" order="13">
+								<Call version="any" id="1-13">
 									<ScheduledStopPointRef version="any" ref="uic:001000460">Joensu</ScheduledStopPointRef>
 									<Arrival>
 										<Time>11:41:00</Time>
@@ -372,12 +386,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 									<!-- Tariff 2: Taf TSI B4.7139: 2	(Global price) All inclusive tariff -->
 								</ServiceFacilitySet>
 							</facilities>
-							<UicOperatingPeriod id="1" version="any">
-								<FromDate>2022-03-28T00:00:00</FromDate>
-								<ToDate>2022-06-18T23:59:59</ToDate>
-								<ValidDayBits>11111101111110111111011111101111110111111011111101111110111111011111101111110111111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 					<trainNumbers>
 						<TrainNumber version="any" id="1">
@@ -405,6 +414,45 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 				<DefaultCodespaceRef ref="op2_cs"/>
 			</FrameDefaults>
 			<frames>
+				<ResourceFrame version="any" id="RF1">
+					<dataSources>
+						<DataSource id="uic:0060" version="any"/>
+					</dataSources>
+				</ResourceFrame>
+				<!--  Narrative:  The SERVICE CALENDAR FRAME provides a container to organise the operational dates -->
+				<ServiceCalendarFrame id="uic:SKDUPD_example_2_Classic_train_2" version="any">
+					<operatingPeriods>
+						<!-- TODO: bitmap and dates are not matching -->
+						<!-- POP+273:2022-01-23/2022-01-25::11100000000000000000000000000000000111'		 -->
+						<UicOperatingPeriod id="e1:2" version="any">
+							<FromDate>2022-01-23T00:00:00</FromDate>
+							<ToDate>2022-01-25T23:59:59</ToDate>
+							<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
+						</UicOperatingPeriod>
+						<!-- TODO: bitmap and dates are not matching -->
+						<!-- POP+273:2022-01-23/2022-01-25::11100000000000000000000000000000000111'		 -->
+						<UicOperatingPeriod id="e2:2" version="any">
+							<FromDate>2022-01-23T00:00:00</FromDate>
+							<ToDate>2022-01-25T23:59:59</ToDate>
+							<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="e2:2a" version="any">
+							<FromDate>2022-01-23T00:00:00</FromDate>
+							<ToDate>2022-01-25T23:59:59</ToDate>
+							<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="e2:2b" version="any">
+							<FromDate>2022-01-23T00:00:00</FromDate>
+							<ToDate>2022-01-25T23:59:59</ToDate>
+							<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
+						</UicOperatingPeriod>
+						<UicOperatingPeriod id="e2:2c" version="any">
+							<FromDate>2022-01-23T00:00:00</FromDate>
+							<ToDate>2022-01-25T23:59:59</ToDate>
+							<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
+						</UicOperatingPeriod>
+					</operatingPeriods>
+				</ServiceCalendarFrame>
 				<ServiceFrame version="any" id="SKDUPD_2_example_Coach_Group">
 					<!--- comment: THESE STOP DECLARATIONS COULD BE EXTERNAL as in a TSDUPD location , they are here so as to be able to define names -->
 					<scheduledStopPoints>
@@ -435,73 +483,73 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 					<vehicleTypes>
 						<CompoundTrain version="any" id="41">
 							<components>
-								<TrainInCompoundTrain version="any" id="41" order="1">
-									<Train version="any" id="41">
+								<TrainInCompoundTrain version="any" id="41-1">
+									<PoweredTrain version="any" id="41">
 										<Name>Engine</Name>
 										<SelfPropelled>true</SelfPropelled>
 										<TransportMode>intercityRail</TransportMode>
 										<components>
-											<TrainComponent version="any" id="41" order="1">
-												<TrainElementRef versionRef="EXTERNAL" ref="engine26"/>
+											<TrainComponent version="any" id="41-1">
+												<TractiveElementTypeRef versionRef="EXTERNAL" ref="engine26"/>
 											</TrainComponent>
 											<!--  etc etc -->
 										</components>
-									</Train>
+									</PoweredTrain>
 								</TrainInCompoundTrain>
-								<TrainInCompoundTrain version="any" id="41@C-407" order="1">
-									<Train version="any" id="C-407">
+								<TrainInCompoundTrain version="any" id="41@C-407-1">
+									<UnpoweredTrain version="any" id="C-407">
 										<Name>Coach Group C-407</Name>
 										<SelfPropelled>false</SelfPropelled>
 										<components>
-											<TrainComponent version="any" id="C-407" order="1">
+											<TrainComponent version="any" id="C-407-1">
 												<Label>C-407 Coach 1</Label>
-												<TrainElementRef versionRef="EXTERNAL" ref="waggon756"/>
+												<TrailingElementTypeRef versionRef="EXTERNAL" ref="waggon756"/>
 											</TrainComponent>
-											<TrainComponent version="any" id="C-407" order="2">
+											<TrainComponent version="any" id="C-407-2">
 												<Label>C-407 Coach 2</Label>
-												<TrainElementRef versionRef="EXTERNAL" ref="waggon1234"/>
+												<TrailingElementTypeRef versionRef="EXTERNAL" ref="waggon1234"/>
 											</TrainComponent>
-											<TrainComponent version="any" id="C-407" order="3">
+											<TrainComponent version="any" id="C-407-3">
 												<Label>C-407 Coach 3</Label>
-												<TrainElementRef versionRef="EXTERNAL" ref="waggon12564"/>
+												<TrailingElementTypeRef versionRef="EXTERNAL" ref="waggon12564"/>
 											</TrainComponent>
 											<!--  etc etc -->
 										</components>
-									</Train>
+									</UnpoweredTrain>
 								</TrainInCompoundTrain>
-								<TrainInCompoundTrain version="any" id="41@C-457" order="2">
-									<Train version="any" id="C-457">
+								<TrainInCompoundTrain version="any" id="41@C-457-2">
+									<UnpoweredTrain version="any" id="C-457">
 										<Name>Coach Group C-407</Name>
 										<SelfPropelled>false</SelfPropelled>
 										<components>
-											<TrainComponent version="any" id="C-457" order="1">
+											<TrainComponent version="any" id="C-457-1">
 												<Label>C-457 Coach 1</Label>
-												<TrainElementRef versionRef="EXTERNAL" ref="waggon2245"/>
+												<TrailingElementTypeRef versionRef="EXTERNAL" ref="waggon2245"/>
 											</TrainComponent>
-											<TrainComponent version="any" id="C-457" order="2">
+											<TrainComponent version="any" id="C-457-2">
 												<Label>C-457 Coach 2</Label>
-												<TrainElementRef versionRef="EXTERNAL" ref="waggon888"/>
+												<TrailingElementTypeRef versionRef="EXTERNAL" ref="waggon888"/>
 											</TrainComponent>
 											<!--  etc etc -->
 										</components>
-									</Train>
+									</UnpoweredTrain>
 								</TrainInCompoundTrain>
-								<TrainInCompoundTrain version="any" id="41@C-477" order="3">
-									<Train version="any" id="C-477">
+								<TrainInCompoundTrain version="any" id="41@C-477-3">
+									<UnpoweredTrain version="any" id="C-477">
 										<Name>Coach Group C-407</Name>
 										<SelfPropelled>false</SelfPropelled>
 										<components>
-											<TrainComponent version="any" id="C-477" order="1">
+											<TrainComponent version="any" id="C-477-1">
 												<Label>C-477 Coach 1</Label>
-												<TrainElementRef versionRef="EXTERNAL" ref="waggon233"/>
+												<TrailingElementTypeRef versionRef="EXTERNAL" ref="waggon233"/>
 											</TrainComponent>
-											<TrainComponent version="any" id="C-477" order="2">
+											<TrainComponent version="any" id="C-477-2">
 												<Label>C-477 Coach 2</Label>
-												<TrainElementRef versionRef="EXTERNAL" ref="waggon817"/>
+												<TrailingElementTypeRef versionRef="EXTERNAL" ref="waggon817"/>
 											</TrainComponent>
 											<!--  etc etc -->
 										</components>
-									</Train>
+									</UnpoweredTrain>
 								</TrainInCompoundTrain>
 							</components>
 						</CompoundTrain>
@@ -513,7 +561,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 			               A single journey with three parts, each with a different Coach train number to  </Description>
 					<VehicleModes>rail</VehicleModes>
 					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="e1:2" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						<ServiceJourney version="any" id="e1:2" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<!-- SKPUPD_TRAIN
 ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	not_used	Reservation_system	First_day	Last_day	Operation_days	Second_service_number
 2	41			31	Connecting to	1154		2021-12-19	2022-01-25	11100000000000000000000000000000000111		-->
@@ -526,15 +574,18 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="31">Coach Group</TypeOfServiceRef>
 							<!-- tap/tsi B.4.7009   	31 Coach group G    -->
 							<DepartureTime>06:57:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="e1:2"/>
+							</dayTypes>
 							<CompoundTrainRef version="any" ref="41"/>
 							<OperatorRef versionRef="EXTERNAL" ref="uic:1154">CD</OperatorRef>
 							<trainNumbers>
 								<TrainNumberRef version="any" ref="e1:2"/>
 							</trainNumbers>
 							<parts>
-								<JourneyPart version="any" id="e1:2@005103865+005433124" order="1">
+								<JourneyPart version="any" id="e1:2@005103865+005433124-1">
 									<ParentJourneyRef version="any" ref="e1:2"/>
-									<MainPartRef version="any" ref="e1:2@005103865+005433124"/>
+									<MainPartRef version="any" ref="e1:2@005103865+005433124-1"/>
 									<TrainNumberRef version="any" ref="e1:C-407"/>
 									<FromStopPointRef version="any" ref="uic:005103865">Warsaw</FromStopPointRef>
 									<ToStopPointRef version="any" ref="uic:005434124">Bohumin</ToStopPointRef>
@@ -544,9 +595,9 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 									<!-- BOGUS VALUE -->
 									<PurposeOfJourneyPartitionRef versionRef="EXTERNAL" ref="join Split"/>
 								</JourneyPart>
-								<JourneyPart version="any" id="e1:2@005433124+005433425" order="2">
+								<JourneyPart version="any" id="e1:2@005433124+005433425-2">
 									<ParentJourneyRef version="any" ref="e1:2"/>
-									<MainPartRef version="any" ref="e1:2@005103865+005433124"/>
+									<MainPartRef version="any" ref="e1:2@005103865+005433124-1"/>
 									<TrainNumberRef version="any" ref="e1:C-457"/>
 									<FromStopPointRef version="any" ref="uic:005434124">Bohumin</FromStopPointRef>
 									<ToStopPointRef version="any" ref="uic:005433425">Breclaw</ToStopPointRef>
@@ -556,9 +607,9 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 									<!-- BOGUS VALUE -->
 									<PurposeOfJourneyPartitionRef versionRef="EXTERNAL" ref="join Split"/>
 								</JourneyPart>
-								<JourneyPart version="any" id="e1:2@005433425+005510033" order="3">
+								<JourneyPart version="any" id="e1:2@005433425+005510033-3">
 									<ParentJourneyRef version="any" ref="e1:2"/>
-									<MainPartRef version="any" ref="e1:2@005103865+005433124"/>
+									<MainPartRef version="any" ref="e1:2@005103865+005433124-1"/>
 									<TrainNumberRef version="any" ref="e1:C-477"/>
 									<FromStopPointRef version="any" ref="uic:005433425">Breclaw</FromStopPointRef>
 									<ToStopPointRef version="any" ref="uic:005510033">Budapest-Nuygati</ToStopPointRef>
@@ -576,31 +627,26 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 2	2	005434124													
 2	3	005433425													
 2	4	005510033		-->
-								<Call version="any" id="e1:2" order="1">
+								<Call version="any" id="e1:2-1">
 									<ScheduledStopPointRef version="any" ref="uic:005103865">Warszawa Wschodnia</ScheduledStopPointRef>
 									<Arrival>
 										<ForAlighting>false</ForAlighting>
 									</Arrival>
 								</Call>
-								<Call version="any" id="e1:2" order="2">
+								<Call version="any" id="e1:2-2">
 									<ScheduledStopPointRef version="any" ref="uic:005434124">Bohumin</ScheduledStopPointRef>
 								</Call>
-								<Call version="any" id="e1:2" order="3">
+								<Call version="any" id="e1:2-3">
 									<ScheduledStopPointRef version="any" ref="uic:005433425">Breclaw</ScheduledStopPointRef>
 								</Call>
-								<Call version="any" id="e1:2" order="4">
+								<Call version="any" id="e1:2-4">
 									<ScheduledStopPointRef version="any" ref="uic:005510033">Budapest-Nuygati</ScheduledStopPointRef>
 									<Departure>
 										<ForBoarding>false</ForBoarding>
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="e1:2" version="any">
-								<FromDate>2022-01-23T00:00:00</FromDate>
-								<ToDate>2022-01-25T23:59:59</ToDate>
-								<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 					<trainNumbers>
 						<TrainNumber version="any" id="e1:2">
@@ -667,7 +713,7 @@ ID	Stop_number	Service	Relation	Transfer_time	Certainty
 			                representing the  splitting at off coaches at each stage</Description>
 					<VehicleModes>rail</VehicleModes>
 					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="e2:2" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						<ServiceJourney version="any" id="e2:2" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<!-- SKPUPD_TRAIN
 ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	not_used	Reservation_system	First_day	Last_day	Operation_days	Second_service_number
 2	41			31	Connecting to	1154			2021-12-19	2022-01-25	11100000000000000000000000000000000111	-->
@@ -680,6 +726,9 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="31">Coach Group</TypeOfServiceRef>
 							<!-- tap/tsi B.4.7009   	31 Coach group G    -->
 							<DepartureTime>06:57:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="e2:2"/>
+							</dayTypes>
 							<CompoundTrainRef version="any" ref="41"/>
 							<!-- BOGUS VALUE -->
 							<OperatorRef versionRef="EXTERNAL" ref="uic:1154">CD</OperatorRef>
@@ -693,32 +742,27 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 2	2	005434124													
 2	3	005433425													
 2	4	005510033		-->
-								<Call version="any" id="e2:2" order="1">
+								<Call version="any" id="e2:2-1">
 									<ScheduledStopPointRef version="any" ref="uic:005103865">Warszawa Wschodnia</ScheduledStopPointRef>
 									<Arrival>
 										<ForAlighting>false</ForAlighting>
 									</Arrival>
 								</Call>
-								<Call version="any" id="e2:2" order="2">
+								<Call version="any" id="e2:2-2">
 									<ScheduledStopPointRef version="any" ref="uic:005434124">Bohumin</ScheduledStopPointRef>
 								</Call>
-								<Call version="any" id="e2:2" order="3">
+								<Call version="any" id="e2:2-3">
 									<ScheduledStopPointRef version="any" ref="uic:005433425">Breclaw</ScheduledStopPointRef>
 								</Call>
-								<Call version="any" id="e2:2" order="4">
+								<Call version="any" id="e2:2-4">
 									<ScheduledStopPointRef version="any" ref="uic:005510033">Budapest-Nuygati</ScheduledStopPointRef>
 									<Departure>
 										<ForBoarding>false</ForBoarding>
 									</Departure>
 								</Call>
 							</calls>
-							<UicOperatingPeriod id="e2:2" version="any">
-								<FromDate>2022-01-23T00:00:00</FromDate>
-								<ToDate>2022-01-25T23:59:59</ToDate>
-								<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="e2:2a" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						</ServiceJourney>
+						<ServiceJourney version="any" id="e2:2a" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<Name>Connecting to: Coaches C407  Warsaw  Bohumin </Name>
 							<TransportMode>rail</TransportMode>
 							<TransportSubmode>
@@ -727,15 +771,18 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 							<TypeOfProductCategoryRef versionRef="EXTERNAL" ref="63">Intercity</TypeOfProductCategoryRef>
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="31">Coach Group</TypeOfServiceRef>
 							<DepartureTime>06:57:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="e2:2a"/>
+							</dayTypes>
 							<!-- BOGUS VALUE -->
 							<OperatorRef versionRef="EXTERNAL" ref="uic:1154">CD</OperatorRef>
 							<trainNumbers>
 								<TrainNumberRef version="any" ref="e2:C-407"/>
 							</trainNumbers>
 							<parts>
-								<JourneyPart version="any" id="e2:2a@005103865+005433124" order="1">
+								<JourneyPart version="any" id="e2:2a@005103865+005433124-1">
 									<ParentJourneyRef version="any" ref="e2:2a"/>
-									<MainPartRef version="any" ref="e2:2a@005103865+005433124"/>
+									<MainPartRef version="any" ref="e2:2a@005103865+005433124-1"/>
 									<FromStopPointRef version="any" ref="uic:005103865">Warsaw</FromStopPointRef>
 									<ToStopPointRef version="any" ref="uic:005434124">Bohumin</ToStopPointRef>
 									<StartTime>06:57:00</StartTime>
@@ -745,13 +792,8 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 									<PurposeOfJourneyPartitionRef versionRef="EXTERNAL" ref="join Split"/>
 								</JourneyPart>
 							</parts>
-							<UicOperatingPeriod id="e2:2a" version="any">
-								<FromDate>2022-01-23T00:00:00</FromDate>
-								<ToDate>2022-01-25T23:59:59</ToDate>
-								<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="e2:2b" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						</ServiceJourney>
+						<ServiceJourney version="any" id="e2:2b" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<Name>Connecting to  Warsaw  Breclaw</Name>
 							<TransportMode>rail</TransportMode>
 							<TransportSubmode>
@@ -760,15 +802,18 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 							<TypeOfProductCategoryRef versionRef="EXTERNAL" ref="63">Intercity</TypeOfProductCategoryRef>
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="31">Coach Group</TypeOfServiceRef>
 							<DepartureTime>06:57:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="e2:2b"/>
+							</dayTypes>
 							<!-- BOGUS VALUE -->
 							<OperatorRef versionRef="EXTERNAL" ref="uic:1154">CD</OperatorRef>
 							<trainNumbers>
 								<TrainNumberRef version="any" ref="e2:C-457"/>
 							</trainNumbers>
 							<parts>
-								<JourneyPart version="any" id="e2:2b@005103865+005433124" order="1">
+								<JourneyPart version="any" id="e2:2b@005103865+005433124-2">
 									<ParentJourneyRef version="any" ref="e2:2b"/>
-									<MainPartRef version="any" ref="e2:2b@005103865+005433124"/>
+									<MainPartRef version="any" ref="e2:2b@005103865+005433124-2"/>
 									<FromStopPointRef version="any" ref="uic:005103865">Warsaw</FromStopPointRef>
 									<ToStopPointRef version="any" ref="uic:005434124">Bohumin</ToStopPointRef>
 									<StartTime>06:57:00</StartTime>
@@ -777,9 +822,9 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 									<!-- BOGUS VALUE -->
 									<PurposeOfJourneyPartitionRef versionRef="EXTERNAL" ref="join Split"/>
 								</JourneyPart>
-								<JourneyPart version="any" id="e2:2b@005433124+005433425" order="2">
+								<JourneyPart version="any" id="e2:2b@005433124+005433425-2">
 									<ParentJourneyRef version="any" ref="e2:2b"/>
-									<MainPartRef version="any" ref="e2:2b@005103865+005433124"/>
+									<MainPartRef version="any" ref="e2:2b@005103865+005433124-2"/>
 									<FromStopPointRef version="any" ref="uic:005434124">Bohumin</FromStopPointRef>
 									<ToStopPointRef version="any" ref="uic:005433425">Breclaw</ToStopPointRef>
 									<StartTime>11:41:00</StartTime>
@@ -789,13 +834,8 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 									<PurposeOfJourneyPartitionRef versionRef="EXTERNAL" ref="join Split"/>
 								</JourneyPart>
 							</parts>
-							<UicOperatingPeriod id="e2:2b" version="any">
-								<FromDate>2022-01-23T00:00:00</FromDate>
-								<ToDate>2022-01-25T23:59:59</ToDate>
-								<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
-						<DatedServiceJourney version="any" id="e2:2c" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						</ServiceJourney>
+						<ServiceJourney version="any" id="e2:2c" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<Name>Connecting to: Warsaw   Budapest-Nuygati</Name>
 							<TransportMode>rail</TransportMode>
 							<TransportSubmode>
@@ -804,15 +844,18 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 							<TypeOfProductCategoryRef versionRef="EXTERNAL" ref="63">Intercity</TypeOfProductCategoryRef>
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="31">Coach Group</TypeOfServiceRef>
 							<DepartureTime>06:57:00</DepartureTime>
+							<dayTypes>
+								<DayTypeRef ref="e2:2c"/>
+							</dayTypes>
 							<!-- BOGUS VALUE -->
 							<OperatorRef versionRef="EXTERNAL" ref="uic:1154">CD</OperatorRef>
 							<trainNumbers>
 								<TrainNumberRef version="any" ref="e2:C-477"/>
 							</trainNumbers>
 							<parts>
-								<JourneyPart version="any" id="e2:2c@005103865+005433124" order="1">
+								<JourneyPart version="any" id="e2:2c@005103865+005433124-3">
 									<ParentJourneyRef version="any" ref="e2:2c"/>
-									<MainPartRef version="any" ref="e2:2c@005103865+005433124"/>
+									<MainPartRef version="any" ref="e2:2c@005103865+005433124-3"/>
 									<FromStopPointRef version="any" ref="uic:005103865">Warsaw</FromStopPointRef>
 									<ToStopPointRef version="any" ref="uic:005434124">Bohumin</ToStopPointRef>
 									<StartTime>06:57:00</StartTime>
@@ -821,9 +864,9 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 									<!-- BOGUS VALUE -->
 									<PurposeOfJourneyPartitionRef versionRef="EXTERNAL" ref="join Split"/>
 								</JourneyPart>
-								<JourneyPart version="any" id="e2:2c@005433124+005433425" order="2">
+								<JourneyPart version="any" id="e2:2c@005433124+005433425-3">
 									<ParentJourneyRef version="any" ref="e2:2c"/>
-									<MainPartRef version="any" ref="e2:2c@005103865+005433124"/>
+									<MainPartRef version="any" ref="e2:2c@005103865+005433124-3"/>
 									<FromStopPointRef version="any" ref="uic:005434124">Bohumin</FromStopPointRef>
 									<ToStopPointRef version="any" ref="uic:005433425">Breclaw</ToStopPointRef>
 									<StartTime>11:41:00</StartTime>
@@ -832,9 +875,9 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 									<!-- BOGUS VALUE -->
 									<PurposeOfJourneyPartitionRef versionRef="EXTERNAL" ref="join Split"/>
 								</JourneyPart>
-								<JourneyPart version="any" id="e2:2c@005433425+005510033" order="3">
+								<JourneyPart version="any" id="e2:2c@005433425+005510033-3">
 									<ParentJourneyRef version="any" ref="e2:2c"/>
-									<MainPartRef version="any" ref="e2:2c@005103865+005433124"/>
+									<MainPartRef version="any" ref="e2:2c@005103865+005433124-3"/>
 									<FromStopPointRef version="any" ref="uic:005433425">Breclaw</FromStopPointRef>
 									<ToStopPointRef version="any" ref="uic:005510033">Budapest-Nuygati</ToStopPointRef>
 									<StartTime>15:00:00</StartTime>
@@ -844,12 +887,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 									<PurposeOfJourneyPartitionRef versionRef="EXTERNAL" ref="join Split"/>
 								</JourneyPart>
 							</parts>
-							<UicOperatingPeriod id="e2:2c" version="any">
-								<FromDate>2022-01-23T00:00:00</FromDate>
-								<ToDate>2022-01-25T23:59:59</ToDate>
-								<ValidDayBits>11100000000000000000000000000000000111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 					<trainNumbers>
 						<TrainNumber version="any" id="e2:2">
@@ -872,7 +910,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 					</trainNumbers>
 					<!--  Journey Part Couples  === -->
 					<journeyPartCouples>
-						<JourneyPartCouple version="any" id="e2:005103865+005434124" order="1">
+						<JourneyPartCouple version="any" id="e2:005103865+005434124-1">
 							<Description>Warsaw -Bohumin</Description>
 							<StartTime>06:57:00</StartTime>
 							<!-- BOGUS VALUE -->
@@ -880,15 +918,15 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 							<!-- BOGUS VALUE -->
 							<FromStopPointRef version="any" ref="uic:005103865">Warsaw</FromStopPointRef>
 							<ToStopPointRef version="any" ref="uic:005434124">Bohumin</ToStopPointRef>
-							<MainPartRef version="any" ref="e2:2b@005103865+005433124"/>
+							<MainPartRef version="any" ref="e2:2b@005103865+005433124-2"/>
 							<journeyParts>
-								<JourneyPartRef version="any" ref="e2:2a@005103865+005433124"/>
-								<JourneyPartRef version="any" ref="e2:2b@005103865+005433124"/>
-								<JourneyPartRef version="any" ref="e2:2c@005103865+005433124"/>
+								<JourneyPartRef version="any" ref="e2:2a@005103865+005433124-1"/>
+								<JourneyPartRef version="any" ref="e2:2b@005103865+005433124-2"/>
+								<JourneyPartRef version="any" ref="e2:2c@005103865+005433124-3"/>
 							</journeyParts>
 							<TrainNumberRef version="any" ref="e2:2">Train 41, Reservation 31</TrainNumberRef>
 						</JourneyPartCouple>
-						<JourneyPartCouple version="any" id="e2:005434124+005433425" order="2">
+						<JourneyPartCouple version="any" id="e2:005434124+005433425-2">
 							<Description>Bohumin Breclaw</Description>
 							<StartTime>11:41:00</StartTime>
 							<!-- BOGUS VALUE -->
@@ -896,14 +934,14 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 							<!-- BOGUS VALUE -->
 							<FromStopPointRef version="any" ref="uic:005434124">Bohumin</FromStopPointRef>
 							<ToStopPointRef version="any" ref="uic:005433425">Breclaw</ToStopPointRef>
-							<MainPartRef version="any" ref="e2:2b@005103865+005433124"/>
+							<MainPartRef version="any" ref="e2:2b@005103865+005433124-2"/>
 							<journeyParts>
-								<JourneyPartRef version="any" ref="e2:2b@005433124+005433425"/>
-								<JourneyPartRef version="any" ref="e2:2c@005433124+005433425"/>
+								<JourneyPartRef version="any" ref="e2:2b@005433124+005433425-2"/>
+								<JourneyPartRef version="any" ref="e2:2c@005433124+005433425-3"/>
 							</journeyParts>
 							<TrainNumberRef version="any" ref="e2:2">Train 41, Reservation 31</TrainNumberRef>
 						</JourneyPartCouple>
-						<JourneyPartCouple version="any" id="e2:005433425+005510033" order="3">
+						<JourneyPartCouple version="any" id="e2:005433425+005510033-3">
 							<Description>Breclaw to Budapest-Nuygati</Description>
 							<StartTime>11:41:00</StartTime>
 							<!-- BOGUS VALUE -->
@@ -913,7 +951,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 							<ToStopPointRef version="any" ref="uic:005510033">Budapest-Nuygati</ToStopPointRef>
 							<MainPartRef version="any" ref="e2:2b@005433425+005510033"/>
 							<journeyParts>
-								<JourneyPartRef version="any" ref="e2:2c@005433425+005510033"/>
+								<JourneyPartRef version="any" ref="e2:2c@005433425+005510033-3"/>
 							</journeyParts>
 							<TrainNumberRef version="any" ref="e2:2">Train 41, Reservation 31</TrainNumberRef>
 						</JourneyPartCouple>
@@ -965,6 +1003,16 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 				<DefaultCodespaceRef ref="op3_cs"/>
 			</FrameDefaults>
 			<frames>
+				<!--  Narrative:  The SERVICE CALENDAR FRAME provides a container to organise the operational dates -->
+				<ServiceCalendarFrame id="uic:SKDUPD_example_2_3_Leo_Express" version="any">
+					<operatingPeriods>
+						<UicOperatingPeriod id="uic:SKDUPD_example_2_3_Leo_Express" version="any">
+							<FromDate>2022-04-01T00:00:00</FromDate>
+							<ToDate>2022-12-10T23:59:59</ToDate>
+							<ValidDayBits>11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</ValidDayBits>
+						</UicOperatingPeriod>
+					</operatingPeriods>
+				</ServiceCalendarFrame>
 				<ServiceFrame version="any" id="SKDUPD_example_3_Leo_Express">
 					<!--- comment: THESE STOP DECLARATIONS COULD BE EXTERNAL as in a TSDUPD location , they are here so as to be able to define namese -->
 					<scheduledStopPoints>
@@ -1047,7 +1095,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 				</ServiceFrame>
 				<TimetableFrame version="any" id="SKDUPD_example_3_Leo_Express">
 					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="3" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						<ServiceJourney version="any" id="3" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<!-- SKPUPD_TRAIN
 ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	not_used	Reservation_system	First_day	Last_day	Operation_days	Second_service_number
 3	410	11	1	9	Leo Express	3244			2022-04-01	2022-12-10	11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111	-->
@@ -1059,14 +1107,18 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="9">Intercity</TypeOfServiceRef>
 							<!-- tap/tsi B.4.7009   	9 Intercity    -->
 							<DepartureTime>06:36:00</DepartureTime>
+							<!-- POP+273:2022-04-01/2022-12-10::11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111'		 -->
+							<dayTypes>
+								<DayTypeRef ref="uic:SKDUPD_example_2_3_Leo_Express"/>
+							</dayTypes>
 							<OperatorRef versionRef="EXTERNAL" ref="uic:3244">LE</OperatorRef>
 							<trainNumbers>
 								<TrainNumberRef version="any" ref="3">410</TrainNumberRef>
 							</trainNumbers>
 							<parts>
-								<JourneyPart version="any" id="3@005434124+005434124" order="1">
+								<JourneyPart version="any" id="3@005434124+005434124-1">
 									<ParentJourneyRef version="any" ref="3"/>
-									<MainPartRef version="any" ref="3@005434124+005434124"/>
+									<MainPartRef version="any" ref="3@005434124+005434124-1"/>
 									<FromStopPointRef version="any" ref="uic1:005434124"/>
 									<ToStopPointRef version="any" ref="uic1:005434124"/>
 									<StartTime>06:57:00</StartTime>
@@ -1145,7 +1197,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 3	13	005453414	0954		0955						301300:MTR
 3	14	005457176	1032		1032					2	358000:MTR
 3	15	005457076	1039								363700:MTR  -->
-								<Call version="any" id="3" order="1">
+								<Call version="any" id="3-1">
 									<ScheduledStopPointRef version="any" ref="uic1:005434124">Bohumin</ScheduledStopPointRef>
 									<Arrival>
 										<ForAlighting>false</ForAlighting>
@@ -1154,7 +1206,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>06:36:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="3" order="2">
+								<Call version="any" id="3-2">
 									<ScheduledStopPointRef version="any" ref="uic1:005434364">Ostrava Hlavni Nadrazi</ScheduledStopPointRef>
 									<Arrival>
 										<Time>06:42:00</Time>
@@ -1163,7 +1215,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>06:44:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="3" order="3">
+								<Call version="any" id="3-3">
 									<ScheduledStopPointRef version="any" ref="uic1:005434434">Ostrava Svinov</ScheduledStopPointRef>
 									<Arrival>
 										<Time>06:50:00</Time>
@@ -1172,7 +1224,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>06:52:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="3" order="4">
+								<Call version="any" id="3-4">
 									<ScheduledStopPointRef version="any" ref="uic1:005434694">Studenka</ScheduledStopPointRef>
 									<Arrival>
 										<Time>07:01:00</Time>
@@ -1181,7 +1233,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>07:02:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="3" order="5">
+								<Call version="any" id="3-5">
 									<ScheduledStopPointRef version="any" ref="uic1:005434804">Suchdol Nad Ordrou</ScheduledStopPointRef>
 									<Arrival>
 										<Time>07:08:00</Time>
@@ -1190,7 +1242,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>07:09:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="3" order="6">
+								<Call version="any" id="3-6">
 									<ScheduledStopPointRef version="any" ref="uic1:005433722">Hranice Na Morave</ScheduledStopPointRef>
 									<Arrival>
 										<Time>07:22:00</Time>
@@ -1199,7 +1251,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>07:23:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="3" order="7">
+								<Call version="any" id="3-7">
 									<ScheduledStopPointRef version="any" ref="uic1:005434662">Prerov</ScheduledStopPointRef>
 									<Arrival>
 										<Time>07:39:00</Time>
@@ -1208,7 +1260,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>07:44:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="3" order="8">
+								<Call version="any" id="3-8">
 									<ScheduledStopPointRef version="any" ref="uic1:005434362">Olomouc Hlavni Nadrazi</ScheduledStopPointRef>
 									<Arrival>
 										<Time>07:58:00</Time>
@@ -1217,7 +1269,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>08:00:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="3" order="9">
+								<Call version="any" id="3-9">
 									<ScheduledStopPointRef version="any" ref="uic1:005433312">Cervenka</ScheduledStopPointRef>
 									<Arrival>
 										<ForAlighting>false</ForAlighting>
@@ -1226,7 +1278,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<ForBoarding>false</ForBoarding>
 									</Departure>
 								</Call>
-								<Call version="any" id="3" order="10">
+								<Call version="any" id="3-10">
 									<ScheduledStopPointRef version="any" ref="uic1:005434282">Mohelnice</ScheduledStopPointRef>
 									<Arrival>
 										<ForAlighting>false</ForAlighting>
@@ -1235,7 +1287,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<ForBoarding>false</ForBoarding>
 									</Departure>
 								</Call>
-								<Call version="any" id="3" order="11">
+								<Call version="any" id="3-11">
 									<ScheduledStopPointRef version="any" ref="uic1:005435502">Zabreh Na Morave</ScheduledStopPointRef>
 									<Arrival>
 										<Time>08:21:00</Time>
@@ -1244,7 +1296,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>08:22:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="3" order="12">
+								<Call version="any" id="3-12">
 									<ScheduledStopPointRef version="any" ref="uic1:005453613">Pardubice Hlavni Nadrazi</ScheduledStopPointRef>
 									<Arrival>
 										<Time>09:34:00</Time>
@@ -1253,7 +1305,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>09:35:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="3" order="14">
+								<Call version="any" id="3-14">
 									<ScheduledStopPointRef version="any" ref="uic1:005453414">Kolin</ScheduledStopPointRef>
 									<Arrival>
 										<Time>09:54:00</Time>
@@ -1262,7 +1314,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>09:55:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="3" order="15">
+								<Call version="any" id="3-15">
 									<ScheduledStopPointRef version="any" ref="uic1:005457176">Praha-Libin</ScheduledStopPointRef>
 									<Arrival>
 										<Time>10:32:00</Time>
@@ -1271,7 +1323,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>10:32:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="3" order="16">
+								<Call version="any" id="3-16">
 									<ScheduledStopPointRef version="any" ref="uic1:005457076">Praha Hlavni Nadrazin</ScheduledStopPointRef>
 									<Arrival>
 										<Time>10:39:00</Time>
@@ -1291,12 +1343,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 									<!-- Tariff 1 Taf TSI B4.7139: 	1	TCV -->
 								</ServiceFacilitySet>
 							</facilities>
-							<UicOperatingPeriod id="3" version="any">
-								<FromDate>2022-04-01T00:00:00</FromDate>
-								<ToDate>2022-12-10T23:59:59</ToDate>
-								<ValidDayBits>11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 					<trainNumbers>
 						<TrainNumber version="any" id="3">
@@ -1324,6 +1371,18 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 				<DefaultCodespaceRef ref="op4_cs"/>
 			</FrameDefaults>
 			<frames>
+				<!--  Narrative:  The SERVICE CALENDAR FRAME provides a container to organise the operational dates -->
+				<ServiceCalendarFrame id="uic:SKDUPD_example_2_4_Load_and_unload" version="any">
+					<operatingPeriods>
+						<UicOperatingPeriod id="uic:SKDUPD_example_2_4_Load_and_unload" version="any">
+							<!-- POP+273:2021-12-12/2022-09-04::111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111' -->
+							<FromDate>2022-01-01T00:00:00</FromDate>
+							<ToDate>2022-09-04T23:59:59</ToDate>
+							<ValidDayBits>111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+</ValidDayBits>
+						</UicOperatingPeriod>
+					</operatingPeriods>
+				</ServiceCalendarFrame>
 				<ServiceFrame version="any" id="SKDUPD_example_4_Load_and_Unload">
 					<scheduledStopPoints>
 						<ScheduledStopPoint version="any" id="uic:007944700">
@@ -1351,7 +1410,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 				<TimetableFrame version="any" id="SKDUPD_example_4_Load_and_Unload">
 					<VehicleModes>rail</VehicleModes>
 					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="4" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						<ServiceJourney version="any" id="4" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<!-- SKPUPD_TRAIN
 ID	Service_number	Reservation	Tariff	Service_Mode Service_Name Service_Provider not_used Reservation_system	First_day	Last_day Operation_days	Second_service_number
 4	850	19			Load unload	1179			2021-12-12	2022-09-04	 111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111	 -->
@@ -1364,14 +1423,18 @@ ID	Service_number	Reservation	Tariff	Service_Mode Service_Name Service_Provider 
 							<!-- ( tap/tsi B.4.7009  84 regional train)		-->
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="37">train</TypeOfServiceRef>
 							<DepartureTime>06:32:00</DepartureTime>
+							<!-- POP+273:2021-12-12/2022-09-04::111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111' -->
+							<dayTypes>
+								<DayTypeRef ref="uic:SKDUPD_example_2_4_Load_and_unload"/>
+							</dayTypes>
 							<OperatorRef versionRef="EXTERNAL" ref="uic:1170">SZ Pitzniski promet d.o.o</OperatorRef>
 							<trainNumbers>
 								<TrainNumberRef version="any" ref="4">850</TrainNumberRef>
 							</trainNumbers>
 							<parts>
-								<JourneyPart version="any" id="4@007944700+007944712" order="1">
+								<JourneyPart version="any" id="4@007944700+007944712-1">
 									<ParentJourneyRef version="any" ref="4"/>
-									<MainPartRef version="any" ref="4@007944700+007944712"/>
+									<MainPartRef version="any" ref="4@007944700+007944712-1"/>
 									<FromStopPointRef version="any" ref="uic:007944700"/>
 									<ToStopPointRef version="any" ref="uic:007944712"/>
 									<StartTime>06:32:00</StartTime>
@@ -1434,7 +1497,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 4	3	007944707	0711		0745							ASD+7	ASD+9
 4	4	007944711	0812		0817								
 4	5	007944712	0827										ASD+9   -->
-								<Call version="any" id="4" order="1">
+								<Call version="any" id="4-1">
 									<ScheduledStopPointRef version="any" ref="uic:007944700">Nova Gorica</ScheduledStopPointRef>
 									<Arrival>
 										<ForAlighting>false</ForAlighting>
@@ -1443,7 +1506,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>06:32:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="4" order="2">
+								<Call version="any" id="4-2">
 									<ScheduledStopPointRef version="any" ref="uic:007944704">Anhovoi</ScheduledStopPointRef>
 									<Arrival>
 										<Time>06:51:00</Time>
@@ -1452,7 +1515,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>06:52:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="4" order="3">
+								<Call version="any" id="4-3">
 									<ScheduledStopPointRef version="any" ref="uic:007944707">Most Na Soci</ScheduledStopPointRef>
 									<Arrival>
 										<Time>07:11:00</Time>
@@ -1461,7 +1524,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>07:45:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="4" order="4">
+								<Call version="any" id="4-4">
 									<ScheduledStopPointRef version="any" ref="uic:007944711">Podbrido</ScheduledStopPointRef>
 									<Arrival>
 										<Time>08:12:00</Time>
@@ -1470,7 +1533,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>08:17:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="4" order="5">
+								<Call version="any" id="4-5">
 									<ScheduledStopPointRef version="any" ref="uic:007944712">Bohinstra Bistrica</ScheduledStopPointRef>
 									<Arrival>
 										<Time>08:27:00</Time>
@@ -1510,13 +1573,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 									<!-- 	ASD+7 TafTsi  B.4.3039.	unloading -->
 								</CheckConstraint>
 							</checkConstraints>
-							<UicOperatingPeriod id="4" version="any">
-								<FromDate>2022-01-01T00:00:00</FromDate>
-								<ToDate>2022-09-04T23:59:59</ToDate>
-								<ValidDayBits>111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 					<trainNumbers>
 						<TrainNumber version="any" id="4">
@@ -1544,6 +1601,17 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 				<DefaultCodespaceRef ref="op5_cs"/>
 			</FrameDefaults>
 			<frames>
+				<!--  Narrative:  The SERVICE CALENDAR FRAME provides a container to organise the operational dates -->
+				<ServiceCalendarFrame id="uic:SKDUPD_example_5_Interchange" version="any">
+					<operatingPeriods>
+						<UicOperatingPeriod id="uic:SKDUPD_example_5_Interchange" version="any">
+							<!--POP+273:2022-03-11/2022-03-18::10000001' -->
+							<FromDate>2022-03-11T00:00:00</FromDate>
+							<ToDate>2022-03-18T23:59:59</ToDate>
+							<ValidDayBits>10000001</ValidDayBits>
+						</UicOperatingPeriod>
+					</operatingPeriods>
+				</ServiceCalendarFrame>
 				<ServiceFrame version="any" id="uic:SKDUPD_example_5_Interchange">
 					<!--- comment: THESE STOP DECLARATIONS COULD BE EXTERNAL as in a TSDUPD location , they are here so as to be able to define names -->
 					<scheduledStopPoints>
@@ -1643,7 +1711,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 				<TimetableFrame version="any" id="SKDUPD_example_5_Interchange">
 					<VehicleModes>rail</VehicleModes>
 					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="5" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						<ServiceJourney version="any" id="5" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<!-- SKPUPD_TRAIN
 ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	not_used	Reservation_system	First_day	Last_day	Operation_days	Second_service_number
 5	100	11		8	Interchange	1180			2022-03-11	2022-03-18	10000001	-->
@@ -1658,15 +1726,19 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="8">high-speed train</TypeOfServiceRef>
 							<!--  tap/tsi B.4.7009    8 high speed train  -->
 							<DepartureTime>06:57:00</DepartureTime>
+							<!--POP+273:2022-03-11/2022-03-18::10000001' -->
+							<dayTypes>
+								<DayTypeRef ref="uic:SKDUPD_example_5_Interchange"/>
+							</dayTypes>
 							<OperatorRef versionRef="EXTERNAL" ref="uic:1180">DB Vertrieb GBH</OperatorRef>
 							<trainNumbers>
 								<TrainNumberRef version="any" ref="5"/>
 							</trainNumbers>
 							<parts>
-								<JourneyPart version="any" id="5@008500010+008010053" order="1">
+								<JourneyPart version="any" id="5@008500010+008010053-1">
 									<Description>Stops 1 -16</Description>
 									<ParentJourneyRef version="any" ref="5"/>
-									<MainPartRef version="any" ref="5@008500010+008010053"/>
+									<MainPartRef version="any" ref="5@008500010+008010053-1"/>
 									<FromStopPointRef version="any" ref="uic:008500010"/>
 									<ToStopPointRef version="any" ref="uic:008010053"/>
 									<StartTime>19:13:00</StartTime>
@@ -1708,10 +1780,10 @@ ID	FromStopNumber	ToStopNumber	ASD_or_SER	Reservation_in_equipment	Equipment	Tar
 										</ServiceFacilitySet>
 									</facilities>
 								</JourneyPart>
-								<JourneyPart version="any" id="5@008500010+008015458" order="1">
+								<JourneyPart version="any" id="5@008500010+008015458-1">
 									<Description>Stops 1-11</Description>
 									<ParentJourneyRef version="any" ref="5"/>
-									<MainPartRef version="any" ref="5@008500010+008010053"/>
+									<MainPartRef version="any" ref="5@008500010+008015458-1"/>
 									<FromStopPointRef version="any" ref="uic:008500010"/>
 									<ToStopPointRef version="any" ref="uic:008010053"/>
 									<StartTime>19:13:00</StartTime>
@@ -1750,7 +1822,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 5	15	008010179	0008		0009		5	5					
 5	16	008010053	0021				8						
 	-->
-								<Call version="any" id="5" order="1">
+								<Call version="any" id="5-1">
 									<ScheduledStopPointRef version="any" ref="uic:008500010">BASEL SBB</ScheduledStopPointRef>
 									<Arrival>
 										<ForAlighting>false</ForAlighting>
@@ -1759,7 +1831,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>19:13:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="5" order="2">
+								<Call version="any" id="5-2">
 									<ScheduledStopPointRef version="any" ref="uic:008500090">BASEL BAD</ScheduledStopPointRef>
 									<Arrival>
 										<ForAlighting>false</ForAlighting>
@@ -1768,7 +1840,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<ForBoarding>false</ForBoarding>
 									</Departure>
 								</Call>
-								<Call version="any" id="5" order="3">
+								<Call version="any" id="5-3">
 									<ScheduledStopPointRef version="any" ref="uic:008014431">BASEL BAD BF</ScheduledStopPointRef>
 									<Arrival>
 										<Time>19:19:00</Time>
@@ -1786,7 +1858,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 									</Departure>
 									<Note>Border Point</Note>
 								</Call>
-								<Call version="any" id="5" order="4">
+								<Call version="any" id="5-4">
 									<ScheduledStopPointRef version="any" ref="uic:008014350">FREIBURG/BREISGAU HBF</ScheduledStopPointRef>
 									<Arrival>
 										<Time>19:54:00</Time>
@@ -1803,7 +1875,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										</QuayAssignmentView>
 									</Departure>
 								</Call>
-								<Call version="any" id="5" order="5">
+								<Call version="any" id="5-5">
 									<ScheduledStopPointRef version="any" ref="uic:008014309">OFFENBURG</ScheduledStopPointRef>
 									<Arrival>
 										<Time>20:24:00</Time>
@@ -1820,7 +1892,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										</QuayAssignmentView>
 									</Departure>
 								</Call>
-								<Call version="any" id="5" order="6">
+								<Call version="any" id="5-6">
 									<ScheduledStopPointRef version="any" ref="uic:008014277">BADEN_BADEN</ScheduledStopPointRef>
 									<Arrival>
 										<Time>20:40:00</Time>
@@ -1837,7 +1909,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										</QuayAssignmentView>
 									</Departure>
 								</Call>
-								<Call version="any" id="5" order="7">
+								<Call version="any" id="5-7">
 									<ScheduledStopPointRef version="any" ref="uic:008014228">KARLSRUHE HBF</ScheduledStopPointRef>
 									<Arrival>
 										<Time>20:59:00</Time>
@@ -1846,7 +1918,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>21:01:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="5" order="8">
+								<Call version="any" id="5-8">
 									<ScheduledStopPointRef version="any" ref="uic:008014008">MANNHEIM HBF</ScheduledStopPointRef>
 									<Arrival>
 										<Time>21:35:00</Time>
@@ -1863,7 +1935,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										</QuayAssignmentView>
 									</Departure>
 								</Call>
-								<Call version="any" id="5" order="9">
+								<Call version="any" id="5-9">
 									<ScheduledStopPointRef version="any" ref="uic:008061676">FRANKFURT(M) FLUGHAFEN FERNBF HBF</ScheduledStopPointRef>
 									<Arrival>
 										<Time>22:10:00</Time>
@@ -1880,7 +1952,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										</QuayAssignmentView>
 									</Departure>
 								</Call>
-								<Call version="any" id="5" order="10">
+								<Call version="any" id="5-10">
 									<ScheduledStopPointRef version="any" ref="uic:008015588">SIEGBURG-BONNF</ScheduledStopPointRef>
 									<Arrival>
 										<Time>22:47:00</Time>
@@ -1897,7 +1969,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										</QuayAssignmentView>
 									</Departure>
 								</Call>
-								<Call version="any" id="5" order="11">
+								<Call version="any" id="5-11">
 									<ScheduledStopPointRef version="any" ref="uic:008015458">KOELN HBF </ScheduledStopPointRef>
 									<Arrival>
 										<Time>23:04:00</Time>
@@ -1914,7 +1986,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										</QuayAssignmentView>
 									</Departure>
 								</Call>
-								<Call version="any" id="5" order="12">
+								<Call version="any" id="5-12">
 									<ScheduledStopPointRef version="any" ref="uic:008008094">DUSSELDORF HBF</ScheduledStopPointRef>
 									<Arrival>
 										<Time>23:32:00</Time>
@@ -1931,7 +2003,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										</QuayAssignmentView>
 									</Departure>
 								</Call>
-								<Call version="any" id="5" order="13">
+								<Call version="any" id="5-13">
 									<ScheduledStopPointRef version="any" ref="uic:008010316">DUISBURG HBF</ScheduledStopPointRef>
 									<Arrival>
 										<Time>23:46:00</Time>
@@ -1948,7 +2020,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										</QuayAssignmentView>
 									</Departure>
 								</Call>
-								<Call version="any" id="5" order="14">
+								<Call version="any" id="5-14">
 									<ScheduledStopPointRef version="any" ref="uic:008010184">ESSEN HBF</ScheduledStopPointRef>
 									<Arrival>
 										<Time>23:58:00</Time>
@@ -1966,7 +2038,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										</QuayAssignmentView>
 									</Departure>
 								</Call>
-								<Call version="any" id="5" order="15">
+								<Call version="any" id="5-15">
 									<ScheduledStopPointRef version="any" ref="uic:008010179">BOCHUM HBF</ScheduledStopPointRef>
 									<Arrival>
 										<Time>00:08:00</Time>
@@ -1985,7 +2057,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										</QuayAssignmentView>
 									</Departure>
 								</Call>
-								<Call version="any" id="5" order="16">
+								<Call version="any" id="5-16">
 									<ScheduledStopPointRef version="any" ref="uic:008010053">DORTMUND HBF</ScheduledStopPointRef>
 									<Arrival>
 										<Time>00:21:00</Time>
@@ -2019,12 +2091,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 									<CheckProcess>incomingPassportControl</CheckProcess>
 								</CheckConstraint>
 							</checkConstraints>
-							<UicOperatingPeriod id="5" version="any">
-								<FromDate>2022-03-11T00:00:00</FromDate>
-								<ToDate>2022-03-18T23:59:59</ToDate>
-								<ValidDayBits>10000001</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 					<trainNumbers>
 						<TrainNumber version="any" id="5">
@@ -2103,6 +2170,17 @@ ID	Stop_number	Service	Relation	Transfer_time	Certainty
 				<DefaultCodespaceRef ref="op6_cs"/>
 			</FrameDefaults>
 			<frames>
+				<!--  Narrative:  The SERVICE CALENDAR FRAME provides a container to organise the operational dates -->
+				<ServiceCalendarFrame id="uic:SKDUPD_example_6_CheckIn" version="any">
+					<operatingPeriods>
+						<UicOperatingPeriod id="uic:SKDUPD_example_6_CheckIn" version="any">
+							<!-- POP+273:2022-01-29/2022-04-16::100000010000001000000100000010000001000000100000010000001000000100000010000001' -->
+							<FromDate>2022-01-29T00:00:00</FromDate>
+							<ToDate>2022-04-16T23:59:59</ToDate>
+							<ValidDayBits>100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
+						</UicOperatingPeriod>
+					</operatingPeriods>
+				</ServiceCalendarFrame>
 				<ServiceFrame version="any" id="SKDUPD_example_6_CheckIn">
 					<scheduledStopPoints>
 						<ScheduledStopPoint version="any" id="uic:008600824">
@@ -2119,7 +2197,7 @@ ID	Stop_number	Service	Relation	Transfer_time	Certainty
 				</ServiceFrame>
 				<TimetableFrame version="any" id="SKDUPD_example_6CheckIn">
 					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="6" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						<ServiceJourney version="any" id="6" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<!-- SKPUPD_TRAIN
 ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	not_used	Reservation_system	First_day	Last_day	Operation_days	Second_service_number
 6	74000015			32	Check in	X284			2022-01-29	2022-04-16	100000010000001000000100000010000001000000100000010000001000000100000010000001	
@@ -2132,6 +2210,10 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="32">bus</TypeOfServiceRef>
 							<!--  tap/tsi B.4.7009   	32 Bus -->
 							<DepartureTime>08:06:00</DepartureTime>
+							<!-- POP+273:2022-01-29/2022-04-16::100000010000001000000100000010000001000000100000010000001000000100000010000001' -->
+							<dayTypes>
+								<DayTypeRef ref="uic:SKDUPD_example_6_CheckIn"/>
+							</dayTypes>
 							<OperatorRef versionRef="EXTERNAL" ref="uic:X284">Movia</OperatorRef>
 							<trainNumbers>
 								<TrainNumberRef ref="74000015"/>
@@ -2142,7 +2224,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 6	1	008600824			0806					1				803
 6	2	008600830	0846							2				
   -->
-								<Call version="any" id="6" order="1">
+								<Call version="any" id="6-1">
 									<ScheduledStopPointRef version="any" ref="uic:008600824">Nyekoebing G</ScheduledStopPointRef>
 									<Arrival>
 										<ForAlighting>false</ForAlighting>
@@ -2151,7 +2233,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>08:09:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="6" order="2">
+								<Call version="any" id="6-2">
 									<ScheduledStopPointRef version="any" ref="uic:008600830">Gedser Faerge</ScheduledStopPointRef>
 									<Arrival>
 										<Time>08:46:00</Time>
@@ -2196,12 +2278,7 @@ ID	FromStopNumber	ToStopNumber	ASD_or_SER	Reservation_in_equipment	Equipment	Tar
 									<!-- NB TODO NeTEx Should have checkin value. Missing. Use 'Boarding' for temporary workaround  -->
 								</CheckConstraint>
 							</checkConstraints>
-							<UicOperatingPeriod id="6" version="any">
-								<FromDate>2022-01-29T00:00:00</FromDate>
-								<ToDate>2022-04-16T23:59:59</ToDate>
-								<ValidDayBits>100000010000001000000100000010000001000000100000010000001000000100000010000001</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 				</TimetableFrame>
 			</frames>
@@ -2223,6 +2300,18 @@ ID	FromStopNumber	ToStopNumber	ASD_or_SER	Reservation_in_equipment	Equipment	Tar
 				<DefaultCodespaceRef ref="op7_cs"/>
 			</FrameDefaults>
 			<frames>
+				<!--  Narrative:  The SERVICE CALENDAR FRAME provides a container to organise the operational dates -->
+				<ServiceCalendarFrame id="uic:SKDUPD_example_7_Tariff_and_Reservation" version="any">
+					<operatingPeriods>
+						<UicOperatingPeriod id="uic:SKDUPD_example_7_Tariff_and_Reservation" version="any">
+							<!-- POP+273:2021-12-12/2022-12-10::1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111' -->
+							<FromDate>2021-12-12T00:00:00</FromDate>
+							<ToDate>2022-12-12T23:59:59</ToDate>
+							<ValidDayBits>1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+</ValidDayBits>
+						</UicOperatingPeriod>
+					</operatingPeriods>
+				</ServiceCalendarFrame>
 				<ServiceFrame version="any" id="uic:SKDUPD_example_7_Tariff_and_Reservation">
 					<!--- comment: THESE STOP DECLARATIONS COULD BE EXTERNAL as in a TSDUPD location , they are here so as to be able to define names -->
 					<scheduledStopPoints>
@@ -2418,7 +2507,7 @@ ID	FromStopNumber	ToStopNumber	ASD_or_SER	Reservation_in_equipment	Equipment	Tar
 				<TimetableFrame version="any" id="SKDUPD_example_7_Tariff_and_Reservation">
 					<VehicleModes>rail</VehicleModes>
 					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="7" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						<ServiceJourney version="any" id="7" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<!-- SKPUPD_TRAIN
 ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	not_used	Reservation_system	First_day	Last_day	Operation_days	Second_service_number
 7	686				Tarif and reservation	1153			2021-12-12	2022-12-10	1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111	-->
@@ -2431,12 +2520,16 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="122">Interregional</TypeOfServiceRef>
 							<!--   -->
 							<DepartureTime>10:42:00</DepartureTime>
+							<!-- POP+273:2021-12-12/2022-12-10::1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111' -->
+							<dayTypes>
+								<DayTypeRef ref="uic:SKDUPD_example_7_Tariff_and_Reservation"/>
+							</dayTypes>
 							<OperatorRef versionRef="EXTERNAL" ref="uic:1153">CFR Calaton</OperatorRef>
 							<trainNumbers>
 								<TrainNumberRef version="any" ref="7"/>
 							</trainNumbers>
 							<parts>
-								<JourneyPart version="any" id="7@008101003+005513862" order="1">
+								<JourneyPart version="any" id="7@008101003+005513862-1">
 									<!-- SKDUPD_ODI
 ID	FromStopNumber	ToStopNumber	ASD_or_SER	Reservation_in_equipment	Equipment	Tariff_in_equipment		
 7	1	14			122	 -->
@@ -2444,16 +2537,16 @@ ID	FromStopNumber	ToStopNumber	ASD_or_SER	Reservation_in_equipment	Equipment	Tar
 									<!--	Equipment 122  TafTsi B.4.7009: 122- 	Interregional  nb wORKAROUND - 9  -->
 									<Description>1-14</Description>
 									<ParentJourneyRef version="any" ref="1"/>
-									<MainPartRef version="any" ref="7@008101003+005513862"/>
+									<MainPartRef version="any" ref="7@008101003+005513862-1"/>
 									<FromStopPointRef version="any" ref="uic:008101003"/>
 									<ToStopPointRef version="any" ref="uic:005513862"/>
 									<StartTime>10:46:00</StartTime>
 									<EndTime>15:56:00</EndTime>
 								</JourneyPart>
-								<JourneyPart version="any" id="7@005513862+005341638" order="2">
+								<JourneyPart version="any" id="7@005513862+005341638-2">
 									<Description>14-34</Description>
 									<ParentJourneyRef version="any" ref="1"/>
-									<MainPartRef version="any" ref="7@008101003+005513862"/>
+									<MainPartRef version="any" ref="7@008101003+005513862-1"/>
 									<FromStopPointRef version="any" ref="uic:005513862"/>
 									<ToStopPointRef version="any" ref="uic:005341638"/>
 									<StartTime>16:02:00</StartTime>
@@ -2525,7 +2618,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 7	32	005341822	2129		2130										
 7	33	005341779	2145		2146										
 7	34	005341638	2208					-->
-								<Call version="any" id="7" order="1">
+								<Call version="any" id="7-1">
 									<ScheduledStopPointRef version="any" ref="uic:008101003">WIEN HBF</ScheduledStopPointRef>
 									<Arrival>
 										<ForAlighting>false</ForAlighting>
@@ -2534,15 +2627,15 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>10:42:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="2">
+								<Call version="any" id="7-2">
 									<ScheduledStopPointRef version="any" ref="uic:008102980">NICKELSDORF GRENZE</ScheduledStopPointRef>
 									<Note>Border Point</Note>
 								</Call>
-								<Call version="any" id="7" order="3">
+								<Call version="any" id="7-3">
 									<ScheduledStopPointRef version="any" ref="uic:005506015">HEGYESHALOM GR.</ScheduledStopPointRef>
 									<Note>Border Point</Note>
 								</Call>
-								<Call version="any" id="7" order="4">
+								<Call version="any" id="7-4">
 									<ScheduledStopPointRef version="any" ref="uic:005501362">HEGYESHALOM</ScheduledStopPointRef>
 									<Arrival>
 										<Time>11:25:00</Time>
@@ -2551,7 +2644,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>11:28:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="5">
+								<Call version="any" id="7-5">
 									<ScheduledStopPointRef version="any" ref="uic:005501347">MOSONMAGYAROVAR</ScheduledStopPointRef>
 									<Arrival>
 										<Time>11:35:00</Time>
@@ -2560,7 +2653,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>11:36:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="6">
+								<Call version="any" id="7-6">
 									<ScheduledStopPointRef version="any" ref="uic:005501289">GYOER</ScheduledStopPointRef>
 									<Arrival>
 										<Time>11:53:00</Time>
@@ -2569,7 +2662,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>11:56:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="7">
+								<Call version="any" id="7-7">
 									<ScheduledStopPointRef version="any" ref="uic:005501131">TATABANUA</ScheduledStopPointRef>
 									<Arrival>
 										<Time>12:29:00</Time>
@@ -2578,7 +2671,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>12:30:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="8">
+								<Call version="any" id="7-8">
 									<ScheduledStopPointRef version="any" ref="uic:005501024">BUDAPEST-KELENFOELD</ScheduledStopPointRef>
 									<Arrival>
 										<Time>13:02:00</Time>
@@ -2587,7 +2680,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>13:04:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="9">
+								<Call version="any" id="7-9">
 									<ScheduledStopPointRef version="any" ref="uic:005510017">BUDAPEST-KELETI</ScheduledStopPointRef>
 									<Arrival>
 										<Time>13:19:00</Time>
@@ -2596,7 +2689,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>13:40:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="10">
+								<Call version="any" id="7-10">
 									<ScheduledStopPointRef version="any" ref="uic:005513748">SZOLNOK</ScheduledStopPointRef>
 									<Arrival>
 										<Time>15:02:00</Time>
@@ -2605,7 +2698,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>15:03:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="11">
+								<Call version="any" id="7-11">
 									<ScheduledStopPointRef version="any" ref="uic:005513789">TOEROEKSZENTMIKLOS</ScheduledStopPointRef>
 									<Arrival>
 										<Time>15:16:00</Time>
@@ -2614,7 +2707,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>15:17:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="12">
+								<Call version="any" id="7-12">
 									<ScheduledStopPointRef version="any" ref="uic:005513821">KISIJSALLAS</ScheduledStopPointRef>
 									<Arrival>
 										<Time>15:33:00</Time>
@@ -2623,7 +2716,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>15:34:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="13">
+								<Call version="any" id="7-13">
 									<ScheduledStopPointRef version="any" ref="uic:005513847">KARCAG</ScheduledStopPointRef>
 									<Arrival>
 										<Time>15:44:00</Time>
@@ -2632,7 +2725,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>15:45:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="14">
+								<Call version="any" id="7-14">
 									<ScheduledStopPointRef version="any" ref="uic:005513862">POESPOEKLADANY</ScheduledStopPointRef>
 									<Arrival>
 										<Time>15:56:00</Time>
@@ -2641,7 +2734,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>16:02:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="15">
+								<Call version="any" id="7-15">
 									<ScheduledStopPointRef version="any" ref="uic:005513888">HAJDUSZOBOSZLO</ScheduledStopPointRef>
 									<Arrival>
 										<Time>16:17:00</Time>
@@ -2650,7 +2743,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>16:18:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="16">
+								<Call version="any" id="7-16">
 									<ScheduledStopPointRef version="any" ref="uic:005513912">DEBRECEN-SZAZABADSAGTELEP</ScheduledStopPointRef>
 									<Arrival>
 										<Time>16:32:00</Time>
@@ -2659,7 +2752,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>17:05:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="17">
+								<Call version="any" id="7-17">
 									<ScheduledStopPointRef version="any" ref="uic:005515123">DEBRECEN-SZAZABADSAGTELEP</ScheduledStopPointRef>
 									<Arrival>
 										<Time>17:08:00</Time>
@@ -2668,7 +2761,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>17:09:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="18">
+								<Call version="any" id="7-18">
 									<ScheduledStopPointRef version="any" ref="uic:005515131">DEBRECEN-KONDOROS</ScheduledStopPointRef>
 									<Arrival>
 										<Time>17:13:00</Time>
@@ -2677,7 +2770,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>17:14:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="19">
+								<Call version="any" id="7-19">
 									<ScheduledStopPointRef version="any" ref="uic:005515149">NAGYCSERE</ScheduledStopPointRef>
 									<Arrival>
 										<Time>17:18:00</Time>
@@ -2686,7 +2779,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>17:19:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="20">
+								<Call version="any" id="7-20">
 									<ScheduledStopPointRef version="any" ref="uic:005515156">HALAP</ScheduledStopPointRef>
 									<Arrival>
 										<Time>17:23:00</Time>
@@ -2695,7 +2788,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>17:24:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="21">
+								<Call version="any" id="7-21">
 									<ScheduledStopPointRef version="any" ref="uic:005515164">VAMOSPERCS</ScheduledStopPointRef>
 									<Arrival>
 										<Time>17:30:00</Time>
@@ -2704,7 +2797,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>17:37:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="22">
+								<Call version="any" id="7-22">
 									<ScheduledStopPointRef version="any" ref="uic:005515172">SZENTANNANPUTZU</ScheduledStopPointRef>
 									<Arrival>
 										<Time>17:45:00</Time>
@@ -2713,7 +2806,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>17:45:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="23">
+								<Call version="any" id="7-23">
 									<ScheduledStopPointRef version="any" ref="uic:005515180">NYIRABRANY</ScheduledStopPointRef>
 									<Arrival>
 										<Time>17:51:00</Time>
@@ -2722,13 +2815,13 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>18:11:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="24">
+								<Call version="any" id="7-24">
 									<ScheduledStopPointRef version="any" ref="uic:005509415">NYIRABRANY GR</ScheduledStopPointRef>
 								</Call>
-								<Call version="any" id="7" order="25">
+								<Call version="any" id="7-25">
 									<ScheduledStopPointRef version="any" ref="uic:005300941">NYIRABRANY (GR)</ScheduledStopPointRef>
 								</Call>
-								<Call version="any" id="7" order="26">
+								<Call version="any" id="7-26">
 									<ScheduledStopPointRef version="any" ref="uic:005345153">VALEA LUI MIHAI</ScheduledStopPointRef>
 									<Arrival>
 										<Time>19:26:00</Time>
@@ -2737,7 +2830,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>19:44:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="27">
+								<Call version="any" id="7-27">
 									<ScheduledStopPointRef version="any" ref="uic:005345323">CAREI</ScheduledStopPointRef>
 									<Arrival>
 										<Time>20:09:00</Time>
@@ -2746,7 +2839,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>20:10:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="28">
+								<Call version="any" id="7-28">
 									<ScheduledStopPointRef version="any" ref="uic:005345452">SATU MARU</ScheduledStopPointRef>
 									<Arrival>
 										<Time>20:43:00</Time>
@@ -2755,7 +2848,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>20:47:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="29">
+								<Call version="any" id="7-29">
 									<ScheduledStopPointRef version="any" ref="uic:005341884">ODOREU</ScheduledStopPointRef>
 									<Arrival>
 										<Time>20:57:00</Time>
@@ -2764,7 +2857,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>20:58:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="30">
+								<Call version="any" id="7-30">
 									<ScheduledStopPointRef version="any" ref="uic:005341860">MEDIESU AURIT</ScheduledStopPointRef>
 									<Arrival>
 										<Time>21:07:00</Time>
@@ -2773,7 +2866,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>21:08:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="31">
+								<Call version="any" id="7-31">
 									<ScheduledStopPointRef version="any" ref="uic:005341846">APA</ScheduledStopPointRef>
 									<Arrival>
 										<Time>21:16:00</Time>
@@ -2782,7 +2875,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>21:17:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="32">
+								<Call version="any" id="7-32">
 									<ScheduledStopPointRef version="any" ref="uic:005341822">SEINI</ScheduledStopPointRef>
 									<Arrival>
 										<Time>21:29:00</Time>
@@ -2791,7 +2884,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>21:30:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="33">
+								<Call version="any" id="7-33">
 									<ScheduledStopPointRef version="any" ref="uic:005341779">CICARLAU</ScheduledStopPointRef>
 									<Arrival>
 										<Time>21:45:00</Time>
@@ -2800,7 +2893,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 										<Time>21:46:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="7" order="34">
+								<Call version="any" id="7-34">
 									<ScheduledStopPointRef version="any" ref="uic:005341638">BAIA MARA</ScheduledStopPointRef>
 									<Arrival>
 										<Time>22:08:00</Time>
@@ -2828,13 +2921,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 									<CheckProcess>incomingPassportControl</CheckProcess>
 								</CheckConstraint>
 							</checkConstraints>
-							<UicOperatingPeriod id="7" version="any">
-								<FromDate>2021-12-12T00:00:00</FromDate>
-								<ToDate>2022-12-12T23:59:59</ToDate>
-								<ValidDayBits>1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 					<trainNumbers>
 						<TrainNumber version="any" id="7">

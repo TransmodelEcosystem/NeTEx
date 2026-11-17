@@ -12,11 +12,13 @@
 				<Contributor>V1.0 Christophe Duquesne</Contributor>
 				<Contributor>Nicholas Knowles</Contributor>
 				<Coverage>Europe</Coverage>
-				<Creator>First drafted for NeTEx version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.  mailto:schemer@netex.org.uk</Creator>
+				<Creator>First drafted for NeTEx version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.</Creator>
 				<Date>
 					<Created>2010-09-04</Created>
 				</Date>
 				<Date><Modified>2011-02-05</Modified>Name Space changes 
+				</Date>
+				<Date><Modified>2023-11-07</Modified>CR0544 Deprecate PrivateCode.
 				</Date>
 				<Date><Modified>2023-12-09</Modified>Add Zone in Series 
 				</Date>
@@ -61,10 +63,10 @@
 				<Type>Standard</Type>
 			</Metadata>
 		</xsd:appinfo>
-		<xsd:documentation>NetEx   SERIES CONSTRAINT  types.</xsd:documentation>
+		<xsd:documentation>NetEx SERIES CONSTRAINT types.</xsd:documentation>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
-	<!-- ===ENTIITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
 	<xsd:group name="FareSeriesInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>Additional descriptive properties of a FARE FRAME.</xsd:documentation>
@@ -103,7 +105,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="SeriesConstraint" abstract="false" substitutionGroup="PriceableObject_">
+	<xsd:element name="SeriesConstraint" substitutionGroup="PriceableObject_Dummy">
 		<xsd:annotation>
 			<xsd:documentation>A particular tariff, described by a combination of parameters.</xsd:documentation>
 		</xsd:annotation>
@@ -124,10 +126,10 @@
 							<xsd:group ref="SeriesConstraintGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="SeriesConstraintIdType"/>
-					<xsd:attribute name="order" type="xsd:integer">
+					<xsd:attribute name="id" type="SeriesConstraintIdType" use="required"/>
+					<xsd:attribute name="order" type="xsd:positiveInteger" use="optional">
 						<xsd:annotation>
-							<xsd:documentation>relative number of series for same  OD pair (TAP Route number)</xsd:documentation>
+							<xsd:documentation>relative number of series for same OD pair (TAP Route number) -v2.0</xsd:documentation>
 						</xsd:annotation>
 					</xsd:attribute>
 				</xsd:restriction>
@@ -143,9 +145,9 @@
 				<xsd:sequence>
 					<xsd:group ref="SeriesConstraintGroup"/>
 				</xsd:sequence>
-				<xsd:attribute name="order" type="xsd:integer">
+				<xsd:attribute name="order" type="xsd:positiveInteger" use="optional">
 					<xsd:annotation>
-						<xsd:documentation>relative number of series for same  OD pair (TAP Route number)</xsd:documentation>
+						<xsd:documentation>relative number of series for same OD pair (TAP Route number) -v2.0</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 			</xsd:extension>
@@ -167,12 +169,12 @@
 			</xsd:element>
 			<xsd:element name="prices" type="seriesConstraintPrices_RelStructure" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation>Frices for the SERIES CONSTRAINTs  (Needed for TAP TSI)</xsd:documentation>
+					<xsd:documentation>Frices for the SERIES CONSTRAINTs (Needed for TAP TSI)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="replaces" type="seriesConstraintRefs_RelStructure" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation>Replaces the speciified SERIES CONSTRAINTs  (Needed for TAP TSI)</xsd:documentation>
+					<xsd:documentation>Replaces the speciified SERIES CONSTRAINTs (Needed for TAP TSI)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -184,7 +186,7 @@
 		<xsd:sequence>
 			<xsd:element ref="PrivateCode" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>DEPRECATED - use privateCodes</xsd:documentation>
+					<xsd:documentation>DEPRECATED - use privateCodes. -v2.0</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Itinerary" type="MultilingualString" minOccurs="0">
@@ -194,7 +196,7 @@
 			</xsd:element>
 			<xsd:element name="SymbolMarkingUsualRoute" type="xsd:normalizedString" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Symbal to us eto mark normal route.</xsd:documentation>
+					<xsd:documentation>Symbol to use to mark normal route.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -211,7 +213,7 @@
 			</xsd:element>
 			<xsd:element name="RoutingType" type="RoutingTypeEnumeration" default="both" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether this is a direct i.e. no changes requried point to point or indirect.</xsd:documentation>
+					<xsd:documentation>Whether this is a direct i.e. no changes required point to point or indirect.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -228,12 +230,12 @@
 			</xsd:element>
 			<xsd:element name="FirstClassDistance" type="DistanceType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Distance r calculation  of First Class fares.</xsd:documentation>
+					<xsd:documentation>Distance r calculation of First Class fares.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="SecondClassDistance" type="DistanceType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Distance r calculation  of Second Class fares.</xsd:documentation>
+					<xsd:documentation>Distance r calculation of Second Class fares.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -250,17 +252,17 @@
 			</xsd:element>
 			<xsd:element name="FromConnectionRef" type="ConnectionRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Start CONNECTION link  for   SERIES CONSTRAINT.</xsd:documentation>
+					<xsd:documentation>Start CONNECTION link for SERIES CONSTRAINT.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ToConnectionRef" type="ConnectionRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>End CONNECTION link  for   SERIES CONSTRAINT.</xsd:documentation>
+					<xsd:documentation>End CONNECTION link for SERIES CONSTRAINT.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="farePointsInPattern" type="farePointsInPattern_RelStructure" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation>FARE POINTs IN  PATTERN  in the SERIES CONSTRAINT.</xsd:documentation>
+					<xsd:documentation>FARE POINTs IN PATTERN in the SERIES CONSTRAINT.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="zonesInSeries" type="zonesInSeries_RelStructure" minOccurs="0" maxOccurs="unbounded">
@@ -284,12 +286,12 @@
 							<xsd:documentation>A set of all possible price features of a SERIES CONSTRAINT: default total price, discount in value or percentage etc.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
-					<xsd:element ref="CellRef_"/>
+					<xsd:element ref="CellRef_Dummy"/>
 				</xsd:choice>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="SeriesConstraintPrice" substitutionGroup="FarePrice_">
+	<xsd:element name="SeriesConstraintPrice" substitutionGroup="FarePrice_Dummy">
 		<xsd:annotation>
 			<xsd:documentation>A set of all possible price features of a SERIES CONSTRAINT: default total price, discount in value or percentage etc.</xsd:documentation>
 		</xsd:annotation>
@@ -310,7 +312,7 @@
 							<xsd:group ref="SeriesConstraintPriceGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="SeriesConstraintPriceIdType"/>
+					<xsd:attribute name="id" type="SeriesConstraintPriceIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -384,7 +386,11 @@
 				<xsd:sequence>
 					<xsd:group ref="ZoneInSeriesGroup"/>
 				</xsd:sequence>
-				<xsd:attribute name="order" type="xsd:positiveInteger" use="required"/>
+				<xsd:attribute name="order" type="xsd:positiveInteger" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>-v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
@@ -393,7 +399,7 @@
 			<xsd:documentation>Elements for a ZONE IN SERIES.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:element ref="TariffZoneRef_"/>
+			<xsd:element ref="TariffZoneRef_Dummy"/>
 			<xsd:element name="InterchangeAllowed" type="xsd:boolean" default="true" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Whether interchange is allowed in a zone.</xsd:documentation>

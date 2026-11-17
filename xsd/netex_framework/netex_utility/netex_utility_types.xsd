@@ -6,7 +6,7 @@
 				<Aggregation>main schema</Aggregation>
 				<Audience>e-service developers</Audience>
 				<Coverage>Europe</Coverage>
-				<Creator>First Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles.  mailto:schemer@netex.org.uk</Creator>
+				<Creator>First Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles.</Creator>
 				<Date>
 					<Created>2010-09-04</Created>
 				</Date>
@@ -26,7 +26,7 @@
 					  NJSK Review ColourSystem and ColourName  should be  type xsd:normalizedString, not xsd:string.
 				</Date>
 				<Date><Modified>2019-03-25</Modified>SBB23 CD #57. Add new BackgroundColour and BackgroundColourName  attributes to Presentation and PrintPresentation  elements. 
-					  Add icon to TypeOfInfolink enum values 
+					  Add icon to TypeOfInfoLink enum values 
 				</Date>
 				<Date><Modified>2019-03-30</Modified>FR49 CD #53 Accessibility Changes 
 					    NJSK revise: Add FontSizeEnum as a general property
@@ -100,7 +100,7 @@ Rail transport, Roads and Road transport
 	<!-- ======================================================================= -->
 	<xsd:element name="PrivateCode" type="PrivateCodeStructure">
 		<xsd:annotation>
-			<xsd:documentation>A private code that uniquely identifies the element.  May be used for inter-operating with other (legacy) systems.</xsd:documentation>
+			<xsd:documentation>A private code that uniquely identifies the element. May be used for inter-operating with other (legacy) systems.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="PrivateCodeStructure">
@@ -123,7 +123,7 @@ Rail transport, Roads and Road transport
 		</xsd:annotation>
 	</xsd:element>
 	<!-- ======================================================================= -->
-	<xsd:complexType name="PublicCodeType">
+	<xsd:complexType name="PublicCodeStructure">
 		<xsd:annotation>
 			<xsd:documentation>Unique identifier that may be communicated to and used by the public.</xsd:documentation>
 		</xsd:annotation>
@@ -281,7 +281,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="TextColour" type="ColourValueType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Default colour value for text associated with ENTITY.</xsd:documentation>
+					<xsd:documentation>Default RGB colour value for text associated with ENTITY.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="TextColourName" type="xsd:normalizedString" minOccurs="0">
@@ -332,7 +332,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="Colour" type="PrintColourValueType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Default colour value for printed  graphics associated with ENTITY - e.g. of a LINE, e.g. CMYK.</xsd:documentation>
+					<xsd:documentation>Default colour value for printed graphics associated with ENTITY - e.g. of a LINE. This may be, e.g., a CMYK or RAL code, not intended to be machine-readable.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ColourName" type="xsd:normalizedString" minOccurs="0">
@@ -348,9 +348,9 @@ Rail transport, Roads and Road transport
 					- Pantone (be aware that Pantone is proprietary), etc.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="BackgroundColour" type="ColourValueType" minOccurs="0">
+			<xsd:element name="BackgroundColour" type="PrintColourValueType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Default RGB background colour value for printed text and graphics associated with ENTITY - e.g. of a LINE.</xsd:documentation>
+					<xsd:documentation>Default background colour value for printed text and graphics associated with ENTITY. This may be, e.g., a CMYK or RAL code, not intended to be machine-readable.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="BackgroundColourName" type="xsd:normalizedString" minOccurs="0">
@@ -360,12 +360,12 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="TextColour" type="PrintColourValueType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Default colour value for printed text associated with entity. CMYK.</xsd:documentation>
+					<xsd:documentation>Default colour value for printed text associated with entity. This may be, e.g., a CMYK or RAL code, not intended to be machine-readable.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="TextColourName" type="xsd:normalizedString" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Name of default colour value for printed  text associated with entity,  in specified ColourSystem.</xsd:documentation>
+					<xsd:documentation>Name of default colour value for printed text associated with entity, in specified ColourSystem.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="TextFont" type="xsd:normalizedString" minOccurs="0">
@@ -411,7 +411,7 @@ Rail transport, Roads and Road transport
 	<!-- ======================================================================= -->
 	<xsd:simpleType name="CurrencyType">
 		<xsd:annotation>
-			<xsd:documentation>Type for a Currency . Based on ISO 4717 values.</xsd:documentation>
+			<xsd:documentation>Type for a Currency. Based on ISO 4717 values.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:NMTOKEN">
 			<xsd:minLength value="3"/>
@@ -433,9 +433,9 @@ Rail transport, Roads and Road transport
 		<xsd:restriction base="xsd:decimal"/>
 	</xsd:simpleType>
 	<!-- ======================================================================= -->
-	<xsd:simpleType name="TypeOfInfolinkEnumeration">
+	<xsd:simpleType name="TypeOfInfoLinkEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>Enumeration of Uses of language.</xsd:documentation>
+			<xsd:documentation>Enumeration of functional classification of an info link.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="contact"/>
@@ -468,21 +468,21 @@ Rail transport, Roads and Road transport
 	</xsd:element>
 	<xsd:complexType name="InfoLinkStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for Info LinK.</xsd:documentation>
+			<xsd:documentation>Type for Info Link.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:simpleContent>
 			<xsd:extension base="xsd:anyURI">
 				<xsd:attribute name="typeOfInfoLink">
 					<xsd:annotation>
-						<xsd:documentation>Functional classifcation of infolink</xsd:documentation>
+						<xsd:documentation>Functional classification of an info link.</xsd:documentation>
 					</xsd:annotation>
 					<xsd:simpleType>
-						<xsd:list itemType="TypeOfInfolinkEnumeration"/>
+						<xsd:list itemType="TypeOfInfoLinkEnumeration"/>
 					</xsd:simpleType>
 				</xsd:attribute>
 				<xsd:attribute name="targetPlatform">
 					<xsd:annotation>
-						<xsd:documentation>Software platform for which link is targeted, eg ios, android</xsd:documentation>
+						<xsd:documentation>Software platform for which link is targeted, e.g. iOS, Android.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 			</xsd:extension>

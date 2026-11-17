@@ -95,10 +95,12 @@ To calculate your fare, find your location, and your destination, where the row 
 					<!--==== LINEs ==== -->
 					<lines>
 						<Line version="1.0" id="myb:Line_3">
+							<privateCodes>
+								<PrivateCode type="noc_data">METR_1</PrivateCode>
+							</privateCodes>
 							<Name>Mybus 3</Name>
 							<Description>Alpha - -Gamma</Description>
 							<PublicCode>3</PublicCode>
-							<PrivateCode type="noc_data">METR_1</PrivateCode>
 							<OperatorRef version="1.0" ref="noc:MYBUS">137122</OperatorRef>
 							<LineType>local</LineType>
 							<PaymentMethods>cash</PaymentMethods>
@@ -328,6 +330,7 @@ Alpha
 						<DataSource id="myb:Mybus" version="1.0">
 							<Email>feedback@Mybus.co.uk</Email>
 						</DataSource>
+						<DataSource id="fxc:dft" version="fxc:v1.0"/>
 					</dataSources>
 					<!-- ========Responsibility Sets========== -->
 					<responsibilitySets>
@@ -336,7 +339,7 @@ Alpha
 							<roles>
 								<ResponsibilityRoleAssignment version="1.0" id="myb:tariff_data@creates">
 									<DataRoleType>creates</DataRoleType>
-									<StakeholderRoleType>FareManagement</StakeholderRoleType>
+									<StakeholderRoleType>fareManagement</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="noc:MYBUS" version="1.0">Mybus</ResponsibleOrganisationRef>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -357,8 +360,10 @@ Alpha
 					<organisations>
 						<!-- ==== ORGANISATIONS ==== -->
 						<Operator version="1.0" id="noc:MYBUS">
+							<privateCodes>
+								<PrivateCode type="nocn">nocn:987122</PrivateCode>
+							</privateCodes>
 							<PublicCode>MYBU</PublicCode>
-							<PrivateCode type="nocn">nocn:987122</PrivateCode>
 							<Name>Mybus</Name>
 							<ShortName>Mybus</ShortName>
 							<TradingName>Mybus Ltd</TradingName>

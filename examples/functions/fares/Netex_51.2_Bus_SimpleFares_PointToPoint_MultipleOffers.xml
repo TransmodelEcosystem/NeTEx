@@ -152,7 +152,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 				</Codespace>
 				<Codespace id="myfares">
 					<Xmlns>myfares</Xmlns>
-					<XmlnsUrl>http://www.myfares,com/fares</XmlnsUrl>
+					<XmlnsUrl>http://www.myfares.com/fares</XmlnsUrl>
 					<Description>Fare data</Description>
 				</Codespace>
 			</codespaces>
@@ -418,7 +418,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 					</salesOfferPackages>
 				</FareFrame>
 				<!--- =============== FAREs =========== -->
-				<FareFrame version="1.0" id="myfares:DTA@Line24@prices">
+				<FarePriceFrame version="1.0" id="myfares:DTA@Line24@prices">
 					<Name>Prices for Line 24</Name>
 					<prerequisites>
 						<FareFrameRef version="1.0" ref="myfares:DTA@Line24@products"/>
@@ -575,7 +575,7 @@ A COMPOSITE FRAME is used to group the component FRAMEs
 							</includes>
 						</FareTable>
 					</fareTables>
-				</FareFrame>
+				</FarePriceFrame>
 				<!--   ==== COMMON RESOURCES  ==   -->
 				<ResourceFrame version="1.0" id="mybus:DTA@Common_resources">
 					<codespaces>

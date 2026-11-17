@@ -36,7 +36,9 @@
 							<CycleStorageType>racks</CycleStorageType>
 						</CycleStorageEquipment>
 						<GeneralSign id="NSR:GeneralSign:1" version="any">
-							<PrivateCode>512</PrivateCode>
+							<privateCodes>
+								<PrivateCode>512</PrivateCode>
+							</privateCodes>
 							<SignContentType>transportMode</SignContentType>
 						</GeneralSign>
 						<PassengerInformationEquipment id="RUT:PassengerInformationEquipment:1" version="any">
@@ -68,7 +70,7 @@
 								<MobilityImpairedAccess>true</MobilityImpairedAccess>
 								<limitations>
 									<!-- Minimumskrav til UU-informasjon -->
-									<AccessibilityLimitation>
+									<AccessibilityLimitation id="NSR:AccessibilityAssessment:1" version="any">
 										<WheelchairAccess>true</WheelchairAccess>
 										<StepFreeAccess>true</StepFreeAccess>
 									</AccessibilityLimitation>

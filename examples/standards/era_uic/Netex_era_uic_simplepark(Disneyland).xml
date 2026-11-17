@@ -133,7 +133,7 @@ A COMPOSITE FRAME IS used for grouping the other frames.
 						</PointOfInterest>
 					</pointsOfInterest>
 					<pathLinks>
-						<PathLink id="tap:008738264@Disney+008738264" version="any">
+						<SitePathLink id="tap:008738264@Disney+008738264" version="any">
 							<Name>EURODISNEY to MARNE LA VALLEE CHESSY SNCF</Name>
 							<Distance>500</Distance>
 							<From>
@@ -142,8 +142,8 @@ A COMPOSITE FRAME IS used for grouping the other frames.
 							<To>
 								<PlaceRef ref="tap:008738264"/>
 							</To>
-						</PathLink>
-						<PathLink id="tap:008738264@Disney+008711184" version="any">
+						</SitePathLink>
+						<SitePathLink id="tap:008738264@Disney+008711184" version="any">
 							<Name>EURODISNEY to MARNE LA VALLEE CHESSY</Name>
 							<Distance>500</Distance>
 							<From>
@@ -152,7 +152,7 @@ A COMPOSITE FRAME IS used for grouping the other frames.
 							<To>
 								<PlaceRef ref="tap:008711184"/>
 							</To>
-						</PathLink>
+						</SitePathLink>
 					</pathLinks>
 				</SiteFrame>
 				<ResourceFrame version="1.0" id="tap:Sv_0003">

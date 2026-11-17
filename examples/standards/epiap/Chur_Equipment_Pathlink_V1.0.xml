@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" xmlns="http://www.netex.org.uk/netex" xsi:schemaLocation="http://www.netex.org.uk/netex  file:///D:/code/netex/xsd/NeTEx_publication.xsd" version="1.10">
+<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" xmlns="http://www.netex.org.uk/netex" xsi:schemaLocation="http://www.netex.org.uk/netex  ../../../xsd/NeTEx_publication.xsd" version="1.10">
 	<PublicationTimestamp>2022-04-13T18:38:52.6831392+02:00</PublicationTimestamp>
 	<ParticipantRef>MENTZ</ParticipantRef>
 	<Description>NeTEx Export, Version: 19.16.0.0</Description>
@@ -34,43 +34,49 @@
 					</dataSources>
 					<responsibilitySets>
 						<ResponsibilitySet id="ch:1:ResponsibilitySet:BuS_766_BuS" version="any">
+							<privateCodes>
+								<PrivateCode>BuS</PrivateCode>
+							</privateCodes>
 							<Name lang="de">Bus und Service AG</Name>
-							<PrivateCode>BuS</PrivateCode>
 							<roles>
 								<ResponsibilityRoleAssignment id="ch:1:ResponsibilityRoleAssignment:BuS_766_BuS:1" version="any">
-									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+									<StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="ch:1:Operator:766" version="any"/>
 								</ResponsibilityRoleAssignment>
 								<ResponsibilityRoleAssignment id="ch:1:ResponsibilityRoleAssignment:BuS_766_BuS:2" version="any">
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="ch:1:Operator:766" version="any"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
 						</ResponsibilitySet>
 						<ResponsibilitySet id="ch:1:ResponsibilitySet:PAG_801_PAG" version="any">
+							<privateCodes>
+								<PrivateCode>PAG</PrivateCode>
+							</privateCodes>
 							<Name lang="de">PostAuto AG</Name>
-							<PrivateCode>PAG</PrivateCode>
 							<roles>
 								<ResponsibilityRoleAssignment id="ch:1:ResponsibilityRoleAssignment:PAG_801_PAG:1" version="any">
-									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+									<StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="ch:1:Operator:801" version="any"/>
 								</ResponsibilityRoleAssignment>
 								<ResponsibilityRoleAssignment id="ch:1:ResponsibilityRoleAssignment:PAG_801_PAG:2" version="any">
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="ch:1:Operator:801" version="any"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
 						</ResponsibilitySet>
 						<ResponsibilitySet id="ch:1:ResponsibilitySet:RhB_72_RhB" version="any">
+							<privateCodes>
+								<PrivateCode>RhB</PrivateCode>
+							</privateCodes>
 							<Name lang="de">Rhätische Bahn</Name>
-							<PrivateCode>RhB</PrivateCode>
 							<roles>
 								<ResponsibilityRoleAssignment id="ch:1:ResponsibilityRoleAssignment:RhB_72_RhB:1" version="any">
-									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+									<StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="ch:1:Operator:72" version="any"/>
 								</ResponsibilityRoleAssignment>
 								<ResponsibilityRoleAssignment id="ch:1:ResponsibilityRoleAssignment:RhB_72_RhB:2" version="any">
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="ch:1:Operator:72" version="any"/>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -113,16 +119,22 @@
 						<ValueSet id="ch:1:ValueSet:notices" version="any" nameOfClass="TypeOfNotice">
 							<values>
 								<TypeOfNotice id="ch:1:TypeOfNotice:11" version="any">
+									<privateCodes>
+										<PrivateCode>11</PrivateCode>
+									</privateCodes>
 									<Name>Region</Name>
-									<PrivateCode>11</PrivateCode>
 								</TypeOfNotice>
 								<TypeOfNotice id="ch:1:TypeOfNotice:10" version="any">
+									<privateCodes>
+										<PrivateCode>10</PrivateCode>
+									</privateCodes>
 									<Name>Angebot</Name>
-									<PrivateCode>10</PrivateCode>
 								</TypeOfNotice>
 								<TypeOfNotice id="ch:1:TypeOfNotice:1" version="any">
+									<privateCodes>
+										<PrivateCode>1</PrivateCode>
+									</privateCodes>
 									<Name>Allgemeiner Hinweis</Name>
-									<PrivateCode>1</PrivateCode>
 								</TypeOfNotice>
 							</values>
 						</ValueSet>
@@ -163,36 +175,48 @@
 					</typesOfValue>
 					<organisations>
 						<Operator id="ch:1:Operator:766" version="any">
-							<PrivateCode>766</PrivateCode>
+							<privateCodes>
+								<PrivateCode>766</PrivateCode>
+							</privateCodes>
 							<Name>Bus und Service AG</Name>
 							<ShortName>BuS</ShortName>
 						</Operator>
 						<Operator id="ch:1:Operator:801" version="any">
-							<PrivateCode>801</PrivateCode>
+							<privateCodes>
+								<PrivateCode>801</PrivateCode>
+							</privateCodes>
 							<Name>PostAuto AG</Name>
 							<ShortName>PAG</ShortName>
 						</Operator>
 						<Operator id="ch:1:Operator:72" version="any">
-							<PrivateCode>72</PrivateCode>
+							<privateCodes>
+								<PrivateCode>72</PrivateCode>
+							</privateCodes>
 							<Name>Rhätische Bahn</Name>
 							<ShortName>RhB</ShortName>
 						</Operator>
 					</organisations>
 					<operationalContexts>
 						<OperationalContext id="ch:1:OperationalContext:92" version="any">
+							<privateCodes>
+								<PrivateCode>92</PrivateCode>
+							</privateCodes>
 							<Name lang="de">Strasse</Name>
 							<ShortName lang="de">92</ShortName>
-							<PrivateCode>92</PrivateCode>
 						</OperationalContext>
 						<OperationalContext id="ch:1:OperationalContext:96" version="any">
+							<privateCodes>
+								<PrivateCode>96</PrivateCode>
+							</privateCodes>
 							<Name lang="de">PostAuto Schweiz</Name>
 							<ShortName lang="de">96</ShortName>
-							<PrivateCode>96</PrivateCode>
 						</OperationalContext>
 						<OperationalContext id="ch:1:OperationalContext:91" version="any">
+							<privateCodes>
+								<PrivateCode>91</PrivateCode>
+							</privateCodes>
 							<Name lang="de">Schiene</Name>
 							<ShortName lang="de">91</ShortName>
-							<PrivateCode>91</PrivateCode>
 						</OperationalContext>
 					</operationalContexts>
 					<vehicleTypes>
@@ -654,6 +678,9 @@
 									<Value>8505250</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8505250</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -663,7 +690,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Silvaplana, Alp Güglia</Name>
-							<PrivateCode>8505250</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.743729</Longitude>
@@ -685,6 +711,9 @@
 									<Value>8508249</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8508249</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -694,7 +723,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Domat/Ems, Bahnhof</Name>
-							<PrivateCode>8508249</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.453511</Longitude>
@@ -716,6 +744,9 @@
 									<Value>8509000</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509000</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>8</Value>
@@ -725,7 +756,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur</Name>
-							<PrivateCode>8509000</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.528933</Longitude>
@@ -765,21 +795,32 @@
 								<Level id="ch:1:Level:8509000-0" version="any">
 									<Name lang="de">Erdgeschoss</Name>
 									<ShortName lang="de">G</ShortName>
+									<PublicCode>G</PublicCode>
+									<PublicUse>true</PublicUse>
+									<RelativeLevelOrder>0</RelativeLevelOrder>
 								</Level>
 								<Level id="ch:1:Level:8509000--1" version="any">
 									<Name lang="de">1. Untergeschoss</Name>
 									<ShortName lang="de">B1</ShortName>
+									<PublicCode>B1</PublicCode>
+									<PublicUse>true</PublicUse>
+									<RelativeLevelOrder>-1</RelativeLevelOrder>
 								</Level>
 								<Level id="ch:1:Level:8509000--2" version="any">
 									<Name lang="de">2. Untergeschoss</Name>
 									<ShortName lang="de">B2</ShortName>
+									<PublicCode>B2</PublicCode>
+									<PublicUse>true</PublicUse>
+									<RelativeLevelOrder>-2</RelativeLevelOrder>
 								</Level>
 							</levels>
 							<entrances>
-								<Entrance id="ch:1:Entrance:8509000:80" version="any">
+								<StopPlaceEntrance id="ch:1:StopPlaceEntrance:8509000:80" version="any">
+									<privateCodes>
+										<PrivateCode>80</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Zugang Gürtel</Name>
 									<ShortName lang="de">ZUG</ShortName>
-									<PrivateCode>80</PrivateCode>
 									<Centroid>
 										<Location>
 											<Longitude>9.528628</Longitude>
@@ -820,11 +861,13 @@
 											</placeEquipments>
 										</EquipmentPlace>
 									</equipmentPlaces>
-								</Entrance>
-								<Entrance id="ch:1:Entrance:8509000:82" version="any">
+								</StopPlaceEntrance>
+								<StopPlaceEntrance id="ch:1:StopPlaceEntrance:8509000:82" version="any">
+									<privateCodes>
+										<PrivateCode>82</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Zugang Bahnhofsplatz (Treppe)</Name>
 									<ShortName lang="de">ZuBT</ShortName>
-									<PrivateCode>82</PrivateCode>
 									<Centroid>
 										<Location>
 											<Longitude>9.530074</Longitude>
@@ -868,11 +911,13 @@
 											</placeEquipments>
 										</EquipmentPlace>
 									</equipmentPlaces>
-								</Entrance>
-								<Entrance id="ch:1:Entrance:8509000:84" version="any">
+								</StopPlaceEntrance>
+								<StopPlaceEntrance id="ch:1:StopPlaceEntrance:8509000:84" version="any">
+									<privateCodes>
+										<PrivateCode>84</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Zugang Bahnhofsplatz (Lift)</Name>
 									<ShortName lang="de">ZuBL</ShortName>
-									<PrivateCode>84</PrivateCode>
 									<Centroid>
 										<Location>
 											<Longitude>9.530263</Longitude>
@@ -905,12 +950,14 @@
 											</placeEquipments>
 										</EquipmentPlace>
 									</equipmentPlaces>
-								</Entrance>
+								</StopPlaceEntrance>
 							</entrances>
 							<placeEquipments>
 								<LiftEquipment id="ch:1:LiftEquipment:8509000-119" version="any">
+									<privateCodes>
+										<PrivateCode>119</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Aufzug von Zwischengeschoss nach Zugang Gürtel</Name>
-									<PrivateCode>119</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_AUF" version="any"/>
 									<Width>0.8</Width>
 									<Depth>1</Depth>
@@ -918,106 +965,136 @@
 									<InternalWidth>1.8</InternalWidth>
 								</LiftEquipment>
 								<LiftEquipment id="ch:1:LiftEquipment:8509000-105" version="any">
+									<privateCodes>
+										<PrivateCode>105</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Aufzug von Bahnsteig 1 nach Zwischengeschoss</Name>
-									<PrivateCode>105</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_AUF" version="any"/>
 									<Width>2.3</Width>
 									<Depth>2.6</Depth>
 									<InternalWidth>2.3</InternalWidth>
 								</LiftEquipment>
 								<LiftEquipment id="ch:1:LiftEquipment:8509000-127" version="any">
+									<privateCodes>
+										<PrivateCode>127</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Aufzug von Zugang Bahnhofsplatz nach Zwischengeschoss West</Name>
-									<PrivateCode>127</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_AUF" version="any"/>
 									<Width>1</Width>
 									<Depth>2.5</Depth>
 									<InternalWidth>1</InternalWidth>
 								</LiftEquipment>
 								<LiftEquipment id="ch:1:LiftEquipment:8509000-118" version="any">
+									<privateCodes>
+										<PrivateCode>118</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Aufzug von Zugang Bahnhofsplatz nach Zwischengeschoss Ost</Name>
-									<PrivateCode>118</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_AUF" version="any"/>
 									<Width>1</Width>
 									<Depth>1</Depth>
 									<InternalWidth>2.5</InternalWidth>
 								</LiftEquipment>
 								<StaircaseEquipment id="ch:1:StaircaseEquipment:8509000-121" version="any">
+									<privateCodes>
+										<PrivateCode>121</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Treppe von Zwischengeschoss nach Zugang Gürtel</Name>
-									<PrivateCode>121</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_TRE" version="any"/>
 									<NumberOfSteps>22</NumberOfSteps>
 									<StepHeight>0.17</StepHeight>
 								</StaircaseEquipment>
 								<StaircaseEquipment id="ch:1:StaircaseEquipment:8509000-107" version="any">
+									<privateCodes>
+										<PrivateCode>107</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Treppe von Zwischengeschoss nach Gleis 1</Name>
-									<PrivateCode>107</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_TRE" version="any"/>
 									<NumberOfSteps>28</NumberOfSteps>
 									<StepHeight>0.17</StepHeight>
 								</StaircaseEquipment>
 								<StaircaseEquipment id="ch:1:StaircaseEquipment:8509000-85" version="any">
+									<privateCodes>
+										<PrivateCode>85</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Treppe von Bahnsteig 1 nach Zwischengeschoss</Name>
-									<PrivateCode>85</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_TRE" version="any"/>
 									<NumberOfSteps>28</NumberOfSteps>
 									<StepHeight>0.17</StepHeight>
 								</StaircaseEquipment>
 								<StaircaseEquipment id="ch:1:StaircaseEquipment:8509000-97" version="any">
+									<privateCodes>
+										<PrivateCode>97</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Treppe von Zwischengeschoss nach Zugang Bahnhofsplatz</Name>
-									<PrivateCode>97</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_TRE" version="any"/>
 									<NumberOfSteps>30</NumberOfSteps>
 									<StepHeight>0.17</StepHeight>
 								</StaircaseEquipment>
 								<StaircaseEquipment id="ch:1:StaircaseEquipment:8509000-96" version="any">
+									<privateCodes>
+										<PrivateCode>96</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Treppe von Bahnsteig 5 nach Zwischengeschoss</Name>
-									<PrivateCode>96</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_TRE" version="any"/>
 									<NumberOfSteps>33</NumberOfSteps>
 									<StepHeight>0.16</StepHeight>
 								</StaircaseEquipment>
 								<StaircaseEquipment id="ch:1:StaircaseEquipment:8509000-95" version="any">
+									<privateCodes>
+										<PrivateCode>95</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Treppe von Bahnsteig 4 nach Zwischengeschoss</Name>
-									<PrivateCode>95</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_TRE" version="any"/>
 									<NumberOfSteps>33</NumberOfSteps>
 									<StepHeight>0.16</StepHeight>
 								</StaircaseEquipment>
 								<StaircaseEquipment id="ch:1:StaircaseEquipment:8509000-94" version="any">
+									<privateCodes>
+										<PrivateCode>94</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Treppe von Bahnsteig 3 nach Zwischengeschoss x</Name>
-									<PrivateCode>94</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_TRE" version="any"/>
 									<Depth>0.22</Depth>
 									<NumberOfSteps>33</NumberOfSteps>
 									<StepHeight>0.16</StepHeight>
 								</StaircaseEquipment>
 								<StaircaseEquipment id="ch:1:StaircaseEquipment:8509000-91" version="any">
+									<privateCodes>
+										<PrivateCode>91</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Treppe von Bahnsteig 2 nach Zwischengeschoss</Name>
-									<PrivateCode>91</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_TRE" version="any"/>
 									<NumberOfSteps>33</NumberOfSteps>
 									<StepHeight>0.16</StepHeight>
 								</StaircaseEquipment>
 								<EscalatorEquipment id="ch:1:EscalatorEquipment:8509000-122" version="any">
+									<privateCodes>
+										<PrivateCode>122</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Rolltreppe von Zwischengeschoss nach Zugang Bahnhofsplatz</Name>
-									<PrivateCode>122</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_ROL" version="any"/>
 									<Width>1.6</Width>
 								</EscalatorEquipment>
 								<EscalatorEquipment id="ch:1:EscalatorEquipment:8509000-99" version="any">
+									<privateCodes>
+										<PrivateCode>99</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Rolltreppe von Zwischengeschoss nach Zugang &amp; Gleis 2</Name>
-									<PrivateCode>99</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_ROL" version="any"/>
 								</EscalatorEquipment>
 								<EscalatorEquipment id="ch:1:EscalatorEquipment:8509000-98" version="any">
+									<privateCodes>
+										<PrivateCode>98</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Rolltreppe von Zwischengeschoss nach Zugang Bahnhofsplatz</Name>
-									<PrivateCode>98</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_ROL" version="any"/>
 									<Width>1.6</Width>
 								</EscalatorEquipment>
 								<RampEquipment id="ch:1:RampEquipment:8509000-106" version="any">
+									<privateCodes>
+										<PrivateCode>106</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Rampe von Zwischengeschoss nach Gleis 1</Name>
-									<PrivateCode>106</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_RAM" version="any"/>
 									<Width>2.5</Width>
 									<Length>40</Length>
@@ -1028,8 +1105,10 @@
 									<SuitableForCycles>false</SuitableForCycles>
 								</RampEquipment>
 								<RampEquipment id="ch:1:RampEquipment:8509000-108" version="any">
+									<privateCodes>
+										<PrivateCode>108</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Rampe von Zwischengeschoss nach Bahnsteig 1</Name>
-									<PrivateCode>108</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_RAM" version="any"/>
 									<Width>2.7</Width>
 									<Length>40</Length>
@@ -1040,8 +1119,10 @@
 									<SuitableForCycles>false</SuitableForCycles>
 								</RampEquipment>
 								<RampEquipment id="ch:1:RampEquipment:8509000-110" version="any">
+									<privateCodes>
+										<PrivateCode>110</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Rampe von Zwischengeschoss nach Bahnsteig 3</Name>
-									<PrivateCode>110</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_RAM" version="any"/>
 									<Width>2.7</Width>
 									<Length>40</Length>
@@ -1052,8 +1133,10 @@
 									<SuitableForCycles>false</SuitableForCycles>
 								</RampEquipment>
 								<RampEquipment id="ch:1:RampEquipment:8509000-111" version="any">
+									<privateCodes>
+										<PrivateCode>111</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Rampe von Zwischengeschoss nach Bahnsteig 4</Name>
-									<PrivateCode>111</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_RAM" version="any"/>
 									<Width>2.7</Width>
 									<Length>40</Length>
@@ -1064,8 +1147,10 @@
 									<SuitableForCycles>false</SuitableForCycles>
 								</RampEquipment>
 								<RampEquipment id="ch:1:RampEquipment:8509000-112" version="any">
+									<privateCodes>
+										<PrivateCode>112</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Rampe von Zwischengeschoss nach Bahnsteig 5</Name>
-									<PrivateCode>112</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_RAM" version="any"/>
 									<Width>2.7</Width>
 									<Length>40</Length>
@@ -1076,8 +1161,10 @@
 									<SuitableForCycles>false</SuitableForCycles>
 								</RampEquipment>
 								<RampEquipment id="ch:1:RampEquipment:8509000-120" version="any">
+									<privateCodes>
+										<PrivateCode>120</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Rampe von Zwischengeschoss nach Zugang Gürtel</Name>
-									<PrivateCode>120</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_RAM" version="any"/>
 									<Width>5</Width>
 									<Length>50</Length>
@@ -1088,8 +1175,10 @@
 									<SuitableForCycles>false</SuitableForCycles>
 								</RampEquipment>
 								<RampEquipment id="ch:1:RampEquipment:8509000-109" version="any">
+									<privateCodes>
+										<PrivateCode>109</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Rampe von Zwischengeschoss nach Bahnsteig 2</Name>
-									<PrivateCode>109</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_RAM" version="any"/>
 									<Width>2.7</Width>
 									<Length>40</Length>
@@ -1521,9 +1610,11 @@
 							</quays>
 							<accessSpaces>
 								<AccessSpace id="" version="any">
+									<privateCodes>
+										<PrivateCode>70</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Zwischengeschoss</Name>
 									<ShortName lang="de">ZW</ShortName>
-									<PrivateCode>70</PrivateCode>
 									<Centroid>
 										<Location>
 											<Longitude>9.529311</Longitude>
@@ -5617,6 +5708,9 @@
 									<Value>8509006</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509006</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -5626,7 +5720,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur Wiesental</Name>
-							<PrivateCode>8509006</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.531449</Longitude>
@@ -5655,6 +5748,9 @@
 									<Value>8509150</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509150</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -5664,7 +5760,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur Altstadt</Name>
-							<PrivateCode>8509150</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.531161</Longitude>
@@ -5693,6 +5788,9 @@
 									<Value>8509156</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509156</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -5702,7 +5800,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Litzirüti</Name>
-							<PrivateCode>8509156</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.703269</Longitude>
@@ -5731,6 +5828,9 @@
 									<Value>8509180</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509180</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -5740,7 +5840,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Felsberg</Name>
-							<PrivateCode>8509180</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.48126</Longitude>
@@ -5769,6 +5868,9 @@
 									<Value>8509182</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509182</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -5778,7 +5880,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Ems Werk</Name>
-							<PrivateCode>8509182</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.430388</Longitude>
@@ -5807,6 +5908,9 @@
 									<Value>8509183</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509183</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -5816,7 +5920,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Reichenau-Tamins</Name>
-							<PrivateCode>8509183</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.412548</Longitude>
@@ -5845,6 +5948,9 @@
 									<Value>8509185</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509185</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -5854,7 +5960,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Rhäzüns</Name>
-							<PrivateCode>8509185</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.399261</Longitude>
@@ -5883,6 +5988,9 @@
 									<Value>8509192</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509192</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -5892,7 +6000,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Tiefencastel</Name>
-							<PrivateCode>8509192</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.572861</Longitude>
@@ -5921,6 +6028,9 @@
 									<Value>8509253</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509253</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>8</Value>
@@ -5930,7 +6040,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>St. Moritz</Name>
-							<PrivateCode>8509253</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.846389</Longitude>
@@ -5959,6 +6068,9 @@
 									<Value>8509270</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509270</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -5968,7 +6080,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>St. Moritz (Standseilbahn)</Name>
-							<PrivateCode>8509270</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.83763</Longitude>
@@ -5990,6 +6101,9 @@
 									<Value>8509607</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509607</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -5999,7 +6113,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Julier, La Veduta</Name>
-							<PrivateCode>8509607</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.718065</Longitude>
@@ -6021,6 +6134,9 @@
 									<Value>8509679</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509679</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -6030,7 +6146,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Rhäzüns (Luftseilbahn Feldis)</Name>
-							<PrivateCode>8509679</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.401795</Longitude>
@@ -6052,6 +6167,9 @@
 									<Value>8509681</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509681</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -6061,7 +6179,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Lenzerheide/Lai Canols</Name>
-							<PrivateCode>8509681</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.556574</Longitude>
@@ -6074,17 +6191,25 @@
 								<Level id="ch:1:Level:8509681-1" version="any">
 									<Name lang="de">1. Obergeschoss</Name>
 									<ShortName lang="de">F1</ShortName>
+									<PublicCode>F1</PublicCode>
+									<PublicUse>true</PublicUse>
+									<RelativeLevelOrder>1</RelativeLevelOrder>
 								</Level>
 								<Level id="ch:1:Level:8509681-0" version="any">
 									<Name lang="de">Erdgeschoss</Name>
 									<ShortName lang="de">G</ShortName>
+									<PublicCode>G</PublicCode>
+									<PublicUse>true</PublicUse>
+									<RelativeLevelOrder>0</RelativeLevelOrder>
 								</Level>
 							</levels>
 							<entrances>
-								<Entrance id="ch:1:Entrance:8509681:1" version="any">
+								<StopPlaceEntrance id="ch:1:StopPlaceEntrance:8509681:1" version="any">
+									<privateCodes>
+										<PrivateCode>1</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Haupteingang</Name>
 									<ShortName lang="de">ZuH</ShortName>
-									<PrivateCode>1</PrivateCode>
 									<Centroid>
 										<Location>
 											<Longitude>9.556125</Longitude>
@@ -6128,11 +6253,13 @@
 											</placeEquipments>
 										</EquipmentPlace>
 									</equipmentPlaces>
-								</Entrance>
-								<Entrance id="ch:1:Entrance:8509681:2" version="any">
+								</StopPlaceEntrance>
+								<StopPlaceEntrance id="ch:1:StopPlaceEntrance:8509681:2" version="any">
+									<privateCodes>
+										<PrivateCode>2</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Nebeneingang oben</Name>
 									<ShortName lang="de">ZuO</ShortName>
-									<PrivateCode>2</PrivateCode>
 									<Centroid>
 										<Location>
 											<Longitude>9.556718</Longitude>
@@ -6141,12 +6268,14 @@
 										</Location>
 									</Centroid>
 									<LevelRef ref="ch:1:Level:8509681-1" version="any"/>
-								</Entrance>
+								</StopPlaceEntrance>
 							</entrances>
 							<placeEquipments>
 								<LiftEquipment id="ch:1:LiftEquipment:8509681-173" version="any">
+									<privateCodes>
+										<PrivateCode>173</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Aufzug von Haupteingang nach Gondel</Name>
-									<PrivateCode>173</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_AUF" version="any"/>
 									<Width>0.9</Width>
 									<Depth>1.1</Depth>
@@ -6154,13 +6283,17 @@
 									<InternalWidth>0.9</InternalWidth>
 								</LiftEquipment>
 								<StaircaseEquipment id="ch:1:StaircaseEquipment:8509681-172" version="any">
+									<privateCodes>
+										<PrivateCode>172</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Treppe von Haupteingang nach Gondel</Name>
-									<PrivateCode>172</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_TRE" version="any"/>
 								</StaircaseEquipment>
 								<EscalatorEquipment id="ch:1:EscalatorEquipment:8509681-155" version="any">
+									<privateCodes>
+										<PrivateCode>155</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Rolltreppe von Gondel nach Haupteingang</Name>
-									<PrivateCode>155</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_ROL" version="any"/>
 								</EscalatorEquipment>
 							</placeEquipments>
@@ -6533,6 +6666,9 @@
 									<Value>8509730</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509730</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -6542,7 +6678,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Tamins, Unterdorf</Name>
-							<PrivateCode>8509730</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.408092</Longitude>
@@ -6564,6 +6699,9 @@
 									<Value>8509741</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509741</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -6573,7 +6711,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Lantsch/Lenz, St. Cassian</Name>
-							<PrivateCode>8509741</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.558003</Longitude>
@@ -6595,6 +6732,9 @@
 									<Value>8509755</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509755</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -6604,7 +6744,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Bivio, posta</Name>
-							<PrivateCode>8509755</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.64964</Longitude>
@@ -6626,6 +6765,9 @@
 									<Value>8509763</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509763</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -6635,7 +6777,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Churwalden, Post</Name>
-							<PrivateCode>8509763</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.54372</Longitude>
@@ -6657,6 +6798,9 @@
 									<Value>8509768</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509768</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -6666,7 +6810,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Cunter, vischnanca</Name>
-							<PrivateCode>8509768</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.5916</Longitude>
@@ -6688,6 +6831,9 @@
 									<Value>8509789</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509789</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -6697,7 +6843,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Lantsch/Lenz, Vischnanca</Name>
-							<PrivateCode>8509789</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.56297</Longitude>
@@ -6736,6 +6881,9 @@
 									<Value>8509790</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509790</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -6745,7 +6893,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Lenzerheide/Lai, Post</Name>
-							<PrivateCode>8509790</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.557994</Longitude>
@@ -6765,6 +6912,9 @@
 								<Level id="ch:1:Level:8509790-0" version="any">
 									<Name lang="de">Erdgeschoss</Name>
 									<ShortName lang="de">G</ShortName>
+									<PublicCode>G</PublicCode>
+									<PublicUse>true</PublicUse>
+									<RelativeLevelOrder>0</RelativeLevelOrder>
 								</Level>
 							</levels>
 							<Weighting>interchangeAllowed</Weighting>
@@ -6797,6 +6947,9 @@
 									<Value>8509793</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509793</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -6806,7 +6959,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Malix, Dorf</Name>
-							<PrivateCode>8509793</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.532634</Longitude>
@@ -6828,6 +6980,9 @@
 									<Value>8509797</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509797</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -6837,7 +6992,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Mulegns</Name>
-							<PrivateCode>8509797</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.620705</Longitude>
@@ -6859,6 +7013,9 @@
 									<Value>8509854</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509854</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -6868,7 +7025,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Parpan, Post</Name>
-							<PrivateCode>8509854</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.557652</Longitude>
@@ -6897,6 +7053,9 @@
 									<Value>8509870</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509870</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -6906,7 +7065,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>St. Moritz Bad, Post</Name>
-							<PrivateCode>8509870</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.836157</Longitude>
@@ -6928,6 +7086,9 @@
 									<Value>8509874</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509874</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -6937,7 +7098,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Savognin, posta</Name>
-							<PrivateCode>8509874</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.600879</Longitude>
@@ -6966,6 +7126,9 @@
 									<Value>8509889</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509889</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -6975,7 +7138,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Sur, plazza dalla posta</Name>
-							<PrivateCode>8509889</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.629338</Longitude>
@@ -6997,6 +7159,9 @@
 									<Value>8509894</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509894</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7006,7 +7171,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Tinizong, Tga Communala</Name>
-							<PrivateCode>8509894</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.616645</Longitude>
@@ -7028,6 +7192,9 @@
 									<Value>8509950</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509950</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7037,7 +7204,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Valbella, Dorf</Name>
-							<PrivateCode>8509950</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.556062</Longitude>
@@ -7066,6 +7232,9 @@
 									<Value>8509972</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8509972</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7075,7 +7244,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Rona</Name>
-							<PrivateCode>8509972</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.624667</Longitude>
@@ -7097,6 +7265,9 @@
 									<Value>8530545</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8530545</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7106,7 +7277,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur (Brambrüeschbahn)</Name>
-							<PrivateCode>8530545</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.525762</Longitude>
@@ -7128,6 +7298,9 @@
 									<Value>8530580</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8530580</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7137,7 +7310,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Churwalden (Talst.Pradaschier)</Name>
-							<PrivateCode>8530580</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.541321</Longitude>
@@ -7159,6 +7331,9 @@
 									<Value>8530582</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8530582</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7168,7 +7343,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Churwalden (Talstation)</Name>
-							<PrivateCode>8530582</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.541609</Longitude>
@@ -7190,6 +7364,9 @@
 									<Value>8530584</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8530584</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7199,7 +7376,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Lenzerheide/Lai Val Sporz</Name>
-							<PrivateCode>8530584</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.546253</Longitude>
@@ -7221,6 +7397,9 @@
 									<Value>8530589</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8530589</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7230,7 +7409,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Savognin (Talstation)</Name>
-							<PrivateCode>8530589</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.591743</Longitude>
@@ -7252,6 +7430,9 @@
 									<Value>8530601</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8530601</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7261,7 +7442,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>St. Moritz Suvretta</Name>
-							<PrivateCode>8530601</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.817831</Longitude>
@@ -7283,6 +7463,9 @@
 									<Value>8557055</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8557055</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7292,7 +7475,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Lantsch/Lenz, Biathlon Arena</Name>
-							<PrivateCode>8557055</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.559916</Longitude>
@@ -7314,6 +7496,9 @@
 									<Value>8571313</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8571313</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7323,7 +7508,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Post I</Name>
-							<PrivateCode>8571313</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.527703</Longitude>
@@ -7345,6 +7529,9 @@
 									<Value>8572111</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572111</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7354,7 +7541,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Gürtelstrasse</Name>
-							<PrivateCode>8572111</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.528888</Longitude>
@@ -7367,6 +7553,9 @@
 								<Level id="ch:1:Level:8572111-0" version="any">
 									<Name lang="de">Erdgeschoss</Name>
 									<ShortName lang="de">G</ShortName>
+									<PublicCode>G</PublicCode>
+									<PublicUse>true</PublicUse>
+									<RelativeLevelOrder>0</RelativeLevelOrder>
 								</Level>
 							</levels>
 							<Weighting>interchangeAllowed</Weighting>
@@ -7399,6 +7588,9 @@
 									<Value>8572375</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572375</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7408,7 +7600,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Amselweg</Name>
-							<PrivateCode>8572375</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.530946</Longitude>
@@ -7430,6 +7621,9 @@
 									<Value>8572404</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572404</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7439,7 +7633,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Wiesental</Name>
-							<PrivateCode>8572404</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.530748</Longitude>
@@ -7461,6 +7654,9 @@
 									<Value>8572453</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572453</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7470,7 +7666,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Lachen</Name>
-							<PrivateCode>8572453</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.527918</Longitude>
@@ -7492,6 +7687,9 @@
 									<Value>8572456</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572456</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7501,7 +7699,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Lacuna</Name>
-							<PrivateCode>8572456</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.52614</Longitude>
@@ -7523,6 +7720,9 @@
 									<Value>8572655</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572655</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7532,7 +7732,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Tulpenweg</Name>
-							<PrivateCode>8572655</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.527182</Longitude>
@@ -7554,6 +7753,9 @@
 									<Value>8572658</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572658</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7563,7 +7765,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Daleustrasse</Name>
-							<PrivateCode>8572658</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.528233</Longitude>
@@ -7585,6 +7786,9 @@
 									<Value>8572659</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572659</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7594,7 +7798,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Sommerau</Name>
-							<PrivateCode>8572659</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.506583</Longitude>
@@ -7616,6 +7819,9 @@
 									<Value>8572662</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572662</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7625,7 +7831,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Felsberg, Emserstrasse</Name>
-							<PrivateCode>8572662</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.493225</Longitude>
@@ -7647,6 +7852,9 @@
 									<Value>8572663</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572663</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7656,7 +7864,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Felsberg, Bahnhof</Name>
-							<PrivateCode>8572663</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.48055</Longitude>
@@ -7678,6 +7885,9 @@
 									<Value>8572664</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572664</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7687,7 +7897,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Felsberg, Post</Name>
-							<PrivateCode>8572664</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.477451</Longitude>
@@ -7709,6 +7918,9 @@
 									<Value>8572667</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572667</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7718,7 +7930,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Felsberg, Underchrüzli</Name>
-							<PrivateCode>8572667</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.474325</Longitude>
@@ -7740,6 +7951,9 @@
 									<Value>8572671</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572671</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7749,7 +7963,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Felsberg, Kirchenstutz</Name>
-							<PrivateCode>8572671</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.471109</Longitude>
@@ -7771,6 +7984,9 @@
 									<Value>8572672</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572672</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7780,7 +7996,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Felsberg, Ringelweg</Name>
-							<PrivateCode>8572672</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.468656</Longitude>
@@ -7802,6 +8017,9 @@
 									<Value>8572689</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572689</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7811,7 +8029,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Felsberg, Rjterstutz/Aeuli</Name>
-							<PrivateCode>8572689</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.465</Longitude>
@@ -7833,6 +8050,9 @@
 									<Value>8572746</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572746</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7842,7 +8062,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Felsberg, Calanda</Name>
-							<PrivateCode>8572746</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.481745</Longitude>
@@ -7864,6 +8083,9 @@
 									<Value>8572749</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572749</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7873,7 +8095,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Felsberg, Schöneggstrasse</Name>
-							<PrivateCode>8572749</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.482454</Longitude>
@@ -7895,6 +8116,9 @@
 									<Value>8572784</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572784</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7904,7 +8128,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Felsberg, Bahnhofstrasse</Name>
-							<PrivateCode>8572784</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.480074</Longitude>
@@ -7926,6 +8149,9 @@
 									<Value>8572786</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572786</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7935,7 +8161,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Felsberg, Brugg</Name>
-							<PrivateCode>8572786</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.478529</Longitude>
@@ -7957,6 +8182,9 @@
 									<Value>8572906</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8572906</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7966,7 +8194,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Reichenau-Tamins, Adler</Name>
-							<PrivateCode>8572906</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.408433</Longitude>
@@ -7988,6 +8215,9 @@
 									<Value>8573016</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8573016</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -7997,7 +8227,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Bonaduz, alte Post</Name>
-							<PrivateCode>8573016</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.400402</Longitude>
@@ -8019,6 +8248,9 @@
 									<Value>8573017</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8573017</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8028,7 +8260,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Bonaduz, Crusch</Name>
-							<PrivateCode>8573017</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.399729</Longitude>
@@ -8050,6 +8281,9 @@
 									<Value>8573021</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8573021</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8059,7 +8293,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Rhäzüns, Dorfplatz</Name>
-							<PrivateCode>8573021</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.398183</Longitude>
@@ -8081,6 +8314,9 @@
 									<Value>8573042</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8573042</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8090,7 +8326,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Rhäzüns, Luftseilbahn LRF</Name>
-							<PrivateCode>8573042</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.400914</Longitude>
@@ -8112,6 +8347,9 @@
 									<Value>8574493</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574493</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8121,7 +8359,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Malteser</Name>
-							<PrivateCode>8574493</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.529257</Longitude>
@@ -8150,6 +8387,9 @@
 									<Value>8574494</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574494</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8159,7 +8399,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, St. Antönierrank</Name>
-							<PrivateCode>8574494</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.53038</Longitude>
@@ -8181,6 +8420,9 @@
 									<Value>8574495</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574495</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8190,7 +8432,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Araschgerrank</Name>
-							<PrivateCode>8574495</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.538932</Longitude>
@@ -8212,6 +8453,9 @@
 									<Value>8574496</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574496</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8221,7 +8465,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Städeli</Name>
-							<PrivateCode>8574496</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.53824</Longitude>
@@ -8243,6 +8486,9 @@
 									<Value>8574497</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574497</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8252,7 +8498,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Malix, Kreuz</Name>
-							<PrivateCode>8574497</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.539201</Longitude>
@@ -8274,6 +8519,9 @@
 									<Value>8574498</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574498</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8283,7 +8531,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Churwalden, Egga</Name>
-							<PrivateCode>8574498</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.531386</Longitude>
@@ -8305,6 +8552,9 @@
 									<Value>8574499</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574499</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8314,7 +8564,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Churwalden, Furnerschhus</Name>
-							<PrivateCode>8574499</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.537827</Longitude>
@@ -8336,6 +8585,9 @@
 									<Value>8574500</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574500</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8345,7 +8597,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Churwalden, Rüti</Name>
-							<PrivateCode>8574500</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.552083</Longitude>
@@ -8367,6 +8618,9 @@
 									<Value>8574501</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574501</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8376,7 +8630,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Parpan, Parpaner Höhe</Name>
-							<PrivateCode>8574501</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.559081</Longitude>
@@ -8398,6 +8651,9 @@
 									<Value>8574502</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574502</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8407,7 +8663,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Lenzerheide/Lai, La Riva</Name>
-							<PrivateCode>8574502</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.55184</Longitude>
@@ -8429,6 +8684,9 @@
 									<Value>8574503</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574503</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8438,7 +8696,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Lenzerheide/Lai, Clavadoiras</Name>
-							<PrivateCode>8574503</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.558838</Longitude>
@@ -8460,6 +8717,9 @@
 									<Value>8574504</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574504</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8469,7 +8729,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Vazerol</Name>
-							<PrivateCode>8574504</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.57949</Longitude>
@@ -8491,6 +8750,9 @@
 									<Value>8574505</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574505</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8500,7 +8762,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Tiefencastel, Dorf</Name>
-							<PrivateCode>8574505</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.576679</Longitude>
@@ -8522,6 +8783,9 @@
 									<Value>8574506</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574506</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8531,7 +8795,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Cunter, Burvagn</Name>
-							<PrivateCode>8574506</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.589273</Longitude>
@@ -8553,6 +8816,9 @@
 									<Value>8574507</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574507</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8562,7 +8828,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Tinizong, Cadras</Name>
-							<PrivateCode>8574507</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.613222</Longitude>
@@ -8584,6 +8849,9 @@
 									<Value>8574508</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574508</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8593,7 +8861,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Marmorera, Scalotta</Name>
-							<PrivateCode>8574508</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.629976</Longitude>
@@ -8615,6 +8882,9 @@
 									<Value>8574509</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574509</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8624,7 +8894,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Marmorera, rampar/Staudamm</Name>
-							<PrivateCode>8574509</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.634351</Longitude>
@@ -8646,6 +8915,9 @@
 									<Value>8574510</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574510</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8655,7 +8927,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Marmorera, vischnanca</Name>
-							<PrivateCode>8574510</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.642408</Longitude>
@@ -8677,6 +8948,9 @@
 									<Value>8574511</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574511</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8686,7 +8960,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Bivio, Stalvedro</Name>
-							<PrivateCode>8574511</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.641636</Longitude>
@@ -8708,6 +8981,9 @@
 									<Value>8574512</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574512</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8717,7 +8993,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Bivio, Suracqua</Name>
-							<PrivateCode>8574512</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.684683</Longitude>
@@ -8739,6 +9014,9 @@
 									<Value>8574513</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574513</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8748,7 +9026,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Silvaplana, Lej Tscheppa</Name>
-							<PrivateCode>8574513</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.785169</Longitude>
@@ -8770,6 +9047,9 @@
 									<Value>8574515</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574515</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8779,7 +9059,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>St. Moritz, Bahnhof</Name>
-							<PrivateCode>8574515</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.845284</Longitude>
@@ -8815,6 +9094,9 @@
 									<Value>8574666</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574666</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8824,7 +9106,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Brambrüeschb./Stadthalle</Name>
-							<PrivateCode>8574666</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.525636</Longitude>
@@ -8846,6 +9127,9 @@
 									<Value>8574667</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574667</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8855,7 +9139,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Kaserne/Kornquader</Name>
-							<PrivateCode>8574667</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.519142</Longitude>
@@ -8877,6 +9160,9 @@
 									<Value>8574668</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574668</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8886,7 +9172,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Strassenverkehrsamt</Name>
-							<PrivateCode>8574668</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.51659</Longitude>
@@ -8908,6 +9193,9 @@
 									<Value>8574669</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574669</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8917,7 +9205,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Kalchbühl</Name>
-							<PrivateCode>8574669</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.510967</Longitude>
@@ -8939,6 +9226,9 @@
 									<Value>8574670</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574670</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8948,7 +9238,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Plankis</Name>
-							<PrivateCode>8574670</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.502676</Longitude>
@@ -8970,6 +9259,9 @@
 									<Value>8574671</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574671</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -8979,7 +9271,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Domat/Ems, Plarenga</Name>
-							<PrivateCode>8574671</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.462242</Longitude>
@@ -9001,6 +9292,9 @@
 									<Value>8574672</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574672</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9010,7 +9304,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Domat/Ems, Unterdorf</Name>
-							<PrivateCode>8574672</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.454876</Longitude>
@@ -9032,6 +9325,9 @@
 									<Value>8574673</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574673</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9041,7 +9337,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Domat/Ems, Post</Name>
-							<PrivateCode>8574673</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.447546</Longitude>
@@ -9063,6 +9358,9 @@
 									<Value>8574674</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574674</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9072,7 +9370,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Domat/Ems, Tuma Platta</Name>
-							<PrivateCode>8574674</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.443521</Longitude>
@@ -9094,6 +9391,9 @@
 									<Value>8574675</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574675</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9103,7 +9403,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Domat/Ems, Padrusa</Name>
-							<PrivateCode>8574675</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.440243</Longitude>
@@ -9125,6 +9424,9 @@
 									<Value>8574676</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574676</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9134,7 +9436,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Ems GR, Chemie</Name>
-							<PrivateCode>8574676</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.431637</Longitude>
@@ -9156,6 +9457,9 @@
 									<Value>8574678</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574678</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9165,7 +9469,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Tamins, Oberdorf</Name>
-							<PrivateCode>8574678</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.405568</Longitude>
@@ -9187,6 +9490,9 @@
 									<Value>8574709</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574709</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9196,7 +9502,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Stadt</Name>
-							<PrivateCode>8574709</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.532338</Longitude>
@@ -9218,6 +9523,9 @@
 									<Value>8574946</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574946</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9227,7 +9535,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>St. Moritz, Schulhausplatz</Name>
-							<PrivateCode>8574946</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.838295</Longitude>
@@ -9249,6 +9556,9 @@
 									<Value>8574950</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574950</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9258,7 +9568,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>St. Moritz Bad, Campingplatz</Name>
-							<PrivateCode>8574950</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.823832</Longitude>
@@ -9280,6 +9589,9 @@
 									<Value>8574952</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8574952</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9289,7 +9601,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>St. Moritz, Somplaz</Name>
-							<PrivateCode>8574952</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.8265</Longitude>
@@ -9311,6 +9622,9 @@
 									<Value>8575112</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8575112</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9320,7 +9634,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Postautostation</Name>
-							<PrivateCode>8575112</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.527604</Longitude>
@@ -9333,17 +9646,25 @@
 								<Level id="ch:1:Level:8575112-1" version="any">
 									<Name lang="de">1. Obergeschoss</Name>
 									<ShortName lang="de">F1</ShortName>
+									<PublicCode>F1</PublicCode>
+									<PublicUse>true</PublicUse>
+									<RelativeLevelOrder>1</RelativeLevelOrder>
 								</Level>
 								<Level id="ch:1:Level:8575112-0" version="any">
 									<Name lang="de">Erdgeschoss</Name>
 									<ShortName lang="de">G</ShortName>
+									<PublicCode>G</PublicCode>
+									<PublicUse>true</PublicUse>
+									<RelativeLevelOrder>0</RelativeLevelOrder>
 								</Level>
 							</levels>
 							<entrances>
-								<Entrance id="ch:1:Entrance:8575112:2" version="any">
+								<StopPlaceEntrance id="ch:1:StopPlaceEntrance:8575112:2" version="any">
+									<privateCodes>
+										<PrivateCode>2</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Zugang</Name>
 									<ShortName lang="de">ZuP</ShortName>
-									<PrivateCode>2</PrivateCode>
 									<Centroid>
 										<Location>
 											<Longitude>9.528251</Longitude>
@@ -9362,12 +9683,14 @@
 											</placeEquipments>
 										</EquipmentPlace>
 									</equipmentPlaces>
-								</Entrance>
+								</StopPlaceEntrance>
 							</entrances>
 							<placeEquipments>
 								<LiftEquipment id="ch:1:LiftEquipment:8575112-188" version="any">
+									<privateCodes>
+										<PrivateCode>188</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Aufzug von Bussteig nach Bahnsteig 1</Name>
-									<PrivateCode>188</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_AUF" version="any"/>
 									<Width>1</Width>
 									<Depth>1.7</Depth>
@@ -9375,8 +9698,10 @@
 									<InternalWidth>1.3</InternalWidth>
 								</LiftEquipment>
 								<LiftEquipment id="ch:1:LiftEquipment:8575112-191" version="any">
+									<privateCodes>
+										<PrivateCode>191</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Aufzug von Bussteig nach Bahnsteig 2</Name>
-									<PrivateCode>191</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_AUF" version="any"/>
 									<Width>1</Width>
 									<Depth>1.7</Depth>
@@ -9384,8 +9709,10 @@
 									<InternalWidth>1.1</InternalWidth>
 								</LiftEquipment>
 								<LiftEquipment id="ch:1:LiftEquipment:8575112-194" version="any">
+									<privateCodes>
+										<PrivateCode>194</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Aufzug von Bussteig nach Bahnsteig 3</Name>
-									<PrivateCode>194</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_AUF" version="any"/>
 									<Width>1</Width>
 									<Depth>1.7</Depth>
@@ -9393,8 +9720,10 @@
 									<InternalWidth>1.1</InternalWidth>
 								</LiftEquipment>
 								<LiftEquipment id="ch:1:LiftEquipment:8575112-197" version="any">
+									<privateCodes>
+										<PrivateCode>197</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Aufzug von Bussteig nach Bahnsteig 4</Name>
-									<PrivateCode>197</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_AUF" version="any"/>
 									<Width>1</Width>
 									<Depth>1.7</Depth>
@@ -9402,8 +9731,10 @@
 									<InternalWidth>1.1</InternalWidth>
 								</LiftEquipment>
 								<LiftEquipment id="ch:1:LiftEquipment:8575112-198" version="any">
+									<privateCodes>
+										<PrivateCode>198</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Aufzug von Bussteig nach Bahnsteig 5</Name>
-									<PrivateCode>198</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_AUF" version="any"/>
 									<Width>0.9</Width>
 									<Depth>1.4</Depth>
@@ -9411,52 +9742,70 @@
 									<InternalWidth>1.4</InternalWidth>
 								</LiftEquipment>
 								<StaircaseEquipment id="ch:1:StaircaseEquipment:8575112-187" version="any">
+									<privateCodes>
+										<PrivateCode>187</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Treppe von Bussteig nach Bahnsteig 1</Name>
-									<PrivateCode>187</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_TRE" version="any"/>
 									<NumberOfSteps>46</NumberOfSteps>
 									<StepHeight>0.17</StepHeight>
 								</StaircaseEquipment>
 								<StaircaseEquipment id="ch:1:StaircaseEquipment:8575112-113" version="any">
+									<privateCodes>
+										<PrivateCode>113</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Treppe von Bussteig nach Zugang</Name>
-									<PrivateCode>113</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_TRE" version="any"/>
 								</StaircaseEquipment>
 								<StaircaseEquipment id="ch:1:StaircaseEquipment:8575112-199" version="any">
+									<privateCodes>
+										<PrivateCode>199</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Treppe von Bussteig nach Bahnsteig 13/14</Name>
-									<PrivateCode>199</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_TRE" version="any"/>
 									<NumberOfSteps>40</NumberOfSteps>
 									<StepHeight>0.17</StepHeight>
 								</StaircaseEquipment>
 								<EscalatorEquipment id="ch:1:EscalatorEquipment:8575112-190" version="any">
+									<privateCodes>
+										<PrivateCode>190</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Rolltreppe von Bahnsteig 7/8 nach Bussteig</Name>
-									<PrivateCode>190</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_ROL" version="any"/>
 								</EscalatorEquipment>
 								<EscalatorEquipment id="ch:1:EscalatorEquipment:8575112-192" version="any">
+									<privateCodes>
+										<PrivateCode>192</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Rolltreppe von Bussteig nach Bahnsteig 9/10</Name>
-									<PrivateCode>192</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_ROL" version="any"/>
 								</EscalatorEquipment>
 								<EscalatorEquipment id="ch:1:EscalatorEquipment:8575112-193" version="any">
+									<privateCodes>
+										<PrivateCode>193</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Rolltreppe von Bahnsteig 9/10 nach Bussteig</Name>
-									<PrivateCode>193</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_ROL" version="any"/>
 								</EscalatorEquipment>
 								<EscalatorEquipment id="ch:1:EscalatorEquipment:8575112-195" version="any">
+									<privateCodes>
+										<PrivateCode>195</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Rolltreppe von Bussteig nach Bahnsteig 11/12</Name>
-									<PrivateCode>195</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_ROL" version="any"/>
 								</EscalatorEquipment>
 								<EscalatorEquipment id="ch:1:EscalatorEquipment:8575112-196" version="any">
+									<privateCodes>
+										<PrivateCode>196</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Rolltreppe von Bahnsteig 11/12 nach Bussteig</Name>
-									<PrivateCode>196</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_ROL" version="any"/>
 								</EscalatorEquipment>
 								<EscalatorEquipment id="ch:1:EscalatorEquipment:8575112-189" version="any">
+									<privateCodes>
+										<PrivateCode>189</PrivateCode>
+									</privateCodes>
 									<Name lang="de">Rolltreppe von Bussteig nach Bahnsteig 7/8</Name>
-									<PrivateCode>189</PrivateCode>
 									<TypeOfEquipmentRef ref="EFA_ROL" version="any"/>
 								</EscalatorEquipment>
 							</placeEquipments>
@@ -9747,6 +10096,9 @@
 									<Value>8575113</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8575113</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9756,7 +10108,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Tiefencastel, Bahnhof</Name>
-							<PrivateCode>8575113</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.572052</Longitude>
@@ -9778,6 +10129,9 @@
 									<Value>8577207</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8577207</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9787,7 +10141,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Cunter, Dafora</Name>
-							<PrivateCode>8577207</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.591546</Longitude>
@@ -9809,6 +10162,9 @@
 									<Value>8580560</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8580560</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9818,7 +10174,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Churwalden, Lax</Name>
-							<PrivateCode>8580560</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.531997</Longitude>
@@ -9840,6 +10195,9 @@
 									<Value>8580561</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8580561</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9849,7 +10207,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Valbella, Canols</Name>
-							<PrivateCode>8580561</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.556565</Longitude>
@@ -9871,6 +10228,9 @@
 									<Value>8580587</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8580587</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9880,7 +10240,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Domat/Ems, Abzw. Felsberg</Name>
-							<PrivateCode>8580587</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.479777</Longitude>
@@ -9902,6 +10261,9 @@
 									<Value>8580716</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8580716</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9911,7 +10273,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Savognin, Cresta</Name>
-							<PrivateCode>8580716</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.595921</Longitude>
@@ -9933,6 +10294,9 @@
 									<Value>8580717</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8580717</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9942,7 +10306,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Tinizong, Vardaval</Name>
-							<PrivateCode>8580717</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.623328</Longitude>
@@ -9964,6 +10327,9 @@
 									<Value>8580921</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8580921</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -9973,7 +10339,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Lantsch/Lenz, Barbatschauns</Name>
-							<PrivateCode>8580921</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.562099</Longitude>
@@ -9995,6 +10360,9 @@
 									<Value>8581028</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8581028</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -10004,7 +10372,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Malix, Rezia</Name>
-							<PrivateCode>8581028</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.534988</Longitude>
@@ -10026,6 +10393,9 @@
 									<Value>8581044</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8581044</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>12</Value>
@@ -10035,7 +10405,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Bahnhofplatz</Name>
-							<PrivateCode>8581044</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.530451</Longitude>
@@ -10055,6 +10424,9 @@
 								<Level id="ch:1:Level:8581044-0" version="any">
 									<Name lang="de">Erdgeschoss</Name>
 									<ShortName lang="de">G</ShortName>
+									<PublicCode>G</PublicCode>
+									<PublicUse>true</PublicUse>
+									<RelativeLevelOrder>0</RelativeLevelOrder>
 								</Level>
 							</levels>
 							<Weighting>interchangeAllowed</Weighting>
@@ -10102,6 +10474,9 @@
 									<Value>8581190</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8581190</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>10</Value>
@@ -10111,7 +10486,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Lantsch/Lenz, Sudem Vischnanca</Name>
-							<PrivateCode>8581190</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.565764</Longitude>
@@ -10133,6 +10507,9 @@
 									<Value>8581561</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8581561</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -10142,7 +10519,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Domat/Ems, Plaz</Name>
-							<PrivateCode>8581561</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.450942</Longitude>
@@ -10171,6 +10547,9 @@
 									<Value>8581896</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8581896</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -10180,7 +10559,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Giacomettistrasse</Name>
-							<PrivateCode>8581896</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.529984</Longitude>
@@ -10202,6 +10580,9 @@
 									<Value>8581901</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8581901</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -10211,7 +10592,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Parpan, Obertor/Heimberg</Name>
-							<PrivateCode>8581901</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.561138</Longitude>
@@ -10233,6 +10613,9 @@
 									<Value>8581999</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8581999</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -10242,7 +10625,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Reichenau-Tamins, Bahnhof</Name>
-							<PrivateCode>8581999</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.413033</Longitude>
@@ -10264,6 +10646,9 @@
 									<Value>8582066</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8582066</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -10273,7 +10658,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Felsberg, Abzw.</Name>
-							<PrivateCode>8582066</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.479391</Longitude>
@@ -10295,6 +10679,9 @@
 									<Value>8582067</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8582067</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -10304,7 +10691,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Tinizong, Curtinatsch</Name>
-							<PrivateCode>8582067</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.618846</Longitude>
@@ -10326,6 +10712,9 @@
 									<Value>8582141</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8582141</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -10335,7 +10724,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Bonaduz, Isla</Name>
-							<PrivateCode>8582141</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.40431</Longitude>
@@ -10357,6 +10745,9 @@
 									<Value>8582822</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8582822</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -10366,7 +10757,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Lenzerheide/Lai, Val Sporz</Name>
-							<PrivateCode>8582822</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.547708</Longitude>
@@ -10388,6 +10778,9 @@
 									<Value>8582828</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8582828</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -10397,7 +10790,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Valbella, Posthotel</Name>
-							<PrivateCode>8582828</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.555793</Longitude>
@@ -10419,6 +10811,9 @@
 									<Value>8582835</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8582835</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -10428,7 +10823,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Lenzerheide/Lai, Rothornbahn</Name>
-							<PrivateCode>8582835</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.555811</Longitude>
@@ -10441,6 +10835,9 @@
 								<Level id="ch:1:Level:8582835-0" version="any">
 									<Name lang="de">Erdgeschoss</Name>
 									<ShortName lang="de">G</ShortName>
+									<PublicCode>G</PublicCode>
+									<PublicUse>true</PublicUse>
+									<RelativeLevelOrder>0</RelativeLevelOrder>
 								</Level>
 							</levels>
 							<Weighting>interchangeAllowed</Weighting>
@@ -10488,6 +10885,9 @@
 									<Value>8583813</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8583813</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -10497,7 +10897,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Lantsch/Lenz, Sozas</Name>
-							<PrivateCode>8583813</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.570274</Longitude>
@@ -10519,6 +10918,9 @@
 									<Value>8583827</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8583827</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -10528,7 +10930,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Churwalden, Rathaus</Name>
-							<PrivateCode>8583827</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.542749</Longitude>
@@ -10550,6 +10951,9 @@
 									<Value>8583828</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8583828</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -10559,7 +10963,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Churwalden, Bergbahnen</Name>
-							<PrivateCode>8583828</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.54372</Longitude>
@@ -10588,6 +10991,9 @@
 									<Value>8583898</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8583898</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -10597,7 +11003,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Bivio, Las Colonnas/Passhöhe</Name>
-							<PrivateCode>8583898</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.726104</Longitude>
@@ -10619,6 +11024,9 @@
 									<Value>8587676</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8587676</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -10628,7 +11036,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Rhäzüns, Bahnhof</Name>
-							<PrivateCode>8587676</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.398722</Longitude>
@@ -10650,6 +11057,9 @@
 									<Value>8595592</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8595592</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -10659,7 +11069,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Postplatz</Name>
-							<PrivateCode>8595592</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.53091</Longitude>
@@ -10681,6 +11090,9 @@
 									<Value>8595594</Value>
 								</KeyValue>
 							</keyList>
+							<privateCodes>
+								<PrivateCode>8595594</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<HafasPriority>
 									<Value>16</Value>
@@ -10690,7 +11102,6 @@
 								</HafasKMInfo>
 							</Extensions>
 							<Name>Chur, Turnerwiese</Name>
-							<PrivateCode>8595594</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.532239</Longitude>
@@ -10704,12 +11115,14 @@
 					</stopPlaces>
 					<parkings>
 						<Parking id=":" version="any">
+							<privateCodes>
+								<PrivateCode>83</PrivateCode>
+							</privateCodes>
 							<Extensions>
 								<MentzAreaType>P_and_R</MentzAreaType>
 							</Extensions>
 							<Name lang="de">P+R Gürtelstrasse</Name>
 							<ShortName lang="de">P+R G</ShortName>
-							<PrivateCode>83</PrivateCode>
 							<Centroid>
 								<Location>
 									<Longitude>9.529104</Longitude>

@@ -247,7 +247,7 @@ We group the elements in separate frames
 							<roles>
 								<ResponsibilityRoleAssignment version="1.0" id="op:tariff_data@creates">
 									<DataRoleType>creates</DataRoleType>
-									<StakeholderRoleType>FareManagement</StakeholderRoleType>
+									<StakeholderRoleType>fareManagement</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="noc:FSYO" version="1.0">FSYO</ResponsibleOrganisationRef>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -257,7 +257,7 @@ We group the elements in separate frames
 							<roles>
 								<ResponsibilityRoleAssignment version="1.0" id="op:network_data@creates">
 									<DataRoleType>creates</DataRoleType>
-									<StakeholderRoleType>Planning</StakeholderRoleType>
+									<StakeholderRoleType>planning</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="noc:FSYO" version="1.0">FSYO</ResponsibleOrganisationRef>
 								</ResponsibilityRoleAssignment>
 							</roles>
@@ -301,8 +301,10 @@ We group the elements in separate frames
 					<organisations>
 						<!--==== Operators ==== -->
 						<Operator version="1.0" id="noc:FSYO">
+							<privateCodes>
+								<PrivateCode type="nocn">nocn:10129</PrivateCode>
+							</privateCodes>
 							<PublicCode>FSYO</PublicCode>
-							<PrivateCode type="nocn">nocn:10129</PrivateCode>
 							<Name>First</Name>
 							<ShortName>First South Yorkshire</ShortName>
 							<TradingName>First South Yorkshire Ltd</TradingName>
@@ -321,8 +323,10 @@ We group the elements in separate frames
 							<PrimaryMode>bus</PrimaryMode>
 						</Operator>
 						<Operator version="1.0" id="noc:HULS">
+							<privateCodes>
+								<PrivateCode type="nocn">nocn:10418</PrivateCode>
+							</privateCodes>
 							<PublicCode>HULS</PublicCode>
-							<PrivateCode type="nocn">nocn:10418</PrivateCode>
 							<Name>Hulleys of Baslow</Name>
 							<ShortName>Hulleys of Baslow</ShortName>
 							<TradingName>Henry Hulley &amp; Sons Ltd</TradingName>
@@ -347,7 +351,7 @@ We group the elements in separate frames
 					</organisations>
 				</ResourceFrame>
 				<!--==== NETWORK - including lines 271 & 272 ==== -->
-				<ServiceFrame version="1.0" id="epd:UK:FSYO:ServiceFrame_UK_PI_NETWORK:FSYO:op" dataSourceRef="operator" responsibilitySetRef="tariffs">
+				<ServiceFrame version="1.0" id="epd:UK:FSYO:ServiceFrame_UK_PI_NETWORK:FSYO:op" dataSourceRef="op:src" responsibilitySetRef="tariffs">
 					<Name>Extra Lines included in Travelmaster product</Name>
 					<Description>This frame contains the stop and line definitions for the service. It Could also be exchanged separately.</Description>
 					<TypeOfFrameRef ref="fxc:UK:DFT:TypeOfFrame_UK_PI_NETWORK:FXCP" version="fxc:v1.0"/>
@@ -5250,7 +5254,7 @@ These tickets also offer unlimited travel on our services around South Yorkshire
 						</GroupOfSalesOfferPackages>
 					</groupsOfSalesOfferPackages>
 				</FareFrame>
-				<FareFrame version="1.0" id="epd:UK:FSYO:FareFrame_UK_PI_FARE_PRICE:FirstPass-SPECIFIC-NESTED-WITHHDG@pass:op" responsibilitySetRef="op:tariffs">
+				<FarePriceFrame version="1.0" id="epd:UK:FSYO:FareFrame_UK_PI_FARE_PRICE:FirstPass-SPECIFIC-NESTED-WITHHDG@pass:op" responsibilitySetRef="op:tariffs">
 					<Name>FirstPass prices</Name>
 					<Description>This  encoding of prices sho s the use of specifc prices in  nested FARE TABLES, with additional references repeated in each cell</Description>
 					<TypeOfFrameRef version="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_PRICE:FXCP"/>
@@ -6100,9 +6104,9 @@ ______	______	_____	|	______	______	______	_______	|	______	______	______	______
 							</includes>
 						</FareTable>
 					</fareTables>
-				</FareFrame>
+				</FarePriceFrame>
 				<!-- ===========ALTERNATIVE PRICE ENCODINGs as FLAT CELLS  ==== -->
-				<FareFrame version="1.0" id="epd:UK:FSYO:FareFrame_UK_PI_FARE_PRICE:FirstPass-SPECIFIC-FLAT@pass:op" responsibilitySetRef="op:tariffs">
+				<FarePriceFrame version="1.0" id="epd:UK:FSYO:FareFrame_UK_PI_FARE_PRICE:FirstPass-SPECIFIC-FLAT@pass:op" responsibilitySetRef="op:tariffs">
 					<Name>FirstPass prices</Name>
 					<Description>This alternative encoding of prices shows the use of specific prices in FLat FARE TABLES, with additional references repeated in each cell</Description>
 					<TypeOfFrameRef version="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_PRICE:FXCP"/>
@@ -6448,8 +6452,8 @@ ______	______	_____	|	______	______	______	_______	|	______	______	______	______
 							</includes>
 						</FareTable>
 					</fareTables>
-				</FareFrame>
-				<FareFrame version="1.0" id="epd:UK:FSYO:FareFrame_UK_PI_FARE_PRICE:FirstPass-GENERIC-FLAT@pass:op" responsibilitySetRef="op:tariffs">
+				</FarePriceFrame>
+				<FarePriceFrame version="1.0" id="epd:UK:FSYO:FareFrame_UK_PI_FARE_PRICE:FirstPass-GENERIC-FLAT@pass:op" responsibilitySetRef="op:tariffs">
 					<Name>FirstPass prices</Name>
 					<Description>This alternative encoding of prices shows the use of generic CELL PRICE prices in FLat FARE TABLES, with additional references repeated in each cell.  The duration is given by the SALES OFFER PACKAGE.</Description>
 					<TypeOfFrameRef version="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_PRICE:FXCP"/>
@@ -6763,7 +6767,7 @@ ______	______	_____	|	______	______	______	_______	|	______	______	______	______
 							</includes>
 						</FareTable>
 					</fareTables>
-				</FareFrame>
+				</FarePriceFrame>
 				<!-- ====== Travel shops Advanced stuff - This just to show that we can capture access sdetails about travel shops -->
 				<SiteFrame version="1.0" id="epd:UK:FSYO:SiteFrame_UK_PI_STOP:sale_pois:op" responsibilitySetRef="op:tariffs">
 					<Name>Common site elements for FSYO: Travel Shops</Name>
@@ -6980,7 +6984,7 @@ ______	______	_____	|	______	______	______	_______	|	______	______	______	______
 							<roles>
 								<ResponsibilityRoleAssignment version="fxc:v1.0" id="fxc:FXC_metadata:DfT">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" versionRef="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" versionRef="nptg:v2.1"/>
 								</ResponsibilityRoleAssignment>
@@ -7107,13 +7111,17 @@ ______	______	_____	|	______	______	______	_______	|	______	______	______	______
 					<PricingParameterSet id="fxc:Common_Resources" version="fxc:v1.0">
 						<priceUnits>
 							<PriceUnit id="fxc:GBP" version="fxc:v1.0">
+								<privateCodes>
+									<PrivateCode>£</PrivateCode>
+								</privateCodes>
 								<Name>Pound Sterling</Name>
-								<PrivateCode>£</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 							<PriceUnit id="fxc:EUR" version="fxc:v1.0">
+								<privateCodes>
+									<PrivateCode>€</PrivateCode>
+								</privateCodes>
 								<Name>Euro</Name>
-								<PrivateCode>€</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 						</priceUnits>
@@ -7419,15 +7427,6 @@ ______	______	_____	|	______	______	______	_______	|	______	______	______	______
 						<DefaultSystemOfUnits>SiKilometresAndMetres</DefaultSystemOfUnits>
 						<DefaultCurrency>GBP</DefaultCurrency>
 					</FrameDefaults>
-					<versions>
-						<Version id="fxc:v1.0" version="any">
-							<ValidBetween>
-								<FromDate>2019-01-01T01:01:01Z</FromDate>
-							</ValidBetween>
-							<Description>FXC version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<typesOfValue>
 						<!-- ======== Code sets ========= -->
 						<ValueSet version="fxc:v1.0" id="fxc:PointsOfInterest_Classifications" classOfValues="PointOfInterestClassification">
@@ -7905,12 +7904,6 @@ ______	______	_____	|	______	______	______	_______	|	______	______	______	______
 						<DefaultDataSourceRef ref="nptg:dft" version="nptg:v2.1"/>
 						<DefaultResponsibilitySetRef ref="nptg:NPTG_metadata" version="nptg:v2.1"/>
 					</FrameDefaults>
-					<versions>
-						<Version id="nptg:v2.1" version="any">
-							<Description>NPTG version 2.1</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
 						<DataSource id="nptg:dft" version="nptg:v2.1">
 							<Email>standards@nptg.org.uk</Email>
@@ -7923,7 +7916,7 @@ ______	______	_____	|	______	______	______	_______	|	______	______	______	______
 							<roles>
 								<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:NPTG_metadata">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptgUkRegion:GB" nameOfRefClass="TransportAdministrativeZone" versionRef="0" xsi:type="TransportAdministrativeZoneRefStructure">UK</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -7934,7 +7927,7 @@ ______	______	_____	|	______	______	______	_______	|	______	______	______	______
 							<roles>
 								<ResponsibilityRoleAssignment version="nptg:v2.1" id="nptg:NPTG_data">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+									<StakeholderRoleType>entityLegalOwnership</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="nptg:v2.1"/>
 									<ResponsibleAreaRef ref="nptg:UK">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -7949,7 +7942,7 @@ ______	______	_____	|	______	______	______	_______	|	______	______	______	______
 							<values>
 								<TypeOfFrame version="nptg:v2.1" id="nptg:UK_NPTG_profile_payload">
 									<Name>NPTG Locations and Tariff Zones Frame</Name>
-									<FrameClassRef nameOfClass="SiteeFrame"/>
+									<FrameClassRef nameOfClass="SiteFrame"/>
 									<classes>
 										<ClassInFrame nameOfClass="TopographicPlace">
 											<!-- 	 TopographicPlace maps to a NPTG Locality 
@@ -8088,7 +8081,7 @@ ______	______	_____	|	______	______	______	_______	|	______	______	______	______
 												</ClassRelationshipInFrame>
 												<ClassRelationshipInFrame name="alternativeDescriptors">
 													<!-- NB Only coccasionally actually populated in current data set -->
-													<RelationshipRef nameOfClass="TopographicPlaceDescriptior"/>
+													<RelationshipRef nameOfClass="TopographicPlaceDescriptor"/>
 													<!--  NptgLocality.alternativeDeiscriptors.Descriptor -->
 													<Mandatory>optional</Mandatory>
 													<Containment>byVersionedReference</Containment>
@@ -8109,7 +8102,7 @@ ______	______	_____	|	______	______	______	_______	|	______	______	______	______
 												</ClassRelationshipInFrame>
 											</relationships>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="TopographicDescriptor">
+										<ClassInFrame nameOfClass="TopographicPlaceDescriptor">
 											<!-- 	 TopographicPlace maps to a NPTG Locality. 		lternativeDescriptors.Descrip -->
 											<Mandatory>required</Mandatory>
 											<attributes>
@@ -8215,13 +8208,13 @@ ______	______	_____	|	______	______	______	_______	|	______	______	______	______
 												</ClassRelationshipInFrame>
 												<ClassRelationshipInFrame name="projection">
 													<!-- NptgPlusBusZone.Mapping .. <Location><Easting> .. <Northing> -->
-													<RelationshipRef nameOfClass="Polygon"/>
+													<RelationshipRef nameOfClass="gml:Polygon"/>
 													<Mandatory>required</Mandatory>
 													<Containment>inline</Containment>
 												</ClassRelationshipInFrame>
 											</relationships>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="Polygon">
+										<ClassInFrame nameOfClass="gml:Polygon">
 											<!-- 	 gml:Polygon maps to a NPTG PlusBusZone.Mapping -->
 											<Mandatory>required</Mandatory>
 											<attributes>

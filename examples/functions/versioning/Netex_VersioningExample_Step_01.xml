@@ -41,28 +41,10 @@ This is part 1 of a multistep example on versioning
 				<DefaultCodespaceRef ref="mybus"/>
 				<DefaultResponsibilitySetRef ref="mybus:RS_10">EXTERNAL</DefaultResponsibilitySetRef>
 			</FrameDefaults>
-			<versions>
-				<Version created="2010-05-17T09:30:47.0Z" id="mybus:ntwkf001" version="002">
-					<Status>versioned</Status>
-					<Description>Version 1 of Composite Frame </Description>
-					<VersionType>baseline</VersionType>
-				</Version>
-			</versions>
 			<frames>
 				<ServiceFrame version="001" created="2010-05-17T09:30:47.0Z" responsibilitySetRef="mybus:RS_10" id="mybus:ntwkf001@service">
 					<Name>My Network  (V1) </Name>
-					<versions>
-						<Version created="2010-05-17T09:30:47.0Z" id="mybus:ntwkf001@service" version="001">
-							<Status>versioned</Status>
-							<Description>Version 1 of Service Frame </Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-						<Version created="2010-05-17T09:30:47.0Z" id="mybus:SSP0001A" version="001">
-							<Status>versioned</Status>
-							<Description>Version 1 of StopPoint SSP001A </Description>
-						</Version>
-					</versions>
-					<!--- =====FRame contents ========= -->
+					<!--- =====Frame contents ========= -->
 					<scheduledStopPoints>
 						<ScheduledStopPoint version="001" created="2010-05-17T09:30:47.0Z" responsibilitySetRef="mybus:RS_10" id="mybus:SSP0001A">
 							<Name>Haltstelle A</Name>

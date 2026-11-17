@@ -75,6 +75,23 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 				<DefaultCodespaceRef ref="op4_cs"/>
 			</FrameDefaults>
 			<frames>
+				<ResourceFrame version="any" id="RF1">
+					<dataSources>
+						<DataSource id="uic:0060" version="any"/>
+					</dataSources>
+				</ResourceFrame>
+				<!--  Narrative:  The SERVICE CALENDAR FRAME provides a container to organise the operational dates -->
+				<ServiceCalendarFrame id="uic:SKDUPD_example_2_4_Load_and_unload" version="any">
+					<operatingPeriods>
+						<UicOperatingPeriod id="uic:SKDUPD_example_2_4_Load_and_unload" version="any">
+							<!-- POP+273:2021-12-12/2022-09-04::111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111' -->
+							<FromDate>2022-01-01T00:00:00</FromDate>
+							<ToDate>2022-09-04T23:59:59</ToDate>
+							<ValidDayBits>111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+</ValidDayBits>
+						</UicOperatingPeriod>
+					</operatingPeriods>
+				</ServiceCalendarFrame>
 				<ServiceFrame version="any" id="SKDUPD_example_4_Load_and_Unload">
 					<scheduledStopPoints>
 						<ScheduledStopPoint version="any" id="uic:007944700">
@@ -102,7 +119,7 @@ ID	Service_number	Reservation	Tariff	Service_Mode	Service_Name	Service_Provider	
 				<TimetableFrame version="any" id="SKDUPD_example_4_Load_and_Unload">
 					<VehicleModes>rail</VehicleModes>
 					<vehicleJourneys>
-						<DatedServiceJourney version="any" id="850" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
+						<ServiceJourney version="any" id="850" changed="2022-01-26T09:51:00" dataSourceRef="uic:0060">
 							<!-- PRD+850:19:::::Load unload+1179' -->
 							<!-- SKPUPD_TRAIN
 ID	Service_number	Reservation	Tariff	Service_Mode Service_Name Service_Provider not_used Reservation_system	First_day	Last_day Operation_days	Second_service_number
@@ -117,15 +134,19 @@ ID	Service_number	Reservation	Tariff	Service_Mode Service_Name Service_Provider 
 							<!-- ( TapTsi B.4.7009  84 regional train)		-->
 							<TypeOfServiceRef versionRef="EXTERNAL" ref="37">train</TypeOfServiceRef>
 							<DepartureTime>06:32:00</DepartureTime>
+							<!-- POP+273:2021-12-12/2022-09-04::111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111' -->
+							<dayTypes>
+								<DayTypeRef ref="uic:SKDUPD_example_2_4_Load_and_unload"/>
+							</dayTypes>
 							<OperatorRef versionRef="EXTERNAL" ref="uic:1170">SZ Pitzniski promet d.o.o</OperatorRef>
 							<trainNumbers>
 								<TrainNumberRef version="any" ref="850"/>
 							</trainNumbers>
 							<parts>
-								<JourneyPart version="any" id="850@007944700+007944712" order="1">
+								<JourneyPart version="any" id="850@007944700+007944712-1">
 									<!-- ODI+007944700*007944712+1*5' -->
 									<ParentJourneyRef version="any" ref="850"/>
-									<MainPartRef version="any" ref="850@007944700+007944712"/>
+									<MainPartRef version="any" ref="850@007944700+007944712-1"/>
 									<FromStopPointRef version="any" ref="uic:007944700"/>
 									<ToStopPointRef version="any" ref="uic:007944712"/>
 									<StartTime>06:32:00</StartTime>
@@ -188,7 +209,7 @@ ID	Stop_number	UIC	Arrival_time	Arrival_offset	Departure_time	Departure_offset	P
 4	3	007944707	0711		0745							ASD+7	ASD+9
 4	4	007944711	0812		0817								
 4	5	007944712	0827										ASD+9   -->
-								<Call version="any" id="850" order="1">
+								<Call version="any" id="850-1">
 									<!-- POR+007944700+*0632+'
 ASD+7' -->
 									<ScheduledStopPointRef version="any" ref="uic:007944700">Nova Gorica</ScheduledStopPointRef>
@@ -199,7 +220,7 @@ ASD+7' -->
 										<Time>06:32:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="850" order="2">
+								<Call version="any" id="850-2">
 									<!-- POR+007944704+0651*0652+'
   -->
 									<ScheduledStopPointRef version="any" ref="uic:007944704">Anhovoi</ScheduledStopPointRef>
@@ -210,7 +231,7 @@ ASD+7' -->
 										<Time>06:52:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="850" order="3">
+								<Call version="any" id="850-3">
 									<!-- POR+007944707+0711*0745+'
 ASD+7'
 ASD+9'
@@ -223,7 +244,7 @@ ASD+9'
 										<Time>07:45:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="850" order="4">
+								<Call version="any" id="850-4">
 									<!-- POR+007944711+0812*0817+'  -->
 									<ScheduledStopPointRef version="any" ref="uic:007944711">Podbrido</ScheduledStopPointRef>
 									<Arrival>
@@ -233,7 +254,7 @@ ASD+9'
 										<Time>08:17:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="850" order="5">
+								<Call version="any" id="850-5">
 									<!-- POR+007944712+0827+'
 ASD+9' -->
 									<ScheduledStopPointRef version="any" ref="uic:007944712">Bohinstra Bistrica</ScheduledStopPointRef>
@@ -283,14 +304,7 @@ ASD+9' -->
 									<!-- 	ASD+7 TafTsi  B.4.3039.	unloading -->
 								</CheckConstraint>
 							</checkConstraints>
-							<UicOperatingPeriod id="850" version="any">
-								<!-- POP+273:2021-12-12/2022-09-04::111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111' -->
-								<FromDate>2022-01-01T00:00:00</FromDate>
-								<ToDate>2022-09-04T23:59:59</ToDate>
-								<ValidDayBits>111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-</ValidDayBits>
-							</UicOperatingPeriod>
-						</DatedServiceJourney>
+						</ServiceJourney>
 					</vehicleJourneys>
 					<trainNumbers>
 						<TrainNumber version="any" id="850">

@@ -683,14 +683,14 @@ version 1.1 with revised ids
 					</tariffZones>
 					<!--- ===Stops.txt==TRANSFER RESTRICTIONS======== -->
 					<transferRestrictions>
-						<TransferRestriction order="1" version="any" id="mygtfsexm:NADAV+BOONDOCK">
+						<TransferRestriction id="mygtfsexm:NADAV+BOONDOCK-1" version="any">
 							<Name>No Transfer</Name>
 							<TypeOfTransferRef version="gtfs:1.5" ref="gtfs:0"/>
 							<RestrictionType>cannotTransfer</RestrictionType>
 							<FromPointRef ref="mygtfsexm:NADAV"/>
 							<ToPointRef ref="mygtfsexm:BOONDOCK"/>
 						</TransferRestriction>
-						<TransferRestriction order="1" version="any" id="mygtfsexm:BULLFROG-POND">
+						<TransferRestriction id="mygtfsexm:BULLFROG-POND-1" version="any">
 							<TypeOfTransferRef version="gtfs:1.5" ref="gtfs:3"/>
 							<BothWays>true</BothWays>
 							<RestrictionType>cannotTransfer</RestrictionType>
@@ -782,7 +782,7 @@ version 1.1 with revised ids
 								</DestinationDisplayView>
 							</JourneyPatternView>
 							<calls>
-								<Call version="any" id="mygtfsxm:AB1" order="1">
+								<Call version="any" id="mygtfsxm:AB1-1">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:BEATTY_AIRPORT"/>
 									<Arrival>
 										<Time>08:00:00</Time>
@@ -791,7 +791,7 @@ version 1.1 with revised ids
 										<Time>08:00:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="mygtfsxm:AB1" order="2">
+								<Call version="any" id="mygtfsxm:AB1-2">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:BULLFROG"/>
 									<Arrival>
 										<Time>08:10:00</Time>
@@ -826,7 +826,7 @@ version 1.1 with revised ids
 								</DestinationDisplayView>
 							</JourneyPatternView>
 							<calls>
-								<Call version="any" id="mygtfsxm:AB2" order="1">
+								<Call version="any" id="mygtfsxm:AB2-1">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:BULLFROG"/>
 									<Arrival>
 										<Time>12:05:00</Time>
@@ -835,7 +835,7 @@ version 1.1 with revised ids
 										<Time>12:05:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="mygtfsxm:AB2" order="2">
+								<Call version="any" id="mygtfsxm:AB2-2">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:BEATTY_AIRPORT"/>
 									<Arrival>
 										<Time>12:15:00</Time>
@@ -868,7 +868,7 @@ version 1.1 with revised ids
 								</DestinationDisplayView>
 							</JourneyPatternView>
 							<calls>
-								<Call version="any" id="mygtfsxm:STBA" order="1">
+								<Call version="any" id="mygtfsxm:STBA-1">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:STAGECOACH"/>
 									<Arrival>
 										<Time>06:00:00</Time>
@@ -881,7 +881,7 @@ version 1.1 with revised ids
 										<Name>Nye CountyAirport</Name>
 									</DestinationDisplayView>
 								</Call>
-								<Call version="any" id="mygtfsxm:STBA" order="2">
+								<Call version="any" id="mygtfsxm:STBA-2">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:BEATTY_AIRPORT"/>
 									<Arrival>
 										<Time>06:20:00</Time>
@@ -916,7 +916,7 @@ version 1.1 with revised ids
 								</DestinationDisplayView>
 							</JourneyPatternView>
 							<calls>
-								<Call version="any" id="mygtfsxm:CITY1" order="1">
+								<Call version="any" id="mygtfsxm:CITY1-1">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:STAGECOACH"/>
 									<Arrival>
 										<Time>06:00:00</Time>
@@ -925,7 +925,7 @@ version 1.1 with revised ids
 										<Time>06:00:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="mygtfsxm:CITY1" order="2">
+								<Call version="any" id="mygtfsxm:CITY1-2">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:NANAA"/>
 									<Arrival>
 										<Time>06:05:00</Time>
@@ -934,7 +934,7 @@ version 1.1 with revised ids
 										<Time>06:07:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="mygtfsxm:CITY1" order="3">
+								<Call version="any" id="mygtfsxm:CITY1-3">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:NADAV"/>
 									<Arrival>
 										<Time>06:12:00</Time>
@@ -943,7 +943,7 @@ version 1.1 with revised ids
 										<Time>06:14:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="mygtfsxm:CITY1" order="4">
+								<Call version="any" id="mygtfsxm:CITY1-4">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:DADAN"/>
 									<Arrival>
 										<Time>06:19:00</Time>
@@ -952,7 +952,7 @@ version 1.1 with revised ids
 										<Time>06:21:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="mygtfsxm:CITY1" order="5">
+								<Call version="any" id="mygtfsxm:CITY1-5">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:EMSI"/>
 									<Arrival>
 										<Time>06:26:00</Time>
@@ -986,7 +986,7 @@ version 1.1 with revised ids
 								</DestinationDisplayView>
 							</JourneyPatternView>
 							<calls>
-								<Call version="any" id="mygtfsxm:CITY2" order="1">
+								<Call version="any" id="mygtfsxm:CITY2-1">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:EMSI"/>
 									<Arrival>
 										<Time>06:28:00</Time>
@@ -995,7 +995,7 @@ version 1.1 with revised ids
 										<Time>06:30:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="mygtfsxm:CITY2" order="2">
+								<Call version="any" id="mygtfsxm:CITY2-2">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:DADAN"/>
 									<Arrival>
 										<Time>06:35:00</Time>
@@ -1004,7 +1004,7 @@ version 1.1 with revised ids
 										<Time>06:37:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="mygtfsxm:CITY2" order="3">
+								<Call version="any" id="mygtfsxm:CITY2-3">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:NADAV"/>
 									<Arrival>
 										<Time>06:42:00</Time>
@@ -1013,7 +1013,7 @@ version 1.1 with revised ids
 										<Time>06:44:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="mygtfsxm:CITY2" order="4">
+								<Call version="any" id="mygtfsxm:CITY2-4">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:NANAA"/>
 									<Arrival>
 										<Time>06:49:00</Time>
@@ -1022,7 +1022,7 @@ version 1.1 with revised ids
 										<Time>06:51:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="mygtfsxm:CITY2" order="5">
+								<Call version="any" id="mygtfsxm:CITY2-5">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:STAGECOACH"/>
 									<Arrival>
 										<Time>06:56:00</Time>
@@ -1057,7 +1057,7 @@ version 1.1 with revised ids
 								</DestinationDisplayView>
 							</JourneyPatternView>
 							<calls>
-								<Call version="any" id="mygtfsxm:BFC1" order="1">
+								<Call version="any" id="mygtfsxm:BFC1-1">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:BULLFROG"/>
 									<Arrival>
 										<Time>08:20:00</Time>
@@ -1066,7 +1066,7 @@ version 1.1 with revised ids
 										<Time>08:20:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="mygtfsxm:BFC1" order="2">
+								<Call version="any" id="mygtfsxm:BFC1-2">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:FUR_CREEK_RES"/>
 									<Arrival>
 										<Time>09:20:00</Time>
@@ -1101,7 +1101,7 @@ version 1.1 with revised ids
 								</DestinationDisplayView>
 							</JourneyPatternView>
 							<calls>
-								<Call version="any" id="mygtfsxm:FULLW" order="1">
+								<Call version="any" id="mygtfsxm:FULLW-1">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:FUR_CREEK_RES"/>
 									<Arrival>
 										<Time>11:00:00</Time>
@@ -1110,7 +1110,7 @@ version 1.1 with revised ids
 										<Time>11:00:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="mygtfsxm:FULLW" order="2">
+								<Call version="any" id="mygtfsxm:FULLW-2">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:BULLFROG"/>
 									<Arrival>
 										<Time>12:00:00</Time>
@@ -1141,7 +1141,7 @@ version 1.1 with revised ids
 								</DestinationDisplayView>
 							</JourneyPatternView>
 							<calls>
-								<Call version="any" id="mygtfsxm:AAMV" order="1">
+								<Call version="any" id="mygtfsxm:AAMV-1">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:BEATTY_AIRPORT"/>
 									<Arrival>
 										<Time>08:00:00</Time>
@@ -1150,7 +1150,7 @@ version 1.1 with revised ids
 										<Time>08:00:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="mygtfsxm:AAMV" order="2">
+								<Call version="any" id="mygtfsxm:AAMV-2">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:AMV"/>
 									<Arrival>
 										<Time>09:00:00</Time>
@@ -1181,7 +1181,7 @@ version 1.1 with revised ids
 								</DestinationDisplayView>
 							</JourneyPatternView>
 							<calls>
-								<Call version="any" id="mygtfsxm:AAMV2" order="1">
+								<Call version="any" id="mygtfsxm:AAMV2-1">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:AMV"/>
 									<Arrival>
 										<Time>10:00:00</Time>
@@ -1190,7 +1190,7 @@ version 1.1 with revised ids
 										<Time>10:00:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="mygtfsxm:AAMV2" order="2">
+								<Call version="any" id="mygtfsxm:AAMV2-2">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:BEATTY_AIRPORT"/>
 									<Arrival>
 										<Time>11:00:00</Time>
@@ -1222,7 +1222,7 @@ version 1.1 with revised ids
 								</DestinationDisplayView>
 							</JourneyPatternView>
 							<calls>
-								<Call version="any" id="mygtfsxm:AAMV3" order="1">
+								<Call version="any" id="mygtfsxm:AAMV3-1">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:BEATTY_AIRPORT"/>
 									<Arrival>
 										<Time>13:00:00</Time>
@@ -1231,7 +1231,7 @@ version 1.1 with revised ids
 										<Time>13:00:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="mygtfsxm:AAMV3" order="2">
+								<Call version="any" id="mygtfsxm:AAMV3-2">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:AMV"/>
 									<Arrival>
 										<Time>14:00:00</Time>
@@ -1263,7 +1263,7 @@ version 1.1 with revised ids
 								</DestinationDisplayView>
 							</JourneyPatternView>
 							<calls>
-								<Call version="any" id="mygtfsxm:AAMV4" order="1">
+								<Call version="any" id="mygtfsxm:AAMV4-1">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:AMV"/>
 									<Arrival>
 										<Time>15:00:00</Time>
@@ -1272,7 +1272,7 @@ version 1.1 with revised ids
 										<Time>15:00:00</Time>
 									</Departure>
 								</Call>
-								<Call version="any" id="mygtfsxm:AAMV4" order="2">
+								<Call version="any" id="mygtfsxm:AAMV4-2">
 									<ScheduledStopPointRef version="any" ref="mygtfsxm:BEATTY_AIRPORT"/>
 									<Arrival>
 										<Time>16:00:00</Time>
@@ -1383,7 +1383,7 @@ version 1.1 with revised ids
 							<TypeOfTariffRef version="gtfs:1.5" ref="gtfs:flat"/>
 							<fareStructureElements>
 								<FareStructureElement version="any" id="mygtfsxm:p@access">
-									<GenericParameterAssignment order="1" id="mygtfsxm:p@access" version="any">
+									<GenericParameterAssignment id="mygtfsxm:p@access-1" version="any">
 										<TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_access"/>
 										<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
 										<validityParameters>
@@ -1391,7 +1391,7 @@ version 1.1 with revised ids
 											<AuthorityRef ref="mygtfsxm:DTA"/>
 										</validityParameters>
 										<includes>
-											<GenericParameterAssignment order="1" id="mygtfsxm:p@access@details" version="any">
+											<GenericParameterAssignment id="mygtfsxm:p@access@details-1" version="any">
 												<TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_access"/>
 												<ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
 												<validityParameters>
@@ -1405,7 +1405,7 @@ version 1.1 with revised ids
 								</FareStructureElement>
 								<FareStructureElement id="mygtfsxm:p@conditions_of_travel" version="any">
 									<Name>Conditions of travel</Name>
-									<GenericParameterAssignment version="any" order="1" id="mygtfsxm:p@conditions_of_travel">
+									<GenericParameterAssignment version="any" id="mygtfsxm:p@conditions_of_travel-1">
 										<Name>Conditions of travel</Name>
 										<TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_use"/>
 										<LimitationGroupingType>AND</LimitationGroupingType>
@@ -1445,7 +1445,7 @@ version 1.1 with revised ids
 							</validableElements>
 							<!--- ====ACCESS RIGHTS======= -->
 							<accessRightsInProduct>
-								<AccessRightInProduct order="1" version="any" id="mygtfsxm:p">
+								<AccessRightInProduct id="mygtfsxm:p-1" version="any">
 									<ValidableElementRef version="any" ref="mygtfsxm:p"/>
 								</AccessRightInProduct>
 							</accessRightsInProduct>
@@ -1476,7 +1476,7 @@ version 1.1 with revised ids
 							<TypeOfTariffRef version="gtfs:1.5" ref="gtfs:flat"/>
 							<fareStructureElements>
 								<FareStructureElement version="any" id="mygtfsxm:a@access">
-									<GenericParameterAssignment order="1" id="mygtfsxm:a@access" version="any">
+									<GenericParameterAssignment id="mygtfsxm:a@access-1" version="any">
 										<TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_access"/>
 										<ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
 										<validityParameters>
@@ -1484,7 +1484,7 @@ version 1.1 with revised ids
 											<AuthorityRef ref="mygtfsxm:DTA"/>
 										</validityParameters>
 										<includes>
-											<GenericParameterAssignment order="1" id="mygtfsxm:a@access@details" version="any">
+											<GenericParameterAssignment id="mygtfsxm:a@access@details-1" version="any">
 												<TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_access"/>
 												<ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
 												<validityParameters>
@@ -1496,7 +1496,7 @@ version 1.1 with revised ids
 								</FareStructureElement>
 								<FareStructureElement id="mygtfsxm:a@conditions_of_travel" version="any">
 									<Name>Conditions of travel</Name>
-									<GenericParameterAssignment version="any" order="1" id="mygtfsxm:a@conditions_of_travel">
+									<GenericParameterAssignment version="any" id="mygtfsxm:a@conditions_of_travel-1">
 										<Name>Conditions of travel</Name>
 										<TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_use"/>
 										<LimitationGroupingType>AND</LimitationGroupingType>
@@ -1535,7 +1535,7 @@ version 1.1 with revised ids
 							</validableElements>
 							<!--- ====ACCESS RIGHTS======= -->
 							<accessRightsInProduct>
-								<AccessRightInProduct order="1" version="any" id="mygtfsxm:a">
+								<AccessRightInProduct id="mygtfsxm:a-1" version="any">
 									<ValidableElementRef version="any" ref="mygtfsxm:a"/>
 								</AccessRightInProduct>
 							</accessRightsInProduct>
@@ -1719,7 +1719,7 @@ version 1.1 with revised ids
 														</ClassRelationshipInFrame>
 													</relationships>
 												</ClassInFrame>
-												<ClassInFrame nameOfClass="FareProducts">
+												<ClassInFrame nameOfClass="fareProducts">
 													<ClassRefType>members</ClassRefType>
 													<relationships>
 														<ClassRelationshipInFrame>
@@ -1734,7 +1734,7 @@ version 1.1 with revised ids
 													<ClassRefType>members</ClassRefType>
 													<relationships>
 														<ClassRelationshipInFrame>
-															<RelationshipRef nameOfClass="pricesGroups"/>
+															<RelationshipRef nameOfClass="priceGroups"/>
 															<Mandatory>optional</Mandatory>
 															<Containment>inline</Containment>
 															<ModificationSet>all</ModificationSet>

@@ -6021,13 +6021,13 @@ Please make sure that your child rate photocard is in date (not past the "Valid 
 								<DistributionAssignmentRef ref="atc:ATOC@Tariff@General@call_centre@courier" version="01" order="10"/>
 							</distributionAssignments>
 							<salesOfferPackageElements>
-								<SalesOfferPackageElement id="atc:ATOC@Products@Pass@Season@annual-SOP@travel_document@pass" version="01" order="1">
+								<SalesOfferPackageElement id="atc:ATOC@Products@Pass@Season@annual-SOP@travel_document@pass_01" version="01" order="1">
 									<Name>As separate pass</Name>
 									<Description>Supported type supported by all operators</Description>
 									<TypeOfTravelDocumentRef ref="eura:pass" version="01"/>
 									<PreassignedFareProductRef ref="atc:ATOC@Products@Pass@Season" version="01"/>
 								</SalesOfferPackageElement>
-								<SalesOfferPackageElement id="atc:ATOC@Products@Pass@Season@annual-SOP@travel_document@pass" version="01" order="2">
+								<SalesOfferPackageElement id="atc:ATOC@Products@Pass@Season@annual-SOP@travel_document@pass_02" version="01" order="2">
 									<Name>As smart card</Name>
 									<Description>Supported type supported by seelcted operators</Description>
 									<TypeOfTravelDocumentRef ref="eura:smart_card" version="01"/>
@@ -7193,7 +7193,7 @@ A: Yes. You will, however, need to complete a new mature student application for
 							<Name>Greater Anglia products</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="abga:products:LT">
-									<StakeholderRoleType>FareManagement</StakeholderRoleType>
+									<StakeholderRoleType>fareManagement</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="atc:LT" version="any"/>
 									<ResponsibleAreaRef ref="atc:uk">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -7203,7 +7203,7 @@ A: Yes. You will, however, need to complete a new mature student application for
 							<Name>Greater Anglia sales data</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="abga:sales:LT">
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="atc:LT" version="any"/>
 									<ResponsibleAreaRef ref="atc:uk">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -7509,21 +7509,21 @@ https://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-o
 09:02 to Ipswich (Stratford, 09:09) (to stations on the Sudbury branch only).
 09:18 to Clacton-on-Sea (Stratford, 09:25) (to Wivenhoe and beyond, including to Walton-on-the-Naze)..</Description>
 							<members>
-								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@inclusions" version="01" order="1">
+								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@inclusions_01" version="01" order="1">
 									<ServiceDesignator>
 										<FromPointRef ref="atc:Station:LST" version="01">London Liverpool Street</FromPointRef>
 										<ToPointRef ref="atc:Station:CBG" version="01">Cambridge</ToPointRef>
 										<DepartureTime>09:28:00</DepartureTime>
 									</ServiceDesignator>
 								</GroupOfServicesMember>
-								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@inclusions" version="01" order="2">
+								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@inclusions_02" version="01" order="2">
 									<ServiceDesignator>
 										<FromPointRef ref="atc:Station:LST" version="01">London Liverpool Street</FromPointRef>
 										<ToPointRef ref="atc:Station:IPS" version="01">Ipswich</ToPointRef>
 										<DepartureTime>09:02:00</DepartureTime>
 									</ServiceDesignator>
 								</GroupOfServicesMember>
-								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@inclusions" version="01" order="3">
+								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@inclusions_03" version="01" order="3">
 									<ServiceDesignator>
 										<FromPointRef ref="atc:Station:LST" version="01">London Liverpool Street</FromPointRef>
 										<ToPointRef ref="atc:Station:CLT" version="01">Clacton-on-Sea</ToPointRef>
@@ -7539,14 +7539,14 @@ https://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-o
 08:11 from Clacton-on-Sea and intermediate stations to Wivenhoe, including the 08:00 from Walton-on-the-Naze by changing at Thorpe-le-Soken.
 08:28 from Harwich Town and intermediate stations to Mistley.</Description>
 							<members>
-								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@arriving_into@inclusions" version="01" order="1">
+								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@arriving_into@inclusions_01" version="01" order="1">
 									<ServiceDesignator>
 										<FromPointRef ref="atc:Station:CLT" version="01">Clacton-on-Sea</FromPointRef>
 										<ToPointRef ref="atc:Station:LST" version="01">London Liverpool Street</ToPointRef>
 										<DepartureTime>08:11:00</DepartureTime>
 									</ServiceDesignator>
 								</GroupOfServicesMember>
-								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@arriving_into@inclusions" version="01" order="2">
+								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@arriving_into@inclusions_02" version="01" order="2">
 									<ServiceDesignator>
 										<FromPointRef ref="atc:Station:HWC" version="01">Harwich Town</FromPointRef>
 										<ToPointRef ref="atc:Station:LST" version="01">London Liverpool Street</ToPointRef>
@@ -7566,7 +7566,7 @@ https://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-o
 18:12 (Stratford, 18:20) (to stations on the Sudbury branch only).
 18:32 (Stratford, 18:40) (to Hatfield Peverel, Kelvedon, Alresford and stations to Walton-on-the-Naze only)..</Description>
 							<members>
-								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01" order="1">
+								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions_01" version="01" order="1">
 									<ServiceDesignator>
 										<FromPointRef ref="atc:Station:LST" version="01">London Liverpool Street</FromPointRef>
 										<ToPointRef ref="atc:Station:FLX" version="01">Felixstowe</ToPointRef>
@@ -7574,7 +7574,7 @@ https://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-o
 										<LineRef ref="abga:ln_London-to-Felixstowe" version="01"/>
 									</ServiceDesignator>
 								</GroupOfServicesMember>
-								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01" order="2">
+								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions_02" version="01" order="2">
 									<ServiceDesignator>
 										<FromPointRef ref="atc:Station:LST" version="01">London Liverpool Street</FromPointRef>
 										<ToPointRef ref="atc:Station:FLX" version="01">Felixstowe</ToPointRef>
@@ -7582,7 +7582,7 @@ https://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-o
 										<LineRef ref="abga:ln_London-to-Felixstowe" version="01"/>
 									</ServiceDesignator>
 								</GroupOfServicesMember>
-								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01" order="3">
+								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions_03" version="01" order="3">
 									<ServiceDesignator>
 										<FromPointRef ref="atc:Station:LST" version="01">London Liverpool Street</FromPointRef>
 										<ToPointRef ref="atc:Station:FLX" version="01">Felixstowe</ToPointRef>
@@ -7590,7 +7590,7 @@ https://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-o
 										<LineRef ref="abga:ln_London-to-Felixstowe" version="01"/>
 									</ServiceDesignator>
 								</GroupOfServicesMember>
-								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01" order="4">
+								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions_04" version="01" order="4">
 									<ServiceDesignator>
 										<FromPointRef ref="atc:Station:LST" version="01">London Liverpool Street</FromPointRef>
 										<ToPointRef ref="atc:Station:BTR" version="01">Braintree</ToPointRef>
@@ -7598,7 +7598,7 @@ https://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-o
 										<LineRef ref="abga:ln_London-to-Braintree" version="01"/>
 									</ServiceDesignator>
 								</GroupOfServicesMember>
-								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01" order="5">
+								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions_05" version="01" order="5">
 									<ServiceDesignator>
 										<FromPointRef ref="atc:Station:LST" version="01">London Liverpool Street</FromPointRef>
 										<ToPointRef ref="atc:Station:SUY" version="01">Sudbury</ToPointRef>
@@ -7606,7 +7606,7 @@ https://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-o
 										<LineRef ref="abga:ln_London-to-Sudbury" version="01"/>
 									</ServiceDesignator>
 								</GroupOfServicesMember>
-								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01" order="6">
+								<GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions_06" version="01" order="6">
 									<ServiceDesignator>
 										<FromPointRef ref="atc:Station:LST" version="01">London Liverpool Street</FromPointRef>
 										<ToPointRef ref="atc:Station:WON" version="01">Walton-on-the-Naze</ToPointRef>
@@ -8830,17 +8830,17 @@ Short Term (1/4/18-1/6/18): £135.00	Short term (1/4-1/6): £230.00d with this g
 							<Name>Plus Bus Products</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="jsp:products">
-									<StakeholderRoleType>FareManagement</StakeholderRoleType>
+									<StakeholderRoleType>fareManagement</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="jsp:JSP" version="any"/>
 									<ResponsibleAreaRef ref="atc:uk">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
 							</roles>
 						</ResponsibilitySet>
 						<ResponsibilitySet version="any" id="nptg:tariff_zones">
-							<Name>Plus Bus Tarff Zones</Name>
+							<Name>Plus Bus Tariff Zones</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="nptg:tariff_zones">
-									<StakeholderRoleType>FareManagement</StakeholderRoleType>
+									<StakeholderRoleType>fareManagement</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="nptg:DfT" version="any"/>
 									<ResponsibleAreaRef ref="atc:uk">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -8968,8 +8968,10 @@ Short Term (1/4/18-1/6/18): £135.00	Short term (1/4-1/6): £230.00d with this g
 					<tariffZones>
 						<!--==== Fare regions ===     -->
 						<TariffZone version="01" id="nptg:PlusBus:All_Zones">
+							<privateCodes>
+								<PrivateCode>PlusBus</PrivateCode>
+							</privateCodes>
 							<Name lang="en">All Zones</Name>
-							<PrivateCode>PlusBus</PrivateCode>
 							<types>
 								<TypeOfZoneRef ref="nptg:PlusBus_region" version="any"/>
 							</types>
@@ -8980,8 +8982,10 @@ Short Term (1/4/18-1/6/18): £135.00	Short term (1/4-1/6): £230.00d with this g
 							</projections>
 						</TariffZone>
 						<TariffZone version="01" id="nptg:PlusBus:South_East_Region">
+							<privateCodes>
+								<PrivateCode>SE</PrivateCode>
+							</privateCodes>
 							<Name lang="en">South East Region</Name>
-							<PrivateCode>SE</PrivateCode>
 							<types>
 								<TypeOfZoneRef ref="nptg:PlusBus_region" version="any"/>
 							</types>
@@ -8993,8 +8997,10 @@ Short Term (1/4/18-1/6/18): £135.00	Short term (1/4-1/6): £230.00d with this g
 							<ParentZoneRef ref="nptg:PlusBus:All_Zones" version="01"/>
 						</TariffZone>
 						<TariffZone version="01" id="nptg:PlusBus:Outside_South_East_Region">
+							<privateCodes>
+								<PrivateCode>SE</PrivateCode>
+							</privateCodes>
 							<Name lang="en">South East Region</Name>
-							<PrivateCode>SE</PrivateCode>
 							<types>
 								<TypeOfZoneRef ref="nptg:PlusBus_region" version="any"/>
 							</types>
@@ -9007,8 +9013,10 @@ Short Term (1/4/18-1/6/18): £135.00	Short term (1/4-1/6): £230.00d with this g
 						</TariffZone>
 						<!--====  Plusbus Fare zones ===     NB BOGUS CODES &amp;COORDINATES -->
 						<TariffZone created="2013-10-11T12:27:13" changed="2013-10-11T12:27:13" modification="new" version="01" id="nptg:PlusBus_zone:IPSWICH">
+							<privateCodes>
+								<PrivateCode>IPSWICH</PrivateCode>
+							</privateCodes>
 							<Name lang="en">IPSWICH</Name>
-							<PrivateCode>IPSWICH</PrivateCode>
 							<types>
 								<TypeOfZoneRef ref="nptg:PlusBus_zone" version="any"/>
 							</types>
@@ -9032,8 +9040,10 @@ Short Term (1/4/18-1/6/18): £135.00	Short term (1/4-1/6): £230.00d with this g
 							<ParentZoneRef ref="nptg:PlusBus:South_East_Region" version="01"/>
 						</TariffZone>
 						<TariffZone created="2013-10-11T12:27:13" changed="2013-10-11T12:27:13" modification="new" version="01" id="nptg:PlusBus_zone:NORWICH">
+							<privateCodes>
+								<PrivateCode>NORWICH</PrivateCode>
+							</privateCodes>
 							<Name lang="en">NORWICH</Name>
-							<PrivateCode>NORWICH</PrivateCode>
 							<types>
 								<TypeOfZoneRef ref="nptg:PlusBus_zone" version="any"/>
 							</types>
@@ -9057,8 +9067,10 @@ Short Term (1/4/18-1/6/18): £135.00	Short term (1/4-1/6): £230.00d with this g
 							<ParentZoneRef ref="nptg:PlusBus:South_East_Region" version="01"/>
 						</TariffZone>
 						<TariffZone created="2013-10-11T12:27:13" changed="2013-10-11T12:27:13" modification="new" version="01" id="nptg:PlusBus_zone:LOWESTOFT">
+							<privateCodes>
+								<PrivateCode>LOWESTOFT</PrivateCode>
+							</privateCodes>
 							<Name lang="en">LOWESTOFT</Name>
-							<PrivateCode>LOWESTOFT</PrivateCode>
 							<types>
 								<TypeOfZoneRef ref="nptg:PlusBus_zone" version="any"/>
 							</types>
@@ -9130,7 +9142,7 @@ Short Term (1/4/18-1/6/18): £135.00	Short term (1/4-1/6): £230.00d with this g
 					<dayTypes>
 						<FareDayType version="any" id="jsp:everyday">
 							<Name>Every day</Name>
-							<Description>ANy time</Description>
+							<Description>Any time</Description>
 							<EarliestTime>00:00:00</EarliestTime>
 							<properties>
 								<PropertyOfDay>
@@ -9759,6 +9771,9 @@ http://www.plusbus.info/faq/14-are-refunds-available-ltigtplusbusltigt-tickets
 					<!-- === SALES OFFER PACKAGES ===  -->
 					<salesOfferPackages>
 						<SalesOfferPackage id="jsp:JSP@Products@Pass@PlusBus@Day-SOP@1D" version="01">
+							<privateCodes>
+								<PrivateCode>PBD</PrivateCode>
+							</privateCodes>
 							<BrandingRef ref="jsp:PlusBus@brand" version="any"/>
 							<Name>PlusBus Day</Name>
 							<Description>Add On - bought separately rather than bundled  with product
@@ -9772,7 +9787,6 @@ Period Return rail ticket = issue two PlusBus Day (PBD) tickets for origin and/o
 							
 							</Description>
 							<Url>http://www.plusbus.info/how-issue</Url>
-							<PrivateCode>PBD</PrivateCode>
 							<validityParameterAssignments>
 								<GenericParameterAssignment order="1" id="jsp:JSP@Products@Pass@PlusBus@Day-SOP@1D@purchasing" version="01">
 									<Name>How to purchase</Name>
@@ -9818,12 +9832,14 @@ Train companies prefer customers to buy their tickets before getting on a train 
 							</salesOfferPackageElements>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="jsp:JSP@Products@Pass@PlusBus@Season-SOP@1W" version="01">
+							<privateCodes>
+								<PrivateCode>PB7</PrivateCode>
+							</privateCodes>
 							<Name>PlusBus 7-day</Name>
 							<Description>Season are available for set periods only: 7-days, Month; Quarter and Annual. See the ticket codes and descriptions (below).
 You will need to use the same Photocard number on the PlusBus season ticket as used on the rail season ticket.
 7-day season		PB7				PlusBus 7-day</Description>
 							<Url>http://www.plusbus.info/how-issue</Url>
-							<PrivateCode>PB7</PrivateCode>
 							<validityParameterAssignments>
 								<GenericParameterAssignment version="01" id="jsp:JSP@Products@Pass@PlusBus@Season@1W@duration" order="1">
 									<Name>Valid 1 week</Name>
@@ -9835,12 +9851,14 @@ You will need to use the same Photocard number on the PlusBus season ticket as u
 							<GroupOfSalesOfferPackagesRef ref="jsp:JSP@Products@Pass@PlusBus@Season-GSOP" version="01"/>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="jsp:JSP@Products@Pass@PlusBus@Season-SOP@1M" version="01">
+							<privateCodes>
+								<PrivateCode>PBM</PrivateCode>
+							</privateCodes>
 							<Name>PlusBus Month</Name>
 							<Description>Season are available for set periods only: 7-days, Month; Quarter and Annual. See the ticket codes and descriptions (below).
 You will need to use the same Photocard number on the PlusBus season ticket as used on the rail season ticket.
 Month season		PBM				PlusBus Month</Description>
 							<Url>http://www.plusbus.info/how-issue</Url>
-							<PrivateCode>PBM</PrivateCode>
 							<validityParameterAssignments>
 								<GenericParameterAssignment version="01" id="jsp:JSP@Products@Pass@PlusBus@Season@1M@duration" order="1">
 									<Name>Valid 1 week</Name>
@@ -9852,12 +9870,14 @@ Month season		PBM				PlusBus Month</Description>
 							<GroupOfSalesOfferPackagesRef ref="jsp:JSP@Products@Pass@PlusBus@Season-GSOP" version="01"/>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="jsp:JSP@Products@Pass@PlusBus@Season-SOP@3M" version="01">
+							<privateCodes>
+								<PrivateCode>PBQ</PrivateCode>
+							</privateCodes>
 							<Name>PlusBus Month</Name>
 							<Description>Season are available for set periods only: 7-days, Month; Quarter and Annual. See the ticket codes and descriptions (below).
 You will need to use the same Photocard number on the PlusBus season ticket as used on the rail season ticket.
 Quarter season		PBQ				PlusBus Quarter</Description>
 							<Url>http://www.plusbus.info/how-issue</Url>
-							<PrivateCode>PBQ</PrivateCode>
 							<validityParameterAssignments>
 								<GenericParameterAssignment version="01" id="jsp:JSP@Products@Pass@PlusBus@Season@3M@duration" order="1">
 									<Name>Valid 1 week</Name>
@@ -9869,13 +9889,15 @@ Quarter season		PBQ				PlusBus Quarter</Description>
 							<GroupOfSalesOfferPackagesRef ref="jsp:JSP@Products@Pass@PlusBus@Season-GSOP" version="01"/>
 						</SalesOfferPackage>
 						<SalesOfferPackage id="jsp:JSP@Products@Pass@PlusBus@Season-SOP@1Y" version="01">
+							<privateCodes>
+								<PrivateCode>PBA</PrivateCode>
+							</privateCodes>
 							<Name>PlusBus Annual</Name>
 							<Description>Season ticket = issue the relevant period PlusBus season ticket. Most, but not all towns have PlusBus season tickets.
 Season are available for set periods only: 7-days, Month; Quarter and Annual. See the ticket codes and descriptions (below).
 You will need to use the same Photocard number on the PlusBus season ticket as used on the rail season ticket.
 Annual season		PBA				PlusBus Annual</Description>
 							<Url>http://www.plusbus.info/how-issue</Url>
-							<PrivateCode>PBA</PrivateCode>
 							<validityParameterAssignments>
 								<GenericParameterAssignment version="01" id="jsp:JSP@Products@Pass@PlusBus@Season@1Y@duration" order="1">
 									<Name>Time Interval</Name>
@@ -10052,11 +10074,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100BRAINTR</PrivateCode>
+								<PrivateCode type="uicLocation">uic:68010</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Braintree</Name>
 							<Location>
 								<Longitude>0.556687108</Longitude>
 								<Latitude>51.87539168</Latitude>
-								<gml:pos srsName="UKOS">576093	222736</gml:pos>
+								<gml:pos srsName="UKOS">576093.0 222736.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef ref="naptan:TypeOfPoint:RLY"/>
@@ -10064,8 +10090,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>BRAINTREE</ShortName>
 							<PublicCode>BTR</PublicCode>
-							<PrivateCode type="naptan">9100BRAINTR</PrivateCode>
-							<ExternalStopPointRef ref="uic:68010" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="gb"/>
 							<TopographicPlaceView>
@@ -10077,11 +10101,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100CLACTON</PrivateCode>
+								<PrivateCode type="uicLocation">uic:68500</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Clacton-on-Sea</Name>
 							<Location>
 								<Longitude>1.154091821</Longitude>
 								<Latitude>51.794002810</Latitude>
-								<gml:pos srsName="UKOS">617600	215300</gml:pos>
+								<gml:pos srsName="UKOS">617600.0 215300.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef ref="naptan:TypeOfPoint:RLY"/>
@@ -10089,8 +10117,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>CLACTON</ShortName>
 							<PublicCode>CLT</PublicCode>
-							<PrivateCode type="naptan">9100CLACTON</PrivateCode>
-							<ExternalStopPointRef ref="uic:68500" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="gb"/>
 							<TopographicPlaceView>
@@ -10102,11 +10128,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100YARMTH</PrivateCode>
+								<PrivateCode type="uicLocation">uic:73280</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Great Yarmouth</Name>
 							<Location>
 								<Longitude>1.720886341</Longitude>
 								<Latitude>52.6121599</Latitude>
-								<gml:pos srsName="UKOS">652000	308100</gml:pos>
+								<gml:pos srsName="UKOS">652000.0 308100.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef ref="naptan:TypeOfPoint:RLY"/>
@@ -10114,8 +10144,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>GREAT YARMOUTH</ShortName>
 							<PublicCode>GYM</PublicCode>
-							<PrivateCode type="naptan">9100YARMTH</PrivateCode>
-							<ExternalStopPointRef ref="uic:73280" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="gb"/>
 							<TopographicPlaceView>
@@ -10127,11 +10155,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100HARWICH</PrivateCode>
+								<PrivateCode type="uicLocation">uic:69050</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Harwich Town</Name>
 							<Location>
 								<Longitude>1.286681923</Longitude>
 								<Latitude>51.9441454</Latitude>
-								<gml:pos srsName="UKOS">625987	232397</gml:pos>
+								<gml:pos srsName="UKOS">625987.0 232397.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef ref="naptan:TypeOfPoint:RLY"/>
@@ -10139,8 +10171,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>HARWICH TOWN</ShortName>
 							<PublicCode>HWC</PublicCode>
-							<PrivateCode type="naptan">9100HARWICH</PrivateCode>
-							<ExternalStopPointRef ref="uic:69050" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="gb"/>
 							<TopographicPlaceView>
@@ -10152,11 +10182,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100IPSWICH</PrivateCode>
+								<PrivateCode type="uicLocation">uic:72170</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Ipswich</Name>
 							<Location>
 								<Longitude>1.14442571</Longitude>
 								<Latitude>52.05059234</Latitude>
-								<gml:pos srsName="UKOS">615700	243800</gml:pos>
+								<gml:pos srsName="UKOS">615700.0 243800.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef ref="naptan:TypeOfPoint:RLY"/>
@@ -10164,8 +10198,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>IPSWICH</ShortName>
 							<PublicCode>IPS</PublicCode>
-							<PrivateCode type="naptan">9100IPSWICH</PrivateCode>
-							<ExternalStopPointRef ref="uic:72170" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="gb"/>
 							<TopographicPlaceView>
@@ -10182,11 +10214,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 									<Text lang="en" textIdType="Name">Liverpool Street</Text>
 								</AlternativeText>
 							</alternativeTexts>
+							<privateCodes>
+								<PrivateCode type="naptan">9100LIVST</PrivateCode>
+								<PrivateCode type="uicLocation">uic:69650</PrivateCode>
+							</privateCodes>
 							<Name lang="en">London Liverpool Street</Name>
 							<Location>
 								<Longitude>-0.081425944</Longitude>
 								<Latitude>51.51799103</Latitude>
-								<gml:pos srsName="UKOS">533216  181641</gml:pos>
+								<gml:pos srsName="UKOS">533216.0 181641.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef ref="naptan:TypeOfPoint:RLY"/>
@@ -10194,8 +10230,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>LONDON LIVERP STR</ShortName>
 							<PublicCode>LST</PublicCode>
-							<PrivateCode type="naptan">9100LIVST</PrivateCode>
-							<ExternalStopPointRef ref="uic:69650" type="uicLocation"/>
 							<VehicleModes>rail metro coach bus</VehicleModes>
 							<CountryRef ref="gb"/>
 							<TopographicPlaceView>
@@ -10208,11 +10242,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100LOWSTFT</PrivateCode>
+								<PrivateCode type="uicLocation">uic:72680</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Lowestoft</Name>
 							<Location>
 								<Longitude>1.749708046</Longitude>
 								<Latitude>52.47443783</Latitude>
-								<gml:pos srsName="UKOS">654747	292890</gml:pos>
+								<gml:pos srsName="UKOS">654747.0 292890.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef ref="naptan:TypeOfPoint:RLY"/>
@@ -10220,8 +10258,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>LOWESTOFT</ShortName>
 							<PublicCode>LWT</PublicCode>
-							<PrivateCode type="naptan">9100LOWSTFT</PrivateCode>
-							<ExternalStopPointRef ref="uic:72680" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="gb"/>
 							<TopographicPlaceView>
@@ -10233,11 +10269,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100NRCH</PrivateCode>
+								<PrivateCode type="uicLocation">uic:73090</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Norwich</Name>
 							<Location>
 								<Longitude>1.306820205</Longitude>
 								<Latitude>52.62715355</Latitude>
-								<gml:pos srsName="UKOS">623900  308400</gml:pos>
+								<gml:pos srsName="UKOS">623900.0 308400.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef ref="naptan:TypeOfPoint:RLY"/>
@@ -10245,8 +10285,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>NORWICH</ShortName>
 							<PublicCode>NRW</PublicCode>
-							<PrivateCode type="naptan">9100NRCH</PrivateCode>
-							<ExternalStopPointRef ref="uic:73090" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="gb"/>
 							<TopographicPlaceView>
@@ -10258,11 +10296,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100STFD</PrivateCode>
+								<PrivateCode type="uicLocation">uic:7190</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Stratford</Name>
 							<Location>
 								<Longitude>-0.003396657</Longitude>
 								<Latitude>51.54189507</Latitude>
-								<gml:pos srsName="UKOS">538557	184444</gml:pos>
+								<gml:pos srsName="UKOS">538557.0 184444.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef ref="naptan:TypeOfPoint:RLY"/>
@@ -10270,8 +10312,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>STRATFORD</ShortName>
 							<PublicCode>SFA</PublicCode>
-							<PrivateCode type="naptan">9100STFD</PrivateCode>
-							<ExternalStopPointRef ref="uic:7190" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="gb"/>
 							<TopographicPlaceView>
@@ -10284,11 +10324,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100SHENFLD</PrivateCode>
+								<PrivateCode type="uicLocation">uic:68880</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Shenfield</Name>
 							<Location>
 								<Longitude>0.329851319</Longitude>
 								<Latitude>51.63087735</Latitude>
-								<gml:pos srsName="UKOS">561349	195022</gml:pos>
+								<gml:pos srsName="UKOS">561349.0 195022.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef ref="naptan:TypeOfPoint:RLY"/>
@@ -10296,8 +10340,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>SHENFIELD</ShortName>
 							<PublicCode>SNF</PublicCode>
-							<PrivateCode type="naptan">9100SHENFLD</PrivateCode>
-							<ExternalStopPointRef ref="uic:68880" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="gb"/>
 							<TopographicPlaceView>
@@ -10310,11 +10352,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100STANAIR</PrivateCode>
+								<PrivateCode type="uicLocation">uic:68340</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Stansted Airport</Name>
 							<Location>
 								<Longitude>0.260815594</Longitude>
 								<Latitude>51.88859105</Latitude>
-								<gml:pos srsName="UKOS">555683	223530</gml:pos>
+								<gml:pos srsName="UKOS">555683.0 223530.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef ref="naptan:TypeOfPoint:RLY"/>
@@ -10322,8 +10368,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>STANSTED AIRPORT</ShortName>
 							<PublicCode>SSD</PublicCode>
-							<PrivateCode type="naptan">9100STANAIR</PrivateCode>
-							<ExternalStopPointRef ref="uic:68340" type="uicLocation"/>
 							<VehicleModes>rail bus coach</VehicleModes>
 							<CountryRef ref="gb"/>
 							<TopographicPlaceView>
@@ -10335,11 +10379,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100STHVIC</PrivateCode>
+								<PrivateCode type="uicLocation">uic:74200</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Southend Victoria</Name>
 							<Location>
 								<Longitude>0.711500859</Longitude>
 								<Latitude>51.5415127</Latitude>
-								<gml:pos srsName="UKOS">588128	185997</gml:pos>
+								<gml:pos srsName="UKOS">588128.0 185997.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef ref="naptan:TypeOfPoint:RLY"/>
@@ -10347,8 +10395,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>SOUTHEND VICTORIA</ShortName>
 							<PublicCode>SOV</PublicCode>
-							<PrivateCode type="naptan">9100STHVIC</PrivateCode>
-							<ExternalStopPointRef ref="uic:74200" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="gb"/>
 							<TopographicPlaceView>
@@ -10360,11 +10406,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100SUDBURY</PrivateCode>
+								<PrivateCode type="uicLocation">uic:70980</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Sudbury</Name>
 							<Location>
 								<Longitude>0.735444414</Longitude>
 								<Latitude>52.03627818</Latitude>
-								<gml:pos srsName="UKOS">587723	241073</gml:pos>
+								<gml:pos srsName="UKOS">587723.0 241073.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef ref="naptan:TypeOfPoint:RLY"/>
@@ -10372,8 +10422,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>SUDBURY SUFFOLK</ShortName>
 							<PublicCode>SUY</PublicCode>
-							<PrivateCode type="naptan">9100SUDBURY</PrivateCode>
-							<ExternalStopPointRef ref="uic:70980" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="gb"/>
 							<TopographicPlaceView>
@@ -10386,11 +10434,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100TTNHMHL</PrivateCode>
+								<PrivateCode type="uicLocation">uic:69510</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Tottenham Hale</Name>
 							<Location>
 								<Longitude>-0.059929104</Longitude>
-								<Latitude>51.58830984	</Latitude>
-								<gml:pos srsName="UKOS">534500  189500</gml:pos>
+								<Latitude>51.58830984</Latitude>
+								<gml:pos srsName="UKOS">534500.0 189500.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef ref="naptan:TypeOfPoint:RLY"/>
@@ -10398,8 +10450,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>TOTTENHAM HALE</ShortName>
 							<PublicCode>TOM</PublicCode>
-							<PrivateCode type="naptan">9100TTNHMHL</PrivateCode>
-							<ExternalStopPointRef ref="uic:69510" type="uicLocation"/>
 							<VehicleModes>rail metro bus</VehicleModes>
 							<CountryRef ref="gb"/>
 							<TopographicPlaceView>
@@ -10412,11 +10462,15 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							<ValidBetween>
 								<FromDate>1987-12-31T00:00:00Z</FromDate>
 							</ValidBetween>
+							<privateCodes>
+								<PrivateCode type="naptan">9100WONNAZE</PrivateCode>
+								<PrivateCode type="uicLocation">uic:68580</PrivateCode>
+							</privateCodes>
 							<Name lang="en">Walton-on-the-Naze</Name>
 							<Location>
 								<Longitude>1.267669817</Longitude>
 								<Latitude>51.84616912</Latitude>
-								<gml:pos srsName="UKOS">625170	221445</gml:pos>
+								<gml:pos srsName="UKOS">625170.0 221445.0</gml:pos>
 							</Location>
 							<types>
 								<TypeOfPointRef ref="naptan:TypeOfPoint:RLY"/>
@@ -10424,8 +10478,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
 							</types>
 							<ShortName>WALTON-ON-NAZE</ShortName>
 							<PublicCode>WON</PublicCode>
-							<PrivateCode type="naptan">9100WONNAZE</PrivateCode>
-							<ExternalStopPointRef ref="uic:68580" type="uicLocation"/>
 							<VehicleModes>rail bus</VehicleModes>
 							<CountryRef ref="gb"/>
 							<TopographicPlaceView>
@@ -11421,7 +11473,7 @@ http://www.nationalrail.co.uk/stations_destinations/44863.aspx
 							<Name>National Rail Products</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="atc:products:NRE">
-									<StakeholderRoleType>Other</StakeholderRoleType>
+									<StakeholderRoleType>other</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="atc:Consortium:NRE" version="any"/>
 									<ResponsibleAreaRef ref="atc:uk">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -11900,7 +11952,7 @@ West Midlands Railway
 							<Name>National Rail Stations</Name>
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="uic:Station_Management@0070">
-									<StakeholderRoleType>Operation</StakeholderRoleType>
+									<StakeholderRoleType>operation</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="uic:Station_Management@0070" version="any"/>
 									<ResponsibleAreaRef ref="atc:uk">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -11911,7 +11963,7 @@ West Midlands Railway
 							<roles>
 								<ResponsibilityRoleAssignment version="any" id="eura:code_sets:EURA">
 									<DataRoleType>creates distributes</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="eura:EURA" version="any"/>
 									<ResponsibleAreaRef ref="eura:Europe">TODO</ResponsibleAreaRef>
 								</ResponsibilityRoleAssignment>
@@ -12204,13 +12256,17 @@ West Midlands Railway
 					<PricingParameterSet id="eura:Common_Resources" version="any">
 						<priceUnits>
 							<PriceUnit id="eura:EUR" version="any">
+								<privateCodes>
+									<PrivateCode>€</PrivateCode>
+								</privateCodes>
 								<Name>Euro</Name>
-								<PrivateCode>€</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 							<PriceUnit id="eura:GBP" version="any">
+								<privateCodes>
+									<PrivateCode>£</PrivateCode>
+								</privateCodes>
 								<Name>Pound Sterling</Name>
-								<PrivateCode>£</PrivateCode>
 								<Precision>2</Precision>
 							</PriceUnit>
 							<PriceUnit id="eura:SFR" version="any">

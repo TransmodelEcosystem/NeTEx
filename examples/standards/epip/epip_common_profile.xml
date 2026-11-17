@@ -45,16 +45,9 @@
 						<DefaultLocationSystem>WGS84</DefaultLocationSystem>
 						<DefaultSystemOfUnits>SiKilometresAndMetres</DefaultSystemOfUnits>
 					</FrameDefaults>
-					<versions>
-						<Version id="epip:1.0" version="any">
-							<Description>EPIP version 1.0</Description>
-							<VersionType>baseline</VersionType>
-						</Version>
-					</versions>
 					<dataSources>
-						<DataSource id="epip:CEN_TC278_WG3_SG9" version="epip:1.0">
-							<Email>schemer@netex-cen.eu</Email>
-						</DataSource>
+						<DataSource id="epip:CEN_TC278_WG3_SG9" version="epip:1.0"/>
+						<DataSource id="epip:common" version="epip:1.0"/>
 					</dataSources>
 					<!-- ========Responsibility Sets========== -->
 					<responsibilitySets>
@@ -63,7 +56,7 @@
 							<roles>
 								<ResponsibilityRoleAssignment version="epip:1.0" id="epip:epip_metadata-CEN-TC278_WG3_SG9">
 									<DataRoleType>creates</DataRoleType>
-									<StakeholderRoleType>DataRegistrar</StakeholderRoleType>
+									<StakeholderRoleType>dataRegistrar</StakeholderRoleType>
 									<ResponsibleOrganisationRef ref="epip:CEN" version="epip:1.0"/>
 									<ResponsiblePartRef ref="TC278_WG3_SG9" version="epip:1.0"/>
 									<ResponsibleAreaRef ref="epip:Europe" versionRef="EXTERNAL"> </ResponsibleAreaRef>
@@ -107,7 +100,7 @@
 											<relationships>
 												<!-- ENTITY IN VERSION-->
 												<ClassRelationshipInFrame name="dataSource">
-													<RelationshipRef nameOfClass="dataSourceRef"/>
+													<RelationshipRef nameOfClass="DataSourceRef"/>
 													<Mandatory>optional</Mandatory>
 													<Containment>byReference</Containment>
 												</ClassRelationshipInFrame>
@@ -118,7 +111,7 @@
 												</ClassRelationshipInFrame>
 												<!-- DATA MANAGED OBJECTT -->
 												<ClassRelationshipInFrame name="responsibilitySet">
-													<RelationshipRef nameOfClass="responsibilitySetRef"/>
+													<RelationshipRef nameOfClass="ResponsibilitySetRef"/>
 													<Mandatory>optional</Mandatory>
 													<Containment>byReference</Containment>
 												</ClassRelationshipInFrame>
@@ -161,8 +154,8 @@
 											</attributes>
 											<relationships>
 												<!-- ENTITY IN VERSION-->
-												<ClassRelationshipInFrame name="dataSource">
-													<RelationshipRef nameOfClass="dataSourceRef"/>
+												<ClassRelationshipInFrame name="DataSource">
+													<RelationshipRef nameOfClass="DataSourceRef"/>
 													<Mandatory>required</Mandatory>
 													<Containment>byReference</Containment>
 												</ClassRelationshipInFrame>
@@ -172,8 +165,8 @@
 													<Containment>inline</Containment>
 												</ClassRelationshipInFrame>
 												<!-- DATA MANAGED OBJECTT -->
-												<ClassRelationshipInFrame name="responsibilitySet">
-													<RelationshipRef nameOfClass="responsibilitySetRef"/>
+												<ClassRelationshipInFrame name="ResponsibilitySet">
+													<RelationshipRef nameOfClass="ResponsibilitySetRef"/>
 													<Mandatory>required</Mandatory>
 													<Containment>byReference</Containment>
 												</ClassRelationshipInFrame>
@@ -194,17 +187,17 @@
 												</ClassRelationshipInFrame>
 											</relationships>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="EU_PI_COMMON.ResourceFrame">
+										<ClassInFrame nameOfClass="ResourceFrame">
 											<ClassRefType>all</ClassRefType>
 											<Mandatory>required</Mandatory>
 										</ClassInFrame>
 										<!-- Specific -->
-										<ClassInFrame nameOfClass="EU_PI_COMMON.Operator"/>
-										<ClassInFrame nameOfClass="EU_PI_COMMON.Authority"/>
-										<ClassInFrame nameOfClass="EU_PI_COMMON.ResponsibilitySet"/>
-										<ClassInFrame nameOfClass="EU_PI_COMMON.Branding"/>
-										<ClassInFrame nameOfClass="EU_PI_COMMON.DataSource"/>
-										<ClassInFrame nameOfClass="EU_PI_COMMON.VehicleType"/>
+										<ClassInFrame nameOfClass="Operator"/>
+										<ClassInFrame nameOfClass="Authority"/>
+										<ClassInFrame nameOfClass="ResponsibilitySet"/>
+										<ClassInFrame nameOfClass="Branding"/>
+										<ClassInFrame nameOfClass="DataSource"/>
+										<ClassInFrame nameOfClass="VehicleType"/>
 									</classes>
 									<ModificationSet>all</ModificationSet>
 								</TypeOfFrame>
@@ -213,13 +206,13 @@
 									<FrameClassRef nameOfClass="SiteFrame"/>
 									<classes>
 										<!-- contents -->
-										<ClassInFrame nameOfClass="EU_PI_STOP.SiteFrame">
+										<ClassInFrame nameOfClass="SiteFrame">
 											<!-- contents -->
 											<ClassRefType>all</ClassRefType>
 											<Mandatory>required</Mandatory>
 										</ClassInFrame>
 										<!-- contents -->
-										<ClassInFrame nameOfClass="EU_PI_STOP.TopographicPlace">
+										<ClassInFrame nameOfClass="TopographicPlace">
 											<ClassRefType>memberReferences</ClassRefType>
 											<Mandatory>optional</Mandatory>
 											<attributes>
@@ -275,7 +268,7 @@
 												</ClassRelationshipInFrame>
 											</relationships>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="EU_PI_STOP.TopographicPlace.TopographicPlaceDescriptor">
+										<ClassInFrame nameOfClass="TopographicPlaceDescriptor">
 											<ClassRefType>members</ClassRefType>
 											<attributes>
 												<ClassAttributeInFrame name="Name">
@@ -286,7 +279,7 @@
 												</ClassAttributeInFrame>
 											</attributes>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="EU_PI_STOP.StopPlace">
+										<ClassInFrame nameOfClass="StopPlace">
 											<ClassRefType>all</ClassRefType>
 											<Mandatory>required</Mandatory>
 											<attributes>
@@ -403,7 +396,7 @@
 												</ClassRelationshipInFrame>
 											</relationships>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="EU_PI_STOP.StopPlace.Quay">
+										<ClassInFrame nameOfClass="Quay">
 											<ClassRefType>all</ClassRefType>
 											<Mandatory>optional</Mandatory>
 											<attributes>
@@ -505,7 +498,7 @@
 												</ClassRelationshipInFrame>
 											</relationships>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="EU_PI_STOP.StopPlace.StopPlaceEntrance">
+										<ClassInFrame nameOfClass="StopPlaceEntrance">
 											<Mandatory>optional</Mandatory>
 											<attributes>
 												<!-- ENTRANCE  -->
@@ -581,7 +574,7 @@
 												</ClassRelationshipInFrame>
 											</relationships>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="EU_PI_STOP.GroupOfStopPlaces">
+										<ClassInFrame nameOfClass="GroupOfStopPlaces">
 											<Mandatory>optional</Mandatory>
 											<attributes>
 												<!-- GROUP OF ENTITIES  -->
@@ -623,7 +616,7 @@
 												</ClassRelationshipInFrame>
 											</relationships>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="EU_PI_STOP.PointOfInterest">
+										<ClassInFrame nameOfClass="PointOfInterest">
 											<ClassRefType>all</ClassRefType>
 											<Mandatory>optional</Mandatory>
 											<attributes>
@@ -705,7 +698,7 @@
 											</relationships>
 										</ClassInFrame>
 										<!-- Embedded Classes -->
-										<ClassInFrame nameOfClass="EU_PI_STOP.StopPlace.SiteFacilitySet">
+										<ClassInFrame nameOfClass="SiteFacilitySet">
 											<ClassRefType>members</ClassRefType>
 											<Mandatory>optional</Mandatory>
 											<attributes>
@@ -716,7 +709,7 @@
 												<!--  TODO etc etc -->
 											</attributes>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="EU_PI_STOP.SiteElement.AccessibilityAssessment">
+										<ClassInFrame nameOfClass="AccessibilityAssessment">
 											<ClassRefType>members</ClassRefType>
 											<Mandatory>optional</Mandatory>
 											<attributes>
@@ -734,7 +727,7 @@
 												</ClassRelationshipInFrame>
 											</relationships>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="EU_PI_STOP.SiteElement.AccessibilityLimitation">
+										<ClassInFrame nameOfClass="AccessibilityLimitation">
 											<ClassRefType>members</ClassRefType>
 											<Mandatory>optional</Mandatory>
 											<attributes>
@@ -771,37 +764,35 @@
 											<Mandatory>required</Mandatory>
 										</ClassInFrame>
 										<!-- contents -->
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.TariffZone"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.Direction"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.RoutePoint"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.RouteLink"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.Route"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.Route.PointOnRoute"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.Line"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.FlexibleLine"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.Line.AllowedLineDirections"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.Network"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.GroupOfLines"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.DestinationDisplay"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.DestinationDisplay.DestinationDisplayVariant"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.ScheduledStopPoint"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.ServiceLink"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.ServiceJourneyPattern"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.ServiceJourneyPattern.StopPointInJourneyPattern"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.ServicePattern"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.ServicePattern.StopPointInJourneyPattern"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.ServicePattern.StopPointInJourneyPattern.FlexiblePointProperties"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.Connection"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.Connection.ConnectionEnd"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.SiteConnection"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.SiteConnection.SiteConnectionEnd"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.DefaultConnection"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.DefaultConnection.DefaultConnectionEnd"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.PassengerStopAssignment"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.PassengerStopAssignment.TrainStopAssignment"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.DynamicStopAssignment"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.ServicePattern.Notice"/>
-										<ClassInFrame nameOfClass="EU_PI_NETWORK.ServicePattern.NoticeAssignment"/>
+										<ClassInFrame nameOfClass="TariffZone"/>
+										<ClassInFrame nameOfClass="Direction"/>
+										<ClassInFrame nameOfClass="RoutePoint"/>
+										<ClassInFrame nameOfClass="RouteLink"/>
+										<ClassInFrame nameOfClass="Route"/>
+										<ClassInFrame nameOfClass="PointOnRoute"/>
+										<ClassInFrame nameOfClass="Line"/>
+										<ClassInFrame nameOfClass="FlexibleLine"/>
+										<ClassInFrame nameOfClass="allowedDirections"/>
+										<ClassInFrame nameOfClass="Network"/>
+										<ClassInFrame nameOfClass="GroupOfLines"/>
+										<ClassInFrame nameOfClass="DestinationDisplay"/>
+										<ClassInFrame nameOfClass="DestinationDisplayVariant"/>
+										<ClassInFrame nameOfClass="ScheduledStopPoint"/>
+										<ClassInFrame nameOfClass="ServiceLink"/>
+										<ClassInFrame nameOfClass="ServiceJourneyPattern"/>
+										<ClassInFrame nameOfClass="StopPointInJourneyPattern"/>
+										<ClassInFrame nameOfClass="ServicePattern"/>
+										<ClassInFrame nameOfClass="StopPointInJourneyPattern"/>
+										<ClassInFrame nameOfClass="FlexiblePointProperties"/>
+										<ClassInFrame nameOfClass="Connection"/>
+										<ClassInFrame nameOfClass="ConnectionEnd"/>
+										<ClassInFrame nameOfClass="SiteConnection"/>
+										<ClassInFrame nameOfClass="DefaultConnection"/>
+										<ClassInFrame nameOfClass="PassengerStopAssignment"/>
+										<ClassInFrame nameOfClass="PassengerBoardingPositionAssignment"/>
+										<ClassInFrame nameOfClass="DynamicStopAssignment"/>
+										<ClassInFrame nameOfClass="Notice"/>
+										<ClassInFrame nameOfClass="NoticeAssignment"/>
 									</classes>
 									<ModificationSet>all</ModificationSet>
 								</TypeOfFrame>
@@ -810,28 +801,27 @@
 									<FrameClassRef nameOfClass="TimetableFrame"/>
 									<classes>
 										<!-- frame -->
-										<ClassInFrame nameOfClass="EU_PI_TIMETABLE.TimetableFrame">
+										<ClassInFrame nameOfClass="TimetableFrame">
 											<ClassRefType>all</ClassRefType>
 											<Mandatory>required</Mandatory>
 										</ClassInFrame>
 										<!-- contents -->
-										<ClassInFrame nameOfClass="EU_PI_TIMETABLE.ServiceJourney"/>
-										<ClassInFrame nameOfClass="EU_PI_TIMETABLE.ServiceJourney.JourneyPart"/>
-										<ClassInFrame nameOfClass="EU_PI_TIMETABLE.ServiceJourney.TimetabledPassingTime"/>
-										<ClassInFrame nameOfClass="EU_PI_TIMETABLE.ServiceJourney.FlexibleServiceProperties"/>
-										<ClassInFrame nameOfClass="EU_PI_TIMETABLE.TemplateServiceJourney"/>
-										<ClassInFrame nameOfClass="EU_PI_TIMETABLE.TemplateServiceJourney.HeadwayJourneyGroup"/>
-										<ClassInFrame nameOfClass="EU_PI_TIMETABLE.ServiceFacilitySet"/>
-										<ClassInFrame nameOfClass="EU_PI_TIMETABLE.JourneyPartCouple"/>
-										<ClassInFrame nameOfClass="EU_PI_TIMETABLE.JourneyPartCouplePosition"/>
-										<ClassInFrame nameOfClass="EU_PI_TIMETABLE.TrainNumber"/>
-										<ClassInFrame nameOfClass="EU_PI_TIMETABLE.Train"/>
-										<ClassInFrame nameOfClass="EU_PI_TIMETABLE.TrainElement"/>
-										<ClassInFrame nameOfClass="EU_PI_TIMETABLE.Train.TrainComponent"/>
-										<ClassInFrame nameOfClass="EU_PI_TIMETABLE.VehicleType"/>
-										<ClassInFrame nameOfClass="EU_PI_TIMETABLE.ServiceJourneyInterchange"/>
-										<ClassInFrame nameOfClass="EU_PI_TIMETABLE.GroupOfServices"/>
-										<ClassInFrame nameOfClass="EU_PI_TIMETABLE.GroupOfServices.GroupOfServicesMember"/>
+										<ClassInFrame nameOfClass="ServiceJourney"/>
+										<ClassInFrame nameOfClass="JourneyPart"/>
+										<ClassInFrame nameOfClass="TimetabledPassingTime"/>
+										<ClassInFrame nameOfClass="FlexibleServiceProperties"/>
+										<ClassInFrame nameOfClass="TemplateServiceJourney"/>
+										<ClassInFrame nameOfClass="HeadwayJourneyGroup"/>
+										<ClassInFrame nameOfClass="ServiceFacilitySet"/>
+										<ClassInFrame nameOfClass="JourneyPartCouple"/>
+										<ClassInFrame nameOfClass="TrainNumber"/>
+										<ClassInFrame nameOfClass="Train"/>
+										<ClassInFrame nameOfClass="TrainElement"/>
+										<ClassInFrame nameOfClass="TrainComponent"/>
+										<ClassInFrame nameOfClass="VehicleType"/>
+										<ClassInFrame nameOfClass="ServiceJourneyInterchange"/>
+										<ClassInFrame nameOfClass="GroupOfServices"/>
+										<ClassInFrame nameOfClass="GroupOfServicesMember"/>
 									</classes>
 									<ModificationSet>all</ModificationSet>
 								</TypeOfFrame>
@@ -840,28 +830,28 @@
 									<FrameClassRef nameOfClass="ServiceCalendarFrame"/>
 									<classes>
 										<!-- frame -->
-										<ClassInFrame nameOfClass="EU_PI_CALENDAR.ServiceCalendarFrame">
+										<ClassInFrame nameOfClass="ServiceCalendarFrame">
 											<ClassRefType>all</ClassRefType>
 											<Mandatory>required</Mandatory>
 										</ClassInFrame>
 										<!-- contents -->
-										<ClassInFrame nameOfClass="EU_PI_CALENDAR.DayType"/>
-										<ClassInFrame nameOfClass="EU_PI_CALENDAR.ServiceCalendar"/>
-										<ClassInFrame nameOfClass="EU_PI_CALENDAR.OperatingDay"/>
-										<ClassInFrame nameOfClass="EU_PI_CALENDAR.OperatingPeriod"/>
-										<ClassInFrame nameOfClass="EU_PI_CALENDAR.UicOperatingPeriod"/>
-										<ClassInFrame nameOfClass="EU_PI_CALENDAR.DayTypeAssignment"/>
+										<ClassInFrame nameOfClass="DayType"/>
+										<ClassInFrame nameOfClass="ServiceCalendar"/>
+										<ClassInFrame nameOfClass="OperatingDay"/>
+										<ClassInFrame nameOfClass="OperatingPeriod"/>
+										<ClassInFrame nameOfClass="UicOperatingPeriod"/>
+										<ClassInFrame nameOfClass="DayTypeAssignment"/>
 									</classes>
 									<ModificationSet>all</ModificationSet>
 								</TypeOfFrame>
 								<TypeOfFrame version="epip:1.0" id="epip:EU_PI_METADATA">
 									<Name>EPIP Profile metadata </Name>
-									<FrameClassRef nameOfClass="EU_PI_COMMON.ResourceFrame"/>
+									<FrameClassRef nameOfClass="ResourceFrame"/>
 									<classes>
-										<ClassInFrame nameOfClass="EU_PI_METADATA.TypeOfFrame"/>
-										<ClassInFrame nameOfClass="EU_PI_METADATA.TypeOfPlace"/>
-										<ClassInFrame nameOfClass="EU_PI_METADATA.Organisation"/>
-										<ClassInFrame nameOfClass="EU_PI_METADATA.ResponsibilitySet"/>
+										<ClassInFrame nameOfClass="TypeOfFrame"/>
+										<ClassInFrame nameOfClass="TypeOfPlace"/>
+										<ClassInFrame nameOfClass="Organisation"/>
+										<ClassInFrame nameOfClass="ResponsibilitySet"/>
 									</classes>
 									<typesOfEntity>
 										<TypeOfPlaceRef version="epip:1.0" ref="epip:general"/>
@@ -885,23 +875,23 @@
 										<ClassInFrameRef nameOfClass="ResourceFrame"/>
 										<!-- Use Common definitions -->
 										<!-- Specific -->
-										<ClassInFrame nameOfClass="EU_PI_LINE_OFFER.SiteFrame-EU_PI_STOP">
+										<ClassInFrame nameOfClass="SiteFrame">
 											<ClassRefType>all</ClassRefType>
 											<Mandatory>required</Mandatory>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="EU_PI_LINE_OFFER.ServiceFrame-EU_PI_NETWORK">
+										<ClassInFrame nameOfClass="ServiceFrame">
 											<ClassRefType>all</ClassRefType>
 											<Mandatory>required</Mandatory>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="EU_PI_LINE_OFFER.TimetableFrame-EU_PI_TIMETABLE">
+										<ClassInFrame nameOfClass="TimetableFrame">
 											<ClassRefType>all</ClassRefType>
 											<Mandatory>required</Mandatory>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="EU_PI_LINE_OFFER.ServiceCalendarFrame-EU_PI_CALENDAR">
+										<ClassInFrame nameOfClass="ServiceCalendarFrame">
 											<ClassRefType>all</ClassRefType>
 											<Mandatory>required</Mandatory>
 										</ClassInFrame>
-										<ClassInFrame nameOfClass="EU_PI_LINE_OFFER.ResourceFrame-EU_PI_METADATA">
+										<ClassInFrame nameOfClass="ResourceFrame">
 											<ClassRefType>all</ClassRefType>
 											<Mandatory>optional</Mandatory>
 										</ClassInFrame>
@@ -926,17 +916,12 @@
 										<ClassInFrameRef nameOfClass="VersionFrame"/>
 										<!-- Use Common definitions -->
 										<!--  CONTENTS -->
-										<ClassInFrameRef nameOfClass="EU_PI_LINE_OFFER.ResourceFrame" classRefType="all"/>
-										<!-- epip:EU_PI_COMMON-->
-										<ClassInFrameRef nameOfClass="EU_PI_LINE_OFFER.SiteFrame" classRefType="all"/>
-										<!-- epip:EU_PI_STOP -->
-										<ClassInFrameRef nameOfClass="EU_PI_LINE_NETWORK.ServicFrame" classRefType="all"/>
-										<!-- epip:EU_PI_NETWORK -->
-										<ClassInFrameRef nameOfClass="EU_PI_LINE_TIMETABLE.TimetableFrame" classRefType="all"/>
-										<!-- epip:EU_PI_TIMETABLE -->
-										<ClassInFrameRef nameOfClass="EU_PI_LINE_CALENDAR.ServiceCalendarFrame" classRefType="all"/>
-										<!-- epip:EU_PI_CALENDAR -->
-										<ClassInFrameRef nameOfClass="EU_PI_LINE_OFFER.ResourceFrameEU_PI_METADATA" classRefType="all"/>
+							<ClassInFrameRef nameOfClass="ResourceFrame" classRefType="all"/>
+										<ClassInFrameRef nameOfClass="SiteFrame" classRefType="all"/>
+										<ClassInFrameRef nameOfClass="ServiceFrame" classRefType="all"/>
+										<ClassInFrameRef nameOfClass="TimetableFrame" classRefType="all"/>
+										<ClassInFrameRef nameOfClass="ServiceCalendarFrame" classRefType="all"/>
+										<ClassInFrameRef nameOfClass="ResourceFrame" classRefType="all"/>
 									</classes>
 									<includes>
 										<TypeOfFrameRef version="epip:1.0" ref="epip:EU_PI_COMMON"/>
@@ -958,9 +943,9 @@
 										<ClassInFrameRef nameOfClass="VersionFrame"/>
 										<!-- Use Common definitions -->
 										<!--  CONTENTS -->
-										<ClassInFrameRef nameOfClass="EU_PI_LINE_OFFER.ResourceFrame.EU_PI_COMMON" classRefType="all"/>
-										<ClassInFrameRef nameOfClass="EU_PI_LINE_OFFER.SiteFrame.EU_PI_STOP" classRefType="all"/>
-										<ClassInFrameRef nameOfClass="EU_PI_LINE_OFFER.ResourceFrameEU_PI_METADATA" classRefType="all"/>
+										<ClassInFrameRef nameOfClass="ResourceFrame" classRefType="all"/>
+										<ClassInFrameRef nameOfClass="SiteFrame" classRefType="all"/>
+										<ClassInFrameRef nameOfClass="ResourceFrame" classRefType="all"/>
 									</classes>
 									<includes>
 										<TypeOfFrameRef version="epip:1.0" ref="epip:EU_PI_COMMON"/>
