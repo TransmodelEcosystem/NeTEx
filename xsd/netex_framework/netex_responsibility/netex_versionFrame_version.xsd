@@ -493,7 +493,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="Mandatory" type="MandatoryEnumeration" default="optional" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether element is required, optional or not allowed.</xsd:documentation>
+					<xsd:documentation>Whether element is required, optional or prohibited.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="attributes" minOccurs="0">
@@ -549,7 +549,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="Mandatory" type="MandatoryEnumeration" default="optional" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether element is required, optional or not allowed.</xsd:documentation>
+					<xsd:documentation>Whether element is required, optional or prohibited.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -573,7 +573,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="RelationshipRef"/>
 			<xsd:element name="Mandatory" type="MandatoryEnumeration" default="optional" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether relationship is required, optional or not allowed.</xsd:documentation>
+					<xsd:documentation>Whether relationship is required, optional or prohibited.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Containment" type="ContainmentEnumeration" default="both" minOccurs="0">

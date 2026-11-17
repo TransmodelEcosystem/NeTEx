@@ -868,9 +868,12 @@
 									<Name>Network and schedule data for a single line.</Name>
 									<FrameClassRef nameOfClass="CompositeFrame"/>
 									<classes>
-										<ClassInFrameRef nameOfClass="DataManagedObject">Use Common definitions</ClassInFrameRef>
-										<ClassInFrameRef nameOfClass="VersionFrame">Use Common definitions</ClassInFrameRef>
-										<ClassInFrameRef nameOfClass="ResourceFrame">Use Common definitions</ClassInFrameRef>
+										<ClassInFrameRef nameOfClass="DataManagedObject"/>
+										<!-- Use Common definitions -->
+										<ClassInFrameRef nameOfClass="VersionFrame"/>
+										<!-- Use Common definitions -->
+										<ClassInFrameRef nameOfClass="ResourceFrame"/>
+										<!-- Use Common definitions -->
 										<!-- Specific -->
 										<ClassInFrame nameOfClass="SiteFrame">
 											<ClassRefType>all</ClassRefType>
@@ -908,14 +911,16 @@
 									<FrameClassRef nameOfClass="CompositeFrame"/>
 									<classes>
 										<!--  SUPERCLASSES -->
-										<ClassInFrameRef nameOfClass="DataManagedObject">Use Common definitions</ClassInFrameRef>
-										<ClassInFrameRef nameOfClass="VersionFrame">Use Common definitions</ClassInFrameRef>
+										<ClassInFrameRef nameOfClass="DataManagedObject"/>
+										<!-- Use Common definitions -->
+										<ClassInFrameRef nameOfClass="VersionFrame"/>
+										<!-- Use Common definitions -->
 										<!--  CONTENTS -->
-										<ClassInFrameRef nameOfClass="ResourceFrame" classRefType="all">epip:EU_PI_COMMON</ClassInFrameRef>
-										<ClassInFrameRef nameOfClass="SiteFrame" classRefType="all">epip:EU_PI_STOP</ClassInFrameRef>
-										<ClassInFrameRef nameOfClass="ServiceFrame" classRefType="all">epip:EU_PI_NETWORK</ClassInFrameRef>
-										<ClassInFrameRef nameOfClass="TimetableFrame" classRefType="all">epip:EU_PI_TIMETABLE</ClassInFrameRef>
-										<ClassInFrameRef nameOfClass="ServiceCalendarFrame" classRefType="all">epip:EU_PI_CALENDAR</ClassInFrameRef>
+										<ClassInFrameRef nameOfClass="ResourceFrame" classRefType="all"/>
+										<ClassInFrameRef nameOfClass="SiteFrame" classRefType="all"/>
+										<ClassInFrameRef nameOfClass="ServiceFrame" classRefType="all"/>
+										<ClassInFrameRef nameOfClass="TimetableFrame" classRefType="all"/>
+										<ClassInFrameRef nameOfClass="ServiceCalendarFrame" classRefType="all"/>
 										<ClassInFrameRef nameOfClass="ResourceFrame" classRefType="all"/>
 									</classes>
 									<includes>
@@ -933,8 +938,10 @@
 									<FrameClassRef nameOfClass="CompositeFrame"/>
 									<classes>
 										<!--  SUPERCLASSES -->
-										<ClassInFrameRef nameOfClass="DataManagedObject">Use Common definitions</ClassInFrameRef>
-										<ClassInFrameRef nameOfClass="VersionFrame">Use Common definitions</ClassInFrameRef>
+										<ClassInFrameRef nameOfClass="DataManagedObject"/>
+										<!-- Use Common definitions -->
+										<ClassInFrameRef nameOfClass="VersionFrame"/>
+										<!-- Use Common definitions -->
 										<!--  CONTENTS -->
 										<ClassInFrameRef nameOfClass="ResourceFrame" classRefType="all"/>
 										<ClassInFrameRef nameOfClass="SiteFrame" classRefType="all"/>

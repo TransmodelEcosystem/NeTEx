@@ -10502,15 +10502,34 @@ Rail transport, Roads and Road transport
 		<xsd:annotation>
 			<xsd:documentation>Type for a reference to the Class of a ENTITY.</xsd:documentation>
 		</xsd:annotation>
-		<xsd:simpleContent>
-			<xsd:extension base="xsd:string">
-				<xsd:attribute name="nameOfClass" type="NameOfClass" use="required">
-					<xsd:annotation>
-						<xsd:documentation>Name of referenced Class.</xsd:documentation>
-					</xsd:annotation>
-				</xsd:attribute>
-			</xsd:extension>
-		</xsd:simpleContent>
+		<xsd:sequence>
+			<xsd:element name="ClassElement" type="ClassElementStructure" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="nameOfClass" type="NameOfClass" use="required">
+			<xsd:annotation>
+				<xsd:documentation>Name of referenced class.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="use" type="MandatoryEnumeration" default="optional">
+			<xsd:annotation>
+				<xsd:documentation>Whether the member is required, optional or prohibited.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="ClassElementStructure">
+		<xsd:annotation>
+			<xsd:documentation>An element in an ENTITY.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="nameOfElement" type="NameOfClass" use="required">
+			<xsd:annotation>
+				<xsd:documentation>Name of referenced class.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="use" type="MandatoryEnumeration" default="optional">
+			<xsd:annotation>
+				<xsd:documentation>Whether the member is required, optional or prohibited.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
 	</xsd:complexType>
 	<!-- ==== Entity Class =================================================================== -->
 	<xsd:element name="ClassInFrameRef" type="ClassInFrameRefStructure" substitutionGroup="ClassRef">
@@ -10539,17 +10558,17 @@ Rail transport, Roads and Road transport
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:enumeration value="members">
 				<xsd:annotation>
-					<xsd:documentation source="comment">Include elements that meet selection criteria (e.g. validity condition).</xsd:documentation>
+					<xsd:documentation>Include elements that meet selection criteria (e.g. validity condition).</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="memberReferences">
 				<xsd:annotation>
-					<xsd:documentation source="Comment">Include elements that are referenced by primary element. E.g. TYPES OF VALUE, OPERATOR etc.</xsd:documentation>
+					<xsd:documentation>Include elements that are referenced by primary element. E.g. TYPES OF VALUE, OPERATOR etc.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="all">
 				<xsd:annotation>
-					<xsd:documentation source="comment">Include all elements.</xsd:documentation>
+					<xsd:documentation>Include all elements.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>
@@ -10561,15 +10580,15 @@ Rail transport, Roads and Road transport
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:enumeration value="required">
 				<xsd:annotation>
-					<xsd:documentation source="comment">Include elements that meet selection criteria (e.g. validity condition).</xsd:documentation>
+					<xsd:documentation source="comment">Required.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="optional">
 				<xsd:annotation>
-					<xsd:documentation source="Comment">Include elements that are referenced by primary element. E.g. TYPES OF VALUE, OPERATOR etc.</xsd:documentation>
+					<xsd:documentation source="Comment">Optional.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
-			<xsd:enumeration value="notAllowed">
+			<xsd:enumeration value="prohibited">
 				<xsd:annotation>
 					<xsd:documentation source="comment">Must not be included.</xsd:documentation>
 				</xsd:annotation>
