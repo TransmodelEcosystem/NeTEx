@@ -126,11 +126,6 @@ Rail transport, Roads and Road transport
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
-		<!-- 
-		<xsd:unique name="SfUniqueLineId">
-			<xsd:selector xpath=".//netex:lines/Line"/>
-			<xsd:field xpath="Id"/>
-		</xsd:unique> -->
 	</xsd:element>
 	<xsd:complexType name="Service_VersionFrameStructure">
 		<xsd:annotation>
