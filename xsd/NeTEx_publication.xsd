@@ -2200,6 +2200,15 @@
 			<xsd:field xpath="@version"/>
 		</xsd:key>
 		<!-- =====OperatingDay============================== -->
+		<!-- =====OperatingDay unique==In Calendar======================== -->
+		<xsd:unique name="OperatingDay_UniqueCalendarDateInCalendar">
+			<xsd:annotation>
+				<xsd:documentation>Each date is only allowed once per calendar.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:selector xpath=".//netex:ServiceCalendarFrame/netex:operatingDays/netex:OperatingDay"/>
+			<xsd:field xpath="netex:CalendarDate"/>
+			<xsd:field xpath="@version"/>
+		</xsd:unique>
 		<!-- =====OperatingDay Key ========================== -->
 		<xsd:keyref name="OperatingDay_KeyRef" refer="netex:OperatingDay_AnyVersionedKey">
 			<xsd:selector xpath=".//netex:OperatingDayRef | .//netex:FromOperatingDayRef | .//netex:ToOperatingDayRef"/>
