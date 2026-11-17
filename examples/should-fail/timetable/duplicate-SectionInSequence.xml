@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+	<PublicationTimestamp>2020-01-01T12:00:00Z</PublicationTimestamp>
+	<ParticipantRef>TEST</ParticipantRef>
+	<dataObjects>
+		<CompositeFrame version="1.0" id="TEST:CompositeFrame:1">
+			<frames>
+				<ServiceFrame version="1.0" id="TEST:ServiceFrame:1">
+					<journeyPatterns>
+						<JourneyPattern version="1.0" id="TEST:JourneyPattern:1">
+							<sectionsInSequence>
+								<SectionInSequence version="1.0" id="TEST:SectionInSequence:1">
+									<SectionRef version="1.0" ref="TEST:GeneralSection:1"/>
+								</SectionInSequence>
+								<SectionInSequence version="1.0" id="TEST:SectionInSequence:1">
+									<SectionRef version="1.0" ref="TEST:GeneralSection:1"/>
+								</SectionInSequence>
+							</sectionsInSequence>
+						</JourneyPattern>
+					</journeyPatterns>
+				</ServiceFrame>
+			</frames>
+		</CompositeFrame>
+	</dataObjects>
+</PublicationDelivery>
