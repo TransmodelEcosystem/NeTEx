@@ -645,6 +645,15 @@ Provides a general purose wrapper for NeTEx data content.</xsd:documentation>
 			<xsd:field xpath="@version"/>
 		</xsd:key>
 		<!-- =====SectionInSequence ============================== -->
+		<!-- =====SectionInSequence unique========================== -->
+		<xsd:unique name="SectionInSequence_UniqueBy_Id_Version_Order">
+			<xsd:annotation>
+				<xsd:documentation>Every [SectionInSequence Id + Version] must be unique within document.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:selector xpath=".//netex:SectionInSequence"/>
+			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
+		</xsd:unique>
 		<!-- =====Zone============================== -->
 		<xsd:keyref name="Zone_AnyKeyRef" refer="netex:Zone_AnyVersionedKey">
 			<xsd:selector xpath=".//netex:ZoneRef |   .//netex:ParentZoneRef | .//netex:ProjectedZoneRef | .//netex:ProjectToZoneRef  |.//netex:ProjectedObjectRef"/>
