@@ -1751,6 +1751,15 @@ Provides a general purose wrapper for NeTEx data content.</xsd:documentation>
 			<xsd:field xpath="@version"/>
 		</xsd:key>
 		<!-- =====ValidityCondition============================== -->
+		<!-- =====ValidityCondition unique========================== -->
+		<xsd:unique name="ValidityCondition_UniqueBy_Id_Version">
+			<xsd:annotation>
+				<xsd:documentation>Every [ValidityCondition Id + Version] must be unique within document.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:selector xpath=".//netex:ValidityCondition | .//netex:ValidityTrigger | .//netex:ValidityRuleParameter | .//netex:ValidBetween"/>
+			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
+		</xsd:unique>
 		<!-- =====ValidityCondition Key ========================== -->
 		<xsd:keyref name="ValidityCondition_KeyRef" refer="netex:ValidityCondition_AnyVersionedKey">
 			<xsd:selector xpath=".//netex:ValidityConditionRef | .//netex:ValidityTriggerRef | .//netex:ValidityRuleParameterRef | .//netex:WithConditionRef"/>
