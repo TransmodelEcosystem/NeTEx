@@ -916,7 +916,7 @@
 										<ClassInFrameRef nameOfClass="VersionFrame"/>
 										<!-- Use Common definitions -->
 										<!--  CONTENTS -->
-							<ClassInFrameRef nameOfClass="ResourceFrame" classRefType="all"/>
+										<ClassInFrameRef nameOfClass="ResourceFrame" classRefType="all"/>
 										<ClassInFrameRef nameOfClass="SiteFrame" classRefType="all"/>
 										<ClassInFrameRef nameOfClass="ServiceFrame" classRefType="all"/>
 										<ClassInFrameRef nameOfClass="TimetableFrame" classRefType="all"/>
