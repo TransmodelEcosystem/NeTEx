@@ -6506,6 +6506,15 @@
 			<xsd:field xpath="@version"/>
 		</xsd:key>
 		<!-- ===== UsageValidityPeriod Key ========================== -->
+		<!-- ===== UsageValidityPeriodting unique========================== -->
+		<xsd:unique name="UsageValidityPeriod">
+			<xsd:annotation>
+				<xsd:documentation>Every [UsageValidityPeriod Id + Version] must be unique within document.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:selector xpath=".//netex:UsageValidityPeriod | .//netex:ValidityPeriod"/>
+			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
+		</xsd:unique>
 		<xsd:keyref name="UsageValidityPeriod_KeyRef" refer="netex:UsageValidityPeriod_AnyVersionedKey">
 			<xsd:selector xpath=".//netex:UsageValidityPeriodRef"/>
 			<xsd:field xpath="@ref"/>
