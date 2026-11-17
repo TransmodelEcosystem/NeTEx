@@ -979,6 +979,15 @@
 			<xsd:field xpath="@version"/>
 		</xsd:key>
 		<!-- =====GroupOfLinkSequences============================== -->
+		<!-- =====GroupOfLinkSequences unique========================== -->
+		<xsd:unique name="GroupOfLinkSequences_UniqueBy_Id_Version">
+			<xsd:annotation>
+				<xsd:documentation>Every [GroupOfLinkSequences Id + Version] must be unique within document.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:selector xpath=".//netex:GroupOfLinkSequences"/>
+			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
+		</xsd:unique>
 		<!-- =====SimpleFeature============================== -->
 		<!-- =====SimpleFeature Key ========================== -->
 		<xsd:keyref name="SimpleFeature_KeyRef" refer="netex:SimpleFeature_AnyVersionedKey">
