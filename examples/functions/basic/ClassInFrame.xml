@@ -52,9 +52,9 @@
 							<includes>
 								<TypeOfFrame version="01" id="Neptune:TypeOfFrame:TimeTableFrame">
 									<Name>Neptune Profile:ServiceCalendar  Frame </Name>
-									<FrameClassRef nameOfClass="TimeTableFrame"/>
+									<FrameClassRef nameOfClass="TimetableFrame"/>
 									<classes>
-										<ClassInFrameRef classRefType="members" nameOfClass="TimeTableFrame">
+										<ClassInFrameRef classRefType="members" nameOfClass="TimetableFrame">
 											<ClassElement nameOfElement="passingTimes" use="required"/>
 											<ClassElement nameOfElement="calls" use="prohibited"/>
 										</ClassInFrameRef>
