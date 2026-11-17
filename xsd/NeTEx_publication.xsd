@@ -4962,6 +4962,14 @@
 		</xsd:key>
 		<!-- =====JOURNEY Constraints========================= -->
 		<!-- ===== Journey================== -->
+		<xsd:unique name="TemplateVehicleJourney_UniqueBy_Id_Version">
+			<xsd:annotation>
+				<xsd:documentation>Every [TemplateVehicleJourney Id + Version] must be unique within document.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:selector xpath=".//netex:TemplateVehicleJourney"/>
+			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
+		</xsd:unique>
 		<!-- =====Journey Key ========================== -->
 		<xsd:keyref name="Journey_KeyRef" refer="netex:Journey_AnyVersionedKey">
 			<xsd:selector xpath=".//netex:ServiceJourneyRef | .//netex:VehicleJourneyRef | .//netex:DatedVehicleJourneyRef | .//netex:NormalDatedVehicleJourneyRef | .//netex:TemplateServiceJourneyRef | .//netex:DeadRunRef | .//netex:FromJourneyRef | .//netex:ToJourneyRef"/>
