@@ -25,6 +25,7 @@ TT="xsd/NeTEx_publication_timetable.xsd"
 schemas=(); files=(); expected=()
 should_fail() { schemas+=("$1"); files+=("$2"); expected+=("$3"); }
 
+should_fail "${PUB}" examples/should-fail/duplicate-CalendarDate.xml                   "Duplicate key-sequence ['2020-01-01', '1.0']"
 should_fail "${PUB}" examples/should-fail/duplicate-GroupOfLinkSequences.xml           "Duplicate key-sequence ['TEST:GroupOfLinkSequences:1', '1.0']"
 should_fail "${PUB}" examples/should-fail/duplicate-TemplateVehicleJourney.xml         "Duplicate key-sequence ['TEST:TemplateVehicleJourney:1', '1.0']"
 should_fail "${PUB}" examples/should-fail/duplicate-ValidBetween.xml                   "Duplicate key-sequence ['TEST:ValidBetween:1', '1.0']"
