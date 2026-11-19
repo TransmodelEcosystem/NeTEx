@@ -13,7 +13,7 @@ Frames (gruppering)
 	
 (RESOURCE FRAME med FrameDefaults og organization er utelatt for å forenkle eksempelet)
 -->
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" version="1.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../../xsd/NeTEx_publication.xsd">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" version="ntx:2.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../../xsd/NeTEx_publication.xsd">
 	<PublicationTimestamp>2016-04-29T12:30:00.0Z</PublicationTimestamp>
 	<ParticipantRef>NSR</ParticipantRef>
 	<dataObjects>

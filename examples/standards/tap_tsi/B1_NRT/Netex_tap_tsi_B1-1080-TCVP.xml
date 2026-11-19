@@ -9,7 +9,7 @@ This example provides an example of encodeing TAP TSI  NRT  fares in NeTEx XML
  
 (C) CEN   Copyright 2014
 1080DB AG-->
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../../xsd/NeTEx_publication.xsd">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="ntx:2.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../../xsd/NeTEx_publication.xsd">
 	<PublicationTimestamp>2013-06-24T09:30:47.0Z</PublicationTimestamp>
 	<ParticipantRef>1080</ParticipantRef>
 	<!--- ======WHAT WAS REQUESTED ========== -->

@@ -3,7 +3,7 @@
   NeTEx IFOPT representation of Tekniska Högskolan which is used for Bus and Metro in Stockholm (reduced)
 
  -->
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:noptis="http://www.noptis.org/noptis" version="1.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:noptis="http://www.noptis.org/noptis" version="ntx:2.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
 	<PublicationTimestamp>2010-12-17T09:30:47.0Z</PublicationTimestamp>
 	<ParticipantRef>SYS001</ParticipantRef>
 	<PublicationRequest version="1.0">
