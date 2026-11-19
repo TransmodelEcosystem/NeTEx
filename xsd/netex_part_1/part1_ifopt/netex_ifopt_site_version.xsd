@@ -141,7 +141,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="facilities" type="siteFacilitySets_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Facilities available at SITe.</xsd:documentation>
+					<xsd:documentation>Facilities available at SITE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -224,7 +224,7 @@ Rail transport, Roads and Road transport
 			</xsd:group>
 			<xsd:element name="levels" type="levels_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>LEVELs found within SITe.</xsd:documentation>
+					<xsd:documentation>LEVELs found within SITE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="entrances" type="siteEntrances_RelStructure" minOccurs="0">
@@ -339,7 +339,7 @@ Rail transport, Roads and Road transport
 	</xsd:element>
 	<xsd:complexType name="SiteEntrance_VersionStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for SITE ENTRANCe.</xsd:documentation>
+			<xsd:documentation>Type for SITE ENTRANCE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="SiteComponent_VersionStructure">

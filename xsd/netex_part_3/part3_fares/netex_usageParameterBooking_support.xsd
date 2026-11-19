@@ -138,7 +138,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="reserve">
 				<xsd:annotation>
-					<xsd:documentation>Reervation but not necessarily payment</xsd:documentation>
+					<xsd:documentation>Reservation but not necessarily payment</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="payForPreviousOrder">

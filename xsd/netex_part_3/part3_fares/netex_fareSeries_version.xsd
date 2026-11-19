@@ -169,12 +169,12 @@
 			</xsd:element>
 			<xsd:element name="prices" type="seriesConstraintPrices_RelStructure" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation>Frices for the SERIES CONSTRAINTs (Needed for TAP TSI)</xsd:documentation>
+					<xsd:documentation>Prices for the SERIES CONSTRAINTs (Needed for TAP TSI)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="replaces" type="seriesConstraintRefs_RelStructure" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation>Replaces the speciified SERIES CONSTRAINTs (Needed for TAP TSI)</xsd:documentation>
+					<xsd:documentation>Replaces the specified SERIES CONSTRAINTs (Needed for TAP TSI)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

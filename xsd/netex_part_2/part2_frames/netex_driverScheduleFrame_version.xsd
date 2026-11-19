@@ -50,5 +50,5 @@
 			<xsd:group ref="DutyFrameGroup"/>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- ====Jouurney========================================-->
+	<!-- ====Journey========================================-->
 </xsd:schema>

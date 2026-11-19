@@ -59,7 +59,7 @@ Rail transport, Roads and Road transport
 		<xsd:documentation>NeTEX: Entitlement USAGE PARAMETER identifier types.</xsd:documentation>
 	</xsd:annotation>
 	<xsd:include schemaLocation="netex_usageParameter_support.xsd"/>
-	<!-- === ENTTITLEMENT REQUIRED PARAMETER======================================= -->
+	<!-- === ENTITLEMENT REQUIRED PARAMETER======================================= -->
 	<xsd:complexType name="entitlementRequiredRefs_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for references to a ENTITLEMENT REQUIRED PARAMETER.</xsd:documentation>
@@ -118,7 +118,7 @@ Rail transport, Roads and Road transport
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<!-- === ENTTITLEMENT GIven PARAMETER======================================= -->
+	<!-- === ENTITLEMENT GIVEN PARAMETER======================================= -->
 	<xsd:complexType name="entitlementGivenRefs_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for references to a ENTITLEMENT GIVEN PARAMETER.</xsd:documentation>
@@ -177,7 +177,7 @@ Rail transport, Roads and Road transport
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<!-- === ENTTITLEMENT ENUMERATIONS====================================== -->
+	<!-- === ENTITLEMENT ENUMERATIONS====================================== -->
 	<xsd:simpleType name="EntitlementTypeEnumeration">
 		<xsd:annotation>
 			<xsd:documentation>Allowed values for ENTITLEMENT TYPE Type.</xsd:documentation>
@@ -297,7 +297,7 @@ Rail transport, Roads and Road transport
 	</xsd:simpleType>
 	<xsd:simpleType name="SameTypeOfTravelDocumentEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>Allowed values for Type of Trave lDocument ENTITLEMENT CONSTRAINT.</xsd:documentation>
+			<xsd:documentation>Allowed values for Type of Travel Document ENTITLEMENT CONSTRAINT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:enumeration value="any"/>

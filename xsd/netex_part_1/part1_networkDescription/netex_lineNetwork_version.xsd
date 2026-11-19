@@ -64,7 +64,7 @@ Rail transport, Roads and Road transport
 		<xsd:documentation>NeTEx: LINE NETWORK Elements.</xsd:documentation>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
-	<!-- ===ENTIITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
 	<xsd:group name="LineNetworkInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>LINE NETWORK related elements in frame.</xsd:documentation>
@@ -222,7 +222,7 @@ Rail transport, Roads and Road transport
 				</xsd:element>
 				<xsd:element name="members" type="commonSectionPointMembers_RelStructure">
 					<xsd:annotation>
-						<xsd:documentation>[DEPRECATED: renamed to PointsOnSection - included for backwards comaptibilty - use PointsOnSection instead Ordered collection of POINTS used in the COMMON SECTION.</xsd:documentation>
+						<xsd:documentation>[DEPRECATED: renamed to PointsOnSection - included for backwards compatibility - use PointsOnSection instead Ordered collection of POINTS used in the COMMON SECTION.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
 			</xsd:choice>

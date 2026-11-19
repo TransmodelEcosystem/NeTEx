@@ -137,7 +137,7 @@ Rail transport, Roads and Road transport
 	<!-- ====== OFF SITE PATH LINK ============================================= -->
 	<xsd:element name="OffSitePathLink" substitutionGroup="Link">
 		<xsd:annotation>
-			<xsd:documentation>A link outside of a SITE between any two PLACEs ( PKACES PATH JUNCTIONs) that represents a step in a possible route for pedestrians, cyclists or other out of vehicle passengers within or between a PLACE. +v2.0</xsd:documentation>
+			<xsd:documentation>A link outside of a SITE between any two PLACEs ( PLACES PATH JUNCTIONs) that represents a step in a possible route for pedestrians, cyclists or other out of vehicle passengers within or between a PLACE. +v2.0</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
@@ -405,7 +405,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="placeEquipments" type="placeEquipments_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Items of fixed EQUIPMENT that may be lused at the spot 0 in a particular SIGN EQUIPMENT and BEACON EQUIPMENT. +v2.0</xsd:documentation>
+					<xsd:documentation>Items of fixed EQUIPMENT that may be used at the spot 0 in a particular SIGN EQUIPMENT and BEACON EQUIPMENT. +v2.0</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

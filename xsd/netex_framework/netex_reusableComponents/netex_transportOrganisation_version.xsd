@@ -72,7 +72,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NetEX:TRANSPORT ORGANISATION types for NeTEx Network Exchange.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
 	<xsd:include schemaLocation="../netex_genericFramework/netex_organisation_version.xsd"/>
 	<xsd:group name="OrganisationInFrameGroup">
 		<xsd:annotation>

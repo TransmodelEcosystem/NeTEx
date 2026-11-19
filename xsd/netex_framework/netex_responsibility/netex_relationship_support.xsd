@@ -257,7 +257,7 @@ Rail transport, Roads and Road transport
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<!--====External Obect Reference =======================================================================-->
+	<!--====External Object Reference =======================================================================-->
 	<xsd:complexType name="ExternalObjectRefStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for a reference.to an external object.</xsd:documentation>

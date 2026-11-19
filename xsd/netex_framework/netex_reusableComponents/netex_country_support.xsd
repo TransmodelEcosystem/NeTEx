@@ -1328,7 +1328,7 @@ Rail transport, Roads and Road transport
 	</xsd:simpleType>
 	<xsd:simpleType name="CountryPrincipalityCodeType">
 		<xsd:annotation>
-			<xsd:documentation>Type for Country Identifier. ISO 3166-2 (3 character ISo code). +v1.1.</xsd:documentation>
+			<xsd:documentation>Type for Country Identifier. ISO 3166-2 (3 character ISO code). +v1.1.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:string"/>
 	</xsd:simpleType>
@@ -1350,7 +1350,7 @@ Rail transport, Roads and Road transport
 			<xsd:extension base="CountryPrincipalityCodeType">
 				<xsd:attribute name="ref" type="CountryCodeType">
 					<xsd:annotation>
-						<xsd:documentation>Iso 3166-1 Two Character country code.</xsd:documentation>
+						<xsd:documentation>ISO 3166-1 Two Character country code.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 				<xsd:attribute name="refPrincipality" type="CountryPrincipalityCodeType">
@@ -1395,7 +1395,7 @@ Rail transport, Roads and Road transport
 			<xsd:restriction base="TypeOfValueRefStructure">
 				<xsd:attribute name="ref" type="TypeOfValueIdType" use="required" fixed="All">
 					<xsd:annotation>
-						<xsd:documentation>Iso 3166-1 Two Character country code.</xsd:documentation>
+						<xsd:documentation>ISO 3166-1 Two Character country code.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 			</xsd:restriction>

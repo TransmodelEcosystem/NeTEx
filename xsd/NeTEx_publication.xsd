@@ -3005,7 +3005,7 @@
 			<xsd:field xpath="@id"/>
 			<xsd:field xpath="@version"/>
 		</xsd:key>
-		<!-- NB TRAIN ELEMENT is deprecated In future shoudk eb renamed to TrainELementTyepa and be made abstarct -->
+		<!-- NB TRAIN ELEMENT is deprecated In future should be renamed to TrainELementTyepa and be made abstract -->
 		<!-- =====Train Component============================== -->
 		<!-- =====TrainComponent Key ========================== -->
 		<xsd:keyref name="TrainComponent_KeyRef" refer="netex:TrainComponent_AnyVersionedKey_ordered">

@@ -57,7 +57,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NetEX:SERVICE CALENDAR types for NeTEx Network Exchange.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
 	<xsd:group name="ServiceCalendarFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>Elements for a SERVICE CALENDAR.</xsd:documentation>
@@ -180,12 +180,12 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="Name" type="MultilingualString" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Name of SERVIC CALENDAR.</xsd:documentation>
+					<xsd:documentation>Name of SERVICE CALENDAR.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ShortName" type="MultilingualString" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Short Name of SERVIC CALENDAR.</xsd:documentation>
+					<xsd:documentation>Short Name of SERVICE CALENDAR.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="FromDate" type="xsd:date" minOccurs="0">

@@ -611,7 +611,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:element name="StairFlight" substitutionGroup="VersionedChild">
 		<xsd:annotation>
-			<xsd:documentation>SAn individual flight of a STAIR CASE.</xsd:documentation>
+			<xsd:documentation>An individual flight of a STAIR CASE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
@@ -969,7 +969,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="AccousticAnnouncements" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>DEPRECATED - Spelling correction renamed to audio announcements. THis value will be dropped at - so</xsd:documentation>
+					<xsd:documentation>DEPRECATED - Spelling correction renamed to audio announcements. THIS value will be dropped at - so</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ReachedFloorAnnouncement" type="ReachedFloorAnnouncementEnumeration" default="visual" minOccurs="0">
@@ -1145,7 +1145,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:group name="RampEquipmentGroup">
 		<xsd:annotation>
-			<xsd:documentation>Elements for RAMP EQUIPMEN/</xsd:documentation>
+			<xsd:documentation>Elements for RAMP EQUIPMENT/</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="Length" type="LengthType" minOccurs="0">

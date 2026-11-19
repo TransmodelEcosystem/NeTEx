@@ -215,7 +215,7 @@ Rail transport, Roads and Road transport
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<!-- ====SALES OFFER PACKAGE SUBSTITIUTION =============================-->
+	<!-- ====SALES OFFER PACKAGE SUBSTITUTION =============================-->
 	<xsd:simpleType name="SalesOfferPackageSubstitutionIdType">
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a SALES OFFER PACKAGE SUBSTITUTION.</xsd:documentation>

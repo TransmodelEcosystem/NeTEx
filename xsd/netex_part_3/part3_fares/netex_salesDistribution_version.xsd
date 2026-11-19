@@ -189,7 +189,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="RequiresEmailAddress" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether use of the channel requires the pruchaser to have an e-mail address.</xsd:documentation>
+					<xsd:documentation>Whether use of the channel requires the purchaser to have an e-mail address.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ContactDetails" type="ContactStructure" minOccurs="0">
@@ -205,7 +205,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="typesOfPaymentMethod" type="TypeOfPaymentMethodRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Additional methods for paymen + v1.1</xsd:documentation>
+					<xsd:documentation>Additional methods for payment + v1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="DistributionRights" type="DistributionRightsListOfEnumerations" minOccurs="0">
@@ -221,7 +221,7 @@ Rail transport, Roads and Road transport
 				</xsd:element>
 				<xsd:element name="DistributionGroupRef" minOccurs="0">
 					<xsd:annotation>
-						<xsd:documentation>Prefined Group of specified points to which distribution is restricted, if any.</xsd:documentation>
+						<xsd:documentation>Predefined Group of specified points to which distribution is restricted, if any.</xsd:documentation>
 					</xsd:annotation>
 					<xsd:complexType>
 						<xsd:simpleContent>

@@ -411,7 +411,7 @@
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<!-- ====== LOGGAGE SPOT ======================================= -->
+	<!-- ====== LUGGAGE SPOT ======================================= -->
 	<xsd:simpleType name="LuggageSpotIdType">
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a LUGGAGE SPOT.</xsd:documentation>
@@ -555,7 +555,7 @@
 			</xsd:enumeration>
 			<xsd:enumeration value="foldDownFlat">
 				<xsd:annotation>
-					<xsd:documentation>Table folds fown to be horizontal in front of seat.</xsd:documentation>
+					<xsd:documentation>Table folds down to be horizontal in front of seat.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="seatBackFolding">

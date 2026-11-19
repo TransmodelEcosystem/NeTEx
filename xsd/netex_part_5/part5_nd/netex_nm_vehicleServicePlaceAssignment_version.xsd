@@ -78,7 +78,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:element name="VehicleServicePlaceAssignment_Dummy" abstract="true" substitutionGroup="Assignment_Dummy">
 		<xsd:annotation>
-			<xsd:documentation>Dummy Type to work round SG restrfictions.</xsd:documentation>
+			<xsd:documentation>Dummy Type to work round SG restrictions.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>

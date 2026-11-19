@@ -128,7 +128,7 @@
 		<xsd:sequence>
 			<xsd:element name="AssistanceAvailability" type="AssistanceAvailabilityEnumeration" default="available" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Availilability of assistance.</xsd:documentation>
+					<xsd:documentation>Availability of assistance.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="WheelchairBookingRequired" type="xsd:boolean" minOccurs="0">

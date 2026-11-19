@@ -64,7 +64,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>PARKING TARIFF elements for IFOPT Fixed Objects in Public Transport.</xsd:documentation>
 	</xsd:annotation>
-	<!-- ===ENTIITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====(Used in SERVICE FRAME)=================================================== -->
 	<xsd:group name="ParkingTariffInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>Properties of PARKING TARIFFs in FRAME.</xsd:documentation>
@@ -243,7 +243,7 @@ Rail transport, Roads and Road transport
 							<xsd:element ref="TypeOfFareStructureFactorRef" minOccurs="0"/>
 							<xsd:element name="Factor" type="xsd:anyType" minOccurs="0">
 								<xsd:annotation>
-									<xsd:documentation>Factor value assoictaed with init.</xsd:documentation>
+									<xsd:documentation>Factor value associated with unit.</xsd:documentation>
 								</xsd:annotation>
 							</xsd:element>
 						</xsd:sequence>
@@ -295,7 +295,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- == PARKING TARIFPRICE.================================ -->
+	<!-- == PARKING TARIFF PRICE.================================ -->
 	<xsd:complexType name="parkingPrices_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for a list of PARKING TARIFF PRICEs.</xsd:documentation>

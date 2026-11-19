@@ -537,7 +537,7 @@ Rail transport, Roads and Road transport
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<!-- === CUSTOME PURCHASE PACKAGE PARAMETER ASSIGNMENT====================================================== -->
+	<!-- === CUSTOMER PURCHASE PACKAGE PARAMETER ASSIGNMENT====================================================== -->
 	<xsd:simpleType name="CustomerPurchaseParameterAssignmentIdType">
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a CUSTOMER PURCHASE PARAMETER.</xsd:documentation>

@@ -60,7 +60,7 @@ Rail transport, Roads and Road transport
 		</xsd:appinfo>
 		<xsd:documentation>NeTEx: TIME DEMAND TIMES types.</xsd:documentation>
 	</xsd:annotation>
-	<!-- === TIme Demand ========================================================= -->
+	<!-- === Time Demand ========================================================= -->
 	<!-- ===DefaultServiceRunTime===================================================== -->
 	<xsd:complexType name="defaultServiceJourneyRunTimes_RelStructure">
 		<xsd:annotation>

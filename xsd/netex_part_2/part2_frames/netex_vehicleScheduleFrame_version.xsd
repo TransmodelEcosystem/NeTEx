@@ -74,5 +74,5 @@
 			<xsd:element ref="ServiceCalendarFrameRef" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- ====Jouurney========================================-->
+	<!-- ====Journey========================================-->
 </xsd:schema>

@@ -111,7 +111,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:complexType name="fareScheduledStopPointsInFrame_RelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for containment in frame of FARE SCHEUDLED STOP POINT.</xsd:documentation>
+			<xsd:documentation>Type for containment in frame of FARE SCHEDULED STOP POINT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="frameContainmentStructure">
@@ -211,7 +211,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="AccountingStopPointRef" type="FareScheduledStopPointRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Station to use for accounting (TAP TSi B1)</xsd:documentation>
+					<xsd:documentation>Station to use for accounting (TAP TSI B1)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="BorderPointRef" minOccurs="0"/>
@@ -383,7 +383,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="PresentationPosition" type="SeriesPresentationEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Relative positiion to be given to name of point when presenting it in a list of stops (Left, right etc). Allows TAP itinerary to be constructed.</xsd:documentation>
+					<xsd:documentation>Relative position to be given to name of point when presenting it in a list of stops (Left, right etc). Allows TAP itinerary to be constructed.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="IsForbidden" type="xsd:boolean" default="false" minOccurs="0">
@@ -513,7 +513,7 @@ Rail transport, Roads and Road transport
 						<xsd:sequence>
 							<xsd:element name="ParentFareZoneRef" type="FareZoneRefStructure" minOccurs="0">
 								<xsd:annotation>
-									<xsd:documentation>Parent FARe ZONE that contains this ZONE.</xsd:documentation>
+									<xsd:documentation>Parent FARE ZONE that contains this ZONE.</xsd:documentation>
 								</xsd:annotation>
 							</xsd:element>
 							<xsd:element name="ZoneTopology" type="ZoneTopologyEnumeration" minOccurs="0">
@@ -567,7 +567,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="ParentFareZoneRef" type="FareZoneRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Parent FARe ZONE that contains this ZONE.</xsd:documentation>
+					<xsd:documentation>Parent FARE ZONE that contains this ZONE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ZoneTopology" type="ZoneTopologyEnumeration" minOccurs="0">

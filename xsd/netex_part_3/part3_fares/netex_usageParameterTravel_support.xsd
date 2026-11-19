@@ -196,7 +196,7 @@ Rail transport, Roads and Road transport
 			<xsd:enumeration value="returnOnly"/>
 			<xsd:enumeration value="multiple">
 				<xsd:annotation>
-					<xsd:documentation>Multtrip carnet.</xsd:documentation>
+					<xsd:documentation>Multi-trip carnet.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>
@@ -415,7 +415,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="specifiedStartDate">
 				<xsd:annotation>
-					<xsd:documentation>Validity period starts on date specified on produc..</xsd:documentation>
+					<xsd:documentation>Validity period starts on date specified on product..</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="startOutboundRide">
@@ -758,7 +758,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="other">
 				<xsd:annotation>
-					<xsd:documentation>Journey Break must be marked by othermeans.</xsd:documentation>
+					<xsd:documentation>Journey Break must be marked by other means.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>

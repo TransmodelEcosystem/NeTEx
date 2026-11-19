@@ -237,7 +237,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="Surname" type="xsd:normalizedString" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Curname of CUSTOMER.</xsd:documentation>
+					<xsd:documentation>Surname of CUSTOMER.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="FirstName" type="xsd:normalizedString" minOccurs="0">
@@ -415,7 +415,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- ====P ASSENGER CONTRACT ENTRY-->
+	<!-- ====PASSENGER CONTRACT ENTRY-->
 	<xsd:complexType name="fareContractEntries_RelStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for a list of FARE CONTRACT ENTRYs.</xsd:documentation>

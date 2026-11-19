@@ -362,7 +362,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="GenericPathLinkRef" minOccurs="0"/>
 			<xsd:element name="PathHeading" type="PathHeadingEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Heding used in Instruction.</xsd:documentation>
+					<xsd:documentation>Heading used in Instruction.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Distance" type="LengthType" minOccurs="0">

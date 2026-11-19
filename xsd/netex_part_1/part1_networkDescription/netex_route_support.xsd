@@ -305,7 +305,7 @@ Rail transport, Roads and Road transport
 			</xsd:restriction>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<!-- ==== P OIINT ON ROUTE ==================================================== -->
+	<!-- ==== POINT ON ROUTE ==================================================== -->
 	<xsd:simpleType name="PointOnRouteIdType">
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a POINT ON ROUTE.</xsd:documentation>

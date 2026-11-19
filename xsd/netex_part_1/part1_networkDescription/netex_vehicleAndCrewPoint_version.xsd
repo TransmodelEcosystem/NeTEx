@@ -64,7 +64,7 @@ Rail transport, Roads and Road transport
 		<xsd:documentation>NeTEx VEHICLE AND CREW POINT types.</xsd:documentation>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
-	<!-- ===ENTIITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
+	<!-- ===ENTITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
 	<xsd:group name="VehicleAndCrewInFrameGroup">
 		<xsd:annotation>
 			<xsd:documentation>Elements for a VEHICLE and CREW POINTs in frame.</xsd:documentation>
@@ -170,7 +170,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="ReliefPointRef"/>
 			<xsd:element name="garages" type="garageRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>garages associated with CREW BASe.</xsd:documentation>
+					<xsd:documentation>garages associated with CREW BASE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -407,12 +407,12 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="garagePoints" type="garagePoints_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>GARAGE POINTsin GARAGE</xsd:documentation>
+					<xsd:documentation>GARAGE POINTs in GARAGE</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="crewBases" type="crewBaseRefs_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>CREW BASEs asspicated with GARAGE.</xsd:documentation>
+					<xsd:documentation>CREW BASEs associated with GARAGE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>

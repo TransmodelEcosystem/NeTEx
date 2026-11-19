@@ -568,7 +568,7 @@ Rail transport, Roads and Road transport
 	</xsd:complexType>
 	<xsd:simpleType name="TypeOfPricingEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>Allowed values for TypeOf Prcing Ruke +v1.1</xsd:documentation>
+			<xsd:documentation>Allowed values for TypeOf Pricing Rule +v1.1</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:enumeration value="valueAddedTax"/>
