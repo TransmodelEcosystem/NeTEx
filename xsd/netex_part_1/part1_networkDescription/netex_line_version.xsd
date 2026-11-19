@@ -486,7 +486,7 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="TypeOfLineRef" minOccurs="0"/>
 			<xsd:element name="ExternalProductCategoryRef" type="ExternalObjectRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>An default product classification for all journeys of the line for use in AVMS systems. For VDV compatibility. +v1.1. DEPRECATED - use privateCodes -v2.0</xsd:documentation>
+					<xsd:documentation>A default product classification for all journeys of the line for use in AVMS systems. For VDV compatibility. +v1.1. DEPRECATED - use privateCodes -v2.0</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="TypeOfProductCategoryRef" minOccurs="0"/>

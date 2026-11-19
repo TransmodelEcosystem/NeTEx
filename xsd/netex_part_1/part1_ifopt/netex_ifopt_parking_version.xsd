@@ -511,7 +511,7 @@ Rail transport, Roads and Road transport
 						<xsd:sequence>
 							<xsd:element name="areas" type="parkingAreaRefs_RelStructure" minOccurs="0">
 								<xsd:annotation>
-									<xsd:documentation>PARKING AREA to which PARKING PASSENGER ENTRANCE gives access apply +v1.1.</xsd:documentation>
+									<xsd:documentation>PARKING AREA to which PARKING PASSENGER ENTRANCE gives access +v1.1.</xsd:documentation>
 								</xsd:annotation>
 							</xsd:element>
 						</xsd:sequence>

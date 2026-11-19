@@ -758,7 +758,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="CappingStartConstraintType" type="CappingPeriodStartConstraintTypeEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Indicates if start of capping period is variable on fixed. +v1.1</xsd:documentation>
+					<xsd:documentation>Indicates if start of capping period is variable or fixed. +v1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="startOnlyOn" minOccurs="0">
@@ -987,7 +987,7 @@ Rail transport, Roads and Road transport
 				</xsd:element>
 				<xsd:element name="supplementTo" type="fareProductRefs_RelStructure" minOccurs="0">
 					<xsd:annotation>
-						<xsd:documentation>FARE PRODUCTs to which this SUPPLEMENT PRODUCT can be a a supplement.</xsd:documentation>
+						<xsd:documentation>FARE PRODUCTs to which this SUPPLEMENT PRODUCT can be a supplement.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
 			</xsd:choice>
