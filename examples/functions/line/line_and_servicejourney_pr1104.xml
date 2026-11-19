@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replacement modes per NeTEx PR #1104 (+v2.1): whole Line in example 1, single ServiceJourneys in examples 2 and 3. -->
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:gml="http://www.opengis.net/gml/3.2" version="2.1">
+	<PublicationTimestamp>2026-11-10T12:00:00</PublicationTimestamp>
+	<ParticipantRef>ENT</ParticipantRef>
+	<dataObjects>
+		<ServiceFrame id="ENT:ServiceFrame:1" version="2">
+			<lines>
+				<!-- Example 1 (Line level): entire metro line operated by replacement bus -->
+				<Line id="ENT:Line:M1" version="2">
+					<Name>Metro line 1 (metro replacement bus)</Name>
+					<TransportMode>bus</TransportMode>
+					<TransportSubmode>
+						<BusSubmode>metroReplacementBus</BusSubmode>
+					</TransportSubmode>
+					<PublicCode>1</PublicCode>
+				</Line>
+				<!-- Tram line (unchanged) -->
+				<Line id="ENT:Line:T11" version="2">
+					<Name>Tram line 11</Name>
+					<TransportMode>tram</TransportMode>
+					<TransportSubmode>
+						<TramSubmode>cityTram</TramSubmode>
+					</TransportSubmode>
+					<PublicCode>11</PublicCode>
+				</Line>
+				<!-- Rail line (unchanged) -->
+				<Line id="ENT:Line:R20" version="2">
+					<Name>Regional train R20</Name>
+					<TransportMode>rail</TransportMode>
+					<TransportSubmode>
+						<RailSubmode>regionalRail</RailSubmode>
+					</TransportSubmode>
+					<PublicCode>R20</PublicCode>
+				</Line>
+			</lines>
+		</ServiceFrame>
+		<TimetableFrame id="ENT:TimetableFrame:1" version="2">
+			<vehicleJourneys>
+				<!-- Example 2 (ServiceJourney level): this departure runs as tram replacement bus; the Line stays tram -->
+				<ServiceJourney id="ENT:ServiceJourney:T11-0712" version="2">
+					<TransportMode>bus</TransportMode>
+					<TransportSubmode>
+						<BusSubmode>tramReplacementBus</BusSubmode>
+					</TransportSubmode>
+					<DepartureTime>07:12:00</DepartureTime>
+					<LineRef ref="ENT:Line:T11" version="2"/>
+				</ServiceJourney>
+				<!-- Example 3 (ServiceJourney level): this departure runs as rail replacement taxi; the Line stays rail -->
+				<ServiceJourney id="ENT:ServiceJourney:R20-2245" version="2">
+					<TransportMode>taxi</TransportMode>
+					<TransportSubmode>
+						<TaxiSubmode>railReplacementTaxi</TaxiSubmode>
+					</TransportSubmode>
+					<DepartureTime>22:45:00</DepartureTime>
+					<LineRef ref="ENT:Line:R20" version="2"/>
+				</ServiceJourney>
+			</vehicleJourneys>
+		</TimetableFrame>
+	</dataObjects>
+</PublicationDelivery>
