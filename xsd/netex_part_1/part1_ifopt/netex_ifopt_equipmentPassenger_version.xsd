@@ -353,6 +353,11 @@ Rail transport, Roads and Road transport
 					<xsd:documentation>How to trigger Acoustic Announcements. +v1.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element name="AudioAnnouncementsScope" type="AudioAnnouncementsScopeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Where the announcements are proclaimed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
 	<!-- ==== HELP POINT EQUIPMENT ============================== -->
