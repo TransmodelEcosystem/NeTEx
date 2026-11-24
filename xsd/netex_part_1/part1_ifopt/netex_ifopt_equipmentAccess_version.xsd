@@ -32,7 +32,7 @@
 					CD Add new attribute to StairEquipment; WithoutRiser.
 						  NJSK Review:  move order  to be with other  step properties
 					CD  Add new attribute to EscalatorEquipment;  EscalatorWithLanding
-					CD  Add new attributes to TravellatorEquipment; Length, Slope and IntegratesAnEscalatorPart  
+					CD  Add new attributes to TravellatorEquipment; Length, Slope and IntegratesAnEscalatorPart
 							 NJSK Review:  correct  name of IntegratesAnEscalatorPart
 					CD Add new attributs  to EscalatorEquipment: MagneticInductionLoop, GroundMarkAlignedWithButton, TactileGroundFloorButton ExternalFloorSelection
 								 NJSK Review:  correct  name of GroundMarkAlignedWithButton
@@ -40,7 +40,7 @@
 								 NJSK Review: change order to group with like properties
 					CD Add new attributes  to EntranceEquipment: AudioOrVideoIntercom, Airlock, DoorstepMark AudioPassthroughIndicator, OpeningNecessaryForce
 								 NJSK Review: change order to group with like properties
-								  NJSK Review: NB AudioOrVideoIntercom overlap with EntranceAttention								  
+								  NJSK Review: NB AudioOrVideoIntercom overlap with EntranceAttention
 					CD Add new attributes  to QueuingEquipment:  DisabledPriority QueuingSeatedPossible.
  				</Date>
 				<Date><Modified>2019-05-27</Modified>Fix add missing DropKerbOutside value to Entrance Eqeuipment
@@ -48,7 +48,7 @@
 					Move WIthoutRaiser to be specifc to Staircase.
 				</Date>
 				<Date><Modified>2019-05-27</Modified>Doc tidy up
-					Rename Accoustic(six)  to AUdio 
+					Rename Accoustic(six)  to AUdio
 					Correct comments
 				</Date>
 				<Date><Modified>2021-07-14</Modified>Fix catch up - Make Access Equipment Abstarct
@@ -376,12 +376,12 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="StepHeight" type="LengthType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Depth of an individual step, in metres rounded to the nearest cm.</xsd:documentation>
+					<xsd:documentation>Height of an individual step, in metres rounded to the nearest cm.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="StepLength" type="LengthType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>The length of the step, in metres rounded to the nearest cm.</xsd:documentation>
+					<xsd:documentation>Length of an individual step, in metres rounded to the nearest cm.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="StepColourContrast" type="xsd:boolean" minOccurs="0">
