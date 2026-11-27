@@ -216,7 +216,7 @@ A LINE NETWORK mybus:LineNetwork:NTP_Route24   describes all the branches as a c
 
 	A COMPOSITE FRAME is used to group the TIMETABLE FRAME with a CALENDAR FRAME as a single version
 -->
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
 	<PublicationTimestamp>2010-12-17T09:30:47.0Z</PublicationTimestamp>
 	<ParticipantRef>SYS001</ParticipantRef>
 	<!--- ======WHAT WAS REQUESTED ========== -->

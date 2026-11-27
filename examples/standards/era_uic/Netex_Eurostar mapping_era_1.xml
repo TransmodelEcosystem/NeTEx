@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Example for a simple timetabel for rail -->
-<PublicationDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd" version="1.0">
+<PublicationDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd" version="2.0">
 	<PublicationTimestamp>2011-03-24T17:04:40.873+01:00</PublicationTimestamp>
 	<ParticipantRef>ERA001</ParticipantRef>
 	<Description>Example for the mapping of simple timetables</Description>

@@ -18,7 +18,7 @@ Tickets are available variously as paper tickets at stop and onboard, or through
 This example inclides text and prices taken from VVS web pages at  https://en.vvs.de/tickets/
 
 -->
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
 	<PublicationTimestamp>2023-10-04T18:01:32.0Z</PublicationTimestamp>
 	<ParticipantRef>MENTZ</ParticipantRef>
 	<Description>NeTEx Export, Version: 19.18.0.0</Description>
