@@ -34,13 +34,13 @@ submodel - Example of alternative stop names
 				<SiteFrame version="any" id="RUT:SiteFrame">
 					<stopPlaces>
 						<StopPlace version="any" id="NHR:StopPlace:Nationaltheatret">
-							<Name lang="nob">Nationaltheatret</Name>
+							<Name lang="nob">Nationaltheatret<Text lang="en">National theatre</Text></Name>
 							<alternativeNames>
 								<AlternativeName>
 									<NameType>alias</NameType>
 									<Name lang="nob">Nasjonalteateret</Name>
 								</AlternativeName>
-								<AlternativeName>
+								<AlternativeName> <!-- no longer do it this way. See above how it is done with the Text element in the Name element -->
 									<NameType>translation</NameType>
 									<Name lang="eng">National theatre</Name>
 								</AlternativeName>

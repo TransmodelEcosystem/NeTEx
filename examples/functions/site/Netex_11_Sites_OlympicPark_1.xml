@@ -928,7 +928,7 @@ Updated to give exampel of group of SItes
 					<pointsOfInterest>
 						<!--- =====2012 Olympic Park=========== -->
 						<PointOfInterest version="any" responsibilitySetRef="oda:RS_01" id="naptPoi:8100OPK">
-							<Name>London 2012 Olympic Park</Name>
+							<Name>London 2012 Olympic Park<Text lang="fr">Parc Olympic</Text></Name>
 							<ShortName>Olympic Park</ShortName>
 							<Description>Queen Elizabeth II Olympic Park</Description>
 							<types>
@@ -959,7 +959,7 @@ Updated to give exampel of group of SItes
 							<AccessModes>foot</AccessModes>
 							<alternativeNames>
 								<AlternativeName id="naptPoi:8100OPK_01-1">
-									<NameType>translation</NameType>
+									<NameType>translation</NameType> <!-- should no longer be done this way. Is shown in the element directly. -->
 									<TypeOfName>Title</TypeOfName>
 									<Name lang="fr">Parc Olympic</Name>
 								</AlternativeName>
