@@ -149,7 +149,7 @@ Rail transport, Roads and Road transport
 				<xsd:annotation>
 					<xsd:documentation>Maximum number of taxis on this rank.</xsd:documentation>
 				</xsd:annotation>
-			</xsd:element>			
+			</xsd:element>
 			<xsd:element name="taxiStands" type="taxiStands_RelStructure" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Taxis stands in RANK&gt; NB This is a work around as cannout get TAXI STAND to be a Substitution Group for a QUAY. +v1.2.2</xsd:documentation>
@@ -269,7 +269,7 @@ Rail transport, Roads and Road transport
 				<xsd:annotation>
 					<xsd:documentation>Maximum number of taxis on this stand.</xsd:documentation>
 				</xsd:annotation>
-			</xsd:element>			
+			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
 	<!-- ==== TAXI PARKING AREA  ============================================================ -->
