@@ -6,7 +6,7 @@ Provided by Stefan Jugtelt  era   (C) NeTEx 2011
  Actual
 
 -->
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" xmlns:uic="http://www.uic.org/schema" version="ntx:2.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" xmlns:uic="http://www.uic.org/schema" version="2.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../xsd/NeTEx_publication.xsd">
 	<PublicationTimestamp>2011-03-24T17:04:40.873+01:00</PublicationTimestamp>
 	<ParticipantRef>ERA001</ParticipantRef>
 	<Description>Example for the mapping of simple timetables</Description>

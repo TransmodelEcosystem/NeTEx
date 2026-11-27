@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" version="ntx:2.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" version="2.0">
 	<PublicationTimestamp>2022-01-11T16:04:26</PublicationTimestamp>
 	<ParticipantRef>DK</ParticipantRef>
 	<PublicationRequest>

@@ -2,7 +2,7 @@
 <!-- 
 ==== Stoppested med utstyr (billetteringsutstyr, toalett og baggasje-/sykkel-oppbevaring) og parkering / sykkelparkering ======
 -->
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="ntx:2.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../../xsd/NeTEx_publication.xsd">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.netex.org.uk/netex ../../../../xsd/NeTEx_publication.xsd">
 	<PublicationTimestamp>2017-04-04T14:14:14.0Z</PublicationTimestamp>
 	<ParticipantRef>NSR</ParticipantRef>
 	<dataObjects>

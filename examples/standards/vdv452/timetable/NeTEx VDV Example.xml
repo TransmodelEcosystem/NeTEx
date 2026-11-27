@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="ntx:2.0" xsi:schemaLocation="http://www.netex.org.uk/netex  ../../../../xsd/NeTEx_publication.xsd">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.netex.org.uk/netex  ../../../../xsd/NeTEx_publication.xsd">
 	<!--  originally based on VDV Block example 2012.  -->
 	<!-- E-Bus Opportunity charging example (Munzinger Strasse and Block BL_08 / 1107) added in 2024 -->
 	<PublicationTimestamp>2012-07-24T13:15:27.1275982Z</PublicationTimestamp>

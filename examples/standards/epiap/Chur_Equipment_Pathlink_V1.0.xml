@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" xmlns="http://www.netex.org.uk/netex" xsi:schemaLocation="http://www.netex.org.uk/netex  ../../../xsd/NeTEx_publication.xsd" version="ntx:2.0">
+<PublicationDelivery xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" xmlns="http://www.netex.org.uk/netex" xsi:schemaLocation="http://www.netex.org.uk/netex  ../../../xsd/NeTEx_publication.xsd" version="2.0">
 	<PublicationTimestamp>2022-04-13T18:38:52.6831392+02:00</PublicationTimestamp>
 	<ParticipantRef>MENTZ</ParticipantRef>
 	<Description>NeTEx Export, Version: 19.16.0.0</Description>
