@@ -40,7 +40,8 @@ submodel - Example of alternative stop names
 									<NameType>alias</NameType>
 									<Name lang="nob">Nasjonalteateret</Name>
 								</AlternativeName>
-								<AlternativeName> <!-- no longer do it this way. See above how it is done with the Text element in the Name element -->
+								<AlternativeName>
+									<!-- no longer do it this way. See above how it is done with the Text element in the Name element -->
 									<NameType>translation</NameType>
 									<Name lang="eng">National theatre</Name>
 								</AlternativeName>

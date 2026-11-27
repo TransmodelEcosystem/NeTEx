@@ -959,7 +959,8 @@ Updated to give exampel of group of SItes
 							<AccessModes>foot</AccessModes>
 							<alternativeNames>
 								<AlternativeName id="naptPoi:8100OPK_01-1">
-									<NameType>translation</NameType> <!-- should no longer be done this way. Is shown in the element directly. -->
+									<NameType>translation</NameType>
+									<!-- should no longer be done this way. Is shown in the element directly. -->
 									<TypeOfName>Title</TypeOfName>
 									<Name lang="fr">Parc Olympic</Name>
 								</AlternativeName>
