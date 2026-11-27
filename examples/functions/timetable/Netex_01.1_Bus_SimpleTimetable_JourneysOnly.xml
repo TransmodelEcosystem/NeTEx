@@ -271,6 +271,7 @@ The Calendar is shown coded as
 												<OccupancyPercentage>40</OccupancyPercentage>
 												<WheelchairsOnboardCount>1</WheelchairsOnboardCount>
 												<GroupReservation>
+													<!-- -v2.1 deprecated -->
 													<NameOfGroup>a group</NameOfGroup>
 													<NumberOfReservedSeats>4</NumberOfReservedSeats>
 												</GroupReservation>
@@ -286,6 +287,20 @@ The Calendar is shown coded as
 									<Departure>
 										<Time>14:32:00.0Z</Time>
 										<WaitTime>PT2M</WaitTime>
+										<occupancies>
+											<OccupancyView version="any" id="occ2">
+												<OccupancyLevel>fewSeatsAvailable</OccupancyLevel>
+												<OccupancyPercentage>40</OccupancyPercentage>
+												<WheelchairsOnboardCount>1</WheelchairsOnboardCount>
+												<groupReservations>
+													<GroupReservation>
+														<!-- +v2.1 new way of doing the group reservations -->
+														<NameOfGroup>a group</NameOfGroup>
+														<NumberOfReservedSeats>4</NumberOfReservedSeats>
+													</GroupReservation>
+												</groupReservations>
+											</OccupancyView>
+										</occupancies>
 									</Departure>
 									<Note>Arrival at Terminus</Note>
 								</Call>

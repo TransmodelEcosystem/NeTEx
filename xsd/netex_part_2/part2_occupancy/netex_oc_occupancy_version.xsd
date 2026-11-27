@@ -101,6 +101,11 @@ More accurate data can be provided by the individual occupancies or capacities b
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
+	<xsd:element name="GroupReservation" type="GroupReservationStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reservations of travel groups, i.e., name of group and number of seats booked.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
 	<xsd:element name="OccupancyView">
 		<xsd:annotation>
 			<xsd:documentation>A simple VIEW of OCCUPANCY as a first implementation without full support of DECK PLAN.</xsd:documentation>
@@ -144,6 +149,18 @@ More accurate data can be provided by the individual occupancies or capacities b
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
+	<xsd:complexType name="groupReservations_RelStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for containment of GROUP RESERVATIONs. +v2.1</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="containmentAggregationStructure">
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element ref="GroupReservation"/>
+				</xsd:choice>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
 	<xsd:group name="OccupancyGroup">
 		<xsd:annotation>
 			<xsd:documentation>Real-time occupancies of a VEHICLE (by fare class). Could be feedback from an automatic passenger counting system (APC) or estimated values from statistics. (since SIRI 2.1)</xsd:documentation>
@@ -171,11 +188,18 @@ More accurate data can be provided by the individual occupancies or capacities b
 					<xsd:documentation>Total number of booked seats from individual and group reservations.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="GroupReservation" type="GroupReservationStructure" minOccurs="0" maxOccurs="unbounded">
-				<xsd:annotation>
-					<xsd:documentation>Reservations of travel groups, i.e., name of group and number of seats booked.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
+			<xsd:choice>
+				<xsd:element name="groupReservations" type="groupReservations_RelStructure" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>GROUP RESERVATIONs. +v.2.1</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="GroupReservation" type="GroupReservationStructure" minOccurs="0" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>Reservations of travel groups, i.e., name of group and number of seats booked. -v2.1: use groupReservations/GroupReservation instead.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
 		</xsd:sequence>
 	</xsd:group>
 	<xsd:group name="OccupancyViewInFrameGroup">
