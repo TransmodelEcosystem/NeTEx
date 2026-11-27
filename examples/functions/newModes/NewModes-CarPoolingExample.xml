@@ -270,11 +270,15 @@ In addition CUSTOMER PURCHASE PACKAGES showing the parameters that might be held
 								<PointOfInterestRef version="any" ref="alphaville_hdv"/>
 							</adjacentSites>
 							<StopPlaceType>taxiRank</StopPlaceType>
+							<MaximumStandingDuration>PT30M</MaximumStandingDuration>
+							<MaximumTaxiCapacity>10</MaximumTaxiCapacity>
 							<taxiStands>
 								<TaxiStand version="any" id="alphaville_hdv_taxi@s1">
 									<BoardingUse>true</BoardingUse>
 									<AlightingUse>true</AlightingUse>
 									<QuayType>taxiStand</QuayType>
+									<MaximumStandingDuration>PT30M</MaximumStandingDuration>
+									<MaximumTaxiCapacity>10</MaximumTaxiCapacity>
 								</TaxiStand>
 							</taxiStands>
 						</TaxiRank>
